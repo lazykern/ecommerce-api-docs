@@ -3,7 +3,7 @@ from rich.console import Console
 from rich.table import Table
 from pathlib import Path
 
-from ..scrapers import ShopeeScraper
+from ..scrapers import ShopeeScraper, LazadaScraper
 from ..exporters import MarkdownExporter, JSONExporter
 
 console = Console()
@@ -24,7 +24,7 @@ def cli():
     '--platform', 
     type=click.Choice(['shopee', 'tiktok', 'lazada']),
     default='shopee',
-    help='Platform to scrape (currently only shopee is supported)'
+    help='Platform to scrape (shopee and lazada are currently supported)'
 )
 @click.option(
     '--export',
@@ -52,6 +52,9 @@ def scrape(platform: str, export: str, organization: str, output_dir: str):
         # Choose scraper based on platform
         if platform == 'shopee':
             with ShopeeScraper() as scraper:
+                api_doc = scraper.scrape()
+        elif platform == 'lazada':
+            with LazadaScraper() as scraper:
                 api_doc = scraper.scrape()
         else:
             console.print(f"❌ Platform '{platform}' not yet supported", style="bold red")
