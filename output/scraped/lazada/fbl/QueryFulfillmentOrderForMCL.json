@@ -1,0 +1,247 @@
+{
+  "platform": "lazada",
+  "module": "fbl",
+  "endpoint_name": "QueryFulfillmentOrderForMCL",
+  "version": null,
+  "summary": "Query list of Fulfillment Orders by shipper",
+  "description": "Query list of Fulfillment Orders by shipper",
+  "path": "/fbl/fulfillment_order_list/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "platform_order_id",
+        "type": "String",
+        "required": false,
+        "description": "Order level identifier for fulfilment order, unique for idempotence"
+      },
+      {
+        "name": "platform_name",
+        "type": "String",
+        "required": true,
+        "description": "Trade platform name"
+      },
+      {
+        "name": "per_page",
+        "type": "Number",
+        "required": true,
+        "description": "Page size"
+      },
+      {
+        "name": "page",
+        "type": "Number",
+        "required": true,
+        "description": "Page index"
+      },
+      {
+        "name": "sales_order_number",
+        "type": "String",
+        "required": false,
+        "description": "Sales order number from platform"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": false,
+        "description": "Status"
+      },
+      {
+        "name": "create_start_time",
+        "type": "String",
+        "required": true,
+        "description": "Order create time lower bound"
+      },
+      {
+        "name": "create_end_time",
+        "type": "String",
+        "required": true,
+        "description": "Order create time upper bound"
+      },
+      {
+        "name": "delivery_type",
+        "type": "String",
+        "required": false,
+        "description": "Delivery type"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_message",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "per_page",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "page",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "total_count",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/fbl/fulfillment_order_list/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"platform_order_id\", \"OF02282036214681\");\nrequest.addApiParameter(\"platform_name\", \"LAZADA_TH\");\nrequest.addApiParameter(\"per_page\", \"10\");\nrequest.addApiParameter(\"page\", \"1\");\nrequest.addApiParameter(\"sales_order_number\", \"orderxxxx\");\nrequest.addApiParameter(\"status\", \"created\");\nrequest.addApiParameter(\"create_start_time\", \"2019-12-04T18:18:32Z\");\nrequest.addApiParameter(\"create_end_time\", \"2019-12-04T18:18:32Z\");\nrequest.addApiParameter(\"delivery_type\", \"standard\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/fbl/fulfillment_order_list/get','GET');\n$request->addApiParam('platform_order_id','OF02282036214681');\n$request->addApiParam('platform_name','LAZADA_TH');\n$request->addApiParam('per_page','10');\n$request->addApiParam('page','1');\n$request->addApiParam('sales_order_number','orderxxxx');\n$request->addApiParam('status','created');\n$request->addApiParam('create_start_time','2019-12-04T18:18:32Z');\n$request->addApiParam('create_end_time','2019-12-04T18:18:32Z');\n$request->addApiParam('delivery_type','standard');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/fbl/fulfillment_order_list/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"platform_order_id\", \"OF02282036214681\");\nrequest.AddApiParameter(\"platform_name\", \"LAZADA_TH\");\nrequest.AddApiParameter(\"per_page\", \"10\");\nrequest.AddApiParameter(\"page\", \"1\");\nrequest.AddApiParameter(\"sales_order_number\", \"orderxxxx\");\nrequest.AddApiParameter(\"status\", \"created\");\nrequest.AddApiParameter(\"create_start_time\", \"2019-12-04T18:18:32Z\");\nrequest.AddApiParameter(\"create_end_time\", \"2019-12-04T18:18:32Z\");\nrequest.AddApiParameter(\"delivery_type\", \"standard\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/fbl/fulfillment_order_list/get','GET')\nrequest.add_api_parameter(\"platform_order_id\", \"OF02282036214681\")\nrequest.add_api_parameter(\"platform_name\", \"LAZADA_TH\")\nrequest.add_api_parameter(\"per_page\", \"10\")\nrequest.add_api_parameter(\"page\", \"1\")\nrequest.add_api_parameter(\"sales_order_number\", \"orderxxxx\")\nrequest.add_api_parameter(\"status\", \"created\")\nrequest.add_api_parameter(\"create_start_time\", \"2019-12-04T18:18:32Z\")\nrequest.add_api_parameter(\"create_end_time\", \"2019-12-04T18:18:32Z\")\nrequest.add_api_parameter(\"delivery_type\", \"standard\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/fbl/fulfillment_order_list/get','GET')\nrequest.add_api_param('platform_order_id', 'OF02282036214681')\nrequest.add_api_param('platform_name', 'LAZADA_TH')\nrequest.add_api_param('per_page', '10')\nrequest.add_api_param('page', '1')\nrequest.add_api_param('sales_order_number', 'orderxxxx')\nrequest.add_api_param('status', 'created')\nrequest.add_api_param('create_start_time', '2019-12-04T18:18:32Z')\nrequest.add_api_param('create_end_time', '2019-12-04T18:18:32Z')\nrequest.add_api_param('delivery_type', 'standard')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/fbl/fulfillment_order_list/get?timestamp=1750231513849&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&platform_order_id=OF02282036214681&platform_name=LAZADA_TH&per_page=10&page=1&sales_order_number=orderxxxx&status=created&create_start_time=2019-12-04T18%3A18%3A32Z&create_end_time=2019-12-04T18%3A18%3A32Z&delivery_type=standard'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Is success"
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "description": "Error code"
+      },
+      {
+        "name": "error_message",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "per_page",
+        "type": "Number",
+        "description": "Page size"
+      },
+      {
+        "name": "page",
+        "type": "Number",
+        "description": "Page index"
+      },
+      {
+        "name": "total_count",
+        "type": "Number",
+        "description": "Total count"
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "Result order list"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"error_message\": \"Error message\",\n  \"per_page\": \"20\",\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"sales_order_number\": \"orderxxxx\",\n      \"platform_order_id\": \"OF02282036214681\",\n      \"create_time\": \"2019-12-04T18:18:32Z\",\n      \"items\": [\n        {\n          \"fulfillment_sku_id\": \"1234\",\n          \"platform_item_id\": \"OF04292067556371\",\n          \"status\": \"send_to_warehouse\"\n        }\n      ]\n    }\n  ],\n  \"success\": \"TRUE\",\n  \"total_count\": \"100\",\n  \"error_code\": \"Error code\",\n  \"page\": \"1\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

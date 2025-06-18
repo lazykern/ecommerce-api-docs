@@ -1,0 +1,176 @@
+{
+  "platform": "lazada",
+  "module": "partner",
+  "endpoint_name": "PartnerUpdate",
+  "version": null,
+  "summary": "Used to push membership bulk status updates to Lazada",
+  "description": "Used to push membership bulk status updates to Lazada. Please note that this is not an incremental update, thus information left out that haven been in our system before, will be removed on our end.",
+  "path": "/partner/update",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "tier",
+        "type": "String",
+        "required": false,
+        "description": "Customer’s tier in partner side, shown as-is"
+      },
+      {
+        "name": "balance",
+        "type": "Number",
+        "required": true,
+        "description": "Balance of the membership."
+      },
+      {
+        "name": "tier_expiry",
+        "type": "String",
+        "required": false,
+        "description": "Expiry of the membership, shown as-is"
+      },
+      {
+        "name": "p_uid",
+        "type": "String",
+        "required": true,
+        "description": "A unique identifier of the member on partner side, used to establish the link to partner ID."
+      },
+      {
+        "name": "member_name",
+        "type": "String",
+        "required": false,
+        "description": "Name of member on partner side, to easier identify the membership on My Account pages"
+      },
+      {
+        "name": "valid_from",
+        "type": "String",
+        "required": false,
+        "description": "Valid from of this balance in RFC RFC3339 format. Ignore if this is no validity period for the balance"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": true,
+        "description": "One of: ‘active’ – For activated members ‘inactive’ – For inactive member ‘pending’ – For members that are pending activation"
+      },
+      {
+        "name": "valid_to",
+        "type": "String",
+        "required": false,
+        "description": "Valid to of this balance in RFC RFC3339 format. Ignore if this is no validity period for the balance"
+      },
+      {
+        "name": "result",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/partner/update\");\nrequest.addApiParameter(\"tier\", \"Gold\");\nrequest.addApiParameter(\"balance\", \"6000\");\nrequest.addApiParameter(\"tier_expiry\", \"2019-10-02T15:00:00Z\");\nrequest.addApiParameter(\"p_uid\", \"123456\");\nrequest.addApiParameter(\"member_name\", \"Marie Curie\");\nrequest.addApiParameter(\"valid_from\", \"2019-10-02T15:00:00Z\");\nrequest.addApiParameter(\"status\", \"BLACKLISTED\");\nrequest.addApiParameter(\"valid_to\", \"2019-10-02T15:00:00Z\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/partner/update');\n$request->addApiParam('tier','Gold');\n$request->addApiParam('balance','6000');\n$request->addApiParam('tier_expiry','2019-10-02T15:00:00Z');\n$request->addApiParam('p_uid','123456');\n$request->addApiParam('member_name','Marie Curie');\n$request->addApiParam('valid_from','2019-10-02T15:00:00Z');\n$request->addApiParam('status','BLACKLISTED');\n$request->addApiParam('valid_to','2019-10-02T15:00:00Z');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/partner/update\");\nrequest.AddApiParameter(\"tier\", \"Gold\");\nrequest.AddApiParameter(\"balance\", \"6000\");\nrequest.AddApiParameter(\"tier_expiry\", \"2019-10-02T15:00:00Z\");\nrequest.AddApiParameter(\"p_uid\", \"123456\");\nrequest.AddApiParameter(\"member_name\", \"Marie Curie\");\nrequest.AddApiParameter(\"valid_from\", \"2019-10-02T15:00:00Z\");\nrequest.AddApiParameter(\"status\", \"BLACKLISTED\");\nrequest.AddApiParameter(\"valid_to\", \"2019-10-02T15:00:00Z\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/partner/update')\nrequest.add_api_parameter(\"tier\", \"Gold\")\nrequest.add_api_parameter(\"balance\", \"6000\")\nrequest.add_api_parameter(\"tier_expiry\", \"2019-10-02T15:00:00Z\")\nrequest.add_api_parameter(\"p_uid\", \"123456\")\nrequest.add_api_parameter(\"member_name\", \"Marie Curie\")\nrequest.add_api_parameter(\"valid_from\", \"2019-10-02T15:00:00Z\")\nrequest.add_api_parameter(\"status\", \"BLACKLISTED\")\nrequest.add_api_parameter(\"valid_to\", \"2019-10-02T15:00:00Z\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/partner/update')\nrequest.add_api_param('tier', 'Gold')\nrequest.add_api_param('balance', '6000')\nrequest.add_api_param('tier_expiry', '2019-10-02T15:00:00Z')\nrequest.add_api_param('p_uid', '123456')\nrequest.add_api_param('member_name', 'Marie Curie')\nrequest.add_api_param('valid_from', '2019-10-02T15:00:00Z')\nrequest.add_api_param('status', 'BLACKLISTED')\nrequest.add_api_param('valid_to', '2019-10-02T15:00:00Z')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/partner/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"valid_from\":\"2019-10-02T15%3A00%3A00Z\",\"member_name\":\"Marie+Curie\",\"tier_expiry\":\"2019-10-02T15%3A00%3A00Z\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"tier\":\"Gold\",\"balance\":\"6000\",\"p_uid\":\"123456\",\"valid_to\":\"2019-10-02T15%3A00%3A00Z\",\"sign_method\":\"sha256\",\"timestamp\":\"1750231545759\",\"status\":\"BLACKLISTED\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object",
+        "description": "1"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": {\n    \"data\": {},\n    \"success\": \"1\",\n    \"error_code\": {\n      \"display_message\": \"1\",\n      \"key\": \"1\"\n    }\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

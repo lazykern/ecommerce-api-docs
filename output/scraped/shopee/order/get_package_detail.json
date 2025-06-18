@@ -1,0 +1,363 @@
+{
+  "platform": "shopee",
+  "module": "order",
+  "endpoint_name": "get_package_detail",
+  "version": "v2",
+  "summary": "Use this API to search the list of packages that have not been SHIPPED to proceed arranging shipment, and it supports various filters and sort fields",
+  "description": "Use this API to search the list of packages that have not been SHIPPED to proceed arranging shipment, and it supports various filters and sort fields.",
+  "path": "/api/v2/order/search_package_list",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "package_number_list",
+        "type": "string",
+        "required": true,
+        "description": "The set of package_number. If there are multiple package_number, you need to use English comma to connect them. limit [1,50]",
+        "sample": "OFG1156498731071468,OFG199593509207187"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/order/get_package_detail?access_token=access_token&package_number_list=OFG1156498731071468%2COFG199593509207187&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/order/get_package_detail?access_token=access_token&package_number_list=OFG1156498731071468%2COFG199593509207187&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/order/get_package_detail?access_token=access_token&package_number_list=OFG1156498731071468%2COFG199593509207187&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/order/get_package_detail?access_token=access_token&package_number_list=OFG1156498731071468%2COFG199593509207187&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "package_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The list of packages."
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "220831EGF1JMXF",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "sample": "OFG1156498731071468",
+        "description": "Shopee's unique identifier for the package under an order."
+      },
+      {
+        "name": "fulfillment_status",
+        "type": "string",
+        "sample": "LOGISTICS_READY",
+        "description": "The Shopee fulfillment status for the package. Applicable values: See V2.0 Data Definition - PackageFulfillmentStatus."
+      },
+      {
+        "name": "update_time",
+        "type": "int64",
+        "sample": "1661950674",
+        "description": "Timestamp that indicates the last time that there was a change in value of package."
+      },
+      {
+        "name": "logistics_channel_id",
+        "type": "int64",
+        "sample": "80008",
+        "description": "The identity of logistic channel."
+      },
+      {
+        "name": "shipping_carrier",
+        "type": "string",
+        "sample": "JNE Trucking (JTR) LPS",
+        "description": "The logistics service provider that the buyer selected for the package to deliver items."
+      },
+      {
+        "name": "allow_self_design_awb",
+        "type": "boolean",
+        "sample": "true",
+        "description": "To indicate whether the package allows for self-designed AWB, if allow_self_design_awb returns false, it means that the package does not allow for self-designed AWB and only the system-AWB can be used."
+      },
+      {
+        "name": "days_to_ship",
+        "type": "int64",
+        "sample": "3",
+        "description": "Shipping preparation time set by the seller when listing item on Shopee."
+      },
+      {
+        "name": "ship_by_date",
+        "type": "int64",
+        "sample": "1662209873",
+        "description": "The deadline to ship out the package."
+      },
+      {
+        "name": "pending_terms",
+        "type": "string[]",
+        "sample": "",
+        "description": "The list of pending terms, possible values: SYSTEM_PENDING for order under Shopee internal processing, KYC_PENDING for order under KYC checking(TW CB order only)"
+      },
+      {
+        "name": "tracking_number",
+        "type": "string",
+        "sample": "",
+        "description": "The tracking number of this package."
+      },
+      {
+        "name": "tracking_number_expiration_date",
+        "type": "int64",
+        "sample": "",
+        "description": "[TW only] Tracking number expiration date"
+      },
+      {
+        "name": "pickup_done_time",
+        "type": "int64",
+        "sample": "",
+        "description": "The timestamp when pickup is done."
+      },
+      {
+        "name": "is_split_up",
+        "type": "boolean",
+        "sample": "false",
+        "description": "To indicate whether this parcel is split."
+      },
+      {
+        "name": "item_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The lis of items in the package."
+      },
+      {
+        "name": "item_id",
+        "type": "int64",
+        "sample": "2200149592",
+        "description": "Shopee's unique identifier for an item."
+      },
+      {
+        "name": "model_id",
+        "type": "int64",
+        "sample": "",
+        "description": "Shopee's unique identifier for a model."
+      },
+      {
+        "name": "item_sku",
+        "type": "string",
+        "sample": "",
+        "description": "A item SKU (stock keeping unit) is an identifier defined by a seller, sometimes called parent SKU. Item SKU can be assigned to an item in Shopee Listings."
+      },
+      {
+        "name": "model_sku",
+        "type": "string",
+        "sample": "",
+        "description": "ID of the model that belongs to the same item."
+      },
+      {
+        "name": "model_quantity",
+        "type": "int64",
+        "sample": "1",
+        "description": "The number of identical items/variations purchased at the same time by the same buyer from one listing/item."
+      },
+      {
+        "name": "order_item_id",
+        "type": "int64",
+        "sample": "2200149592",
+        "description": "The identify of order item. For items in one same bundle deal promotion, the order_item_id should share the same id, such as 1,2. For items not in bundle deal promotion, the order_item_id should be the same as item_id."
+      },
+      {
+        "name": "promotion_group_id",
+        "type": "int64",
+        "sample": "",
+        "description": "The identify of product promotion."
+      },
+      {
+        "name": "product_location_id",
+        "type": "string",
+        "sample": "",
+        "description": "The warehouse ID of the item."
+      },
+      {
+        "name": "recipient_address",
+        "type": "object",
+        "sample": "",
+        "description": "This object contains detailed breakdown for the recipient address. Different parameters might be masked according to each market and kind of seller. For TW region integrated channel orders will be all masked as \"****\". More details may refer the announcement."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "b***r",
+        "description": "Recipient's name for the address."
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "sample": "******78",
+        "description": "Recipient's phone number input when order was placed. [Only for TW non-integrated channel] Will return \"****\" when the \"virtual_contact_number\" is available"
+      },
+      {
+        "name": "town",
+        "type": "string",
+        "sample": "****",
+        "description": "The town of the recipient's address. Whether there is a town will depend on the region and/or country."
+      },
+      {
+        "name": "district",
+        "type": "string",
+        "sample": "****",
+        "description": "The district of the recipient's address. Whether there is a district will depend on the region and/or country."
+      },
+      {
+        "name": "city",
+        "type": "string",
+        "sample": "****",
+        "description": "The city of the recipient's address. Whether there is a city will depend on the region and/or country."
+      },
+      {
+        "name": "state",
+        "type": "string",
+        "sample": "****",
+        "description": "The state/province of the recipient's address. Whether there is a state/province will depend on the region and/or country."
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "sample": "****",
+        "description": "The two-digit code representing the region of the Recipient."
+      },
+      {
+        "name": "zipcode",
+        "type": "string",
+        "sample": "****",
+        "description": "Recipient's postal code."
+      },
+      {
+        "name": "full_address",
+        "type": "string",
+        "sample": "******11",
+        "description": "The full address of the recipient, including country, state, even street, and etc."
+      },
+      {
+        "name": "parcel_chargeable_weight_gram",
+        "type": "int64",
+        "sample": "",
+        "description": "display weight used to calculate ASF for this parcel"
+      },
+      {
+        "name": "group_shipment_id",
+        "type": "int64",
+        "sample": "",
+        "description": "The common identifier for multiple orders combined in the same parcel."
+      },
+      {
+        "name": "virtual_contact_number",
+        "type": "string",
+        "sample": "",
+        "description": "[Only for TW non-integrated channel] The virtual phone number to contact the recipient."
+      },
+      {
+        "name": "package_query_number",
+        "type": "string",
+        "sample": "false",
+        "description": "[Only for TW non-integrated channel] The query number used in virtual phone number calls to contact the recipient of this package."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate warning message you should take care."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"response\": {\n        \"package_list\": [\n            {\n                \"order_sn\": \"250429H8QQSWV3\",\n                \"package_number\": \"OFG199593509207187\",\n                \"fulfillment_status\": \"LOGISTICS_DELIVERY_FAILED\",\n                \"update_time\": 1746061625,\n                \"tracking_number\": \"third_party_tn_1745894345\",\n                \"ship_by_date\": 1746153510,\n                \"tracking_number_expiration_date\": 0,\n                \"item_list\": [\n                    {\n                        \"item_id\": 2444543808,\n                        \"model_id\": 10025453872,\n                        \"item_sku\": \"\",\n                        \"model_sku\": \"test sku\",\n                        \"model_quantity\": 3,\n                        \"order_item_id\": 2,\n                        \"promotion_group_id\": 0,\n                        \"product_location_id\": \"CNG\"\n                    },\n                    {\n                        \"item_id\": 2644541245,\n                        \"model_id\": 2023490165,\n                        \"item_sku\": \"\",\n                        \"model_sku\": \"test sku\",\n                        \"model_quantity\": 3,\n                        \"order_item_id\": 1,\n                        \"promotion_group_id\": 0,\n                        \"product_location_id\": \"CNG\"\n                    },\n                    {\n                        \"item_id\": 2644541245,\n                        \"model_id\": 2023490165,\n                        \"item_sku\": \"\",\n                        \"model_sku\": \"test sku\",\n                        \"model_quantity\": 3,\n                        \"order_item_id\": 1,\n                        \"promotion_group_id\": 0,\n                        \"product_location_id\": \"CNG\"\n                    },\n                    {\n                        \"item_id\": 2644541245,\n                        \"model_id\": 2023490165,\n                        \"item_sku\": \"\",\n                        \"model_sku\": \"test sku\",\n                        \"model_quantity\": 3,\n                        \"order_item_id\": 2644541245,\n                        \"promotion_group_id\": 0,\n                        \"product_location_id\": \"CNG\"\n                    }\n                ],\n                \"logistics_channel_id\": 80014,\n                \"shipping_carrier\": \"J&T Express\",\n                \"allow_self_design_awb\": true,\n                \"days_to_ship\": 3,\n                \"recipient_address\": {\n                    \"name\": \"t******1\",\n                    \"phone\": \"******11\",\n                    \"town\": \"****\",\n                    \"district\": \"****\",\n                    \"city\": \"****\",\n                    \"state\": \"****\",\n                    \"region\": \"****\",\n                    \"zipcode\": \"****\",\n                    \"full_address\": \"******54\"\n                },\n                \"parcel_chargeable_weight_gram\": 0,\n                \"group_shipment_id\": 0,\n                \"virtual_contact_number\": \"\",\n                \"package_query_number\": \"\",\n                \"pickup_done_time\": 1745894358,\n                \"is_split_up\": false\n            },\n            {\n                \"order_sn\": \"220831EGF1JMXF\",\n                \"package_number\": \"OFG1156498731071468\",\n                \"fulfillment_status\": \"LOGISTICS_READY\",\n                \"update_time\": 1661950674,\n                \"tracking_number\": \"\",\n                \"ship_by_date\": 1662209873,\n                \"tracking_number_expiration_date\": 0,\n                \"item_list\": [\n                    {\n                        \"item_id\": 2200149592,\n                        \"model_id\": 0,\n                        \"item_sku\": \"\",\n                        \"model_sku\": \"\",\n                        \"model_quantity\": 1,\n                        \"order_item_id\": 2200149592,\n                        \"promotion_group_id\": 0,\n                        \"product_location_id\": \"\"\n                    }\n                ],\n                \"logistics_channel_id\": 80008,\n                \"shipping_carrier\": \"JNE Trucking (JTR) LPS\",\n                \"allow_self_design_awb\": true,\n                \"days_to_ship\": 3,\n                \"recipient_address\": {\n                    \"name\": \"b***r\",\n                    \"phone\": \"******78\",\n                    \"town\": \"****\",\n                    \"district\": \"****\",\n                    \"city\": \"****\",\n                    \"state\": \"****\",\n                    \"region\": \"****\",\n                    \"zipcode\": \"****\",\n                    \"full_address\": \"******11\"\n                },\n                \"parcel_chargeable_weight_gram\": 0,\n                \"group_shipment_id\": 0,\n                \"virtual_contact_number\": \"\",\n                \"package_query_number\": \"\",\n                \"is_split_up\": false\n            }\n        ]\n    },\n    \"request_id\": \"e3e3e7f334afb1ec6b29b57e1285f801\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_not_found",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_permission",
+      "message": "Sorry you don't have the permission, detail: {msg}."
+    },
+    {
+      "code": "error_server",
+      "message": "System error. Please try again later."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/order/search_package_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/order/search_package_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/order/search_package_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/search_package_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/search_package_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/search_package_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/search_package_list"
+      }
+    ]
+  }
+}

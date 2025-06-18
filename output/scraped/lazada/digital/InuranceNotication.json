@@ -1,0 +1,203 @@
+{
+  "platform": "lazada",
+  "module": "digital",
+  "endpoint_name": "InuranceNotication",
+  "version": null,
+  "summary": "Third party insurance company callback interface",
+  "description": "Third party insurance company callback interface",
+  "path": "/digital/insurance/test/notificationcopy",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "orderNo",
+        "type": "String",
+        "required": true,
+        "description": "Insurance company order number"
+      },
+      {
+        "name": "thirdOrderNo",
+        "type": "String",
+        "required": true,
+        "description": "lazada orderId"
+      },
+      {
+        "name": "premium",
+        "type": "String",
+        "required": true,
+        "description": "premium"
+      },
+      {
+        "name": "ePolicyLink",
+        "type": "String",
+        "required": true,
+        "description": "ePolicy Link"
+      },
+      {
+        "name": "policyNo",
+        "type": "String",
+        "required": true,
+        "description": "Policy No"
+      },
+      {
+        "name": "underwritingStatus",
+        "type": "String",
+        "required": true,
+        "description": "Order Status"
+      },
+      {
+        "name": "underwritingReason",
+        "type": "String",
+        "required": false,
+        "description": "Order Message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "transactionId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "extendInfo",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/digital/insurance/test/notificationcopy\");\nrequest.addApiParameter(\"orderNo\", \"12332323\");\nrequest.addApiParameter(\"thirdOrderNo\", \"43434123\");\nrequest.addApiParameter(\"premium\", \"1000\");\nrequest.addApiParameter(\"ePolicyLink\", \"https://xxxx.com/xxxx\");\nrequest.addApiParameter(\"policyNo\", \"1234343\");\nrequest.addApiParameter(\"underwritingStatus\", \"123\");\nrequest.addApiParameter(\"underwritingReason\", \"123\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/digital/insurance/test/notificationcopy');\n$request->addApiParam('orderNo','12332323');\n$request->addApiParam('thirdOrderNo','43434123');\n$request->addApiParam('premium','1000');\n$request->addApiParam('ePolicyLink','https://xxxx.com/xxxx');\n$request->addApiParam('policyNo','1234343');\n$request->addApiParam('underwritingStatus','123');\n$request->addApiParam('underwritingReason','123');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/digital/insurance/test/notificationcopy\");\nrequest.AddApiParameter(\"orderNo\", \"12332323\");\nrequest.AddApiParameter(\"thirdOrderNo\", \"43434123\");\nrequest.AddApiParameter(\"premium\", \"1000\");\nrequest.AddApiParameter(\"ePolicyLink\", \"https://xxxx.com/xxxx\");\nrequest.AddApiParameter(\"policyNo\", \"1234343\");\nrequest.AddApiParameter(\"underwritingStatus\", \"123\");\nrequest.AddApiParameter(\"underwritingReason\", \"123\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/digital/insurance/test/notificationcopy')\nrequest.add_api_parameter(\"orderNo\", \"12332323\")\nrequest.add_api_parameter(\"thirdOrderNo\", \"43434123\")\nrequest.add_api_parameter(\"premium\", \"1000\")\nrequest.add_api_parameter(\"ePolicyLink\", \"https://xxxx.com/xxxx\")\nrequest.add_api_parameter(\"policyNo\", \"1234343\")\nrequest.add_api_parameter(\"underwritingStatus\", \"123\")\nrequest.add_api_parameter(\"underwritingReason\", \"123\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/digital/insurance/test/notificationcopy')\nrequest.add_api_param('orderNo', '12332323')\nrequest.add_api_param('thirdOrderNo', '43434123')\nrequest.add_api_param('premium', '1000')\nrequest.add_api_param('ePolicyLink', 'https://xxxx.com/xxxx')\nrequest.add_api_param('policyNo', '1234343')\nrequest.add_api_param('underwritingStatus', '123')\nrequest.add_api_param('underwritingReason', '123')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/digital/insurance/test/notificationcopy' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"orderNo\":\"12332323\",\"thirdOrderNo\":\"43434123\",\"premium\":\"1000\",\"ePolicyLink\":\"https%3A%2F%2Fxxxx.com%2Fxxxx\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"underwritingReason\":\"123\",\"policyNo\":\"1234343\",\"underwritingStatus\":\"123\",\"timestamp\":\"1750231478671\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "错误码"
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "description": "错误信息"
+      },
+      {
+        "name": "transactionId",
+        "type": "String",
+        "description": "交易Id"
+      },
+      {
+        "name": "extendInfo",
+        "type": "String",
+        "description": "拓展信息"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"errorCode\": \"123\",\n  \"extendInfo\": \"123\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"transactionId\": \"123\",\n  \"errorMsg\": \"123\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

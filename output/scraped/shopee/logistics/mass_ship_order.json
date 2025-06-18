@@ -1,0 +1,239 @@
+{
+  "platform": "shopee",
+  "module": "logistics",
+  "endpoint_name": "mass_ship_order",
+  "version": "v2",
+  "summary": "Use this api to initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels",
+  "description": "Use this api to initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels. Should call v2.logistics.get_shipping_parameter to fetch all required param first. It's recommended to initiate logistics one hour after the orders were placed since there is one-hour window buyer can cancel any order without request to seller.",
+  "path": "/api/v2/logistics/ship_order",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "logistics_channel_id",
+        "type": "int64",
+        "required": false,
+        "description": "The API can only batch arrange shipment for multiple packages under the same product_location_id and same logistics_channel_id. Use this field to specify the logistics_channel_id for the request. If not specified, will use the logistics_channel_id corresponds to the first package_number by default.",
+        "sample": "50021"
+      },
+      {
+        "name": "product_location_id",
+        "type": "string",
+        "required": false,
+        "description": "The API can only batch arrange shipment for multiple packages under the same product_location_id and same logistics_channel_id. Use this field to specify the product_location_id for the request. If not specified, will use the product_location_id corresponds to the first package_number by default.",
+        "sample": ""
+      },
+      {
+        "name": "package_list",
+        "type": "object[]",
+        "required": true,
+        "description": "The list of packages you want to arrange shipment. limit [1, 50].",
+        "sample": ""
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for the package under an order. You should't fill the field with empty string when there is't a package number.",
+        "sample": ""
+      },
+      {
+        "name": "pickup",
+        "type": "object",
+        "required": false,
+        "description": "Required parameter ONLY if GetParameterForInit returns \"pickup\" or if GetLogisticsInfo returns \"pickup\" under \"info_needed\" for the same order. Developer should still include \"pickup\" field in the call even if \"pickup\" has empty value.",
+        "sample": ""
+      },
+      {
+        "name": "address_id",
+        "type": "int64",
+        "required": false,
+        "description": "The identity of address.",
+        "sample": ""
+      },
+      {
+        "name": "pickup_time_id",
+        "type": "string",
+        "required": false,
+        "description": "The pickup time id. Retrieved from v2.logistics.get_mass_shipping_parameter, you can only select one from the time_slot_list. Some logistics channels may not return any date or time for pickup time slots. In such cases, sellers can arrange shipment without selecting any time slot, and Shopee will arrange a suitable timing for these situations.",
+        "sample": ""
+      },
+      {
+        "name": "dropoff",
+        "type": "object",
+        "required": false,
+        "description": "Required parameter ONLY if GetParameterForInit returns \"dropoff\" or if GetLogisticsInfo returns \"dropoff\" under \"info_needed\" for the same order. Developer should still include \"dropoff\" field in the call even if \"dropoff\" has empty value. For logistic_id 80003 and 80004, both Regular and JOB shipping methods are supported. If you choose Regular shipping method, please use \"tracking_no\" to call Init API. If you choose JOB shipping method, please use \"sender_real_name\" to call Init API. Note that only one of \"tracking_no\" and \"sender_real_name\" can be selected.",
+        "sample": ""
+      },
+      {
+        "name": "branch_id",
+        "type": "int64",
+        "required": false,
+        "description": "The identity of branch.",
+        "sample": "0"
+      },
+      {
+        "name": "sender_real_name",
+        "type": "string",
+        "required": false,
+        "description": "The real name of sender.",
+        "sample": ""
+      },
+      {
+        "name": "tracking_number",
+        "type": "string",
+        "required": false,
+        "description": "Need input this field when \"tracking_number\" is returned from \"info_need\". Please note that this tracking number is assigned by third-party shipping carrier for item shipment.",
+        "sample": ""
+      },
+      {
+        "name": "non_integrated",
+        "type": "object",
+        "required": false,
+        "description": "Optional parameter when get_mass_shipping_parameter returns \"non-integrated\" under \"info_needed\".",
+        "sample": ""
+      },
+      {
+        "name": "tracking_number",
+        "type": "object[]",
+        "required": false,
+        "description": "Optional parameter for non-integrated channel order. The tracking number assigned by the shipping carrier for item shipment.",
+        "sample": ""
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for the package under an order.",
+        "sample": ""
+      },
+      {
+        "name": "tracking_number",
+        "type": "string",
+        "required": true,
+        "description": "Optional parameter for non-integrated channel order. The tracking number assigned by the shipping carrier for item shipment.",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"package_list\": [\n        {\n            \"package_number\": \"OFG192433821205164\"\n        },\n        {\n            \"package_number\": \"OFG192433773204150\"\n        }\n    ],\n    \"pickup\": {\n        \"address_id\": 200000015,\n        \"pickup_time_id\": \"1737104400_5\"\n    }\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "3dad66f43b8447d282ae6da36626c6b7",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "success_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "Success package list."
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "sample": "",
+        "description": "Shopee's unique identifier for the package under an order."
+      },
+      {
+        "name": "fail_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "Fail package list."
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "sample": "",
+        "description": "Shopee's unique identifier for the package under an order."
+      },
+      {
+        "name": "fail_reason",
+        "type": "string",
+        "sample": "",
+        "description": "Reason for failure."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"e3e3e7f32deed04cc72ddcb0da0c5301:010002a07d0bfcf4:0000007fae5e5a35\",\n    \"response\": {\n        \"fail_list\": [\n            {\n                \"fail_reason\": \"Package is not under the specified fulfilment channel\",\n                \"package_number\": \"OFG192433773204150\"\n            }\n        ],\n        \"success_list\": [\n            {\n                \"package_number\": \"OFG192433821205164\"\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "logistics.error_param",
+      "message": "Duplicate package number"
+    },
+    {
+      "code": "error_param",
+      "message": "Package is not under the specified fulfilment channel"
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Package is not under the specified warehouse"
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Package exceeds limit."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/ship_order"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/ship_order"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/ship_order"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/ship_order"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/ship_order"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/ship_order"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/ship_order"
+      }
+    ]
+  }
+}

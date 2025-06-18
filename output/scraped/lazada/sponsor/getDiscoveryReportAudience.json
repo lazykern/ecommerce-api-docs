@@ -1,0 +1,182 @@
+{
+  "platform": "lazada",
+  "module": "sponsor",
+  "endpoint_name": "getDiscoveryReportAudience",
+  "version": null,
+  "summary": "Get sponsored discovery report audience level",
+  "description": "Get sponsored discovery report audience level",
+  "path": "/sponsor/solutions/report/getDiscoveryReportAudience",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "campaignName",
+        "type": "String",
+        "required": false,
+        "description": "Campaign Name"
+      },
+      {
+        "name": "campaignId",
+        "type": "Number",
+        "required": false,
+        "description": "Campaign Id"
+      },
+      {
+        "name": "audienceGroup",
+        "type": "Number",
+        "required": false,
+        "description": "Audienct type 1:15 days Visitors 2:Similar Product Visitors 3:Store Awareness Audience 4:Store Interest Audience 5:DMP Crow Audience 6:Gender 7:Age"
+      },
+      {
+        "name": "sort",
+        "type": "String",
+        "required": false,
+        "description": "sort column,we have provide some index to sort"
+      },
+      {
+        "name": "order",
+        "type": "String",
+        "required": false,
+        "description": "ASC or DESC, other String is invalid"
+      },
+      {
+        "name": "pageNo",
+        "type": "Number",
+        "required": true,
+        "description": "Page Nodefault 1,max=100"
+      },
+      {
+        "name": "pageSize",
+        "type": "Number",
+        "required": true,
+        "description": "Page No, default 10, max=100"
+      },
+      {
+        "name": "startDate",
+        "type": "String",
+        "required": true,
+        "description": "start date, format like yyyy-MM-dd"
+      },
+      {
+        "name": "endDate",
+        "type": "String",
+        "required": true,
+        "description": "end date , date, format like yyyy-MM-dd"
+      },
+      {
+        "name": "result",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/sponsor/solutions/report/getDiscoveryReportAudience\");\nrequest.addApiParameter(\"campaignName\", \"test\");\nrequest.addApiParameter(\"campaignId\", \"101100033026398\");\nrequest.addApiParameter(\"audienceGroup\", \"1\");\nrequest.addApiParameter(\"sort\", \"impressions\");\nrequest.addApiParameter(\"order\", \"ASC\");\nrequest.addApiParameter(\"pageNo\", \"1\");\nrequest.addApiParameter(\"pageSize\", \"100\");\nrequest.addApiParameter(\"startDate\", \"2023-11-12\");\nrequest.addApiParameter(\"endDate\", \"2023-11-13\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/sponsor/solutions/report/getDiscoveryReportAudience');\n$request->addApiParam('campaignName','test');\n$request->addApiParam('campaignId','101100033026398');\n$request->addApiParam('audienceGroup','1');\n$request->addApiParam('sort','impressions');\n$request->addApiParam('order','ASC');\n$request->addApiParam('pageNo','1');\n$request->addApiParam('pageSize','100');\n$request->addApiParam('startDate','2023-11-12');\n$request->addApiParam('endDate','2023-11-13');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/sponsor/solutions/report/getDiscoveryReportAudience\");\nrequest.AddApiParameter(\"campaignName\", \"test\");\nrequest.AddApiParameter(\"campaignId\", \"101100033026398\");\nrequest.AddApiParameter(\"audienceGroup\", \"1\");\nrequest.AddApiParameter(\"sort\", \"impressions\");\nrequest.AddApiParameter(\"order\", \"ASC\");\nrequest.AddApiParameter(\"pageNo\", \"1\");\nrequest.AddApiParameter(\"pageSize\", \"100\");\nrequest.AddApiParameter(\"startDate\", \"2023-11-12\");\nrequest.AddApiParameter(\"endDate\", \"2023-11-13\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/sponsor/solutions/report/getDiscoveryReportAudience')\nrequest.add_api_parameter(\"campaignName\", \"test\")\nrequest.add_api_parameter(\"campaignId\", \"101100033026398\")\nrequest.add_api_parameter(\"audienceGroup\", \"1\")\nrequest.add_api_parameter(\"sort\", \"impressions\")\nrequest.add_api_parameter(\"order\", \"ASC\")\nrequest.add_api_parameter(\"pageNo\", \"1\")\nrequest.add_api_parameter(\"pageSize\", \"100\")\nrequest.add_api_parameter(\"startDate\", \"2023-11-12\")\nrequest.add_api_parameter(\"endDate\", \"2023-11-13\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/sponsor/solutions/report/getDiscoveryReportAudience')\nrequest.add_api_param('campaignName', 'test')\nrequest.add_api_param('campaignId', '101100033026398')\nrequest.add_api_param('audienceGroup', '1')\nrequest.add_api_param('sort', 'impressions')\nrequest.add_api_param('order', 'ASC')\nrequest.add_api_param('pageNo', '1')\nrequest.add_api_param('pageSize', '100')\nrequest.add_api_param('startDate', '2023-11-12')\nrequest.add_api_param('endDate', '2023-11-13')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/sponsor/solutions/report/getDiscoveryReportAudience' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"endDate\":\"2023-11-13\",\"campaignId\":\"101100033026398\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"100\",\"sort\":\"impressions\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"pageNo\":\"1\",\"audienceGroup\":\"1\",\"sign_method\":\"sha256\",\"campaignName\":\"test\",\"startDate\":\"2023-11-12\",\"timestamp\":\"1750231544781\",\"order\":\"ASC\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object",
+        "description": "Details"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": {\n    \"result\": [\n      {\n        \"productImageUrl\": \"null\",\n        \"ctr\": \"2.58\",\n        \"campaignId\": \"101100010112323\",\n        \"storeRevenue\": \"1448.37\",\n        \"storeCvr\": \"0.0654\",\n        \"storeA2c\": \"67\",\n        \"storeOrders\": \"17\",\n        \"productUnitSold\": \"13\",\n        \"impressions\": \"10067\",\n        \"productCvr\": \"0.05\",\n        \"productOrders\": \"13\",\n        \"audienceFakeId\": \"1995526319_5_18813978\",\n        \"storeRoi\": \"26.28\",\n        \"adgroupId\": \"1995526319\",\n        \"audienceGroup\": \"5\",\n        \"adgroupName\": \"Caltrate 600 Calcium Dietary Supplement For Bone Health Value Pack (60\\u0027s x 4)\",\n        \"cpc\": \"0.21\",\n        \"spend\": \"55.12\",\n        \"clicks\": \"260\",\n        \"productRevenue\": \"1298.45\",\n        \"storeUnitSold\": \"32\",\n        \"campaignName\": \"Caltrate SP (Manual)\",\n        \"productA2c\": \"32\"\n      }\n    ],\n    \"errorKey\": \"null\",\n    \"errorDTOList\": [],\n    \"success\": \"true\",\n    \"analyseTraceId\": \"null\",\n    \"errorCode\": \"null\",\n    \"totalCount\": \"24\",\n    \"errorMsg\": \"null\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

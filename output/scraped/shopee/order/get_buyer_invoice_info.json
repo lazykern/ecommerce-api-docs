@@ -1,0 +1,392 @@
+{
+  "platform": "shopee",
+  "module": "order",
+  "endpoint_name": "get_buyer_invoice_info",
+  "version": "v2",
+  "summary": "This endpoint only for PH and BR local sellers only",
+  "description": "This endpoint only for PH and BR local sellers only. This API is used for seller to retrieve a list of order IDs that are pending invoice upload.",
+  "path": "/api/v2/order/get_pending_buyer_invoice_order_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "queries",
+        "type": "object[]",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for an order.",
+        "sample": "220314U0G6UNMN"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n\t\"queries\": [\n\t\t{\n\t\t\t\"order_sn\": \"220314U0G6UNMN\"\n\t\t}\n\t]\n}"
+    },
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.post(\"https://partner.uat.shopeemobile.com/api/v2/order/get_buyer_invoice_info?timestamp=timestamp&shop_id=shop_id&partner_id=partner_id&sign=sign&access_token=access_token\")\n.header(\"Content-Type\",\"application/json\")\n.body(\"{\n   \\\"queries\\\": [\n      {\n         \\\"order_sn\\\": \\\"220314U0G6UNMN\\\"\n      }\n   ]\n}\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.uat.shopeemobile.com/api/v2/order/get_buyer_invoice_info?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'POST',\n  CURLOPT_POSTFIELDS => '{\n    \"queries\": [\n        {\n            \"order_sn\": \"220314U0G6UNMN\"\n        }\n    ]\n}',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request POST 'https://partner.uat.shopeemobile.com/api/v2/order/get_buyer_invoice_info?partner_id=partner_id&sign=sign&access_token=access_token&timestamp=timestamp&shop_id=shop_id' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n   \"queries\": [\n      {\n         \"order_sn\": \"220314U0G6UNMN\"\n      }\n   ]\n}'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\nimport json\n\nurl = \"https://partner.uat.shopeemobile.com/api/v2/order/get_buyer_invoice_info?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload=json.dumps({\n  \"queries\": [\n    {\n      \"order_sn\": \"220314U0G6UNMN\"\n    }\n  ]\n})\nheaders = {\n  'Content-Type': 'application/json'\n}\nresponse = requests.request(\"POST\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "invoice_info_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "220314U0G6UNMN",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "invoice_type",
+        "type": "string",
+        "sample": "personal",
+        "description": "Type of invoice requested: {1: personal, 2: company}."
+      },
+      {
+        "name": "invoice_detail",
+        "type": "object",
+        "sample": "",
+        "description": "Invoice info submitted by buyer. Might be masked, e.g. A****b, depending on order status."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "Tom Jerry",
+        "description": "Buyer name (only has value when invoice_type is personal) - VN, TH, PH only"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "sample": "tom.and.jerry@gmail.com",
+        "description": "Buyer email address (only has value when invoice_type is personal) - VN, TH, PH only"
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "sample": "(+66) 828918689",
+        "description": "Buyer phone number - TH only"
+      },
+      {
+        "name": "tax_id",
+        "type": "string",
+        "sample": "1234567898",
+        "description": "only has value when invoice_type is personal. - VN, TH, PH only"
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "sample": "GieŁdowa 4b, Długi Bród, 17200, PIĄTE PIĘTRO",
+        "description": "Buyer address in format \"Street & number, city, zipcode, any additional info provided by buyer\" (only has value when invoice_type is personal) - PH, VN only"
+      },
+      {
+        "name": "id_card_address",
+        "type": "string",
+        "sample": "GieŁdowa 4b, Długi Bród, 17200, PIĄTE PIĘTRO",
+        "description": "Same function as the address, only having a different field name for TH.Buyer address in format \"Street & number, city, zipcode, any additional info provided by buyer\" (only has value when invoice_type is personal)."
+      },
+      {
+        "name": "address_breakdown",
+        "type": "object",
+        "sample": "",
+        "description": "Buyer address breakdown. - TH, PH only"
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "sample": "Thailand",
+        "description": "Return region value - PH, TH only"
+      },
+      {
+        "name": "state",
+        "type": "string",
+        "sample": "Małopolskie",
+        "description": "Return value - TH: Province"
+      },
+      {
+        "name": "city",
+        "type": "string",
+        "sample": "Myślenicki",
+        "description": "Return value - TH: District"
+      },
+      {
+        "name": "town",
+        "type": "string",
+        "sample": "Łęki",
+        "description": "Return value - TH: Sub district"
+      },
+      {
+        "name": "postcode",
+        "type": "string",
+        "sample": "17200",
+        "description": "Return value - TH: Postal code - PH: Postal code"
+      },
+      {
+        "name": "detailed_address",
+        "type": "string",
+        "sample": "GieŁdowa 4b",
+        "description": "Return value - PH: Additional details, i.e. street name, building - TH: Additional details, i.e. house number"
+      },
+      {
+        "name": "additional_info",
+        "type": "string",
+        "sample": "PIĄTE PIĘTRO",
+        "description": "Return value: - Empty for PH, TH"
+      },
+      {
+        "name": "full_address",
+        "type": "string",
+        "sample": "GieŁdowa 4b, Łęki, 17200, PIĄTE PIĘTRO",
+        "description": "- only has value when invoice_type is personal - Buyer address in format \"detailed_address, town, district, state, postcode, additional_info\" for all regions --- for TH: leave the 'additional_info' as empty"
+      },
+      {
+        "name": "company_head_office",
+        "type": "string",
+        "sample": "yes",
+        "description": "- return value for TH only (only has value when invoice_type is company)"
+      },
+      {
+        "name": "company_name",
+        "type": "string",
+        "sample": "Michal Orwinski S.C.",
+        "description": "- Only return value when invoice type is company - VN, TH, PH only"
+      },
+      {
+        "name": "company_branch_name",
+        "type": "string",
+        "sample": "CIty A branch",
+        "description": "- Only return value when invoice type is company - TH only"
+      },
+      {
+        "name": "company_branch_id",
+        "type": "string",
+        "sample": "123",
+        "description": "- Only return value when invoice type is company - TH only"
+      },
+      {
+        "name": "company_type",
+        "type": "string",
+        "sample": "head office",
+        "description": "- Only return value when invoice type is company - TH only"
+      },
+      {
+        "name": "company_email",
+        "type": "string",
+        "sample": "michal@shopee.com",
+        "description": "- Only return value when invoice type is company - VN, TH, PH only"
+      },
+      {
+        "name": "company_tax_id",
+        "type": "string",
+        "sample": "123456789",
+        "description": "- Only return value when invoice type is company - VN, TH, PH only"
+      },
+      {
+        "name": "company_address",
+        "type": "string",
+        "sample": "GieŁdowa 4b, Długi Bród, 17200, PIĄTE PIĘTRO",
+        "description": "Buyer address in format \"Street & number,city, zipcode, any additional info provided by buyer\" (only has value when invoice_type is company) - VN, TH only"
+      },
+      {
+        "name": "company_address_breakdown",
+        "type": "object",
+        "sample": "",
+        "description": "Company address breakdown - PH, TH only"
+      },
+      {
+        "name": "company_region",
+        "type": "string",
+        "sample": "Thailand",
+        "description": "Return region value - PH, TH only"
+      },
+      {
+        "name": "company_state",
+        "type": "string",
+        "sample": "Małopolskie",
+        "description": "Return value - PH: Province - TH: Province"
+      },
+      {
+        "name": "company_city",
+        "type": "string",
+        "sample": "Myślenicki",
+        "description": "Return value - PH: City"
+      },
+      {
+        "name": "company_district",
+        "type": "string",
+        "sample": "Myślenice",
+        "description": "Return value - PH: Barangay - TH: District"
+      },
+      {
+        "name": "company_town",
+        "type": "string",
+        "sample": "Łęki",
+        "description": "Return value - TH: Sub district"
+      },
+      {
+        "name": "company_postcode",
+        "type": "string",
+        "sample": "17200",
+        "description": "Return postal code - TH, PH only"
+      },
+      {
+        "name": "company_detailed_address",
+        "type": "string",
+        "sample": "GieŁdowa 4b",
+        "description": "Return value - PH: Detailed address - TH: Detailed address"
+      },
+      {
+        "name": "company_additional_info",
+        "type": "string",
+        "sample": "PIĄTE PIĘTRO",
+        "description": "Return value: - Empty for PH, TH"
+      },
+      {
+        "name": "company_full_address",
+        "type": "string",
+        "sample": "GieŁdowa 4b, Łęki, 17200, PIĄTE PIĘTRO",
+        "description": "Concatenation of company address breakdown - only has value when invoice_type is company"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "order not found",
+        "description": "Error in retrieving the receipt setting of a particular order."
+      },
+      {
+        "name": "is_requested",
+        "type": "boolean",
+        "sample": "false",
+        "description": "To identify order with and without buyer request, applicable to PL."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "ZQKEZfwaNQUnMKqMmjWuRPybfshyFygV",
+        "description": "Request id for debugging purposes"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "common.error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"request_id\": \"a2c45ca2683caf1651ecab5a4d5942ce\",\n    \"error\": \"\",\n    \"message\": \"\",\n    \"invoice_info_list\": [\n        {\n            \"order_sn\": \"2209160VNPKXF7\",\n            \"invoice_type\": \"personal\",\n            \"invoice_detail\": {\n                \"name\": \"Kevin Yap\",\n                \"email\": \"testing.just@op.pl\",\n                \"address\": \"Ordona 7B Warszawa, Warszawa, 01237\",\n                \"phone_number\": \"\",\n                \"tax_id\": \"\",\n                \"address_breakdown\": {\n                    \"region\": \"Poland\",\n                    \"state\": \"\",\n                    \"city\": \"Warszawa\",\n                    \"district\": \"\",\n                    \"town\": \"Warszawa\",\n                    \"postcode\": \"01237\",\n                    \"detailed_address\": \"Ordona 7B Warszawa\",\n                    \"additional_info\": \"\",\n                    \"full_address\": \"Ordona 7B Warszawa, Warszawa, 01237\"\n                }\n            },\n            \"is_requested\": false,\n            \"error\": \"\"\n        }\n    ]\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/order/get_pending_buyer_invoice_order_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/order/get_pending_buyer_invoice_order_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/order/get_pending_buyer_invoice_order_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/get_pending_buyer_invoice_order_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/get_pending_buyer_invoice_order_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/get_pending_buyer_invoice_order_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/get_pending_buyer_invoice_order_list"
+      }
+    ]
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "platform": "lazada",
+  "module": "fbl",
+  "endpoint_name": "GetFulfillmentSkuListForMCL",
+  "version": null,
+  "summary": "Get Fulfillment SKU List for LAZADA Partner",
+  "description": "Get Fulfillment SKU List for LAZADA Partner",
+  "path": "/fbl/fulfillment_sku_list/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "page",
+        "type": "Number",
+        "required": true,
+        "description": "Page Index"
+      },
+      {
+        "name": "per_page",
+        "type": "String",
+        "required": true,
+        "description": "Maximum number of results per page"
+      },
+      {
+        "name": "platform_name",
+        "type": "String",
+        "required": true,
+        "description": "Platform name"
+      },
+      {
+        "name": "fulfillment_sku_name",
+        "type": "String",
+        "required": false,
+        "description": "Fulfillment Sku Name"
+      },
+      {
+        "name": "seller_sku",
+        "type": "String",
+        "required": false,
+        "description": "Seller Sku"
+      },
+      {
+        "name": "fulfillment_sku_code",
+        "type": "String",
+        "required": false,
+        "description": "Fulfillment Sku Code"
+      },
+      {
+        "name": "barcode",
+        "type": "String",
+        "required": false,
+        "description": "barcode"
+      },
+      {
+        "name": "fulfillment_sku_codes",
+        "type": "String",
+        "required": false,
+        "description": "Fulfillment Sku Codes"
+      },
+      {
+        "name": "error_message",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "page",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "per_page",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "total_count",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/fbl/fulfillment_sku_list/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"page\", \"1\");\nrequest.addApiParameter(\"per_page\", \"50\");\nrequest.addApiParameter(\"platform_name\", \"LAZADA_TH\");\nrequest.addApiParameter(\"fulfillment_sku_name\", \"Lenovo Thinkpad\");\nrequest.addApiParameter(\"seller_sku\", \"Brown-350\");\nrequest.addApiParameter(\"fulfillment_sku_code\", \"245906966_VNAMZ-315595775\");\nrequest.addApiParameter(\"barcode\", \"LZD000006614829\");\nrequest.addApiParameter(\"fulfillment_sku_codes\", \"245906966_VNAMZ-315595775,245906966_VNAMZ-315595776\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/fbl/fulfillment_sku_list/get','GET');\n$request->addApiParam('page','1');\n$request->addApiParam('per_page','50');\n$request->addApiParam('platform_name','LAZADA_TH');\n$request->addApiParam('fulfillment_sku_name','Lenovo Thinkpad');\n$request->addApiParam('seller_sku','Brown-350');\n$request->addApiParam('fulfillment_sku_code','245906966_VNAMZ-315595775');\n$request->addApiParam('barcode','LZD000006614829');\n$request->addApiParam('fulfillment_sku_codes','245906966_VNAMZ-315595775,245906966_VNAMZ-315595776');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/fbl/fulfillment_sku_list/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"page\", \"1\");\nrequest.AddApiParameter(\"per_page\", \"50\");\nrequest.AddApiParameter(\"platform_name\", \"LAZADA_TH\");\nrequest.AddApiParameter(\"fulfillment_sku_name\", \"Lenovo Thinkpad\");\nrequest.AddApiParameter(\"seller_sku\", \"Brown-350\");\nrequest.AddApiParameter(\"fulfillment_sku_code\", \"245906966_VNAMZ-315595775\");\nrequest.AddApiParameter(\"barcode\", \"LZD000006614829\");\nrequest.AddApiParameter(\"fulfillment_sku_codes\", \"245906966_VNAMZ-315595775,245906966_VNAMZ-315595776\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/fbl/fulfillment_sku_list/get','GET')\nrequest.add_api_parameter(\"page\", \"1\")\nrequest.add_api_parameter(\"per_page\", \"50\")\nrequest.add_api_parameter(\"platform_name\", \"LAZADA_TH\")\nrequest.add_api_parameter(\"fulfillment_sku_name\", \"Lenovo Thinkpad\")\nrequest.add_api_parameter(\"seller_sku\", \"Brown-350\")\nrequest.add_api_parameter(\"fulfillment_sku_code\", \"245906966_VNAMZ-315595775\")\nrequest.add_api_parameter(\"barcode\", \"LZD000006614829\")\nrequest.add_api_parameter(\"fulfillment_sku_codes\", \"245906966_VNAMZ-315595775,245906966_VNAMZ-315595776\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/fbl/fulfillment_sku_list/get','GET')\nrequest.add_api_param('page', '1')\nrequest.add_api_param('per_page', '50')\nrequest.add_api_param('platform_name', 'LAZADA_TH')\nrequest.add_api_param('fulfillment_sku_name', 'Lenovo Thinkpad')\nrequest.add_api_param('seller_sku', 'Brown-350')\nrequest.add_api_param('fulfillment_sku_code', '245906966_VNAMZ-315595775')\nrequest.add_api_param('barcode', 'LZD000006614829')\nrequest.add_api_param('fulfillment_sku_codes', '245906966_VNAMZ-315595775,245906966_VNAMZ-315595776')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/fbl/fulfillment_sku_list/get?timestamp=1750231655815&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&page=1&per_page=50&platform_name=LAZADA_TH&fulfillment_sku_name=Lenovo+Thinkpad&seller_sku=Brown-350&fulfillment_sku_code=245906966_VNAMZ-315595775&barcode=LZD000006614829&fulfillment_sku_codes=245906966_VNAMZ-315595775%2C245906966_VNAMZ-315595776'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error_message",
+        "type": "String",
+        "description": "Error Message"
+      },
+      {
+        "name": "page",
+        "type": "Number",
+        "description": "Page Index"
+      },
+      {
+        "name": "per_page",
+        "type": "Number",
+        "description": "Maximum number of results per page"
+      },
+      {
+        "name": "total_count",
+        "type": "Number",
+        "description": "Total Count"
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "Fulfillment sku list"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "success flag"
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "description": "Error Code"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"error_message\": \"platform name is null\",\n  \"per_page\": \"50\",\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"has_stock\": \"FALSE\",\n      \"fulfillment_sku_id\": \"222222\",\n      \"serial_num_flag\": \"FALSE\",\n      \"owner_id\": \"111111111\",\n      \"min_stock_alert\": \"FALSE\",\n      \"pic_urls\": \"[\\\"ssssssssssssssssssssss\\\"]\",\n      \"barcodes\": \"[\\\"LZD000006614844\\\"]\",\n      \"sale_price\": \"32.25\",\n      \"shelf_life_flag\": \"FALSE\",\n      \"seller_skus\": \"[\\\"Brown-350\\\"]\",\n      \"platform_name\": \"LAZADA_TH\",\n      \"currency\": \"MYR\",\n      \"fulfillment_sku_name\": \"Lenovo Thinkpad\",\n      \"platform_sku_status\": \"[\\\"active\\\"]\",\n      \"fulfillment_sku_code\": \"245906966_VNAMZ-315595775\",\n      \"seller_id\": \"6666\"\n    }\n  ],\n  \"total_count\": \"88888\",\n  \"success\": \"TRUE\",\n  \"error_code\": \"001\",\n  \"page\": \"1\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

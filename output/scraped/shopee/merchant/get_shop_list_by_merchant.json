@@ -1,0 +1,176 @@
+{
+  "platform": "shopee",
+  "module": "merchant",
+  "endpoint_name": "get_shop_list_by_merchant",
+  "version": "v2",
+  "summary": "Use this call to get information of merchant",
+  "description": "Use this call to get information of merchant",
+  "path": "/api/v2/merchant/get_merchant_info",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "page_no",
+        "type": "int32",
+        "required": true,
+        "description": "Specifies the page number of data to return in the current call. Starting from 1. if data is more than one page, the page_no can be some entry to start next call.",
+        "sample": "1"
+      },
+      {
+        "name": "page_size",
+        "type": "int32",
+        "required": true,
+        "description": "Each result set is returned as a page of entries. Use the \"page_size\" filters to control the maximum number of entries to retrieve per page (i.e., per call), and the \"page_no\" to start next call. This integer value is used to specify the maximum number of entries to return in a single \"page\" of data.No more than 500.",
+        "sample": "100"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/merchant/get_shop_list_by_merchant?access_token=access_token&merchant_id=merchant_id&page_no=1&page_size=100&partner_id=partner_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/merchant/get_shop_list_by_merchant?access_token=access_token&merchant_id=merchant_id&page_no=1&page_size=100&partner_id=partner_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/merchant/get_shop_list_by_merchant?access_token=access_token&merchant_id=merchant_id&page_no=1&page_size=100&partner_id=partner_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/merchant/get_shop_list_by_merchant?access_token=access_token&merchant_id=merchant_id&page_no=1&page_size=100&partner_id=partner_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.request(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "a3a4277823b1019960cc92cfd972c506",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "shop_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "list of shop authorized to the partner and bound to the merchant."
+      },
+      {
+        "name": "shop_id",
+        "type": "int64",
+        "sample": "600000",
+        "description": "Shopee's unique identifier for a shop."
+      },
+      {
+        "name": "sip_affi_shops",
+        "type": "object[]",
+        "sample": "",
+        "description": "List of SIP affiliate shops.Only primary shop will return this parameter"
+      },
+      {
+        "name": "affi_shop_id",
+        "type": "int64",
+        "sample": "123456",
+        "description": "Affiliate shop's id."
+      },
+      {
+        "name": "more",
+        "type": "boolean",
+        "sample": "false",
+        "description": "This is to indicate whether the list is more than one page. If this value is true, you may want to continue to check next page to retrieve the rest of datas."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"request_id\": \"nGwxMqhTRqgbpfmNlbvgcTZEenLPmyyo\",\n    \"is_cnsc\": true,\n    \"shop_list\": [\n        {\n            \"shop_id\": 601306294\n        }\n    ],\n    \"more\": false\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_param",
+      "message": "The merchant id you provided is not found. Please check your merchant id."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/merchant/get_merchant_info"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/merchant/get_merchant_info"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/merchant/get_merchant_info"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/merchant/get_merchant_info"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/merchant/get_merchant_info"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/merchant/get_merchant_info"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/merchant/get_merchant_info"
+      }
+    ]
+  }
+}

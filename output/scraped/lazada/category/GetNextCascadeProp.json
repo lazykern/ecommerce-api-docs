@@ -1,0 +1,146 @@
+{
+  "platform": "lazada",
+  "module": "category",
+  "endpoint_name": "GetNextCascadeProp",
+  "version": null,
+  "summary": "Use this API to query next cascade prop",
+  "description": "Use this API to query next cascade prop.",
+  "path": "/category/cascade/getNextCascadeProp",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "categoryId",
+        "type": "Number",
+        "required": true,
+        "description": "Category id"
+      },
+      {
+        "name": "cascadeId",
+        "type": "Number",
+        "required": true,
+        "description": "Cascade id. Query from https://open.lazada.com/apps/doc/api?path=%2Fcategory%2Fattributes%2Fget"
+      },
+      {
+        "name": "path",
+        "type": "String",
+        "required": false,
+        "description": "current cascade property path"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/category/cascade/getNextCascadeProp\");\nrequest.addApiParameter(\"categoryId\", \"62094240\");\nrequest.addApiParameter(\"cascadeId\", \"26\");\nrequest.addApiParameter(\"path\", \"120013644:162,100006867:160387;120013642:163,100006864:164\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/category/cascade/getNextCascadeProp');\n$request->addApiParam('categoryId','62094240');\n$request->addApiParam('cascadeId','26');\n$request->addApiParam('path','120013644:162,100006867:160387;120013642:163,100006864:164');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/category/cascade/getNextCascadeProp\");\nrequest.AddApiParameter(\"categoryId\", \"62094240\");\nrequest.AddApiParameter(\"cascadeId\", \"26\");\nrequest.AddApiParameter(\"path\", \"120013644:162,100006867:160387;120013642:163,100006864:164\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/category/cascade/getNextCascadeProp')\nrequest.add_api_parameter(\"categoryId\", \"62094240\")\nrequest.add_api_parameter(\"cascadeId\", \"26\")\nrequest.add_api_parameter(\"path\", \"120013644:162,100006867:160387;120013642:163,100006864:164\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/category/cascade/getNextCascadeProp')\nrequest.add_api_param('categoryId', '62094240')\nrequest.add_api_param('cascadeId', '26')\nrequest.add_api_param('path', '120013644:162,100006867:160387;120013642:163,100006864:164')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/category/cascade/getNextCascadeProp' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"path\":\"120013644%3A162%2C100006867%3A160387%3B120013642%3A163%2C100006864%3A164\",\"app_key\":\"1234567\",\"cascadeId\":\"26\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"categoryId\":\"62094240\",\"timestamp\":\"1750231587010\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"prop\": {\n      \"name\": \"Car Brand\",\n      \"id\": \"120013644\",\n      \"required\": \"false\"\n    },\n    \"propValue\": [\n      {\n        \"name\": \"Ariel\",\n        \"id\": \"20100\",\n        \"leaf\": \"false\"\n      }\n    ]\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

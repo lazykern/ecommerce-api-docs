@@ -1,0 +1,579 @@
+{
+  "platform": "lazada",
+  "module": "product",
+  "endpoint_name": "CreateProduct",
+  "version": null,
+  "summary": "Use this API to create a single new product",
+  "description": "Use this API to create a single new product. Find more details below: https://open.lazada.com/apps/doc/doc?nodeId=30720&docId=120949",
+  "path": "/product/create",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "payload",
+        "type": "Payload",
+        "required": true,
+        "description": "Parameter description (https://open.lazada.com/apps/doc/doc?nodeId=30720&docId=120949)"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/create\");\nrequest.addApiParameter(\"payload\", \"{   \\\"Request\\\": {     \\\"Product\\\": {       \\\"PrimaryCategory\\\": \\\"10002019\\\",       \\\"Images\\\": {         \\\"Image\\\": [           \\\"XXX\\\"         ]       },       \\\"Attributes\\\": {         \\\"name\\\": \\\"test 2022 02\\\",         \\\"description\\\": \\\"TEST\\\",         \\\"brand\\\": \\\"No Brand\\\",         \\\"model\\\": \\\"test\\\",         \\\"waterproof\\\": \\\"Waterproof\\\",         \\\"warranty_type\\\": \\\"Local seller warranty\\\",         \\\"warranty\\\": \\\"1 Month\\\",         \\\"short_description\\\": \\\"cm x 1efgtecm<br /><brfwefgtek\\\",         \\\"Hazmat\\\": \\\"None\\\",         \\\"material\\\": \\\"Leather\\\",         \\\"laptop_size\\\": \\\"11 - 12 inches\\\",         \\\"delivery_option_sof\\\": \\\"No\\\",         \\\"name_engravement\\\": \\\"Yes\\\",         \\\"gift_wrapping\\\": \\\"Yes\\\",         \\\"preorder_enable\\\": \\\"Yes\\\",         \\\"preorder_days\\\": \\\"25\\\"       },       \\\"Skus\\\": {         \\\"Sku\\\": [           {             \\\"SellerSku\\\": \\\"test2022 02\\\",             \\\"quantity\\\": \\\"3\\\",             \\\"price\\\": \\\"35\\\",             \\\"special_price\\\": \\\"33\\\",             \\\"special_from_date\\\": \\\"2022-06-20 17:18:31\\\",             \\\"special_to_date\\\": \\\"2025-03-15 17:18:31\\\",             \\\"package_height\\\": \\\"10\\\",             \\\"package_length\\\": \\\"10\\\",             \\\"package_width\\\": \\\"10\\\",             \\\"package_weight\\\": \\\"0.5\\\",             \\\"package_content\\\": \\\"laptop bag\\\",             \\\"coming_soon\\\": \\\"2024-11-11 00:00:00\\\",             \\\"delay_delivery_days\\\":12,             \\\"Images\\\": {               \\\"Image\\\": [                 \\\"XXX\\\"               ]             }           }         ]       }     }   } }\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/create');\n$request->addApiParam('payload','{   \\\"Request\\\": {     \\\"Product\\\": {       \\\"PrimaryCategory\\\": \\\"10002019\\\",       \\\"Images\\\": {         \\\"Image\\\": [           \\\"XXX\\\"         ]       },       \\\"Attributes\\\": {         \\\"name\\\": \\\"test 2022 02\\\",         \\\"description\\\": \\\"TEST\\\",         \\\"brand\\\": \\\"No Brand\\\",         \\\"model\\\": \\\"test\\\",         \\\"waterproof\\\": \\\"Waterproof\\\",         \\\"warranty_type\\\": \\\"Local seller warranty\\\",         \\\"warranty\\\": \\\"1 Month\\\",         \\\"short_description\\\": \\\"cm x 1efgtecm<br /><brfwefgtek\\\",         \\\"Hazmat\\\": \\\"None\\\",         \\\"material\\\": \\\"Leather\\\",         \\\"laptop_size\\\": \\\"11 - 12 inches\\\",         \\\"delivery_option_sof\\\": \\\"No\\\",         \\\"name_engravement\\\": \\\"Yes\\\",         \\\"gift_wrapping\\\": \\\"Yes\\\",         \\\"preorder_enable\\\": \\\"Yes\\\",         \\\"preorder_days\\\": \\\"25\\\"       },       \\\"Skus\\\": {         \\\"Sku\\\": [           {             \\\"SellerSku\\\": \\\"test2022 02\\\",             \\\"quantity\\\": \\\"3\\\",             \\\"price\\\": \\\"35\\\",             \\\"special_price\\\": \\\"33\\\",             \\\"special_from_date\\\": \\\"2022-06-20 17:18:31\\\",             \\\"special_to_date\\\": \\\"2025-03-15 17:18:31\\\",             \\\"package_height\\\": \\\"10\\\",             \\\"package_length\\\": \\\"10\\\",             \\\"package_width\\\": \\\"10\\\",             \\\"package_weight\\\": \\\"0.5\\\",             \\\"package_content\\\": \\\"laptop bag\\\",             \\\"coming_soon\\\": \\\"2024-11-11 00:00:00\\\",             \\\"delay_delivery_days\\\":12,             \\\"Images\\\": {               \\\"Image\\\": [                 \\\"XXX\\\"               ]             }           }         ]       }     }   } }');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/create\");\nrequest.AddApiParameter(\"payload\", \"{   \\\"Request\\\": {     \\\"Product\\\": {       \\\"PrimaryCategory\\\": \\\"10002019\\\",       \\\"Images\\\": {         \\\"Image\\\": [           \\\"XXX\\\"         ]       },       \\\"Attributes\\\": {         \\\"name\\\": \\\"test 2022 02\\\",         \\\"description\\\": \\\"TEST\\\",         \\\"brand\\\": \\\"No Brand\\\",         \\\"model\\\": \\\"test\\\",         \\\"waterproof\\\": \\\"Waterproof\\\",         \\\"warranty_type\\\": \\\"Local seller warranty\\\",         \\\"warranty\\\": \\\"1 Month\\\",         \\\"short_description\\\": \\\"cm x 1efgtecm<br /><brfwefgtek\\\",         \\\"Hazmat\\\": \\\"None\\\",         \\\"material\\\": \\\"Leather\\\",         \\\"laptop_size\\\": \\\"11 - 12 inches\\\",         \\\"delivery_option_sof\\\": \\\"No\\\",         \\\"name_engravement\\\": \\\"Yes\\\",         \\\"gift_wrapping\\\": \\\"Yes\\\",         \\\"preorder_enable\\\": \\\"Yes\\\",         \\\"preorder_days\\\": \\\"25\\\"       },       \\\"Skus\\\": {         \\\"Sku\\\": [           {             \\\"SellerSku\\\": \\\"test2022 02\\\",             \\\"quantity\\\": \\\"3\\\",             \\\"price\\\": \\\"35\\\",             \\\"special_price\\\": \\\"33\\\",             \\\"special_from_date\\\": \\\"2022-06-20 17:18:31\\\",             \\\"special_to_date\\\": \\\"2025-03-15 17:18:31\\\",             \\\"package_height\\\": \\\"10\\\",             \\\"package_length\\\": \\\"10\\\",             \\\"package_width\\\": \\\"10\\\",             \\\"package_weight\\\": \\\"0.5\\\",             \\\"package_content\\\": \\\"laptop bag\\\",             \\\"coming_soon\\\": \\\"2024-11-11 00:00:00\\\",             \\\"delay_delivery_days\\\":12,             \\\"Images\\\": {               \\\"Image\\\": [                 \\\"XXX\\\"               ]             }           }         ]       }     }   } }\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/create')\nrequest.add_api_parameter(\"payload\", \"{   \\\"Request\\\": {     \\\"Product\\\": {       \\\"PrimaryCategory\\\": \\\"10002019\\\",       \\\"Images\\\": {         \\\"Image\\\": [           \\\"XXX\\\"         ]       },       \\\"Attributes\\\": {         \\\"name\\\": \\\"test 2022 02\\\",         \\\"description\\\": \\\"TEST\\\",         \\\"brand\\\": \\\"No Brand\\\",         \\\"model\\\": \\\"test\\\",         \\\"waterproof\\\": \\\"Waterproof\\\",         \\\"warranty_type\\\": \\\"Local seller warranty\\\",         \\\"warranty\\\": \\\"1 Month\\\",         \\\"short_description\\\": \\\"cm x 1efgtecm<br /><brfwefgtek\\\",         \\\"Hazmat\\\": \\\"None\\\",         \\\"material\\\": \\\"Leather\\\",         \\\"laptop_size\\\": \\\"11 - 12 inches\\\",         \\\"delivery_option_sof\\\": \\\"No\\\",         \\\"name_engravement\\\": \\\"Yes\\\",         \\\"gift_wrapping\\\": \\\"Yes\\\",         \\\"preorder_enable\\\": \\\"Yes\\\",         \\\"preorder_days\\\": \\\"25\\\"       },       \\\"Skus\\\": {         \\\"Sku\\\": [           {             \\\"SellerSku\\\": \\\"test2022 02\\\",             \\\"quantity\\\": \\\"3\\\",             \\\"price\\\": \\\"35\\\",             \\\"special_price\\\": \\\"33\\\",             \\\"special_from_date\\\": \\\"2022-06-20 17:18:31\\\",             \\\"special_to_date\\\": \\\"2025-03-15 17:18:31\\\",             \\\"package_height\\\": \\\"10\\\",             \\\"package_length\\\": \\\"10\\\",             \\\"package_width\\\": \\\"10\\\",             \\\"package_weight\\\": \\\"0.5\\\",             \\\"package_content\\\": \\\"laptop bag\\\",             \\\"coming_soon\\\": \\\"2024-11-11 00:00:00\\\",             \\\"delay_delivery_days\\\":12,             \\\"Images\\\": {               \\\"Image\\\": [                 \\\"XXX\\\"               ]             }           }         ]       }     }   } }\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/create')\nrequest.add_api_param('payload', '{   \\\"Request\\\": {     \\\"Product\\\": {       \\\"PrimaryCategory\\\": \\\"10002019\\\",       \\\"Images\\\": {         \\\"Image\\\": [           \\\"XXX\\\"         ]       },       \\\"Attributes\\\": {         \\\"name\\\": \\\"test 2022 02\\\",         \\\"description\\\": \\\"TEST\\\",         \\\"brand\\\": \\\"No Brand\\\",         \\\"model\\\": \\\"test\\\",         \\\"waterproof\\\": \\\"Waterproof\\\",         \\\"warranty_type\\\": \\\"Local seller warranty\\\",         \\\"warranty\\\": \\\"1 Month\\\",         \\\"short_description\\\": \\\"cm x 1efgtecm<br /><brfwefgtek\\\",         \\\"Hazmat\\\": \\\"None\\\",         \\\"material\\\": \\\"Leather\\\",         \\\"laptop_size\\\": \\\"11 - 12 inches\\\",         \\\"delivery_option_sof\\\": \\\"No\\\",         \\\"name_engravement\\\": \\\"Yes\\\",         \\\"gift_wrapping\\\": \\\"Yes\\\",         \\\"preorder_enable\\\": \\\"Yes\\\",         \\\"preorder_days\\\": \\\"25\\\"       },       \\\"Skus\\\": {         \\\"Sku\\\": [           {             \\\"SellerSku\\\": \\\"test2022 02\\\",             \\\"quantity\\\": \\\"3\\\",             \\\"price\\\": \\\"35\\\",             \\\"special_price\\\": \\\"33\\\",             \\\"special_from_date\\\": \\\"2022-06-20 17:18:31\\\",             \\\"special_to_date\\\": \\\"2025-03-15 17:18:31\\\",             \\\"package_height\\\": \\\"10\\\",             \\\"package_length\\\": \\\"10\\\",             \\\"package_width\\\": \\\"10\\\",             \\\"package_weight\\\": \\\"0.5\\\",             \\\"package_content\\\": \\\"laptop bag\\\",             \\\"coming_soon\\\": \\\"2024-11-11 00:00:00\\\",             \\\"delay_delivery_days\\\":12,             \\\"Images\\\": {               \\\"Image\\\": [                 \\\"XXX\\\"               ]             }           }         ]       }     }   } }')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/product/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%7B+++%22Request%22%3A+%7B+++++%22Product%22%3A+%7B+++++++%22PrimaryCategory%22%3A+%2210002019%22%2C+++++++%22Images%22%3A+%7B+++++++++%22Image%22%3A+%5B+++++++++++%22XXX%22+++++++++%5D+++++++%7D%2C+++++++%22Attributes%22%3A+%7B+++++++++%22name%22%3A+%22test+2022+02%22%2C+++++++++%22description%22%3A+%22TEST%22%2C+++++++++%22brand%22%3A+%22No+Brand%22%2C+++++++++%22model%22%3A+%22test%22%2C+++++++++%22waterproof%22%3A+%22Waterproof%22%2C+++++++++%22warranty_type%22%3A+%22Local+seller+warranty%22%2C+++++++++%22warranty%22%3A+%221+Month%22%2C+++++++++%22short_description%22%3A+%22cm+x+1efgtecm%3Cbr+%2F%3E%3Cbrfwefgtek%22%2C+++++++++%22Hazmat%22%3A+%22None%22%2C+++++++++%22material%22%3A+%22Leather%22%2C+++++++++%22laptop_size%22%3A+%2211+-+12+inches%22%2C+++++++++%22delivery_option_sof%22%3A+%22No%22%2C+++++++++%22name_engravement%22%3A+%22Yes%22%2C+++++++++%22gift_wrapping%22%3A+%22Yes%22%2C+++++++++%22preorder_enable%22%3A+%22Yes%22%2C+++++++++%22preorder_days%22%3A+%2225%22+++++++%7D%2C+++++++%22Skus%22%3A+%7B+++++++++%22Sku%22%3A+%5B+++++++++++%7B+++++++++++++%22SellerSku%22%3A+%22test2022+02%22%2C+++++++++++++%22quantity%22%3A+%223%22%2C+++++++++++++%22price%22%3A+%2235%22%2C+++++++++++++%22special_price%22%3A+%2233%22%2C+++++++++++++%22special_from_date%22%3A+%222022-06-20+17%3A18%3A31%22%2C+++++++++++++%22special_to_date%22%3A+%222025-03-15+17%3A18%3A31%22%2C+++++++++++++%22package_height%22%3A+%2210%22%2C+++++++++++++%22package_length%22%3A+%2210%22%2C+++++++++++++%22package_width%22%3A+%2210%22%2C+++++++++++++%22package_weight%22%3A+%220.5%22%2C+++++++++++++%22package_content%22%3A+%22laptop+bag%22%2C+++++++++++++%22coming_soon%22%3A+%222024-11-11+00%3A00%3A00%22%2C+++++++++++++%22delay_delivery_days%22%3A12%2C+++++++++++++%22Images%22%3A+%7B+++++++++++++++%22Image%22%3A+%5B+++++++++++++++++%22XXX%22+++++++++++++++%5D+++++++++++++%7D+++++++++++%7D+++++++++%5D+++++++%7D+++++%7D+++%7D+%7D\",\"timestamp\":\"1750231541526\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"item_id\": \"2374791958\",\n    \"sku_list\": [\n      {\n        \"shop_sku\": \"2374791958_SGAMZ-13896560193\",\n        \"seller_sku\": \"test2022 03\",\n        \"sku_id\": \"13896560193\"\n      }\n    ],\n    \"item_status\": \"Active\"\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "1",
+      "message": "E001: Parameter %s is mandatory",
+      "description": "The parameter is mandatory but not specified."
+    },
+    {
+      "code": "5",
+      "message": "E005: Invalid Request Format",
+      "description": "The request format is not valid."
+    },
+    {
+      "code": "6",
+      "message": "E006: Unexpected internal error",
+      "description": "Unexpected internal error."
+    },
+    {
+      "code": "30",
+      "message": "E030: Empty Request",
+      "description": "The request URL is not complete."
+    },
+    {
+      "code": "201",
+      "message": "E201: %s Invalid CategoryId",
+      "description": "The specified category ID is not valid."
+    },
+    {
+      "code": "202",
+      "message": "E202: %s Invalid SPUId",
+      "description": "The specified SPU ID is not valid."
+    },
+    {
+      "code": "205",
+      "message": "E205: SPU does not exist",
+      "description": "The specified SPU ID does not exist."
+    },
+    {
+      "code": "206",
+      "message": "E206: Different category id in SPU and PrimaryCategory",
+      "description": "The specified category ID is not consistent."
+    },
+    {
+      "code": "500",
+      "message": "E500: Create product failed",
+      "description": "Failed to create the product."
+    },
+    {
+      "code": "502",
+      "message": "E502: Search SPU failed",
+      "description": "Failed to search for the specified SPU."
+    },
+    {
+      "code": "512",
+      "message": "E512: BIZ_CHECK_MANGROVE_RULE_QC",
+      "description": "The request failed because the category was banned"
+    },
+    {
+      "code": "901",
+      "message": "E901: The request is too frequent, or the requested functionality is temporarily disabled.",
+      "description": "Failed to return the requested data due to high calling frequency or disabled functionality. Please try again later."
+    },
+    {
+      "code": "1000",
+      "message": "Internal Application Error",
+      "description": "Internal system error."
+    },
+    {
+      "code": "4104",
+      "message": "BIZ_CHECK_PRICE_PRECISION_INVALID",
+      "description": "Price accuracy check failed"
+    },
+    {
+      "code": "4105",
+      "message": "BIZ_CHECK_SELLER_SKU_DUPLICATE",
+      "description": "SellerSku repeat"
+    },
+    {
+      "code": "4106",
+      "message": "CHK_CATPROP_CPV_INPUT_SIZE_LIMIT",
+      "description": "Item customization attributes exceeded the limit"
+    },
+    {
+      "code": "4107",
+      "message": "CHECK_CAT_PROP_INVALID_NUMBER",
+      "description": "The category attribute value is invalid"
+    },
+    {
+      "code": "4108",
+      "message": "CHK_BASIC_REQUIRED",
+      "description": "Basic attributes Mandatory verification"
+    },
+    {
+      "code": "4109",
+      "message": "CHK_SKU_PROPS_NOT_MATCH_SALE_PROP",
+      "description": "Sku sales attributes do not match"
+    },
+    {
+      "code": "4110",
+      "message": "BIZ_CHECK_CAT_PROP_MANDATORY",
+      "description": "Category attribute This parameter is mandatory"
+    },
+    {
+      "code": "4111",
+      "message": "CHK_CATPROP_CPV_TEXT_REPEAT",
+      "description": "Category attribute content repeats"
+    },
+    {
+      "code": "4112",
+      "message": "CHK_SKU_PROPS_DUPLICATE",
+      "description": "Duplicate Sku attributes"
+    },
+    {
+      "code": "4113",
+      "message": "CHK_SKU_PROPS_NOT_IDENTICAL",
+      "description": "Sales attribute is not filled in"
+    },
+    {
+      "code": "4114",
+      "message": "BIZ_CHECK_PRICE_SAMPLE_NON_ZERO",
+      "description": "The sample price is 0"
+    },
+    {
+      "code": "4115",
+      "message": "CHK_CATPROP_CPV_NOT_ENUM",
+      "description": "The CPV attribute is not one of the options provided by the category"
+    },
+    {
+      "code": "4116",
+      "message": "BIZ_CHECK_MAIN_IMAGE_DUPLICATE",
+      "description": "Repeat check of master diagram"
+    },
+    {
+      "code": "4117",
+      "message": "BIZ_CHECK_SPECIAL_PRICE_FROM_DATE_AFTER_TO_DATE",
+      "description": "Special offer date check"
+    },
+    {
+      "code": "4118",
+      "message": "BIZ_CHECK_PRICE_IS_ZERO",
+      "description": "Price is not 0 check"
+    },
+    {
+      "code": "4119",
+      "message": "BIZ_CHECK_SPECIAL_PRICE_RATE_OUT_OF_RANGE",
+      "description": "Special price range check"
+    },
+    {
+      "code": "4120",
+      "message": "CHK_CATPROP_CPV_MAX_LEGNTH",
+      "description": "Verify the maximum CPV value of a category"
+    },
+    {
+      "code": "4121",
+      "message": "BIZ_CHECK_SPECIAL_PRICE_PRECISION_INVALID",
+      "description": "Special accuracy check does not pass"
+    },
+    {
+      "code": "4122",
+      "message": "BIZ_CHECK_VIRTUAL_BUNDLE_SKU_SUB_OVER_LIMIT",
+      "description": "virtual bundle sku relation skuc over limit"
+    },
+    {
+      "code": "4123",
+      "message": "BIZ_CHECK_MANGROVE_RULE",
+      "description": "Restricted publication check"
+    },
+    {
+      "code": "4124",
+      "message": "BIZ_CHECK_MANGROVE_RULE_QC",
+      "description": "MANGROVE rule verification"
+    },
+    {
+      "code": "4125",
+      "message": "THD_IC_F_IC_DOMAIN_PROPERTY_002",
+      "description": "IC Verification category Attribute This parameter is mandatory"
+    },
+    {
+      "code": "4126",
+      "message": "THD_IC_F_IC_INFRA_PRODUCT_036",
+      "description": "SellerSku repeat"
+    },
+    {
+      "code": "4127",
+      "message": "THD_IC_F_IC_SCENE_PUBLISH_012",
+      "description": "ProductId repeat"
+    },
+    {
+      "code": "4128",
+      "message": "THD_IC_F_IC_DOMAIN_ACTOR_006",
+      "description": "Seller lock cannot be edited"
+    },
+    {
+      "code": "4129",
+      "message": "BIZ_CHECK_PROP_SPECIAL_CHAR",
+      "description": "Special characters are not allowed: \"^~<>|"
+    },
+    {
+      "code": "4130",
+      "message": "BIZ_CHECK_OFFICIAL_STORE_BRAND_UNAUTHORIZED",
+      "description": "Uncertified brand"
+    },
+    {
+      "code": "4131",
+      "message": "BIZ_CHECK_CAT_PROP_SENSITIVE_WORDS",
+      "description": "description has sensitive words New brand"
+    },
+    {
+      "code": "4132",
+      "message": "Invalid Request Format",
+      "description": "Invalid Request Format"
+    },
+    {
+      "code": "4133",
+      "message": "Invalid variation",
+      "description": "Invalid variation"
+    },
+    {
+      "code": "4134",
+      "message": "Please select the last level category.",
+      "description": "Please select the last level category."
+    },
+    {
+      "code": "4135",
+      "message": "THD_IC_ERR",
+      "description": "IC service error"
+    },
+    {
+      "code": "4136",
+      "message": "SELLER_SKU_NOT_FOUND",
+      "description": "seller sku not found"
+    },
+    {
+      "code": "4137",
+      "message": "ITEM_NOT_FOUND",
+      "description": "IC commodity query less than"
+    },
+    {
+      "code": "4138",
+      "message": "BIZ_CHECK_EXIST_OUTER_IMAGE",
+      "description": "The image exists in the outer link"
+    },
+    {
+      "code": "4139",
+      "message": "BIZ_CHECK_MAIN_IMAGE_REQUIRE",
+      "description": "Main image is require"
+    },
+    {
+      "code": "4140",
+      "message": "CHK_ENUM_PROP_VALUE_NOT_IN_OPTION",
+      "description": "Class does not have this attribute"
+    },
+    {
+      "code": "4141",
+      "message": "THD_IC_ERR_F_IC_INFRA_PRODUCT_036",
+      "description": "SellerSku repeat"
+    },
+    {
+      "code": "4142",
+      "message": "THD_BRAND_ID_IS_NOT_VALID_IN_CATEGORY",
+      "description": "The brand is invalid in the category"
+    },
+    {
+      "code": "4143",
+      "message": "BIZ_CHECK_SALEPROP_ATTRIBUTE_INVALID",
+      "description": "The selling attributes are not defined in the variation"
+    },
+    {
+      "code": "4144",
+      "message": "BIZ_CHECK_SKU_NOT_CONTAIN_SALEPROP",
+      "description": "The sku does not contain the saleProp tag"
+    },
+    {
+      "code": "4145",
+      "message": "BIZ_CHECK_SALEPROP_AND_OLD_PARAM_REPEAT",
+      "description": "You can't put sales properties in both saleProp and sku"
+    },
+    {
+      "code": "4146",
+      "message": "BIZ_CHECK_SALEPROP_NOT_SUPPORT_THUMBNAIL",
+      "description": "Thumbnails are not supported for this sale attribute"
+    },
+    {
+      "code": "4147",
+      "message": "THD_IC_ERR_F_IC_SERVICE_EDIT_002",
+      "description": "Concurrent product edit is not allowed"
+    },
+    {
+      "code": "4148",
+      "message": "BIZ_CHECK_ITEM_HAS_REACH_LIMIT",
+      "description": "Seller's online product count has reach limit"
+    },
+    {
+      "code": "4149",
+      "message": "BIZ_CHECK_PACKAGE_DECIMAL_INVALID",
+      "description": "Package attribute value is not valid"
+    },
+    {
+      "code": "4150",
+      "message": "SELLER_SKU_INVALID",
+      "description": "seller sku is invalid"
+    },
+    {
+      "code": "4151",
+      "message": "BIZ_CHECK_MTEE_RULE_QC",
+      "description": "Quality Check, Failed by Lazada Policy"
+    },
+    {
+      "code": "4152",
+      "message": "THD_INVENTORY_ERR_INV_PARAM_ILLEGAL",
+      "description": "illegal parameter"
+    },
+    {
+      "code": "4153",
+      "message": "THD_IC_ERR_FC_IC_SKU_IMAGE_001",
+      "description": "If you upload a sku picture then all sku must be uploaded"
+    },
+    {
+      "code": "4154",
+      "message": "SYS_REQUEST_TOO_FAST",
+      "description": "Slow down a bit! Too many opertions at once. Please try again later"
+    },
+    {
+      "code": "4155",
+      "message": "BIZ_CHECK_NO_EDIT_ITEM_LOCK",
+      "description": "This product is currently locked so you are unable to do editing. Please go to Data Inisight > Policy Compliance to unlock the product"
+    },
+    {
+      "code": "4156",
+      "message": "C035: No brand cannot be selected",
+      "description": "Can't set Brand name as No brand, Mandatory select Brand due to LazMall identity"
+    },
+    {
+      "code": "4157",
+      "message": "BIZ_CHECK_SPECIAL_PRICE_GREATER_THAN_PRICE",
+      "description": "The discount price must be cheaper than the regular price"
+    },
+    {
+      "code": "4158",
+      "message": "THD_IC_ERR_F_DOMAIN_IMAGE_00_01_003",
+      "description": "Main image has duplicate. Please remove to continue"
+    },
+    {
+      "code": "4159",
+      "message": "IC_EXCEPTION",
+      "description": "IC service is exception"
+    },
+    {
+      "code": "4160",
+      "message": "THD_IC_ERR_F_PRODUCT_00_15_004",
+      "description": "The max length of Multi title for locale can not exceed 255 bytes"
+    },
+    {
+      "code": "4161",
+      "message": "VARIATION_CATEGORY_ATTRIBUTE_INVALID",
+      "description": "This variaition attribute is not found in the category attribute library"
+    },
+    {
+      "code": "4162",
+      "message": "THD_IC_ERR_F_IC_ABILITY_PG",
+      "description": "Product edit was blocked by tag"
+    },
+    {
+      "code": "4163",
+      "message": "BIZ_CHECK_RESTRICTED_CATEGORY",
+      "description": "You are not authorised to sell this category"
+    },
+    {
+      "code": "4164",
+      "message": "BIZ_CHECK_MAX_PACKAGE_WEIGHT",
+      "description": "The package weight exceeds 40kg, please make change or contact your category manager to apply DBS permission."
+    },
+    {
+      "code": "4165",
+      "message": "BIZ_CHECK_MAX_PACKAGE_DIMENISIONS",
+      "description": "The Package dimension(Length+Width+Height) exceeds 300cm, please make change or contact your category manager to apply DBS permission."
+    },
+    {
+      "code": "4166",
+      "message": "THD_IC_ERR_F_IC_INFRA_SPU_036",
+      "description": "eancode already exists"
+    },
+    {
+      "code": "4167",
+      "message": "THD_IC_ERR_F_IC_DOMAIN_PROPERTY_002",
+      "description": "The value of category property is required,property"
+    },
+    {
+      "code": "4168",
+      "message": "BIZ_CHECK_BRAND_PERMISSION_TIER_TWO",
+      "description": "Tienes que solicitar dicha marca para poder utilizarla."
+    },
+    {
+      "code": "4169",
+      "message": "CHK_IMAGE_MAX_ITEMS",
+      "description": "Upload a maximum of 8 pictures"
+    },
+    {
+      "code": "500",
+      "message": "Create product failed",
+      "description": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error."
+    },
+    {
+      "code": "SellerNotActive",
+      "message": "Seller not active,please check seller status",
+      "description": "The seller's store status is inactive can not call the commodity API, you can call the GetSeller API and based on the Status field to confirm the current status of the store, if the seller has questions about this status, please want to seller center seller customer service consulting how to modify the status."
+    },
+    {
+      "code": "901",
+      "message": "Limit service request speed in server side temporarily.",
+      "description": "API level QPS limiting flow, please retry in the next second when you encounter this error."
+    },
+    {
+      "code": "500",
+      "message": "Create product failed",
+      "description": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error."
+    },
+    {
+      "code": "5",
+      "message": "Invalid Request Format",
+      "description": "Please check that the payload is documented and conforms to the XML formatting requirements. If you have URLs with “&” in them, then please use Cdata tags to avoid XML parsing problems."
+    },
+    {
+      "code": "4221",
+      "message": "BIZ_CHECK_MTEE_RISK_RULE_TRIGGER_MTEE_RISK_RULE_TRIGGER_ERROR",
+      "description": "The price or content of this product violates the current national policy, please modify it according to the relevant policy mentioned in the details of the message field."
+    },
+    {
+      "code": "4139",
+      "message": "BIZ_CHECK_MAIN_IMAGE_REQUIRE:Main image is require",
+      "description": "Please add at least one main or SKU image of the item. lazada does not allow uploading items without images."
+    },
+    {
+      "code": "4130",
+      "message": "BIZ_CHECK_OFFICIAL_STORE_BRAND_UNAUTHORIZED",
+      "description": "The store you requested is a Lazmall store, there are strict restrictions on the use of brands for this type of store, please apply for permission to use the relevant brand on the Seller Center -> setting -> brand page."
+    },
+    {
+      "code": "4112",
+      "message": "CHK_SKU_PROPS_DUPLICATE",
+      "description": "The values of variant attributes are duplicated between SKUs. Multi-SKU products need to set variant attributes and make sure that the values of variant attributes owned by each SKU cannot be duplicated."
+    },
+    {
+      "code": "209",
+      "message": "Invalid variation",
+      "description": "The number of variants in the payload exceeds the upper limit or does not meet the requirements, please check the message in the message to understand the detailed reasons and modify the payload."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

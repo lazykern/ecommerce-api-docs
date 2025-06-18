@@ -1,0 +1,159 @@
+{
+  "platform": "lazada",
+  "module": "order",
+  "endpoint_name": "GetOrderItems",
+  "version": null,
+  "summary": "Use this API to get the item information of an order",
+  "description": "Use this API to get the item information of an order.",
+  "path": "/order/items/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "order_id",
+        "type": "Number",
+        "required": true,
+        "description": "The identifier that was assigned to the order by the Seller Center."
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/order/items/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"order_id\", \"31202\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/order/items/get','GET');\n$request->addApiParam('order_id','31202');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/order/items/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"order_id\", \"31202\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/order/items/get','GET')\nrequest.add_api_parameter(\"order_id\", \"31202\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/order/items/get','GET')\nrequest.add_api_param('order_id', '31202')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/order/items/get?timestamp=1750231507652&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&order_id=31202'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"pick_up_store_info\": {\n        \"pick_up_store_address\": \"Ali Center, Shenzhen\",\n        \"pick_up_store_name\": \"Alibaba\",\n        \"pick_up_store_open_hour\": [\n          \"Sunday 9:00-18:00\",\n          \"Mondday,Tuesday,Wendnesday,Thursday,Friday 8:00-20:00\"\n        ],\n        \"pick_up_store_code\": \"d4b04804-9192-4a8c-8ed1-5ebcd7d3c067\"\n      },\n      \"tax_amount\": \"6.48\",\n      \"reason\": \"reason\",\n      \"sla_time_stamp\": \"2019-06-24T23:59:59+08:00\",\n      \"show_giftwrapping_tag\": \"True\",\n      \"voucher_seller\": \"0.00\",\n      \"purchase_order_id\": \"3454\",\n      \"payment_time\": \"1697193374592\",\n      \"voucher_code_seller\": \"X234\",\n      \"voucher_code\": \"X3453\",\n      \"package_id\": \"345\",\n      \"buyer_id\": \"1001\",\n      \"variation\": \"1\",\n      \"biz_group\": \"70100\",\n      \"product_id\": \"12345\",\n      \"voucher_code_platform\": \"Y123\",\n      \"purchase_order_number\": \"345345\",\n      \"sku\": \"BRSD#02\",\n      \"gift_wrapping\": \"Happy birthday\",\n      \"schedule_delivery_start_timeslot\": \"1719108000000\",\n      \"order_type\": \"Normal\",\n      \"invoice_number\": \"1342\",\n      \"show_personalization_tag\": \"True\",\n      \"cancel_return_initiator\": \"cancellation-customer\",\n      \"shop_sku\": \"BE494HLAAUE3SGAMZ-39898\",\n      \"is_reroute\": \"0\",\n      \"stage_pay_status\": \"unpaid\",\n      \"sku_id\": \"666\",\n      \"tracking_code_pre\": \"23534\",\n      \"order_item_id\": \"98108\",\n      \"shop_id\": \"dawen dp\",\n      \"order_flag\": \"GUATANTEE\",\n      \"is_fbl\": \"0\",\n      \"name\": \"Bean Rester Dooby Red\",\n      \"delivery_option_sof\": \"0\",\n      \"order_id\": \"31202\",\n      \"fulfillment_sla\": \"NEXT_DAY\",\n      \"status\": \"canceled\",\n      \"product_main_image\": \"http://th-live-02.slatic.net/p/3/jianyue-7699-09550735-ccd244666871f12a523c77d68cd76d74-catalog.jpg\",\n      \"voucher_platform\": \"0.00\",\n      \"paid_price\": \"99.00\",\n      \"product_detail_url\": \"http://www.lazada.co.th/535590.html\",\n      \"warehouse_code\": \"WH-01\",\n      \"promised_shipping_time\": \"2014-10-15 19:12:15 +0800\",\n      \"shipping_type\": \"Dropshipping\",\n      \"created_at\": \"2014-10-15 19:12:15 +0800\",\n      \"supply_price\": \"99.0\",\n      \"mp3_order\": \"True\",\n      \"voucher_seller_lpi\": \"0.00\",\n      \"shipping_fee_discount_platform\": \"0.00\",\n      \"personalization\": \"Happy birthday\",\n      \"wallet_credits\": \"0.00\",\n      \"updated_at\": \"2014-10-15 19:12:15 +0800\",\n      \"currency\": \"SGD\",\n      \"shipping_provider_type\": \"standard\",\n      \"voucher_platform_lpi\": \"0.00\",\n      \"shipping_fee_original\": \"0.00\",\n      \"schedule_delivery_end_timeslot\": \"1719140400000\",\n      \"item_price\": \"99.00\",\n      \"is_digital\": \"0\",\n      \"shipping_service_cost\": \"0\",\n      \"tracking_code\": \"456\",\n      \"shipping_fee_discount_seller\": \"0.00\",\n      \"shipping_amount\": \"0.00\",\n      \"reason_detail\": \"reason detail\",\n      \"return_status\": \"1\",\n      \"semi_managed\": \"True\",\n      \"shipment_provider\": \"LEL\",\n      \"priority_fulfillment_tag\": \"Kirim secepat mungkin_null_null\",\n      \"voucher_amount\": \"0.00\",\n      \"supply_price_currency\": \"CNY\",\n      \"digital_delivery_info\": \"delivery\",\n      \"extra_attributes\": \"null\"\n    }\n  ],\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "16",
+      "message": "E016: \"%s\" Invalid Order ID",
+      "description": "The specified order ID is not valid."
+    },
+    {
+      "code": "6",
+      "message": "E006: System Error",
+      "description": "System Error"
+    },
+    {
+      "code": "16",
+      "message": "Invalid Order ID",
+      "description": "The order number in the request does not exist in the current store, please call GetOrders API to synchronize the order list first, or call GetSeller API to check if you are using the access token of the corresponding store."
+    },
+    {
+      "code": "16",
+      "message": "Invalid Order ID",
+      "description": "The order number in the request does not exist in the current store, please call GetOrders API to synchronize the order list first, or call GetSeller API to check if you are using the access token of the corresponding store."
+    },
+    {
+      "code": "16",
+      "message": "Invalid Order ID",
+      "description": "The order number in the request does not exist in the current store, please call GetOrders API to synchronize the order list first, or call GetSeller API to check if you are using the access token of the corresponding store."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

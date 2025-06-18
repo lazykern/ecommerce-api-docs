@@ -1,0 +1,192 @@
+{
+  "platform": "shopee",
+  "module": "logistics",
+  "endpoint_name": "set_address_config",
+  "version": "v2",
+  "summary": "For integrated logistics channel, use this call to get pickup address for pickup mode order",
+  "description": "For integrated logistics channel, use this call to get pickup address for pickup mode order.",
+  "path": "/api/v2/logistics/get_address_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "show_pickup_address",
+        "type": "boolean",
+        "required": false,
+        "description": "Definite show pickup address or not.",
+        "sample": "true"
+      },
+      {
+        "name": "address_type_config",
+        "type": "object",
+        "required": false,
+        "description": "The config of your shop addres.",
+        "sample": ""
+      },
+      {
+        "name": "address_id",
+        "type": "int",
+        "required": false,
+        "description": "The identifier id of the address.",
+        "sample": "1234"
+      },
+      {
+        "name": "address_type",
+        "type": "string[]",
+        "required": false,
+        "description": "The type of addres. Available values: DEFAULT_ADDRESS, PICKUP_ADDRESS, RETURN_ADDRESS",
+        "sample": "[\"PICKUP_ADDRESS\", \"RETURN_ADDRESS\"]"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"show_pick_up_address\": true,\n    \"address_type_config\": {\n        \"address_id\": 1234,\n        \"address_type\": [\n            \"PICKUP_ADDRESS\",\n            \"RETURN_ADDRESS\"\n        ]\n    }\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "KweCvVFAzQPRcmSDEoDfqpVWQyJrAUsW",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"KweCvVFAzQPRcmSDEoDfqpVWQyJrAUsW\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "logistics.address_not_found",
+      "message": "The address is invalid. Please check the address."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Fail to update address because fail to update the impacted channels."
+    },
+    {
+      "code": "error_not_found",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_permission",
+      "message": "Sorry you don't have the permission, detail: {msg}."
+    },
+    {
+      "code": "error_server",
+      "message": "System error. Please try again later."
+    },
+    {
+      "code": "logistics.inner_error",
+      "message": "System error. Please try again later."
+    },
+    {
+      "code": "logistics.invalid_address_type",
+      "message": "Address_type ({address_type}) is invalid. Please check the address_type."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "logistics.invalid_address_type",
+      "message": "CN Address Only Allow Set Seller Return Flag"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/get_address_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/get_address_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/get_address_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/get_address_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/get_address_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/get_address_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/get_address_list"
+      }
+    ]
+  }
+}

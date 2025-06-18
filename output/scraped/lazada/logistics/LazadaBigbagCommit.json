@@ -1,0 +1,236 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "LazadaBigbagCommit",
+  "version": null,
+  "summary": "Lazada bigbag commit",
+  "description": "Lazada bigbag commit",
+  "path": "/logistics/cnpms/bigbag/commit",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "userInfo",
+        "type": "Object",
+        "required": true,
+        "description": "Lazada开放平台信息"
+      },
+      {
+        "name": "orderCodeList",
+        "type": "String[]",
+        "required": true,
+        "description": "要创建交接单的小包编码集合数量上限1000"
+      },
+      {
+        "name": "weight",
+        "type": "String",
+        "required": true,
+        "description": "重量"
+      },
+      {
+        "name": "client",
+        "type": "String",
+        "required": true,
+        "description": "ISV名称ISV：ISV-ISV英文或拼音名称、商家ERP：SELLER-商家英文或拼音名称"
+      },
+      {
+        "name": "collectionInfo",
+        "type": "Object",
+        "required": false,
+        "description": "集货点信息"
+      },
+      {
+        "name": "remark",
+        "type": "String",
+        "required": false,
+        "description": "备注"
+      },
+      {
+        "name": "pickupInfo",
+        "type": "Object",
+        "required": true,
+        "description": "揽收信息"
+      },
+      {
+        "name": "locale",
+        "type": "String",
+        "required": false,
+        "description": "多语言默认zh_CN"
+      },
+      {
+        "name": "weightUnit",
+        "type": "String",
+        "required": true,
+        "description": "重量单位克:g, 千克:kg默认g"
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "required": true,
+        "description": "类型：cainiao_pickup(菜鸟揽收)、self_post(自寄)、pickup_collection(集货)"
+      },
+      {
+        "name": "sellerTrackingNumber",
+        "type": "String",
+        "required": false,
+        "description": "商家定义的大包标签号一般不传需要将自有大包号作为菜鸟面单号时才传"
+      },
+      {
+        "name": "returnInfo",
+        "type": "Object",
+        "required": true,
+        "description": "退件信息"
+      },
+      {
+        "name": "result",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/cnpms/bigbag/commit\");\nrequest.addApiParameter(\"userInfo\", \"{\\\"appUserKey\\\":\\\"Lazada\\u5F00\\u653E\\u5E73\\u53F0\\u4FE1\\u606F\\\"}\");\nrequest.addApiParameter(\"orderCodeList\", \"[\\\"LZD1001\\\",\\\"LZD1002\\\",\\\"LZD1003\\\"]\");\nrequest.addApiParameter(\"weight\", \"100\");\nrequest.addApiParameter(\"client\", \"test\");\nrequest.addApiParameter(\"collectionInfo\", \"{\\\"pickUpCode\\\":\\\"pickupCode_001\\\"}\");\nrequest.addApiParameter(\"remark\", \"test\");\nrequest.addApiParameter(\"pickupInfo\", \"{\\\"courierCompany\\\":\\\"\\u7533\\u901A\\\",\\\"receiverPhone\\\":\\\"1888888888\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"310012\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"1760x000007\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"098-234234\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}\");\nrequest.addApiParameter(\"locale\", \"zh_CN\");\nrequest.addApiParameter(\"weightUnit\", \"g\");\nrequest.addApiParameter(\"type\", \"cainiao_pickup\");\nrequest.addApiParameter(\"sellerTrackingNumber\", \"B20127000438\");\nrequest.addApiParameter(\"returnInfo\", \"{\\\"fmReverseOption\\\":\\\"1\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"3455657\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"098-234234\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"1760x000007\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/cnpms/bigbag/commit');\n$request->addApiParam('userInfo','{\\\"appUserKey\\\":\\\"Lazada\\u5F00\\u653E\\u5E73\\u53F0\\u4FE1\\u606F\\\"}');\n$request->addApiParam('orderCodeList','[\\\"LZD1001\\\",\\\"LZD1002\\\",\\\"LZD1003\\\"]');\n$request->addApiParam('weight','100');\n$request->addApiParam('client','test');\n$request->addApiParam('collectionInfo','{\\\"pickUpCode\\\":\\\"pickupCode_001\\\"}');\n$request->addApiParam('remark','test');\n$request->addApiParam('pickupInfo','{\\\"courierCompany\\\":\\\"\\u7533\\u901A\\\",\\\"receiverPhone\\\":\\\"1888888888\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"310012\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"1760x000007\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"098-234234\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}');\n$request->addApiParam('locale','zh_CN');\n$request->addApiParam('weightUnit','g');\n$request->addApiParam('type','cainiao_pickup');\n$request->addApiParam('sellerTrackingNumber','B20127000438');\n$request->addApiParam('returnInfo','{\\\"fmReverseOption\\\":\\\"1\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"3455657\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"098-234234\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"1760x000007\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/cnpms/bigbag/commit\");\nrequest.AddApiParameter(\"userInfo\", \"{\\\"appUserKey\\\":\\\"Lazada\\u5F00\\u653E\\u5E73\\u53F0\\u4FE1\\u606F\\\"}\");\nrequest.AddApiParameter(\"orderCodeList\", \"[\\\"LZD1001\\\",\\\"LZD1002\\\",\\\"LZD1003\\\"]\");\nrequest.AddApiParameter(\"weight\", \"100\");\nrequest.AddApiParameter(\"client\", \"test\");\nrequest.AddApiParameter(\"collectionInfo\", \"{\\\"pickUpCode\\\":\\\"pickupCode_001\\\"}\");\nrequest.AddApiParameter(\"remark\", \"test\");\nrequest.AddApiParameter(\"pickupInfo\", \"{\\\"courierCompany\\\":\\\"\\u7533\\u901A\\\",\\\"receiverPhone\\\":\\\"1888888888\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"310012\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"1760x000007\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"098-234234\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}\");\nrequest.AddApiParameter(\"locale\", \"zh_CN\");\nrequest.AddApiParameter(\"weightUnit\", \"g\");\nrequest.AddApiParameter(\"type\", \"cainiao_pickup\");\nrequest.AddApiParameter(\"sellerTrackingNumber\", \"B20127000438\");\nrequest.AddApiParameter(\"returnInfo\", \"{\\\"fmReverseOption\\\":\\\"1\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"3455657\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"098-234234\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"1760x000007\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/cnpms/bigbag/commit')\nrequest.add_api_parameter(\"userInfo\", \"{\\\"appUserKey\\\":\\\"Lazada\\u5F00\\u653E\\u5E73\\u53F0\\u4FE1\\u606F\\\"}\")\nrequest.add_api_parameter(\"orderCodeList\", \"[\\\"LZD1001\\\",\\\"LZD1002\\\",\\\"LZD1003\\\"]\")\nrequest.add_api_parameter(\"weight\", \"100\")\nrequest.add_api_parameter(\"client\", \"test\")\nrequest.add_api_parameter(\"collectionInfo\", \"{\\\"pickUpCode\\\":\\\"pickupCode_001\\\"}\")\nrequest.add_api_parameter(\"remark\", \"test\")\nrequest.add_api_parameter(\"pickupInfo\", \"{\\\"courierCompany\\\":\\\"\\u7533\\u901A\\\",\\\"receiverPhone\\\":\\\"1888888888\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"310012\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"1760x000007\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"098-234234\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}\")\nrequest.add_api_parameter(\"locale\", \"zh_CN\")\nrequest.add_api_parameter(\"weightUnit\", \"g\")\nrequest.add_api_parameter(\"type\", \"cainiao_pickup\")\nrequest.add_api_parameter(\"sellerTrackingNumber\", \"B20127000438\")\nrequest.add_api_parameter(\"returnInfo\", \"{\\\"fmReverseOption\\\":\\\"1\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"3455657\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"098-234234\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"1760x000007\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/cnpms/bigbag/commit')\nrequest.add_api_param('userInfo', '{\\\"appUserKey\\\":\\\"Lazada\\u5F00\\u653E\\u5E73\\u53F0\\u4FE1\\u606F\\\"}')\nrequest.add_api_param('orderCodeList', '[\\\"LZD1001\\\",\\\"LZD1002\\\",\\\"LZD1003\\\"]')\nrequest.add_api_param('weight', '100')\nrequest.add_api_param('client', 'test')\nrequest.add_api_param('collectionInfo', '{\\\"pickUpCode\\\":\\\"pickupCode_001\\\"}')\nrequest.add_api_param('remark', 'test')\nrequest.add_api_param('pickupInfo', '{\\\"courierCompany\\\":\\\"\\u7533\\u901A\\\",\\\"receiverPhone\\\":\\\"1888888888\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"310012\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"1760x000007\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"098-234234\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}')\nrequest.add_api_param('locale', 'zh_CN')\nrequest.add_api_param('weightUnit', 'g')\nrequest.add_api_param('type', 'cainiao_pickup')\nrequest.add_api_param('sellerTrackingNumber', 'B20127000438')\nrequest.add_api_param('returnInfo', '{\\\"fmReverseOption\\\":\\\"1\\\",\\\"address\\\":{\\\"country\\\":\\\"\\u4E2D\\u56FD\\\",\\\"zipCode\\\":\\\"3455657\\\",\\\"province\\\":\\\"\\u6D59\\u6C5F\\u7701\\\",\\\"city\\\":\\\"\\u676D\\u5DDE\\u5E02\\\",\\\"street\\\":\\\"\\u848B\\u6751\\u8857\\u9053\\\",\\\"district\\\":\\\"\\u897F\\u6E56\\u533A\\\",\\\"detailAddress\\\":\\\"\\u6587\\u4E00\\u897F\\u8DEF680\\u83DC\\u9E1F\\\"},\\\"phone\\\":\\\"098-234234\\\",\\\"name\\\":\\\"\\u5F20\\u4E09\\\",\\\"mobile\\\":\\\"1760x000007\\\",\\\"email\\\":\\\"123@abc.com\\\",\\\"addressId\\\":\\\"3455657\\\"}')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/cnpms/bigbag/commit' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"userInfo\":\"%7B%22appUserKey%22%3A%22Lazada%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E4%BF%A1%E6%81%AF%22%7D\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"collectionInfo\":\"%7B%22pickUpCode%22%3A%22pickupCode_001%22%7D\",\"weight\":\"100\",\"remark\":\"test\",\"locale\":\"zh_CN\",\"type\":\"cainiao_pickup\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"returnInfo\":\"%7B%22fmReverseOption%22%3A%221%22%2C%22address%22%3A%7B%22country%22%3A%22%E4%B8%AD%E5%9B%BD%22%2C%22zipCode%22%3A%223455657%22%2C%22province%22%3A%22%E6%B5%99%E6%B1%9F%E7%9C%81%22%2C%22city%22%3A%22%E6%9D%AD%E5%B7%9E%E5%B8%82%22%2C%22street%22%3A%22%E8%92%8B%E6%9D%91%E8%A1%97%E9%81%93%22%2C%22district%22%3A%22%E8%A5%BF%E6%B9%96%E5%8C%BA%22%2C%22detailAddress%22%3A%22%E6%96%87%E4%B8%80%E8%A5%BF%E8%B7%AF680%E8%8F%9C%E9%B8%9F%22%7D%2C%22phone%22%3A%22098-234234%22%2C%22name%22%3A%22%E5%BC%A0%E4%B8%89%22%2C%22mobile%22%3A%221760x000007%22%2C%22email%22%3A%22123%40abc.com%22%2C%22addressId%22%3A%223455657%22%7D\",\"app_key\":\"1234567\",\"orderCodeList\":\"%5B%22LZD1001%22%2C%22LZD1002%22%2C%22LZD1003%22%5D\",\"sign_method\":\"sha256\",\"sellerTrackingNumber\":\"B20127000438\",\"client\":\"test\",\"pickupInfo\":\"%7B%22courierCompany%22%3A%22%E7%94%B3%E9%80%9A%22%2C%22receiverPhone%22%3A%221888888888%22%2C%22address%22%3A%7B%22country%22%3A%22%E4%B8%AD%E5%9B%BD%22%2C%22zipCode%22%3A%22310012%22%2C%22province%22%3A%22%E6%B5%99%E6%B1%9F%E7%9C%81%22%2C%22city%22%3A%22%E6%9D%AD%E5%B7%9E%E5%B8%82%22%2C%22street%22%3A%22%E8%92%8B%E6%9D%91%E8%A1%97%E9%81%93%22%2C%22district%22%3A%22%E8%A5%BF%E6%B9%96%E5%8C%BA%22%2C%22detailAddress%22%3A%22%E6%96%87%E4%B8%80%E8%A5%BF%E8%B7%AF680%E8%8F%9C%E9%B8%9F%22%7D%2C%22phone%22%3A%221760x000007%22%2C%22name%22%3A%22%E5%BC%A0%E4%B8%89%22%2C%22mobile%22%3A%22098-234234%22%2C%22email%22%3A%22123%40abc.com%22%2C%22addressId%22%3A%223455657%22%7D\",\"timestamp\":\"1750231444413\",\"weightUnit\":\"g\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object",
+        "description": "同步响应结果"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": {\n    \"data\": {\n      \"handoverContentId\": \"20000001\",\n      \"handoverContentCode\": \"LP000000123\",\n      \"handoverOrderId\": \"10000001\"\n    },\n    \"success\": \"true\",\n    \"errorCode\": \"P-088-0000-00-99-001\",\n    \"errorMsg\": \"网络异常请稍后重试\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "P-088-0101-10-10-140",
+      "message": "all parcel order not found",
+      "description": "选择的所有小包都找不到请核对后重试"
+    },
+    {
+      "code": "P-088-0101-10-10-191",
+      "message": "query across store account not found",
+      "description": "跨店铺组包账号不存在"
+    },
+    {
+      "code": "P-088-0000-00-15-170",
+      "message": "seller has stores that are not packaged across stores",
+      "description": "商家存在未跨店铺组包的店铺"
+    },
+    {
+      "code": "InvalidParameter",
+      "message": "The specified parameter “null#addressId” is not valid",
+      "description": "addressId是必填的"
+    },
+    {
+      "code": "UnknownRuntimeException",
+      "message": "The request has failed due to RPC runtime failure",
+      "description": "weight需要填整数"
+    },
+    {
+      "code": "P-088-0000-00-15-231",
+      "message": "pick up collection point info missing",
+      "description": "pickup_collection的条件下pickUpCode必填"
+    },
+    {
+      "code": "P-088-0000-00-15-205",
+      "message": "param is null",
+      "description": "self_post的条件下sellerTrackingNumber必填"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

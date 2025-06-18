@@ -1,0 +1,200 @@
+{
+  "platform": "lazada",
+  "module": "order",
+  "endpoint_name": "GetDocument",
+  "version": null,
+  "summary": "Use this API to retrieve order-related documents, including invoices and shipping labels",
+  "description": "Use this API to retrieve order-related documents, including invoices and shipping labels.",
+  "path": "/order/document/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "doc_type",
+        "type": "String",
+        "required": true,
+        "description": "Document types, including 'invoice', 'shippingLabel', or 'carrierManifest'. Mandatory."
+      },
+      {
+        "name": "order_item_ids",
+        "type": "String",
+        "required": true,
+        "description": "Identifier of the order item for which the caller wants to get a document. Mandatory."
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/order/document/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"doc_type\", \"shippingLabel\");\nrequest.addApiParameter(\"order_item_ids\", \"[279709, 279709]\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/order/document/get','GET');\n$request->addApiParam('doc_type','shippingLabel');\n$request->addApiParam('order_item_ids','[279709, 279709]');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/order/document/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"doc_type\", \"shippingLabel\");\nrequest.AddApiParameter(\"order_item_ids\", \"[279709, 279709]\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/order/document/get','GET')\nrequest.add_api_parameter(\"doc_type\", \"shippingLabel\")\nrequest.add_api_parameter(\"order_item_ids\", \"[279709, 279709]\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/order/document/get','GET')\nrequest.add_api_param('doc_type', 'shippingLabel')\nrequest.add_api_param('order_item_ids', '[279709, 279709]')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/order/document/get?timestamp=1750231483948&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&doc_type=shippingLabel&order_item_ids=%5B279709%2C+279709%5D'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "response data"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"document\": {\n      \"file\": \"PHN0eWxlPnRlRrU3VRbUNDJyAvPjwvcD4K\",\n      \"mime_type\": \"text/html\",\n      \"document_type\": \"shippingLabel\"\n    }\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "20",
+      "message": "E020: \"%s\" Invalid Order Item IDs",
+      "description": "The specified order item ID is not valid."
+    },
+    {
+      "code": "21",
+      "message": "E021: OMS Api Error Occurred",
+      "description": "Internal system error."
+    },
+    {
+      "code": "32",
+      "message": "E032: Document type \"%s\" is not valid",
+      "description": "The specified document type is not valid."
+    },
+    {
+      "code": "34",
+      "message": "E034: Order Item must be packed. Please call SetStatusToReadyToShip before",
+      "description": "The current status of the order item is not valid."
+    },
+    {
+      "code": "35",
+      "message": "E035: \"%s\" was not found",
+      "description": "The specified order item is not found."
+    },
+    {
+      "code": "30012",
+      "message": "rts package not found",
+      "description": "Order item ID status must be \"packed\" or \"ready to ship\""
+    },
+    {
+      "code": "700040",
+      "message": "There are no packages that support printing!",
+      "description": "Printing AWB is not supported for orders in Unpaid, pending, canceled status or SOF/DBS orders."
+    },
+    {
+      "code": "700040",
+      "message": "There are no packages that support printing!",
+      "description": "Printing AWB is not supported for orders in Unpaid, pending, canceled status or SOF/DBS orders."
+    },
+    {
+      "code": "700040",
+      "message": "There are no packages that support printing!",
+      "description": "Printing AWB is not supported for orders in Unpaid, pending, canceled status or SOF/DBS orders."
+    },
+    {
+      "code": "700040",
+      "message": "There are no packages that support printing!",
+      "description": "Printing AWB is not supported for orders in Unpaid, pending, canceled status or SOF/DBS orders."
+    },
+    {
+      "code": "6",
+      "message": "For input string: \"\"",
+      "description": "Make sure you enter an array and not a string in the order_item_ids parameter."
+    },
+    {
+      "code": "50008",
+      "message": "ot support operation for sof order",
+      "description": "SOF/DBS type orders do not support the call of this API to query Shipping label, this type of orders by the seller to contact the logistics, Lazada does not provide Shipping label."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

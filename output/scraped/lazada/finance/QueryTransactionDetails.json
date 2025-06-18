@@ -1,0 +1,185 @@
+{
+  "platform": "lazada",
+  "module": "finance",
+  "endpoint_name": "QueryTransactionDetails",
+  "version": null,
+  "summary": "API to query seller transaction details within specific date range",
+  "description": "API to query seller transaction details within specific date range.",
+  "path": "/finance/transaction/details/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "offset",
+        "type": "String",
+        "required": false,
+        "description": "Number of transaction lines to skip at the beginning of the list."
+      },
+      {
+        "name": "trans_type",
+        "type": "String",
+        "required": false,
+        "description": "Transaction type ID."
+      },
+      {
+        "name": "trade_order_id",
+        "type": "String",
+        "required": false,
+        "description": "Order ID."
+      },
+      {
+        "name": "limit",
+        "type": "String",
+        "required": false,
+        "description": "Number of lines of transactions to be extracted. The supported maximum number is 500."
+      },
+      {
+        "name": "start_time",
+        "type": "String",
+        "required": true,
+        "description": "Starting date when transactions need to be extracted."
+      },
+      {
+        "name": "end_time",
+        "type": "String",
+        "required": true,
+        "description": "Ending date when transactions need to be extracted."
+      },
+      {
+        "name": "trade_order_line_id",
+        "type": "String",
+        "required": false,
+        "description": "Order Item ID."
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/finance/transaction/details/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"offset\", \"0\");\nrequest.addApiParameter(\"trans_type\", \"-1\");\nrequest.addApiParameter(\"trade_order_id\", \"123123213213\");\nrequest.addApiParameter(\"limit\", \"100\");\nrequest.addApiParameter(\"start_time\", \"2021-01-01\");\nrequest.addApiParameter(\"end_time\", \"2021-01-05\");\nrequest.addApiParameter(\"trade_order_line_id\", \"45645674566\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/finance/transaction/details/get','GET');\n$request->addApiParam('offset','0');\n$request->addApiParam('trans_type','-1');\n$request->addApiParam('trade_order_id','123123213213');\n$request->addApiParam('limit','100');\n$request->addApiParam('start_time','2021-01-01');\n$request->addApiParam('end_time','2021-01-05');\n$request->addApiParam('trade_order_line_id','45645674566');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/finance/transaction/details/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"offset\", \"0\");\nrequest.AddApiParameter(\"trans_type\", \"-1\");\nrequest.AddApiParameter(\"trade_order_id\", \"123123213213\");\nrequest.AddApiParameter(\"limit\", \"100\");\nrequest.AddApiParameter(\"start_time\", \"2021-01-01\");\nrequest.AddApiParameter(\"end_time\", \"2021-01-05\");\nrequest.AddApiParameter(\"trade_order_line_id\", \"45645674566\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/finance/transaction/details/get','GET')\nrequest.add_api_parameter(\"offset\", \"0\")\nrequest.add_api_parameter(\"trans_type\", \"-1\")\nrequest.add_api_parameter(\"trade_order_id\", \"123123213213\")\nrequest.add_api_parameter(\"limit\", \"100\")\nrequest.add_api_parameter(\"start_time\", \"2021-01-01\")\nrequest.add_api_parameter(\"end_time\", \"2021-01-05\")\nrequest.add_api_parameter(\"trade_order_line_id\", \"45645674566\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/finance/transaction/details/get','GET')\nrequest.add_api_param('offset', '0')\nrequest.add_api_param('trans_type', '-1')\nrequest.add_api_param('trade_order_id', '123123213213')\nrequest.add_api_param('limit', '100')\nrequest.add_api_param('start_time', '2021-01-01')\nrequest.add_api_param('end_time', '2021-01-05')\nrequest.add_api_param('trade_order_line_id', '45645674566')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/finance/transaction/details/get?timestamp=1750231494153&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&offset=0&trans_type=-1&trade_order_id=123123213213&limit=100&start_time=2021-01-01&end_time=2021-01-05&trade_order_line_id=45645674566'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"order_no\": \"123445666666\",\n      \"transaction_date\": \"17 May 2016\",\n      \"amount\": \"-0.62\",\n      \"paid_status\": \"Not paid\",\n      \"shipping_provider\": \"LEX\",\n      \"WHT_included_in_amount\": \"Yes\",\n      \"payment_ref_id\": \"paymentRefId\",\n      \"lazada_sku\": \"Item test -123\",\n      \"fee_type\": \"13\",\n      \"transaction_type\": \"Payment Fee\",\n      \"orderItem_no\": \"1666666\",\n      \"orderItem_status\": \"orderItemStatus\",\n      \"reference\": \"1340\",\n      \"fee_name\": \"feeName\",\n      \"shipping_speed\": \"shippingSpeed\",\n      \"WHT_amount\": \"0.0112\",\n      \"transaction_number\": \"SG103EF-1P9VK1A\",\n      \"seller_sku\": \"sellerSKU\",\n      \"statement\": \"11 May 2016 - 17 May 2016\",\n      \"details\": \"details\",\n      \"comment\": \"comment\",\n      \"VAT_in_amount\": \"0.0672\",\n      \"shipment_type\": \"Dropshipping\"\n    }\n  ],\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "1000012",
+      "message": "endTime - startTime must should be less than 180 days",
+      "description": "endTime - startTime must should be less than 180 days"
+    },
+    {
+      "code": "1000014",
+      "message": "Can not find that transactionType",
+      "description": "transaction type invalid"
+    },
+    {
+      "code": "1000012",
+      "message": "endTime - startTime must should be less than 180 days",
+      "description": "Please make sure that the timeframe of your inquiry is within 180 days."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

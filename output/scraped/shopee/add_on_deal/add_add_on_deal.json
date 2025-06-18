@@ -1,0 +1,221 @@
+{
+  "platform": "shopee",
+  "module": "add_on_deal",
+  "endpoint_name": "add_add_on_deal",
+  "version": "v2",
+  "summary": "delete product in bundle deal",
+  "description": "delete product in bundle deal",
+  "path": "/api/v2/bundle_deal/delete_bundle_deal_item",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "add_on_deal_name",
+        "type": "string",
+        "required": true,
+        "description": "Title of the add on deal",
+        "sample": "add on deal name test"
+      },
+      {
+        "name": "start_time",
+        "type": "int",
+        "required": true,
+        "description": "The time when add on deal activity start.",
+        "sample": "1624864213"
+      },
+      {
+        "name": "end_time",
+        "type": "int",
+        "required": true,
+        "description": "The time when add on deal activity end",
+        "sample": "1625382613"
+      },
+      {
+        "name": "promotion_type",
+        "type": "int",
+        "required": true,
+        "description": "The type of add on deal：add on discount =0；gift with mini spend=1",
+        "sample": "0"
+      },
+      {
+        "name": "purchase_min_spend",
+        "type": "float",
+        "required": false,
+        "description": "The minimum purchase amount that needs to be met to buy the gift with min.Spend",
+        "sample": "11.1"
+      },
+      {
+        "name": "per_gift_num",
+        "type": "int",
+        "required": false,
+        "description": "Number of gifts that buyers can get",
+        "sample": "11"
+      },
+      {
+        "name": "promotion_purchase_limit",
+        "type": "int",
+        "required": false,
+        "description": "promotion_purchase_limit",
+        "sample": "12"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"add_on_deal_name\": \"add on deal name test\",\n    \"start_time\": \"1624864213\",\n    \"end_time\": \"1625382613\",\n    \"promotion_type\": \"0\",\n    \"purchase_min_spend\": \"11.1\",\n    \"per_gift_num\": \"11\",\n    \"promotion_purchase_limit\": \"12\"\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "add_on.add_on_deal_start_time_error",
+        "description": "Error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "The start time should be 1 hour later than current time",
+        "description": "The description of error code"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "c4fbe50a634200235c10a2b3e95ae99a",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "add_on_deal_id",
+        "type": "int",
+        "sample": "20142",
+        "description": "Shopee's unique identifier for an add on deal activity."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"message\": \"\",\n    \"request_id\": \"c4fbe50a634200235c10a2b3e95ae99a\",\n    \"response\": {\n        \"add_on_deal_id\": 20142\n    },\n    \"error\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "add_on.add_on_deal_end_time_error",
+      "message": "The end time should be 1 hour later than start time"
+    },
+    {
+      "code": "add_on.add_on_deal_name_invalid",
+      "message": "The name of add on deal can't exceed 25 characters"
+    },
+    {
+      "code": "add_on.add_on_deal_over_size",
+      "message": "A maximum of 1000 add on deals can be created"
+    },
+    {
+      "code": "add_on.add_on_deal_set_error",
+      "message": "Please input per gift number between 1 to 50"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "Please input correct promotion purchase limit"
+    },
+    {
+      "code": "add_on.add_on_deal_start_time_error",
+      "message": "The start time should be 1 hour later than current time"
+    },
+    {
+      "code": "add_on.add_on_deal_set_error",
+      "message": "Please input add on deal purchase limit between 1 to 100"
+    },
+    {
+      "code": "add_on.add_on_deal_type_error",
+      "message": "Please input correct promotion type: Add-on discount=0; Gift with min.spend=1"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/bundle_deal/delete_bundle_deal_item"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/bundle_deal/delete_bundle_deal_item"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/bundle_deal/delete_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/bundle_deal/delete_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/bundle_deal/delete_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/bundle_deal/delete_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/bundle_deal/delete_bundle_deal_item"
+      }
+    ]
+  }
+}

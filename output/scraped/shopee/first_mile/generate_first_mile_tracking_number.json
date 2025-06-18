@@ -1,0 +1,186 @@
+{
+  "platform": "shopee",
+  "module": "first_mile",
+  "endpoint_name": "generate_first_mile_tracking_number",
+  "version": "v2",
+  "summary": "Use this api to get first mile detail",
+  "description": "Use this api to get first mile detail.",
+  "path": "/api/v2/first_mile/get_detail",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "declare_date",
+        "type": "string",
+        "required": true,
+        "description": "This field is used for seller to specify the declare time.",
+        "sample": "2020-12-20"
+      },
+      {
+        "name": "quantity",
+        "type": "int",
+        "required": false,
+        "description": "The number of first-mile tracking numbers generated. Up to 20 first-mile tracking numbers can be generated for one declaration day.",
+        "sample": "1"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"declare_date\": \"2020-12-20\",\n    \"quantity\": 1 \n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "tmQIaCubxLdmeCACVpdNfWDFuQdfQrMz",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "first_mile_tracking_number_list",
+        "type": "string[]",
+        "sample": "[\"CNF487059659800210120\"]",
+        "description": "The list of first mile tracking number that you generate"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"request_id\": \"tmQIaCubxLdmeCACVpdNfWDFuQdfQrMz\",\n    \"error\": \"\",\n    \"message\": \"\",\n    \"response\": {\n        \"first_mile_tracking_number_list\": [\n            \"CNF487059659800210120\"\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_not_found",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_permission",
+      "message": "Sorry you don't have the permission, detail: {msg}."
+    },
+    {
+      "code": "firstmile.area_not_support",
+      "message": "Area is invalid.Now we only support area in {area}."
+    },
+    {
+      "code": "firstmile.date_error",
+      "message": "Parameter declare_date is wrong, should be later than or equal to today."
+    },
+    {
+      "code": "firstmile.date_format_error",
+      "message": "Format for param date is wrong, should be like '2000-01-01'."
+    },
+    {
+      "code": "firstmile.max_number_limit",
+      "message": "The first mile code number you apply is more than {num}."
+    },
+    {
+      "code": "firstmile.shipment_auth",
+      "message": "The shop has no permission for the first mile shipment method: {method}."
+    },
+    {
+      "code": "firstmile.shipment_pre_declare_permission",
+      "message": "The shop has no permission for first mile pre declare."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/first_mile/get_detail"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/first_mile/get_detail"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/first_mile/get_detail"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/first_mile/get_detail"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/first_mile/get_detail"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/first_mile/get_detail"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/first_mile/get_detail"
+      }
+    ]
+  }
+}

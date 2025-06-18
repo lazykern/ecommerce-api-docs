@@ -1,0 +1,151 @@
+{
+  "platform": "shopee",
+  "module": "payment",
+  "endpoint_name": "generate_income_statement",
+  "version": "v2",
+  "summary": "Use this API to fetch the details of order income by batch",
+  "description": "Use this API to fetch the details of order income by batch.",
+  "path": "/api/v2/payment/get_escrow_detail_batch",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "release_time_from",
+        "type": "int64",
+        "required": true,
+        "description": "The release_time_from must be - Monday (GTM+8) for a weekly report - The 1st day (GTM+8) of a Month for a monthly report",
+        "sample": "1234567890"
+      },
+      {
+        "name": "release_time_to",
+        "type": "int64",
+        "required": true,
+        "description": "The release_time_to must be - Sunday (GTM+8) for a weekly report - The last day (GTM+8) of a Month for a monthly report",
+        "sample": "1234567890"
+      },
+      {
+        "name": "statement_type",
+        "type": "int32",
+        "required": true,
+        "description": "STATEMENT_TYPE_WEEKLY = 1; STATEMENT_TYPE_MONTHLY = 2; Local seller Income statement requires this value to be set. CB seller income statement does not require this.",
+        "sample": "1"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.uat.shopeemobile.com/api/v2/payment/generate_income_statement?access_token=access_token&partner_id=partner_id&release_time_from=1234567890&release_time_to=1234567890&shop_id=123456&sign=sign&statement_type=1&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.uat.shopeemobile.com/api/v2/payment/generate_income_statement?access_token=access_token&partner_id=partner_id&release_time_from=1234567890&release_time_to=1234567890&shop_id=123456&sign=sign&statement_type=1&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.uat.shopeemobile.com/api/v2/payment/generate_income_statement?access_token=access_token&partner_id=partner_id&release_time_from=1234567890&release_time_to=1234567890&shop_id=123456&sign=sign&statement_type=1&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.uat.shopeemobile.com/api/v2/payment/generate_income_statement?access_token=access_token&partner_id=partner_id&release_time_from=1234567890&release_time_to=1234567890&shop_id=123456&sign=sign&statement_type=1&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "id",
+        "type": "int64",
+        "sample": "123456789",
+        "description": "Identifier of income statement file."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "error message"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"response\": {\n\t\t\"id\": 123456789\n\t},\n\t\"error\": \"-\",\n\t\"message\": \"-\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "Shop is not a mart shop. Please use Mart Shop ID."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid time range, Weekly reports must span from Day 1 (Monday) to Day 7 (Sunday), and monthly reports must cover from 1st to last day of the month."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong income statement type. Please provide the correct parameter."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong income statement type. Please provide the correct parameter."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong income statement type. Please provide the correct parameter."
+    },
+    {
+      "code": "error_param",
+      "message": "For local sellers, please input weekly or monthly."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_escrow_detail_batch"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_escrow_detail_batch"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_escrow_detail_batch"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_escrow_detail_batch"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_escrow_detail_batch"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_escrow_detail_batch"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_escrow_detail_batch"
+      }
+    ]
+  }
+}

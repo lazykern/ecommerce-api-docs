@@ -1,0 +1,154 @@
+{
+  "platform": "lazada",
+  "module": "orders",
+  "endpoint_name": "GetMultipleOrderItems",
+  "version": null,
+  "summary": "Use this API to get the item information of one or more orders",
+  "description": "Use this API to get the item information of one or more orders.（No more than 50 at a time）",
+  "path": "/orders/items/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "order_ids",
+        "type": "Number[]",
+        "required": true,
+        "description": "Comma-separated list of order identifiers in square brackets.（No more than 50 at a time）"
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/orders/items/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"order_ids\", \"[42922, 32793]\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/orders/items/get','GET');\n$request->addApiParam('order_ids','[42922, 32793]');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/orders/items/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"order_ids\", \"[42922, 32793]\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/orders/items/get','GET')\nrequest.add_api_parameter(\"order_ids\", \"[42922, 32793]\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/orders/items/get','GET')\nrequest.add_api_param('order_ids', '[42922, 32793]')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/orders/items/get?timestamp=1750231489536&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&order_ids=%5B42922%2C+32793%5D'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"order_number\": \"300029225\",\n      \"order_id\": \"32793\",\n      \"order_items\": [\n        {\n          \"pick_up_store_info\": {\n            \"pick_up_store_address\": \"Ali Center, Shenzhen\",\n            \"pick_up_store_name\": \"Alibaba\",\n            \"pick_up_store_open_hour\": [\n              \"Sunday 9:00-18:00\",\n              \"Mondday,Tuesday,Wendnesday,Thursday,Friday 8:00-20:00\"\n            ],\n            \"pick_up_store_code\": \"d4b04804-9192-4a8c-8ed1-5ebcd7d3c067\"\n          },\n          \"tax_amount\": \"5.83\",\n          \"reason\": \"reason\",\n          \"sla_time_stamp\": \"2019-06-24T23:59:59+08:00\",\n          \"payment_time\": \"1697193374592\",\n          \"purchase_order_id\": \"36762\",\n          \"voucher_seller\": \"0.00\",\n          \"voucher_code_seller\": \"X234\",\n          \"voucher_code\": \"X234\",\n          \"package_id\": \"13452\",\n          \"buyer_id\": \"1001\",\n          \"variation\": \"xy\",\n          \"biz_group\": \"70100\",\n          \"voucher_code_platform\": \"Y123\",\n          \"purchase_order_number\": \"MPDS-M14438867399\",\n          \"show_gift_wrapping_tag\": \"True\",\n          \"gift_wrapping\": \"this is a text for gift\",\n          \"schedule_delivery_start_timeslot\": \"1719108000000\",\n          \"sku\": \"BRSCR#06\",\n          \"show_personalization_tag\": \"True\",\n          \"invoice_number\": \"10\",\n          \"order_type\": \"Normal\",\n          \"cancel_return_initiator\": \"cancellation-customer\",\n          \"shop_sku\": \"BE494HLSSSDTSGAMZ-39888\",\n          \"is_reroute\": \"0\",\n          \"stage_pay_status\": \"unpaid\",\n          \"sku_id\": \"666\",\n          \"tracking_code_pre\": \"4352243\",\n          \"order_item_id\": \"100827\",\n          \"shop_id\": \"dawen dp\",\n          \"order_flag\": \"GUATANTEE\",\n          \"is_fbl\": \"0\",\n          \"name\": \"Bean Rester Crest Brown\",\n          \"delivery_option_sof\": \"0\",\n          \"fulfillment_sla\": \"NEXT_DAY\",\n          \"order_id\": \"32793\",\n          \"status\": \"delivered\",\n          \"paid_price\": \"89.10\",\n          \"product_main_image\": \"http://th-live-02.slatic.net/p/3/jianyue-7699-09550735-ccd244666871f12a5274-catalog.jpg\",\n          \"voucher_platform\": \"0.00\",\n          \"product_detail_url\": \"http://www.lazada.co.th/537055.html\",\n          \"promised_shipping_time\": \"s\",\n          \"warehouse_code\": \"dropshipping\",\n          \"shipping_type\": \"Dropshipping\",\n          \"created_at\": \"1413786247000\",\n          \"supply_price\": \"99.0\",\n          \"mp3_order\": \"True\",\n          \"voucher_seller_lpi\": \"0.00\",\n          \"shipping_fee_discount_platform\": \"0.00\",\n          \"personalization\": \"this is a text for emboss\",\n          \"wallet_credits\": \"0.00\",\n          \"updated_at\": \"1414548487000\",\n          \"currency\": \"SGD\",\n          \"shipping_provider_type\": \"standard\",\n          \"voucher_platform_lpi\": \"0.00\",\n          \"shipping_fee_original\": \"0.00\",\n          \"schedule_delivery_end_timeslot\": \"1719140400000\",\n          \"is_digital\": \"0\",\n          \"item_price\": \"99.00\",\n          \"shipping_service_cost\": \"0\",\n          \"tracking_code\": \"2014038590005\",\n          \"shipping_fee_discount_seller\": \"0.00\",\n          \"shipping_amount\": \"0.00\",\n          \"reason_detail\": \"reason\",\n          \"return_status\": \"0\",\n          \"semi_managed\": \"True\",\n          \"priority_fulfillment_tag\": \"Kirim secepat mungkin_null_null\",\n          \"shipment_provider\": \"TA-Q-BIN\",\n          \"supply_price_currency\": \"CNY\",\n          \"voucher_amount\": \"0.00\",\n          \"digital_delivery_info\": \" digital\",\n          \"extra_attributes\": \"null\"\n        }\n      ]\n    }\n  ],\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "37",
+      "message": "E037: One or more order id in the list are incorrect",
+      "description": "One or more order IDs specified are not valid."
+    },
+    {
+      "code": "38",
+      "message": "E038: Too many orders were requested",
+      "description": "The number of orders exceeds the limit."
+    },
+    {
+      "code": "39",
+      "message": "E039: No orders were found",
+      "description": "The specified orders are not found."
+    },
+    {
+      "code": "56",
+      "message": "E056: Invalid OrdersIdList format. Must use array format [1,2]",
+      "description": "The format of the order ID list is not valid."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

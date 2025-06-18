@@ -1,0 +1,234 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "update_sip_item_price",
+  "version": "v2",
+  "summary": "Get item promotion info",
+  "description": "Get item promotion info.",
+  "path": "/api/v2/product/get_item_promotion",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "item_id",
+        "type": "int",
+        "required": true,
+        "description": "ID of item.",
+        "sample": "1000"
+      },
+      {
+        "name": "sip_item_price",
+        "type": "object[]",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "model_id",
+        "type": "int",
+        "required": false,
+        "description": "0 for no model item.",
+        "sample": ""
+      },
+      {
+        "name": "sip_item_price",
+        "type": "float",
+        "required": true,
+        "description": "SIP item price.",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n\"item_id\": 1000,\n\"sip_item_price\": [{\n\"model_id\": 3456,\n\"sip_item_price\": 11.11\n}]\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning message."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\"error\": \"\",\n\"message\": \"\",\n\"warning\": \"\",\n\"request_id\": \"aaaaaaa\",\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_item_not_belong_shop",
+      "message": "Item not belong to shop."
+    },
+    {
+      "code": "error_param_shop_id_not_found",
+      "message": "Shop_id is not found."
+    },
+    {
+      "code": "error_param",
+      "message": "Repeat model_id."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong model_id."
+    },
+    {
+      "code": "error_busi_item_price_higher_than_price",
+      "message": "Sip_item_price should less than the original_price."
+    },
+    {
+      "code": "error_busi_error_sip_error",
+      "message": "Call sip api with error."
+    },
+    {
+      "code": "error_busi_not_allow_edit_item_price",
+      "message": "Cannot edit sip_item_price."
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_item_not_found",
+      "message": "Product not found"
+    },
+    {
+      "code": "error_invalid_price",
+      "message": "Invalid price, please use the correct format"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_busi_cannot_edit_vsku",
+      "message": "Can not use OpenAPI to edit/create VSKU, please connect with your manager"
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_item_promotion"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_item_promotion"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_item_promotion"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_item_promotion"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_item_promotion"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_item_promotion"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_item_promotion"
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "platform": "shopee",
+  "module": "shop",
+  "endpoint_name": "get_shop_notification",
+  "version": "v2",
+  "summary": "For given shop id and region, return warehouse info including warehouse id, address id and location id",
+  "description": "For given shop id and region, return warehouse info including warehouse id, address id and location id",
+  "path": "/api/v2/shop/get_warehouse_detail",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "cursor",
+        "type": "int",
+        "required": false,
+        "description": "The last notification_id returned on the page. When using the cursor, notifications will start with the one following this cursor notification. If no cursor is provided, the latest message from the shop will be returned.",
+        "sample": "1"
+      },
+      {
+        "name": "page_size",
+        "type": "int",
+        "required": false,
+        "description": "Default 10; maximum 50",
+        "sample": "1"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://open.admin.test.shopee.io/api/v2/shop/get_shop_notification?access_token=access_token&cursor=1&page_size=1&partner_id=1&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://open.admin.test.shopee.io/api/v2/shop/get_shop_notification?access_token=access_token&cursor=1&page_size=1&partner_id=1&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://open.admin.test.shopee.io/api/v2/shop/get_shop_notification?access_token=access_token&cursor=1&page_size=1&partner_id=1&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://open.admin.test.shopee.io/api/v2/shop/get_shop_notification?access_token=access_token&cursor=1&page_size=1&partner_id=1&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "cursor",
+        "type": "int",
+        "sample": "",
+        "description": "Last notification_id returned in the page"
+      },
+      {
+        "name": "data",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "create_time",
+        "type": "int",
+        "sample": "",
+        "description": "the notification create time"
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "sample": "",
+        "description": "The content of the notification"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "sample": "",
+        "description": "The content of the notification"
+      },
+      {
+        "name": "url",
+        "type": "string",
+        "sample": "",
+        "description": "Some notification may be attached with URL, it will redirect to seller center"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"cursor\": 0,\n\t\"data\": {\n\t\t\"create_time\": 0,\n\t\t\"content\": \"-\",\n\t\t\"title\": \"-\",\n\t\t\"url\": \"-\"\n\t}\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop/get_warehouse_detail"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop/get_warehouse_detail"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop/get_warehouse_detail"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop/get_warehouse_detail"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop/get_warehouse_detail"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop/get_warehouse_detail"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop/get_warehouse_detail"
+      }
+    ]
+  }
+}

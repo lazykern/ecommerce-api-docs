@@ -1,0 +1,155 @@
+{
+  "platform": "lazada",
+  "module": "eticket",
+  "endpoint_name": "GetOrderItemsFromBarCode",
+  "version": null,
+  "summary": "E-Ticcket certificate query Open API",
+  "description": "E-Ticcket certificate query Open API",
+  "path": "/eticket/code/query",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "code",
+        "type": "String",
+        "required": true,
+        "description": "certificate code"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/eticket/code/query\");\nrequest.addApiParameter(\"code\", \"abcdedf\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/eticket/code/query');\n$request->addApiParam('code','abcdedf');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/eticket/code/query\");\nrequest.AddApiParameter(\"code\", \"abcdedf\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/eticket/code/query')\nrequest.add_api_parameter(\"code\", \"abcdedf\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/eticket/code/query')\nrequest.add_api_param('code', 'abcdedf')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/eticket/code/query' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"code\":\"abcdedf\",\"timestamp\":\"1750231486188\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"strart_time\": \"1640969999000\",\n    \"certificate_code\": \"abcd123sa\",\n    \"item_list\": [\n      {\n        \"item_img\": \"https://sg-live.slatic.net/p/test.jpg\",\n        \"item_id\": \"123\",\n        \"actual_fee\": \"1\",\n        \"actual_fee_currency\": \"SGD\",\n        \"unit_fee\": \"1\",\n        \"item_name\": \"Meal\",\n        \"unit_fee_currency\": \"SGD\"\n      }\n    ],\n    \"biz_type\": \"5107\",\n    \"end_time\": \"1640969999000\",\n    \"trade_order_id\": \"50011002200334\",\n    \"code_status\": \"1\",\n    \"outer_id\": \"F01312342312\",\n    \"serial_num\": \"3451c641-a7da-4264-92cb-78a1f79392c3\"\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "100",
+      "message": "E100: Param Invalid, \"%s\"",
+      "description": "Param invalid"
+    },
+    {
+      "code": "200",
+      "message": "E200: Certificate Not Exist",
+      "description": "Certificate not exist"
+    },
+    {
+      "code": "201",
+      "message": "E201: Certificate Not Unique",
+      "description": "More that one certificate matched"
+    },
+    {
+      "code": "202",
+      "message": "E202: Certificate Can Not Distinguish",
+      "description": "Can't distinguish the business type of this code"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

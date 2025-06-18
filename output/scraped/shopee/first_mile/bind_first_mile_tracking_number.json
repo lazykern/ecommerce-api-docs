@@ -1,0 +1,394 @@
+{
+  "platform": "shopee",
+  "module": "first_mile",
+  "endpoint_name": "bind_first_mile_tracking_number",
+  "version": "v2",
+  "summary": "Use this api to generate first mile tracking number",
+  "description": "Use this api to generate first mile tracking number.",
+  "path": "/api/v2/first_mile/generate_first_mile_tracking_number",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "first_mile_tracking_number",
+        "type": "string",
+        "required": true,
+        "description": "If using \"pickup\" or \"self_deliver\" as the shipment method the \"first_mile_tracking_number\" field should pass the value generated from v2.first_mile.generate_first_mile_tracking_number. If using \"dropoff\" as the shipment method the \"first_mile_tracking_number\" field should pass the tracking number provide by the supplier.",
+        "sample": "CNF731738838434210105"
+      },
+      {
+        "name": "shipment_method",
+        "type": "string",
+        "required": true,
+        "description": "The shipment method for bound orders, should be pickup, dropoff or self_deliver.",
+        "sample": "pickup"
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "required": true,
+        "description": "Use this field to specify the region you want to ship parcel. Available value: cn,kr. Please fill in the field according to the region of the Merchant to which the shop belongs.",
+        "sample": "cn"
+      },
+      {
+        "name": "logistics_channel_id",
+        "type": "int32",
+        "required": true,
+        "description": "The identity of first-mile logistic channel. If you using \"dropoff\" or \"pickup\" as shipment method, please call v2.first_mile.get_channel_list to get the logsitc_channel_id then fill it. If you using \"self_deliver\"as shipment method then the logistics_channel_id should be \"null\".",
+        "sample": "813"
+      },
+      {
+        "name": "volume",
+        "type": "float",
+        "required": false,
+        "description": "The volume of the parcel.",
+        "sample": "1.0"
+      },
+      {
+        "name": "weight",
+        "type": "float",
+        "required": false,
+        "description": "The weight of the parcel.",
+        "sample": "2.0"
+      },
+      {
+        "name": "width",
+        "type": "float",
+        "required": false,
+        "description": "The width of the parcel.",
+        "sample": "3.0"
+      },
+      {
+        "name": "length",
+        "type": "float",
+        "required": false,
+        "description": "The length of the parcel.",
+        "sample": "4.0"
+      },
+      {
+        "name": "height",
+        "type": "float",
+        "required": false,
+        "description": "The height of the parcel.",
+        "sample": "5.0"
+      },
+      {
+        "name": "order_list",
+        "type": "object[]",
+        "required": true,
+        "description": "The set of ordersn. You can specify up to 50 ordersns in this call.one fm_tn maximum number of total bind orders is 10000.",
+        "sample": ""
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for an order.",
+        "sample": "201229TVRKVB8W"
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "required": false,
+        "description": "Shopee's unique identifier for the package under an order. You should't fill the field with empty string when there is't a package number.",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"first_mile_tracking_number\":\"CNF081531393648221122\",\n    \"order_list\":[\n        {\n            \"order_sn\":\"221119GAB7FW8H\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221119GF37711Y\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120GWUAE4GF\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120H7XD3PMA\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120HRKXVTEB\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120J5UN7JMX\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120J9QAVWFH\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120JHJ7WC58\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120JG2K19J2\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120JPUNFCXP\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120JT3XGS1J\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120K01C37DU\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221120JXSE2F4X\",\n            \"package_number\":\"\"\n        },\n        {\n            \"order_sn\":\"221121K68M6GV2\",\n            \"package_number\":\"\"\n        }\n    ],\n    \"shipment_method\":\"pickup\",\n    \"logistics_channel_id\":813,\n    \"region\":\"CN\",\n    \"weight\":0,\n    \"volume\":0,\n    \"length\":0,\n    \"width\":0,\n    \"height\":0\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "uyavvIOqyJUSgWCNaXkCSHigqrFgHpuJ",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "firstmile.batch_api_all_failed",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "All failed, please check result_list for detail",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "object[]",
+        "sample": "",
+        "description": "Indicate warning message you should take care."
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "201229TVRKVB8W",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "first_mile_tracking_number",
+        "type": "string",
+        "sample": "CNF731738838434210105",
+        "description": "The first mile tracking number"
+      },
+      {
+        "name": "order_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The list of orders."
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "201229TVRKVB80",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "sample": "",
+        "description": "Shopee's unique identifier for the package under an order."
+      },
+      {
+        "name": "fail_error",
+        "type": "string",
+        "sample": "firstmile.order_not_exist",
+        "description": "Indicate error type if one element hit error."
+      },
+      {
+        "name": "fail_message",
+        "type": "string",
+        "sample": "Order is not exist.",
+        "description": "Indicate error details if one element hit error."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\":\"\",\n    \"message\":\"\",\n    \"response\":{\n        \"first_mile_tracking_number\":\"CNF081531393648221122\",\n        \"order_list\":[\n            {\n                \"order_sn\":\"221120K01C37DU\"\n            },\n            {\n                \"order_sn\":\"221120H7XD3PMA\"\n            },\n            {\n                \"order_sn\":\"221120J5UN7JMX\"\n            },\n            {\n                \"order_sn\":\"221120JG2K19J2\"\n            },\n            {\n                \"order_sn\":\"221120JT3XGS1J\"\n            },\n            {\n                \"order_sn\":\"221119GAB7FW8H\"\n            },\n            {\n                \"order_sn\":\"221120HRKXVTEB\"\n            },\n            {\n                \"order_sn\":\"221121K68M6GV2\"\n            },\n            {\n                \"order_sn\":\"221119GF37711Y\"\n            },\n            {\n                \"order_sn\":\"221120J9QAVWFH\"\n            },\n            {\n                \"order_sn\":\"221120JPUNFCXP\"\n            },\n            {\n                \"order_sn\":\"221120JXSE2F4X\"\n            },\n            {\n                \"order_sn\":\"221120GWUAE4GF\"\n            },\n            {\n                \"order_sn\":\"221120JHJ7WC58\"\n            }\n        ]\n    },\n    \"request_id\":\"1267bbc898d7703d143a065472245920\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "Dropoff FM tracking code must be between 6 to 40 characters"
+    },
+    {
+      "code": "error_param",
+      "message": "FM code cannot be empty."
+    },
+    {
+      "code": "error_param",
+      "message": "Format wrong. FM tracking number only contains character and number."
+    },
+    {
+      "code": "error_param",
+      "message": "Pickup FM tracking code must start with \"CNF\" or \"KRF\" + 18 numbers"
+    },
+    {
+      "code": "error_param",
+      "message": "Self Deliver FM tracking code must start with \\\"CNF\\\" or \\\"KRF\\\" + 18 numbers"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "One FM code cannot be predeclared with different shipping methods"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The SLS TN does not belong to FM enabled TWS."
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The SLS TN is tied to another FM code"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The FM code does not exist"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "System error (TWS fail), please contact Shopee"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The logistics status is not supported for binding"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The SLS TN does not exist"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The SLS TN is not a CB TN"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The FM status is incorrect."
+    },
+    {
+      "code": "firstmile.error",
+      "message": "System error, please try again later/ contact Shopee"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "The shipping method and logistics id are not matched"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "System error, please contact Shopee"
+    },
+    {
+      "code": "firstmile.error",
+      "message": "FM Code WHSID can only bind SLS TN with the same WHSID"
+    },
+    {
+      "code": "error_not_found",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_permission",
+      "message": "Sorry you don't have the permission, detail: {msg}."
+    },
+    {
+      "code": "firstmile.area_not_support",
+      "message": "Area is invalid.Now we only support area in {area}."
+    },
+    {
+      "code": "firstmile.batch_api_all_failed",
+      "message": "Failed, please check result_list for more details."
+    },
+    {
+      "code": "firstmile.system_error",
+      "message": "System error. Please try again later."
+    },
+    {
+      "code": "firstmile.param_duplication",
+      "message": "Duplicate order_sn {order_sn} or package_number: {package_number}."
+    },
+    {
+      "code": "firstmile.invalid_order_status",
+      "message": "The status of order(order_sn: {order_sn}) is invalid. Please check the order status."
+    },
+    {
+      "code": "firstmile.invalid_package",
+      "message": "Package is not exist."
+    },
+    {
+      "code": "firstmile.order_has_been_split",
+      "message": "The order(order_sn: {order_sn}) has been split"
+    },
+    {
+      "code": "firstmile.order_not_exist",
+      "message": "Order is not exist."
+    },
+    {
+      "code": "firstmile.package_has_bind",
+      "message": "Package (order_sn: {order_sn}, package_number: {package_number}) has been bind to first mile code."
+    },
+    {
+      "code": "firstmile.shipment_auth",
+      "message": "The shop has no permission for the first mile shipment method: {method}."
+    },
+    {
+      "code": "firstmile.shipment_pre_declare_permission",
+      "message": "The shop has no permission for first mile pre declare."
+    },
+    {
+      "code": "firstmile.wrong_shipment_method",
+      "message": "Shipment method is invalid. Please check the shipment method."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/first_mile/generate_first_mile_tracking_number"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/first_mile/generate_first_mile_tracking_number"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/first_mile/generate_first_mile_tracking_number"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/first_mile/generate_first_mile_tracking_number"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/first_mile/generate_first_mile_tracking_number"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/first_mile/generate_first_mile_tracking_number"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/first_mile/generate_first_mile_tracking_number"
+      }
+    ]
+  }
+}

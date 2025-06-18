@@ -1,0 +1,146 @@
+{
+  "platform": "lazada",
+  "module": "sellercenter",
+  "endpoint_name": "SellerCenterMsgList",
+  "version": null,
+  "summary": "seller center msg box",
+  "description": "seller center msg box",
+  "path": "/sellercenter/msg/list",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "language",
+        "type": "String",
+        "required": false,
+        "description": "Set the language for returned messages.(en/vn/id/sg/ph...)"
+      },
+      {
+        "name": "page",
+        "type": "String",
+        "required": false,
+        "description": "Paged query."
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": false,
+        "description": "Paged query, with a maximum return of one hundred records."
+      },
+      {
+        "name": "result",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/sellercenter/msg/list\");\nrequest.addApiParameter(\"language\", \"en_EN\");\nrequest.addApiParameter(\"page\", \"1\");\nrequest.addApiParameter(\"pageSize\", \"10\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/sellercenter/msg/list');\n$request->addApiParam('language','en_EN');\n$request->addApiParam('page','1');\n$request->addApiParam('pageSize','10');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/sellercenter/msg/list\");\nrequest.AddApiParameter(\"language\", \"en_EN\");\nrequest.AddApiParameter(\"page\", \"1\");\nrequest.AddApiParameter(\"pageSize\", \"10\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/sellercenter/msg/list')\nrequest.add_api_parameter(\"language\", \"en_EN\")\nrequest.add_api_parameter(\"page\", \"1\")\nrequest.add_api_parameter(\"pageSize\", \"10\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/sellercenter/msg/list')\nrequest.add_api_param('language', 'en_EN')\nrequest.add_api_param('page', '1')\nrequest.add_api_param('pageSize', '10')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/sellercenter/msg/list' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"10\",\"language\":\"en_EN\",\"page\":\"1\",\"timestamp\":\"1750231469321\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object",
+        "description": "result"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": {\n    \"data\": {\n      \"pageInfo\": {\n        \"current\": \"1\",\n        \"total\": \"20\",\n        \"pageSize\": \"10\"\n      },\n      \"dataSource\": [\n        {\n          \"message_content\": {\n            \"appLink\": \"app jump link\",\n            \"webLink\": \"web jump link\",\n            \"description\": \"description\",\n            \"title\": \"title\",\n            \"categoryName\": \"msg category name\",\n            \"picture\": \"msg img url\"\n          },\n          \"id\": \"msg id\",\n          \"time\": \"send time\"\n        }\n      ]\n    },\n    \"success\": {},\n    \"errorCode\": \"code\",\n    \"type\": \"type\",\n    \"error\": \"error\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

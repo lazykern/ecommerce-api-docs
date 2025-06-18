@@ -1,0 +1,212 @@
+{
+  "platform": "shopee",
+  "module": "shop_flash_sale",
+  "endpoint_name": "get_shop_flash_sale_list",
+  "version": "v2",
+  "summary": "add shop flash sale item",
+  "description": "add shop flash sale item",
+  "path": "/api/v2/shop_flash_sale/add_shop_flash_sale_items",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "type",
+        "type": "int32",
+        "required": true,
+        "description": "you can use this filed to search different state of shop flash sale 0: all state 1: upcoming state 2: ongoing state 3: expired state",
+        "sample": "1"
+      },
+      {
+        "name": "start_time",
+        "type": "timestamp",
+        "required": false,
+        "description": "you should use start_time and end_time together, and start_time shoule be < end_time",
+        "sample": "1721978628"
+      },
+      {
+        "name": "end_time",
+        "type": "timestamp",
+        "required": false,
+        "description": "you should use start_time and end_time together, and start_time shoule be < end_time",
+        "sample": "1727335428"
+      },
+      {
+        "name": "offset",
+        "type": "int64",
+        "required": true,
+        "description": "min=0,max=1000",
+        "sample": "0"
+      },
+      {
+        "name": "limit",
+        "type": "int64",
+        "required": true,
+        "description": "min=1,max=100",
+        "sample": "10"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "total_count",
+        "type": "int64",
+        "sample": "10",
+        "description": "the number of shop flash sale that the shop has"
+      },
+      {
+        "name": "flash_sale_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "timeslot_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "flash_sale_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "status",
+        "type": "int32",
+        "sample": "1",
+        "description": "the status of shop flash sale 0: deleted 1: enabled 2: disabled 3: system_rejected, you cannot edit the shop flash sale in 'system_rejected' status"
+      },
+      {
+        "name": "start_time",
+        "type": "timestamp",
+        "sample": "1721978628",
+        "description": "the start time of shop flash sale"
+      },
+      {
+        "name": "end_time",
+        "type": "timestamp",
+        "sample": "1727335428",
+        "description": "the end time of shop flash sale"
+      },
+      {
+        "name": "enabled_item_count",
+        "type": "int32",
+        "sample": "10",
+        "description": "the number of enabled items in shop flash sale"
+      },
+      {
+        "name": "item_count",
+        "type": "int32",
+        "sample": "20",
+        "description": "the number of items in shop flash sale"
+      },
+      {
+        "name": "type",
+        "type": "int32",
+        "sample": "1",
+        "description": "the state of shop flash sale 1: upcoming 2: ongoing 3: expired"
+      },
+      {
+        "name": "remindme_count",
+        "type": "int64",
+        "sample": "100",
+        "description": "No. of Reminders Set"
+      },
+      {
+        "name": "click_count",
+        "type": "int64",
+        "sample": "200",
+        "description": "No. of Product Clicks"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"ea1b97881ec32a4917c31ef67e334841\",\n    \"response\": {\n        \"flash_sale_list\": [\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1725040799,\n                \"flash_sale_id\": 802063533822541,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1725033600,\n                \"status\": 3,\n                \"timeslot_id\": 237859372232704,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1725040799,\n                \"flash_sale_id\": 802063460422221,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1725033600,\n                \"status\": 1,\n                \"timeslot_id\": 237859372232704,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1725040799,\n                \"flash_sale_id\": 802063428973133,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1725033600,\n                \"status\": 1,\n                \"timeslot_id\": 237859372232704,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1725040799,\n                \"flash_sale_id\": 802063403799117,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1725033600,\n                \"status\": 1,\n                \"timeslot_id\": 237859372232704,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1725040799,\n                \"flash_sale_id\": 802056428671565,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1725033600,\n                \"status\": 1,\n                \"timeslot_id\": 237859372232704,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1723737599,\n                \"flash_sale_id\": 802053532512845,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1723734000,\n                \"status\": 1,\n                \"timeslot_id\": 236768131772416,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1723694399,\n                \"flash_sale_id\": 802053471670861,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1723690800,\n                \"status\": 2,\n                \"timeslot_id\": 236758518403072,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 2,\n                \"end_time\": 1723859999,\n                \"flash_sale_id\": 802024002515533,\n                \"item_count\": 3,\n                \"remindme_count\": 0,\n                \"start_time\": 1723856400,\n                \"status\": 2,\n                \"timeslot_id\": 218099200790528,\n                \"type\": 1\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1722275999,\n                \"flash_sale_id\": 798811027231309,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1722272400,\n                \"status\": 1,\n                \"timeslot_id\": 230377048469504,\n                \"type\": 3\n            },\n            {\n                \"click_count\": 0,\n                \"enabled_item_count\": 0,\n                \"end_time\": 1722272399,\n                \"flash_sale_id\": 798802932232781,\n                \"item_count\": 0,\n                \"remindme_count\": 0,\n                \"start_time\": 1722268800,\n                \"status\": 1,\n                \"timeslot_id\": 230205119754240,\n                \"type\": 3\n            }\n        ],\n        \"total_count\": 107\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "marketing_error_no_premission",
+      "message": "You don't have permission for the operation"
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something is wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid."
+    },
+    {
+      "code": "shop_flash_sale_param_error",
+      "message": "The Wrong parameters, detail: {msg}."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop_flash_sale/add_shop_flash_sale_items"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop_flash_sale/add_shop_flash_sale_items"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_flash_sale/add_shop_flash_sale_items"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_flash_sale/add_shop_flash_sale_items"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_flash_sale/add_shop_flash_sale_items"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_flash_sale/add_shop_flash_sale_items"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_flash_sale/add_shop_flash_sale_items"
+      }
+    ]
+  }
+}

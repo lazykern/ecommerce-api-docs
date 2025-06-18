@@ -1,0 +1,133 @@
+{
+  "platform": "shopee",
+  "module": "logistics",
+  "endpoint_name": "update_tracking_status",
+  "version": "v2",
+  "summary": "Use this api to batch initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels",
+  "description": "Use this api to batch initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels. Should call v2.logistics.get_shipping_parameter to fetch all required param first. It's recommended to initiate logistics one hour after the orders were placed since there is one-hour window buyer can cancel any order without request to seller.Only channel 90003 - Padrão in Brazil has the permission of this API.",
+  "path": "/api/v2/logistics/batch_ship_order",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "order_sn",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for an order.",
+        "sample": "201212DCXHJUIKJ"
+      },
+      {
+        "name": "tracking_number",
+        "type": "string",
+        "required": false,
+        "description": "Order tracking number, might help seller to identify his order on the tracking_URL. Can only be sent when updating order status to \"logistic_pickup_done\".",
+        "sample": "1234567890"
+      },
+      {
+        "name": "tracking_url",
+        "type": "string",
+        "required": false,
+        "description": "Website's URL for order tracking with maximum length of 2048 characters. Can only be sent when updating order status to \"logistic_pickup_done\".",
+        "sample": "https://tracking_url_order_201212DCXHJUIKJ"
+      },
+      {
+        "name": "logistics_status",
+        "type": "string",
+        "required": true,
+        "description": "Order status update support: - logistics_pickup_done - logistics_delivery_done - logistics_delivery_failed",
+        "sample": "logistics_pickup_done"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"order_sn\":\"2403287KU2RPJC\",\n    \"tracking_number\":\"1234567890\",\n    \"tracking_url\":\"https://rastreamento.correios.com.br/app/index.php\",\n    \"logistics_status\":\"logistic_pickup_done\"\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "e9b086380a7dcdc408cb5ebe2cf38041",
+        "description": "API request identifier"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Error message"
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Response body"
+      },
+      {
+        "name": "update_result",
+        "type": "string",
+        "sample": "succeed",
+        "description": "Update results: - succeed - failed"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"response\": {\n        \"update_result\": \"succeed\"\n    },\n    \"request_id\": \"e9b086380a7dcdc408cb5ebe2cf38041\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/batch_ship_order"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/batch_ship_order"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/batch_ship_order"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/batch_ship_order"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/batch_ship_order"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/batch_ship_order"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/batch_ship_order"
+      }
+    ]
+  }
+}

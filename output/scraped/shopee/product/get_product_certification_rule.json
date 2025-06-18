@@ -1,0 +1,173 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "get_product_certification_rule",
+  "version": "v2",
+  "summary": "get recommend price for direct shop",
+  "description": "get recommend price for direct shop.",
+  "path": "/api/v2/product/get_direct_shop_recommended_price",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "attribute_list",
+        "type": "object[]",
+        "required": false,
+        "description": "Item attributes.",
+        "sample": ""
+      },
+      {
+        "name": "attribute_id",
+        "type": "int64",
+        "required": true,
+        "description": "ID of attribute.",
+        "sample": "5357"
+      },
+      {
+        "name": "attribute_value_list",
+        "type": "object[]",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "value_id",
+        "type": "int64",
+        "required": true,
+        "description": "ID of attribute value. In the following cases, the value id needs to be uploaded as 0, and original_value_name is mandatory, needs to be filled in customized value. (1) AttributeInputType is TEXT_FILED; (2) AttributeInputType is COMBO_BOX or MULTIPLE_SELECT_COMBO_BOX, and the seller want to fill in a customized value.",
+        "sample": "38173"
+      },
+      {
+        "name": "original_value_name",
+        "type": "string",
+        "required": false,
+        "description": "Value name. original_value_name from produc.get_attributes api. If value id=0, this field is required. If AttributeType is DATE_TYPE or TIMESTAMP_TYPE, you can upload timestamp(string type) as the original_value_name.",
+        "sample": "Red"
+      },
+      {
+        "name": "value_unit",
+        "type": "string",
+        "required": false,
+        "description": "Unit of attribute value (quantitative attribute only).",
+        "sample": "kg"
+      },
+      {
+        "name": "category_id",
+        "type": "int64",
+        "required": false,
+        "description": "ID of category.",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate waring details if hit waring. Empty if no waring happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "326527603d034fd1b2dd6a74d70ade54",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "certification_rule_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "New description field. Only whitelist sellers can use it. If you use the field, please upload the description_type=extended otherwise api will return error. If you don't use this field, you don't need to upload the description_type or upload description_type=normal"
+      },
+      {
+        "name": "certification_type",
+        "type": "int64",
+        "sample": "1",
+        "description": "type of certification; always=1"
+      },
+      {
+        "name": "is_mandatory",
+        "type": "boolean",
+        "sample": "true",
+        "description": "if this type of certification is mandatory for product"
+      },
+      {
+        "name": "permit_id",
+        "type": "int32",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "",
+        "description": "Permit Type Name"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"message\": \"-\",\n\t\"warning\": \"-\",\n\t\"request_id\": \"326527603d034fd1b2dd6a74d70ade54\",\n\t\"response\": {\n\t\t\"certification_rule_list\": [\n\t\t\t{\n\t\t\t\t\"certification_type\": 1,\n\t\t\t\t\"is_mandatory\": true\n\t\t\t}\n\t\t]\n\t},\n\t\"error\": \"-\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_direct_shop_recommended_price"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_direct_shop_recommended_price"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_direct_shop_recommended_price"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_direct_shop_recommended_price"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_direct_shop_recommended_price"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_direct_shop_recommended_price"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_direct_shop_recommended_price"
+      }
+    ]
+  }
+}

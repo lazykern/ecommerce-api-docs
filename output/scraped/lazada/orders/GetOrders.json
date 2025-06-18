@@ -1,0 +1,232 @@
+{
+  "platform": "lazada",
+  "module": "orders",
+  "endpoint_name": "GetOrders",
+  "version": null,
+  "summary": "Use this API to get the list of items for a range of orders1",
+  "description": "Use this API to get the list of items for a range of orders1..",
+  "path": "/orders/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "sort_by",
+        "type": "String",
+        "required": false,
+        "description": "Allows to choose the sorting column. Possible values are created_at and updated_at."
+      },
+      {
+        "name": "created_before",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned orders to those updated before or on the specified date, given in ISO 8601 date format. Optional."
+      },
+      {
+        "name": "created_after",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned orders to those updated after or on the specified date, given in ISO 8601 date format. Either UpdatedAfter or CreatedAfter is mandatory."
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": false,
+        "description": "When set, limits the returned set of orders to loose orders, which return only entries which fit the status provided. Possible values are unpaid, pending, canceled, ready_to_ship, delivered, returned, shipped , failed, topack,toship,shipping and lost"
+      },
+      {
+        "name": "update_before",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned orders to those updated before or on the specified date, given in ISO 8601 date format. Optional."
+      },
+      {
+        "name": "sort_direction",
+        "type": "String",
+        "required": false,
+        "description": "Specify the sorting type. Possible values are ASC and DESC."
+      },
+      {
+        "name": "offset",
+        "type": "Number",
+        "required": false,
+        "description": "Number of orders to skip at the beginning of the list."
+      },
+      {
+        "name": "limit",
+        "type": "Number",
+        "required": false,
+        "description": "The maximum number of orders that can be returned. The supported maximum number is 100."
+      },
+      {
+        "name": "update_after",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned orders to those updated after or on the specified date, given in ISO 8601 date format. Either UpdatedAfter or CreatedAfter is mandatory."
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/orders/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"sort_by\", \"updated_at\");\nrequest.addApiParameter(\"created_before\", \"2018-02-10T16:00:00+08:00\");\nrequest.addApiParameter(\"created_after\", \"2017-02-10T09:00:00+08:00\");\nrequest.addApiParameter(\"status\", \"shipped\");\nrequest.addApiParameter(\"update_before\", \"2018-02-10T16:00:00+08:00\");\nrequest.addApiParameter(\"sort_direction\", \"DESC\");\nrequest.addApiParameter(\"offset\", \"0\");\nrequest.addApiParameter(\"limit\", \"10\");\nrequest.addApiParameter(\"update_after\", \"2017-02-10T09:00:00+08:00\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/orders/get','GET');\n$request->addApiParam('sort_by','updated_at');\n$request->addApiParam('created_before','2018-02-10T16:00:00+08:00');\n$request->addApiParam('created_after','2017-02-10T09:00:00+08:00');\n$request->addApiParam('status','shipped');\n$request->addApiParam('update_before','2018-02-10T16:00:00+08:00');\n$request->addApiParam('sort_direction','DESC');\n$request->addApiParam('offset','0');\n$request->addApiParam('limit','10');\n$request->addApiParam('update_after','2017-02-10T09:00:00+08:00');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/orders/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"sort_by\", \"updated_at\");\nrequest.AddApiParameter(\"created_before\", \"2018-02-10T16:00:00+08:00\");\nrequest.AddApiParameter(\"created_after\", \"2017-02-10T09:00:00+08:00\");\nrequest.AddApiParameter(\"status\", \"shipped\");\nrequest.AddApiParameter(\"update_before\", \"2018-02-10T16:00:00+08:00\");\nrequest.AddApiParameter(\"sort_direction\", \"DESC\");\nrequest.AddApiParameter(\"offset\", \"0\");\nrequest.AddApiParameter(\"limit\", \"10\");\nrequest.AddApiParameter(\"update_after\", \"2017-02-10T09:00:00+08:00\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/orders/get','GET')\nrequest.add_api_parameter(\"sort_by\", \"updated_at\")\nrequest.add_api_parameter(\"created_before\", \"2018-02-10T16:00:00+08:00\")\nrequest.add_api_parameter(\"created_after\", \"2017-02-10T09:00:00+08:00\")\nrequest.add_api_parameter(\"status\", \"shipped\")\nrequest.add_api_parameter(\"update_before\", \"2018-02-10T16:00:00+08:00\")\nrequest.add_api_parameter(\"sort_direction\", \"DESC\")\nrequest.add_api_parameter(\"offset\", \"0\")\nrequest.add_api_parameter(\"limit\", \"10\")\nrequest.add_api_parameter(\"update_after\", \"2017-02-10T09:00:00+08:00\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/orders/get','GET')\nrequest.add_api_param('sort_by', 'updated_at')\nrequest.add_api_param('created_before', '2018-02-10T16:00:00+08:00')\nrequest.add_api_param('created_after', '2017-02-10T09:00:00+08:00')\nrequest.add_api_param('status', 'shipped')\nrequest.add_api_param('update_before', '2018-02-10T16:00:00+08:00')\nrequest.add_api_param('sort_direction', 'DESC')\nrequest.add_api_param('offset', '0')\nrequest.add_api_param('limit', '10')\nrequest.add_api_param('update_after', '2017-02-10T09:00:00+08:00')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/orders/get?timestamp=1750231514936&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&sort_by=updated_at&created_before=2018-02-10T16%3A00%3A00%2B08%3A00&created_after=2017-02-10T09%3A00%3A00%2B08%3A00&status=shipped&update_before=2018-02-10T16%3A00%3A00%2B08%3A00&sort_direction=DESC&offset=0&limit=10&update_after=2017-02-10T09%3A00%3A00%2B08%3A00'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"count\": \"10\",\n    \"countTotal\": \"500\",\n    \"orders\": [\n      {\n        \"voucher_platform\": \"0.00\",\n        \"voucher\": \"0.00\",\n        \"warehouse_code\": \"dropshipping\",\n        \"order_number\": \"491253082180001\",\n        \"voucher_seller\": \"0.00\",\n        \"created_at\": \"2018-02-09T22:44:30+08:00\",\n        \"voucher_code\": \"1234\",\n        \"gift_option\": \"false\",\n        \"shipping_fee_discount_platform\": \"0.00\",\n        \"customer_last_name\": \"last_name\",\n        \"promised_shipping_times\": \"shipping_time\",\n        \"updated_at\": \"2018-02-09T22:44:30+08:00\",\n        \"price\": \"106.00\",\n        \"national_registration_number\": \"1\",\n        \"shipping_fee_original\": \"0.00\",\n        \"payment_method\": \"COD\",\n        \"address_updated_at\": \"null\",\n        \"buyer_note\": \"red color\",\n        \"customer_first_name\": \"Ha Hung\",\n        \"shipping_fee_discount_seller\": \"0.00\",\n        \"shipping_fee\": \"0.54\",\n        \"branch_number\": \"2222\",\n        \"tax_code\": \"562562\",\n        \"items_count\": \"2\",\n        \"delivery_info\": \"delivery\",\n        \"statuses\": [],\n        \"address_billing\": {\n          \"country\": \"Singapore\",\n          \"address3\": \"address3\",\n          \"address2\": \"address2\",\n          \"city\": \"Singapore-Singapore-500001\",\n          \"address1\": \"1 CHANGI VILLAGE ROAD, 11\",\n          \"phone2\": \"61****7\",\n          \"last_name\": \"last_name\",\n          \"addressDsitrict\": \"addressDsitrict\",\n          \"phone\": \"61****7\",\n          \"post_code\": \"500001\",\n          \"address5\": \"address5\",\n          \"address4\": \"address4\",\n          \"first_name\": \"Ha Hung\"\n        },\n        \"extra_attributes\": \"null\",\n        \"order_id\": \"491253082180001\",\n        \"remarks\": \"remarks\",\n        \"gift_message\": \"1\",\n        \"address_shipping\": {\n          \"country\": \"Singapore\",\n          \"address3\": \"address3\",\n          \"address2\": \"address2\",\n          \"city\": \"Singapore-Singapore-500001\",\n          \"address1\": \"1 CHANGI VILLAGE ROAD, 11\",\n          \"phone2\": \"4***456\",\n          \"last_name\": \"last_name\",\n          \"addressDsitrict\": \"addressDsitrict\",\n          \"phone\": \"6****67\",\n          \"post_code\": \"500001\",\n          \"address5\": \"address5\",\n          \"address4\": \"address4\",\n          \"first_name\": \"Ha Hung\"\n        }\n      }\n    ]\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "14",
+      "message": "E014: \"%s\" Invalid Offset",
+      "description": "The value for the offset parameter is not valid."
+    },
+    {
+      "code": "17",
+      "message": "E017: \"%s\" Invalid Date Format",
+      "description": "The date format is not valid."
+    },
+    {
+      "code": "19",
+      "message": "E019: \"%s\" Invalid Limit",
+      "description": "The value for the limit parameter is not valid."
+    },
+    {
+      "code": "36",
+      "message": "E036: Invalid status filter",
+      "description": "The specified status filter is not valid."
+    },
+    {
+      "code": "74",
+      "message": "E074: Invalid sort direction.",
+      "description": "The specified sort direction is not valid."
+    },
+    {
+      "code": "75",
+      "message": "E075: Invalid sort filter.",
+      "description": "The specified sort filter is not valid."
+    },
+    {
+      "code": "SellerNotVerified",
+      "message": "Seller not verified,please check seller status",
+      "description": "The seller's store opening process has not been completed, please log in to the Seller Center, check the store information that needs to be improved on the home page and submit it for review."
+    },
+    {
+      "code": "SellerNotVerified",
+      "message": "Seller not verified,please check seller status",
+      "description": "The seller's store opening process has not been completed, please log in to the Seller Center, check the store information that needs to be improved on the home page and submit it for review."
+    },
+    {
+      "code": "6",
+      "message": "Invalid status filter",
+      "description": "The status field value is incorrect and only these enumerations are currently supported:unpaid, pending, packed, canceled, ready_to_ship, delivered, returned, shipped , failed, topack,toship , lost, lost_by_3pl, damaged_by_3pl, failed_delivery, shipped_back, shipped_back_success, shipped_back_failed, package_scrapped."
+    },
+    {
+      "code": "17",
+      "message": "Invalid Date Format",
+      "description": "The time format used in the request is incorrect, please make sure your time format meets this format requirement: YYYY-MM-DDTHH:mm:ss±HH:MM."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "platform": "shopee",
+  "module": "top_picks",
+  "endpoint_name": "get_top_picks_list",
+  "version": "v2",
+  "summary": "OpenAPI get_follow_prize_list",
+  "description": "OpenAPI get_follow_prize_list",
+  "path": "/api/v2/follow_prize/get_follow_prize_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "ce13698485624ddb953e954e17b51229",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "collection_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The top picks list in this shop."
+      },
+      {
+        "name": "is_activated",
+        "type": "boolean",
+        "sample": "false",
+        "description": "whether collection is activated."
+      },
+      {
+        "name": "item_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The items of top picks"
+      },
+      {
+        "name": "item_name",
+        "type": "string",
+        "sample": "test product one",
+        "description": "The name of item."
+      },
+      {
+        "name": "item_id",
+        "type": "int",
+        "sample": "1676502",
+        "description": "The id of item."
+      },
+      {
+        "name": "current_price",
+        "type": "float",
+        "sample": "11.0",
+        "description": "The price before tax of item."
+      },
+      {
+        "name": "inflated_price_of_current_price",
+        "type": "float",
+        "sample": "10.0",
+        "description": "The price after tax of item."
+      },
+      {
+        "name": "sales",
+        "type": "int",
+        "sample": "11",
+        "description": "The sales of item."
+      },
+      {
+        "name": "top_picks_id",
+        "type": "int",
+        "sample": "365",
+        "description": "collection id."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "TEST",
+        "description": "The title of top picks."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"request_id\": \"ce13698485624ddb953e954e17b51229\",\n    \"error\": \"\",\n    \"message\": \"\",\n    \"response\": {\n        \"collection_list\": [{\n            \"is_activated\": false,\n            \"item_list\": [{\n                \"item_name\": \"tools Sep 28 2020 16:57:068\",\n                \"item_id\": 3400134771,\n                \"current_price\": \"2000.00\",\n                \"inflated_price_of_current_price\": \"2100.00\",\n                \"sales\": 0\n            }],\n            \"top_picks_id\": 62,\n            \"name\": \"test1234\"\n        }]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "top_pick.exceed_max_top_pick_count",
+      "message": "The created top picks can not more than {num}."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "top_pick.top_pick_item_id_duplication",
+      "message": "The top-picks has duplicative item."
+    },
+    {
+      "code": "top_pick.top_pick_name_duplication",
+      "message": "The Top-picks name is exist, please change to other name."
+    },
+    {
+      "code": "common.error_not_found",
+      "message": "The information you queried is not found."
+    },
+    {
+      "code": "common.error_permission",
+      "message": "You don't have permission for the operation"
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/follow_prize/get_follow_prize_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/follow_prize/get_follow_prize_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/follow_prize/get_follow_prize_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/follow_prize/get_follow_prize_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/follow_prize/get_follow_prize_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/follow_prize/get_follow_prize_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/follow_prize/get_follow_prize_list"
+      }
+    ]
+  }
+}

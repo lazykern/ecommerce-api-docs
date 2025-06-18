@@ -1,0 +1,190 @@
+{
+  "platform": "shopee",
+  "module": "media_space",
+  "endpoint_name": "complete_video_upload",
+  "version": "v2",
+  "summary": "Upload video file by part using the upload_id in initiate_video_upload",
+  "description": "Upload video file by part using the upload_id in initiate_video_upload. The request Content-Type of this API should be of multipart/form-data",
+  "path": "/api/v2/media_space/upload_video_part",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "video_upload_id",
+        "type": "string",
+        "required": true,
+        "description": "The ID of this upload session, returned in init_video_upload.",
+        "sample": "sg_90ce045e-fd92-4f0b-97a4-eda40546cd9f_000000"
+      },
+      {
+        "name": "part_seq_list",
+        "type": "int[]",
+        "required": true,
+        "description": "All uploaded sequence number.",
+        "sample": "[0, 1, 2]"
+      },
+      {
+        "name": "report_data",
+        "type": "object",
+        "required": true,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "upload_cost",
+        "type": "int",
+        "required": true,
+        "description": "Time used for uploading the video file via upload_video_part api, in milliseconds. For video upload performance tracking purpose.",
+        "sample": "11832"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n  \"video_upload_id\": \"sg_90ce045e-fd92-4f0b-97a4-eda40546cd9f_000000\",\n  \"part_seq_list\": [0, 1, 2, 3],\n  \"report_data\": {\n    \"upload_cost\": 11832\n  }\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "3bb08579fffbfc13ed9d23cda8bbb46d",
+        "description": "The identifier of this upload session, used in following video upload request and item creating and/or updating"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning message."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"message\": \"\",\n  \"error\": \"\",\n  \"warning\": \"\",\n  \"request_id\": \"3bb08579fffbfc13ed9d23cda8bbb46d\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_server",
+      "message": "Unknown error."
+    },
+    {
+      "code": "error_server",
+      "message": "Unknown error."
+    },
+    {
+      "code": "error_server",
+      "message": "Unknown internal error."
+    },
+    {
+      "code": "error_server",
+      "message": "Unknown internal error."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid parameter."
+    },
+    {
+      "code": "error_invalid_upload_id",
+      "message": "Invalid upload_id."
+    },
+    {
+      "code": "error_already_completed",
+      "message": "Upload already completed."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/media_space/upload_video_part"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/media_space/upload_video_part"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/media_space/upload_video_part"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/media_space/upload_video_part"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/media_space/upload_video_part"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/media_space/upload_video_part"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/media_space/upload_video_part"
+      }
+    ]
+  }
+}

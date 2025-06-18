@@ -1,0 +1,197 @@
+{
+  "platform": "lazada",
+  "module": "digital",
+  "endpoint_name": "InuranceNotifyLapse",
+  "version": null,
+  "summary": "Insurance company push the callback notification to partners once the policy has been cancelled successfully",
+  "description": "Insurance company push the callback notification to partners once the policy has been cancelled successfully",
+  "path": "/digital/insurance/notificationlapse",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "orderNo",
+        "type": "String",
+        "required": true,
+        "description": "1234"
+      },
+      {
+        "name": "thirdOrderNo",
+        "type": "String",
+        "required": true,
+        "description": "12344"
+      },
+      {
+        "name": "policyNo",
+        "type": "String",
+        "required": true,
+        "description": "1234"
+      },
+      {
+        "name": "lapseTime",
+        "type": "String",
+        "required": true,
+        "description": "1234"
+      },
+      {
+        "name": "lapseType",
+        "type": "String",
+        "required": true,
+        "description": "enum： expiration: policy expired. end: the customer has used up the sum insured amount, policy end."
+      },
+      {
+        "name": "message",
+        "type": "String",
+        "required": false,
+        "description": "expire"
+      },
+      {
+        "name": "transactionId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "extendInfo",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/digital/insurance/notificationlapse\");\nrequest.addApiParameter(\"orderNo\", \"1234\");\nrequest.addApiParameter(\"thirdOrderNo\", \"1234\");\nrequest.addApiParameter(\"policyNo\", \"1234\");\nrequest.addApiParameter(\"lapseTime\", \"1234\");\nrequest.addApiParameter(\"lapseType\", \"enum\\uFF1A expiration: policy expired. end: the customer has used up the sum insured amount, policy end.\");\nrequest.addApiParameter(\"message\", \"expire\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/digital/insurance/notificationlapse');\n$request->addApiParam('orderNo','1234');\n$request->addApiParam('thirdOrderNo','1234');\n$request->addApiParam('policyNo','1234');\n$request->addApiParam('lapseTime','1234');\n$request->addApiParam('lapseType','enum\\uFF1A expiration: policy expired. end: the customer has used up the sum insured amount, policy end.');\n$request->addApiParam('message','expire');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/digital/insurance/notificationlapse\");\nrequest.AddApiParameter(\"orderNo\", \"1234\");\nrequest.AddApiParameter(\"thirdOrderNo\", \"1234\");\nrequest.AddApiParameter(\"policyNo\", \"1234\");\nrequest.AddApiParameter(\"lapseTime\", \"1234\");\nrequest.AddApiParameter(\"lapseType\", \"enum\\uFF1A expiration: policy expired. end: the customer has used up the sum insured amount, policy end.\");\nrequest.AddApiParameter(\"message\", \"expire\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/digital/insurance/notificationlapse')\nrequest.add_api_parameter(\"orderNo\", \"1234\")\nrequest.add_api_parameter(\"thirdOrderNo\", \"1234\")\nrequest.add_api_parameter(\"policyNo\", \"1234\")\nrequest.add_api_parameter(\"lapseTime\", \"1234\")\nrequest.add_api_parameter(\"lapseType\", \"enum\\uFF1A expiration: policy expired. end: the customer has used up the sum insured amount, policy end.\")\nrequest.add_api_parameter(\"message\", \"expire\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/digital/insurance/notificationlapse')\nrequest.add_api_param('orderNo', '1234')\nrequest.add_api_param('thirdOrderNo', '1234')\nrequest.add_api_param('policyNo', '1234')\nrequest.add_api_param('lapseTime', '1234')\nrequest.add_api_param('lapseType', 'enum\\uFF1A expiration: policy expired. end: the customer has used up the sum insured amount, policy end.')\nrequest.add_api_param('message', 'expire')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/digital/insurance/notificationlapse' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"orderNo\":\"1234\",\"thirdOrderNo\":\"1234\",\"lapseTime\":\"1234\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"lapseType\":\"enum%EF%BC%9A+expiration%3A+policy+expired.+end%3A+the+customer+has+used+up+the+sum+insured+amount%2C+policy+end.\",\"policyNo\":\"1234\",\"message\":\"expire\",\"timestamp\":\"1750231484313\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "transactionId",
+        "type": "String",
+        "description": "LZD orderLineId"
+      },
+      {
+        "name": "extendInfo",
+        "type": "String",
+        "description": "extendInfo"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "result code"
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "description": "result message"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"errorCode\": \"result code\",\n  \"extendInfo\": \"{\\\"xxx\\\":\\\"xxx\\\"}\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"transactionId\": \"123\\t \",\n  \"errorMsg\": \"success\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

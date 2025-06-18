@@ -1,0 +1,461 @@
+{
+  "platform": "shopee",
+  "module": "logistics",
+  "endpoint_name": "batch_ship_order",
+  "version": "v2",
+  "summary": "For CB orders that fulfilled by 3PF, support 3PF Warehouse Vendors to update the tpf_tracking_status when 3PF warehouse receive the order and complete the outbound of the package",
+  "description": "For CB orders that fulfilled by 3PF, support 3PF Warehouse Vendors to update the tpf_tracking_status when 3PF warehouse receive the order and complete the outbound of the package. CB orders that fulfilled by 3PF： v2.shop.get_shop_info - shop_fulfillment_flag in {Pure - 3PF Shop,PFF - 3PF Shop,LFF Hybrid Shop} And v2.order.get_order_detail - fulfillment_flag = fulfilled_by_local_seller",
+  "path": "/api/v2/logistics/batch_update_tpf_warehouse_tracking_status",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "order_list",
+        "type": "object[]",
+        "required": true,
+        "description": "The list of order.",
+        "sample": ""
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for an order. Limit 150.",
+        "sample": "201212DCXHJUIKJ"
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "required": false,
+        "description": "Shopee's unique identifier for the package under an order. You should't fill the field with empty string when there is't a package number.",
+        "sample": ""
+      },
+      {
+        "name": "pickup",
+        "type": "object",
+        "required": false,
+        "description": "Required parameter ONLY if GetParameterForInit returns \"pickup\" or if GetLogisticsInfo returns \"pickup\" under \"info_needed\" for the same order. Developer should still include \"pickup\" field in the call even if \"pickup\" has empty value.",
+        "sample": ""
+      },
+      {
+        "name": "address_id",
+        "type": "int",
+        "required": false,
+        "description": "The identity of address. Retrieved from shopee.logistics.GetAddress.",
+        "sample": ""
+      },
+      {
+        "name": "pickup_time_id",
+        "type": "string",
+        "required": false,
+        "description": "The pickup time id. Retrieved from shopee.logistics.GetTimeSlot.",
+        "sample": ""
+      },
+      {
+        "name": "tracking_number",
+        "type": "string",
+        "required": false,
+        "description": "Need input this field when \"tracking_number\" is returned from \"info_need\". Please note that this tracking number is assigned by third-party shipping carrier for item shipment.",
+        "sample": ""
+      },
+      {
+        "name": "dropoff",
+        "type": "object",
+        "required": false,
+        "description": "Required parameter ONLY if GetParameterForInit returns \"dropoff\" or if GetLogisticsInfo returns \"dropoff\" under \"info_needed\" for the same order. Developer should still include \"dropoff\" field in the call even if \"dropoff\" has empty value. For logistic_id 80003 and 80004, both Regular and JOB shipping methods are supported. If you choose Regular shipping method, please use \"tracking_no\" to call Init API. If you choose JOB shipping method, please use \"sender_real_name\" to call Init API. Note that only one of \"tracking_no\" and \"sender_real_name\" can be selected.",
+        "sample": ""
+      },
+      {
+        "name": "branch_id",
+        "type": "int",
+        "required": false,
+        "description": "The identity of branch. Retrieved from shopee.logistics.GetBranch branch.",
+        "sample": "0"
+      },
+      {
+        "name": "sender_real_name",
+        "type": "string",
+        "required": false,
+        "description": "The real name of sender.",
+        "sample": ""
+      },
+      {
+        "name": "tracking_number",
+        "type": "string",
+        "required": false,
+        "description": "Need input this field when \"tracking_number\" is returned from \"info_need\". Please note that this tracking number is assigned by third-party shipping carrier for item shipment.",
+        "sample": ""
+      },
+      {
+        "name": "non_integrated",
+        "type": "object",
+        "required": false,
+        "description": "Optional parameter when GetParameterForInit returns \"non-integrated\" or GetLogisticsInfo returns \"non-integrated\" under \"info_needed\".",
+        "sample": ""
+      },
+      {
+        "name": "tracking_number",
+        "type": "string",
+        "required": false,
+        "description": "Optional parameter for non-integrated channel order. The tracking number assigned by the shipping carrier for item shipment.",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"order_list\": [\n        {\n            \"order_sn\": \"201212DCXHJUIKJ\"\n        },\n        {\n            \"order_sn\": \"201212CXHQWEIKD\"\n        }\n    ],\n    \"dropoff\": {\n        \"tracking_no\": \"\",\n        \"branch_id\": 0,\n        \"sender_real_name\": \"\"\n    }\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "3dad66f43b8447d282ae6da36626c6b7",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "object[]",
+        "sample": "",
+        "description": "Indicate warning message you should take care."
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "sample": "",
+        "description": "Shopee's unique identifier for the package under an order. You should't fill the field with empty string when there is't a package number."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "result_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "sample": "",
+        "description": "Shopee's unique identifier for the package under an order."
+      },
+      {
+        "name": "fail_error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if one element hit error."
+      },
+      {
+        "name": "fail_message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if one element hit error."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"3dad66f43b8447d282ae6da36626c6b7\",\n    \"response\": {\n        \"result_list\": [\n            {\n                \"order_sn\": \"201212DCXHJUIKJ\"\n            },\n            {\n                \"order_sn\": \"201212CXHQWEIKD\"\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "logistics.error_param",
+      "message": "The order is being allocated, please wait until the allocate is completed."
+    },
+    {
+      "code": "common.batch_api_all_failed",
+      "message": "Failed, please check result_list for more details."
+    },
+    {
+      "code": "logistics.error_channel_exist",
+      "message": "Fail to find the fulfillment channel of this order."
+    },
+    {
+      "code": "logistics.default_warehouse_not_set",
+      "message": "You have not set warehouse."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_server",
+      "message": "System error. Please try again later."
+    },
+    {
+      "code": "logistics.lack_of_invoice_data",
+      "message": "Pending invoice data, can not arrange shipment."
+    },
+    {
+      "code": "logistics.order_prescription_unchecked",
+      "message": "This order hasn't passed prescription check"
+    },
+    {
+      "code": "logistics.package_not_exist",
+      "message": "The package is not exist."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Buyer's delivery address is not serviceable. Please contact customer service."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Buyer's delivery address is not serviceable. Please contact customer service."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Channel does not support dropoff. Please select the pickup option and try again."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Please input a unique tracking number."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Please input a unique tracking number."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Seller Info Error. Please check and input your invoice info."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Tracking Number Error. Please input a valid tracking number."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Tracking Number Format Error. Please input a valid tracking number."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Tracking Number Error. Please input a valid tracking number."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Please input a valid seller's name."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Invalid pickup time. Please select another pickup time."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Pickup address is not serviceable. Please select another address."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Pickup address is not serviceable. Please select another address."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Seller Info Error. Please check and input your tax number."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Seller Address Error. Please input the geo-location of your address."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Selected pickup timeslot is unavailable. Please reselect."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Channel does not support pickup. Please select the dropoff option and try again."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Selected pickup timeslot is unavailable. Please reselect."
+    },
+    {
+      "code": "logistics.ship_order_invalid_job_param",
+      "message": "Parameter sender_real_name or tracking_number is required."
+    },
+    {
+      "code": "error_param",
+      "message": "Parameter sender_real_name is invalid."
+    },
+    {
+      "code": "logistics.ship_order_long_sender_real_name",
+      "message": "Parameter sender_real_name can not be longer than 64."
+    },
+    {
+      "code": "logistics.ship_order_long_tracking_number",
+      "message": "Parameter tracking_number can not be longer than 64."
+    },
+    {
+      "code": "logistics.ship_order_need_address_pickup_time",
+      "message": "Parameter address_id and pickup_time_id are required."
+    },
+    {
+      "code": "logistics.ship_order_need_branch_id",
+      "message": "Parameter branch_id is required."
+    },
+    {
+      "code": "logistics.ship_order_need_pacakge_number",
+      "message": "Please request with package_number for this split order."
+    },
+    {
+      "code": "logistics.ship_order_need_sender_real_name",
+      "message": "Parameter sender_real_name can not be null."
+    },
+    {
+      "code": "logistics.ship_order_need_tracking_number",
+      "message": "Parameter tracking_number can not be null."
+    },
+    {
+      "code": "logistics.ship_order_not_need_pacakge_number",
+      "message": "Please don’t request with package_number for this unsplit order."
+    },
+    {
+      "code": "logistics.ship_order_not_ready_to_ship",
+      "message": "The order is not ready to ship."
+    },
+    {
+      "code": "logistics.ship_order_only_support_one_type",
+      "message": "Please select just one way to ship order: pickup or dropoff or non_integrated."
+    },
+    {
+      "code": "logistics.ship_order_pff_init",
+      "message": "You can not ship warehouse order."
+    },
+    {
+      "code": "logistics.ship_order_pickup_time_invalid",
+      "message": "Invalid pickup time id. Please check the pick up time id."
+    },
+    {
+      "code": "logistics.ship_order_unsupport_dropoff",
+      "message": "This order does not support ship with dropoff."
+    },
+    {
+      "code": "logistics.ship_order_unsupport_non_integrated",
+      "message": "This order does not support ship with non_integrated."
+    },
+    {
+      "code": "logistics.ship_order_unsupport_pickup",
+      "message": "This order does not support ship with pickup."
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Pickup address is not serviceable. Please select another address."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "logistics.error_sender_address",
+      "message": "Pickup address not valid. Please add/tag a new pickup_address in Seller Center to continue shipping"
+    },
+    {
+      "code": "error_status",
+      "message": "Buyer hasn’t completed pre-authorization yet."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+      }
+    ]
+  }
+}

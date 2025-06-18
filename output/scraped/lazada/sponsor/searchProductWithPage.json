@@ -1,0 +1,250 @@
+{
+  "platform": "lazada",
+  "module": "sponsor",
+  "endpoint_name": "searchProductWithPage",
+  "version": null,
+  "summary": "Search product",
+  "description": "Search product.",
+  "path": "/sponsor/solutions/product/searchProductWithPage",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "brandName",
+        "type": "String",
+        "required": false,
+        "description": "Prodct brand name."
+      },
+      {
+        "name": "campaignType",
+        "type": "Number",
+        "required": true,
+        "description": "Unlock different ways to bids, select products, and keywords with campaign types."
+      },
+      {
+        "name": "pageSize",
+        "type": "Number",
+        "required": true,
+        "description": "Page size."
+      },
+      {
+        "name": "bizCode",
+        "type": "String",
+        "required": true,
+        "description": "Decided to choose which advertisement solution.SD:sponsoredSearch."
+      },
+      {
+        "name": "placementList",
+        "type": "Number[]",
+        "required": true,
+        "description": "Placements determine where shoppers will see your promoted products.3:Search Result Page;4:Just For You Page"
+      },
+      {
+        "name": "productName",
+        "type": "String",
+        "required": false,
+        "description": "Product name to fuzzy search."
+      },
+      {
+        "name": "campaignObjectLive",
+        "type": "Number",
+        "required": true,
+        "description": "Your campaign objective helps determine your bidding strategy - Traffic objective helps you to increase the number of clicks to your store, while sales objective helps to increase your store’s sales.1:Traffic;2:Sales."
+      },
+      {
+        "name": "eligible",
+        "type": "Number",
+        "required": true,
+        "description": "Only search product which is eligible|ineligible.1:eligible;0:ineligible."
+      },
+      {
+        "name": "pageNo",
+        "type": "Number",
+        "required": true,
+        "description": "Page number."
+      },
+      {
+        "name": "sellerSku",
+        "type": "String",
+        "required": false,
+        "description": "Product sellerSku."
+      },
+      {
+        "name": "maxCpc",
+        "type": "String",
+        "required": true,
+        "description": "Max bid determines the highest amount that you're willing to pay for a click on your promoted product.-1 means no limit."
+      },
+      {
+        "name": "categoryId",
+        "type": "Number",
+        "required": false,
+        "description": "Input category id to exact search."
+      },
+      {
+        "name": "itemIdBlackList",
+        "type": "Number[]",
+        "required": false,
+        "description": "Input item id which you do not want put into result."
+      },
+      {
+        "name": "result",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "analyseTraceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "totalCount",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/sponsor/solutions/product/searchProductWithPage\");\nrequest.addApiParameter(\"brandName\", \"adidas\");\nrequest.addApiParameter(\"campaignType\", \"1\");\nrequest.addApiParameter(\"pageSize\", \"20\");\nrequest.addApiParameter(\"bizCode\", \"sponsoredSearch\");\nrequest.addApiParameter(\"placementList\", \"[3,4]\");\nrequest.addApiParameter(\"productName\", \"star\");\nrequest.addApiParameter(\"campaignObjectLive\", \"2\");\nrequest.addApiParameter(\"eligible\", \"1\");\nrequest.addApiParameter(\"pageNo\", \"1\");\nrequest.addApiParameter(\"sellerSku\", \"sku1\");\nrequest.addApiParameter(\"maxCpc\", \"-1\");\nrequest.addApiParameter(\"categoryId\", \"7939\");\nrequest.addApiParameter(\"itemIdBlackList\", \"[321]\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/sponsor/solutions/product/searchProductWithPage');\n$request->addApiParam('brandName','adidas');\n$request->addApiParam('campaignType','1');\n$request->addApiParam('pageSize','20');\n$request->addApiParam('bizCode','sponsoredSearch');\n$request->addApiParam('placementList','[3,4]');\n$request->addApiParam('productName','star');\n$request->addApiParam('campaignObjectLive','2');\n$request->addApiParam('eligible','1');\n$request->addApiParam('pageNo','1');\n$request->addApiParam('sellerSku','sku1');\n$request->addApiParam('maxCpc','-1');\n$request->addApiParam('categoryId','7939');\n$request->addApiParam('itemIdBlackList','[321]');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/sponsor/solutions/product/searchProductWithPage\");\nrequest.AddApiParameter(\"brandName\", \"adidas\");\nrequest.AddApiParameter(\"campaignType\", \"1\");\nrequest.AddApiParameter(\"pageSize\", \"20\");\nrequest.AddApiParameter(\"bizCode\", \"sponsoredSearch\");\nrequest.AddApiParameter(\"placementList\", \"[3,4]\");\nrequest.AddApiParameter(\"productName\", \"star\");\nrequest.AddApiParameter(\"campaignObjectLive\", \"2\");\nrequest.AddApiParameter(\"eligible\", \"1\");\nrequest.AddApiParameter(\"pageNo\", \"1\");\nrequest.AddApiParameter(\"sellerSku\", \"sku1\");\nrequest.AddApiParameter(\"maxCpc\", \"-1\");\nrequest.AddApiParameter(\"categoryId\", \"7939\");\nrequest.AddApiParameter(\"itemIdBlackList\", \"[321]\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/sponsor/solutions/product/searchProductWithPage')\nrequest.add_api_parameter(\"brandName\", \"adidas\")\nrequest.add_api_parameter(\"campaignType\", \"1\")\nrequest.add_api_parameter(\"pageSize\", \"20\")\nrequest.add_api_parameter(\"bizCode\", \"sponsoredSearch\")\nrequest.add_api_parameter(\"placementList\", \"[3,4]\")\nrequest.add_api_parameter(\"productName\", \"star\")\nrequest.add_api_parameter(\"campaignObjectLive\", \"2\")\nrequest.add_api_parameter(\"eligible\", \"1\")\nrequest.add_api_parameter(\"pageNo\", \"1\")\nrequest.add_api_parameter(\"sellerSku\", \"sku1\")\nrequest.add_api_parameter(\"maxCpc\", \"-1\")\nrequest.add_api_parameter(\"categoryId\", \"7939\")\nrequest.add_api_parameter(\"itemIdBlackList\", \"[321]\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/sponsor/solutions/product/searchProductWithPage')\nrequest.add_api_param('brandName', 'adidas')\nrequest.add_api_param('campaignType', '1')\nrequest.add_api_param('pageSize', '20')\nrequest.add_api_param('bizCode', 'sponsoredSearch')\nrequest.add_api_param('placementList', '[3,4]')\nrequest.add_api_param('productName', 'star')\nrequest.add_api_param('campaignObjectLive', '2')\nrequest.add_api_param('eligible', '1')\nrequest.add_api_param('pageNo', '1')\nrequest.add_api_param('sellerSku', 'sku1')\nrequest.add_api_param('maxCpc', '-1')\nrequest.add_api_param('categoryId', '7939')\nrequest.add_api_param('itemIdBlackList', '[321]')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/sponsor/solutions/product/searchProductWithPage' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"brandName\":\"adidas\",\"campaignType\":\"1\",\"bizCode\":\"sponsoredSearch\",\"placementList\":\"%5B3%2C4%5D\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"20\",\"productName\":\"star\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"campaignObjectLive\":\"2\",\"app_key\":\"1234567\",\"eligible\":\"1\",\"pageNo\":\"1\",\"sign_method\":\"sha256\",\"sellerSku\":\"sku1\",\"maxCpc\":\"-1\",\"categoryId\":\"7939\",\"itemIdBlackList\":\"%5B321%5D\",\"timestamp\":\"1750231631310\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object[]",
+        "description": "The detail result, for this api is product detail info."
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "System result for this api call."
+      },
+      {
+        "name": "analyseTraceId",
+        "type": "String",
+        "description": "If the api call failed, you could find us with this."
+      },
+      {
+        "name": "totalCount",
+        "type": "Number",
+        "description": "Total count of product."
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "description": "If the api call failed, this field will show the detail reason."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": [\n    {\n      \"avgSalesVolume\": \"0\",\n      \"isDigitalUtilities\": \"true\",\n      \"inventory\": \"99\",\n      \"productName\": \"xiaotian Test PH\",\n      \"bidPrice\": \"2.34\",\n      \"ipv\": \"1\",\n      \"tags\": [\n        \"SS\",\n        \"SP\"\n      ],\n      \"itemId\": \"200155812\",\n      \"competitionIndex\": \"10\",\n      \"imageUrl\": \"https://ph-live.slatic.net/original/8c82428287b375c4ce3cf6bd00f736aa.jpg\",\n      \"isBan\": \"true\",\n      \"pdpLink\": \"https://www.lazada.com.ph/products/xiaotian-test-ph-i200155812-s250760605.html\",\n      \"contentScore\": \"100\",\n      \"retailPrice\": \"10\",\n      \"categoryId\": \"62188201\",\n      \"cvr\": \"0\"\n    }\n  ],\n  \"code\": \"0\",\n  \"success\": \"true\",\n  \"analyseTraceId\": \"...\",\n  \"totalCount\": \"100\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errorMsg\": \"-\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

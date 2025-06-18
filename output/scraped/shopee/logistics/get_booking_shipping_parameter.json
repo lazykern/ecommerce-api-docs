@@ -1,0 +1,238 @@
+{
+  "platform": "shopee",
+  "module": "logistics",
+  "endpoint_name": "get_booking_shipping_parameter",
+  "version": "v2",
+  "summary": "Only available for Brazil sellers",
+  "description": "Only available for Brazil sellers. This API is only available for orders/parcels which are fulfilled by seller's logistics (or \"Logística do Vendedor\"), or logistic_channel_id: 90021. OFG status can be updated to - Shipped (pickup_done) - Delivered (delivery_done) - Delivery Failed (delivery_failed) (Do not allow passing tracking number &/or tracking URL without status update to logistic_pickup_done)",
+  "path": "/api/v2/logistics/update_tracking_status",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "booking_sn",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for a booking.",
+        "sample": "201214JASXYXY6"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_parameter?access_token=access_token&booking_sn=201214JASXYXY6&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_parameter?access_token=access_token&booking_sn=201214JASXYXY6&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_parameter?access_token=access_token&booking_sn=201214JASXYXY6&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_parameter?access_token=access_token&booking_sn=201214JASXYXY6&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "2880a5a28510424eaa3288fd941fae2c",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": ""
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail information you are querying."
+      },
+      {
+        "name": "info_needed",
+        "type": "object",
+        "sample": "",
+        "description": "The parameters required based on each specific booking to Init. Must use the fields included under info_needed to call Init."
+      },
+      {
+        "name": "dropoff",
+        "type": "string[]",
+        "sample": "[ ]",
+        "description": "Could contain 'branch_id', 'sender_real_name' or 'tracking_no'. If it contains 'branch_id', choose one to Init. If it contains 'sender_real_name' or 'tracking_no', should manually input these values in Init API. If it has empty value, developer should still include \"dropoff\" field in Init API."
+      },
+      {
+        "name": "pickup",
+        "type": "string[]",
+        "sample": "[\"address_id\", \"pickup_time_id\"]",
+        "description": "Could contain 'address_id' and 'pickup_time_id'. Choose one address_id and its corresponding pickup_time_id to Init. If it has empty value, developer should still include \"pickup\" field in Init API.It could contains \"tracking_number\" returned from \"info_need\"for some channels, please also add it when init."
+      },
+      {
+        "name": "pickup",
+        "type": "object",
+        "sample": "",
+        "description": "Logistics information for pickup mode booking."
+      },
+      {
+        "name": "address_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "List of available pickup address info."
+      },
+      {
+        "name": "address_id",
+        "type": "int64",
+        "sample": "234",
+        "description": "The identity of address."
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "sample": "SG",
+        "description": "The region of specify address."
+      },
+      {
+        "name": "state",
+        "type": "string",
+        "sample": "Sarawak",
+        "description": "The state of specify address."
+      },
+      {
+        "name": "city",
+        "type": "string",
+        "sample": "",
+        "description": "The city of specify address."
+      },
+      {
+        "name": "district",
+        "type": "string",
+        "sample": "",
+        "description": "The district of specify address."
+      },
+      {
+        "name": "town",
+        "type": "string",
+        "sample": "haha",
+        "description": "The town of specify address."
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "sample": "",
+        "description": "The address description of specify address."
+      },
+      {
+        "name": "zipcode",
+        "type": "string",
+        "sample": "50003",
+        "description": "The zipcode of specify address."
+      },
+      {
+        "name": "address_flag",
+        "type": "string[]",
+        "sample": "",
+        "description": "The flag of shop address, applicable values: default_address, pickup_address, return_address, current_address(only for multi-warehouse sellers)"
+      },
+      {
+        "name": "time_slot_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "List of pickup_time information corresponding to the address_id. Some logistics channels may not return any date or time for pickup time slots. In such cases, sellers can arrange shipment without selecting any time slot, and Shopee will arrange a suitable timing for these situations."
+      },
+      {
+        "name": "date",
+        "type": "timestamp",
+        "sample": "",
+        "description": "The date of pickup time. In timestamp."
+      },
+      {
+        "name": "time_text",
+        "type": "string",
+        "sample": "",
+        "description": "The text description of pickup time. Only applicable for certain channels."
+      },
+      {
+        "name": "pickup_time_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identity of pickuptime."
+      },
+      {
+        "name": "flags",
+        "type": "string[]",
+        "sample": "[\"recommended\"]",
+        "description": "This field will have the value “recommended” for the time slot that Shopee suggests sellers choose. While it is advisable for sellers to choose the recommended time slot, they can also choose other time slots that do not have the recommended flag."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "return if error getting pickup time, otherwise omitted"
+      },
+      {
+        "name": "msg",
+        "type": "string",
+        "sample": "",
+        "description": "return if error getting pickup time, otherwise omitted"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"request_id\": \"2880a5a28510424eaa3288fd941fae2c\",\n\t\"error\": \"error_auth\",\n\t\"message\": \"Invalid access_token.\",\n\t\"response\": {\n\t\t\"info_needed\": {\n\t\t\t\"dropoff\": [],\n\t\t\t\"pickup\": [\n\t\t\t\t\"address_id\",\n\t\t\t\t\"pickup_time_id\"\n\t\t\t]\n\t\t},\n\t\t\"pickup\": {\n\t\t\t\"address_list\": [\n\t\t\t\t{\n\t\t\t\t\t\"region\": \"SG\",\n\t\t\t\t\t\"state\": \"Sarawak\",\n\t\t\t\t\t\"city\": \"-\",\n\t\t\t\t\t\"district\": \"-\",\n\t\t\t\t\t\"town\": \"haha\",\n\t\t\t\t\t\"address\": \"-\",\n\t\t\t\t\t\"zipcode\": \"50003\",\n\t\t\t\t\t\"address_flag\": [\n\t\t\t\t\t\t\"-\"\n\t\t\t\t\t],\n\t\t\t\t\t\"time_slot_list\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"date\": 1718341672250,\n\t\t\t\t\t\t\t\"time_text\": \"-\",\n\t\t\t\t\t\t\t\"pickup_time_id\": \"-\",\n\t\t\t\t\t\t\t\"error\": \"-\",\n\t\t\t\t\t\t\t\"msg\": \"-\"\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/update_tracking_status"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/update_tracking_status"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/update_tracking_status"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/update_tracking_status"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/update_tracking_status"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/update_tracking_status"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/update_tracking_status"
+      }
+    ]
+  }
+}

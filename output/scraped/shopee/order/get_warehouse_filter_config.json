@@ -1,0 +1,140 @@
+{
+  "platform": "shopee",
+  "module": "order",
+  "endpoint_name": "get_warehouse_filter_config",
+  "version": "v2",
+  "summary": "This endpoint only for PH and BR local seller",
+  "description": "This endpoint only for PH and BR local seller. Seller can download the invoice uploaded before through this endpoint.",
+  "path": "/api/v2/order/download_invoice_doc",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/order/get_warehouse_filter_config?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/order/get_warehouse_filter_config?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/order/get_warehouse_filter_config?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/order/get_warehouse_filter_config?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "warehouse_filters",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "warehouse_name",
+        "type": "string",
+        "sample": "Warehouse1",
+        "description": "The warehouse name filled in when creating the warehouse address."
+      },
+      {
+        "name": "warehouse_type",
+        "type": "int32",
+        "sample": "1",
+        "description": "Type of warehouse. Applicable values: - 1: Local Warehouse - 2: CB Warehouse"
+      },
+      {
+        "name": "product_location_id",
+        "type": "string",
+        "sample": "VN001GGYZ",
+        "description": "Location identifier for stocks. Different location_ids represent that your addresses are in different item stocks."
+      },
+      {
+        "name": "address_id",
+        "type": "int64",
+        "sample": "200000016",
+        "description": "Identity of address."
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "sample": "167/2 Đ. Nguyễn Ảnh Thủ",
+        "description": "Detail address of your warehouse."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"error\": \"\",\n\t\"message\": \"\",\n\t\"request_id\": \"\",\n\t\"response\": {\n\t\t\"warehouse_filters\": [\n\t\t\t{\n\t\t\t\t\"warehouse_name\": \"Warehouse1\",\n\t\t\t\t\"warehouse_type\": 1,\n\t\t\t\t\"product_location_id\": \"VN001GGYZ\",\n\t\t\t\t\"address_id\": 200000016,\n\t\t\t\t\"address\": \"167/2 Đ. Nguyễn Ảnh Thủ\"\n\t\t\t}\n\t\t]\n\t}\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/order/download_invoice_doc"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/order/download_invoice_doc"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/order/download_invoice_doc"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/download_invoice_doc"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/download_invoice_doc"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/download_invoice_doc"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/download_invoice_doc"
+      }
+    ]
+  }
+}

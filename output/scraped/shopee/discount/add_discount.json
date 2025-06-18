@@ -1,0 +1,201 @@
+{
+  "platform": "shopee",
+  "module": "discount",
+  "endpoint_name": "add_discount",
+  "version": "v2",
+  "summary": "To query income report status and provide file link if the income report is ready to be downloaded",
+  "description": "To query income report status and provide file link if the income report is ready to be downloaded.",
+  "path": "/api/v2/payment/get_income_report",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "discount_name",
+        "type": "string",
+        "required": true,
+        "description": "Title of the discount.",
+        "sample": "test-create"
+      },
+      {
+        "name": "start_time",
+        "type": "timestamp",
+        "required": true,
+        "description": "The time when discount activity start.The start time must be 1 hour later than current time.",
+        "sample": "1624864213"
+      },
+      {
+        "name": "end_time",
+        "type": "timestamp",
+        "required": true,
+        "description": "The time when discount activity end.The end time must be 1 hour later than start time,and the discount period must be less than 180 days.",
+        "sample": "1625382613"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"start_time\": 1624864213,\n    \"end_time\": 1625382613,\n    \"discount_name\": \"test-create\"\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "The description of error code"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error code"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "b4db3f9ee101ceb355448dae39dac0be",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "discount_id",
+        "type": "int",
+        "sample": "665123666665499",
+        "description": "Shopee's unique identifier for a discount activity."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"message\": \"\",\n    \"request_id\": \"b4db3f9ee101ceb355448dae39dac0be\",\n    \"response\": {\n        \"discount_id\": 665123666665499\n    },\n    \"error\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "discount.discount_end_time_smaller_than_start_time",
+      "message": "Discount end time should later than start time."
+    },
+    {
+      "code": "discount.discount_period_too_long",
+      "message": "Promotion duration must be within 180 days."
+    },
+    {
+      "code": "discount.discount_period_too_short",
+      "message": "The end time should be later than 1 hour of start time."
+    },
+    {
+      "code": "discount.discount_start_time_smaller_than_now",
+      "message": "Discount start time is less than the current time"
+    },
+    {
+      "code": "discount.discount_start_time_smaller_than_now",
+      "message": "Discount start time is less than the current time."
+    },
+    {
+      "code": "discount.error_holiday_mode",
+      "message": "Cannot add discount as holiday mode is turned on"
+    },
+    {
+      "code": "discount.exceed_max_discount_count",
+      "message": "The upcoming and ongoing discount cannot exceed 1000."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "common.error_param",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_income_report"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_income_report"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_income_report"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_income_report"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_income_report"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_income_report"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_income_report"
+      }
+    ]
+  }
+}

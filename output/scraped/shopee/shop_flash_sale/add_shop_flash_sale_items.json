@@ -1,0 +1,247 @@
+{
+  "platform": "shopee",
+  "module": "shop_flash_sale",
+  "endpoint_name": "add_shop_flash_sale_items",
+  "version": "v2",
+  "summary": "get shop flash sale item criteria",
+  "description": "get shop flash sale item criteria",
+  "path": "/api/v2/shop_flash_sale/get_item_criteria",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "flash_sale_id",
+        "type": "int64",
+        "required": true,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "items",
+        "type": "object[]",
+        "required": true,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "item_id",
+        "type": "int64",
+        "required": true,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "purchase_limit",
+        "type": "int32",
+        "required": true,
+        "description": "min=0, 0 means no limit",
+        "sample": ""
+      },
+      {
+        "name": "models",
+        "type": "object[]",
+        "required": false,
+        "description": "If the item has variation, this param is necessary.",
+        "sample": ""
+      },
+      {
+        "name": "model_id",
+        "type": "int64",
+        "required": true,
+        "description": "If the item has variation, this param is necessary.",
+        "sample": ""
+      },
+      {
+        "name": "input_promo_price",
+        "type": "float",
+        "required": true,
+        "description": "promotion price without tax",
+        "sample": ""
+      },
+      {
+        "name": "stock",
+        "type": "int32",
+        "required": true,
+        "description": "min=1, Campaign Stock, Campaign stock can only be reserved from either Shopee stock or Seller stock",
+        "sample": ""
+      },
+      {
+        "name": "item_input_promo_price",
+        "type": "float",
+        "required": false,
+        "description": "promotion price without tax of the item. If the item has no variation, this param is necessary, otherwise don't use this field",
+        "sample": ""
+      },
+      {
+        "name": "item_stock",
+        "type": "int32",
+        "required": false,
+        "description": "min=1, The campaign stock of the item. If the item has no variation, this param is necessary, otherwise don't use this field",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "failed_items",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "model_id",
+        "type": "int64",
+        "sample": "",
+        "description": "If the item has no variation, this field will be empty"
+      },
+      {
+        "name": "err_code",
+        "type": "int32",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "err_msg",
+        "type": "string",
+        "sample": "",
+        "description": "the reason why the model cannot be added"
+      },
+      {
+        "name": "unqualified_conditions",
+        "type": "object[]",
+        "sample": "",
+        "description": "if model or item doesn't meet a criteria, will show the detail in this field"
+      },
+      {
+        "name": "unqualified_code",
+        "type": "int32",
+        "sample": "",
+        "description": "error code for unqualified item"
+      },
+      {
+        "name": "unqualified_msg",
+        "type": "string",
+        "sample": "",
+        "description": "error message for unqualified item"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"ac629787de7ed827a9f81f736ee15641\",\n    \"response\": {\n        \"failed_items\": [\n            {\n                \"err_code\": 1400101726,\n                \"err_msg\": \"This item cannot be added as there is insufficient stock.\",\n                \"item_id\": 3744623870,\n                \"model_id\": 5414485720\n            },\n            {\n                \"err_code\": 1400101737,\n                \"err_msg\": \"item-model invalid\",\n                \"item_id\": 3744623870,\n                \"model_id\": 23456\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "marketing_error_no_premission",
+      "message": "You don't have permission for the operation"
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something is wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid."
+    },
+    {
+      "code": "shop_flash_sale_exceed_max_item_criteria",
+      "message": "exceed the max number of item limit per promotion"
+    },
+    {
+      "code": "shop_flash_sale_exceed_max_item_limit",
+      "message": "cannot enabled more than 50 items"
+    },
+    {
+      "code": "shop_flash_sale_is_not_enabled_or_upcoming",
+      "message": "this shop flash sale is not enabled or upcoming"
+    },
+    {
+      "code": "shop_flash_sale_not_exist",
+      "message": "shop flash sale not exist"
+    },
+    {
+      "code": "shop_flash_sale_param_error",
+      "message": "The Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "shop_flash_sale_in_holiday_mode",
+      "message": "Shop in holiday mode"
+    },
+    {
+      "code": "shop_flash_sale_shop_inactive",
+      "message": "shop is inactive"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop_flash_sale/get_item_criteria"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop_flash_sale/get_item_criteria"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_flash_sale/get_item_criteria"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_flash_sale/get_item_criteria"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_flash_sale/get_item_criteria"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_flash_sale/get_item_criteria"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_flash_sale/get_item_criteria"
+      }
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "get_ssp_list",
+  "version": "v2",
+  "summary": "Get the kit basic information and kit components",
+  "description": "Get the kit basic information and kit components.",
+  "path": "/api/v2/product/get_kit_item_info",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "page_size",
+        "type": "int32",
+        "required": false,
+        "description": "The size of one page. The limit of page_size is [1,20], and default page_size is 10.",
+        "sample": "4"
+      },
+      {
+        "name": "offset",
+        "type": "string",
+        "required": false,
+        "description": "Specifies the starting entry of data to return in the current call. Default is \"\", if data is more than one page, the offset can be some entry to start next call.",
+        "sample": "\"\""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/product/get_ssp_list?access_token=access_token&page_size=4&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/product/get_ssp_list?access_token=access_token&offset=%22%22&page_size=4&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/product/get_ssp_list?access_token=access_token&offset=%22%22&page_size=4&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/product/get_ssp_list?access_token=access_token&offset=%22%22&page_size=4&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate waring details if hit waring. Empty if no waring happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "page_info",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "has_next_page",
+        "type": "boolean",
+        "sample": "true",
+        "description": ""
+      },
+      {
+        "name": "next_offset",
+        "type": "string",
+        "sample": "\"10\"",
+        "description": ""
+      },
+      {
+        "name": "ssp_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "ssp_info",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "ssp_id",
+        "type": "int64",
+        "sample": "4567890123",
+        "description": "Shopee's unique identifier for Shopee Standard Product."
+      },
+      {
+        "name": "product_name",
+        "type": "string",
+        "sample": "Camiseta Azul",
+        "description": "Name of Shopee Standard Product."
+      },
+      {
+        "name": "gtin",
+        "type": "string",
+        "sample": "78995589784",
+        "description": "GTIN of Shopee Standard Product."
+      },
+      {
+        "name": "oem",
+        "type": "string",
+        "sample": "Y7ITMG8762",
+        "description": "OEM of Shopee Standard Product."
+      },
+      {
+        "name": "available",
+        "type": "boolean",
+        "sample": "true",
+        "description": "Indicate whether the Shopee Standard Product is available to create product (One SSP can only be used to create one product under the shop, so if the SSP has already been used, then available will be false)."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"317a860d2480a8d704c218854e05d100:0400003e77eb0441:030003db6ff77ecd\",\n    \"response\": {\n        \"page_info\": {\n            \"has_next_page\": true,\n            \"next_offset\": \"4\"\n        },\n        \"ssp_list\": [\n            {\n                \"available\": true,\n                \"ssp_info\": {\n                    \"gtin\": \"\",\n                    \"oem\": \"A4H3U68556\",\n                    \"product_name\": \"test ssp 1\",\n                    \"ssp_id\": 1260083200\n                }\n            },\n            {\n                \"available\": true,\n                \"ssp_info\": {\n                    \"gtin\": \"7891515525729\",\n                    \"oem\": \"\",\n                    \"product_name\": \"test ssp 2\",\n                    \"ssp_id\": 1261009920\n                }\n            },\n            {\n                \"available\": true,\n                \"ssp_info\": {\n                    \"gtin\": \"\",\n                    \"oem\": \"HF756393J\",\n                    \"product_name\": \"test ssp 3\",\n                    \"ssp_id\": 1261138944\n                }\n            },\n            {\n                \"available\": true,\n                \"ssp_info\": {\n                    \"gtin\": \"\",\n                    \"oem\": \"H6729JF\",\n                    \"product_name\": \"test ssp 4\",\n                    \"ssp_id\": 1261292544\n                }\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_kit_item_info"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_kit_item_info"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_kit_item_info"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_kit_item_info"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_kit_item_info"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_kit_item_info"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_kit_item_info"
+      }
+    ]
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "platform": "lazada",
+  "module": "sponsor",
+  "endpoint_name": "searchCampaignList",
+  "version": null,
+  "summary": "Search campaign list with bizCode for sellers",
+  "description": "Search campaign list with bizCode for sellers.",
+  "path": "/sponsor/solutions/campaign/searchCampaignList",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "bizCode",
+        "type": "String",
+        "required": true,
+        "description": "Decided to choose which advertisement solution.SD:sponsoredSearch."
+      },
+      {
+        "name": "onlineStatus",
+        "type": "Number",
+        "required": false,
+        "description": "The campaign online status.1:Online;0:Offline;9:deleted."
+      },
+      {
+        "name": "startDate",
+        "type": "String",
+        "required": true,
+        "description": "Campaign start date."
+      },
+      {
+        "name": "endDate",
+        "type": "String",
+        "required": true,
+        "description": "Campaign end date."
+      },
+      {
+        "name": "pageNo",
+        "type": "String",
+        "required": true,
+        "description": "Page number."
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": true,
+        "description": "Page size."
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "totalCount",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "analyseTraceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "result",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/sponsor/solutions/campaign/searchCampaignList\");\nrequest.addApiParameter(\"bizCode\", \"sponsoredSearch\");\nrequest.addApiParameter(\"onlineStatus\", \"1\");\nrequest.addApiParameter(\"startDate\", \"2023-03-01\");\nrequest.addApiParameter(\"endDate\", \"2023-05-01\");\nrequest.addApiParameter(\"pageNo\", \"1\");\nrequest.addApiParameter(\"pageSize\", \"10\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/sponsor/solutions/campaign/searchCampaignList');\n$request->addApiParam('bizCode','sponsoredSearch');\n$request->addApiParam('onlineStatus','1');\n$request->addApiParam('startDate','2023-03-01');\n$request->addApiParam('endDate','2023-05-01');\n$request->addApiParam('pageNo','1');\n$request->addApiParam('pageSize','10');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/sponsor/solutions/campaign/searchCampaignList\");\nrequest.AddApiParameter(\"bizCode\", \"sponsoredSearch\");\nrequest.AddApiParameter(\"onlineStatus\", \"1\");\nrequest.AddApiParameter(\"startDate\", \"2023-03-01\");\nrequest.AddApiParameter(\"endDate\", \"2023-05-01\");\nrequest.AddApiParameter(\"pageNo\", \"1\");\nrequest.AddApiParameter(\"pageSize\", \"10\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/sponsor/solutions/campaign/searchCampaignList')\nrequest.add_api_parameter(\"bizCode\", \"sponsoredSearch\")\nrequest.add_api_parameter(\"onlineStatus\", \"1\")\nrequest.add_api_parameter(\"startDate\", \"2023-03-01\")\nrequest.add_api_parameter(\"endDate\", \"2023-05-01\")\nrequest.add_api_parameter(\"pageNo\", \"1\")\nrequest.add_api_parameter(\"pageSize\", \"10\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/sponsor/solutions/campaign/searchCampaignList')\nrequest.add_api_param('bizCode', 'sponsoredSearch')\nrequest.add_api_param('onlineStatus', '1')\nrequest.add_api_param('startDate', '2023-03-01')\nrequest.add_api_param('endDate', '2023-05-01')\nrequest.add_api_param('pageNo', '1')\nrequest.add_api_param('pageSize', '10')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/sponsor/solutions/campaign/searchCampaignList' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"endDate\":\"2023-05-01\",\"bizCode\":\"sponsoredSearch\",\"pageNo\":\"1\",\"onlineStatus\":\"1\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"10\",\"startDate\":\"2023-03-01\",\"timestamp\":\"1750231618133\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "System result for this api call."
+      },
+      {
+        "name": "totalCount",
+        "type": "Number",
+        "description": "Campaign total count."
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "description": "If the api call failed, this field will show the detail reason."
+      },
+      {
+        "name": "analyseTraceId",
+        "type": "String",
+        "description": "If the api call failed, you could find us with this."
+      },
+      {
+        "name": "result",
+        "type": "Object[]",
+        "description": "The detail campaign list."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": [\n    {\n      \"ctr\": \"4\",\n      \"campaignDailyBudgetStatus\": \"1\",\n      \"endDate\": \"2023-05-01\",\n      \"storeRevenue\": \"199\",\n      \"campaignId\": \"101100024476086\",\n      \"storeOrders\": \"19\",\n      \"impressions\": \"200\",\n      \"storeUnitsSold\": \"9\",\n      \"campaignSwitchStatus\": \"1\",\n      \"adAccountBalanceStatus\": \"1\",\n      \"storeRoi\": \"-\",\n      \"dailyBudget\": \"25\",\n      \"cpc\": \"2\",\n      \"spend\": \"100\",\n      \"campaignScheduleStatus\": \"1\",\n      \"clicks\": \"400\",\n      \"campaignName\": \"myCampaign_20230301\",\n      \"haveActiveAdStatus\": \"1\",\n      \"startDate\": \"2023-03-01\",\n      \"status\": \"1\"\n    }\n  ],\n  \"code\": \"0\",\n  \"success\": \"true\",\n  \"analyseTraceId\": \"...\",\n  \"totalCount\": \"100\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errorMsg\": \"invalid param\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

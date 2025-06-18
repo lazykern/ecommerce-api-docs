@@ -1,0 +1,247 @@
+{
+  "platform": "lazada",
+  "module": "products",
+  "endpoint_name": "GetProducts",
+  "version": null,
+  "summary": "Use this API to get detailed information of the specified products",
+  "description": "Use this API to get detailed information of the specified products.",
+  "path": "/products/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": false,
+        "description": "Returns the products with the status matching this parameter. Possible values are all, live, inactive, deleted, pending, rejected, sold-out. Mandatory."
+      },
+      {
+        "name": "update_before",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned product list to those updated before or on a specified date, given in ISO 8601 date format. Optional"
+      },
+      {
+        "name": "create_before",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned products to those created before or on the specified date, given in ISO 8601 date format. Optional"
+      },
+      {
+        "name": "offset",
+        "type": "String",
+        "required": false,
+        "description": "Deprecated(The number of Items you want to skip before you start counting),It is recommended to use date for scrolling query.The maximum offset is 10000"
+      },
+      {
+        "name": "create_after",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned products to those created after or on the specified date, given in ISO 8601 date format. Optional"
+      },
+      {
+        "name": "update_after",
+        "type": "String",
+        "required": false,
+        "description": "Limits the returned products to those updated after or on the specified date, given in ISO 8601 date format. Optional"
+      },
+      {
+        "name": "limit",
+        "type": "String",
+        "required": false,
+        "description": "The number of Items you would like to fetch from every response,The maximum is 50."
+      },
+      {
+        "name": "options",
+        "type": "String",
+        "required": false,
+        "description": "This value can be used to get more stock information. e.g., Options=1 means contain ReservedStock, RtsStock, PendingStock, RealTimeStock, FulfillmentBySellable."
+      },
+      {
+        "name": "sku_seller_list",
+        "type": "String",
+        "required": false,
+        "description": "Only products that have the Seller SKU in this list will be returned. Input should be a JSON array. For example, [\"Apple 6S Gold\", \"Apple 6S Black\"]. It only matches the whole words. A maximum of 100 SKUs can be returned."
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/products/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"filter\", \"live\");\nrequest.addApiParameter(\"update_before\", \"2018-01-01T00:00:00+0800\");\nrequest.addApiParameter(\"create_before\", \"2018-01-01T00:00:00+0800\");\nrequest.addApiParameter(\"offset\", \"0\");\nrequest.addApiParameter(\"create_after\", \"2010-01-01T00:00:00+0800\");\nrequest.addApiParameter(\"update_after\", \"2010-01-01T00:00:00+0800\");\nrequest.addApiParameter(\"limit\", \"10\");\nrequest.addApiParameter(\"options\", \"1\");\nrequest.addApiParameter(\"sku_seller_list\", \" [\\\"39817:01:01\\\", \\\"Apple 6S Black\\\"]\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/products/get','GET');\n$request->addApiParam('filter','live');\n$request->addApiParam('update_before','2018-01-01T00:00:00+0800');\n$request->addApiParam('create_before','2018-01-01T00:00:00+0800');\n$request->addApiParam('offset','0');\n$request->addApiParam('create_after','2010-01-01T00:00:00+0800');\n$request->addApiParam('update_after','2010-01-01T00:00:00+0800');\n$request->addApiParam('limit','10');\n$request->addApiParam('options','1');\n$request->addApiParam('sku_seller_list',' [\\\"39817:01:01\\\", \\\"Apple 6S Black\\\"]');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/products/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"filter\", \"live\");\nrequest.AddApiParameter(\"update_before\", \"2018-01-01T00:00:00+0800\");\nrequest.AddApiParameter(\"create_before\", \"2018-01-01T00:00:00+0800\");\nrequest.AddApiParameter(\"offset\", \"0\");\nrequest.AddApiParameter(\"create_after\", \"2010-01-01T00:00:00+0800\");\nrequest.AddApiParameter(\"update_after\", \"2010-01-01T00:00:00+0800\");\nrequest.AddApiParameter(\"limit\", \"10\");\nrequest.AddApiParameter(\"options\", \"1\");\nrequest.AddApiParameter(\"sku_seller_list\", \" [\\\"39817:01:01\\\", \\\"Apple 6S Black\\\"]\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/products/get','GET')\nrequest.add_api_parameter(\"filter\", \"live\")\nrequest.add_api_parameter(\"update_before\", \"2018-01-01T00:00:00+0800\")\nrequest.add_api_parameter(\"create_before\", \"2018-01-01T00:00:00+0800\")\nrequest.add_api_parameter(\"offset\", \"0\")\nrequest.add_api_parameter(\"create_after\", \"2010-01-01T00:00:00+0800\")\nrequest.add_api_parameter(\"update_after\", \"2010-01-01T00:00:00+0800\")\nrequest.add_api_parameter(\"limit\", \"10\")\nrequest.add_api_parameter(\"options\", \"1\")\nrequest.add_api_parameter(\"sku_seller_list\", \" [\\\"39817:01:01\\\", \\\"Apple 6S Black\\\"]\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/products/get','GET')\nrequest.add_api_param('filter', 'live')\nrequest.add_api_param('update_before', '2018-01-01T00:00:00+0800')\nrequest.add_api_param('create_before', '2018-01-01T00:00:00+0800')\nrequest.add_api_param('offset', '0')\nrequest.add_api_param('create_after', '2010-01-01T00:00:00+0800')\nrequest.add_api_param('update_after', '2010-01-01T00:00:00+0800')\nrequest.add_api_param('limit', '10')\nrequest.add_api_param('options', '1')\nrequest.add_api_param('sku_seller_list', ' [\\\"39817:01:01\\\", \\\"Apple 6S Black\\\"]')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/products/get?timestamp=1750231610808&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&filter=live&update_before=2018-01-01T00%3A00%3A00%2B0800&create_before=2018-01-01T00%3A00%3A00%2B0800&offset=0&create_after=2010-01-01T00%3A00%3A00%2B0800&update_after=2010-01-01T00%3A00%3A00%2B0800&limit=10&options=1&sku_seller_list=+%5B%2239817%3A01%3A01%22%2C+%22Apple+6S+Black%22%5D'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"total_products\": \"10\",\n    \"products\": [\n      {\n        \"created_time\": \"1611554725000\",\n        \"updated_time\": \"1611554725000\",\n        \"images\": \"[     \\\"https://my-live.slatic.net/p/540bc796d1eadf316018038d8840f20a.jpg\\\",     \\\"https://my-live.slatic.net/p/8913fc357e139ef78ad2f071e9586334.jpg\\\" ]\",\n        \"skus\": [\n          {\n            \"Status\": \"active\",\n            \"quantity\": 0,\n            \"product_weight\": \"0.03\",\n            \"Images\": [\n              \"http://sg-live-01.slatic.net/p/BUYI1-catalog.jpg\",\n              \"\",\n              \"\",\n              \"\",\n              \"\",\n              \"\",\n              \"\",\n              \"\"\n            ],\n            \"SellerSku\": \"39817:01:01\",\n            \"ShopSku\": \"BU565ELAX8AGSGAMZ-1104491\",\n            \"Url\": \"https://alice.lazada.sg/asd-1083832.html\",\n            \"package_width\": \"10.00\",\n            \"special_to_time\": \"2020-02-0300:00\",\n            \"special_from_time\": \"2015-07-3100:00\",\n            \"package_height\": \"4.00\",\n            \"special_price\": 9,\n            \"price\": 32,\n            \"package_length\": \"10.00\",\n            \"package_weight\": \"0.04\",\n            \"Available\": 0,\n            \"SkuId\": 314525867,\n            \"special_to_date\": \"2020-02-03\"\n          }\n        ],\n        \"item_id\": \"180226526\",\n        \"hiddenStatus\": \"Android \\u0026 IOS\",\n        \"suspendedSkus\": [],\n        \"subStatus\": \"Lock,Reject,Live Reject,Admin\",\n        \"trialProduct\": \"false\",\n        \"rejectReason\": [\n          {\n            \"suggestion\": \"\",\n            \"violationDetail\": \"Wrong Description,Price Not Reasonable,Wrong Image, No White Background:Wrong image resolution\"\n          }\n        ],\n        \"primary_category\": \"10000211\",\n        \"marketImages\": \"[     \\\"https://my-live.slatic.net/p/540bc796d1eadf316018038d8840f20a.jpg\\\",     \\\"https://my-live.slatic.net/p/8913fc357e139ef78ad2f071e9586334.jpg\\\" ]\",\n        \"attributes\": {\n          \"short_description\": \"\\u003cul\\u003e\\u003cli\\u003easdasd\\u003c/li\\u003e\\u003c/ul\\u003e\",\n          \"name\": \"asd\",\n          \"description\": \"\\u003cp\\u003easd\\u003c/p\\u003e\\n\",\n          \"name_engravement\": \"No\",\n          \"warranty_type\": \"International Manufacturer\",\n          \"gift_wrapping\": \"No\",\n          \"preorder_days\": 25,\n          \"brand\": \"Asante\",\n          \"preorder\": \"Yes\"\n        },\n        \"hiddenReason\": \"The product cannot be displayed in the IOS system\",\n        \"status\": \"Active,InActive,Pending QC,Suspended,Deleted\"\n      }\n    ]\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "5",
+      "message": "E005: Invalid Request Format",
+      "description": "The request URL is not valid."
+    },
+    {
+      "code": "6",
+      "message": "E006: Unexpected internal error",
+      "description": "Unexpected internal error."
+    },
+    {
+      "code": "14",
+      "message": "E014: \"%s\" Invalid Offset",
+      "description": "The value for the offset parameter is not valid."
+    },
+    {
+      "code": "17",
+      "message": "E017: \"%s\" Invalid Date Format",
+      "description": "The date format is not valid."
+    },
+    {
+      "code": "19",
+      "message": "E019: \"%s\" Invalid Limit",
+      "description": "The value for the limit parameter is not valid."
+    },
+    {
+      "code": "36",
+      "message": "E036: Invalid status filter",
+      "description": "The specified status filter is not valid."
+    },
+    {
+      "code": "70",
+      "message": "E070: You have corrupt data in your sku seller list.",
+      "description": "Data in the SKU list are not valid."
+    },
+    {
+      "code": "506",
+      "message": "E506: Get product failed",
+      "description": "Failed to get the product information."
+    },
+    {
+      "code": "901",
+      "message": "E901: The request is too frequent, or the requested functionality is temporarily disabled.",
+      "description": "Failed to return the requested data due to high calling frequency or disabled functionality. Please try again later."
+    },
+    {
+      "code": "901",
+      "message": "Limit service request speed in server side temporarily.",
+      "description": "API level QPS limiting flow, please retry in the next second when you encounter this error."
+    },
+    {
+      "code": "SellerNotVerified",
+      "message": "Seller not verified,please check seller status",
+      "description": "The seller's store opening process has not been completed, please log in to the Seller Center, check the store information that needs to be improved on the home page and submit it for review."
+    },
+    {
+      "code": "901",
+      "message": "Limit service request speed in server side temporarily.",
+      "description": "API level QPS limiting flow, please retry in the next second when you encounter this error."
+    },
+    {
+      "code": "19",
+      "message": "Invalid Limit",
+      "description": "The limit field value is incorrect and should not exceed a maximum of 50."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

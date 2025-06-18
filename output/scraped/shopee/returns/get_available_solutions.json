@@ -1,0 +1,231 @@
+{
+  "platform": "shopee",
+  "module": "returns",
+  "endpoint_name": "get_available_solutions",
+  "version": "v2",
+  "summary": "Dispute return",
+  "description": "Dispute return. Support to raise dispute when return_status in REQUESTED / PROCESSING/ACCEPTED",
+  "path": "/api/v2/returns/dispute",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "return_sn",
+        "type": "string",
+        "required": true,
+        "description": "The serial number of return.",
+        "sample": "220106202649696"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/returns/get_available_solutions?access_token=access_token&partner_id=partner_id&return_sn=220106202649696&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/returns/get_available_solutions?access_token=access_token&partner_id=partner_id&return_sn=220106202649696&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/returns/get_available_solutions?access_token=access_token&partner_id=partner_id&return_sn=220106202649696&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/returns/get_available_solutions?access_token=access_token&partner_id=partner_id&return_sn=220106202649696&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.request(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "fdeb0c1463fc46349f7d6f448e1f00d6",
+        "description": "The identifier for an API request for error tracking"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "The error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "The error description"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "return_sn",
+        "type": "string",
+        "sample": "220106202649696",
+        "description": "The serial number of return."
+      },
+      {
+        "name": "offer_return_refund",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "eligibility",
+        "type": "boolean",
+        "sample": "true",
+        "description": "To indicate whether ReturnRefund solution is available for sellers to select"
+      },
+      {
+        "name": "refund_amount_adjustable",
+        "type": "boolean",
+        "sample": "false",
+        "description": "To indicate whether refund is adjustable for ReturnRefund solution"
+      },
+      {
+        "name": "max_refund_amount",
+        "type": "float",
+        "sample": "15.5",
+        "description": "The max refund amount for ReturnRefund solution"
+      },
+      {
+        "name": "offer_refund",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "eligibility",
+        "type": "boolean",
+        "sample": "true",
+        "description": "To indicate whether Refund solution is available for sellers to select"
+      },
+      {
+        "name": "refund_amount_adjustable",
+        "type": "boolean",
+        "sample": "false",
+        "description": "To indicate whether refund is adjustable for Refund solution"
+      },
+      {
+        "name": "max_refund_amount",
+        "type": "float",
+        "sample": "10.0",
+        "description": "The max refund amount for ReturnRefund solution"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"request_id\": \"fdeb0c1463fc46349f7d6f448e1f00d6\",\n    \"error\": \"\",\n    \"message\": \"\",\n    \"response\": {\n        \"return_sn\": \"220106202649696\",\n        \"offer_return_refund\": {\n            \"eligibility\": true,\n            \"refund_amount_adjustable\": false,\n            \"max_refund_amount\": 15.5\n        },\n        \"offer_refund\": {\n            \"eligibility\": false,\n            \"refund_amount_adjustable\": false,\n            \"max_refund_amount\": 10.0\n        }\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_data",
+      "message": "Something wrong. Please try later. [20]"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_data",
+      "message": "Query offer info failed. Please try later."
+    },
+    {
+      "code": "error_data",
+      "message": "Query proof info failed. Please try later."
+    },
+    {
+      "code": "error_data",
+      "message": "Query return info failed. Please try later."
+    },
+    {
+      "code": "error_data",
+      "message": "Type of return does not allow seller to offer refund"
+    },
+    {
+      "code": "error_data",
+      "message": "Shopee is reviewing the case and will get back to you."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/returns/dispute"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/returns/dispute"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/returns/dispute"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/returns/dispute"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/returns/dispute"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/returns/dispute"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/returns/dispute"
+      }
+    ]
+  }
+}

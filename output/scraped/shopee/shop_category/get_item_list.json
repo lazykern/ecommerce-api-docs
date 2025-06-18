@@ -1,0 +1,197 @@
+{
+  "platform": "shopee",
+  "module": "shop_category",
+  "endpoint_name": "get_item_list",
+  "version": "v2",
+  "summary": "Use this call to add items list to certain shop_category",
+  "description": "Use this call to add items list to certain shop_category",
+  "path": "/api/v2/shop_category/add_item_list",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "shop_category_id",
+        "type": "int",
+        "required": true,
+        "description": "ShopCategory's unique identifier.",
+        "sample": "231232"
+      },
+      {
+        "name": "page_size",
+        "type": "int",
+        "required": false,
+        "description": "Specifies the starting entry of data to return in the current call. Default is 1000. The input range of page_size is [0, 1000]",
+        "sample": "20"
+      },
+      {
+        "name": "page_no",
+        "type": "int",
+        "required": false,
+        "description": "If many items are available to retrieve, you may need to call this api multiple times to retrieve all the data. And the default will be 0. page_size*page_no should be [0, 2147483446].",
+        "sample": "4"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "{\n    \"shop_category_id\": 231232,\n    \"page_size\": 20,\n    \"page_no\": 4\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "375ae1023f7396e34904fddfaafed901",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_list",
+        "type": "int[]",
+        "sample": "[100908154,100908155]",
+        "description": "A list of Shopee's unique identifiers for items."
+      },
+      {
+        "name": "total_count",
+        "type": "int",
+        "sample": "2",
+        "description": "This is to indicate the whole number of items under the shop category."
+      },
+      {
+        "name": "more",
+        "type": "boolean",
+        "sample": "false",
+        "description": "This is to indicate whether the item list is more than one page. If this value is true, you may want to continue to check next page to retrieve the rest of items."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"message\": \"\",\n  \"error\": \"\",\n  \"response\": {\n    \"item_list\": [\n      100908154,\n      100908155\n    ],\n    \"more\": false,\n    \"total_count\": 2\n  },\n  \"request_id\": \"375ae1023f7396e34904fddfaafed901\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_service",
+      "message": "Unknown error, please contact developer."
+    },
+    {
+      "code": "error_service",
+      "message": "The shop category id is not found."
+    },
+    {
+      "code": "error_auth",
+      "message": "You have no valid partnerid."
+    },
+    {
+      "code": "error_param",
+      "message": "Syntax error. Please check the format of your Request Parameter."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong parameters, detail: {msg}"
+    },
+    {
+      "code": "error_param",
+      "message": "Shop is not found."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop_category/add_item_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop_category/add_item_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_category/add_item_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_category/add_item_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_category/add_item_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_category/add_item_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_category/add_item_list"
+      }
+    ]
+  }
+}

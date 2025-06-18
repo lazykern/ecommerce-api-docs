@@ -1,0 +1,254 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "get_item_violation_info",
+  "version": "v2",
+  "summary": "Get new size chart detail",
+  "description": "Get new size chart detail. Now only local shop support to use this api to get new size chart detail.",
+  "path": "/api/v2/product/get_size_chart_detail",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "item_id_list",
+        "type": "int[]",
+        "required": true,
+        "description": "item_id list; limit [0,50]",
+        "sample": "[34001,34002]"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate waring details if hit waring. Empty if no waring happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_id",
+        "type": "int",
+        "sample": "3400133011",
+        "description": "Shopee's unique identifier for an item."
+      },
+      {
+        "name": "item_name",
+        "type": "string",
+        "sample": "test",
+        "description": "Name of the item."
+      },
+      {
+        "name": "item_status",
+        "type": "string",
+        "sample": "BANNED",
+        "description": "Enumerated type that defines the current status of the item. Applicable values: NORMAL, BANNED, UNLIST, SELLER_DELETE, SHOPEE_DELETE, REVIEWING."
+      },
+      {
+        "name": "deboost",
+        "type": "boolean",
+        "sample": "true",
+        "description": "If deboost is true, means that the item's search ranking is lowered."
+      },
+      {
+        "name": "item_status_details",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "violation_type",
+        "type": "string",
+        "sample": "Prohibited Listing",
+        "description": "Violation types defined by Shopee. Applicable values: Prohibited Listing Counterfeit and IP Infringement Spam Inappropriate Image Insufficient Information Mall Listing Improvement Other Listing Improvement"
+      },
+      {
+        "name": "violation_reason",
+        "type": "string",
+        "sample": "License Reason",
+        "description": "The reason for violation."
+      },
+      {
+        "name": "suggestion",
+        "type": "string",
+        "sample": "Upload license",
+        "description": "Shopee provides you with suggestions for modifying items."
+      },
+      {
+        "name": "fix_deadline_time",
+        "type": "timestamp",
+        "sample": "1705227588",
+        "description": "Action required deadline. Empty if no deadline."
+      },
+      {
+        "name": "update_time",
+        "type": "timestamp",
+        "sample": "1705054788",
+        "description": "Latest update time."
+      },
+      {
+        "name": "deboost_details",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "violation_type",
+        "type": "string",
+        "sample": "Prohibited Listing",
+        "description": "Violation types defined by Shopee. Applicable values: Prohibited Listing Counterfeit and IP Infringement Spam Inappropriate Image Insufficient Information Mall Listing Improvement Other Listing Improvement"
+      },
+      {
+        "name": "violation_reason",
+        "type": "string",
+        "sample": "Wrong Category",
+        "description": "The reason for violation."
+      },
+      {
+        "name": "suggestion",
+        "type": "string",
+        "sample": "The item is in wrong category, please update to the suggested_category",
+        "description": "Shopee provides you with suggestions for modifying items."
+      },
+      {
+        "name": "suggested_category",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "category_id",
+        "type": "int",
+        "sample": "107478",
+        "description": "ID for Shopee suggested category."
+      },
+      {
+        "name": "category_name",
+        "type": "string",
+        "sample": "Personal Care",
+        "description": "Default name for Shopee suggested category."
+      },
+      {
+        "name": "fix_deadline_time",
+        "type": "timestamp",
+        "sample": "1705202227",
+        "description": "Action required deadline. Empty if no deadline."
+      },
+      {
+        "name": "update_time",
+        "type": "timestamp",
+        "sample": "1704943027",
+        "description": "Latest update time."
+      },
+      {
+        "name": "fail_error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if one element hit error."
+      },
+      {
+        "name": "fail_message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if one element hit error."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"message\": null,\n    \"request_id\": \"3cc224310e5b57eeb70a9b202ba5d341\",\n    \"response\":{\n        \"item_list\":[\n            {\n                \"item_id\": 800903588,\n                \"item_name\":\"testing product\",\n                \"item_status\":\"BANNED\",\n                \"deboost\":true,\n                \"item_status_details\":[\n                    {\n                        \"violation_type\":\"Prohibited Listing\",\n                        \"violation_reason\":\"License Reason\",\n                        \"suggestion\":\"Upload license\",\n                        \"update_time\": 1705054788,\n                        \"fix_deadline_time\": 1705227588\n                    }\n                ],\n                \"deboost_details\":[\n                    {\n                        \"violation_type\":\"Prohibited Listing\",\n                        \"violation_reason\":\"Wrong Category\",\n                        \"suggestion\":\"The item is in wrong category, please update to the suggested_category\",\n                        \"suggested_category\":[\n                            {\n                                \"category_id\":100005,\n                                \"category_name\":\"Health\"\n                            },\n                            {\n                                \"category_id\":107478,\n                                \"category_name\":\"Personal Care\"\n                            }\n                        ],\n                        \"update_time\": 1704943027,\n                        \"fix_deadline_time\": 1705202227,\n                    }\n                ]\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid request item_id"
+    },
+    {
+      "code": "error_param",
+      "message": "The item_id_list is required"
+    },
+    {
+      "code": "error_param",
+      "message": "Request items over limit, should be less than 50"
+    },
+    {
+      "code": "error_param",
+      "message": "item_status does not match latest violation"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_size_chart_detail"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_size_chart_detail"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_size_chart_detail"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_size_chart_detail"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_size_chart_detail"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_size_chart_detail"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_size_chart_detail"
+      }
+    ]
+  }
+}

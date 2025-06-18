@@ -1,0 +1,178 @@
+{
+  "platform": "lazada",
+  "module": "product",
+  "endpoint_name": "deleteMerchantProduct",
+  "version": null,
+  "summary": "Use this API to delete the product。(CrossBoarderSellersOnly)",
+  "description": "Use this API to delete the product。(CrossBoarderSellersOnly)",
+  "path": "/product/global/delete",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "type",
+        "type": "String",
+        "required": true,
+        "description": "Product Types"
+      },
+      {
+        "name": "country",
+        "type": "String",
+        "required": false,
+        "description": "country,if type is \"global\", this field will be ignored"
+      },
+      {
+        "name": "product_id",
+        "type": "Number",
+        "required": true,
+        "description": "When type is \"global\", it is the global product ID, when type is \"single\", product id is the IC product ID."
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/global/delete\");\nrequest.addApiParameter(\"type\", \"global/single\");\nrequest.addApiParameter(\"country\", \"SG/VN/PH/TH/MY\");\nrequest.addApiParameter(\"product_id\", \"1234  \\t\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/global/delete');\n$request->addApiParam('type','global/single');\n$request->addApiParam('country','SG/VN/PH/TH/MY');\n$request->addApiParam('product_id','1234  \\t');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/global/delete\");\nrequest.AddApiParameter(\"type\", \"global/single\");\nrequest.AddApiParameter(\"country\", \"SG/VN/PH/TH/MY\");\nrequest.AddApiParameter(\"product_id\", \"1234  \\t\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/global/delete')\nrequest.add_api_parameter(\"type\", \"global/single\")\nrequest.add_api_parameter(\"country\", \"SG/VN/PH/TH/MY\")\nrequest.add_api_parameter(\"product_id\", \"1234  \\t\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/global/delete')\nrequest.add_api_param('type', 'global/single')\nrequest.add_api_param('country', 'SG/VN/PH/TH/MY')\nrequest.add_api_param('product_id', '1234  \\t')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/product/global/delete' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"country\":\"SG%2FVN%2FPH%2FTH%2FMY\",\"app_key\":\"1234567\",\"product_id\":\"1234++%09\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"type\":\"global%2Fsingle\",\"timestamp\":\"1750231520827\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "bodydeleteGspProductResult is truemean update gsp product success。when deleteICProductResult is falsemean update IC product failand deleteIcProductFailResultList will show the reason"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "process resultIf this is true, it doesn't mean that everything is processed successfully"
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "description": "exists when success is false"
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "description": "exists when success is false"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"error_msg\": \"Invalid Limit\",\n  \"code\": \"0\",\n  \"data\": {\n    \"deleteICProductResult\": \"false\",\n    \"deleteIcProductFailResultList\": [\n      {\n        \"market\": \"LAZADA_MY\",\n        \"productId\": \"3042450256\",\n        \"updateMsg\": \"Product is not found in repository,scenario:UpShelf,productId:3042450256,serverIP:33.65.56.178\",\n        \"updateResult\": \"false\"\n      }\n    ],\n    \"deleteGspProductResult\": \"true\"\n  },\n  \"success\": \"true\",\n  \"error_code\": \"E0019\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "EpisPackageConsignment",
+  "version": null,
+  "summary": "External partner call EPIS to consign package to get the tracking number and be able to print AWB after consign",
+  "description": "External partner call EPIS to consign package to get the tracking number and be able to print AWB after consign",
+  "path": "/logistics/epis/packages/consign",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "planInfo",
+        "type": "Object",
+        "required": false,
+        "description": "Partner can send tracking number to LEX"
+      },
+      {
+        "name": "dangerousGood",
+        "type": "Boolean",
+        "required": true,
+        "description": "Is dangerous good. Boolean true/false"
+      },
+      {
+        "name": "shipper",
+        "type": "Object",
+        "required": true,
+        "description": "Shipper information"
+      },
+      {
+        "name": "dimWeight",
+        "type": "Object",
+        "required": true,
+        "description": "Package level dimweight"
+      },
+      {
+        "name": "origin",
+        "type": "Object",
+        "required": true,
+        "description": "Origin info"
+      },
+      {
+        "name": "destination",
+        "type": "Object",
+        "required": true,
+        "description": "Destination info"
+      },
+      {
+        "name": "payment",
+        "type": "Object",
+        "required": true,
+        "description": "Payment info"
+      },
+      {
+        "name": "externalOrderId",
+        "type": "String",
+        "required": true,
+        "description": "External order id (uniquely identify partner's order). If Lazada receives mulitiple requests to create multiple orders with same externalOrderId then only the first arrived order information is recorded. All subsequent requests are treated as duplicated regardless the order information is changed or not. Therefore you can repush order, but cannot modify order information once it is already processed by Lazada"
+      },
+      {
+        "name": "platformOrderCreationTime",
+        "type": "Number",
+        "required": false,
+        "description": "Unix timestamp in milliseconds. Default: Current timestamp when EPIS receives the request"
+      },
+      {
+        "name": "packageType",
+        "type": "String",
+        "required": false,
+        "description": "Package type. Enum: [Sales_order, Customer_return]"
+      },
+      {
+        "name": "deliveryOption",
+        "type": "String",
+        "required": false,
+        "description": "Delivery service type. Enum [standard, economy, point_to_point]"
+      },
+      {
+        "name": "items",
+        "type": "Object[]",
+        "required": true,
+        "description": "Item list"
+      },
+      {
+        "name": "options",
+        "type": "Object",
+        "required": false,
+        "description": "Package options"
+      },
+      {
+        "name": "exchangeOrder",
+        "type": "Object",
+        "required": false,
+        "description": "Exchange order"
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/epis/packages/consign\");\nrequest.addApiParameter(\"planInfo\", \"{\\\"trackingNumber\\\":\\\"MYX0000000001001\\\"}\");\nrequest.addApiParameter(\"dangerousGood\", \"false\");\nrequest.addApiParameter(\"shipper\", \"{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"warehouseName\\\":\\\"Kho Qu\\u1EADn 1\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}\");\nrequest.addApiParameter(\"dimWeight\", \"{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}\");\nrequest.addApiParameter(\"origin\", \"{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}\");\nrequest.addApiParameter(\"destination\", \"{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}\");\nrequest.addApiParameter(\"payment\", \"{\\\"totalAmount\\\":\\\"4.5\\\",\\\"insuranceAmount\\\":\\\"4.5\\\",\\\"paidEstimatedShippingFeeAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}\");\nrequest.addApiParameter(\"externalOrderId\", \"FO073511135542999\");\nrequest.addApiParameter(\"platformOrderCreationTime\", \"1647857656396\");\nrequest.addApiParameter(\"packageType\", \"Sales_order\");\nrequest.addApiParameter(\"deliveryOption\", \"standard\");\nrequest.addApiParameter(\"items\", \"[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]\");\nrequest.addApiParameter(\"options\", \"{\\\"parcelDescription\\\":\\\"Parcel description\\\",\\\"orderSource\\\":\\\"MOBILE\\\",\\\"vasExchangeOrderOption\\\":\\\"true\\\",\\\"scheduledPickupTime\\\":\\\"1647857656396\\\",\\\"deliveryNote\\\":\\\"Delivery note\\\",\\\"partnerOrderId\\\":\\\"partnerOrderId\\\",\\\"parcelCategories\\\":[\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\",\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\"],\\\"vasFdStorageOption\\\":\\\"true\\\",\\\"vasPartialDeliveryOption\\\":\\\"true\\\",\\\"directReturnToMerchant\\\":\\\"true\\\",\\\"openBox\\\":\\\"true\\\",\\\"vasFdCollectShippingFeeOption\\\":\\\"true\\\",\\\"forwardPackageCode\\\":\\\"FU242008370000001917013936\\\",\\\"vasFdCallOption\\\":\\\"true\\\"}\");\nrequest.addApiParameter(\"exchangeOrder\", \"{\\\"insuranceAmount\\\":\\\"10.99\\\",\\\"items\\\":[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"},{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]}\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/epis/packages/consign');\n$request->addApiParam('planInfo','{\\\"trackingNumber\\\":\\\"MYX0000000001001\\\"}');\n$request->addApiParam('dangerousGood','false');\n$request->addApiParam('shipper','{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"warehouseName\\\":\\\"Kho Qu\\u1EADn 1\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}');\n$request->addApiParam('dimWeight','{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}');\n$request->addApiParam('origin','{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}');\n$request->addApiParam('destination','{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}');\n$request->addApiParam('payment','{\\\"totalAmount\\\":\\\"4.5\\\",\\\"insuranceAmount\\\":\\\"4.5\\\",\\\"paidEstimatedShippingFeeAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}');\n$request->addApiParam('externalOrderId','FO073511135542999');\n$request->addApiParam('platformOrderCreationTime','1647857656396');\n$request->addApiParam('packageType','Sales_order');\n$request->addApiParam('deliveryOption','standard');\n$request->addApiParam('items','[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]');\n$request->addApiParam('options','{\\\"parcelDescription\\\":\\\"Parcel description\\\",\\\"orderSource\\\":\\\"MOBILE\\\",\\\"vasExchangeOrderOption\\\":\\\"true\\\",\\\"scheduledPickupTime\\\":\\\"1647857656396\\\",\\\"deliveryNote\\\":\\\"Delivery note\\\",\\\"partnerOrderId\\\":\\\"partnerOrderId\\\",\\\"parcelCategories\\\":[\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\",\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\"],\\\"vasFdStorageOption\\\":\\\"true\\\",\\\"vasPartialDeliveryOption\\\":\\\"true\\\",\\\"directReturnToMerchant\\\":\\\"true\\\",\\\"openBox\\\":\\\"true\\\",\\\"vasFdCollectShippingFeeOption\\\":\\\"true\\\",\\\"forwardPackageCode\\\":\\\"FU242008370000001917013936\\\",\\\"vasFdCallOption\\\":\\\"true\\\"}');\n$request->addApiParam('exchangeOrder','{\\\"insuranceAmount\\\":\\\"10.99\\\",\\\"items\\\":[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"},{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]}');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/epis/packages/consign\");\nrequest.AddApiParameter(\"planInfo\", \"{\\\"trackingNumber\\\":\\\"MYX0000000001001\\\"}\");\nrequest.AddApiParameter(\"dangerousGood\", \"false\");\nrequest.AddApiParameter(\"shipper\", \"{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"warehouseName\\\":\\\"Kho Qu\\u1EADn 1\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}\");\nrequest.AddApiParameter(\"dimWeight\", \"{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}\");\nrequest.AddApiParameter(\"origin\", \"{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}\");\nrequest.AddApiParameter(\"destination\", \"{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}\");\nrequest.AddApiParameter(\"payment\", \"{\\\"totalAmount\\\":\\\"4.5\\\",\\\"insuranceAmount\\\":\\\"4.5\\\",\\\"paidEstimatedShippingFeeAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}\");\nrequest.AddApiParameter(\"externalOrderId\", \"FO073511135542999\");\nrequest.AddApiParameter(\"platformOrderCreationTime\", \"1647857656396\");\nrequest.AddApiParameter(\"packageType\", \"Sales_order\");\nrequest.AddApiParameter(\"deliveryOption\", \"standard\");\nrequest.AddApiParameter(\"items\", \"[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]\");\nrequest.AddApiParameter(\"options\", \"{\\\"parcelDescription\\\":\\\"Parcel description\\\",\\\"orderSource\\\":\\\"MOBILE\\\",\\\"vasExchangeOrderOption\\\":\\\"true\\\",\\\"scheduledPickupTime\\\":\\\"1647857656396\\\",\\\"deliveryNote\\\":\\\"Delivery note\\\",\\\"partnerOrderId\\\":\\\"partnerOrderId\\\",\\\"parcelCategories\\\":[\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\",\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\"],\\\"vasFdStorageOption\\\":\\\"true\\\",\\\"vasPartialDeliveryOption\\\":\\\"true\\\",\\\"directReturnToMerchant\\\":\\\"true\\\",\\\"openBox\\\":\\\"true\\\",\\\"vasFdCollectShippingFeeOption\\\":\\\"true\\\",\\\"forwardPackageCode\\\":\\\"FU242008370000001917013936\\\",\\\"vasFdCallOption\\\":\\\"true\\\"}\");\nrequest.AddApiParameter(\"exchangeOrder\", \"{\\\"insuranceAmount\\\":\\\"10.99\\\",\\\"items\\\":[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"},{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]}\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/epis/packages/consign')\nrequest.add_api_parameter(\"planInfo\", \"{\\\"trackingNumber\\\":\\\"MYX0000000001001\\\"}\")\nrequest.add_api_parameter(\"dangerousGood\", \"false\")\nrequest.add_api_parameter(\"shipper\", \"{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"warehouseName\\\":\\\"Kho Qu\\u1EADn 1\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}\")\nrequest.add_api_parameter(\"dimWeight\", \"{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}\")\nrequest.add_api_parameter(\"origin\", \"{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}\")\nrequest.add_api_parameter(\"destination\", \"{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}\")\nrequest.add_api_parameter(\"payment\", \"{\\\"totalAmount\\\":\\\"4.5\\\",\\\"insuranceAmount\\\":\\\"4.5\\\",\\\"paidEstimatedShippingFeeAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}\")\nrequest.add_api_parameter(\"externalOrderId\", \"FO073511135542999\")\nrequest.add_api_parameter(\"platformOrderCreationTime\", \"1647857656396\")\nrequest.add_api_parameter(\"packageType\", \"Sales_order\")\nrequest.add_api_parameter(\"deliveryOption\", \"standard\")\nrequest.add_api_parameter(\"items\", \"[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]\")\nrequest.add_api_parameter(\"options\", \"{\\\"parcelDescription\\\":\\\"Parcel description\\\",\\\"orderSource\\\":\\\"MOBILE\\\",\\\"vasExchangeOrderOption\\\":\\\"true\\\",\\\"scheduledPickupTime\\\":\\\"1647857656396\\\",\\\"deliveryNote\\\":\\\"Delivery note\\\",\\\"partnerOrderId\\\":\\\"partnerOrderId\\\",\\\"parcelCategories\\\":[\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\",\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\"],\\\"vasFdStorageOption\\\":\\\"true\\\",\\\"vasPartialDeliveryOption\\\":\\\"true\\\",\\\"directReturnToMerchant\\\":\\\"true\\\",\\\"openBox\\\":\\\"true\\\",\\\"vasFdCollectShippingFeeOption\\\":\\\"true\\\",\\\"forwardPackageCode\\\":\\\"FU242008370000001917013936\\\",\\\"vasFdCallOption\\\":\\\"true\\\"}\")\nrequest.add_api_parameter(\"exchangeOrder\", \"{\\\"insuranceAmount\\\":\\\"10.99\\\",\\\"items\\\":[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"},{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]}\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/epis/packages/consign')\nrequest.add_api_param('planInfo', '{\\\"trackingNumber\\\":\\\"MYX0000000001001\\\"}')\nrequest.add_api_param('dangerousGood', 'false')\nrequest.add_api_param('shipper', '{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"warehouseName\\\":\\\"Kho Qu\\u1EADn 1\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}')\nrequest.add_api_param('dimWeight', '{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}')\nrequest.add_api_param('origin', '{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}')\nrequest.add_api_param('destination', '{\\\"address\\\":{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\",\\\"type\\\":\\\"home\\\"},\\\"phone\\\":\\\"0972018000\\\",\\\"geoLocation\\\":{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"},\\\"name\\\":\\\"John\\\",\\\"email\\\":\\\"user@domain.com\\\"}')\nrequest.add_api_param('payment', '{\\\"totalAmount\\\":\\\"4.5\\\",\\\"insuranceAmount\\\":\\\"4.5\\\",\\\"paidEstimatedShippingFeeAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}')\nrequest.add_api_param('externalOrderId', 'FO073511135542999')\nrequest.add_api_param('platformOrderCreationTime', '1647857656396')\nrequest.add_api_param('packageType', 'Sales_order')\nrequest.add_api_param('deliveryOption', 'standard')\nrequest.add_api_param('items', '[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]')\nrequest.add_api_param('options', '{\\\"parcelDescription\\\":\\\"Parcel description\\\",\\\"orderSource\\\":\\\"MOBILE\\\",\\\"vasExchangeOrderOption\\\":\\\"true\\\",\\\"scheduledPickupTime\\\":\\\"1647857656396\\\",\\\"deliveryNote\\\":\\\"Delivery note\\\",\\\"partnerOrderId\\\":\\\"partnerOrderId\\\",\\\"parcelCategories\\\":[\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\",\\\"[\\\\\\\"Fashion\\\\\\\", \\\\\\\"Accessories\\\\\\\"]\\\"],\\\"vasFdStorageOption\\\":\\\"true\\\",\\\"vasPartialDeliveryOption\\\":\\\"true\\\",\\\"directReturnToMerchant\\\":\\\"true\\\",\\\"openBox\\\":\\\"true\\\",\\\"vasFdCollectShippingFeeOption\\\":\\\"true\\\",\\\"forwardPackageCode\\\":\\\"FU242008370000001917013936\\\",\\\"vasFdCallOption\\\":\\\"true\\\"}')\nrequest.add_api_param('exchangeOrder', '{\\\"insuranceAmount\\\":\\\"10.99\\\",\\\"items\\\":[{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"},{\\\"unitPrice\\\":\\\"6688\\\",\\\"quantity\\\":\\\"1\\\",\\\"dimWeight\\\":{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"344\\\",\\\"height\\\":\\\"10.1\\\"},\\\"name\\\":\\\"NYX Professional Makeup Can\\\\u0027t Stop Won\\\\u0027t Stop Liquid Matte Foundation\\\",\\\"id\\\":\\\"123123123\\\",\\\"sku\\\":\\\"1153678330_ID-181585888\\\",\\\"category\\\":\\\"Electronic\\\",\\\"paidPrice\\\":\\\"0\\\"}]}')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/epis/packages/consign' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"dangerousGood\":\"false\",\"shipper\":\"%7B%22externalSellerId%22%3A%22001231321%22%2C%22platformName%22%3A%22Platform_XXX%22%2C%22warehouseName%22%3A%22Kho+Qu%E1%BA%ADn+1%22%2C%22externalWarehouseCode%22%3A%22VN-0000001%22%7D\",\"origin\":\"%7B%22address%22%3A%7B%22details%22%3A%22199+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7+Qu%E1%BA%ADn+B%C3%ACnh+Th%E1%BA%A1nh+TP.H%E1%BB%93+Ch%C3%AD+Minh%22%2C%22id%22%3A%22R123765%22%2C%22type%22%3A%22home%22%7D%2C%22phone%22%3A%220972018000%22%2C%22geoLocation%22%3A%7B%22latitude%22%3A%2210.7776331%22%2C%22longitude%22%3A%22106.7116815%22%7D%2C%22name%22%3A%22John%22%2C%22email%22%3A%22user%40domain.com%22%7D\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"destination\":\"%7B%22address%22%3A%7B%22details%22%3A%22199+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7+Qu%E1%BA%ADn+B%C3%ACnh+Th%E1%BA%A1nh+TP.H%E1%BB%93+Ch%C3%AD+Minh%22%2C%22id%22%3A%22R123765%22%2C%22type%22%3A%22home%22%7D%2C%22phone%22%3A%220972018000%22%2C%22geoLocation%22%3A%7B%22latitude%22%3A%2210.7776331%22%2C%22longitude%22%3A%22106.7116815%22%7D%2C%22name%22%3A%22John%22%2C%22email%22%3A%22user%40domain.com%22%7D\",\"externalOrderId\":\"FO073511135542999\",\"planInfo\":\"%7B%22trackingNumber%22%3A%22MYX0000000001001%22%7D\",\"platformOrderCreationTime\":\"1647857656396\",\"packageType\":\"Sales_order\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"dimWeight\":\"%7B%22length%22%3A%2212.3%22%2C%22width%22%3A%2211.2%22%2C%22weight%22%3A%22334%22%2C%22height%22%3A%224.4%22%7D\",\"sign_method\":\"sha256\",\"options\":\"%7B%22parcelDescription%22%3A%22Parcel+description%22%2C%22orderSource%22%3A%22MOBILE%22%2C%22vasExchangeOrderOption%22%3A%22true%22%2C%22scheduledPickupTime%22%3A%221647857656396%22%2C%22deliveryNote%22%3A%22Delivery+note%22%2C%22partnerOrderId%22%3A%22partnerOrderId%22%2C%22parcelCategories%22%3A%5B%22%5B%5C%22Fashion%5C%22%2C+%5C%22Accessories%5C%22%5D%22%2C%22%5B%5C%22Fashion%5C%22%2C+%5C%22Accessories%5C%22%5D%22%5D%2C%22vasFdStorageOption%22%3A%22true%22%2C%22vasPartialDeliveryOption%22%3A%22true%22%2C%22directReturnToMerchant%22%3A%22true%22%2C%22openBox%22%3A%22true%22%2C%22vasFdCollectShippingFeeOption%22%3A%22true%22%2C%22forwardPackageCode%22%3A%22FU242008370000001917013936%22%2C%22vasFdCallOption%22%3A%22true%22%7D\",\"payment\":\"%7B%22totalAmount%22%3A%224.5%22%2C%22insuranceAmount%22%3A%224.5%22%2C%22paidEstimatedShippingFeeAmount%22%3A%224.5%22%2C%22currency%22%3A%22SGD%22%2C%22paymentType%22%3A%22COD%22%7D\",\"exchangeOrder\":\"%7B%22insuranceAmount%22%3A%2210.99%22%2C%22items%22%3A%5B%7B%22unitPrice%22%3A%226688%22%2C%22quantity%22%3A%221%22%2C%22dimWeight%22%3A%7B%22length%22%3A%2212.3%22%2C%22width%22%3A%2211.2%22%2C%22weight%22%3A%22344%22%2C%22height%22%3A%2210.1%22%7D%2C%22name%22%3A%22NYX+Professional+Makeup+Can%5Cu0027t+Stop+Won%5Cu0027t+Stop+Liquid+Matte+Foundation%22%2C%22id%22%3A%22123123123%22%2C%22sku%22%3A%221153678330_ID-181585888%22%2C%22category%22%3A%22Electronic%22%2C%22paidPrice%22%3A%220%22%7D%2C%7B%22unitPrice%22%3A%226688%22%2C%22quantity%22%3A%221%22%2C%22dimWeight%22%3A%7B%22length%22%3A%2212.3%22%2C%22width%22%3A%2211.2%22%2C%22weight%22%3A%22344%22%2C%22height%22%3A%2210.1%22%7D%2C%22name%22%3A%22NYX+Professional+Makeup+Can%5Cu0027t+Stop+Won%5Cu0027t+Stop+Liquid+Matte+Foundation%22%2C%22id%22%3A%22123123123%22%2C%22sku%22%3A%221153678330_ID-181585888%22%2C%22category%22%3A%22Electronic%22%2C%22paidPrice%22%3A%220%22%7D%5D%7D\",\"deliveryOption\":\"standard\",\"items\":\"%5B%7B%22unitPrice%22%3A%226688%22%2C%22quantity%22%3A%221%22%2C%22dimWeight%22%3A%7B%22length%22%3A%2212.3%22%2C%22width%22%3A%2211.2%22%2C%22weight%22%3A%22334%22%2C%22height%22%3A%224.4%22%7D%2C%22name%22%3A%22NYX+Professional+Makeup+Can%5Cu0027t+Stop+Won%5Cu0027t+Stop+Liquid+Matte+Foundation%22%2C%22id%22%3A%22123123123%22%2C%22sku%22%3A%221153678330_ID-181585888%22%2C%22category%22%3A%22Electronic%22%2C%22paidPrice%22%3A%220%22%7D%5D\",\"timestamp\":\"1750231654216\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "description": "Is failed request retryable?"
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "Trace id for debugging"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Is success?"
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error code"
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "description": "Detail errors"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "Response data"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"retryable\": \"false\",\n  \"traceId\": \"0ba2887315172940728551014\",\n  \"code\": \"0\",\n  \"data\": {\n    \"routeCode\": \"X-ROUTE-123\",\n    \"lastMileShippingProvider\": {\n      \"tplSlug\": \"lex\",\n      \"tplName\": \"lex\",\n      \"tplCode\": \"lex\"\n    },\n    \"options\": {\n      \"promotionCode\": \"PROMOTION_CODE\",\n      \"vasPartialDeliveryOptionNotAvailable\": \"false\"\n    },\n    \"appliedVas\": {\n      \"vasExchangeOrderOption\": \"true\",\n      \"openBox\": \"true\",\n      \"vasFdCollectShippingFeeOption\": \"true\",\n      \"vasFdStorageOption\": \"true\",\n      \"vasFdCallOption\": \"true\",\n      \"vasPartialDeliveryOption\": \"true\"\n    },\n    \"firstMileShippingProvider\": {\n      \"tplSlug\": \"lex\",\n      \"tplName\": \"lex\",\n      \"tplCode\": \"lex\"\n    },\n    \"portCode\": \"X-PORT-123\",\n    \"trackingNumber\": \"GHN00003984888VNA\"\n  },\n  \"success\": \"false\",\n  \"errorMessage\": \"Bad request\",\n  \"errorCode\": \"BAD_REQUEST\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errors\": [\n    {\n      \"field\": \"$.items.name\",\n      \"errorMessage\": \"name must not be blank\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

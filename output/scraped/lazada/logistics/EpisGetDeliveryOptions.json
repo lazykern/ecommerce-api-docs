@@ -1,0 +1,253 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "EpisGetDeliveryOptions",
+  "version": null,
+  "summary": "External partner call EPIS to get delivery options for package",
+  "description": "External partner call EPIS to get delivery options for package",
+  "path": "/logistics/epis/service/delivery_options",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "fromLocation",
+        "type": "Object",
+        "required": false,
+        "description": "Origin geo location"
+      },
+      {
+        "name": "toLocation",
+        "type": "Object",
+        "required": false,
+        "description": "Destination geo location"
+      },
+      {
+        "name": "shipper",
+        "type": "Object",
+        "required": true,
+        "description": "Shipper information"
+      },
+      {
+        "name": "dimWeight",
+        "type": "Object",
+        "required": true,
+        "description": "Package level dimweight"
+      },
+      {
+        "name": "origin",
+        "type": "Object",
+        "required": true,
+        "description": "Origin info"
+      },
+      {
+        "name": "destination",
+        "type": "Object",
+        "required": true,
+        "description": "Destination info"
+      },
+      {
+        "name": "payment",
+        "type": "Object",
+        "required": true,
+        "description": "Payment info"
+      },
+      {
+        "name": "packageType",
+        "type": "String",
+        "required": false,
+        "description": "Package type. [Sales_order, Customer_return]"
+      },
+      {
+        "name": "deliveryOption",
+        "type": "String",
+        "required": false,
+        "description": "Delivery service type. Enum [standard, economy]"
+      },
+      {
+        "name": "externalOrderId",
+        "type": "String",
+        "required": false,
+        "description": "Order Id from external"
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/epis/service/delivery_options\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"fromLocation\", \"{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}\");\nrequest.addApiParameter(\"toLocation\", \"{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}\");\nrequest.addApiParameter(\"shipper\", \"{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}\");\nrequest.addApiParameter(\"dimWeight\", \"{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}\");\nrequest.addApiParameter(\"origin\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\");\nrequest.addApiParameter(\"destination\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\");\nrequest.addApiParameter(\"payment\", \"{\\\"totalAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}\");\nrequest.addApiParameter(\"packageType\", \"Sales_order\");\nrequest.addApiParameter(\"deliveryOption\", \"standard\");\nrequest.addApiParameter(\"externalOrderId\", \"EXTERNAL_001\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/epis/service/delivery_options','GET');\n$request->addApiParam('fromLocation','{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}');\n$request->addApiParam('toLocation','{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}');\n$request->addApiParam('shipper','{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}');\n$request->addApiParam('dimWeight','{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}');\n$request->addApiParam('origin','{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}');\n$request->addApiParam('destination','{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}');\n$request->addApiParam('payment','{\\\"totalAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}');\n$request->addApiParam('packageType','Sales_order');\n$request->addApiParam('deliveryOption','standard');\n$request->addApiParam('externalOrderId','EXTERNAL_001');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/epis/service/delivery_options\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"fromLocation\", \"{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}\");\nrequest.AddApiParameter(\"toLocation\", \"{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}\");\nrequest.AddApiParameter(\"shipper\", \"{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}\");\nrequest.AddApiParameter(\"dimWeight\", \"{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}\");\nrequest.AddApiParameter(\"origin\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\");\nrequest.AddApiParameter(\"destination\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\");\nrequest.AddApiParameter(\"payment\", \"{\\\"totalAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}\");\nrequest.AddApiParameter(\"packageType\", \"Sales_order\");\nrequest.AddApiParameter(\"deliveryOption\", \"standard\");\nrequest.AddApiParameter(\"externalOrderId\", \"EXTERNAL_001\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/epis/service/delivery_options','GET')\nrequest.add_api_parameter(\"fromLocation\", \"{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}\")\nrequest.add_api_parameter(\"toLocation\", \"{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}\")\nrequest.add_api_parameter(\"shipper\", \"{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}\")\nrequest.add_api_parameter(\"dimWeight\", \"{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}\")\nrequest.add_api_parameter(\"origin\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\")\nrequest.add_api_parameter(\"destination\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\")\nrequest.add_api_parameter(\"payment\", \"{\\\"totalAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}\")\nrequest.add_api_parameter(\"packageType\", \"Sales_order\")\nrequest.add_api_parameter(\"deliveryOption\", \"standard\")\nrequest.add_api_parameter(\"externalOrderId\", \"EXTERNAL_001\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/epis/service/delivery_options','GET')\nrequest.add_api_param('fromLocation', '{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}')\nrequest.add_api_param('toLocation', '{\\\"latitude\\\":\\\"10.7776331\\\",\\\"longitude\\\":\\\"106.7116815\\\"}')\nrequest.add_api_param('shipper', '{\\\"externalSellerId\\\":\\\"001231321\\\",\\\"platformName\\\":\\\"Platform_XXX\\\",\\\"externalWarehouseCode\\\":\\\"VN-0000001\\\"}')\nrequest.add_api_param('dimWeight', '{\\\"length\\\":\\\"12.3\\\",\\\"width\\\":\\\"11.2\\\",\\\"weight\\\":\\\"334\\\",\\\"height\\\":\\\"4.4\\\"}')\nrequest.add_api_param('origin', '{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}')\nrequest.add_api_param('destination', '{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}')\nrequest.add_api_param('payment', '{\\\"totalAmount\\\":\\\"4.5\\\",\\\"currency\\\":\\\"SGD\\\",\\\"paymentType\\\":\\\"COD\\\"}')\nrequest.add_api_param('packageType', 'Sales_order')\nrequest.add_api_param('deliveryOption', 'standard')\nrequest.add_api_param('externalOrderId', 'EXTERNAL_001')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/logistics/epis/service/delivery_options?timestamp=1750231629688&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&fromLocation=%7B%22latitude%22%3A%2210.7776331%22%2C%22longitude%22%3A%22106.7116815%22%7D&toLocation=%7B%22latitude%22%3A%2210.7776331%22%2C%22longitude%22%3A%22106.7116815%22%7D&shipper=%7B%22externalSellerId%22%3A%22001231321%22%2C%22platformName%22%3A%22Platform_XXX%22%2C%22externalWarehouseCode%22%3A%22VN-0000001%22%7D&dimWeight=%7B%22length%22%3A%2212.3%22%2C%22width%22%3A%2211.2%22%2C%22weight%22%3A%22334%22%2C%22height%22%3A%224.4%22%7D&origin=%7B%22details%22%3A%22199+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7+Qu%E1%BA%ADn+B%C3%ACnh+Th%E1%BA%A1nh+TP.H%E1%BB%93+Ch%C3%AD+Minh%22%2C%22id%22%3A%22R123765%22%7D&destination=%7B%22details%22%3A%22199+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7+Qu%E1%BA%ADn+B%C3%ACnh+Th%E1%BA%A1nh+TP.H%E1%BB%93+Ch%C3%AD+Minh%22%2C%22id%22%3A%22R123765%22%7D&payment=%7B%22totalAmount%22%3A%224.5%22%2C%22currency%22%3A%22SGD%22%2C%22paymentType%22%3A%22COD%22%7D&packageType=Sales_order&deliveryOption=standard&externalOrderId=EXTERNAL_001'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "Response data"
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "description": "Is failed request retryable?"
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "Trace id for debugging"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Is success?"
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error code"
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "description": "Detail errors"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"retryable\": \"false\",\n  \"traceId\": \"0ba2887315172940728551014\",\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"lastMileShippingProvider\": \"LEX VN\",\n      \"firstMileShippingProviderSlug\": \"lex-vn\",\n      \"firstMileDeliveryType\": \"Pickupp\",\n      \"firstMileShippingProvider\": \"LEX VN\",\n      \"deliveryOption\": \"standard\",\n      \"pickupTargetCutoffTime\": \"1656329708068\",\n      \"lastMileShippingProviderSlug\": \"lex-vn\"\n    }\n  ],\n  \"success\": \"false\",\n  \"errorMessage\": \"Bad request\",\n  \"errorCode\": \"BAD_REQUEST\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errors\": [\n    {\n      \"field\": \"$.items.name\",\n      \"errorMessage\": \"name must not be blank\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

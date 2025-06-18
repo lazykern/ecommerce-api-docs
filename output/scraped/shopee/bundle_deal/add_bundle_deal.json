@@ -1,0 +1,342 @@
+{
+  "platform": "shopee",
+  "module": "bundle_deal",
+  "endpoint_name": "add_bundle_deal",
+  "version": "v2",
+  "summary": "Use this api to end shop discount activity",
+  "description": "Use this api to end shop discount activity",
+  "path": "/api/v2/discount/end_discount",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "rule_type",
+        "type": "int",
+        "required": true,
+        "description": "The bundle deal rule type：FIX_PRICE = 1 ；DISCOUNT_PERCENTAGE = 2； DISCOUNT_VALUE = 3",
+        "sample": "1"
+      },
+      {
+        "name": "discount_value",
+        "type": "float",
+        "required": true,
+        "description": "The deducted price when when buying a bundle deal. Need to input it when the bundle deal rule type is 3",
+        "sample": "11.0"
+      },
+      {
+        "name": "fix_price",
+        "type": "float",
+        "required": true,
+        "description": "The amount of the buyer needs to spend to purchase a bundle deal. Need to input it when the bundle deal rule type is 1",
+        "sample": "11.0"
+      },
+      {
+        "name": "discount_percentage",
+        "type": "int",
+        "required": true,
+        "description": "The discount that the buyer can get when buying a bundle deal. Need to input it when the bundle deal rule type is 2",
+        "sample": "33"
+      },
+      {
+        "name": "min_amount",
+        "type": "int",
+        "required": true,
+        "description": "The quantity of items that need buyer to combine purchased",
+        "sample": "1"
+      },
+      {
+        "name": "start_time",
+        "type": "int",
+        "required": true,
+        "description": "The time when bundle deal activity start.The start time must be later than current time.",
+        "sample": "1600000000"
+      },
+      {
+        "name": "end_time",
+        "type": "int",
+        "required": true,
+        "description": "The time when bundle deal activity end. The end time must be 1 hour later than start time.",
+        "sample": "1610000000"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "description": "Title of the bundle deal",
+        "sample": "bundle name"
+      },
+      {
+        "name": "purchase_limit",
+        "type": "int",
+        "required": true,
+        "description": "Maximum number of bundle deals that can be bought by a buyer.",
+        "sample": "3"
+      },
+      {
+        "name": "additional_tiers",
+        "type": "object[]",
+        "required": false,
+        "description": "Use to create tiered discount for bundle deals, a max of 2 additional tiers are allowed to create. the rule of multiple tiers needs to follow this faq https://open.shopee.com/faq/53 For additional tiers, the fix price, discount_percentage, discount_value should be consistent with tier 1",
+        "sample": ""
+      },
+      {
+        "name": "min_amount",
+        "type": "int",
+        "required": true,
+        "description": "The quantity of items that the buyers need to purchase for additional tier",
+        "sample": "100"
+      },
+      {
+        "name": "fix_price",
+        "type": "float",
+        "required": false,
+        "description": "The bundle price when the buyers purchase a bundle deal for additional tiers. Need to input it when the bundle deal rule type is 1.",
+        "sample": "100.00"
+      },
+      {
+        "name": "discount_value",
+        "type": "float",
+        "required": false,
+        "description": "The bundle deal discount amount the buyer can save when purchasing a bundle deal. Need to input it when the bundle deal rule type is 3",
+        "sample": "20.00"
+      },
+      {
+        "name": "discount_percentage",
+        "type": "int",
+        "required": false,
+        "description": "The bundle deal discount% that the buyer can get when buying a bundle deal for additional tiers. Need to input it when the bundle deal rule type is 2",
+        "sample": "20"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n\t\"rule_type\": 1,\n\t\"discount_value\": 11,\n\t\"fix_price\": 11,\n\t\"discount_percentage\": 33,\n\t\"min_amount\": 1,\n\t\"start_time\": 1600000000,\n\t\"end_time\": 1610000000,\n\t\"name\": \"bundle name\",\n\t\"purchase_limit\": 3,\n\t\"additional_tiers\": [\n\t\t{\n\t\t\t\"min_amount\": 100,\n\t\t\t\"fix_price\": 100,\n\t\t\t\"discount_value\": 20,\n\t\t\t\"discount_percentage\": 20\n\t\t}\n\t]\n}"
+    },
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.post(\"https://open.admin.shopee.io/api/v2/bundle_deal/add_bundle_deal?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.header(\"Content-Type\",\"application/json\")\n.body(\"{\n   \\\"additional_tiers\\\": [\n      {\n         \\\"discount_percentage\\\": 20,\n         \\\"discount_value\\\": 20,\n         \\\"fix_price\\\": 100,\n         \\\"min_amount\\\": 100\n      }\n   ],\n   \\\"discount_percentage\\\": 33,\n   \\\"discount_value\\\": 11,\n   \\\"end_time\\\": 1610000000,\n   \\\"fix_price\\\": 11,\n   \\\"min_amount\\\": 1,\n   \\\"name\\\": \\\"bundle name\\\",\n   \\\"purchase_limit\\\": 3,\n   \\\"rule_type\\\": 1,\n   \\\"start_time\\\": 1600000000\n}\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://open.admin.shopee.io/api/v2/bundle_deal/add_bundle_deal?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'POST',\n  CURLOPT_POSTFIELDS => '{\n    \"additional_tiers\": [\n        {\n            \"discount_percentage\": 20,\n            \"discount_value\": 20,\n            \"fix_price\": 100,\n            \"min_amount\": 100\n        }\n    ],\n    \"discount_percentage\": 33,\n    \"discount_value\": 11,\n    \"end_time\": 1610000000,\n    \"fix_price\": 11,\n    \"min_amount\": 1,\n    \"name\": \"bundle name\",\n    \"purchase_limit\": 3,\n    \"rule_type\": 1,\n    \"start_time\": 1600000000\n}',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request POST 'https://open.admin.shopee.io/api/v2/bundle_deal/add_bundle_deal?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n   \"additional_tiers\": [\n      {\n         \"discount_percentage\": 20,\n         \"discount_value\": 20,\n         \"fix_price\": 100,\n         \"min_amount\": 100\n      }\n   ],\n   \"discount_percentage\": 33,\n   \"discount_value\": 11,\n   \"end_time\": 1610000000,\n   \"fix_price\": 11,\n   \"min_amount\": 1,\n   \"name\": \"bundle name\",\n   \"purchase_limit\": 3,\n   \"rule_type\": 1,\n   \"start_time\": 1600000000\n}'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\nimport json\n\nurl = \"https://open.admin.shopee.io/api/v2/bundle_deal/add_bundle_deal?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload=json.dumps({\n  \"additional_tiers\": [\n    {\n      \"discount_percentage\": 20,\n      \"discount_value\": 20,\n      \"fix_price\": 100,\n      \"min_amount\": 100\n    }\n  ],\n  \"discount_percentage\": 33,\n  \"discount_value\": 11,\n  \"end_time\": 1610000000,\n  \"fix_price\": 11,\n  \"min_amount\": 1,\n  \"name\": \"bundle name\",\n  \"purchase_limit\": 3,\n  \"rule_type\": 1,\n  \"start_time\": 1600000000\n})\nheaders = {\n  'Content-Type': 'application/json'\n}\nresponse = requests.request(\"POST\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "b41cb9d4eff03a708347d69abcd4c63d",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "bundle_deal_id",
+        "type": "int",
+        "sample": "11111",
+        "description": "Shopee's unique identifier for a bundle deal activity."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"error\": \"-\",\n\t\"message\": \"-\",\n\t\"request_id\": \"b41cb9d4eff03a708347d69abcd4c63d\",\n\t\"response\": {\n\t\t\"bundle_deal_id\": 11111\n\t}\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "add_on.add_on_no_logistic",
+      "message": "This item doesn't has shipping channel, please set shipping channel firstly"
+    },
+    {
+      "code": "add_on.add_on_deal_item_under_block_categories",
+      "message": "This product is under a category that is prohibited from promotions due to regulations in your country"
+    },
+    {
+      "code": "bundle.bundle_deal_discount_value_invalid_range",
+      "message": "Discount value should be within Price range."
+    },
+    {
+      "code": "bundle.bundle_deal_error_total_count_limit",
+      "message": "A maximum of 1000 bundle deals can be created"
+    },
+    {
+      "code": "bundle.bundle_deal_error_unknown",
+      "message": "Unknown error occurred in the service"
+    },
+    {
+      "code": "bundle.bundle_deal_exceed_remaining_time_limit",
+      "message": "The bundle deal end time must earlier than the max allowed current time"
+    },
+    {
+      "code": "bundle.bundle_deal_fix_price_invalid_range",
+      "message": "Fix price should be within Price range."
+    },
+    {
+      "code": "bundle.bundle_deal_multi_tier_invalid_fix_price_per_item",
+      "message": "Higher tier should have lower price per item (price per item = fixed bundle price / item amount)"
+    },
+    {
+      "code": "bundle.bundle_deal_multi_tier_feature_toggle",
+      "message": "Cannot create multi-tier bundle deals"
+    },
+    {
+      "code": "bundle.bundle_deal_name_length",
+      "message": "Name length can't be less than 1 or greater than 25"
+    },
+    {
+      "code": "bundle.bundle_deal_ongoing_promotion_info_lock",
+      "message": "Cannot change rule_type, fix_price, discount_percentage, discount_value or tiers number if Bundle deal is ongoing."
+    },
+    {
+      "code": "bundle.bundle_deal_ongoing_promotion_info_lock_min_amount",
+      "message": "Cannot change min_amount if Bundle deal is ongoing and has enabled items"
+    },
+    {
+      "code": "bundle.bundle_deal_over_min_amount",
+      "message": "The item amount can't exceed 3000"
+    },
+    {
+      "code": "bundle.bundle_deal_over_tier",
+      "message": "Max bundle tier allowed is 3"
+    },
+    {
+      "code": "bundle.bundle_deal_rule_type_mix_use",
+      "message": "Please use consistent rule type"
+    },
+    {
+      "code": "bundle.bundle_deal_rule_type_value",
+      "message": "Please use correct bundle deal rule type"
+    },
+    {
+      "code": "bundle.bundle_deal_tier_invalid",
+      "message": "The discount off for tier 1 must be < 90%%"
+    },
+    {
+      "code": "bundle.bundle_deal_under_min_amount",
+      "message": "The item amount should be greater than 1"
+    },
+    {
+      "code": "bundle.bundle_deal_under_min_amount_multi_tier",
+      "message": "The item amount should be greater than the previous tier"
+    },
+    {
+      "code": "bundle.bundle_deal_invaild_discount_percentage",
+      "message": "Discount percentage should not less than 1%% and not more than 99%%"
+    },
+    {
+      "code": "bundle.bundle_deal_min_span_within",
+      "message": "The promotion period must be greater than 1 hour"
+    },
+    {
+      "code": "bundle.bundle_deal_start_time_error",
+      "message": "The start time should be later than current time"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/discount/end_discount"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/discount/end_discount"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/discount/end_discount"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/discount/end_discount"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/discount/end_discount"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/discount/end_discount"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/discount/end_discount"
+      }
+    ]
+  }
+}

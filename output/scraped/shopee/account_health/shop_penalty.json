@@ -1,0 +1,195 @@
+{
+  "platform": "shopee",
+  "module": "account_health",
+  "endpoint_name": "shop_penalty",
+  "version": "v2",
+  "summary": "Sellers can only cancel compensation disputes, not normal disputes",
+  "description": "Sellers can only cancel compensation disputes, not normal disputes. This means that sellers can only cancel disputes when the return_status is ACCEPTED and the compensation_status is COMPENSATION_REQUESTED.",
+  "path": "/api/v2/returns/cancel_dispute",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/account_health/shop_penalty?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/account_health/shop_penalty?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/account_health/shop_penalty?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/account_health/shop_penalty?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.request(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "penalty_points",
+        "type": "object",
+        "sample": "",
+        "description": "Points accumulated will remain on record till the end of a quarter. This will be reset on the first Monday of each quarter"
+      },
+      {
+        "name": "overall_penalty_points",
+        "type": "int32",
+        "sample": "8",
+        "description": "The overall penalty points."
+      },
+      {
+        "name": "non_fulfillment_rate",
+        "type": "int32",
+        "sample": "1",
+        "description": "The penalty points caused by non-fulfilment orders."
+      },
+      {
+        "name": "late_shipment_rate",
+        "type": "int32",
+        "sample": "2",
+        "description": "The penalty points caused by late shipment orders."
+      },
+      {
+        "name": "listing_violations",
+        "type": "int32",
+        "sample": "5",
+        "description": "The penalty points caused by listing violations."
+      },
+      {
+        "name": "opfr_violations",
+        "type": "int32",
+        "sample": "1",
+        "description": "The penalty points caused by orders that failed to be picked up during the scheduled pickup day."
+      },
+      {
+        "name": "others",
+        "type": "int32",
+        "sample": "2",
+        "description": ""
+      },
+      {
+        "name": "ongoing_punishment",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "punishment_tier",
+        "type": "int32",
+        "sample": "3",
+        "description": "1-5 tier"
+      },
+      {
+        "name": "days_left",
+        "type": "int32",
+        "sample": "16",
+        "description": ""
+      },
+      {
+        "name": "punishment_name",
+        "type": "string",
+        "sample": "deboost",
+        "description": "The name of punishment"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"xxxx\",\n    \"responce\": {\n       \"penalty_points\": {\n   \"overall_penalty_points\":  8,\n   \"non_fulfillment_rate\":  2,\n   \"late_shipment_rate\":  3,\n   \"listing_violations\":  1,\n   \"others\":  2\n        },\n       \"ongoing_punishment\": [\n  {\n              \"punishment_name\":  \"deboost\",\n      \"punishment_tier\":  3,\n      \"days_left\":  21\n          },\n          {...}\n       ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "account_health_shop_id_null",
+      "message": "The shopID is requested"
+    },
+    {
+      "code": "account_health_shop_id_not_exist",
+      "message": "The shop_id you provided is not exist"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/returns/cancel_dispute"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/returns/cancel_dispute"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/returns/cancel_dispute"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/returns/cancel_dispute"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/returns/cancel_dispute"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/returns/cancel_dispute"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/returns/cancel_dispute"
+      }
+    ]
+  }
+}

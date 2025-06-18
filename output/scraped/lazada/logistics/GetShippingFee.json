@@ -1,0 +1,212 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "GetShippingFee",
+  "version": null,
+  "summary": "Estimate package shipping fee (Estimated & Actual)",
+  "description": "Estimate package shipping fee (Estimated & Actual)",
+  "path": "/logistics/epis/get_shipping_fee",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "externalSellerId",
+        "type": "String",
+        "required": true,
+        "description": "External seller ID"
+      },
+      {
+        "name": "platformName",
+        "type": "String",
+        "required": true,
+        "description": "Platform where seller order comes from"
+      },
+      {
+        "name": "trackingNumber",
+        "type": "String",
+        "required": true,
+        "description": "Lazada tracking number"
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/epis/get_shipping_fee\");\nrequest.addApiParameter(\"externalSellerId\", \"001231321\");\nrequest.addApiParameter(\"platformName\", \"Platform_XXX\");\nrequest.addApiParameter(\"trackingNumber\", \"LXVN123123123\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/epis/get_shipping_fee');\n$request->addApiParam('externalSellerId','001231321');\n$request->addApiParam('platformName','Platform_XXX');\n$request->addApiParam('trackingNumber','LXVN123123123');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/epis/get_shipping_fee\");\nrequest.AddApiParameter(\"externalSellerId\", \"001231321\");\nrequest.AddApiParameter(\"platformName\", \"Platform_XXX\");\nrequest.AddApiParameter(\"trackingNumber\", \"LXVN123123123\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/epis/get_shipping_fee')\nrequest.add_api_parameter(\"externalSellerId\", \"001231321\")\nrequest.add_api_parameter(\"platformName\", \"Platform_XXX\")\nrequest.add_api_parameter(\"trackingNumber\", \"LXVN123123123\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/epis/get_shipping_fee')\nrequest.add_api_param('externalSellerId', '001231321')\nrequest.add_api_param('platformName', 'Platform_XXX')\nrequest.add_api_param('trackingNumber', 'LXVN123123123')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/epis/get_shipping_fee' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"externalSellerId\":\"001231321\",\"platformName\":\"Platform_XXX\",\"trackingNumber\":\"LXVN123123123\",\"timestamp\":\"1750231465922\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "description": "Is failed request retryable?"
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "Trace id for debugging"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "Package fee response"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Is success?"
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error code"
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "description": "Detail errors"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"retryable\": \"false\",\n  \"traceId\": \"1666f8ce16709204399801013bf6cf\",\n  \"code\": \"0\",\n  \"data\": {\n    \"originEstimatedShippingFee\": \"125000\",\n    \"actualShippingFee\": \"125000\",\n    \"estimatedShippingFee\": \"125000\",\n    \"currency\": \"VND\"\n  },\n  \"success\": \"false\",\n  \"errorMessage\": \"Bad request\",\n  \"errorCode\": \"BAD_REQUEST\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errors\": [\n    {\n      \"field\": \"$.platformName\",\n      \"errorMessage\": \"$.platformName must not be blank\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

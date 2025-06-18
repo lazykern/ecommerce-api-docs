@@ -1,0 +1,1201 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "get_item_base_info",
+  "version": "v2",
+  "summary": "Use this call to get a list of items",
+  "description": "Use this call to get a list of items.",
+  "path": "/api/v2/product/get_item_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "item_id_list",
+        "type": "int64[]",
+        "required": true,
+        "description": "item_id list; limit [0,50]",
+        "sample": "[34001,34002]"
+      },
+      {
+        "name": "need_tax_info",
+        "type": "boolean",
+        "required": false,
+        "description": "if true will response tax_info",
+        "sample": "true"
+      },
+      {
+        "name": "need_complaint_policy",
+        "type": "boolean",
+        "required": false,
+        "description": "if true will response complaint_policy",
+        "sample": "true"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/product/get_item_base_info?timestamp=timestamp&sign=sign&shop_id=shop_id&need_tax_info=true&item_id_list=[34001 34002]&partner_id=partner_id&need_complaint_policy=true&access_token=access_token\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/product/get_item_base_info?access_token=access_token&item_id_list=%5B34001+34002%5D&need_complaint_policy=true&need_tax_info=true&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/product/get_item_base_info?partner_id=partner_id&need_complaint_policy=true&access_token=access_token&timestamp=timestamp&sign=sign&shop_id=shop_id&need_tax_info=true&item_id_list=[34001,34002]'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/product/get_item_base_info?access_token=access_token&item_id_list=%5B34001+34002%5D&need_complaint_policy=true&need_tax_info=true&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.request(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate waring details if hit waring. Empty if no waring happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "7b9da0c6926642199c33ee9dd3a266f5",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_id",
+        "type": "int64",
+        "sample": "34002",
+        "description": "Shopee's unique identifier for an item."
+      },
+      {
+        "name": "category_id",
+        "type": "int32",
+        "sample": "14646",
+        "description": "Shopee's unique identifier for a category."
+      },
+      {
+        "name": "item_name",
+        "type": "string",
+        "sample": "seller discount",
+        "description": "Name of the item in local language."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "sample": "first product 001first product",
+        "description": "if description_type is normal , Description information will be returned through this fieldelse description will be empty"
+      },
+      {
+        "name": "item_sku",
+        "type": "string",
+        "sample": "",
+        "description": "An item SKU (stock keeping unit) is an identifier defined by a seller, sometimes called parent SKU. Item SKU can be assigned to an item in Shopee Listings."
+      },
+      {
+        "name": "create_time",
+        "type": "timestamp",
+        "sample": "1600572637",
+        "description": "Timestamp that indicates the date and time that the item was created."
+      },
+      {
+        "name": "update_time",
+        "type": "timestamp",
+        "sample": "1600572640",
+        "description": "Timestamp that indicates the last time that there was a change in value of the item, such as price/stock change."
+      },
+      {
+        "name": "attribute_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "attribute_id",
+        "type": "int32",
+        "sample": "4811",
+        "description": "The Identify of each category."
+      },
+      {
+        "name": "original_attribute_name",
+        "type": "string",
+        "sample": "Brand: L2 Default [14644]",
+        "description": "The name of each attribute."
+      },
+      {
+        "name": "is_mandatory",
+        "type": "boolean",
+        "sample": "true",
+        "description": "This is to indicate whether this attribute is mandantory."
+      },
+      {
+        "name": "attribute_value_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "value_id",
+        "type": "int32",
+        "sample": "0",
+        "description": "Unique identifier for value of this item attribute."
+      },
+      {
+        "name": "original_value_name",
+        "type": "string",
+        "sample": "Default",
+        "description": "Value name of this item attribute."
+      },
+      {
+        "name": "value_unit",
+        "type": "string",
+        "sample": "g",
+        "description": "Value unit of this item attribute."
+      },
+      {
+        "name": "price_info",
+        "type": "object[]",
+        "sample": "",
+        "description": "If the item has models, price_info will not be returned. Please get the price of each model through the get_model_list api"
+      },
+      {
+        "name": "currency",
+        "type": "string",
+        "sample": "SGD",
+        "description": "The three-digit code representing the currency unit used for the item in Shopee Listings."
+      },
+      {
+        "name": "original_price",
+        "type": "float",
+        "sample": "122.02",
+        "description": "The original price of the item in the listing currency."
+      },
+      {
+        "name": "current_price",
+        "type": "float",
+        "sample": "122.02",
+        "description": "The current price of the item in the listing currency. If product under a onging promotion, current_price will be the promotion price"
+      },
+      {
+        "name": "inflated_price_of_original_price",
+        "type": "float",
+        "sample": "222.02",
+        "description": "The After-tax original price of the item in the listing currency."
+      },
+      {
+        "name": "inflated_price_of_current_price",
+        "type": "float",
+        "sample": "111.02",
+        "description": "The After-tax current price of the item in the listing currency."
+      },
+      {
+        "name": "sip_item_price",
+        "type": "float",
+        "sample": "100.02",
+        "description": "The price of the item in sip.If item is for CNSC primary shop, this field will not be returned"
+      },
+      {
+        "name": "sip_item_price_source",
+        "type": "string",
+        "sample": "auto",
+        "description": "source of sip' price. ( auto or manual).If item is for CNSC SIP primary shop, this field will not be returned"
+      },
+      {
+        "name": "image",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "image_url_list",
+        "type": "string[]",
+        "sample": "",
+        "description": "List of image url."
+      },
+      {
+        "name": "image_id_list",
+        "type": "string[]",
+        "sample": "",
+        "description": "List of image id."
+      },
+      {
+        "name": "image_ratio",
+        "type": "string",
+        "sample": "",
+        "description": "Image ratio"
+      },
+      {
+        "name": "weight",
+        "type": "string",
+        "sample": "\"10.02\"",
+        "description": "The weight of this item, the unit is KG. If set the weight of models under this item, will return the max weight of all models during the switching period to ensure system compatibility, please switch to call v2.product.get_model_list to get the weight of models."
+      },
+      {
+        "name": "dimension",
+        "type": "object",
+        "sample": "",
+        "description": "The dimension of this item. If set the dimension of models under this item, will return the dimension with largest volume calculated by height*length*width during the switching period to ensure system compatibility, please switch to call v2.product.get_model_list to get the dimension of models."
+      },
+      {
+        "name": "package_length",
+        "type": "int32",
+        "sample": "11",
+        "description": "The length of package for this item, the unit is CM."
+      },
+      {
+        "name": "package_width",
+        "type": "int32",
+        "sample": "12",
+        "description": "The width of package for this item, the unit is CM."
+      },
+      {
+        "name": "package_height",
+        "type": "int32",
+        "sample": "13",
+        "description": "The height of package for this item, the unit is CM."
+      },
+      {
+        "name": "logistic_info",
+        "type": "object[]",
+        "sample": "",
+        "description": "The logistics list."
+      },
+      {
+        "name": "logistic_id",
+        "type": "int32",
+        "sample": "80012",
+        "description": "The identity of logistic channel."
+      },
+      {
+        "name": "logistic_name",
+        "type": "string",
+        "sample": "",
+        "description": "The name of logistic."
+      },
+      {
+        "name": "enabled",
+        "type": "boolean",
+        "sample": "true",
+        "description": "Related to shopee.logistics.GetLogistics result.logistics.enabled only affect current item."
+      },
+      {
+        "name": "shipping_fee",
+        "type": "float",
+        "sample": "5.02",
+        "description": "Only needed when logistics fee_type = CUSTOM_PRICE."
+      },
+      {
+        "name": "size_id",
+        "type": "int32",
+        "sample": "",
+        "description": "If specify logistic fee_type is SIZE_SELECTION size_id is required."
+      },
+      {
+        "name": "is_free",
+        "type": "boolean",
+        "sample": "false",
+        "description": "when seller chooses this option, the shipping fee of this channel on item will be set to 0. Default value is False."
+      },
+      {
+        "name": "estimated_shipping_fee",
+        "type": "float",
+        "sample": "4.02",
+        "description": "Estimated shipping fee calculated by weight. Don't exist if channel is no-integrated."
+      },
+      {
+        "name": "pre_order",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "is_pre_order",
+        "type": "boolean",
+        "sample": "false",
+        "description": "Pre-order will be set true."
+      },
+      {
+        "name": "days_to_ship",
+        "type": "int32",
+        "sample": "3",
+        "description": "The days to ship. Only work for pre-orde."
+      },
+      {
+        "name": "wholesales",
+        "type": "object[]",
+        "sample": "",
+        "description": "The wholesales tier list."
+      },
+      {
+        "name": "min_count",
+        "type": "int32",
+        "sample": "1",
+        "description": "The min count of this tier wholesale."
+      },
+      {
+        "name": "max_count",
+        "type": "int32",
+        "sample": "2",
+        "description": "The max count of this tier wholesale."
+      },
+      {
+        "name": "unit_price",
+        "type": "float",
+        "sample": "4.02",
+        "description": "The current price of the wholesale in the listing currency.If item is in promotion, this price is useless."
+      },
+      {
+        "name": "inflated_price_of_unit_price",
+        "type": "float",
+        "sample": "5.02",
+        "description": "The After-tax Price of the wholesale show to buyer."
+      },
+      {
+        "name": "condition",
+        "type": "string",
+        "sample": "NEW/USED",
+        "description": "Is it second-hand."
+      },
+      {
+        "name": "size_chart",
+        "type": "string",
+        "sample": "",
+        "description": "Url of size chart image."
+      },
+      {
+        "name": "item_status",
+        "type": "string",
+        "sample": "NORMAL",
+        "description": "Enumerated type that defines the current status of the item. Applicable values: NORMAL, BANNED, UNLIST, SELLER_DELETE, SHOPEE_DELETE, REVIEWING."
+      },
+      {
+        "name": "deboost",
+        "type": "boolean",
+        "sample": "false",
+        "description": "If deboost is true, means that the item's search ranking is lowered."
+      },
+      {
+        "name": "has_model",
+        "type": "boolean",
+        "sample": "false",
+        "description": "Does it contain model."
+      },
+      {
+        "name": "promotion_id",
+        "type": "int64",
+        "sample": "13123",
+        "description": ""
+      },
+      {
+        "name": "video_info",
+        "type": "object[]",
+        "sample": "",
+        "description": "Info of video list."
+      },
+      {
+        "name": "video_url",
+        "type": "string",
+        "sample": "",
+        "description": "Url of video."
+      },
+      {
+        "name": "thumbnail_url",
+        "type": "string",
+        "sample": "",
+        "description": "Thumbnail of video."
+      },
+      {
+        "name": "duration",
+        "type": "int32",
+        "sample": "",
+        "description": "Duration of video."
+      },
+      {
+        "name": "brand",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "brand_id",
+        "type": "int32",
+        "sample": "123",
+        "description": "Id of brand."
+      },
+      {
+        "name": "original_brand_name",
+        "type": "string",
+        "sample": "nike",
+        "description": "Original name of brand."
+      },
+      {
+        "name": "item_dangerous",
+        "type": "int32",
+        "sample": "0",
+        "description": "This field is only applicable for local sellers in Indonesia and Malaysia. Use this field to identify whether a product is a dangerous product. 0 for non-dangerous product and 1 for dangerous product. For more information, please visit the market's respective Seller Education Hub."
+      },
+      {
+        "name": "gtin_code",
+        "type": "string",
+        "sample": "",
+        "description": "gtin code for br region, will return this code only item has default model Note: gtin_code = \"00\" means that this item is “Item without GTIN”"
+      },
+      {
+        "name": "size_chart_id",
+        "type": "int64",
+        "sample": "",
+        "description": "id of new size chart."
+      },
+      {
+        "name": "promotion_image",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "image_id_list",
+        "type": "string[]",
+        "sample": "",
+        "description": "Promotion image"
+      },
+      {
+        "name": "image_url_list",
+        "type": "string[]",
+        "sample": "",
+        "description": "Promiton image urls"
+      },
+      {
+        "name": "image_ratio",
+        "type": "string",
+        "sample": "",
+        "description": "Promotion image ratio"
+      },
+      {
+        "name": "compatibility_info",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "vehicle_info_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "brand_id",
+        "type": "int64",
+        "sample": "1234",
+        "description": "ID of the brand."
+      },
+      {
+        "name": "model_id",
+        "type": "int64",
+        "sample": "2345",
+        "description": "ID of the model."
+      },
+      {
+        "name": "year_id",
+        "type": "int64",
+        "sample": "3456",
+        "description": "ID of the year."
+      },
+      {
+        "name": "version_id",
+        "type": "int64",
+        "sample": "4567",
+        "description": "ID of the version."
+      },
+      {
+        "name": "scheduled_publish_time",
+        "type": "timestamp",
+        "sample": "1733590920",
+        "description": "Scheduled publish time of this item."
+      },
+      {
+        "name": "authorised_brand_id",
+        "type": "int64",
+        "sample": "",
+        "description": "ID of authorised reseller brand."
+      },
+      {
+        "name": "ssp_id",
+        "type": "int64",
+        "sample": "",
+        "description": "Shopee's unique identifier for Shopee Standard Product."
+      },
+      {
+        "name": "is_fulfillment_by_shopee",
+        "type": "boolean",
+        "sample": "",
+        "description": "return true if the item only has a default model and it is FBS model"
+      },
+      {
+        "name": "complaint_policy",
+        "type": "object",
+        "sample": "",
+        "description": "Complaint policy.Only returned for local PL sellers, and need_complaint_policy in request is true."
+      },
+      {
+        "name": "warranty_time",
+        "type": "string",
+        "sample": "ONE_YEAR",
+        "description": "Time for a warranty claim.Value should be in one of ONE_YEAR TWO_YEARS OVER_TWO_YEARS."
+      },
+      {
+        "name": "exclude_entrepreneur_warranty",
+        "type": "boolean",
+        "sample": "",
+        "description": "If True means \"I exclude warranty complaints for entrepreneur\""
+      },
+      {
+        "name": "complaint_address_id",
+        "type": "int64",
+        "sample": "",
+        "description": "The identity of complaint address."
+      },
+      {
+        "name": "additional_information",
+        "type": "string",
+        "sample": "",
+        "description": "Additional information for complaint policy"
+      },
+      {
+        "name": "tax_info",
+        "type": "object",
+        "sample": "",
+        "description": "Tax information"
+      },
+      {
+        "name": "ncm",
+        "type": "string",
+        "sample": "",
+        "description": "Mercosur Common Nomenclature, it is a convention between Mercosur member countries to easily recognize goods, services and productive factors negotiated among themselves.(BR region) Note: ncm = \"00\" means that this item doesn't have a NCM."
+      },
+      {
+        "name": "diff_state_cfop",
+        "type": "string",
+        "sample": "",
+        "description": "Tax Code of Operations and Installments for orders that seller and buyer are in different states. It identifies a specific operation by category at the time of issuing the invoice. (BR region)"
+      },
+      {
+        "name": "csosn",
+        "type": "string",
+        "sample": "",
+        "description": "Code of Operation Status – Simples Nacional, code for company operations to identify the origin of the goods and the taxation regime of the operations. (BR region)"
+      },
+      {
+        "name": "origin",
+        "type": "string",
+        "sample": "",
+        "description": "Product source, domestic or foreig (BR region)"
+      },
+      {
+        "name": "cest",
+        "type": "string",
+        "sample": "",
+        "description": "Tax Replacement Specifying Code (CEST), to separate within the same NCM products that do or do not have ICMS tax substitution. (BR region) Note: cest = \"00\" means that this item doesn't have a CEST."
+      },
+      {
+        "name": "measure_unit",
+        "type": "string",
+        "sample": "",
+        "description": "(BR region)"
+      },
+      {
+        "name": "invoice_option",
+        "type": "string",
+        "sample": "",
+        "description": "Value shuold be one of NO_INVOICES VAT_MARGIN_SCHEME_INVOICES VAT_INVOICES NON_VAT_INVOICES and if value is NON_VAT_INVOICE vat_rate should be null (PL region)"
+      },
+      {
+        "name": "vat_rate",
+        "type": "string",
+        "sample": "",
+        "description": "Value should be one of 0% 5% 8% 23% NO_VAT_RATE (PL region)"
+      },
+      {
+        "name": "hs_code",
+        "type": "string",
+        "sample": "",
+        "description": "HS Code (Only for IN region)"
+      },
+      {
+        "name": "tax_code",
+        "type": "string",
+        "sample": "",
+        "description": "Tax Code (Only for IN region)"
+      },
+      {
+        "name": "tax_type",
+        "type": "int32",
+        "sample": "",
+        "description": "tax_type only for TW whitelist shop. Shopee will referred Tax type when substitute sellers for issuing e-receipts to buyers. All variations share the same tax type. The meaning of value: 0: no tax type 1: tax-able 2: tax-free"
+      },
+      {
+        "name": "pis",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. PIS - Programa de Integração Social (Social Integration Program). It is a government tax to collect resources for the payment of unemployment insurance and other employee related rights. PIS % - the tax applied to this product"
+      },
+      {
+        "name": "cofins",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. COFINS – Contribuição para Financiamento da Seguridade Social (Contribution for Social Security Funding). It is a government tax to collect resources for public health system and social security. COFINS % - the tax applied to this product"
+      },
+      {
+        "name": "icms_cst",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. ICMS - Imposto sobre Circulação de Mercadorias e Serviços (Circulation of Goods and Services Tax). CST - Código da Situação Tributária (Tax Situation Code) is represented by a combination of 3 numbers with the purpose of demonstrating the origin of a product and determining the form of taxation that will apply to it. Therefore, each digit in the CST Table has a specific meaning: the first digit indicates the origin of the operation, the second digit represents the ICMS taxation on the operation and the third digit provides additional information about the form of taxation."
+      },
+      {
+        "name": "pis_cofins_cst",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. The CST PIS/Cofins is a code on the Electronic Invoice (NF-e) that identifies the tax situation of PIS (Programa de Integração Social) and Cofins (Contribuição para o Financiamento da Seguridade Social) in sales of goods."
+      },
+      {
+        "name": "federal_state_taxes",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. Enter the total percentage of the combination of federal, state, and municipal taxes, using up to two decimals."
+      },
+      {
+        "name": "operation_type",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. 1: Retailer 2: Manufacturer"
+      },
+      {
+        "name": "ex_tipi",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. The EXTIPI field in the NF-e (Nota Fiscal Eletrônica) is used to indicate if there's an exception to the IPI (Imposto sobre Produtos Industrializados) tax rate for a specific product."
+      },
+      {
+        "name": "fci_num",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. The FCI Control Number is a unique identifier assigned to each import FCI (Import Content Form). It's mandatory on the corresponding NF-e (electronic invoice) to ensure compliance with Brazilian import tax regulations."
+      },
+      {
+        "name": "recopi_num",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. RECOPI NACIONAL is a Brazilian government system that facilitates the registration and management of tax-exempt operations involving paper destined for printing books, newspapers, and periodicals (known as \"papel imune\" in Portuguese)."
+      },
+      {
+        "name": "additional_info",
+        "type": "string",
+        "sample": "",
+        "description": "Only for BR shop. Include relevant information to display on Invoice."
+      },
+      {
+        "name": "group_item_info",
+        "type": "object",
+        "sample": "",
+        "description": "Only for BR shop. Required if the item is a group item."
+      },
+      {
+        "name": "group_qtd",
+        "type": "string",
+        "sample": "",
+        "description": "Example: The package contains 6 soda cans. Whether you are selling a pack of 6 cans (fardo) or a single can (unit), enter 6."
+      },
+      {
+        "name": "group_unit",
+        "type": "string",
+        "sample": "",
+        "description": "Example: The package contains 6 soda cans. Whether you are selling a pack of 6 cans (fardo) or a single can (unit), enter UNI for the individual can."
+      },
+      {
+        "name": "group_unit_value",
+        "type": "string",
+        "sample": "",
+        "description": "Example: The package contains 6 soda cans. Whether you are selling a pack of 6 cans (fardo) or a single can (unity), enter the value of the individual can."
+      },
+      {
+        "name": "original_group_price",
+        "type": "string",
+        "sample": "",
+        "description": "Example: The item is a package that contains 6 soda cans. Enter the price of the whole package."
+      },
+      {
+        "name": "group_gtin_sscc",
+        "type": "string",
+        "sample": "",
+        "description": "Example: The item is a package that contains 6 soda cans. Please inform the GTIN SSCC code for the package."
+      },
+      {
+        "name": "group_grai_gtin_sscc",
+        "type": "string",
+        "sample": "",
+        "description": "Example: The item is box, that contain 6 packages. Each package contains 6 soda cans. Please inform the GRAI GTIN SSCC code for the Box."
+      },
+      {
+        "name": "export_cfop",
+        "type": "string",
+        "sample": "",
+        "description": "7101 - for sales of self-produced goods 7102 - resale of third-party goods a tax code used in Brazil to classify and identify the nature of goods or services transactions for tax purposes. This is used for goods export to other counties"
+      },
+      {
+        "name": "description_info",
+        "type": "object",
+        "sample": "",
+        "description": "New description field. Only whitelist sellers can use it."
+      },
+      {
+        "name": "extended_description",
+        "type": "object",
+        "sample": "",
+        "description": "If description_type is extended , Description information will be returned through this field."
+      },
+      {
+        "name": "field_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "Field of extended description"
+      },
+      {
+        "name": "field_type",
+        "type": "string",
+        "sample": "",
+        "description": "Type of extended description field ：values: See Data Definition- description_field_type (text , image)."
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "sample": "",
+        "description": "If field_type is text, text information will be returned through this field."
+      },
+      {
+        "name": "image_info",
+        "type": "object",
+        "sample": "",
+        "description": "If field_type is image, image url will be returned through this field."
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "sample": "",
+        "description": "Image id"
+      },
+      {
+        "name": "image_url",
+        "type": "string",
+        "sample": "",
+        "description": "Image url."
+      },
+      {
+        "name": "description_type",
+        "type": "string",
+        "sample": "",
+        "description": "Type of description : values: See Data Definition- description_type (normal , extended)."
+      },
+      {
+        "name": "stock_info_v2",
+        "type": "object",
+        "sample": "",
+        "description": "new stock object"
+      },
+      {
+        "name": "summary_info",
+        "type": "object",
+        "sample": "",
+        "description": "stock summary info"
+      },
+      {
+        "name": "total_reserved_stock",
+        "type": "int32",
+        "sample": "",
+        "description": "Stock reserved for promotion. Note: For SIP P Item, will return the total reserved stock for P Item and all A Items under the P Item;"
+      },
+      {
+        "name": "total_available_stock",
+        "type": "int32",
+        "sample": "",
+        "description": "total available stock"
+      },
+      {
+        "name": "seller_stock",
+        "type": "object[]",
+        "sample": "",
+        "description": "seller stock"
+      },
+      {
+        "name": "location_id",
+        "type": "string",
+        "sample": "",
+        "description": "location id"
+      },
+      {
+        "name": "stock",
+        "type": "int32",
+        "sample": "",
+        "description": "stock in the current warehouse"
+      },
+      {
+        "name": "if_saleable",
+        "type": "boolean",
+        "sample": "",
+        "description": "To return if the stock of the location id is saleable"
+      },
+      {
+        "name": "shopee_stock",
+        "type": "object[]",
+        "sample": "",
+        "description": "shopee stock"
+      },
+      {
+        "name": "location_id",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "stock",
+        "type": "int32",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "advance_stock",
+        "type": "object",
+        "sample": "",
+        "description": "Only for PH/VN/ID/MY local selected shops."
+      },
+      {
+        "name": "sellable_advance_stock",
+        "type": "int32",
+        "sample": "",
+        "description": "Refers to Advance Fulfillment stock that Seller has shipped out and is available to be used to fulfill an order."
+      },
+      {
+        "name": "in_transit_advance_stock",
+        "type": "int32",
+        "sample": "",
+        "description": "Refers to Advance Fulfillment stock that seller has shipped out and is still in transit and unavailable to be used to fulfill an order."
+      },
+      {
+        "name": "certification_info",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "certification_type",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "certification_no",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "certification_proofs",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "image_url",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "expire_time",
+        "type": "int32",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "permit_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"-\",\n    \"message\": \"-\",\n    \"warning\": \"-\",\n    \"request_id\": \"7b9da0c6926642199c33ee9dd3a266f5\",\n    \"response\": {\n        \"item_list\": [\n            {\n                \"item_id\": 34002,\n                \"category_id\": 14646,\n                \"item_name\": \"seller discount\",\n                \"description\": \"first product 001first product\",\n                \"item_sku\": \"-\",\n                \"create_time\": 1600572637,\n                \"update_time\": 1600572640,\n                \"attribute_list\": [\n                    {\n                        \"attribute_id\": 4811,\n                        \"original_attribute_name\": \"Brand: L2 Default [14644]\",\n                        \"is_mandatory\": true,\n                        \"attribute_value_list\": [\n                            {\n                                \"value_id\": 0,\n                                \"original_value_name\": \"Default\",\n                                \"value_unit\": \"g\"\n                            }\n                        ]\n                    }\n                ],\n                \"price_info\": [\n                    {\n                        \"currency\": \"SGD\",\n                        \"original_price\": 122.02,\n                        \"current_price\": 122.02,\n                        \"inflated_price_of_original_price\": 222.02,\n                        \"inflated_price_of_current_price\": 111.02,\n                        \"sip_item_price\": 100.02,\n                        \"sip_item_price_source\": \"auto\"\n                    }\n                ],\n                \"image\": {\n                    \"image_url_list\": [\n                        \"-\"\n                    ],\n                    \"image_id_list\": [\n                        \"-\"\n                    ]\n                },\n                \"weight\": \"10.02\",\n                \"dimension\": {\n                    \"package_length\": 11,\n                    \"package_width\": 12,\n                    \"package_height\": 13\n                },\n                \"logistic_info\": [\n                    {\n                        \"logistic_id\": 80012,\n                        \"logistic_name\": \"-\",\n                        \"enabled\": true,\n                        \"shipping_fee\": 5.02,\n                        \"size_id\": 0,\n                        \"is_free\": true,\n                        \"estimated_shipping_fee\": 4.02\n                    }\n                ],\n                \"pre_order\": {\n                    \"is_pre_order\": true,\n                    \"days_to_ship\": 3\n                },\n                \"wholesales\": [\n                    {\n                        \"min_count\": 1,\n                        \"max_count\": 2,\n                        \"unit_price\": 4.02,\n                        \"inflated_price_of_unit_price\": 5.02\n                    }\n                ],\n                \"condition\": \"NEW/USED\",\n                \"size_chart\": \"-\",\n                \"item_status\": \"NORMAL\",\n                \"deboost\": \"false\",\n                \"has_model\": true,\n                \"promotion_id\": 13123,\n                \"video_info\": [\n                    {\n                        \"video_url\": \"-\",\n                        \"thumbnail_url\": \"-\",\n                        \"duration\": 0\n                    }\n                ],\n                \"brand\": {\n                    \"brand_id\": 123,\n                    \"original_brand_name\": \"nike\"\n                },\n                \"item_dangerous\": 0,\n                \"complaint_policy\": {\n                    \"warranty_time\": \" ONE_YEAR\",\n                    \"exclude_entrepreneur_warranty\": true,\n                    \"complaint_address_id\": 0,\n                    \"additional_information\": \"-\"\n                },\n                \"tax_info\": {\n                    \"ncm\": \"-\",\n                    \"diff_state_cfop\": \"-\",\n                    \"csosn\": \"-\",\n                    \"origin\": \"-\",\n                    \"cest\": \"-\",\n                    \"measure_unit\": \"-\",\n                    \"invoice_option\": \"-\",\n                    \"vat_rate\": \"-\",\n                    \"hs_code\": \"-\",\n                    \"tax_code\": \"-\"\n                },\n                \"description_info\": {\n                    \"extended_description\": {\n                        \"field_list\": [\n                            {\n                                \"field_type\": \"-\",\n                                \"text\": \"-\",\n                                \"image_info\": {\n                                    \"image_id\": \"-\",\n                                    \"image_url\": \"-\"\n                                }\n                            }\n                        ]\n                    }\n                },\n                \"description_type\": \"-\",\n                \"stock_info_v2\": {\n                    \"summary_info\": {\n                        \"total_reserved_stock\": 100,\n                        \"total_available_stock\": 100\n                    },\n                    \"seller_stock\": [\n                        {\n                            \"location_id\": \"-\",\n                            \"stock\": 10\n                        }\n                    ],\n                    \"shopee_stock\": [\n                        {\n                            \"location_id\": \"-\",\n                            \"stock\": 0\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_item_not_found",
+      "message": "Item_id is not found."
+    },
+    {
+      "code": "error_param_shop_id_not_found",
+      "message": "Shop_id is not found."
+    },
+    {
+      "code": "error_invalid_language",
+      "message": "Invalid language."
+    },
+    {
+      "code": "error_get_shop_fail",
+      "message": "Get shop failed. please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_item_not_found",
+      "message": "Product not found"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_auth",
+      "message": "The location_id input is not matched the shop's location_id(more/wrong). Please double check."
+    },
+    {
+      "code": "error_auth",
+      "message": "Lack of location_id, please double check."
+    },
+    {
+      "code": "error_auth",
+      "message": "Please wait for the holiday mode set then to edit item. Please try later."
+    },
+    {
+      "code": "error_auth",
+      "message": "Total stock must be more than reserved stock."
+    },
+    {
+      "code": "error_param",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_param",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_auth",
+      "message": "You do not have right to use seller location_id, please only fill seller_stock filed."
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_param",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error.param",
+      "message": "Can not update item with stock less than reserved stock"
+    },
+    {
+      "code": "error_param",
+      "message": "Can not update item with different stock structure. Can only update seller stock with location id when existing seller stock have location id. Can only update seller stock without location id when existing seller stock without location id."
+    },
+    {
+      "code": "error_param",
+      "message": "Can not update item with stock less than reserve stock"
+    },
+    {
+      "code": "error_auth",
+      "message": "Stock should be larger than reserved stock."
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_param",
+      "message": "Can not update item with different stock structure. Can only update seller stock with location id when existing seller stock have location id. Can only update seller stock without location id when existing seller stock without location id."
+    },
+    {
+      "code": "error_slash_price_load",
+      "message": "Failed to load slash price."
+    },
+    {
+      "code": "error_query_over_itemid_size",
+      "message": "Interal error, please contact openapi team."
+    },
+    {
+      "code": "error_query_condition_list_limit",
+      "message": "Interal error, please contact openapi team."
+    },
+    {
+      "code": "error_query_query_limit_too_large",
+      "message": "Interal error, please contact openapi team."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_item_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_item_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_item_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_item_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_item_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_item_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_item_list"
+      }
+    ]
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "platform": "shopee",
+  "module": "bundle_deal",
+  "endpoint_name": "update_bundle_deal",
+  "version": "v2",
+  "summary": "get bundle deal item",
+  "description": "get bundle deal item",
+  "path": "/api/v2/bundle_deal/get_bundle_deal_item",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "rule_type",
+        "type": "int",
+        "required": false,
+        "description": "The bundle deal rule type：FIX_PRICE = 1 ；DISCOUNT_PERCENTAGE = 2； DISCOUNT_VALUE = 3",
+        "sample": "1"
+      },
+      {
+        "name": "discount_value",
+        "type": "float",
+        "required": false,
+        "description": "The deducted price when when buying a bundle deal. Need to input it when the bundle deal rule type is 3",
+        "sample": "11.0"
+      },
+      {
+        "name": "fix_price",
+        "type": "float",
+        "required": false,
+        "description": "The amount of the buyer needs to spend to purchase a bundle deal.Need to input it when the bundle deal rule type is 1",
+        "sample": "11.0"
+      },
+      {
+        "name": "discount_percentage",
+        "type": "int",
+        "required": false,
+        "description": "The discount that the buyer can get when buying a bundle deal. Need to input it when the bundle deal rule type is 2",
+        "sample": "33"
+      },
+      {
+        "name": "min_amount",
+        "type": "int",
+        "required": false,
+        "description": "The quantity of items that need buyer to combine purchased",
+        "sample": "123"
+      },
+      {
+        "name": "start_time",
+        "type": "int",
+        "required": false,
+        "description": "The time when bundle deal activity start.The start time must be later than current time.",
+        "sample": "1655654412"
+      },
+      {
+        "name": "end_time",
+        "type": "int",
+        "required": false,
+        "description": "The time when bundle deal activity end. The end time must be later than current time.",
+        "sample": "1658246412"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Title of the bundle deal",
+        "sample": "bundle name"
+      },
+      {
+        "name": "purchase_limit",
+        "type": "int",
+        "required": false,
+        "description": "Maximum number of bundle deals that can be bought by a buyer.",
+        "sample": "3"
+      },
+      {
+        "name": "bundle_deal_id",
+        "type": "int",
+        "required": true,
+        "description": "Shopee's unique identifier for a bundle deal activity.",
+        "sample": "6833"
+      },
+      {
+        "name": "additional_tiers",
+        "type": "object",
+        "required": false,
+        "description": "Use to create tiered discount for bundle deals, a max of 2 additional tiers are allowed to create bundle deals like buy 2 get 10% off, buy 3 for 15% off, buy 4 for 20% off; For each tier, we will need to set the following 4 values based on bundle deal type + min_amount = IntAttribute() + fix_price = IntAttribute() + discount_percentage = IntAttribute() + discount_value = IntAttribute()Note: for additional tiers, the fix price, discount_percentage, discount_value should be consistent with tier 1",
+        "sample": ""
+      },
+      {
+        "name": "min_amount",
+        "type": "int",
+        "required": true,
+        "description": "The quantity of items that the buyers need to purchase for additional tier",
+        "sample": "100"
+      },
+      {
+        "name": "fix_price",
+        "type": "float",
+        "required": false,
+        "description": "The bundle price when the buyers purchase a bundle deal for additional tiers. Need to input it when the bundle deal rule type is 1.",
+        "sample": "100.00"
+      },
+      {
+        "name": "discount_value",
+        "type": "float",
+        "required": false,
+        "description": "The bundle deal discount amount the buyer can save when purchasing a bundle deal. Need to input it when the bundle deal rule type is 3",
+        "sample": "20.00"
+      },
+      {
+        "name": "discount_percentage",
+        "type": "int",
+        "required": false,
+        "description": "The bundle deal discount% that the buyer can get when buying a bundle deal for additional tiers. Need to input it when the bundle deal rule type is 2",
+        "sample": "20"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n  \"bundle_deal_id\": 6833,\n  \"rule_type\": 1,\n  \"discount_value\": 11.0,\n  \"fix_price\": 11.0,\n  \"discount_percentage\": 33,\n  \"min_amount\": 123,\n  \"start_time\": 1655654412,\n  \"end_time\": 1658246412,\n  \"name\": \"bundle name\",\n  \"purchase_limit\": 3\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "The description of error code"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "2cda1f9c9b44449aedbc11dwer3ced242",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "bundle_deal_id",
+        "type": "int",
+        "sample": "6833",
+        "description": "Shopee's unique identifier for a bundle deal activity."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "bundle name",
+        "description": "Title of the bundle deal"
+      },
+      {
+        "name": "start_time",
+        "type": "int",
+        "sample": "1655654412",
+        "description": "The time when bundle deal activity start."
+      },
+      {
+        "name": "end_time",
+        "type": "int",
+        "sample": "1658246412",
+        "description": "The time when bundle deal activity end."
+      },
+      {
+        "name": "bundle_deal_rule",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "rule_type",
+        "type": "int",
+        "sample": "1",
+        "description": "The bundle deal rule type：FIX_PRICE = 1 ；DISCOUNT_PERCENTAGE = 2； DISCOUNT_VALUE = 3"
+      },
+      {
+        "name": "discount_value",
+        "type": "float",
+        "sample": "11.0",
+        "description": "The deducted price when when buying a bundle deal. Need to input it when the bundle deal rule type is 3"
+      },
+      {
+        "name": "fix_price",
+        "type": "float",
+        "sample": "11.0",
+        "description": "The amount of the buyer needs to spend to purchase a bundle deal. Need to input it when the bundle deal rule type is 1"
+      },
+      {
+        "name": "discount_percentage",
+        "type": "int",
+        "sample": "33",
+        "description": "The discount that the buyer can get when buying a bundle deal. Need to input it when the bundle deal rule type is 2"
+      },
+      {
+        "name": "min_amount",
+        "type": "int",
+        "sample": "123",
+        "description": "The quantity of items that need buyer to combine purchased"
+      },
+      {
+        "name": "additional_tiers",
+        "type": "object[]",
+        "sample": "",
+        "description": "Use to create tiered discount for bundle deals, a max of 2 additional tiers are allowed to create bundle deals like buy 2 get 10% off, buy 3 for 15% off, buy 4 for 20% off; For each tier, we will need to set the following 4 values based on bundle deal type + min_amount = IntAttribute() + fix_price = IntAttribute() + discount_percentage = IntAttribute() + discount_value = IntAttribute()Note: for additional tiers, the fix price, discount_percentage, discount_value should be consistent with tier 1"
+      },
+      {
+        "name": "min_amount",
+        "type": "int",
+        "sample": "123",
+        "description": "The quantity of items that the buyers need to purchase for additional tier"
+      },
+      {
+        "name": "fix_price",
+        "type": "float",
+        "sample": "11.0",
+        "description": "The bundle price when the buyers purchase a bundle deal for additional tiers. Need to input it when the bundle deal rule type is 1."
+      },
+      {
+        "name": "discount_value",
+        "type": "float",
+        "sample": "11.0",
+        "description": "The bundle deal discount amount the buyer can save when purchasing a bundle deal. Need to input it when the bundle deal rule type is 3"
+      },
+      {
+        "name": "discount_percentage",
+        "type": "int",
+        "sample": "33",
+        "description": "The bundle deal discount% that the buyer can get when buying a bundle deal for additional tiers. Need to input it when the bundle deal rule type is 2"
+      },
+      {
+        "name": "purchase_limit",
+        "type": "int",
+        "sample": "3",
+        "description": "Maximum number of bundle deals that can be bought by a buyer."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"2cda1f9c9b44449aedbc11dwer3ced242\",\n    \"response\": {\n        \"bundle_deal_id\": 6833,\n        \"name\": \"bundle name\",\n        \"start_time\":1655654412,\n        \"end_time\": 1658246412,\n        \"bundle_deal_rule\": {\n            \"rule_type\": 1, \n            \"discount_value\": 11.0,\n            \"fix_price\": 11.0,\n            \"discount_percentage\": 33, \n            \"min_amount\": 123         \n        },\n        \"purchase_limit\": 3\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "bundle.bundle_deal_discount_value_invalid_range",
+      "message": "Discount value should be within Price range."
+    },
+    {
+      "code": "bundle.bundle_deal_end_time_error",
+      "message": "Promotion end time can only be changed to an earlier timing."
+    },
+    {
+      "code": "bundle.bundle_deal_error_unknown",
+      "message": "Unknown error occurred in the service"
+    },
+    {
+      "code": "bundle.bundle_deal_exceed_remaining_time_limit",
+      "message": "The bundle deal end time must earlier than the max allowed current time"
+    },
+    {
+      "code": "bundle.bundle_deal_fix_price_invalid_range",
+      "message": "Fix price should be within Price range."
+    },
+    {
+      "code": "bundle.bundle_deal_multi_tier_invalid_fix_price_per_item",
+      "message": "Higher tier should have lower price per item (price per item = fixed bundle price / item amount)"
+    },
+    {
+      "code": "bundle.bundle_deal_multi_tier_feature_toggle",
+      "message": "Cannot create multi-tier bundle deals"
+    },
+    {
+      "code": "bundle.bundle_deal_name_length",
+      "message": "Name length can't be less than 1 or greater than 25"
+    },
+    {
+      "code": "bundle.bundle_deal_no_auth_update",
+      "message": "The shopee created bundle deal can't be edited"
+    },
+    {
+      "code": "bundle.bundle_deal_not_exists",
+      "message": "Bundle deal doesn't existed"
+    },
+    {
+      "code": "bundle.bundle_deal_ongoing_promotion_info_lock",
+      "message": "Cannot change rule_type, fix_price, discount_percentage, discount_value or tiers number if Bundle deal is ongoing."
+    },
+    {
+      "code": "bundle.bundle_deal_ongoing_promotion_info_lock_min_amount",
+      "message": "Cannot change min_amount if Bundle deal is ongoing and has enabled items"
+    },
+    {
+      "code": "bundle.bundle_deal_over_min_amount",
+      "message": "The item amount can't exceed 3000"
+    },
+    {
+      "code": "bundle.bundle_deal_over_tier",
+      "message": "Max bundle tier allowed is 3"
+    },
+    {
+      "code": "bundle.bundle_deal_rule_type_error",
+      "message": "The rule type of ongoing bundle deal can't be edited"
+    },
+    {
+      "code": "bundle.bundle_deal_rule_type_mix_use",
+      "message": "Please use consistent rule type"
+    },
+    {
+      "code": "bundle.bundle_deal_rule_type_value",
+      "message": "Please use correct bundle deal rule type"
+    },
+    {
+      "code": "bundle.bundle_deal_tier_invalid",
+      "message": "The discount off for tier 1 must be < 90%%"
+    },
+    {
+      "code": "bundle.bundle_deal_under_min_amount",
+      "message": "The item amount should be greater than 1"
+    },
+    {
+      "code": "bundle.bundle_deal_under_min_amount_multi_tier",
+      "message": "The item amount should be greater than the previous tier"
+    },
+    {
+      "code": "bundle.bundle_deal_invaild_discount_percentage",
+      "message": "Discount percentage should not less than 1%% and not more than 99%%"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "bundle.bundle_deal_start_time_error",
+      "message": "Promotion start time can only be changed to a later timing."
+    },
+    {
+      "code": "bundle.bundle_deal_start_time_error",
+      "message": "The start_time of ongoing promotion can't be updated"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/bundle_deal/get_bundle_deal_item"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/bundle_deal/get_bundle_deal_item"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/bundle_deal/get_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/bundle_deal/get_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/bundle_deal/get_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/bundle_deal/get_bundle_deal_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/bundle_deal/get_bundle_deal_item"
+      }
+    ]
+  }
+}

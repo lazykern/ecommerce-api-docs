@@ -1,0 +1,134 @@
+{
+  "platform": "lazada",
+  "module": "hunting",
+  "endpoint_name": "queryBuyboxHuntingInfo",
+  "version": null,
+  "summary": "SPU竞价接口",
+  "description": "SPU竞价接口",
+  "path": "/hunting/buybox/get",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "HuntingQueryParam",
+        "type": "Object",
+        "required": true,
+        "description": "param"
+      },
+      {
+        "name": "result",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/hunting/buybox/get\");\nrequest.addApiParameter(\"HuntingQueryParam\", \"{\\\"venture\\\":\\\"PH\\\",\\\"skuId\\\":\\\"12345\\\"}\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/hunting/buybox/get');\n$request->addApiParam('HuntingQueryParam','{\\\"venture\\\":\\\"PH\\\",\\\"skuId\\\":\\\"12345\\\"}');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/hunting/buybox/get\");\nrequest.AddApiParameter(\"HuntingQueryParam\", \"{\\\"venture\\\":\\\"PH\\\",\\\"skuId\\\":\\\"12345\\\"}\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/hunting/buybox/get')\nrequest.add_api_parameter(\"HuntingQueryParam\", \"{\\\"venture\\\":\\\"PH\\\",\\\"skuId\\\":\\\"12345\\\"}\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/hunting/buybox/get')\nrequest.add_api_param('HuntingQueryParam', '{\\\"venture\\\":\\\"PH\\\",\\\"skuId\\\":\\\"12345\\\"}')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/hunting/buybox/get' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"HuntingQueryParam\":\"%7B%22venture%22%3A%22PH%22%2C%22skuId%22%3A%2212345%22%7D\",\"app_key\":\"1234567\",\"timestamp\":\"1750231504324\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object",
+        "description": "result"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": {\n    \"data\": {\n      \"itemId\": \"123456\",\n      \"isValid\": \"1\",\n      \"venture\": \"PH\",\n      \"skuId\": \"567890\",\n      \"priceRank\": \"2\"\n    },\n    \"retSuccess\": \"true\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

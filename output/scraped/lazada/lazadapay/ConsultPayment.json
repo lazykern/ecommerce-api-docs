@@ -1,0 +1,220 @@
+{
+  "platform": "lazada",
+  "module": "lazadapay",
+  "endpoint_name": "ConsultPayment",
+  "version": null,
+  "summary": "The interface is used for consult pay view",
+  "description": "The interface is used for consult pay view. Will return pay view info including balance, coupon, credit card etc. If we have no available coupon, we will return pay method view with an empty list of coupon.",
+  "path": "/lazadapay/v1/debit/consult_payment",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "serviceCode",
+        "type": "String",
+        "required": true,
+        "description": "Indentifier for service"
+      },
+      {
+        "name": "payFrom",
+        "type": "Object",
+        "required": true,
+        "description": "Where is the money to be received, the receivable details, including the user and payment amount information"
+      },
+      {
+        "name": "payTos",
+        "type": "Object[]",
+        "required": false,
+        "description": "Details payable, including sellers and amount"
+      },
+      {
+        "name": "orderGroup",
+        "type": "Object",
+        "required": false,
+        "description": "Multi Orders Information"
+      },
+      {
+        "name": "envInfo",
+        "type": "String",
+        "required": false,
+        "description": "Environment info from buyer"
+      },
+      {
+        "name": "payOptions",
+        "type": "String[]",
+        "required": false,
+        "description": "pay simulate when payOptions is not null"
+      },
+      {
+        "name": "productExt",
+        "type": "String",
+        "required": false,
+        "description": "Additional Info for payment product"
+      },
+      {
+        "name": "additionalInfo",
+        "type": "String",
+        "required": false,
+        "description": "Additional Info"
+      },
+      {
+        "name": "responseMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "responseCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "additionalInfo",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "payOptions",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/lazadapay/v1/debit/consult_payment\");\nrequest.addApiParameter(\"serviceCode\", \"01\");\nrequest.addApiParameter(\"payFrom\", \"{\\\"transAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"},\\\"additionalInfo\\\":\\\"{}\\\",\\\"custIdMercghost\\\":\\\"{}\\\"}\");\nrequest.addApiParameter(\"payTos\", \"[{\\\"customerId\\\":\\\"{}\\\",\\\"additionalInfo\\\":\\\"{}\\\",\\\"payToAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"}}]\");\nrequest.addApiParameter(\"orderGroup\", \"{}\");\nrequest.addApiParameter(\"envInfo\", \"{}\");\nrequest.addApiParameter(\"payOptions\", \"{}\");\nrequest.addApiParameter(\"productExt\", \"{}\");\nrequest.addApiParameter(\"additionalInfo\", \"{}\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/lazadapay/v1/debit/consult_payment');\n$request->addApiParam('serviceCode','01');\n$request->addApiParam('payFrom','{\\\"transAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"},\\\"additionalInfo\\\":\\\"{}\\\",\\\"custIdMercghost\\\":\\\"{}\\\"}');\n$request->addApiParam('payTos','[{\\\"customerId\\\":\\\"{}\\\",\\\"additionalInfo\\\":\\\"{}\\\",\\\"payToAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"}}]');\n$request->addApiParam('orderGroup','{}');\n$request->addApiParam('envInfo','{}');\n$request->addApiParam('payOptions','{}');\n$request->addApiParam('productExt','{}');\n$request->addApiParam('additionalInfo','{}');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/lazadapay/v1/debit/consult_payment\");\nrequest.AddApiParameter(\"serviceCode\", \"01\");\nrequest.AddApiParameter(\"payFrom\", \"{\\\"transAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"},\\\"additionalInfo\\\":\\\"{}\\\",\\\"custIdMercghost\\\":\\\"{}\\\"}\");\nrequest.AddApiParameter(\"payTos\", \"[{\\\"customerId\\\":\\\"{}\\\",\\\"additionalInfo\\\":\\\"{}\\\",\\\"payToAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"}}]\");\nrequest.AddApiParameter(\"orderGroup\", \"{}\");\nrequest.AddApiParameter(\"envInfo\", \"{}\");\nrequest.AddApiParameter(\"payOptions\", \"{}\");\nrequest.AddApiParameter(\"productExt\", \"{}\");\nrequest.AddApiParameter(\"additionalInfo\", \"{}\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/lazadapay/v1/debit/consult_payment')\nrequest.add_api_parameter(\"serviceCode\", \"01\")\nrequest.add_api_parameter(\"payFrom\", \"{\\\"transAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"},\\\"additionalInfo\\\":\\\"{}\\\",\\\"custIdMercghost\\\":\\\"{}\\\"}\")\nrequest.add_api_parameter(\"payTos\", \"[{\\\"customerId\\\":\\\"{}\\\",\\\"additionalInfo\\\":\\\"{}\\\",\\\"payToAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"}}]\")\nrequest.add_api_parameter(\"orderGroup\", \"{}\")\nrequest.add_api_parameter(\"envInfo\", \"{}\")\nrequest.add_api_parameter(\"payOptions\", \"{}\")\nrequest.add_api_parameter(\"productExt\", \"{}\")\nrequest.add_api_parameter(\"additionalInfo\", \"{}\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/lazadapay/v1/debit/consult_payment')\nrequest.add_api_param('serviceCode', '01')\nrequest.add_api_param('payFrom', '{\\\"transAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"},\\\"additionalInfo\\\":\\\"{}\\\",\\\"custIdMercghost\\\":\\\"{}\\\"}')\nrequest.add_api_param('payTos', '[{\\\"customerId\\\":\\\"{}\\\",\\\"additionalInfo\\\":\\\"{}\\\",\\\"payToAmount\\\":{\\\"currency\\\":\\\"IDR\\\",\\\"value\\\":\\\"100\\\"}}]')\nrequest.add_api_param('orderGroup', '{}')\nrequest.add_api_param('envInfo', '{}')\nrequest.add_api_param('payOptions', '{}')\nrequest.add_api_param('productExt', '{}')\nrequest.add_api_param('additionalInfo', '{}')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/lazadapay/v1/debit/consult_payment' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"serviceCode\":\"01\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"payOptions\":\"%7B%7D\",\"productExt\":\"%7B%7D\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"orderGroup\":\"%7B%7D\",\"envInfo\":\"%7B%7D\",\"sign_method\":\"sha256\",\"payFrom\":\"%7B%22transAmount%22%3A%7B%22currency%22%3A%22IDR%22%2C%22value%22%3A%22100%22%7D%2C%22additionalInfo%22%3A%22%7B%7D%22%2C%22custIdMercghost%22%3A%22%7B%7D%22%7D\",\"additionalInfo\":\"%7B%7D\",\"payTos\":\"%5B%7B%22customerId%22%3A%22%7B%7D%22%2C%22additionalInfo%22%3A%22%7B%7D%22%2C%22payToAmount%22%3A%7B%22currency%22%3A%22IDR%22%2C%22value%22%3A%22100%22%7D%7D%5D\",\"timestamp\":\"1750231528364\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "responseMessage",
+        "type": "String",
+        "description": "Response code"
+      },
+      {
+        "name": "responseCode",
+        "type": "String",
+        "description": "Response message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error Code"
+      },
+      {
+        "name": "additionalInfo",
+        "type": "String",
+        "description": "Additional Info"
+      },
+      {
+        "name": "payOptions",
+        "type": "Object[]",
+        "description": "Available payment option to user"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"additionalInfo\": \"{\\\"deviceId\\\": \\\"12345679237\\\"}\",\n  \"errorCode\": \"PARAM_ILLEGAL\",\n  \"payOptions\": [\n    {\n      \"disableReasonCode\": \"USER_BALANCE_NOT_ENOUGH\",\n      \"disableReasonDesc\": \"Insufficient funds\",\n      \"amountLimitMap\": {},\n      \"payOptionInfo\": {},\n      \"enabled\": \"false\",\n      \"supportedCurrencies\": [],\n      \"payCategory\": \"CHANNEL\",\n      \"payMethod\": \"WALLET\",\n      \"additionalInfo\": \"{}\",\n      \"payOption\": \"DANA_WALLET\",\n      \"rank\": \"101\",\n      \"payAssetDetails\": [\n        {\n          \"bankAccount\": {},\n          \"coupon\": {},\n          \"rebate\": {},\n          \"additionalInfo\": \"{}\",\n          \"externalAccount\": {},\n          \"discount\": {},\n          \"payAssetType\": \"card\",\n          \"storeValue\": {},\n          \"card\": {}\n        }\n      ],\n      \"preferred\": \"false\"\n    }\n  ],\n  \"responseMessage\": \"Request has been processed successfully\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"responseCode\": \"20054000\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

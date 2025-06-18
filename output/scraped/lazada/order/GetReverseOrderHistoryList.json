@@ -1,0 +1,181 @@
+{
+  "platform": "lazada",
+  "module": "order",
+  "endpoint_name": "GetReverseOrderHistoryList",
+  "version": null,
+  "summary": "Get the communication history of the reverse order",
+  "description": "Get the communication history of the reverse order",
+  "path": "/order/reverse/return/history/list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "reverse_order_line_id",
+        "type": "Number",
+        "required": true,
+        "description": "reverse order line id"
+      },
+      {
+        "name": "page_size",
+        "type": "Number",
+        "required": false,
+        "description": "default 10"
+      },
+      {
+        "name": "page_number",
+        "type": "Number",
+        "required": false,
+        "description": "default 1"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/order/reverse/return/history/list\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"reverse_order_line_id\", \"0\");\nrequest.addApiParameter(\"page_size\", \"10\");\nrequest.addApiParameter(\"page_number\", \"1\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/order/reverse/return/history/list','GET');\n$request->addApiParam('reverse_order_line_id','0');\n$request->addApiParam('page_size','10');\n$request->addApiParam('page_number','1');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/order/reverse/return/history/list\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"reverse_order_line_id\", \"0\");\nrequest.AddApiParameter(\"page_size\", \"10\");\nrequest.AddApiParameter(\"page_number\", \"1\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/order/reverse/return/history/list','GET')\nrequest.add_api_parameter(\"reverse_order_line_id\", \"0\")\nrequest.add_api_parameter(\"page_size\", \"10\")\nrequest.add_api_parameter(\"page_number\", \"1\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/order/reverse/return/history/list','GET')\nrequest.add_api_param('reverse_order_line_id', '0')\nrequest.add_api_param('page_size', '10')\nrequest.add_api_param('page_number', '1')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/order/reverse/return/history/list?timestamp=1750231539406&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&reverse_order_line_id=0&page_size=10&page_number=1'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "{}"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"page_info\": {\n      \"total\": \"10\",\n      \"page_size\": \"10\",\n      \"current_page_number\": \"1\"\n    },\n    \"list\": [\n      {\n        \"time\": \"1627562669235\",\n        \"operator\": \"Jason\",\n        \"picture\": []\n      }\n    ]\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "103",
+      "message": "E0103: reverse order line id is empty when query reject reason",
+      "description": "E0103: reverse order line id is empty when query reject reason"
+    },
+    {
+      "code": "106",
+      "message": "E0106: ROC internal error",
+      "description": "E0106: ROC internal error"
+    },
+    {
+      "code": "116",
+      "message": "E0116: no seller id",
+      "description": "E0116: no seller id"
+    },
+    {
+      "code": "117",
+      "message": "E0117: no user id",
+      "description": "E0117: no user id"
+    },
+    {
+      "code": "118",
+      "message": "E0118: no user email",
+      "description": "E0118: no user email"
+    },
+    {
+      "code": "120",
+      "message": "E0120: page size invalid",
+      "description": "E0120: page size invalid"
+    },
+    {
+      "code": "121",
+      "message": "E0121: page number invalid",
+      "description": "E0121: page number invalid"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

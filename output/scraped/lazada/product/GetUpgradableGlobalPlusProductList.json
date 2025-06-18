@@ -1,0 +1,175 @@
+{
+  "platform": "lazada",
+  "module": "product",
+  "endpoint_name": "GetUpgradableGlobalPlusProductList",
+  "version": null,
+  "summary": "get an upgradeable global plus product list",
+  "description": "get an upgradeable global plus product list",
+  "path": "/product/global/semi/avaible/get",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "type",
+        "type": "String",
+        "required": true,
+        "description": "global"
+      },
+      {
+        "name": "country",
+        "type": "String",
+        "required": false,
+        "description": "country"
+      },
+      {
+        "name": "pageNo",
+        "type": "String",
+        "required": true,
+        "description": "page no"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": true,
+        "description": "page size"
+      },
+      {
+        "name": "currentIndex",
+        "type": "String",
+        "required": true,
+        "description": "current index"
+      },
+      {
+        "name": "itemIds",
+        "type": "Number[]",
+        "required": false,
+        "description": "itemId or productId"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/global/semi/avaible/get\");\nrequest.addApiParameter(\"type\", \"global\");\nrequest.addApiParameter(\"country\", \"SG\");\nrequest.addApiParameter(\"pageNo\", \"0\");\nrequest.addApiParameter(\"pageSize\", \"10\");\nrequest.addApiParameter(\"currentIndex\", \"0\");\nrequest.addApiParameter(\"itemIds\", \"[3135539721]\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/global/semi/avaible/get');\n$request->addApiParam('type','global');\n$request->addApiParam('country','SG');\n$request->addApiParam('pageNo','0');\n$request->addApiParam('pageSize','10');\n$request->addApiParam('currentIndex','0');\n$request->addApiParam('itemIds','[3135539721]');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/global/semi/avaible/get\");\nrequest.AddApiParameter(\"type\", \"global\");\nrequest.AddApiParameter(\"country\", \"SG\");\nrequest.AddApiParameter(\"pageNo\", \"0\");\nrequest.AddApiParameter(\"pageSize\", \"10\");\nrequest.AddApiParameter(\"currentIndex\", \"0\");\nrequest.AddApiParameter(\"itemIds\", \"[3135539721]\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/global/semi/avaible/get')\nrequest.add_api_parameter(\"type\", \"global\")\nrequest.add_api_parameter(\"country\", \"SG\")\nrequest.add_api_parameter(\"pageNo\", \"0\")\nrequest.add_api_parameter(\"pageSize\", \"10\")\nrequest.add_api_parameter(\"currentIndex\", \"0\")\nrequest.add_api_parameter(\"itemIds\", \"[3135539721]\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/global/semi/avaible/get')\nrequest.add_api_param('type', 'global')\nrequest.add_api_param('country', 'SG')\nrequest.add_api_param('pageNo', '0')\nrequest.add_api_param('pageSize', '10')\nrequest.add_api_param('currentIndex', '0')\nrequest.add_api_param('itemIds', '[3135539721]')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/product/global/semi/avaible/get' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"country\":\"SG\",\"app_key\":\"1234567\",\"pageNo\":\"0\",\"itemIds\":\"%5B3135539721%5D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"10\",\"type\":\"global\",\"currentIndex\":\"0\",\"timestamp\":\"1750231498880\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "data"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "true"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"type\": \"global\",\n    \"total_products\": \"1\",\n    \"current_page\": \"0\",\n    \"page_size\": \"0\",\n    \"current_index\": \"0\",\n    \"products\": [\n      {\n        \"global_item_id\": \"3025196234185548\",\n        \"skus\": [\n          {\n            \"package_width\": \"10\",\n            \"package_height\": \"10\",\n            \"item_id\": \"3025196234185548\",\n            \"package_length\": \"10\",\n            \"seller_sku\": \"wangyi-test-sku-0308-001-1\",\n            \"package_weight\": \"0.5\",\n            \"sku_id\": \"3025196234185548\",\n            \"country_info\": [\n              {\n                \"market\": \"LAZADA_SG\",\n                \"quantity\": \"1\",\n                \"abs\": \"1.0\",\n                \"special_price\": \"700 CNY\",\n                \"item_id\": \"2289233261\",\n                \"price\": \"200.60\",\n                \"currency\": \"SGD\",\n                \"sku_id\": \"13235769889\"\n              }\n            ]\n          }\n        ],\n        \"item_id\": \"3025196234185548\"\n      }\n    ]\n  },\n  \"success\": \"true\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

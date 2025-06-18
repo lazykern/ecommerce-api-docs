@@ -1,0 +1,788 @@
+{
+  "platform": "shopee",
+  "module": "global_product",
+  "endpoint_name": "add_global_item",
+  "version": "v2",
+  "summary": "Get global item info",
+  "description": "Get global item info.Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/get_global_item_info",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "category_id",
+        "type": "int64",
+        "required": true,
+        "description": "Category id of global item.",
+        "sample": "14695"
+      },
+      {
+        "name": "global_item_name",
+        "type": "string",
+        "required": true,
+        "description": "Name of global item.",
+        "sample": "item name sample"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": true,
+        "description": "Description of global item.",
+        "sample": "item description sample"
+      },
+      {
+        "name": "global_item_sku",
+        "type": "string",
+        "required": false,
+        "description": "Sku of global item.",
+        "sample": "item sku sample"
+      },
+      {
+        "name": "image",
+        "type": "object",
+        "required": false,
+        "description": "Image information of global item.",
+        "sample": ""
+      },
+      {
+        "name": "image_id_list",
+        "type": "string[]",
+        "required": true,
+        "description": "Image id list of global item.",
+        "sample": "[\"c54265d475b85e00ffb2404585e32b6f\", \"6fb33d484f232510b5f9b169f2758322\"]"
+      },
+      {
+        "name": "original_price",
+        "type": "float",
+        "required": true,
+        "description": "Original price of global item.",
+        "sample": "95.5"
+      },
+      {
+        "name": "normal_stock",
+        "type": "int64",
+        "required": false,
+        "description": "Normal stock of global item.",
+        "sample": "100"
+      },
+      {
+        "name": "weight",
+        "type": "float",
+        "required": true,
+        "description": "Weight of global item.",
+        "sample": "100.5"
+      },
+      {
+        "name": "dimension",
+        "type": "object",
+        "required": false,
+        "description": "Dimension information of global item.",
+        "sample": ""
+      },
+      {
+        "name": "package_length",
+        "type": "int64",
+        "required": true,
+        "description": "Package length of global item.",
+        "sample": "11"
+      },
+      {
+        "name": "package_width",
+        "type": "int64",
+        "required": true,
+        "description": "Package width of global item.",
+        "sample": "11"
+      },
+      {
+        "name": "package_height",
+        "type": "int64",
+        "required": true,
+        "description": "Package height of global item.",
+        "sample": "11"
+      },
+      {
+        "name": "pre_order",
+        "type": "object",
+        "required": true,
+        "description": "Preorder information of global item.",
+        "sample": ""
+      },
+      {
+        "name": "days_to_ship",
+        "type": "int64",
+        "required": true,
+        "description": "Days to ship.",
+        "sample": "3"
+      },
+      {
+        "name": "condition",
+        "type": "string",
+        "required": false,
+        "description": "Condition of global item, \"NEW\" or \"USED\" is available.",
+        "sample": "NEW"
+      },
+      {
+        "name": "video_upload_id",
+        "type": "string[]",
+        "required": false,
+        "description": "Video upload id of global item. Only accept one video_upload_id at most.",
+        "sample": "[\"00a2258551b5a2f0a7c283f877330f93\"]"
+      },
+      {
+        "name": "brand",
+        "type": "object",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "brand_id",
+        "type": "int64",
+        "required": false,
+        "description": "Id of brand.",
+        "sample": "1078"
+      },
+      {
+        "name": "original_brand_name",
+        "type": "string",
+        "required": false,
+        "description": "Original name of brand.",
+        "sample": "Nike"
+      },
+      {
+        "name": "attribute_list",
+        "type": "object[]",
+        "required": false,
+        "description": "Item attributes.",
+        "sample": ""
+      },
+      {
+        "name": "attribute_id",
+        "type": "int64",
+        "required": false,
+        "description": "ID of attribute.",
+        "sample": "1007105"
+      },
+      {
+        "name": "attribute_value_list",
+        "type": "object[]",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "value_id",
+        "type": "int64",
+        "required": false,
+        "description": "ID of attribute value. In the following cases, the value id needs to be uploaded as 0, and original_value_name is mandatory, needs to be filled in customized value. (1) AttributeInputType is TEXT_FILED; (2) AttributeInputType is COMBO_BOX or MULTIPLE_SELECT_COMBO_BOX, and the seller want to fill in a customized value.",
+        "sample": "38173"
+      },
+      {
+        "name": "original_value_name",
+        "type": "string",
+        "required": false,
+        "description": "Name of attribute value. original_value_name from global_product.get_attributes api. If value id=0, this field is required. If AttributeType is DATE_TYPE or TIMESTAMP_TYPE, you can upload timestamp(string type) as the original_value_name.",
+        "sample": "Red"
+      },
+      {
+        "name": "value_unit",
+        "type": "string",
+        "required": false,
+        "description": "Unit of attribute value.(quantitative attribute only)",
+        "sample": "kg"
+      },
+      {
+        "name": "description_info",
+        "type": "object",
+        "required": false,
+        "description": "New description field. New description field. Only whitelist sellers can use it. If you use the field, please upload the description_type=extended otherwise api will return error. If you don't use this field, you don't need to upload the description_type or upload description_type=normal",
+        "sample": ""
+      },
+      {
+        "name": "extended_description",
+        "type": "object",
+        "required": false,
+        "description": "If description_type is extended , Description information should be set by this field.",
+        "sample": ""
+      },
+      {
+        "name": "field_list",
+        "type": "object[]",
+        "required": false,
+        "description": "Field of extended description.",
+        "sample": ""
+      },
+      {
+        "name": "field_type",
+        "type": "string",
+        "required": false,
+        "description": "type of extended description field ：values: See Data Definition- description_field_type (text , image).",
+        "sample": ""
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "required": false,
+        "description": "If field_type is text text information will be set by this field.",
+        "sample": ""
+      },
+      {
+        "name": "image_info",
+        "type": "object",
+        "required": false,
+        "description": "If field_type is imageimage url will be set by this field.",
+        "sample": ""
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "required": false,
+        "description": "Image id.",
+        "sample": ""
+      },
+      {
+        "name": "description_type",
+        "type": "string",
+        "required": false,
+        "description": "Values: See Data Definition- description_type (normal , extended). If you want to use extended_description, this field must be inputed",
+        "sample": ""
+      },
+      {
+        "name": "seller_stock",
+        "type": "object[]",
+        "required": false,
+        "description": "seller_stock of global item.",
+        "sample": ""
+      },
+      {
+        "name": "location_id",
+        "type": "string",
+        "required": false,
+        "description": "location_id of stock",
+        "sample": "CNZ"
+      },
+      {
+        "name": "stock",
+        "type": "int32",
+        "required": true,
+        "description": "stock",
+        "sample": "100"
+      },
+      {
+        "name": "ds_cat_rcmd_id",
+        "type": "string",
+        "required": false,
+        "description": "category recommendation service id",
+        "sample": ""
+      },
+      {
+        "name": "size_chart_info",
+        "type": "object",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "size_chart",
+        "type": "string",
+        "required": false,
+        "description": "ID of size chart image. If you want to remove the image size chart of the item, please pass the \"size_chart\" empty. You only need to fill out either the image or template. If both are filled, only the template will be kept. Notes: Both CB shops and local shops are supported to set \"size_chart\".",
+        "sample": ""
+      },
+      {
+        "name": "size_chart_id",
+        "type": "int64",
+        "required": false,
+        "description": "ID of template size chart. If you want to remove the template size chart of the item, please pass the \"size_chart_id\" as 0. You only need to fill out either the image or template. If both are filled, only the template will be kept. Notes: Both local shops and CB shops are supported to set \"size_chart_id\" now and seller need set the size_chart template in CBSC in advance",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"attribute_list\":{\n        \"attribute_id\":1007105,\n        \"attribute_value_list\":{\n            \"original_value_name\":\"Red\",\n            \"value_id\":38173,\n            \"value_unit\":\"kg\"\n        }\n    },\n    \"brand\":{\n        \"brand_id\":1078,\n        \"original_brand_name\":\"Nike\"\n    },\n    \"category_id\":14695,\n    \"condition\":\"NEW\",\n    \"description\":\"item description sample\",\n    \"description_info\":{\n        \"extended_description\":{\n            \"field_list\":{\n                \"field_type\":\"\",\n                \"image_info\":{\n                    \"image_id\":\"\"\n                },\n                \"text\":\"\"\n            }\n        }\n    },\n    \"description_type\":\"\",\n    \"dimension\":{\n        \"package_height\":11,\n        \"package_length\":12,\n        \"package_width\":13\n    },\n    \"global_item_name\":\"item name sample\",\n    \"global_item_sku\":\"item sku sample\",\n    \"image\":{\n        \"image_id_list\":\"[\\\"c54265d475b85e00ffb2404585e32b6f\\\", \\\"6fb33d484f232510b5f9b169f2758322\\\"]\"\n    },\n    \"normal_stock\":100,\n    \"original_price\":95.5,\n    \"pre_order\":{\n        \"days_to_ship\":3\n    },\n    \"video_upload_id\":\"[\\\"00a2258551b5a2f0a7c283f877330f93\\\"]\",\n    \"weight\":100.5,\n    \"seller_stock\":[\n        {\n            \"location_id\":\"CNZ\",\n            \"stock\":100\n        }\n    ]\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning message."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "98eae35efff24dd0974c21a847127184",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "global_item_id",
+        "type": "int64",
+        "sample": "1007962",
+        "description": "Id of added global item."
+      }
+    ],
+    "examples": []
+  },
+  "error_codes": [
+    {
+      "code": "add_on.add_on_deal_expired",
+      "message": "The expired add on deal can't be edited"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_merchant_not_found",
+      "message": "Merchant_id is not found."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid category."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid attribute. {{.error_info}}"
+    },
+    {
+      "code": "error_param",
+      "message": "Parameter is not match the constraints, {{.error_info}}."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid dimension."
+    },
+    {
+      "code": "error_invalid_days_to_ship",
+      "message": "Invalid days_to_ship."
+    },
+    {
+      "code": "error_invalid_category_attribute",
+      "message": "Category and attribute not match."
+    },
+    {
+      "code": "error_invalid_brand",
+      "message": "Invalid brand"
+    },
+    {
+      "code": "error_invalid_brand",
+      "message": "Brand ID value should be \"0\"."
+    },
+    {
+      "code": "error_invalid_brand",
+      "message": "Brand name required"
+    },
+    {
+      "code": "error_invalid_brand",
+      "message": "Brand ID required"
+    },
+    {
+      "code": "error_incalid_brand",
+      "message": "Brand ID or brand name required"
+    },
+    {
+      "code": "error_invalid_attribute",
+      "message": "Mandatory attribute information required"
+    },
+    {
+      "code": "error_invalid_brand",
+      "message": "Brand information required"
+    },
+    {
+      "code": "error_busi_cannot_get_category_path",
+      "message": "Get category path failed. please try later."
+    },
+    {
+      "code": "error_busi_add_global_item_failed",
+      "message": "Add global item failed, please try later. {{.error_info}}"
+    },
+    {
+      "code": "error_busi_global_item_dimension_over_limit",
+      "message": "Global item dimension is over limit."
+    },
+    {
+      "code": "error_busi_global_item_weight_over_limit",
+      "message": "Global item weight is over limit."
+    },
+    {
+      "code": "error_busi_global_tier_variation_over_limit",
+      "message": "Global item tier_variation is over limit."
+    },
+    {
+      "code": "error_busi_global_item_tier_option_over_limit",
+      "message": "Option of tier_variation is over limit."
+    },
+    {
+      "code": "error_busi_global_item_sku_over_limit",
+      "message": "Global item sku is over limit."
+    },
+    {
+      "code": "error_busi_item_days_to_ship_invalid",
+      "message": "Global item days_to_ship is invalid."
+    },
+    {
+      "code": "error_busi_region_not_supported",
+      "message": "Unsupport region."
+    },
+    {
+      "code": "error_invalid_category",
+      "message": "Invalid category ID {{.error_info}}"
+    },
+    {
+      "code": "error_busi_attribute_error",
+      "message": "Attribute NCC value is invalid"
+    },
+    {
+      "code": "error_busi_attribute_error",
+      "message": "Attribute NCC is mandatory"
+    },
+    {
+      "code": "error_busi_attribute_error",
+      "message": "Attribute BSMI value is invalid"
+    },
+    {
+      "code": "error_busi_attribute_error",
+      "message": "Attribute BSMI is mandatory"
+    },
+    {
+      "code": "error_attribute_fda_error",
+      "message": "Attribute FDA value is invalid"
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_updat_mtsku_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_language_fail",
+      "message": "check language fail, {{.error_info}}"
+    },
+    {
+      "code": "error_price_agp_too_large",
+      "message": "the max price is 7 lager the min price"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_check_luc_fail",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_repeated_mtsku",
+      "message": "A similar product has already been uploaded"
+    },
+    {
+      "code": "error_title_len_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_len_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_image_hight_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_image_quantity_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_category_not_allowed",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_wholesale_range_not_allowed",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_dts_range_not_allowed",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_stock_limit_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_price_limit_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_image_width_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_no_dts_range_not_allowed",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_category_is_block",
+      "message": "Category is restricted"
+    },
+    {
+      "code": "error_less_required_attribute",
+      "message": "Mandatory attribute information required"
+    },
+    {
+      "code": "error_less_required_brand",
+      "message": "Brand information required"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_param",
+      "message": "Attribute format is invalid. NCC field only allows Eng Alphanumeric input"
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_permission",
+      "message": "Global product related shop is not upgraded."
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_param_validate",
+      "message": "Wholesale cannot be used in this category and attributes."
+    },
+    {
+      "code": "error_param_validate",
+      "message": "Your current merchant is a special merchant.Please ensure all your shop are under same region"
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_param",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_param",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_param",
+      "message": "You have 3PF shops, please upload stock with location id"
+    },
+    {
+      "code": "error_inner",
+      "message": "Invalid stock location ID"
+    },
+    {
+      "code": "error_busi",
+      "message": "The merchant/shop has multi warehouse, please input location id"
+    },
+    {
+      "code": "error_incalid_brand",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_duplicated_brand",
+      "message": "Brand already exists"
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_image_num_min",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_stock_less_then_min_limit",
+      "message": "Normal_stock/ seller_stock is less than min limit."
+    },
+    {
+      "code": "error_stock_bigger_then_limit",
+      "message": "Normal_stock/ seller_stock is bigger than max limit."
+    },
+    {
+      "code": "error_incalid_category",
+      "message": "Category IDs for L1 and L2 do not match."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_global_item_info"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_global_item_info"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_global_item_info"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_global_item_info"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_global_item_info"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_global_item_info"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_global_item_info"
+      }
+    ]
+  }
+}

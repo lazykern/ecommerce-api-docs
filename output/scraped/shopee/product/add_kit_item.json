@@ -1,0 +1,464 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "add_kit_item",
+  "version": "v2",
+  "summary": "Get the limit of Kit item",
+  "description": "Get the limit of Kit item.",
+  "path": "/api/v2/product/get_kit_item_limit",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "item_setting",
+        "type": "object",
+        "required": true,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "item_name",
+        "type": "string",
+        "required": true,
+        "description": "The name of this kit item.",
+        "sample": "item name sample"
+      },
+      {
+        "name": "images",
+        "type": "object",
+        "required": true,
+        "description": "Item images with 1:1 ratio.",
+        "sample": ""
+      },
+      {
+        "name": "image_id_list",
+        "type": "string[]",
+        "required": true,
+        "description": "ID of image.",
+        "sample": ""
+      },
+      {
+        "name": "long_images",
+        "type": "object",
+        "required": false,
+        "description": "Item images with 3:4 ratio.",
+        "sample": ""
+      },
+      {
+        "name": "image_id_list",
+        "type": "string[]",
+        "required": true,
+        "description": "ID of image.",
+        "sample": ""
+      },
+      {
+        "name": "video_upload_id",
+        "type": "string[]",
+        "required": false,
+        "description": "Video upload ID returned from video uploading API. Only accept one video_upload_id.",
+        "sample": "[\"sg_f4bde9bc-ff3c-485e-a6dd-3161dab4b942_000000\"]"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "If description_type is normal, description information should be set by this field.",
+        "sample": "item description sample"
+      },
+      {
+        "name": "description_info",
+        "type": "object",
+        "required": false,
+        "description": "Rich text description field. Only whitelist sellers can use it. If you use the field, please upload the description_type=extended otherwise api will return error. If you don't use this field, you don't need to upload the description_type or upload description_type=normal",
+        "sample": ""
+      },
+      {
+        "name": "extended_description",
+        "type": "object",
+        "required": true,
+        "description": "If description_type is extended , Description information should be set by this field.",
+        "sample": ""
+      },
+      {
+        "name": "field_list",
+        "type": "object[]",
+        "required": true,
+        "description": "Field of extended description.",
+        "sample": ""
+      },
+      {
+        "name": "field_type",
+        "type": "string",
+        "required": true,
+        "description": "Type of extended description field. See Data Definition- description_field_type (text , image).",
+        "sample": ""
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "required": true,
+        "description": "If field_type is text, text information will be set by this field.",
+        "sample": ""
+      },
+      {
+        "name": "image_info",
+        "type": "object",
+        "required": false,
+        "description": "If field_type is image, image will be set by this field.",
+        "sample": ""
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "required": true,
+        "description": "Image id.",
+        "sample": ""
+      },
+      {
+        "name": "description_type",
+        "type": "string",
+        "required": true,
+        "description": "See Data Definition- description_type (normal , extended). If you want to use extended_description, this field must be inputed.",
+        "sample": "extended"
+      },
+      {
+        "name": "logistic_info",
+        "type": "object[]",
+        "required": true,
+        "description": "Logistic channel setting.",
+        "sample": ""
+      },
+      {
+        "name": "logistic_id",
+        "type": "int64",
+        "required": true,
+        "description": "ID of the channel.",
+        "sample": ""
+      },
+      {
+        "name": "enabled",
+        "type": "boolean",
+        "required": true,
+        "description": "Whether channel is enabled for this kit item.",
+        "sample": ""
+      },
+      {
+        "name": "shipping_fee",
+        "type": "float",
+        "required": false,
+        "description": "Shipping fee. Only needed when logistics fee_type = CUSTOM_PRICE.",
+        "sample": ""
+      },
+      {
+        "name": "size_id",
+        "type": "int64",
+        "required": false,
+        "description": "Size ID. Only needed when logistic fee_type = SIZE_SELECTION.",
+        "sample": ""
+      },
+      {
+        "name": "is_free",
+        "type": "boolean",
+        "required": false,
+        "description": "Whether cover shipping fee for buyer.",
+        "sample": ""
+      },
+      {
+        "name": "unlisted",
+        "type": "boolean",
+        "required": false,
+        "description": "Unlist or not.",
+        "sample": "false"
+      },
+      {
+        "name": "item_sku",
+        "type": "string",
+        "required": false,
+        "description": "SKU tag of item",
+        "sample": "item sku sample"
+      },
+      {
+        "name": "weight",
+        "type": "float",
+        "required": true,
+        "description": "The weight of this kit item, the unit is KG.",
+        "sample": "1.1"
+      },
+      {
+        "name": "dimension",
+        "type": "object",
+        "required": false,
+        "description": "The dimension of this kit item.",
+        "sample": ""
+      },
+      {
+        "name": "package_length",
+        "type": "int32",
+        "required": true,
+        "description": "The length of package for this kit item, the unit is CM.",
+        "sample": "11"
+      },
+      {
+        "name": "package_width",
+        "type": "int32",
+        "required": true,
+        "description": "The width of package for this kit item, the unit is CM.",
+        "sample": "11"
+      },
+      {
+        "name": "package_height",
+        "type": "int32",
+        "required": true,
+        "description": "The height of package for this kit item, the unit is CM.",
+        "sample": "11"
+      },
+      {
+        "name": "pre_order",
+        "type": "object",
+        "required": false,
+        "description": "Pre order setting.",
+        "sample": ""
+      },
+      {
+        "name": "is_pre_order",
+        "type": "boolean",
+        "required": true,
+        "description": "Whether kit item is pre order.",
+        "sample": "true"
+      },
+      {
+        "name": "days_to_ship",
+        "type": "int32",
+        "required": false,
+        "description": "The guaranteed days to ship orders. Please get the days_to_ship range from get_kit_item_limit api.",
+        "sample": "10"
+      },
+      {
+        "name": "model_list",
+        "type": "object[]",
+        "required": true,
+        "description": "Model info list, model number at most 9.",
+        "sample": ""
+      },
+      {
+        "name": "tier_index",
+        "type": "int32[]",
+        "required": true,
+        "description": "Tier index of this kit model.",
+        "sample": "[0]"
+      },
+      {
+        "name": "model_sku",
+        "type": "string",
+        "required": false,
+        "description": "Seller SKU of this kit model, model_sku length information needs to be no more than 100 characters.",
+        "sample": "model sku sample"
+      },
+      {
+        "name": "original_price",
+        "type": "float",
+        "required": true,
+        "description": "Original price of this kit model.",
+        "sample": "38.3"
+      },
+      {
+        "name": "component_list",
+        "type": "object[]",
+        "required": true,
+        "description": "Please get the amount of item/model that one kit model support from get_kit_item_limit.",
+        "sample": ""
+      },
+      {
+        "name": "component_item_id",
+        "type": "int64",
+        "required": true,
+        "description": "ID of the item that composes this kit model.",
+        "sample": "892568916"
+      },
+      {
+        "name": "component_model_id",
+        "type": "int64",
+        "required": false,
+        "description": "ID of the model that composes this kit model.",
+        "sample": "8501462426"
+      },
+      {
+        "name": "quantity",
+        "type": "int32",
+        "required": true,
+        "description": "The amount of the item/model that composes this kit model.",
+        "sample": "2"
+      },
+      {
+        "name": "main_component",
+        "type": "boolean",
+        "required": false,
+        "description": "Whether this item/model is the main component for this kit. One kit item can only have one item/model as main component.",
+        "sample": "true"
+      },
+      {
+        "name": "tier_variation_list",
+        "type": "object[]",
+        "required": true,
+        "description": "Tier variation info list. Only support one tier variation, and each kit item can have from 1 to 9 kit variations.",
+        "sample": ""
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Tier variation name.",
+        "sample": ""
+      },
+      {
+        "name": "option_list",
+        "type": "object[]",
+        "required": true,
+        "description": "Tier variation option info list.",
+        "sample": ""
+      },
+      {
+        "name": "option",
+        "type": "string",
+        "required": true,
+        "description": "Option name.",
+        "sample": ""
+      },
+      {
+        "name": "image",
+        "type": "object",
+        "required": false,
+        "description": "Option image.",
+        "sample": ""
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "required": true,
+        "description": "ID of image. If you choose to define, you need to define an image for all options.",
+        "sample": ""
+      },
+      {
+        "name": "sync_setting",
+        "type": "object",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "auto_sync_dts",
+        "type": "boolean",
+        "required": true,
+        "description": "Auto sync the pre_order setting from main component or not.",
+        "sample": "true"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"sync_setting\": {\n        \"auto_sync_dts\": true\n    },\n    \"item_setting\": {\n        \"pre_order\": {\n            \"is_pre_order\": true,\n            \"days_to_ship\": 5\n        },\n        \"item_name\": \"item name sample\",\n        \"images\": {\n            \"image_id_list\": [\n                \"br-11134207-7r98o-lzri4neb5vcv18\"\n            ]\n        },\n        \"description_type\": \"extended\",\n        \"description_info\": {\n            \"extended_description\": {\n                \"field_list\": [\n                    {\n                        \"field_type\": \"text\",\n                        \"text\": \"item description sample\"\n                    }\n                ]\n            }\n        },\n        \"unlisted\": false,\n        \"logistic_info\": [\n            {\n                \"logistic_id\": 90003,\n                \"enabled\": true\n            }\n        ],\n        \"weight\": 1,\n        \"model_list\": [\n            {\n                \"tier_index\": [\n                    0\n                ],\n                \"original_price\": 38.3,\n                \"component_list\": [\n                    {\n                        \"component_item_id\": 892571466,\n                        \"component_model_id\": 18500721258,\n                        \"main_component\": true,\n                        \"quantity\": 2\n                    },\n                    {\n                        \"component_item_id\": 885135888,\n                        \"component_model_id\": 9250734451,\n                        \"main_component\": false,\n                        \"quantity\": 3\n                    }\n                ]\n            }\n        ],\n        \"dimension\": {\n            \"package_length\": 30,\n            \"package_width\": 40,\n            \"package_height\": 50\n        },\n        \"tier_variation_list\": [\n            {\n                \"name\": \"variation name sample\",\n                \"option_list\": [\n                    {\n                        \"option\": \"option name sample\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+    },
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.post(\"https://partner.shopeemobile.com/api/v2/product/add_kit_item?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.header(\"Content-Type\",\"application/json\")\n.body(\"{\n   \\\"item_setting\\\": {\n      \\\"description\\\": \\\"item description sample\\\",\n      \\\"description_info\\\": {\n         \\\"extended_description\\\": {\n            \\\"field_list\\\": [\n               {\n                  \\\"field_type\\\": \\\"-\\\",\n                  \\\"image_info\\\": {\n                     \\\"image_id\\\": \\\"-\\\"\n                  },\n                  \\\"text\\\": \\\"-\\\"\n               }\n            ]\n         }\n      },\n      \\\"description_type\\\": \\\"extended\\\",\n      \\\"dimension\\\": {\n         \\\"package_height\\\": 11,\n         \\\"package_length\\\": 11,\n         \\\"package_width\\\": 11\n      },\n      \\\"images\\\": {\n         \\\"image_id_list\\\": [\n            \\\"-\\\"\n         ]\n      },\n      \\\"item_name\\\": \\\"item name sample\\\",\n      \\\"item_sku\\\": \\\"item sku sample\\\",\n      \\\"logistic_info\\\": [\n         {\n            \\\"enabled\\\": true,\n            \\\"is_free\\\": true,\n            \\\"logistic_id\\\": 0,\n            \\\"shipping_fee\\\": 0.1,\n            \\\"size_id\\\": 0\n         }\n      ],\n      \\\"long_images\\\": {\n         \\\"image_id_list\\\": [\n            \\\"-\\\"\n         ]\n      },\n      \\\"model_list\\\": [\n         {\n            \\\"component_list\\\": [\n               {\n                  \\\"component_item_id\\\": 892568916,\n                  \\\"component_model_id\\\": 8501462426,\n                  \\\"main_component\\\": true,\n                  \\\"quantity\\\": 2\n               }\n            ],\n            \\\"model_sku\\\": \\\"model sku sample\\\",\n            \\\"original_price\\\": 38.3,\n            \\\"tier_index\\\": [\n               0\n            ]\n         }\n      ],\n      \\\"pre_order\\\": {\n         \\\"days_to_ship\\\": 10,\n         \\\"is_pre_order\\\": true\n      },\n      \\\"tier_variation_list\\\": [\n         {\n            \\\"name\\\": \\\"-\\\",\n            \\\"option_list\\\": [\n               {\n                  \\\"image\\\": {\n                     \\\"image_id\\\": \\\"-\\\"\n                  },\n                  \\\"option\\\": \\\"-\\\"\n               }\n            ]\n         }\n      ],\n      \\\"unlisted\\\": false,\n      \\\"video_upload_id\\\": [\n         \\\"sg_f4bde9bc-ff3c-485e-a6dd-3161dab4b942_000000\\\"\n      ],\n      \\\"weight\\\": 1.1\n   },\n   \\\"sync_setting\\\": {\n      \\\"auto_sync_dts\\\": true\n   }\n}\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/product/add_kit_item?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'POST',\n  CURLOPT_POSTFIELDS => '{\n    \"item_setting\": {\n        \"description\": \"item description sample\",\n        \"description_info\": {\n            \"extended_description\": {\n                \"field_list\": [\n                    {\n                        \"field_type\": \"-\",\n                        \"image_info\": {\n                            \"image_id\": \"-\"\n                        },\n                        \"text\": \"-\"\n                    }\n                ]\n            }\n        },\n        \"description_type\": \"extended\",\n        \"dimension\": {\n            \"package_height\": 11,\n            \"package_length\": 11,\n            \"package_width\": 11\n        },\n        \"images\": {\n            \"image_id_list\": [\n                \"-\"\n            ]\n        },\n        \"item_name\": \"item name sample\",\n        \"item_sku\": \"item sku sample\",\n        \"logistic_info\": [\n            {\n                \"enabled\": true,\n                \"is_free\": true,\n                \"logistic_id\": 0,\n                \"shipping_fee\": 0.1,\n                \"size_id\": 0\n            }\n        ],\n        \"long_images\": {\n            \"image_id_list\": [\n                \"-\"\n            ]\n        },\n        \"model_list\": [\n            {\n                \"component_list\": [\n                    {\n                        \"component_item_id\": 892568916,\n                        \"component_model_id\": 8501462426,\n                        \"main_component\": true,\n                        \"quantity\": 2\n                    }\n                ],\n                \"model_sku\": \"model sku sample\",\n                \"original_price\": 38.3,\n                \"tier_index\": [\n                    0\n                ]\n            }\n        ],\n        \"pre_order\": {\n            \"days_to_ship\": 10,\n            \"is_pre_order\": true\n        },\n        \"tier_variation_list\": [\n            {\n                \"name\": \"-\",\n                \"option_list\": [\n                    {\n                        \"image\": {\n                            \"image_id\": \"-\"\n                        },\n                        \"option\": \"-\"\n                    }\n                ]\n            }\n        ],\n        \"unlisted\": false,\n        \"video_upload_id\": [\n            \"sg_f4bde9bc-ff3c-485e-a6dd-3161dab4b942_000000\"\n        ],\n        \"weight\": 1.1\n    },\n    \"sync_setting\": {\n        \"auto_sync_dts\": true\n    }\n}',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request POST 'https://partner.shopeemobile.com/api/v2/product/add_kit_item?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n   \"item_setting\": {\n      \"description\": \"item description sample\",\n      \"description_info\": {\n         \"extended_description\": {\n            \"field_list\": [\n               {\n                  \"field_type\": \"-\",\n                  \"image_info\": {\n                     \"image_id\": \"-\"\n                  },\n                  \"text\": \"-\"\n               }\n            ]\n         }\n      },\n      \"description_type\": \"extended\",\n      \"dimension\": {\n         \"package_height\": 11,\n         \"package_length\": 11,\n         \"package_width\": 11\n      },\n      \"images\": {\n         \"image_id_list\": [\n            \"-\"\n         ]\n      },\n      \"item_name\": \"item name sample\",\n      \"item_sku\": \"item sku sample\",\n      \"logistic_info\": [\n         {\n            \"enabled\": true,\n            \"is_free\": true,\n            \"logistic_id\": 0,\n            \"shipping_fee\": 0.1,\n            \"size_id\": 0\n         }\n      ],\n      \"long_images\": {\n         \"image_id_list\": [\n            \"-\"\n         ]\n      },\n      \"model_list\": [\n         {\n            \"component_list\": [\n               {\n                  \"component_item_id\": 892568916,\n                  \"component_model_id\": 8501462426,\n                  \"main_component\": true,\n                  \"quantity\": 2\n               }\n            ],\n            \"model_sku\": \"model sku sample\",\n            \"original_price\": 38.3,\n            \"tier_index\": [\n               0\n            ]\n         }\n      ],\n      \"pre_order\": {\n         \"days_to_ship\": 10,\n         \"is_pre_order\": true\n      },\n      \"tier_variation_list\": [\n         {\n            \"name\": \"-\",\n            \"option_list\": [\n               {\n                  \"image\": {\n                     \"image_id\": \"-\"\n                  },\n                  \"option\": \"-\"\n               }\n            ]\n         }\n      ],\n      \"unlisted\": false,\n      \"video_upload_id\": [\n         \"sg_f4bde9bc-ff3c-485e-a6dd-3161dab4b942_000000\"\n      ],\n      \"weight\": 1.1\n   },\n   \"sync_setting\": {\n      \"auto_sync_dts\": true\n   }\n}'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\nimport json\n\nurl = \"https://partner.shopeemobile.com/api/v2/product/add_kit_item?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload=json.dumps({\n  \"item_setting\": {\n    \"description\": \"item description sample\",\n    \"description_info\": {\n      \"extended_description\": {\n        \"field_list\": [\n          {\n            \"field_type\": \"-\",\n            \"image_info\": {\n              \"image_id\": \"-\"\n            },\n            \"text\": \"-\"\n          }\n        ]\n      }\n    },\n    \"description_type\": \"extended\",\n    \"dimension\": {\n      \"package_height\": 11,\n      \"package_length\": 11,\n      \"package_width\": 11\n    },\n    \"images\": {\n      \"image_id_list\": [\n        \"-\"\n      ]\n    },\n    \"item_name\": \"item name sample\",\n    \"item_sku\": \"item sku sample\",\n    \"logistic_info\": [\n      {\n        \"enabled\": True,\n        \"is_free\": True,\n        \"logistic_id\": 0,\n        \"shipping_fee\": 0.1,\n        \"size_id\": 0\n      }\n    ],\n    \"long_images\": {\n      \"image_id_list\": [\n        \"-\"\n      ]\n    },\n    \"model_list\": [\n      {\n        \"component_list\": [\n          {\n            \"component_item_id\": 892568916,\n            \"component_model_id\": 8501462426,\n            \"main_component\": True,\n            \"quantity\": 2\n          }\n        ],\n        \"model_sku\": \"model sku sample\",\n        \"original_price\": 38.3,\n        \"tier_index\": [\n          0\n        ]\n      }\n    ],\n    \"pre_order\": {\n      \"days_to_ship\": 10,\n      \"is_pre_order\": True\n    },\n    \"tier_variation_list\": [\n      {\n        \"name\": \"-\",\n        \"option_list\": [\n          {\n            \"image\": {\n              \"image_id\": \"-\"\n            },\n            \"option\": \"-\"\n          }\n        ]\n      }\n    ],\n    \"unlisted\": False,\n    \"video_upload_id\": [\n      \"sg_f4bde9bc-ff3c-485e-a6dd-3161dab4b942_000000\"\n    ],\n    \"weight\": 1.1\n  },\n  \"sync_setting\": {\n    \"auto_sync_dts\": True\n  }\n})\nheaders = {\n  'Content-Type': 'application/json'\n}\nresponse = requests.RPCRequest(\"POST\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"b223ef2d2f0523608aeca738909fd941\",\n    \"response\": {\n        \"item_id\": 892571491\n    },\n    \"warning\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_kit_item_limit"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_kit_item_limit"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_kit_item_limit"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_kit_item_limit"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_kit_item_limit"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_kit_item_limit"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_kit_item_limit"
+      }
+    ]
+  }
+}

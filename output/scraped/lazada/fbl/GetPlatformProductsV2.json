@@ -1,0 +1,175 @@
+{
+  "platform": "lazada",
+  "module": "fbl",
+  "endpoint_name": "GetPlatformProductsV2",
+  "version": null,
+  "summary": "Search products list",
+  "description": "Search products list",
+  "path": "/fbl/platform_products/get2",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "per_page",
+        "type": "Number",
+        "required": false,
+        "description": "Maximum number of results Per Page"
+      },
+      {
+        "name": "seller_id",
+        "type": "Number",
+        "required": true,
+        "description": "sellerId"
+      },
+      {
+        "name": "marketplace",
+        "type": "String",
+        "required": true,
+        "description": "Marketplace"
+      },
+      {
+        "name": "seller_sku",
+        "type": "String",
+        "required": false,
+        "description": "sellerSku"
+      },
+      {
+        "name": "platform_sku_name",
+        "type": "String",
+        "required": false,
+        "description": "Platform SKU Name"
+      },
+      {
+        "name": "ready_for_inbound",
+        "type": "Boolean",
+        "required": false,
+        "description": "Products that have binding stock in warsehouse"
+      },
+      {
+        "name": "platform_sku",
+        "type": "String",
+        "required": false,
+        "description": "List of Platform SKU. Separate By Comma (,)"
+      },
+      {
+        "name": "page",
+        "type": "Number",
+        "required": false,
+        "description": "Page Number"
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/fbl/platform_products/get2\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"per_page\", \"50\");\nrequest.addApiParameter(\"seller_id\", \"100056775\");\nrequest.addApiParameter(\"marketplace\", \"LAZADA_SG\");\nrequest.addApiParameter(\"seller_sku\", \"341355\");\nrequest.addApiParameter(\"platform_sku_name\", \"normal product name   \");\nrequest.addApiParameter(\"ready_for_inbound\", \"true\");\nrequest.addApiParameter(\"platform_sku\", \"222103860_TH-339012944\");\nrequest.addApiParameter(\"page\", \"1\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/fbl/platform_products/get2','GET');\n$request->addApiParam('per_page','50');\n$request->addApiParam('seller_id','100056775');\n$request->addApiParam('marketplace','LAZADA_SG');\n$request->addApiParam('seller_sku','341355');\n$request->addApiParam('platform_sku_name','normal product name   ');\n$request->addApiParam('ready_for_inbound','true');\n$request->addApiParam('platform_sku','222103860_TH-339012944');\n$request->addApiParam('page','1');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/fbl/platform_products/get2\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"per_page\", \"50\");\nrequest.AddApiParameter(\"seller_id\", \"100056775\");\nrequest.AddApiParameter(\"marketplace\", \"LAZADA_SG\");\nrequest.AddApiParameter(\"seller_sku\", \"341355\");\nrequest.AddApiParameter(\"platform_sku_name\", \"normal product name   \");\nrequest.AddApiParameter(\"ready_for_inbound\", \"true\");\nrequest.AddApiParameter(\"platform_sku\", \"222103860_TH-339012944\");\nrequest.AddApiParameter(\"page\", \"1\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/fbl/platform_products/get2','GET')\nrequest.add_api_parameter(\"per_page\", \"50\")\nrequest.add_api_parameter(\"seller_id\", \"100056775\")\nrequest.add_api_parameter(\"marketplace\", \"LAZADA_SG\")\nrequest.add_api_parameter(\"seller_sku\", \"341355\")\nrequest.add_api_parameter(\"platform_sku_name\", \"normal product name   \")\nrequest.add_api_parameter(\"ready_for_inbound\", \"true\")\nrequest.add_api_parameter(\"platform_sku\", \"222103860_TH-339012944\")\nrequest.add_api_parameter(\"page\", \"1\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/fbl/platform_products/get2','GET')\nrequest.add_api_param('per_page', '50')\nrequest.add_api_param('seller_id', '100056775')\nrequest.add_api_param('marketplace', 'LAZADA_SG')\nrequest.add_api_param('seller_sku', '341355')\nrequest.add_api_param('platform_sku_name', 'normal product name   ')\nrequest.add_api_param('ready_for_inbound', 'true')\nrequest.add_api_param('platform_sku', '222103860_TH-339012944')\nrequest.add_api_param('page', '1')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/fbl/platform_products/get2?timestamp=1750231474197&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&per_page=50&seller_id=100056775&marketplace=LAZADA_SG&seller_sku=341355&platform_sku_name=normal+product+name+++&ready_for_inbound=true&platform_sku=222103860_TH-339012944&page=1'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "List of products data"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"skus\": [\n        {\n          \"fulfillment_sku\": \"OE702OTABNQVRKSGAMZ-132588140\",\n          \"seller_sku\": \"xxxxxxx\",\n          \"extend_fields\": \"{\\\"k\\\":\\\"v\\\"}\",\n          \"sku_status\": \"actice\",\n          \"platform_sku\": \"OE702OTABNQVRKSGAMZ-132588140\",\n          \"fulfillment_sku_name\": \"Pampers Baby Dry Diaper New Born 40s - 4 Packs \"\n        }\n      ],\n      \"marketplace\": \"LAZADA_SG\",\n      \"product_id\": \"222103860 \",\n      \"platform_sku_name\": \"Pampers Baby Dry Diaper New Born 40s - 4 Packs \",\n      \"source\": \"ascp-item-center\",\n      \"status\": \"actice\"\n    }\n  ],\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

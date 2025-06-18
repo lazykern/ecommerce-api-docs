@@ -1,0 +1,198 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "get_all_vehicle_list",
+  "version": "v2",
+  "summary": "Use this Open API to get all vehicle list",
+  "description": "Use this Open API to get all vehicle list.",
+  "path": "/api/v2/product/get_category",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "page_size",
+        "type": "int64",
+        "required": true,
+        "description": "The size of one page. Max=100",
+        "sample": "10"
+      },
+      {
+        "name": "offset",
+        "type": "int64",
+        "required": false,
+        "description": "Specifies the starting entry of data to return in the current call. Default is 0, if data is more than one page, the offset can be some entry to start next call.",
+        "sample": "0"
+      },
+      {
+        "name": "language",
+        "type": "string",
+        "required": false,
+        "description": "If language is not uploaded, the default language=en, the following are the languages supported by different markets SG: en ; MY: en / ms-my / zh-hans ; TH: en / th ; VN: en / vi ; PH: en ; TW: en / zh-hant ; ID: en / id ; BR: en / pt-br ; MX: en / es-mx ; CO: en/es-CO ; CL: en/es-CL. Note: For markets that have already launched global tree, Crossboard shop only support returning en and zh-hans language data",
+        "sample": "pt-br"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/product/get_all_vehicle_list?access_token=access_token&language=pt-br&offset=0&page_size=10&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/product/get_all_vehicle_list?access_token=access_token&language=pt-br&offset=0&page_size=10&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/product/get_all_vehicle_list?access_token=access_token&language=pt-br&offset=0&page_size=10&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/product/get_all_vehicle_list?access_token=access_token&language=pt-br&offset=0&page_size=10&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate waring details if hit waring. Empty if no waring happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "vehicle_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "brand_id",
+        "type": "int64",
+        "sample": "1234",
+        "description": "ID of the brand."
+      },
+      {
+        "name": "brand_name",
+        "type": "string",
+        "sample": "Toyota",
+        "description": "Name of the brand."
+      },
+      {
+        "name": "model_id",
+        "type": "int64",
+        "sample": "2345",
+        "description": "ID of the model."
+      },
+      {
+        "name": "model_name",
+        "type": "string",
+        "sample": "Etios",
+        "description": "Name of the model."
+      },
+      {
+        "name": "year_id",
+        "type": "int64",
+        "sample": "3456",
+        "description": "ID of the year."
+      },
+      {
+        "name": "year_name",
+        "type": "string",
+        "sample": "2023",
+        "description": "Name of the year."
+      },
+      {
+        "name": "version_id",
+        "type": "int64",
+        "sample": "4567",
+        "description": "ID of the version."
+      },
+      {
+        "name": "version_name",
+        "type": "string",
+        "sample": "1.0",
+        "description": "Name of the version."
+      },
+      {
+        "name": "has_next_page",
+        "type": "boolean",
+        "sample": "",
+        "description": "This is to indicate whether the item list is more than one page. If this value is true, you may want to continue to check next page to retrieve the rest of items."
+      },
+      {
+        "name": "next_offset",
+        "type": "int64",
+        "sample": "",
+        "description": "If has_next_page is true, this value need set to next request offset"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"warning\": \"\",\n    \"request_id\": \"27c00663928149802cc4f6180ae55a41\",\n    \"response\": {\n        \"vehicle_list\": [\n            {\n                \"brand_id\": 1234,\n                \"brand_name\": \"Toyota\",\n                \"model_id\": 2345,\n                \"model_name\": \"Etios\",\n                \"year_id\": 3456,\n                \"year_name\": \"2023\",\n                \"version_id\": 4567,\n                \"version_name\": \"1.0\"\n            }\n        ],\n        \"has_next_page\": true,\n        \"next_offset\": 1\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_all_vehicle_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_all_vehicle_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_all_vehicle_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_all_vehicle_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_all_vehicle_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_all_vehicle_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_all_vehicle_list"
+      }
+    ]
+  }
+}

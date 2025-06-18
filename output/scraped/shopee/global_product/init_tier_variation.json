@@ -1,0 +1,485 @@
+{
+  "platform": "shopee",
+  "module": "global_product",
+  "endpoint_name": "init_tier_variation",
+  "version": "v2",
+  "summary": "Delete global item",
+  "description": "Delete global item. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/delete_global_item",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "tier_variation",
+        "type": "object[]",
+        "required": true,
+        "description": "Tier variation info list. If you define a one tier structure, the maximum number of options cannot exceed 50. If you define a two tier structure, the number of options multiplied by the two tiers cannot exceed 50. If you want to update one tier/two tier to no tier, can just pass the tier_variation and standardise_tier_variation as [], and pass the global_model >> tier_index as [], meanwhile pass the original_price, seller_stock, etc., to set the price and stock for the modified product with no tier structure.",
+        "sample": ""
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "description": "Tier variation name.",
+        "sample": "tier 1"
+      },
+      {
+        "name": "option_list",
+        "type": "object[]",
+        "required": true,
+        "description": "Tier variation option info list.",
+        "sample": ""
+      },
+      {
+        "name": "option",
+        "type": "string",
+        "required": true,
+        "description": "Option name.",
+        "sample": "opt"
+      },
+      {
+        "name": "image",
+        "type": "object",
+        "required": false,
+        "description": "Tier image.",
+        "sample": ""
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "required": false,
+        "description": "Tier image id.",
+        "sample": "c54265d475b85e00ffb2404585e32b6f"
+      },
+      {
+        "name": "global_model",
+        "type": "object[]",
+        "required": true,
+        "description": "Model info list, model number at most 50",
+        "sample": ""
+      },
+      {
+        "name": "original_price",
+        "type": "float",
+        "required": true,
+        "description": "Original price of global model.",
+        "sample": "12.34"
+      },
+      {
+        "name": "seller_stock",
+        "type": "object[]",
+        "required": false,
+        "description": "seller_stock of global item",
+        "sample": ""
+      },
+      {
+        "name": "location_id",
+        "type": "string",
+        "required": false,
+        "description": "location_id of stock, if the merchant has 3PF shop, the location_id cannot be empty, can use the get_merchant_warehouse_location_list API to obtain the location_id list of the merchant, if the merchant does not have 3PF shop (only has normal CBSC shop), the location_id can be empty",
+        "sample": "CNZ"
+      },
+      {
+        "name": "stock",
+        "type": "int64",
+        "required": true,
+        "description": "stock",
+        "sample": "100"
+      },
+      {
+        "name": "global_model_sku",
+        "type": "string",
+        "required": false,
+        "description": "Sku of global model. model_sku length information needs to be no more than 100 characters.",
+        "sample": "sku"
+      },
+      {
+        "name": "tier_index",
+        "type": "int32[]",
+        "required": true,
+        "description": "Tier index of global model. Index starts from 0. If you want to update one tier/two tier to no tier, can just pass the tier_variation and standardise_tier_variation as [], and pass the global_model >> tier_index as [], meanwhile pass the original_price, seller_stock, etc., to set the price and stock for the modified product with no tier structure.",
+        "sample": "[0,1]"
+      },
+      {
+        "name": "weight",
+        "type": "float",
+        "required": false,
+        "description": "The weight of this global model, the unit is KG. If don't set the weight of this global model, will use the weight of global item by default. If set the dimension of this global model, them must set the weight of this global model.",
+        "sample": "1.1"
+      },
+      {
+        "name": "dimension",
+        "type": "object",
+        "required": false,
+        "description": "The dimension of this global model. If don't set the dimension of this global model, will use the dimension of global item by default.",
+        "sample": ""
+      },
+      {
+        "name": "package_height",
+        "type": "int32",
+        "required": true,
+        "description": "The height of package for this global model, the unit is CM.",
+        "sample": "11"
+      },
+      {
+        "name": "package_length",
+        "type": "int32",
+        "required": true,
+        "description": "The length of package for this global model, the unit is CM.",
+        "sample": "11"
+      },
+      {
+        "name": "package_width",
+        "type": "int32",
+        "required": true,
+        "description": "The width of package for this global model, the unit is CM.",
+        "sample": "11"
+      },
+      {
+        "name": "pre_order",
+        "type": "object",
+        "required": false,
+        "description": "Pre-order information of this global model. Notes: If don't set the DTS of this global model, will use the DTS of the global item by default.",
+        "sample": ""
+      },
+      {
+        "name": "days_to_ship",
+        "type": "int32",
+        "required": true,
+        "description": "Days to ship. Please get the days_to_ship range from the get_dts_limit API.",
+        "sample": "2"
+      },
+      {
+        "name": "global_item_id",
+        "type": "int32",
+        "required": true,
+        "description": "ID of global item.",
+        "sample": "22001469"
+      },
+      {
+        "name": "standardise_tier_variation",
+        "type": "object[]",
+        "required": false,
+        "description": "There is at least one standardise_tier_variation and tier_variation. If you want to update one tier/two tier to no tier, can just pass the tier_variation and standardise_tier_variation as [], and pass the global_model >> tier_index as [], meanwhile pass the original_price, seller_stock, etc., to set the price and stock for the modified product with no tier structure.",
+        "sample": ""
+      },
+      {
+        "name": "variation_id",
+        "type": "int32",
+        "required": true,
+        "description": "standardise tier variation ID",
+        "sample": ""
+      },
+      {
+        "name": "variation_name",
+        "type": "string",
+        "required": false,
+        "description": "standardise tier variation name",
+        "sample": ""
+      },
+      {
+        "name": "variation_group_id",
+        "type": "int32",
+        "required": false,
+        "description": "standardise tier variation group ID",
+        "sample": ""
+      },
+      {
+        "name": "variation_option_list",
+        "type": "object[]",
+        "required": true,
+        "description": "standardise tier variation option list",
+        "sample": ""
+      },
+      {
+        "name": "variation_option_id",
+        "type": "int32",
+        "required": true,
+        "description": "standardise tier variation option ID",
+        "sample": ""
+      },
+      {
+        "name": "variation_option_name",
+        "type": "string",
+        "required": false,
+        "description": "standardise tier variation option value",
+        "sample": ""
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "required": false,
+        "description": "standardise tier variation option image ID",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n\t\"tier_variation\": [\n\t\t{\n\t\t\t\"name\": \"tier 1\",\n\t\t\t\"option_list\": [\n\t\t\t\t{\n\t\t\t\t\t\"option\": \"opt\",\n\t\t\t\t\t\"image\": {\n\t\t\t\t\t\t\"image_id\": \"c54265d475b85e00ffb2404585e32b6f\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t],\n\t\"global_model\": [\n\t\t{\n\t\t\t\"original_price\": 12.34,\n\t\t\t\"seller_stock\": [\n\t\t\t\t{\n\t\t\t\t\t\"location_id\": \"CNZ\",\n\t\t\t\t\t\"stock\": 100\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"global_model_sku\": \"sku\",\n\t\t\t\"tier_index\": [\n\t\t\t\t0,\n\t\t\t\t1\n\t\t\t],\n\t\t\t\"weight\": 1.1,\n\t\t\t\"dimension\": {\n\t\t\t\t\"package_height\": 11,\n\t\t\t\t\"package_length\": 11,\n\t\t\t\t\"package_width\": 11\n\t\t\t},\n\t\t\t\"pre_order\": {\n\t\t\t\t\"days_to_ship\": 2\n\t\t\t}\n\t\t}\n\t],\n\t\"global_item_id\": 22001469,\n\t\"standardise_tier_variation\": [\n\t\t{\n\t\t\t\"variation_id\": 0,\n\t\t\t\"variation_name\": \"-\",\n\t\t\t\"variation_group_id\": 0,\n\t\t\t\"variation_option_list\": [\n\t\t\t\t{\n\t\t\t\t\t\"variation_option_id\": 0,\n\t\t\t\t\t\"variation_option_name\": \"-\",\n\t\t\t\t\t\"image_id\": \"-\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+    },
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.post(\"https://partner.shopeemobile.com/api/v2/global_product/init_tier_variation?access_token=access_token&merchant_id=merchant_id&partner_id=partner_id&sign=sign&timestamp=timestamp\")\n.header(\"Content-Type\",\"application/json\")\n.body(\"{\n   \\\"global_item_id\\\": 22001469,\n   \\\"global_model\\\": [\n      {\n         \\\"dimension\\\": {\n            \\\"package_height\\\": 11,\n            \\\"package_length\\\": 11,\n            \\\"package_width\\\": 11\n         },\n         \\\"global_model_sku\\\": \\\"sku\\\",\n         \\\"original_price\\\": 12.34,\n         \\\"pre_order\\\": {\n            \\\"days_to_ship\\\": 2\n         },\n         \\\"seller_stock\\\": [\n            {\n               \\\"location_id\\\": \\\"CNZ\\\",\n               \\\"stock\\\": 100\n            }\n         ],\n         \\\"tier_index\\\": [\n            0,\n            1\n         ],\n         \\\"weight\\\": 1.1\n      }\n   ],\n   \\\"standardise_tier_variation\\\": [\n      {\n         \\\"variation_group_id\\\": 0,\n         \\\"variation_id\\\": 0,\n         \\\"variation_name\\\": \\\"-\\\",\n         \\\"variation_option_list\\\": [\n            {\n               \\\"image_id\\\": \\\"-\\\",\n               \\\"variation_option_id\\\": 0,\n               \\\"variation_option_name\\\": \\\"-\\\"\n            }\n         ]\n      }\n   ],\n   \\\"tier_variation\\\": [\n      {\n         \\\"name\\\": \\\"tier 1\\\",\n         \\\"option_list\\\": [\n            {\n               \\\"image\\\": {\n                  \\\"image_id\\\": \\\"c54265d475b85e00ffb2404585e32b6f\\\"\n               },\n               \\\"option\\\": \\\"opt\\\"\n            }\n         ]\n      }\n   ]\n}\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/global_product/init_tier_variation?access_token=access_token&merchant_id=merchant_id&partner_id=partner_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'POST',\n  CURLOPT_POSTFIELDS => '{\n    \"global_item_id\": 22001469,\n    \"global_model\": [\n        {\n            \"dimension\": {\n                \"package_height\": 11,\n                \"package_length\": 11,\n                \"package_width\": 11\n            },\n            \"global_model_sku\": \"sku\",\n            \"original_price\": 12.34,\n            \"pre_order\": {\n                \"days_to_ship\": 2\n            },\n            \"seller_stock\": [\n                {\n                    \"location_id\": \"CNZ\",\n                    \"stock\": 100\n                }\n            ],\n            \"tier_index\": [\n                0,\n                1\n            ],\n            \"weight\": 1.1\n        }\n    ],\n    \"standardise_tier_variation\": [\n        {\n            \"variation_group_id\": 0,\n            \"variation_id\": 0,\n            \"variation_name\": \"-\",\n            \"variation_option_list\": [\n                {\n                    \"image_id\": \"-\",\n                    \"variation_option_id\": 0,\n                    \"variation_option_name\": \"-\"\n                }\n            ]\n        }\n    ],\n    \"tier_variation\": [\n        {\n            \"name\": \"tier 1\",\n            \"option_list\": [\n                {\n                    \"image\": {\n                        \"image_id\": \"c54265d475b85e00ffb2404585e32b6f\"\n                    },\n                    \"option\": \"opt\"\n                }\n            ]\n        }\n    ]\n}',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request POST 'https://partner.shopeemobile.com/api/v2/global_product/init_tier_variation?access_token=access_token&merchant_id=merchant_id&partner_id=partner_id&sign=sign&timestamp=timestamp' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n   \"global_item_id\": 22001469,\n   \"global_model\": [\n      {\n         \"dimension\": {\n            \"package_height\": 11,\n            \"package_length\": 11,\n            \"package_width\": 11\n         },\n         \"global_model_sku\": \"sku\",\n         \"original_price\": 12.34,\n         \"pre_order\": {\n            \"days_to_ship\": 2\n         },\n         \"seller_stock\": [\n            {\n               \"location_id\": \"CNZ\",\n               \"stock\": 100\n            }\n         ],\n         \"tier_index\": [\n            0,\n            1\n         ],\n         \"weight\": 1.1\n      }\n   ],\n   \"standardise_tier_variation\": [\n      {\n         \"variation_group_id\": 0,\n         \"variation_id\": 0,\n         \"variation_name\": \"-\",\n         \"variation_option_list\": [\n            {\n               \"image_id\": \"-\",\n               \"variation_option_id\": 0,\n               \"variation_option_name\": \"-\"\n            }\n         ]\n      }\n   ],\n   \"tier_variation\": [\n      {\n         \"name\": \"tier 1\",\n         \"option_list\": [\n            {\n               \"image\": {\n                  \"image_id\": \"c54265d475b85e00ffb2404585e32b6f\"\n               },\n               \"option\": \"opt\"\n            }\n         ]\n      }\n   ]\n}'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\nimport json\n\nurl = \"https://partner.shopeemobile.com/api/v2/global_product/init_tier_variation?access_token=access_token&merchant_id=merchant_id&partner_id=partner_id&sign=sign&timestamp=timestamp\"\n\npayload=json.dumps({\n  \"global_item_id\": 22001469,\n  \"global_model\": [\n    {\n      \"dimension\": {\n        \"package_height\": 11,\n        \"package_length\": 11,\n        \"package_width\": 11\n      },\n      \"global_model_sku\": \"sku\",\n      \"original_price\": 12.34,\n      \"pre_order\": {\n        \"days_to_ship\": 2\n      },\n      \"seller_stock\": [\n        {\n          \"location_id\": \"CNZ\",\n          \"stock\": 100\n        }\n      ],\n      \"tier_index\": [\n        0,\n        1\n      ],\n      \"weight\": 1.1\n    }\n  ],\n  \"standardise_tier_variation\": [\n    {\n      \"variation_group_id\": 0,\n      \"variation_id\": 0,\n      \"variation_name\": \"-\",\n      \"variation_option_list\": [\n        {\n          \"image_id\": \"-\",\n          \"variation_option_id\": 0,\n          \"variation_option_name\": \"-\"\n        }\n      ]\n    }\n  ],\n  \"tier_variation\": [\n    {\n      \"name\": \"tier 1\",\n      \"option_list\": [\n        {\n          \"image\": {\n            \"image_id\": \"c54265d475b85e00ffb2404585e32b6f\"\n          },\n          \"option\": \"opt\"\n        }\n      ]\n    }\n  ]\n})\nheaders = {\n  'Content-Type': 'application/json'\n}\nresponse = requests.RPCRequest(\"POST\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning message."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "98eae35efff24dd0974c21a847127184",
+        "description": "The identifier for an API request for error tracking."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"warning\": \"\",\n    \"request_id\": \"98eae35efff24dd0974c21a847127184\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "add_on.add_on_deal_expired",
+      "message": "The expired add on deal can't be edited"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_auth",
+      "message": "not all shop is upgraded and confirmed, can not edit item"
+    },
+    {
+      "code": "error_param",
+      "message": "The level of tier-variation not change."
+    },
+    {
+      "code": "error_param",
+      "message": "Model tier_index error."
+    },
+    {
+      "code": "error_param",
+      "message": "Image not exist."
+    },
+    {
+      "code": "error_busi_global_item_not_found",
+      "message": "Global item not found."
+    },
+    {
+      "code": "error_busi_global_item_sku_over_limit",
+      "message": "Global item sku is over limit."
+    },
+    {
+      "code": "error_busi_global_item_price_should_bigger_than_zero",
+      "message": "Original_price must bigger than 0."
+    },
+    {
+      "code": "error_duplicated_variation_option",
+      "message": "Tier variation option duplicated."
+    },
+    {
+      "code": "error_busi_global_tier_option_image_not_equal_to_tier_one_option",
+      "message": "Image num of tier_variation option is not equal to option num of tier_variation."
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_permission",
+      "message": "Global product related shop is not upgraded."
+    },
+    {
+      "code": "error_param_validate",
+      "message": "Your current merchant is a special merchant.Please ensure all your shop are under same region"
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_param",
+      "message": "You have 3PF shops, please upload stock with location id"
+    },
+    {
+      "code": "error_inner",
+      "message": "Invalid stock location ID"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, operation not allowed"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, reach item price edit limit for each day"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, item price should less than the price"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, mtsku not init"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, operation not allowed"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, reach item price edit limit for each day"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, item price should less than the price"
+    },
+    {
+      "code": "error_update_item_price",
+      "message": "Update item price fail, mtsku not init"
+    },
+    {
+      "code": "error_busi",
+      "message": "The merchant/shop has multi warehouse, please input location id"
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_stock_less_then_min_limit",
+      "message": "Normal_stock/ seller_stock is less than min limit."
+    },
+    {
+      "code": "error_stock_bigger_then_limit",
+      "message": "Normal_stock/ seller_stock is bigger than max limit."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/delete_global_item"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/delete_global_item"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/delete_global_item"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/delete_global_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/delete_global_item"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/delete_global_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/delete_global_item"
+      }
+    ]
+  }
+}

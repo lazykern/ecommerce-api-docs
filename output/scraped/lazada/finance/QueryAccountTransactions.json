@@ -1,0 +1,208 @@
+{
+  "platform": "lazada",
+  "module": "finance",
+  "endpoint_name": "QueryAccountTransactions",
+  "version": null,
+  "summary": "Query Account Transactions",
+  "description": "Query Account Transactions",
+  "path": "/finance/transaction/accountTransactions/query",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "transaction_type",
+        "type": "String",
+        "required": false,
+        "description": "transaction type,Enumeration values for(Deposit,Withdrawal,Payment,null)"
+      },
+      {
+        "name": "sub_transaction_type",
+        "type": "String",
+        "required": false,
+        "description": "sub transaction type,Enumeration values for(Settlement,Failed Payment,Returned Payment,Auto Withdrawal,Manual Withdrawal,Sponsored Solutions Top-up,null)"
+      },
+      {
+        "name": "transaction_number",
+        "type": "String",
+        "required": false,
+        "description": "transaction number"
+      },
+      {
+        "name": "page_size",
+        "type": "Number",
+        "required": true,
+        "description": "page size"
+      },
+      {
+        "name": "start_time",
+        "type": "String",
+        "required": true,
+        "description": "start time,format:yyyyMMdd"
+      },
+      {
+        "name": "end_time",
+        "type": "String",
+        "required": true,
+        "description": "start time,format:yyyyMMdd"
+      },
+      {
+        "name": "page_num",
+        "type": "Number",
+        "required": true,
+        "description": "page number"
+      },
+      {
+        "name": "msg",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/finance/transaction/accountTransactions/query\");\nrequest.addApiParameter(\"transaction_type\", \"Deposit\");\nrequest.addApiParameter(\"sub_transaction_type\", \" Deposit\");\nrequest.addApiParameter(\"transaction_number\", \" 1001\");\nrequest.addApiParameter(\"page_size\", \"10\");\nrequest.addApiParameter(\"start_time\", \"20220601\");\nrequest.addApiParameter(\"end_time\", \"20220602\");\nrequest.addApiParameter(\"page_num\", \"1\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/finance/transaction/accountTransactions/query');\n$request->addApiParam('transaction_type','Deposit');\n$request->addApiParam('sub_transaction_type',' Deposit');\n$request->addApiParam('transaction_number',' 1001');\n$request->addApiParam('page_size','10');\n$request->addApiParam('start_time','20220601');\n$request->addApiParam('end_time','20220602');\n$request->addApiParam('page_num','1');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/finance/transaction/accountTransactions/query\");\nrequest.AddApiParameter(\"transaction_type\", \"Deposit\");\nrequest.AddApiParameter(\"sub_transaction_type\", \" Deposit\");\nrequest.AddApiParameter(\"transaction_number\", \" 1001\");\nrequest.AddApiParameter(\"page_size\", \"10\");\nrequest.AddApiParameter(\"start_time\", \"20220601\");\nrequest.AddApiParameter(\"end_time\", \"20220602\");\nrequest.AddApiParameter(\"page_num\", \"1\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/finance/transaction/accountTransactions/query')\nrequest.add_api_parameter(\"transaction_type\", \"Deposit\")\nrequest.add_api_parameter(\"sub_transaction_type\", \" Deposit\")\nrequest.add_api_parameter(\"transaction_number\", \" 1001\")\nrequest.add_api_parameter(\"page_size\", \"10\")\nrequest.add_api_parameter(\"start_time\", \"20220601\")\nrequest.add_api_parameter(\"end_time\", \"20220602\")\nrequest.add_api_parameter(\"page_num\", \"1\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/finance/transaction/accountTransactions/query')\nrequest.add_api_param('transaction_type', 'Deposit')\nrequest.add_api_param('sub_transaction_type', ' Deposit')\nrequest.add_api_param('transaction_number', ' 1001')\nrequest.add_api_param('page_size', '10')\nrequest.add_api_param('start_time', '20220601')\nrequest.add_api_param('end_time', '20220602')\nrequest.add_api_param('page_num', '1')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/finance/transaction/accountTransactions/query' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sub_transaction_type\":\"+Deposit\",\"start_time\":\"20220601\",\"app_key\":\"1234567\",\"transaction_number\":\"+1001\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"end_time\":\"20220602\",\"page_num\":\"1\",\"transaction_type\":\"Deposit\",\"timestamp\":\"1750231478423\",\"page_size\":\"10\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "msg",
+        "type": "String",
+        "description": "error message"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "result"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "success:true,fail:false"
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "description": "error code"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"msg\": \"null\",\n  \"code\": \"0\",\n  \"data\": {\n    \"page_info\": {\n      \"total_count\": \"1000\",\n      \"total_page\": \"100\",\n      \"page_num\": \"1\",\n      \"page_size\": \"10\"\n    },\n    \"transactions\": [\n      {\n        \"pmt_reference\": \"Bank Ref. TH1JHIY41G-20230220\",\n        \"payee_account\": {\n          \"description\": \"description\",\n          \"account\": \"1001\"\n        },\n        \"amount\": \"±0.01\",\n        \"sub_type\": \"Penarikan Dana Otomatis\",\n        \"transaction_number\": \"10000001\",\n        \"transaction_time\": \"2022-01-01 00:00:00\",\n        \"currency\": \"IDR\",\n        \"tracking_list\": [\n          {\n            \"update_time\": \"2022-01-01 00:00:00\",\n            \"name\": \"WITHDRAWAL_INITIATED\",\n            \"remark\": \"remark\",\n            \"status\": \"Penarikan Dana Dibuat\"\n          }\n        ],\n        \"type\": \"Penarikan Dana\",\n        \"remarks\": \" remarks\"\n      }\n    ]\n  },\n  \"success\": \"true\",\n  \"error_code\": \" error_code\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "IllegalAccessToken",
+      "message": "The specified access token is invalid or expired",
+      "description": "access token is invalid or expired"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

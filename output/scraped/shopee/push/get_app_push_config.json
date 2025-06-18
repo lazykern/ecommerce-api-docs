@@ -1,0 +1,140 @@
+{
+  "platform": "shopee",
+  "module": "push",
+  "endpoint_name": "get_app_push_config",
+  "version": "v2",
+  "summary": "you can turn on or turn off your app push config setting through this open api",
+  "description": "you can turn on or turn off your app push config setting through this open api",
+  "path": "/api/v2/push/set_app_push_config",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.uat.shopeemobile.com/api/v2/push/get_app_push_config?partner_id=partner_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.uat.shopeemobile.com/api/v2/push/get_app_push_config?partner_id=partner_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.uat.shopeemobile.com/api/v2/push/get_app_push_config?partner_id=partner_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.uat.shopeemobile.com/api/v2/push/get_app_push_config?partner_id=partner_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.request(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "b937c04e554847789cbf3fe33a0ad5f1",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "common.error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid sign",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "callback_url",
+        "type": "string",
+        "sample": "https://open.shopee.com/",
+        "description": "The callback url of push mechanism. It is the address where the Shopee will send the push message to. If you don't set any callback_url before, this parameters is required."
+      },
+      {
+        "name": "live_push_status",
+        "type": "string",
+        "sample": "suspended",
+        "description": "live push status:Normal,Warning,Suspended"
+      },
+      {
+        "name": "suspended_time",
+        "type": "timestamp",
+        "sample": "1577416181",
+        "description": "The live push suspended time caused by low successful rate of push mechanism.Only when live push status is suspended, this parameters will response."
+      },
+      {
+        "name": "blocked_shop_id",
+        "type": "int[]",
+        "sample": "[10010,20020,30030]",
+        "description": "Use this filed to indicate that Shopee won't send any push message created by this shop."
+      },
+      {
+        "name": "push_config_on_list",
+        "type": "int[]",
+        "sample": "[1,2,3]",
+        "description": "Use this field to indicate which push config turn on, and you can receive the push message. 1=Shop authorization for partners 2=Shop deauthorization for partners 3=Order status update push 4=TrackingNo push 5=Shopee Updates 6=Banned item push 7=item promotion push 8=reserved stock change push 9=promotionn update push 10=webchat push 11=video upload push 12=openapi authorization expiry push 13=brand register result"
+      },
+      {
+        "name": "push_config_off_list",
+        "type": "int[]",
+        "sample": "[4,5,6,7,8,9,10,11,12,13]",
+        "description": "Use this field to indicate which push config turn on, and you can receive the push message. 1=Shop authorization for partners 2=Shop deauthorization for partners 3=Order status update push 4=TrackingNo push 5=Shopee Updates 6=Banned item push 7=item promotion push 8=reserved stock change push 9=promotionn update push 10=webchat push 11=video upload push 12=openapi authorization expiry push 13=brand register result"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"request_id\": \"b937c04e554847789cbf3fe33a0ad5f1\",\n\t\"error\": \"\",\n\t\"message\": \"\",\n\t\"response\": {\n\t\t\"callback_url\": \"https://open.shopee.com/\",\n\t\t\"live_push_status\": \"suspended\",\n\t\t\"suspended_time\": 1577416181,\n\t\t\"blocked_shop_id\": [\n\t\t\t10010,\n\t\t\t20020,\n\t\t\t30030\n\t\t],\n\t\t\"push_config_on_list\": [\n\t\t\t1,\n\t\t\t2,\n\t\t\t3\n\t\t],\n\t\t\"push_config_off_list\": [\n\t\t\t4,\n\t\t\t5,\n\t\t\t6,\n\t\t\t7,\n\t\t\t8,\n\t\t\t9,\n\t\t\t10,\n\t\t\t11,\n\t\t\t12,\n\t\t\t13\n\t\t]\n\t}\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/push/set_app_push_config"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/push/set_app_push_config"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/push/set_app_push_config"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/push/set_app_push_config"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/push/set_app_push_config"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/push/set_app_push_config"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/push/set_app_push_config"
+      }
+    ]
+  }
+}

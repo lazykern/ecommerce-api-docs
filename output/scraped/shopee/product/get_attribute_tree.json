@@ -1,0 +1,302 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "get_attribute_tree",
+  "version": "v2",
+  "summary": "Get the attribute data of a leaf category",
+  "description": "Get the attribute data of a leaf category. More detail please check: https://open.shopee.com/developer-guide/209",
+  "path": "/api/v2/product/get_attributes",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "category_id_list",
+        "type": "int[]",
+        "required": true,
+        "description": "max count is 20",
+        "sample": ""
+      },
+      {
+        "name": "language",
+        "type": "string",
+        "required": false,
+        "description": "Language Support Lanuage: \"SG\": [ \"en\", \"zh-Hans\", \"ms\" ], \"MY\": [ \"en\", \"zh-Hans\", \"ms\" ], \"PH\": [ \"en\", \"zh-Hans\" ], \"VN\": [ \"vn\", \"en\" ], \"ID\": [ \"id\", \"en\" ], \"TH\": [ \"th\", \"en\" ], \"BR\": [ \"pt-BR\", \"en\" ], \"MX\": [ \"es-MX\", \"en\" ], \"CO\": [ \"es-CO\", \"en\" ], \"CL\": [ \"es-CL\", \"en\" ], \"TW\": [ \"zh-Hant\", \"zh-Hans\", \"en\" ], \"IN\": [ \"en\", \"hi\" ]",
+        "sample": "\"en\""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://open.admin.uat.shopee.io/api/v2/product/get_attribute_tree?access_token=access_token&category_ids=1234,5678&language=en&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://open.admin.uat.shopee.io/api/v2/product/get_attribute_tree?access_token=access_token&category_ids=1234,5678&language=en&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://open.admin.uat.shopee.io/api/v2/product/get_attribute_tree?access_token=access_token&category_ids=1234,5678&language=en&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://open.admin.uat.shopee.io/api/v2/product/get_attribute_tree?access_token=access_token&category_ids=1234,5678&language=en&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.request(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Message"
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "Request ID"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Resopnse"
+      },
+      {
+        "name": "list",
+        "type": "object[]",
+        "sample": "",
+        "description": "Each result corresponds to one category in category_ids"
+      },
+      {
+        "name": "attribute_tree",
+        "type": "object[]",
+        "sample": "",
+        "description": "One category's attribute trees"
+      },
+      {
+        "name": "attribute_id",
+        "type": "int",
+        "sample": "",
+        "description": "Attribute ID"
+      },
+      {
+        "name": "mandatory",
+        "type": "boolean",
+        "sample": "true",
+        "description": "Is mandatory or not"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "",
+        "description": "Attribute Name"
+      },
+      {
+        "name": "attribute_value_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "All available values for this attribute"
+      },
+      {
+        "name": "value_id",
+        "type": "int",
+        "sample": "",
+        "description": "Value ID"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "",
+        "description": "Value name"
+      },
+      {
+        "name": "value_unit",
+        "type": "string",
+        "sample": "",
+        "description": "Value unit"
+      },
+      {
+        "name": "child_attribute_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "Child attributes for the value of parent attribute The structure content is the same as attribute_tree"
+      },
+      {
+        "name": "multi_lang",
+        "type": "object[]",
+        "sample": "",
+        "description": "Translate results for display"
+      },
+      {
+        "name": "language",
+        "type": "string",
+        "sample": "",
+        "description": "Language"
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "sample": "",
+        "description": "Translate result"
+      },
+      {
+        "name": "attribute_info",
+        "type": "object",
+        "sample": "",
+        "description": "Attribute extra info"
+      },
+      {
+        "name": "input_type",
+        "type": "int",
+        "sample": "",
+        "description": "SINGLE_DROP_DOWN = 1 SINGLE_COMBO_BOX = 2 FREE_TEXT_FILED = 3 MULTI_DROP_DOWN = 4 MULTI_COMBO_BOX = 5"
+      },
+      {
+        "name": "input_validation_type",
+        "type": "int",
+        "sample": "",
+        "description": "VALIDATOR_NO_VALIDATE_TYPE = 0 VALIDATOR_INT_TYPE = 1 VALIDATOR_STRING_TYPE = 2 VALIDATOR_FLOAT_TYPE = 3 VALIDATOR_DATE_TYPE = 4"
+      },
+      {
+        "name": "format_type",
+        "type": "int",
+        "sample": "",
+        "description": "FORMAT_NORMAL = 1 FORMAT_QUANTITATIVE_WITH_UNIT = 2"
+      },
+      {
+        "name": "date_format_type",
+        "type": "int",
+        "sample": "",
+        "description": "YEAR_MONTH_DATE = 0 (DD/MM/YYYY) YEAR_MONTH = 1 (MM/YYYY)"
+      },
+      {
+        "name": "attribute_unit_list",
+        "type": "string[]",
+        "sample": "",
+        "description": "Attribute's available units list"
+      },
+      {
+        "name": "max_value_count",
+        "type": "int",
+        "sample": "",
+        "description": "Max selected value count"
+      },
+      {
+        "name": "introduction",
+        "type": "string",
+        "sample": "",
+        "description": "Introduction for special Attribute"
+      },
+      {
+        "name": "is_oem",
+        "type": "boolean",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "support_search_value",
+        "type": "boolean",
+        "sample": "",
+        "description": "Indicates whether this attribute has searchable values. If yes, please call v2.product.search_attribute_value_list to get the default values"
+      },
+      {
+        "name": "multi_lang",
+        "type": "object[]",
+        "sample": "",
+        "description": "Attribute translate info"
+      },
+      {
+        "name": "language",
+        "type": "string",
+        "sample": "",
+        "description": "Language"
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "sample": "",
+        "description": "Translate result"
+      },
+      {
+        "name": "category_id",
+        "type": "int",
+        "sample": "",
+        "description": "Category ID"
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning msg"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"error\": \"-\",\n\t\"message\": \"-\",\n\t\"warning\": \"-\",\n\t\"request_id\": \"-\",\n\t\"response\": {\n\t\t\"list\": [\n\t\t\t{\n\t\t\t\t\"attribute_tree\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"attribute_id\": 0,\n\t\t\t\t\t\t\"mandatory\": true,\n\t\t\t\t\t\t\"name\": \"-\",\n\t\t\t\t\t\t\"attribute_value_list\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"value_id\": 0,\n\t\t\t\t\t\t\t\t\"name\": \"-\",\n\t\t\t\t\t\t\t\t\"value_unit\": \"-\",\n\t\t\t\t\t\t\t\t\"child_attribute_list\": [\n\t\t\t\t\t\t\t\t\t{}\n\t\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\t\"multi_lang\": [\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"language\": \"-\",\n\t\t\t\t\t\t\t\t\t\t\"value\": \"-\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"attribute_info\": {\n\t\t\t\t\t\t\t\"input_type\": 0,\n\t\t\t\t\t\t\t\"input_validation_type\": 0,\n\t\t\t\t\t\t\t\"format_type\": 0,\n\t\t\t\t\t\t\t\"date_format_type\": 0,\n\t\t\t\t\t\t\t\"attribute_unit_list\": [\n\t\t\t\t\t\t\t\t\"-\"\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"max_value_count\": 0\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"multi_lang\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"language\": \"-\",\n\t\t\t\t\t\t\t\t\"value\": \"-\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"category_id\": 0\n\t\t\t}\n\t\t]\n\t}\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_invalid_language",
+      "message": "Invalid language."
+    },
+    {
+      "code": "error_invalid_category",
+      "message": "Invalid category ID {{.error_info}}"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_attributes"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_attributes"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_attributes"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_attributes"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_attributes"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_attributes"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_attributes"
+      }
+    ]
+  }
+}

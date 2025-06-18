@@ -1,0 +1,200 @@
+{
+  "platform": "shopee",
+  "module": "public",
+  "endpoint_name": "get_access_token",
+  "version": "v2",
+  "summary": "Use this API to get basic info of merchants which have authorized to the partner",
+  "description": "Use this API to get basic info of merchants which have authorized to the partner.",
+  "path": "/api/v2/public/get_merchants_by_partner",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "code",
+        "type": "string",
+        "required": true,
+        "description": "The code in redirect url after the authorization. Valid for one-time use, expires in 10 minutes",
+        "sample": ""
+      },
+      {
+        "name": "partner_id",
+        "type": "int",
+        "required": true,
+        "description": "Partner ID is assigned upon registration is successful. Required for all requests.",
+        "sample": ""
+      },
+      {
+        "name": "shop_id",
+        "type": "int",
+        "required": false,
+        "description": "Shopee's unique identifier for a shop. Required param for most APIs.",
+        "sample": ""
+      },
+      {
+        "name": "main_account_id",
+        "type": "int",
+        "required": false,
+        "description": "The main_account_id of the seller that authorized the developer",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\"shop_id\":38862,\n\"code\":\"5a5477794a55537954697169514f4653\",\n\"partner_id\":1001141\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "refresh_token",
+        "type": "string",
+        "sample": "",
+        "description": "Returned when the API call is successful.Use refresh_token to get a new access_token. Valid for each shop_id and merchant_id respectively, for 30 days."
+      },
+      {
+        "name": "access_token",
+        "type": "string",
+        "sample": "",
+        "description": "Returned when the API call is successful.A dynamic token that can be used multiple times and expires after 4 hours."
+      },
+      {
+        "name": "expire_in",
+        "type": "int32",
+        "sample": "",
+        "description": "Returned when the API call is successful.The validity period of the access_token, in seconds."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "ID of API requests; always returned. Used to diagnose problems."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error codes for API requests; always returned.When the API call is successful, the error code returned is empty."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Always returned. Provides detailed error information."
+      },
+      {
+        "name": "merchant_id_list",
+        "type": "int32[]",
+        "sample": "",
+        "description": "Returned when there is main_account_id in the input parameter, including all the merchant_ids authorized this time under the main account."
+      },
+      {
+        "name": "shop_id_list",
+        "type": "int32",
+        "sample": "",
+        "description": "Returned when there is main_account_id in the input parameter, including all shop_ids authorized this time under the main account."
+      },
+      {
+        "name": "supplier_id_list",
+        "type": "int32",
+        "sample": "",
+        "description": "Returned when authorized to supplier account, including all supplier_id authorized this time under the account."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"refresh_token\": \"4c7259534969484e71734d695a6e0d55\",\n    \"access_token\": \"6b5a46716e474d6f6e59777659459849\",\n    \"expire_in\": 14312,\n    \"request_id\": \"f2a678875e669fdbdb4cbc6a9a18b895\",\n    \"error\": \"\",\n    \"message\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "invalid_code",
+      "message": "The code is expired or used or invalid, please check the code."
+    },
+    {
+      "code": "invalid_main_acount_id",
+      "message": "The code or main_accoount_id is wrong, please check the code or the main_account_id."
+    },
+    {
+      "code": "invalid_partner_id",
+      "message": "Invalid partner_id, please have a check."
+    },
+    {
+      "code": "invalid_shop_id",
+      "message": "The code or shop_id is wrong, please check the code or the shop_id."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/public/get_merchants_by_partner"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/public/get_merchants_by_partner"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/public/get_merchants_by_partner"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/public/get_merchants_by_partner"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/public/get_merchants_by_partner"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/public/get_merchants_by_partner"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/public/get_merchants_by_partner"
+      }
+    ]
+  }
+}

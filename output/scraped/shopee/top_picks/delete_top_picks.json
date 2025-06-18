@@ -1,0 +1,175 @@
+{
+  "platform": "shopee",
+  "module": "top_picks",
+  "endpoint_name": "delete_top_picks",
+  "version": "v2",
+  "summary": "update a collection info",
+  "description": "update a collection info",
+  "path": "/api/v2/top_picks/update_top_picks",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "top_picks_id",
+        "type": "int",
+        "required": true,
+        "description": "collection id",
+        "sample": "480"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"top_picks_id\": 480\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "646e5204129e5f9a34a3d008d685f2ed",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "top_picks_id",
+        "type": "int",
+        "sample": "480",
+        "description": "collection id"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"request_id\": \"646e5204129e5f9a34a3d008d685f2ed\",\n    \"error\": \"\",\n    \"message\": \"\",\n    \"response\": {\n        \"top_picks_id\": 62\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "top_pick.top_pick_item_id_duplication",
+      "message": "The top-picks has duplicative item."
+    },
+    {
+      "code": "top_pick.top_pick_item_id_invalid",
+      "message": "Item {itemid} is wrong, please check it."
+    },
+    {
+      "code": "top_pick.top_pick_item_id_not_exist",
+      "message": "Item {itemid} is not belong to shop, please check it."
+    },
+    {
+      "code": "common.error_not_found",
+      "message": "The information you queried is not found."
+    },
+    {
+      "code": "common.error_permission",
+      "message": "You don't have permission for the operation"
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/top_picks/update_top_picks"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/top_picks/update_top_picks"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/top_picks/update_top_picks"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/top_picks/update_top_picks"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/top_picks/update_top_picks"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/top_picks/update_top_picks"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/top_picks/update_top_picks"
+      }
+    ]
+  }
+}

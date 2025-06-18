@@ -1,0 +1,99 @@
+{
+  "platform": "shopee",
+  "module": "merchant",
+  "endpoint_name": "get_merchant_warehouse_location_list",
+  "version": "v2",
+  "summary": "Use this call to get shop_list bound to merchant_id",
+  "description": "Use this call to get shop_list bound to merchant_id.",
+  "path": "/api/v2/merchant/get_shop_list_by_merchant",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "7131251eb8519f10dd18e03167a42d71",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "The error key if there's error."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Messages about the error and it's cause if there're errors."
+      },
+      {
+        "name": "response",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "location_id",
+        "type": "string",
+        "sample": "CNZ",
+        "description": "Location identifier for stocks. Different location_ids represent that your addresses are in different item stocks"
+      },
+      {
+        "name": "warehouse_name",
+        "type": "string",
+        "sample": "warehouse1",
+        "description": "The warehouse name filled in when creating the warehouse address"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": null,\n    \"message\": null,\n    \"request_id\": \"7131251eb8519f10dd18e03167a42d71\",\n    \"response\": [\n        {\n            \"location_id\": \"CNZ\",\n            \"warehouse_name\": \"warehouse1\"\n        }\n    ]\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/merchant/get_shop_list_by_merchant"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/merchant/get_shop_list_by_merchant"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/merchant/get_shop_list_by_merchant"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/merchant/get_shop_list_by_merchant"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/merchant/get_shop_list_by_merchant"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/merchant/get_shop_list_by_merchant"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/merchant/get_shop_list_by_merchant"
+      }
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "platform": "lazada",
+  "module": "product",
+  "endpoint_name": "GetSellerItemLimit",
+  "version": null,
+  "summary": "The platform will provide the product quantity limit information by this interface",
+  "description": "The platform will provide the product quantity limit information by this interface. The qps will be limited by seller, 10 qps per seller.",
+  "path": "/product/seller/item/limit",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCodes",
+        "type": "String[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMsgs",
+        "type": "String[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/seller/item/limit\");\nrequest.setHttpMethod(\"GET\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/seller/item/limit','GET');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/seller/item/limit\");\nrequest.SetHttpMethod(\"GET\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/seller/item/limit','GET')\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/seller/item/limit','GET')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/product/seller/item/limit?timestamp=1750231627742&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "The result of this request,true or false."
+      },
+      {
+        "name": "errorCodes",
+        "type": "String[]",
+        "description": "If the request failed, errorCodes will be returned."
+      },
+      {
+        "name": "errorMsgs",
+        "type": "String[]",
+        "description": "The error msg, may be null even though the result is failed."
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "The data"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"payByrCnt\": \"30\",\n    \"payItemCnt\": \"20\",\n    \"itemLimit\": \"500\",\n    \"onlineItemCount\": \"100\"\n  },\n  \"success\": \"true\",\n  \"errorCodes\": [],\n  \"errorMsgs\": [],\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "HOT_KEY_BLOCK_EXCEPTION",
+      "message": "hot key protect",
+      "description": "10 qps promised for each seller"
+    },
+    {
+      "code": "SELLER_SERVICE_FAIL",
+      "message": "inner service fail",
+      "description": "inner system error, please retry"
+    },
+    {
+      "code": "ONLY_CB_SELLER_SUPPORTED",
+      "message": "For now, only cb seller supported",
+      "description": "For local seller, we will support later."
+    },
+    {
+      "code": "THIRD_SERVICE_ERROR",
+      "message": "inner service fail",
+      "description": "inner system error, please retry"
+    },
+    {
+      "code": "SYS_ERROR",
+      "message": "inner service fail",
+      "description": "inner system error, please retry"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

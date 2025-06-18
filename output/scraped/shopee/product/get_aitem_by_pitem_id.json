@@ -1,0 +1,160 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "get_aitem_by_pitem_id",
+  "version": "v2",
+  "summary": "Unlink the existing product from SSP, keeping the existing info",
+  "description": "Unlink the existing product from SSP, keeping the existing info.",
+  "path": "/api/v2/product/unlink_ssp",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "pitem_id",
+        "type": "int64",
+        "required": true,
+        "description": "ID of item under SIP Primary Shop.",
+        "sample": "843997615"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/product/get_aitem_by_pitem_id?access_token=access_token&partner_id=partner_id&pitem_id=843997615&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/product/get_aitem_by_pitem_id?access_token=access_token&partner_id=partner_id&pitem_id=843997615&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/product/get_aitem_by_pitem_id?access_token=access_token&partner_id=partner_id&pitem_id=843997615&shop_id=shop_id&sign=sign&timestamp=timestamp'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/product/get_aitem_by_pitem_id?access_token=access_token&partner_id=partner_id&pitem_id=843997615&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.RPCRequest(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate waring details if hit waring. Empty if no waring happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "aitem_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "ashop_id",
+        "type": "int64",
+        "sample": "223009454",
+        "description": "ID of SIP Affiliate Shop."
+      },
+      {
+        "name": "ashop_region",
+        "type": "string",
+        "sample": "\"SG\"",
+        "description": "Region of SIP Affiliate Shop."
+      },
+      {
+        "name": "aitem_id",
+        "type": "int64",
+        "sample": "843997618",
+        "description": "ID of item under SIP Affiliate Shop corresponding to the P Item."
+      },
+      {
+        "name": "model_mapping_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "If the P Item does not have model, then the model_mapping_list will not be returned."
+      },
+      {
+        "name": "pmodel_id",
+        "type": "int64",
+        "sample": "11055090",
+        "description": "ID of model for the P Item."
+      },
+      {
+        "name": "amodel_id",
+        "type": "int64",
+        "sample": "11055093",
+        "description": "ID of model for the A Item."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"317a860d2520b24b2698b922b3bbe600\",\n    \"response\": {\n        \"aitem_list\": [\n            {\n                \"aitem_id\": 843997618,\n                \"ashop_id\": 223009454,\n                \"ashop_region\": \"SG\",\n                \"model_mapping_list\": [\n                    {\n                        \"amodel_id\": 11055093,\n                        \"pmodel_id\": 11055090\n                    }\n                ]\n            },\n            {\n                \"aitem_id\": 843997617,\n                \"ashop_id\": 223409366,\n                \"ashop_region\": \"PH\",\n                \"model_mapping_list\": [\n                    {\n                        \"amodel_id\": 11055092,\n                        \"pmodel_id\": 11055090\n                    }\n                ]\n            }\n        ]\n    },\n    \"warning\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/unlink_ssp"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/unlink_ssp"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/unlink_ssp"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/unlink_ssp"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/unlink_ssp"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/unlink_ssp"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/unlink_ssp"
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "platform": "shopee",
+  "module": "shop_flash_sale",
+  "endpoint_name": "create_shop_flash_sale",
+  "version": "v2",
+  "summary": "get time slot id",
+  "description": "get time slot id",
+  "path": "/api/v2/shop_flash_sale/get_time_slot_id",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "timeslot_id",
+        "type": "int64",
+        "required": true,
+        "description": "can get it from v2.shop_flash_sale.get_time_slot_id API, and you can only use the timeslot which start_time > now",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "timeslot_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "flash_sale_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "status",
+        "type": "int32",
+        "sample": "1",
+        "description": "the status of shop flash sale 0: deleted 1: enabled 2: disabled 3: system_rejected"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"c3bc89a8034304e76215d1493ff6c441\",\n    \"response\": {\n        \"flash_sale_id\": 802078102721101,\n        \"status\": 1,\n        \"timeslot_id\": 236767490043904\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "marketing_error_no_premission",
+      "message": "You don't have permission for the operation"
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something is wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid."
+    },
+    {
+      "code": "shop_flash_sale_already_exist",
+      "message": "shop flash sale already exist"
+    },
+    {
+      "code": "shop_flash_sale.not_meet_shop_criteria",
+      "message": "not meet shop criteria"
+    },
+    {
+      "code": "shop_flash_sale_param_error",
+      "message": "The Wrong parameters, detail: {msg}."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop_flash_sale/get_time_slot_id"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop_flash_sale/get_time_slot_id"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_flash_sale/get_time_slot_id"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_flash_sale/get_time_slot_id"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_flash_sale/get_time_slot_id"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_flash_sale/get_time_slot_id"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_flash_sale/get_time_slot_id"
+      }
+    ]
+  }
+}

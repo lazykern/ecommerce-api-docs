@@ -1,0 +1,171 @@
+{
+  "platform": "shopee",
+  "module": "voucher",
+  "endpoint_name": "end_voucher",
+  "version": "v2",
+  "summary": "Delete voucher",
+  "description": "Delete voucher",
+  "path": "/api/v2/voucher/delete_voucher",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "voucher_id",
+        "type": "int",
+        "required": true,
+        "description": "The unique identifier for the voucher you want to end now.",
+        "sample": "1104340665"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\"voucher_id\":1104340665}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "034f813abf5e11eb9c4eacde48001122",
+        "description": "The identifier of the API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detailed informations you are querying."
+      },
+      {
+        "name": "voucher_id",
+        "type": "int",
+        "sample": "1104340665",
+        "description": "The unique identifier for the voucher it is being ended."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"response\": {\n        \"voucher_id\": 1104340665\n    },\n    \"request_id\": \"034f813abf5e11eb9c4eacde48001122\",\n    \"error\": \"\",\n    \"message\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "voucher.end_voucher_status_error",
+      "message": "Can only end the ongoing voucher."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "common.error_not_found",
+      "message": "The information you queried is not found."
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something is wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid."
+    },
+    {
+      "code": "voucher.operate_voucher_permission_error",
+      "message": "The Voucher created in Shopee admin/Shop Game/Follow Prize/Member ship/Voucher campaign can't be updated"
+    },
+    {
+      "code": "voucher.update_end_voucher_error",
+      "message": "Cannot update status for expired voucher."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/voucher/delete_voucher"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/voucher/delete_voucher"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/voucher/delete_voucher"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/voucher/delete_voucher"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/voucher/delete_voucher"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/voucher/delete_voucher"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/voucher/delete_voucher"
+      }
+    ]
+  }
+}

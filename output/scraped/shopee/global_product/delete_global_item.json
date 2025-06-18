@@ -1,0 +1,229 @@
+{
+  "platform": "shopee",
+  "module": "global_product",
+  "endpoint_name": "delete_global_item",
+  "version": "v2",
+  "summary": "Update global item",
+  "description": "Update global item. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/update_global_item",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "global_item_id",
+        "type": "int",
+        "required": true,
+        "description": "The id of global item to delete.",
+        "sample": "2800146127"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"global_item_id\": 3000141126\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning message."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "98eae35efff24dd0974c21a847127184",
+        "description": "The identifier of the API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "failure_delete_item",
+        "type": "object[]",
+        "sample": "",
+        "description": "If delete failed, this field shows the details."
+      },
+      {
+        "name": "shop_id",
+        "type": "int",
+        "sample": "14599",
+        "description": "The id of shop corresponding to the related item failed to delete."
+      },
+      {
+        "name": "item_id",
+        "type": "int",
+        "sample": "20001863",
+        "description": "The id of related item failed to delete."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"warning\": \"\",\n    \"request_id\": \"98eae35efff24dd0974c21a847127184\",\n    \"response\": {\n        \"failure_delete_item\": [\n            {\n                \"shop_id\": 14599,\n                \"item_id\": 20001863\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "add_on.add_on_deal_expired",
+      "message": "The expired add on deal can't be edited"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_auth",
+      "message": "not all shop is upgraded and confirmed, can not edit item"
+    },
+    {
+      "code": "error_merchant_not_found",
+      "message": "Merchant_id is not found."
+    },
+    {
+      "code": "error_get_shop_fail",
+      "message": "Get shop failed. please try later."
+    },
+    {
+      "code": "error_busi_global_item_not_found",
+      "message": "Global item not found."
+    },
+    {
+      "code": "error_busi_cannot_delete_global_item",
+      "message": "Delete global item failed,{{.error_info}}ｼ継lease try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_permission",
+      "message": "Global product related shop is not upgraded."
+    },
+    {
+      "code": "error_param_validate",
+      "message": "Your current merchant is a special merchant.Please ensure all your shop are under same region"
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/update_global_item"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/update_global_item"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/update_global_item"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/update_global_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/update_global_item"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/update_global_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/update_global_item"
+      }
+    ]
+  }
+}

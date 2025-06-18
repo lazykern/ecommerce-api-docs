@@ -1,0 +1,214 @@
+{
+  "platform": "lazada",
+  "module": "digital",
+  "endpoint_name": "DigitalAlterOrderStatus",
+  "version": null,
+  "summary": "Change Lazada Digital Order Status",
+  "description": "Change Lazada Digital Order Status",
+  "path": "/digital/order/alterStatus",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "requestId",
+        "type": "String",
+        "required": true,
+        "description": "Reuqest id."
+      },
+      {
+        "name": "transactionId",
+        "type": "Number",
+        "required": true,
+        "description": "Third Party's orderId."
+      },
+      {
+        "name": "sellerId",
+        "type": "Number",
+        "required": false,
+        "description": "Seller id."
+      },
+      {
+        "name": "cancelCode",
+        "type": "Number",
+        "required": false,
+        "description": "If not null, then will do alarm in DG."
+      },
+      {
+        "name": "cancelMsg",
+        "type": "String",
+        "required": false,
+        "description": "Sent with the cancelCode."
+      },
+      {
+        "name": "userToken",
+        "type": "String",
+        "required": true,
+        "description": "Lazada user token."
+      },
+      {
+        "name": "serviceName",
+        "type": "String",
+        "required": true,
+        "description": "Lazada user token."
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "transactionId",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "orderStatus",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "paymentStatus",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "resultCode",
+        "type": "Number",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/digital/order/alterStatus\");\nrequest.addApiParameter(\"requestId\", \"1234\");\nrequest.addApiParameter(\"transactionId\", \"1234\");\nrequest.addApiParameter(\"sellerId\", \"1234\");\nrequest.addApiParameter(\"cancelCode\", \"1234\");\nrequest.addApiParameter(\"cancelMsg\", \"1234\");\nrequest.addApiParameter(\"userToken\", \"6gaQ5mBV7lHiw1vI0IqhEw==\");\nrequest.addApiParameter(\"serviceName\", \"agaming\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/digital/order/alterStatus');\n$request->addApiParam('requestId','1234');\n$request->addApiParam('transactionId','1234');\n$request->addApiParam('sellerId','1234');\n$request->addApiParam('cancelCode','1234');\n$request->addApiParam('cancelMsg','1234');\n$request->addApiParam('userToken','6gaQ5mBV7lHiw1vI0IqhEw==');\n$request->addApiParam('serviceName','agaming');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/digital/order/alterStatus\");\nrequest.AddApiParameter(\"requestId\", \"1234\");\nrequest.AddApiParameter(\"transactionId\", \"1234\");\nrequest.AddApiParameter(\"sellerId\", \"1234\");\nrequest.AddApiParameter(\"cancelCode\", \"1234\");\nrequest.AddApiParameter(\"cancelMsg\", \"1234\");\nrequest.AddApiParameter(\"userToken\", \"6gaQ5mBV7lHiw1vI0IqhEw==\");\nrequest.AddApiParameter(\"serviceName\", \"agaming\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/digital/order/alterStatus')\nrequest.add_api_parameter(\"requestId\", \"1234\")\nrequest.add_api_parameter(\"transactionId\", \"1234\")\nrequest.add_api_parameter(\"sellerId\", \"1234\")\nrequest.add_api_parameter(\"cancelCode\", \"1234\")\nrequest.add_api_parameter(\"cancelMsg\", \"1234\")\nrequest.add_api_parameter(\"userToken\", \"6gaQ5mBV7lHiw1vI0IqhEw==\")\nrequest.add_api_parameter(\"serviceName\", \"agaming\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/digital/order/alterStatus')\nrequest.add_api_param('requestId', '1234')\nrequest.add_api_param('transactionId', '1234')\nrequest.add_api_param('sellerId', '1234')\nrequest.add_api_param('cancelCode', '1234')\nrequest.add_api_param('cancelMsg', '1234')\nrequest.add_api_param('userToken', '6gaQ5mBV7lHiw1vI0IqhEw==')\nrequest.add_api_param('serviceName', 'agaming')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/digital/order/alterStatus' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"cancelMsg\":\"1234\",\"userToken\":\"6gaQ5mBV7lHiw1vI0IqhEw%3D%3D\",\"app_key\":\"1234567\",\"sellerId\":\"1234\",\"requestId\":\"1234\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"serviceName\":\"agaming\",\"cancelCode\":\"1234\",\"transactionId\":\"1234\",\"timestamp\":\"1750231551740\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "Lazada traceId."
+      },
+      {
+        "name": "transactionId",
+        "type": "Number",
+        "description": "Third Party's orderId."
+      },
+      {
+        "name": "orderStatus",
+        "type": "String",
+        "description": "If have, then order final status."
+      },
+      {
+        "name": "paymentStatus",
+        "type": "String",
+        "description": "Lazada order payment status."
+      },
+      {
+        "name": "resultCode",
+        "type": "Number",
+        "description": "Result code from Lazada."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"traceId\": \"212cd8df17270744623036160ef6c2\",\n  \"code\": \"0\",\n  \"resultCode\": \"0\",\n  \"orderStatus\": \"delivered\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"transactionId\": \"1234\",\n  \"paymentStatus\": \"orderPaid\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

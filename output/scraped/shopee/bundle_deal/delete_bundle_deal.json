@@ -1,0 +1,163 @@
+{
+  "platform": "shopee",
+  "module": "bundle_deal",
+  "endpoint_name": "delete_bundle_deal",
+  "version": "v2",
+  "summary": "end bundle deal",
+  "description": "end bundle deal",
+  "path": "/api/v2/bundle_deal/end_bundle_deal",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "bundle_deal_id",
+        "type": "int",
+        "required": true,
+        "description": "Shopee's unique identifier for a bundle deal activity.",
+        "sample": "11111"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n  \"bundle_deal_id\": 11111\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "f77c98640613da880cbd315414271e42",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "bundle_deal_id",
+        "type": "int",
+        "sample": "11111",
+        "description": "Shopee's unique identifier for a bundle deal activity."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"fdsfsdafdasfbgvfdgergd\",\n    \"response\": {\n       \"bundle_deal_id\": 11111\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "bundle.bundle_deal_delete_failed",
+      "message": "Only the upcoming bundle deal can be deleted"
+    },
+    {
+      "code": "bundle.bundle_deal_error_unknown",
+      "message": "Unknown error occurred in the service"
+    },
+    {
+      "code": "bundle.bundle_deal_no_auth_update",
+      "message": "The shopee created bundle deal can't be edited"
+    },
+    {
+      "code": "bundle.bundle_deal_not_exists",
+      "message": "Bundle deal doesn't existed"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/bundle_deal/end_bundle_deal"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/bundle_deal/end_bundle_deal"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/bundle_deal/end_bundle_deal"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/bundle_deal/end_bundle_deal"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/bundle_deal/end_bundle_deal"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/bundle_deal/end_bundle_deal"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/bundle_deal/end_bundle_deal"
+      }
+    ]
+  }
+}

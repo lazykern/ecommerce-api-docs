@@ -1,0 +1,165 @@
+{
+  "platform": "shopee",
+  "module": "add_on_deal",
+  "endpoint_name": "get_add_on_deal_main_item",
+  "version": "v2",
+  "summary": "Get Add-on Deal",
+  "description": "Get Add-on Deal",
+  "path": "/api/v2/add_on_deal/get_add_on_deal",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "add_on_deal_id",
+        "type": "int",
+        "required": true,
+        "description": "Shopee's unique identifier for add on deal activity.",
+        "sample": "12069"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "{\n    \"add_on_deal_id\": 12069\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "The description of error code"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "1d62706c18d2b40692cc41976a27e01e",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "main_item_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The main items added in this add on deal promotion."
+      },
+      {
+        "name": "item_id",
+        "type": "int",
+        "sample": "100862623",
+        "description": "Shopee's unique identifier for an item."
+      },
+      {
+        "name": "status",
+        "type": "int",
+        "sample": "1",
+        "description": "The status of add on deal item：enable = 1；disable =2"
+      },
+      {
+        "name": "add_on_deal_id",
+        "type": "int",
+        "sample": "12069",
+        "description": "Shopee's unique identifier for add on deal activity."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"message\": \"\",\n    \"request_id\": \"1d62706c18d2b40692cc41976a27e01e\",\n    \"response\": {\n        \"main_item_list\": [\n            {\n                \"status\": 1,\n                \"item_id\": 100862623\n            }\n        ],\n        \"add_on_deal_id\": 12069\n    },\n    \"error\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/add_on_deal/get_add_on_deal"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/add_on_deal/get_add_on_deal"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/add_on_deal/get_add_on_deal"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/add_on_deal/get_add_on_deal"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/add_on_deal/get_add_on_deal"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/add_on_deal/get_add_on_deal"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/add_on_deal/get_add_on_deal"
+      }
+    ]
+  }
+}

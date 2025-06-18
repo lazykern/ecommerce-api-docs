@@ -1,0 +1,581 @@
+{
+  "platform": "shopee",
+  "module": "global_product",
+  "endpoint_name": "get_global_item_info",
+  "version": "v2",
+  "summary": "Get global item id list",
+  "description": "Get global item id list. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/get_global_item_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "global_item_id_list",
+        "type": "int64",
+        "required": true,
+        "description": "Global item id list. Length limit is [1,20].",
+        "sample": ""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.get(\"https://partner.shopeemobile.com/api/v2/global_product/get_global_item_info?timestamp=timestamp&global_item_id_list=2700141503,2700141501,2700141500,2700141449,2700141448,2700141447,2700141319,2700141318,2700141317&sign=sign&merchant_id=merchant_id&partner_id=partner_id&access_token=access_token\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/global_product/get_global_item_info?access_token=access_token&global_item_id_list=2700141503,2700141501,2700141500,2700141449,2700141448,2700141447,2700141319,2700141318,2700141317&merchant_id=merchant_id&partner_id=partner_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'GET',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request GET 'https://partner.shopeemobile.com/api/v2/global_product/get_global_item_info?partner_id=partner_id&access_token=access_token&timestamp=timestamp&global_item_id_list=2700141503,2700141501,2700141500,2700141449,2700141448,2700141447,2700141319,2700141318,2700141317&sign=sign&merchant_id=merchant_id'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\n\nurl = \"https://partner.shopeemobile.com/api/v2/global_product/get_global_item_info?access_token=access_token&global_item_id_list=2700141503,2700141501,2700141500,2700141449,2700141448,2700141447,2700141319,2700141318,2700141317&merchant_id=merchant_id&partner_id=partner_id&sign=sign&timestamp=timestamp\"\n\npayload={}\nheaders = {\n\n}\nresponse = requests.request(\"GET\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning massage."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "6f235f4a343e4feb8a9ed74c439f6663",
+        "description": "The identifier of the API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "global_item_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "global_item_id",
+        "type": "int64",
+        "sample": "27001415",
+        "description": "Shopee's unique identifier for an global item."
+      },
+      {
+        "name": "global_item_name",
+        "type": "string",
+        "sample": "MY OLD NEW two tier model item 5",
+        "description": "Name of the global item."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "sample": "MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item",
+        "description": "Description of the global item."
+      },
+      {
+        "name": "global_item_sku",
+        "type": "string",
+        "sample": "sku1",
+        "description": "An global item SKU (stock keeping unit) is an identifier defined by a seller, sometimes called parent SKU. Item SKU can be assigned to an item in Shopee Listings."
+      },
+      {
+        "name": "global_item_status",
+        "type": "string",
+        "sample": "NORMAL",
+        "description": "The current status of the item. You can only query global product with normal status, otherwise api will return error."
+      },
+      {
+        "name": "create_time",
+        "type": "timestamp",
+        "sample": "1605247451",
+        "description": "Timestamp that indicates the date and time that the global item was created."
+      },
+      {
+        "name": "update_time",
+        "type": "timestamp",
+        "sample": "1605247451",
+        "description": "Timestamp that indicates the last time that there was a change in value of the global item."
+      },
+      {
+        "name": "stock_info",
+        "type": "object[]",
+        "sample": "",
+        "description": "If the item has models, this field will not be returned, please get it through get_model_list api."
+      },
+      {
+        "name": "stock_type",
+        "type": "int32",
+        "sample": "2",
+        "description": "The stock type."
+      },
+      {
+        "name": "stock_location_id",
+        "type": "string",
+        "sample": "KRZ",
+        "description": "location_id of the stock."
+      },
+      {
+        "name": "normal_stock",
+        "type": "int32",
+        "sample": "44",
+        "description": "The normal stock quantity of the variation in the listing currency."
+      },
+      {
+        "name": "reserved_stock",
+        "type": "int32",
+        "sample": "0",
+        "description": "The reserved stock quantity of the variation in the listing currency."
+      },
+      {
+        "name": "price_info",
+        "type": "object[]",
+        "sample": "",
+        "description": "If the item has models, price_info will not be returned. Please get the price of each model through the get_global_model_list api."
+      },
+      {
+        "name": "currency",
+        "type": "string",
+        "sample": "CNY",
+        "description": "The three-digit code representing the currency unit used for the item in Shopee Listings."
+      },
+      {
+        "name": "original_price",
+        "type": "float",
+        "sample": "100.1",
+        "description": "The original price of the item in the listing currency."
+      },
+      {
+        "name": "sip_item_price",
+        "type": "float",
+        "sample": "11.11",
+        "description": "SIP item price."
+      },
+      {
+        "name": "sip_item_price_source",
+        "type": "string",
+        "sample": "auto",
+        "description": "source of sip' price. ( auto or manual)."
+      },
+      {
+        "name": "image",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "image_id_list",
+        "type": "string[]",
+        "sample": "[\"bf5a022e4624ff6c01ef151001762db7\", \"1a689fb0124a6d8762761f3ae13815ed\"]",
+        "description": "List of image url."
+      },
+      {
+        "name": "image_url_list",
+        "type": "string[]",
+        "sample": "[\"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\", \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\"]",
+        "description": "List of image id."
+      },
+      {
+        "name": "weight",
+        "type": "string",
+        "sample": "\"1.1\"",
+        "description": "The weight of this global item, the unit is KG. If set the weight of global models under this item, will return the max weight of all global models during the switching period to ensure system compatibility, please switch to call v2.global_product.get_global_model_list to get the weight of models."
+      },
+      {
+        "name": "dimension",
+        "type": "object",
+        "sample": "",
+        "description": "The dimension of this global item. If set the dimension of global models under this global item, will return the dimension with largest volume calculated by height*length*width during the switching period to ensure system compatibility, please switch to call v2.global_product.get_global_model_list to get the dimension of models."
+      },
+      {
+        "name": "package_length",
+        "type": "int32",
+        "sample": "11",
+        "description": "The length of package for this global item, the unit is CM."
+      },
+      {
+        "name": "package_width",
+        "type": "int32",
+        "sample": "11",
+        "description": "The width of package for this global item, the unit is CM."
+      },
+      {
+        "name": "package_height",
+        "type": "int32",
+        "sample": "11",
+        "description": "The height of package for this global item, the unit is CM."
+      },
+      {
+        "name": "pre_order",
+        "type": "object",
+        "sample": "",
+        "description": "If set the DTS of global models under this item, will return the max DTS of all global models during the switching period to ensure system compatibility, please switch to call v2.global_product.get_global_model_list to get the DTS of models."
+      },
+      {
+        "name": "days_to_ship",
+        "type": "int32",
+        "sample": "3",
+        "description": "Days to ship."
+      },
+      {
+        "name": "size_chart",
+        "type": "string",
+        "sample": "1a689fb0124a6d8762761f3ae13815ed",
+        "description": "Url of size chart image."
+      },
+      {
+        "name": "condition",
+        "type": "string",
+        "sample": "NEW",
+        "description": "Is it second-hand."
+      },
+      {
+        "name": "has_model",
+        "type": "boolean",
+        "sample": "true",
+        "description": "Does it contain model."
+      },
+      {
+        "name": "video",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "video_url",
+        "type": "string",
+        "sample": "1a689fb0124a6d8762761f3ae13815ed",
+        "description": "Url of video."
+      },
+      {
+        "name": "thumbnail_url",
+        "type": "string",
+        "sample": "7432bfa3713715bc1f88f4025241eb6d",
+        "description": "Thumbnail of video."
+      },
+      {
+        "name": "duration",
+        "type": "int32",
+        "sample": "100",
+        "description": "Duration of video."
+      },
+      {
+        "name": "category_id",
+        "type": "int32",
+        "sample": "2347462",
+        "description": "Shopee's unique identifier for a category."
+      },
+      {
+        "name": "brand",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "brand_id",
+        "type": "int32",
+        "sample": "6238",
+        "description": "Id of brand."
+      },
+      {
+        "name": "original_brand_name",
+        "type": "string",
+        "sample": "Nike",
+        "description": "Original name of brand."
+      },
+      {
+        "name": "attribute_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "attribute_id",
+        "type": "int32",
+        "sample": "4811",
+        "description": "The Identify of each category."
+      },
+      {
+        "name": "original_attribute_name",
+        "type": "string",
+        "sample": "Brand: L2 Default [14644]",
+        "description": "The name of each attribute."
+      },
+      {
+        "name": "attribute_value_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "value_id",
+        "type": "int32",
+        "sample": "1047251",
+        "description": "Unique identifier for value of this item attribute."
+      },
+      {
+        "name": "original_value_name",
+        "type": "string",
+        "sample": "10",
+        "description": "Value name of this item attribute."
+      },
+      {
+        "name": "value_unit",
+        "type": "string",
+        "sample": "kg",
+        "description": "Value unit of this item attribute."
+      },
+      {
+        "name": "description_info",
+        "type": "object",
+        "sample": "",
+        "description": "New description field.New description field. Only whitelist sellers can use it. If you use the field, please upload the description_type=extended otherwise api will return error. If you don't use this field, you don't need to upload the description_type or upload description_type=normal"
+      },
+      {
+        "name": "extended_description",
+        "type": "object",
+        "sample": "",
+        "description": "If description_type is extended , Description information will be returned through this field."
+      },
+      {
+        "name": "field_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "Field of extended description"
+      },
+      {
+        "name": "field_type",
+        "type": "string",
+        "sample": "",
+        "description": "Type of extended description field: values: See Data Definition- description_field_type (text , image)."
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "sample": "",
+        "description": "If field_type is text, text information will be returned through this field."
+      },
+      {
+        "name": "image_info",
+        "type": "object",
+        "sample": "",
+        "description": "If field_type is image, image url will be returned through this field."
+      },
+      {
+        "name": "image_id",
+        "type": "string",
+        "sample": "",
+        "description": "Image id."
+      },
+      {
+        "name": "image_url",
+        "type": "string",
+        "sample": "",
+        "description": "Image url."
+      },
+      {
+        "name": "description_type",
+        "type": "object",
+        "sample": "",
+        "description": "Type of description : values: See Data Definition- description_type (normal , extended)."
+      },
+      {
+        "name": "is_fulfillment_by_shopee",
+        "type": "boolean",
+        "sample": "",
+        "description": "whether item is fulfillment by shopee"
+      },
+      {
+        "name": "size_chart_id",
+        "type": "int64",
+        "sample": "",
+        "description": "size_chart 模板ID"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"warning\": \"\",\n    \"request_id\": \"6f235f4a343e4feb8a9ed74c439f6663\",\n    \"response\": {\n        \"global_item_list\": [\n            {\n                \"global_item_id\": 2700141503,\n                \"global_item_name\": \"MY OLD NEW two tier model item 5\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"7432bfa3713715bc1f88f4025241eb6d\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/7432bfa3713715bc1f88f4025241eb6d\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141501,\n                \"global_item_name\": \"MY OLD NEW two tier model item 9\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"7432bfa3713715bc1f88f4025241eb6d\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/7432bfa3713715bc1f88f4025241eb6d\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141500,\n                \"global_item_name\": \"MY OLD NEW default no model item\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"stock_info\": [\n                    {\n                        \"stock_type\": 2,\n                        \"stock_location_id\": \"KRZ\",\n                        \"normal_stock\": 44,\n                        \"reserved_stock\": 0\n                    }\n                ],\n                \"price_info\": [\n                    {\n                        \"currency\": \"CNY\",\n                        \"original_price\": 0,\n                        \"sip_item_price\":0,\n                        \"sip_item_price_source\":\"auto\"\n                    }\n                ],\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": false\n            },\n            {\n                \"global_item_id\": 2700141449,\n                \"global_item_name\": \"MY OLD NEW one tier model item 8\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"906948af93fcc0b36efa60983c200987\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/906948af93fcc0b36efa60983c200987\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141448,\n                \"global_item_name\": \"MY OLD NEW two tier model item 8\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"7432bfa3713715bc1f88f4025241eb6d\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/7432bfa3713715bc1f88f4025241eb6d\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141447,\n                \"global_item_name\": \"MY OLD NEW two tier model item 6\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"7432bfa3713715bc1f88f4025241eb6d\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/7432bfa3713715bc1f88f4025241eb6d\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141319,\n                \"global_item_name\": \"MY OLD NEW one tier model item 1\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"906948af93fcc0b36efa60983c200987\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/906948af93fcc0b36efa60983c200987\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141318,\n                \"global_item_name\": \"MY OLD NEW two tier model item 7\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"7432bfa3713715bc1f88f4025241eb6d\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/7432bfa3713715bc1f88f4025241eb6d\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141317,\n                \"global_item_name\": \"MY OLD NEW one tier model item 0\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"906948af93fcc0b36efa60983c200987\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/906948af93fcc0b36efa60983c200987\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true\n            },\n            {\n                \"global_item_id\": 2700141316,\n                \"global_item_name\": \"MY OLD NEW two tier model item 2\",\n                \"description\": \"MY OLD NEW default no model itemMY OLD NEW default no model itemMY OLD NEW default no model item\",\n                \"global_item_sku\": \"\",\n                \"global_item_status\": 1,\n                \"create_time\": 1605247451,\n                \"update_time\": 1605247451,\n                \"image\": {\n                    \"image_id_list\": [\n                        \"bf5a022e4624ff6c01ef151001762db7\",\n                        \"1a689fb0124a6d8762761f3ae13815ed\",\n                        \"7432bfa3713715bc1f88f4025241eb6d\"\n                    ],\n                    \"image_url_list\": [\n                        \"https://s-cf-tw.shopeesz.com/file/bf5a022e4624ff6c01ef151001762db7\",\n                        \"https://s-cf-tw.shopeesz.com/file/1a689fb0124a6d8762761f3ae13815ed\",\n                        \"https://s-cf-tw.shopeesz.com/file/7432bfa3713715bc1f88f4025241eb6d\"\n                    ]\n                },\n                \"weight\": 1,\n                \"dimension\": {\n                    \"package_length\": 0,\n                    \"package_width\": 0,\n                    \"package_height\": 0\n                },\n                \"pre_order\": {\n                    \"days_to_ship\": 2\n                },\n                \"size_chart\": \"\",\n                \"condition\": \"NEW\",\n                \"has_model\": true,\n                \"brand\":{\n                    \"brand_id\":123,\n                    \"original_brand_name\":\"nike\"\n                },\n                \"attribute_list\": [\n                    {\n                        \"attribute_id\": 4811,\n                        \"original_attribute_name\": \"Brand: L2 Default [14644]\",\n                        \"is_mandatory\": false,\n                        \"attribute_value_list\":[\n                              {\n                                  \"value_id\": 0,\n                                  \"original_value_name\": \"\",\n                                  \"value_unit\": \"\"\n                              }\n                        ]\n                    }\n                ],\n\"description_type\":\"extended\",\n\"description_info\":{\n                    \"extended_description\":{\n                        \"field_list\":[\n                            {\n                                \"field_type\":\"text\",\n                                \"text\":\"text description 1\"\n                            },\n                            {\n                                \"field_type\":\"image\",\n                                \"image_info\":{\n                                    \"image_id\":\"1e076dff0699d8e778c06dd6c02df1fe\",\n                                    \"image_url\":\"https://cf.shopee.sg/file/1e076dff0699d8e778c06dd6c02df1fe\"\n                                }\n                            },\n                            {\n                                \"field_type\":\"image\",\n                                \"image_info\":{\n                                    \"image_id\":\"c07ac95ba7bb624d731e37fe2f0349de\",\n                                    \"image_url\":\"https://cf.shopee.sg/file/c07ac95ba7bb624d731e37fe2f0349de\"\n                                }\n                            },\n                            {\n                                \"field_type\":\"text\",\n                                \"text\":\"text description 1\"\n                            }\n                        ]\n                    }\n                }\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_global_item_shop_not_match",
+      "message": "Global item not belong to shop."
+    },
+    {
+      "code": "error_invalid_global_item_id",
+      "message": "Invalid global_item_id."
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_param",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_desc_image_no_pass",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_param",
+      "message": "{{.error_info}}"
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_global_item_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_global_item_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_global_item_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_global_item_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_global_item_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_global_item_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_global_item_list"
+      }
+    ]
+  }
+}

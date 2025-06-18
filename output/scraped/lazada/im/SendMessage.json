@@ -1,0 +1,220 @@
+{
+  "platform": "lazada",
+  "module": "im",
+  "endpoint_name": "SendMessage",
+  "version": null,
+  "summary": "send message",
+  "description": "send message",
+  "path": "/im/message/send",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "session_id",
+        "type": "String",
+        "required": true,
+        "description": "conversation id"
+      },
+      {
+        "name": "template_id",
+        "type": "String",
+        "required": true,
+        "description": "message template id, 1: normal text message 3: picture message 4: emoji message 10006: item message 10007: order message 10008: voucher message 10010: invite buyers to follow the store 6: video message, use this API to upload video (The video duration is greater than 3s and less than 180s)"
+      },
+      {
+        "name": "txt",
+        "type": "String",
+        "required": false,
+        "description": "template_id=1 required"
+      },
+      {
+        "name": "img_url",
+        "type": "String",
+        "required": false,
+        "description": "template_id=3 required"
+      },
+      {
+        "name": "width",
+        "type": "Number",
+        "required": false,
+        "description": "template_id=3/6 required"
+      },
+      {
+        "name": "height",
+        "type": "Number",
+        "required": false,
+        "description": "template_id=3/6 required"
+      },
+      {
+        "name": "item_id",
+        "type": "String",
+        "required": false,
+        "description": "template_id=10006 required"
+      },
+      {
+        "name": "order_id",
+        "type": "String",
+        "required": false,
+        "description": "template_id=10007 required"
+      },
+      {
+        "name": "promotion_id",
+        "type": "String",
+        "required": false,
+        "description": "template_id=10008 required"
+      },
+      {
+        "name": "video_id",
+        "type": "String",
+        "required": false,
+        "description": "template_id=6 required"
+      },
+      {
+        "name": "err_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "err_message",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/im/message/send\");\nrequest.addApiParameter(\"session_id\", \"100094063_2_1011822749_1_103\");\nrequest.addApiParameter(\"template_id\", \"1\");\nrequest.addApiParameter(\"txt\", \"test message\");\nrequest.addApiParameter(\"img_url\", \"https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg\");\nrequest.addApiParameter(\"width\", \"100\");\nrequest.addApiParameter(\"height\", \"100\");\nrequest.addApiParameter(\"item_id\", \"1762013406\");\nrequest.addApiParameter(\"order_id\", \"1762013406\");\nrequest.addApiParameter(\"promotion_id\", \"91471122422003\");\nrequest.addApiParameter(\"video_id\", \"3678332\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/im/message/send');\n$request->addApiParam('session_id','100094063_2_1011822749_1_103');\n$request->addApiParam('template_id','1');\n$request->addApiParam('txt','test message');\n$request->addApiParam('img_url','https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg');\n$request->addApiParam('width','100');\n$request->addApiParam('height','100');\n$request->addApiParam('item_id','1762013406');\n$request->addApiParam('order_id','1762013406');\n$request->addApiParam('promotion_id','91471122422003');\n$request->addApiParam('video_id','3678332');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/im/message/send\");\nrequest.AddApiParameter(\"session_id\", \"100094063_2_1011822749_1_103\");\nrequest.AddApiParameter(\"template_id\", \"1\");\nrequest.AddApiParameter(\"txt\", \"test message\");\nrequest.AddApiParameter(\"img_url\", \"https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg\");\nrequest.AddApiParameter(\"width\", \"100\");\nrequest.AddApiParameter(\"height\", \"100\");\nrequest.AddApiParameter(\"item_id\", \"1762013406\");\nrequest.AddApiParameter(\"order_id\", \"1762013406\");\nrequest.AddApiParameter(\"promotion_id\", \"91471122422003\");\nrequest.AddApiParameter(\"video_id\", \"3678332\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/im/message/send')\nrequest.add_api_parameter(\"session_id\", \"100094063_2_1011822749_1_103\")\nrequest.add_api_parameter(\"template_id\", \"1\")\nrequest.add_api_parameter(\"txt\", \"test message\")\nrequest.add_api_parameter(\"img_url\", \"https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg\")\nrequest.add_api_parameter(\"width\", \"100\")\nrequest.add_api_parameter(\"height\", \"100\")\nrequest.add_api_parameter(\"item_id\", \"1762013406\")\nrequest.add_api_parameter(\"order_id\", \"1762013406\")\nrequest.add_api_parameter(\"promotion_id\", \"91471122422003\")\nrequest.add_api_parameter(\"video_id\", \"3678332\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/im/message/send')\nrequest.add_api_param('session_id', '100094063_2_1011822749_1_103')\nrequest.add_api_param('template_id', '1')\nrequest.add_api_param('txt', 'test message')\nrequest.add_api_param('img_url', 'https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg')\nrequest.add_api_param('width', '100')\nrequest.add_api_param('height', '100')\nrequest.add_api_param('item_id', '1762013406')\nrequest.add_api_param('order_id', '1762013406')\nrequest.add_api_param('promotion_id', '91471122422003')\nrequest.add_api_param('video_id', '3678332')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/im/message/send' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"item_id\":\"1762013406\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"session_id\":\"100094063_2_1011822749_1_103\",\"promotion_id\":\"91471122422003\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"txt\":\"test+message\",\"app_key\":\"1234567\",\"img_url\":\"https%3A%2F%2Fsg-live-02.slatic.net%2Fp%2F0dc6fb4898f7e991bf44c45471dca9c9.jpg\",\"sign_method\":\"sha256\",\"width\":\"100\",\"template_id\":\"1\",\"order_id\":\"1762013406\",\"timestamp\":\"1750231597308\",\"height\":\"100\",\"video_id\":\"3678332\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "err_code",
+        "type": "String",
+        "description": "error code 0=success"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "json"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "true or false"
+      },
+      {
+        "name": "err_message",
+        "type": "String",
+        "description": "error message"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"message_id\": \"23hR7YH0BtkiN00001\",\n    \"template_id\": \"1\",\n    \"current_time\": \"1623399917434\"\n  },\n  \"success\": \"true\",\n  \"err_code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"err_message\": \"SUCCESS\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

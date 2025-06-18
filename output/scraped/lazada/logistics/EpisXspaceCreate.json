@@ -1,0 +1,278 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "EpisXspaceCreate",
+  "version": null,
+  "summary": "Create Xspace case",
+  "description": "Create Xspace case",
+  "path": "/logistics/epis/xspace/create",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "platformName",
+        "type": "String",
+        "required": false,
+        "description": "platformName"
+      },
+      {
+        "name": "externalSellerId",
+        "type": "String",
+        "required": false,
+        "description": "externalSellerId"
+      },
+      {
+        "name": "caseTemplateId",
+        "type": "Number",
+        "required": false,
+        "description": "case template id"
+      },
+      {
+        "name": "categoryId",
+        "type": "Number",
+        "required": false,
+        "description": "cat id"
+      },
+      {
+        "name": "subject",
+        "type": "String",
+        "required": true,
+        "description": "subject"
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "required": true,
+        "description": "description"
+      },
+      {
+        "name": "sellerName",
+        "type": "String",
+        "required": false,
+        "description": "sellerName"
+      },
+      {
+        "name": "sellerEmail",
+        "type": "String",
+        "required": false,
+        "description": "sellerEmail"
+      },
+      {
+        "name": "sellerPhoneNo",
+        "type": "String",
+        "required": false,
+        "description": "sellerPhoneNo"
+      },
+      {
+        "name": "buyerName",
+        "type": "String",
+        "required": false,
+        "description": "buyerName"
+      },
+      {
+        "name": "buyerEmail",
+        "type": "String",
+        "required": false,
+        "description": "buyerEmail"
+      },
+      {
+        "name": "trackingNumber",
+        "type": "String",
+        "required": false,
+        "description": "trackingNumber"
+      },
+      {
+        "name": "orderId",
+        "type": "String",
+        "required": false,
+        "description": "orderId"
+      },
+      {
+        "name": "casePriority",
+        "type": "String",
+        "required": false,
+        "description": "casePriority"
+      },
+      {
+        "name": "attachments",
+        "type": "String",
+        "required": false,
+        "description": "attachments"
+      },
+      {
+        "name": "attributes",
+        "type": "String",
+        "required": false,
+        "description": "attributes"
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/epis/xspace/create\");\nrequest.addApiParameter(\"platformName\", \"OneLink\");\nrequest.addApiParameter(\"externalSellerId\", \"109001\");\nrequest.addApiParameter(\"caseTemplateId\", \"123302\");\nrequest.addApiParameter(\"categoryId\", \"11111\");\nrequest.addApiParameter(\"subject\", \"subject\");\nrequest.addApiParameter(\"description\", \"description\");\nrequest.addApiParameter(\"sellerName\", \"Bambooship\");\nrequest.addApiParameter(\"sellerEmail\", \"email@mail.com\");\nrequest.addApiParameter(\"sellerPhoneNo\", \"09887878998\");\nrequest.addApiParameter(\"buyerName\", \"buyerName\");\nrequest.addApiParameter(\"buyerEmail\", \"buyerEmail\");\nrequest.addApiParameter(\"trackingNumber\", \"trackingNumber\");\nrequest.addApiParameter(\"orderId\", \"orderId\");\nrequest.addApiParameter(\"casePriority\", \"Normal\");\nrequest.addApiParameter(\"attachments\", \"url1,url2\");\nrequest.addApiParameter(\"attributes\", \"attributes\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/epis/xspace/create');\n$request->addApiParam('platformName','OneLink');\n$request->addApiParam('externalSellerId','109001');\n$request->addApiParam('caseTemplateId','123302');\n$request->addApiParam('categoryId','11111');\n$request->addApiParam('subject','subject');\n$request->addApiParam('description','description');\n$request->addApiParam('sellerName','Bambooship');\n$request->addApiParam('sellerEmail','email@mail.com');\n$request->addApiParam('sellerPhoneNo','09887878998');\n$request->addApiParam('buyerName','buyerName');\n$request->addApiParam('buyerEmail','buyerEmail');\n$request->addApiParam('trackingNumber','trackingNumber');\n$request->addApiParam('orderId','orderId');\n$request->addApiParam('casePriority','Normal');\n$request->addApiParam('attachments','url1,url2');\n$request->addApiParam('attributes','attributes');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/epis/xspace/create\");\nrequest.AddApiParameter(\"platformName\", \"OneLink\");\nrequest.AddApiParameter(\"externalSellerId\", \"109001\");\nrequest.AddApiParameter(\"caseTemplateId\", \"123302\");\nrequest.AddApiParameter(\"categoryId\", \"11111\");\nrequest.AddApiParameter(\"subject\", \"subject\");\nrequest.AddApiParameter(\"description\", \"description\");\nrequest.AddApiParameter(\"sellerName\", \"Bambooship\");\nrequest.AddApiParameter(\"sellerEmail\", \"email@mail.com\");\nrequest.AddApiParameter(\"sellerPhoneNo\", \"09887878998\");\nrequest.AddApiParameter(\"buyerName\", \"buyerName\");\nrequest.AddApiParameter(\"buyerEmail\", \"buyerEmail\");\nrequest.AddApiParameter(\"trackingNumber\", \"trackingNumber\");\nrequest.AddApiParameter(\"orderId\", \"orderId\");\nrequest.AddApiParameter(\"casePriority\", \"Normal\");\nrequest.AddApiParameter(\"attachments\", \"url1,url2\");\nrequest.AddApiParameter(\"attributes\", \"attributes\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/epis/xspace/create')\nrequest.add_api_parameter(\"platformName\", \"OneLink\")\nrequest.add_api_parameter(\"externalSellerId\", \"109001\")\nrequest.add_api_parameter(\"caseTemplateId\", \"123302\")\nrequest.add_api_parameter(\"categoryId\", \"11111\")\nrequest.add_api_parameter(\"subject\", \"subject\")\nrequest.add_api_parameter(\"description\", \"description\")\nrequest.add_api_parameter(\"sellerName\", \"Bambooship\")\nrequest.add_api_parameter(\"sellerEmail\", \"email@mail.com\")\nrequest.add_api_parameter(\"sellerPhoneNo\", \"09887878998\")\nrequest.add_api_parameter(\"buyerName\", \"buyerName\")\nrequest.add_api_parameter(\"buyerEmail\", \"buyerEmail\")\nrequest.add_api_parameter(\"trackingNumber\", \"trackingNumber\")\nrequest.add_api_parameter(\"orderId\", \"orderId\")\nrequest.add_api_parameter(\"casePriority\", \"Normal\")\nrequest.add_api_parameter(\"attachments\", \"url1,url2\")\nrequest.add_api_parameter(\"attributes\", \"attributes\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/epis/xspace/create')\nrequest.add_api_param('platformName', 'OneLink')\nrequest.add_api_param('externalSellerId', '109001')\nrequest.add_api_param('caseTemplateId', '123302')\nrequest.add_api_param('categoryId', '11111')\nrequest.add_api_param('subject', 'subject')\nrequest.add_api_param('description', 'description')\nrequest.add_api_param('sellerName', 'Bambooship')\nrequest.add_api_param('sellerEmail', 'email@mail.com')\nrequest.add_api_param('sellerPhoneNo', '09887878998')\nrequest.add_api_param('buyerName', 'buyerName')\nrequest.add_api_param('buyerEmail', 'buyerEmail')\nrequest.add_api_param('trackingNumber', 'trackingNumber')\nrequest.add_api_param('orderId', 'orderId')\nrequest.add_api_param('casePriority', 'Normal')\nrequest.add_api_param('attachments', 'url1,url2')\nrequest.add_api_param('attributes', 'attributes')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/epis/xspace/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"attachments\":\"url1%2Curl2\",\"orderId\":\"orderId\",\"subject\":\"subject\",\"buyerEmail\":\"buyerEmail\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"sellerName\":\"Bambooship\",\"description\":\"description\",\"externalSellerId\":\"109001\",\"buyerName\":\"buyerName\",\"sellerEmail\":\"email%40mail.com\",\"casePriority\":\"Normal\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"caseTemplateId\":\"123302\",\"sellerPhoneNo\":\"09887878998\",\"attributes\":\"attributes\",\"platformName\":\"OneLink\",\"trackingNumber\":\"trackingNumber\",\"categoryId\":\"11111\",\"timestamp\":\"1750231438880\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "description": "retryable"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "success or not"
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "traceId"
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "description": "errorMessage"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "errorCode"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "response data"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"retryable\": \"false\",\n  \"traceId\": \"traceId\",\n  \"code\": \"0\",\n  \"data\": {\n    \"caseId\": \"2500000127480474\"\n  },\n  \"success\": \"true\",\n  \"errorMessage\": \"errorMessage\",\n  \"errorCode\": \"errorCode\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

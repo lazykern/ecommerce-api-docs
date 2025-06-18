@@ -1,0 +1,171 @@
+{
+  "platform": "shopee",
+  "module": "logistics",
+  "endpoint_name": "get_booking_shipping_document_parameter",
+  "version": "v2",
+  "summary": "Get category tree data",
+  "description": "Get category tree data. More detail please check https://open.shopee.com/developer-guide/209",
+  "path": "/api/v2/product/get_category",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "booking_list",
+        "type": "object[]",
+        "required": true,
+        "description": "The list of bookings you want to get. limit [1,50]",
+        "sample": ""
+      },
+      {
+        "name": "booking_sn",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique identifier for a booking.",
+        "sample": "201201E81SYYKE"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n\t\"booking_list\": [\n\t\t{\n\t\t\t\"booking_sn\": \"201201E81SYYKE\"\n\t\t}\n\t]\n}"
+    },
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.post(\"https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_document_parameter?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.header(\"Content-Type\",\"application/json\")\n.body(\"{\n   \\\"booking_list\\\": [\n      {\n         \\\"booking_sn\\\": \\\"201201E81SYYKE\\\"\n      }\n   ]\n}\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_document_parameter?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'POST',\n  CURLOPT_POSTFIELDS => '{\n    \"booking_list\": [\n        {\n            \"booking_sn\": \"201201E81SYYKE\"\n        }\n    ]\n}',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request POST 'https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_document_parameter?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n   \"booking_list\": [\n      {\n         \"booking_sn\": \"201201E81SYYKE\"\n      }\n   ]\n}'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\nimport json\n\nurl = \"https://open.admin.uat.shopee.io/api/v2/logistics/get_booking_shipping_document_parameter?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload=json.dumps({\n  \"booking_list\": [\n    {\n      \"booking_sn\": \"201201E81SYYKE\"\n    }\n  ]\n})\nheaders = {\n  'Content-Type': 'application/json'\n}\nresponse = requests.RPCRequest(\"POST\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "a8e1b94f51d64540bf5762abe7783073",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "common.error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "object[]",
+        "sample": "",
+        "description": "Indicate warning message you should take care."
+      },
+      {
+        "name": "booking_sn",
+        "type": "string",
+        "sample": "201201E81SYYKE",
+        "description": "Shopee's unique identifier for a booking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "result_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The list of the result data."
+      },
+      {
+        "name": "booking_sn",
+        "type": "string",
+        "sample": "201201E81SYYKE",
+        "description": "Shopee's unique identifier for a booking."
+      },
+      {
+        "name": "suggest_shipping_document_type",
+        "type": "string",
+        "sample": "THERMAL_AIR_WAYBILL",
+        "description": "The shipping document type Shopee suggests. If you don't select any shipping document type, Shopee will use this as default shipping document type."
+      },
+      {
+        "name": "selectable_shipping_document_type",
+        "type": "string[]",
+        "sample": "[\"THERMAL_AIR_WAYBILL\"]",
+        "description": "The shipping document type you can select of this booking."
+      },
+      {
+        "name": "fail_error",
+        "type": "string",
+        "sample": "logistics.booking_not_exist",
+        "description": "Indicate error type if one element hit error."
+      },
+      {
+        "name": "fail_message",
+        "type": "string",
+        "sample": "The booking_sn 201201V81SYYDG you provided is not exist.",
+        "description": "Indicate error details if one element hit error."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"request_id\": \"a8e1b94f51d64540bf5762abe7783073\",\n\t\"error\": \"common.error_auth\",\n\t\"message\": \"Invalid access_token.\",\n\t\"warning\": [\n\t\t{\n\t\t\t\"booking_sn\": \"201201E81SYYKE\"\n\t\t}\n\t],\n\t\"response\": {\n\t\t\"result_list\": [\n\t\t\t{\n\t\t\t\t\"booking_sn\": \"201201E81SYYKE\",\n\t\t\t\t\"suggest_shipping_document_type\": \"THERMAL_AIR_WAYBILL\",\n\t\t\t\t\"selectable_shipping_document_type\": [\n\t\t\t\t\t\"THERMAL_AIR_WAYBILL\"\n\t\t\t\t],\n\t\t\t\t\"fail_error\": \"logistics.booking_not_exist\",\n\t\t\t\t\"fail_message\": \"The booking_sn 201201V81SYYDG you provided is not exist. \"\n\t\t\t}\n\t\t]\n\t}\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_category"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_category"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_category"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_category"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_category"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_category"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_category"
+      }
+    ]
+  }
+}

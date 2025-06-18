@@ -1,0 +1,218 @@
+{
+  "platform": "shopee",
+  "module": "discount",
+  "endpoint_name": "update_discount",
+  "version": "v2",
+  "summary": "Use this api to get shop discount activity list",
+  "description": "Use this api to get shop discount activity list",
+  "path": "/api/v2/discount/get_discount_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "discount_id",
+        "type": "int",
+        "required": true,
+        "description": "Shopee's unique identifier for a discount activity.",
+        "sample": "661460179119131"
+      },
+      {
+        "name": "discount_name",
+        "type": "string",
+        "required": false,
+        "description": "Title of the discount.",
+        "sample": "The discount 111"
+      },
+      {
+        "name": "end_time",
+        "type": "int",
+        "required": false,
+        "description": "The time when discount activity end. The end time must be 1 hour later than start time.",
+        "sample": "1656494739"
+      },
+      {
+        "name": "start_time",
+        "type": "int",
+        "required": false,
+        "description": "The time when discount activity start. The new start time must later than original start time.",
+        "sample": "1656403800"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"discount_id\": 661460179119131,\n    \"start_time\": 1656403800,\n    \"end_time\": 1656494739,\n    \"discount_name\": \"The discount 111\"\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "da6b348a4a5e4162b885ecc73c85297f",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "discount_id",
+        "type": "int",
+        "sample": "661460179119131",
+        "description": "Shopee's unique identifier for a discount activity."
+      },
+      {
+        "name": "modify_time",
+        "type": "timestamp",
+        "sample": "1656408546",
+        "description": "The time when discount is updated."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"message\": \"\",\n    \"request_id\": \"47bab8302a3a5f696866eebc3808fc7f\",\n    \"response\": {\n        \"discount_id\": 661460179119131,\n        \"modify_time\": 1656408546\n    },\n    \"error\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "discount.discount_end_time_smaller_than_now",
+      "message": "Discount end time should later than the current time."
+    },
+    {
+      "code": "discount.discount_is_end",
+      "message": "The end discount cannot be updated or deleted."
+    },
+    {
+      "code": "discount.discount_period_too_long",
+      "message": "Promotion duration must be within 180 days."
+    },
+    {
+      "code": "discount.discount_period_too_short",
+      "message": "The end time should be later than 1 hour of start time."
+    },
+    {
+      "code": "discount.extend_discount_end_time_error",
+      "message": "Promotion end time can only be changed to an earlier timing."
+    },
+    {
+      "code": "discount.short_discount_start_time",
+      "message": "Promotion start time can only be changed to a later timing."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "common.error_not_found",
+      "message": "The information you queried is not found."
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid"
+    },
+    {
+      "code": "discount.ongoing_discount_period_too_long",
+      "message": "Promotion period must be less than 180 days, please end it within 30 days."
+    },
+    {
+      "code": "discount.update_ongoing_discount_start_time",
+      "message": "The start time can‘t be changed when discount is in ongoing status."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/discount/get_discount_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/discount/get_discount_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/discount/get_discount_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/discount/get_discount_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/discount/get_discount_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/discount/get_discount_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/discount/get_discount_list"
+      }
+    ]
+  }
+}

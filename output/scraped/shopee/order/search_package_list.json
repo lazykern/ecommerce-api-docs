@@ -1,0 +1,249 @@
+{
+  "platform": "shopee",
+  "module": "order",
+  "endpoint_name": "search_package_list",
+  "version": "v2",
+  "summary": "Use this api to get order list which order_status is READY_TO_SHIP to start process the whole shipping progress",
+  "description": "Use this api to get order list which order_status is READY_TO_SHIP to start process the whole shipping progress.",
+  "path": "/api/v2/order/get_shipment_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "filter",
+        "type": "object",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "package_status",
+        "type": "int32",
+        "required": false,
+        "description": "Use this field to filter the packages of specific status. Applicable values: 0: All 1: Pending 2: ToProcess 3: Processed Default value = 2 (ToProcess)",
+        "sample": "2"
+      },
+      {
+        "name": "product_location_ids",
+        "type": "string[]",
+        "required": false,
+        "description": "List of product_location_id. Use this field to filter the packages under specific warehouses.",
+        "sample": "[\"VN0005EIZ\"]"
+      },
+      {
+        "name": "logistics_channel_ids",
+        "type": "int32[]",
+        "required": false,
+        "description": "List of logistics_channel_id. Use this field to filter the packages under specific logistics channels.",
+        "sample": "[50021]"
+      },
+      {
+        "name": "fulfillment_type",
+        "type": "int32",
+        "required": false,
+        "description": "Use this field to filter the packages fulfilled by shopee or seller. Applicable values: 0: None (not apply filter) 1: Shopee 2: Seller Default value = 2 (Seller)",
+        "sample": "2"
+      },
+      {
+        "name": "invoice_pending",
+        "type": "boolean",
+        "required": false,
+        "description": "Use this field to filter the packages under invoice_pending. Default value = false",
+        "sample": "false"
+      },
+      {
+        "name": "pagination",
+        "type": "object",
+        "required": true,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "page_size",
+        "type": "int32",
+        "required": true,
+        "description": "Each result set is returned as a page of entries. Use the \"page_size\" filters to control the maximum number of entries to retrieve per page (i.e., per call). This integer value is used to specify the maximum number of entries to return in a single \"page\" of data.The limit of page_size if between 1 and 100.",
+        "sample": "5"
+      },
+      {
+        "name": "cursor",
+        "type": "string",
+        "required": false,
+        "description": "Specifies the starting entry of data to return in the current call. Default is \"\". If data is more than one page, the offset can be some entry to start next call.",
+        "sample": "\"\""
+      },
+      {
+        "name": "sort",
+        "type": "object",
+        "required": false,
+        "description": "",
+        "sample": ""
+      },
+      {
+        "name": "sort_type",
+        "type": "int32",
+        "required": false,
+        "description": "Use this field to specify which field to use to sort the returned package list. Available values: 1: ShipByDate 2: CreateDate 3: ConfirmedDate Default value = 1 (ShipByDate)",
+        "sample": "1"
+      },
+      {
+        "name": "ascending",
+        "type": "boolean",
+        "required": false,
+        "description": "Use this field to specify whether the returned package list is sorted in ascending or descending sort_type. Default value = true",
+        "sample": "false"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n\t\"filter\": {\n\t\t\"package_status\": 2,\n\t\t\"product_location_ids\": [\n\t\t\t\"VN0005EIZ\"\n\t\t],\n\t\t\"logistics_channel_ids\": [\n\t\t\t50021\n\t\t],\n\t\t\"fulfillment_type\": 2,\n\t\t\"invoice_pending\": false\n\t},\n\t\"pagination\": {\n\t\t\"page_size\": 5,\n\t\t\"cursor\": \"\"\n\t},\n\t\"sort\": {\n\t\t\"sort_type\": 1,\n\t\t\"ascending\": false\n\t}\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "mesage",
+        "type": "string",
+        "sample": "Invalid access_token",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "package_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "\"250211UJM7EVM7\"",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "package_number",
+        "type": "string",
+        "sample": "\"OFG192947720204989\"",
+        "description": "Shopee's unique identifier for the package under an order"
+      },
+      {
+        "name": "logistics_channel_id",
+        "type": "int32",
+        "sample": "50021",
+        "description": "The identity of logistic channel."
+      },
+      {
+        "name": "product_location_id",
+        "type": "string",
+        "sample": "\"VN0005EIZ\"",
+        "description": "Just use this field to pass the next step of Mass ArrangeShipment"
+      },
+      {
+        "name": "pagination",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "total_count",
+        "type": "int64",
+        "sample": "320",
+        "description": "Total orders can be returned with your query"
+      },
+      {
+        "name": "next_cursor",
+        "type": "string",
+        "sample": "\"1730437200,184066343203459\"",
+        "description": "if packages is not empty or length of packages <= page_size. You should pass the next_cursor in the next request as page_sentinel."
+      },
+      {
+        "name": "more",
+        "type": "boolean",
+        "sample": "true",
+        "description": "To indicate, it's a the last page or not"
+      },
+      {
+        "name": "sort",
+        "type": "object",
+        "sample": "",
+        "description": "As same as request param"
+      },
+      {
+        "name": "sort_type",
+        "type": "int32",
+        "sample": "1",
+        "description": "As same as request param"
+      },
+      {
+        "name": "is_asc",
+        "type": "boolean",
+        "sample": "false",
+        "description": "As same as request param"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "69ee3f61ec6f4e3f85836391e5b78dbc",
+        "description": "The identifier for an API request for error tracking."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"e3e3e7f32def33aae16ef83ec8647701:010002ae37253ea4:00000036a7363826\",\n    \"response\": {\n        \"packages_list\": [\n            {\n                \"logistics_channel_id\": 50021,\n                \"order_sn\": \"250211UJM7EVM7\",\n                \"package_number\": \"OFG192947720204989\",\n                \"product_location_id\": \"VN0005EIZ\"\n            },\n            {\n                \"logistics_channel_id\": 50021,\n                \"order_sn\": \"250211UJM6GD8B\",\n                \"package_number\": \"OFG192947719201061\",\n                \"product_location_id\": \"VN0005EIZ\"\n            },\n            {\n                \"logistics_channel_id\": 50021,\n                \"order_sn\": \"250115GS0D6WFC\",\n                \"package_number\": \"OFG190576613214356\",\n                \"product_location_id\": \"VN0002BIZ\"\n            },\n            {\n                \"logistics_channel_id\": 50021,\n                \"order_sn\": \"2410311WY7D2RS\",\n                \"package_number\": \"OFG184066546206123\",\n                \"product_location_id\": \"VN0005EIZ\"\n            },\n            {\n                \"logistics_channel_id\": 50021,\n                \"order_sn\": \"2410311WS5SU9H\",\n                \"package_number\": \"OFG184066343203459\",\n                \"product_location_id\": \"VN0005EIZ\"\n            }\n        ],\n        \"pagination\": {\n            \"more\": true,\n            \"next_cursor\": \"1730437200,184066343203459\",\n            \"total_count\": 320\n        },\n        \"sort\": {\n            \"ascending\": false,\n            \"sort_type\": 1\n        }\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/order/get_shipment_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/order/get_shipment_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/order/get_shipment_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/get_shipment_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/get_shipment_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/get_shipment_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/get_shipment_list"
+      }
+    ]
+  }
+}

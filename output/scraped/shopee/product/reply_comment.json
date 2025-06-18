@@ -1,0 +1,261 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "reply_comment",
+  "version": "v2",
+  "summary": "Use this api to get comment by shop_id, item_id, or comment_id, get up to 1000 comments",
+  "description": "Use this api to get comment by shop_id, item_id, or comment_id, get up to 1000 comments.",
+  "path": "/api/v2/product/get_comment",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "comment_list",
+        "type": "object[]",
+        "required": true,
+        "description": "The list of comment. The limit is between 1 and 100.",
+        "sample": ""
+      },
+      {
+        "name": "comment_id",
+        "type": "int",
+        "required": true,
+        "description": "The identity of comment.",
+        "sample": "1540927"
+      },
+      {
+        "name": "comment",
+        "type": "string",
+        "required": true,
+        "description": "The content of the comment.",
+        "sample": "Your smile is the direction of our efforts, welcome to your next visit！"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"comment_list\": [\n        {\n            \"comment_id\": 1540927,\n            \"comment\": \"Your smile is the direction of our efforts, welcome to your next visit！\"\n        }\n    ]\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "3e0976b06baa4e059b278ef1fdae1f01",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "product.duplicate_request",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "You has replied this comment already.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "result_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The result list of the request comment list."
+      },
+      {
+        "name": "comment_id",
+        "type": "int",
+        "sample": "1540927",
+        "description": "The identity of comment."
+      },
+      {
+        "name": "fail_error",
+        "type": "string",
+        "sample": "product.error_not_exist",
+        "description": "Indicate error details if one element hit error."
+      },
+      {
+        "name": "fail_message",
+        "type": "string",
+        "sample": "The Comment you replied does not exist.",
+        "description": "Indicate error type if one element hit error."
+      },
+      {
+        "name": "warning",
+        "type": "string[]",
+        "sample": "[\"14609238\"]",
+        "description": "Indicate warning message you should take care."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"response\": {\n        \"result_list\": [\n            {\n                \"comment_id\": 1540927\n            }\n        ]\n    },\n    \"request_id\": \"3e0976b06baa4e059b278ef1fdae1f01\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "product.duplicate_request",
+      "message": "You has replied this comment already."
+    },
+    {
+      "code": "product.comment_length_invalid",
+      "message": "Comment length should be between 1 and 500. Please update the comment."
+    },
+    {
+      "code": "product.error_permission",
+      "message": "Reply comment failed. Shop token invalid, please try to re-auth to partner."
+    },
+    {
+      "code": "product.error_not_exist",
+      "message": "The Comment you replied does not exist."
+    },
+    {
+      "code": "product.duplicate_comment_id",
+      "message": "Duplicate comment id { cmm_id}."
+    },
+    {
+      "code": "error_not_found",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_permission",
+      "message": "Sorry you don't have the permission, detail: {msg}."
+    },
+    {
+      "code": "error_server",
+      "message": "System error. Please try again later."
+    },
+    {
+      "code": "product.get_token_failed",
+      "message": "Get token failed."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_item_not_found",
+      "message": "Product not found"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_comment"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_comment"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_comment"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_comment"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_comment"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_comment"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_comment"
+      }
+    ]
+  }
+}

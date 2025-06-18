@@ -1,0 +1,178 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "updateLastMile",
+  "version": null,
+  "summary": "跨境场景物流末端预报信息",
+  "description": "跨境场景物流末端预报信息",
+  "path": "/logistics/ldp/updateLastmile",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "unitCode",
+        "type": "String",
+        "required": true,
+        "description": "unitCode"
+      },
+      {
+        "name": "shippingProviderCode",
+        "type": "String",
+        "required": true,
+        "description": "shippingProviderCode"
+      },
+      {
+        "name": "trackingNumber",
+        "type": "String",
+        "required": true,
+        "description": "trackingNumber"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/ldp/updateLastmile\");\nrequest.addApiParameter(\"unitCode\", \"FU20202020001\");\nrequest.addApiParameter(\"shippingProviderCode\", \"057_***_****\");\nrequest.addApiParameter(\"trackingNumber\", \"TN_0001\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/ldp/updateLastmile');\n$request->addApiParam('unitCode','FU20202020001');\n$request->addApiParam('shippingProviderCode','057_***_****');\n$request->addApiParam('trackingNumber','TN_0001');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/ldp/updateLastmile\");\nrequest.AddApiParameter(\"unitCode\", \"FU20202020001\");\nrequest.AddApiParameter(\"shippingProviderCode\", \"057_***_****\");\nrequest.AddApiParameter(\"trackingNumber\", \"TN_0001\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/ldp/updateLastmile')\nrequest.add_api_parameter(\"unitCode\", \"FU20202020001\")\nrequest.add_api_parameter(\"shippingProviderCode\", \"057_***_****\")\nrequest.add_api_parameter(\"trackingNumber\", \"TN_0001\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/ldp/updateLastmile')\nrequest.add_api_param('unitCode', 'FU20202020001')\nrequest.add_api_param('shippingProviderCode', '057_***_****')\nrequest.add_api_param('trackingNumber', 'TN_0001')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/ldp/updateLastmile' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"shippingProviderCode\":\"057_***_****\",\"app_key\":\"1234567\",\"unitCode\":\"FU20202020001\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"trackingNumber\":\"TN_0001\",\"timestamp\":\"1750231679092\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "is success"
+      },
+      {
+        "name": "data",
+        "type": "String",
+        "description": "data"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "errorCode"
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "description": "errorMsg"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": \"*****\",\n  \"success\": \"false\",\n  \"errorCode\": \"lnp_ldm-fcp#illegalPkgCode-E\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errorMsg\": \"package code is not LDM order!\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

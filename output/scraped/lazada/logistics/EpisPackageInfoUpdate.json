@@ -1,0 +1,224 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "EpisPackageInfoUpdate",
+  "version": null,
+  "summary": "External partner call EPIS to update package info after RTS",
+  "description": "External partner call EPIS to update package info after RTS",
+  "path": "/logistics/epis/packages/update",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "packageCode",
+        "type": "String",
+        "required": true,
+        "description": "Package code"
+      },
+      {
+        "name": "receiverName",
+        "type": "String",
+        "required": true,
+        "description": "Receiver name"
+      },
+      {
+        "name": "receiverPhone",
+        "type": "String",
+        "required": true,
+        "description": "Receiver phone number"
+      },
+      {
+        "name": "totalAmount",
+        "type": "String",
+        "required": false,
+        "description": "Payment total amount"
+      },
+      {
+        "name": "insuranceAmount",
+        "type": "String",
+        "required": false,
+        "description": "Payment insurance amount"
+      },
+      {
+        "name": "deliveryNote",
+        "type": "String",
+        "required": false,
+        "description": "Delivery note"
+      },
+      {
+        "name": "receiverAddress",
+        "type": "Object",
+        "required": false,
+        "description": "Receiver address"
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/epis/packages/update\");\nrequest.addApiParameter(\"packageCode\", \"FU2520016900000000000005515757120\");\nrequest.addApiParameter(\"receiverName\", \"John\");\nrequest.addApiParameter(\"receiverPhone\", \"0972018000\");\nrequest.addApiParameter(\"totalAmount\", \"4.5\");\nrequest.addApiParameter(\"insuranceAmount\", \"4.5\");\nrequest.addApiParameter(\"deliveryNote\", \"Delivery note\");\nrequest.addApiParameter(\"receiverAddress\", \"{\\\"details\\\":\\\"25A Nguy\\u1EC5n \\u0110\\u00ECnh Chi\\u1EC3u\\\",\\\"id\\\":\\\"R6846129\\\",\\\"type\\\":\\\"Home\\\"}\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/epis/packages/update');\n$request->addApiParam('packageCode','FU2520016900000000000005515757120');\n$request->addApiParam('receiverName','John');\n$request->addApiParam('receiverPhone','0972018000');\n$request->addApiParam('totalAmount','4.5');\n$request->addApiParam('insuranceAmount','4.5');\n$request->addApiParam('deliveryNote','Delivery note');\n$request->addApiParam('receiverAddress','{\\\"details\\\":\\\"25A Nguy\\u1EC5n \\u0110\\u00ECnh Chi\\u1EC3u\\\",\\\"id\\\":\\\"R6846129\\\",\\\"type\\\":\\\"Home\\\"}');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/epis/packages/update\");\nrequest.AddApiParameter(\"packageCode\", \"FU2520016900000000000005515757120\");\nrequest.AddApiParameter(\"receiverName\", \"John\");\nrequest.AddApiParameter(\"receiverPhone\", \"0972018000\");\nrequest.AddApiParameter(\"totalAmount\", \"4.5\");\nrequest.AddApiParameter(\"insuranceAmount\", \"4.5\");\nrequest.AddApiParameter(\"deliveryNote\", \"Delivery note\");\nrequest.AddApiParameter(\"receiverAddress\", \"{\\\"details\\\":\\\"25A Nguy\\u1EC5n \\u0110\\u00ECnh Chi\\u1EC3u\\\",\\\"id\\\":\\\"R6846129\\\",\\\"type\\\":\\\"Home\\\"}\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/epis/packages/update')\nrequest.add_api_parameter(\"packageCode\", \"FU2520016900000000000005515757120\")\nrequest.add_api_parameter(\"receiverName\", \"John\")\nrequest.add_api_parameter(\"receiverPhone\", \"0972018000\")\nrequest.add_api_parameter(\"totalAmount\", \"4.5\")\nrequest.add_api_parameter(\"insuranceAmount\", \"4.5\")\nrequest.add_api_parameter(\"deliveryNote\", \"Delivery note\")\nrequest.add_api_parameter(\"receiverAddress\", \"{\\\"details\\\":\\\"25A Nguy\\u1EC5n \\u0110\\u00ECnh Chi\\u1EC3u\\\",\\\"id\\\":\\\"R6846129\\\",\\\"type\\\":\\\"Home\\\"}\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/epis/packages/update')\nrequest.add_api_param('packageCode', 'FU2520016900000000000005515757120')\nrequest.add_api_param('receiverName', 'John')\nrequest.add_api_param('receiverPhone', '0972018000')\nrequest.add_api_param('totalAmount', '4.5')\nrequest.add_api_param('insuranceAmount', '4.5')\nrequest.add_api_param('deliveryNote', 'Delivery note')\nrequest.add_api_param('receiverAddress', '{\\\"details\\\":\\\"25A Nguy\\u1EC5n \\u0110\\u00ECnh Chi\\u1EC3u\\\",\\\"id\\\":\\\"R6846129\\\",\\\"type\\\":\\\"Home\\\"}')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/epis/packages/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"receiverAddress\":\"%7B%22details%22%3A%2225A+Nguy%E1%BB%85n+%C4%90%C3%ACnh+Chi%E1%BB%83u%22%2C%22id%22%3A%22R6846129%22%2C%22type%22%3A%22Home%22%7D\",\"totalAmount\":\"4.5\",\"insuranceAmount\":\"4.5\",\"app_key\":\"1234567\",\"receiverPhone\":\"0972018000\",\"deliveryNote\":\"Delivery+note\",\"packageCode\":\"FU2520016900000000000005515757120\",\"receiverName\":\"John\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750231681005\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "description": "Is failed request retryable?"
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "trace id for debug"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Is success?"
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error code"
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "description": "Error detail"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"retryable\": \"false\",\n  \"traceId\": \"0ba2887315172940728551014\",\n  \"code\": \"0\",\n  \"success\": \"false\",\n  \"errorMessage\": \"Bad request\",\n  \"errorCode\": \"BAD_REQUEST\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errors\": [\n    {\n      \"field\": \"receiverAddress\",\n      \"errorMessage\": \"Cannot found LM hub\",\n      \"errorCode\": \"CANNOT_FOUND_LM_HUB\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

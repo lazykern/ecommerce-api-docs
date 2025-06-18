@@ -1,0 +1,297 @@
+{
+  "platform": "shopee",
+  "module": "product",
+  "endpoint_name": "unlist_item",
+  "version": "v2",
+  "summary": "Update size chart of item",
+  "description": "Update size chart of item. The API will be sunset on 2024.12.27, please switch to using v2.product.add_item and v2.product.update_item to set and update the size chart for product as soon as possible.",
+  "path": "/api/v2/product/update_size_chart",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "item_id",
+        "type": "int64",
+        "required": true,
+        "description": "ID of item",
+        "sample": "123"
+      },
+      {
+        "name": "size_chart",
+        "type": "string",
+        "required": false,
+        "description": "ID of size chart image. Only CB sellers are support to \"size_chart\" field, for local sellers please use \"size_chart_id\" field. If you want to remove the size chart image of the item, please pass the \"size_chart\" field empty.",
+        "sample": "82becb4830bd2ee90ad6acf8a9dc26d7"
+      },
+      {
+        "name": "size_chart_id",
+        "type": "int64",
+        "required": false,
+        "description": "ID of new size chart. Only local sellers are support to \"size_chart_id\" field, for CB sellers please use \"size_chart\" field. If you want to remove the new size chart of the item, please pass the \"size_chart_id\" field as 0.",
+        "sample": "123"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"item_list\": [\n        {\n            \"item_id\": 2300069665,\n            \"unlist\": true\n        },\n        {\n            \"item_id\": 2400143710,\n            \"unlist\": false\n        }\n    ]\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning message."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "43133476d40c400897cc8c159a214034",
+        "description": "The identifier of the API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "failure_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_id",
+        "type": "int64",
+        "sample": "2300069665",
+        "description": "Failed item id"
+      },
+      {
+        "name": "failed_reason",
+        "type": "string",
+        "sample": "Can't unlist item when item is under promotion",
+        "description": "Failed reason"
+      },
+      {
+        "name": "success_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "item_id",
+        "type": "int64",
+        "sample": "2400143710",
+        "description": "Success item id"
+      },
+      {
+        "name": "unlist",
+        "type": "boolean",
+        "sample": "false",
+        "description": "Whether the item is unlisted"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"warning\": \"\",\n    \"request_id\": \"43133476d40c400897cc8c159a214034\",\n    \"response\": {\n        \"failure_list\": [\n            {\n                \"item_id\": 2300069665,\n                \"failed_reason\": \"Can't unlist item when item is under promotion\"\n            }\n        ],\n        \"success_list\": [\n            {\n                \"item_id\": 2400143710,\n                \"unlist\": false\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_auth",
+      "message": "cnsc shop not upgraded, can not edit item."
+    },
+    {
+      "code": "error_param_shop_id_not_found",
+      "message": "Shop_id is not found."
+    },
+    {
+      "code": "error_unlist_item_all_failed",
+      "message": "Unlist item all failed."
+    },
+    {
+      "code": "error_unlist_item_failed",
+      "message": "Unlist item failed. please try later."
+    },
+    {
+      "code": "error_get_shop_fail",
+      "message": "Get shop failed. please try later."
+    },
+    {
+      "code": "error_busi_invalid_shop_status",
+      "message": "Shop status invalid."
+    },
+    {
+      "code": "error_inner",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_item_not_found",
+      "message": "Product not found"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_inner",
+      "message": "Update item failed {{.error_info}}"
+    },
+    {
+      "code": "error_unlist_item_fail",
+      "message": "Please upload your products to UNLIST status. Products will be published automatically by Shopee at the official launch date."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_inner",
+      "message": "System error, please try again later or contact the OpenAPI support team."
+    },
+    {
+      "code": "error_busi_cannot_delist_reviewing_or_banned_item",
+      "message": "Banned and Reviewing Products cannot be delisted"
+    },
+    {
+      "code": "error_busi_cannot_edit_vsku",
+      "message": "Can not use OpenAPI to edit/create VSKU, please connect with your manager"
+    },
+    {
+      "code": "error_auth",
+      "message": "Your shop can not use model level dts"
+    },
+    {
+      "code": "error_auth",
+      "message": "The registered phone number of your shop is abnormal (Malaysian phone number was detected), please update the phone number immediately."
+    },
+    {
+      "code": "error_system_busy",
+      "message": "Our system is taking some time to respond, please try later."
+    },
+    {
+      "code": "error_nil_item_in_req",
+      "message": "Interal error, please contact openapi team."
+    },
+    {
+      "code": "error_set_normal_unlisted_item",
+      "message": "Cannot change unlisted item status to normal directly, need to publishdelisted item first."
+    },
+    {
+      "code": "error_unlist_item_failed",
+      "message": "Unlist item failed. plaese try later."
+    },
+    {
+      "code": "error_cannt_unlisted_in_promotion",
+      "message": "Item cannot be unlisted when item is under promotion."
+    },
+    {
+      "code": "error_in_item_promotion_unlsit_lock",
+      "message": "Can't unlist item when item is under promotion."
+    },
+    {
+      "code": "error_unlist_in_promotion",
+      "message": "Cannot unlist item when item is under promotion."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/update_size_chart"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/update_size_chart"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/update_size_chart"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/update_size_chart"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/update_size_chart"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/update_size_chart"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/update_size_chart"
+      }
+    ]
+  }
+}

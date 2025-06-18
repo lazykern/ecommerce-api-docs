@@ -1,0 +1,234 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "DopConfirmInbound",
+  "version": null,
+  "summary": "DOP confirm inbound",
+  "description": "DOP confirm inbound",
+  "path": "/logistics/station/dop/confirm-inbound",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "stationCode",
+        "type": "String",
+        "required": true,
+        "description": "Station code/ID"
+      },
+      {
+        "name": "scannedParcels",
+        "type": "Object[]",
+        "required": true,
+        "description": "List scanned parcels"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/station/dop/confirm-inbound\");\nrequest.addApiParameter(\"stationCode\", \"STATION_123456\");\nrequest.addApiParameter(\"scannedParcels\", \"[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/station/dop/confirm-inbound');\n$request->addApiParam('stationCode','STATION_123456');\n$request->addApiParam('scannedParcels','[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/station/dop/confirm-inbound\");\nrequest.AddApiParameter(\"stationCode\", \"STATION_123456\");\nrequest.AddApiParameter(\"scannedParcels\", \"[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/station/dop/confirm-inbound')\nrequest.add_api_parameter(\"stationCode\", \"STATION_123456\")\nrequest.add_api_parameter(\"scannedParcels\", \"[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/station/dop/confirm-inbound')\nrequest.add_api_param('stationCode', 'STATION_123456')\nrequest.add_api_param('scannedParcels', '[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/station/dop/confirm-inbound' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"stationCode\":\"STATION_123456\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"scannedParcels\":\"%5B%7B%22cageNumber%22%3A%22123%22%2C%22trackingNumber%22%3A%22TEST1231124VN%22%7D%5D\",\"timestamp\":\"1750231566751\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Is success?"
+      },
+      {
+        "name": "data",
+        "type": "String",
+        "description": "Confirm inbound success or not?"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error code"
+      },
+      {
+        "name": "errorMsg",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "Trace id for debugging"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"traceId\": \"d2d9043316862098123051035df9da\",\n  \"code\": \"0\",\n  \"data\": \"true\",\n  \"success\": \"true\",\n  \"errorCode\": \"CAGE_NOT_FOUND\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errorMsg\": \"Cage 123 is not found\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "DOP_RESERVED_PARCEL_NOT_FOUND",
+      "message": "No parcel info for tracking number {trackingNumber}. Please scan again or manually input the tracking number.",
+      "description": "Cannot find parcel info with provided tracking number"
+    },
+    {
+      "code": "CAGE_NOT_FOUND",
+      "message": "Cage not found: {cageNumber}",
+      "description": "Cage not found"
+    },
+    {
+      "code": "STATION_NOT_ACTIVE",
+      "message": "Station [{stationCode}] is not active",
+      "description": "Station is not active"
+    },
+    {
+      "code": "PARCEL_ALREADY_INBOUND",
+      "message": "Parcel has already inbounded: {trackingNumber}",
+      "description": "Parcel has already inbounded"
+    },
+    {
+      "code": "STATION_IS_NOT_DOP",
+      "message": "Station {stationCode} is not a DOP. You can not drop-off here.",
+      "description": "Station is not DOP type"
+    },
+    {
+      "code": "DOP_PARCEL_STATUS_NOT_WHITELIST",
+      "message": "Parcel is not at correct status to dropoff, parcel {trackingNumber} is now {status}",
+      "description": "Invalid status to inbound"
+    },
+    {
+      "code": "CANNOT_INBOUND_CANCELLED_TASK",
+      "message": "Tracking number {trackingNumber} is cancelled. Please remove out of list",
+      "description": "Parcel is cancelled"
+    },
+    {
+      "code": "DOP_MERCHANT_MDOP",
+      "message": "Seller is a MDOP, your parcel cannot be dropped-off to any station. DOP Merchant={sellerName}, and TN={trackingNumber}",
+      "description": "The seller of the parcel is MDOP"
+    },
+    {
+      "code": "DUPLICATE_REQUEST",
+      "message": "Your request is processing",
+      "description": "Client submit duplicate request at the same time"
+    },
+    {
+      "code": "UNEXPECTED_ERROR",
+      "message": "NullpointerException",
+      "description": "Mostly the stacktrace of unexpected error"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

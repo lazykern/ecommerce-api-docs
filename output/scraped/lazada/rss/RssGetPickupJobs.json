@@ -1,0 +1,152 @@
+{
+  "platform": "lazada",
+  "module": "rss",
+  "endpoint_name": "RssGetPickupJobs",
+  "version": null,
+  "summary": "Retrieve RSS pickup jobs based on time range and status filter",
+  "description": "Retrieve RSS pickup jobs based on time range and status filter.",
+  "path": "/rss/pickup-jobs/get",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "storeId",
+        "type": "Number",
+        "required": true,
+        "description": "Store id"
+      },
+      {
+        "name": "from",
+        "type": "Number",
+        "required": true,
+        "description": "Epoch millis of job date from"
+      },
+      {
+        "name": "till",
+        "type": "Number",
+        "required": true,
+        "description": "Epoch millis of job date till"
+      },
+      {
+        "name": "statuses",
+        "type": "String",
+        "required": false,
+        "description": "Job statuses filter. Possible job statuses are \"pending\", \"arrived\", \"pickedup\", \"cancelled\" and \"failed\". Concatenate statuses of interest with \",\" to make queries with multiple job status filter. Leave this field blank or null to query without filtering."
+      },
+      {
+        "name": "result",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/rss/pickup-jobs/get\");\nrequest.addApiParameter(\"storeId\", \"414\");\nrequest.addApiParameter(\"from\", \"1709266007000\");\nrequest.addApiParameter(\"till\", \"1710216407000\");\nrequest.addApiParameter(\"statuses\", \"\\\"pickedup, pending\\\"\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/rss/pickup-jobs/get');\n$request->addApiParam('storeId','414');\n$request->addApiParam('from','1709266007000');\n$request->addApiParam('till','1710216407000');\n$request->addApiParam('statuses','\\\"pickedup, pending\\\"');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/rss/pickup-jobs/get\");\nrequest.AddApiParameter(\"storeId\", \"414\");\nrequest.AddApiParameter(\"from\", \"1709266007000\");\nrequest.AddApiParameter(\"till\", \"1710216407000\");\nrequest.AddApiParameter(\"statuses\", \"\\\"pickedup, pending\\\"\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/rss/pickup-jobs/get')\nrequest.add_api_parameter(\"storeId\", \"414\")\nrequest.add_api_parameter(\"from\", \"1709266007000\")\nrequest.add_api_parameter(\"till\", \"1710216407000\")\nrequest.add_api_parameter(\"statuses\", \"\\\"pickedup, pending\\\"\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/rss/pickup-jobs/get')\nrequest.add_api_param('storeId', '414')\nrequest.add_api_param('from', '1709266007000')\nrequest.add_api_param('till', '1710216407000')\nrequest.add_api_param('statuses', '\\\"pickedup, pending\\\"')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/rss/pickup-jobs/get' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"till\":\"1710216407000\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"statuses\":\"%22pickedup%2C+pending%22\",\"from\":\"1709266007000\",\"storeId\":\"414\",\"timestamp\":\"1750231675581\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object",
+        "description": "Result"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": {\n    \"data\": [\n      {\n        \"preferredPickupTime\": \"13:00-17:00\",\n        \"amendabilityCutOffDate\": 1684135989000,\n        \"pickedAt\": 1684136189000,\n        \"qtyFulfilledCount\": 12,\n        \"id\": 123,\n        \"category\": \"Dry\",\n        \"items\": [\n          {\n            \"shipmentsInfo\": [\n              {\n                \"orderId\": \"49e74qjnkprp1to4\",\n                \"qty\": 5\n              },\n              {\n                \"orderId\": \"49e74qjn1prp1to4\",\n                \"qty\": 6\n              }\n            ],\n            \"qtyFulfilled\": 10,\n            \"size\": \"2.5kg\",\n            \"rpc\": 123456,\n            \"qty\": 11,\n            \"imageUrl\": \"http://media.redmart.com/newmedia/1600x/i/m/xxx.jpg\",\n            \"name\": \"Salmon\",\n            \"vpc\": \"19739731408\",\n            \"minimumExpiryDate\": 1770357600000,\n            \"sku\": \"19739731408\"\n          },\n          {\n            \"shipmentsInfo\": [\n              {\n                \"orderId\": \"49e74qjnkprp1to4\",\n                \"qty\": 2\n              }\n            ],\n            \"qtyFulfilled\": 2,\n            \"size\": \"2.5kg\",\n            \"rpc\": 123456,\n            \"qty\": 2,\n            \"imageUrl\": \"http://media.redmart.com/newmedia/1600x/i/m/xxx.jpg\",\n            \"name\": \"Curry\",\n            \"vpc\": \"19739731408\",\n            \"minimumExpiryDate\": 1770357600000,\n            \"sku\": \"19739731408\"\n          }\n        ],\n        \"scheduledAt\": 1684135189000,\n        \"status\": \"pickedup\",\n        \"qtyCount\": 13\n      }\n    ],\n    \"success\": \"true\",\n    \"errorMessage\": \"An unexpected error occurred. If the error persists, please contact rm_partnersupport@care.lazada.com\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "platform": "lazada",
+  "module": "fbl",
+  "endpoint_name": "QueryReverseOrderForMCL",
+  "version": null,
+  "summary": "Query Reverse Order for MCL",
+  "description": "Query Reverse Order for MCL",
+  "path": "/fbl/reverse_order/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "sales_order_number",
+        "type": "String",
+        "required": true,
+        "description": "Sales order number from platform"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_message",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/fbl/reverse_order/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"sales_order_number\", \"123456\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/fbl/reverse_order/get','GET');\n$request->addApiParam('sales_order_number','123456');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/fbl/reverse_order/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"sales_order_number\", \"123456\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/fbl/reverse_order/get','GET')\nrequest.add_api_parameter(\"sales_order_number\", \"123456\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/fbl/reverse_order/get','GET')\nrequest.add_api_param('sales_order_number', '123456')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/fbl/reverse_order/get?timestamp=1750231526022&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&sales_order_number=123456'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Whether Success"
+      },
+      {
+        "name": "error_message",
+        "type": "String",
+        "description": "Error Message"
+      },
+      {
+        "name": "data",
+        "type": "Object[]",
+        "description": "Result Data"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"error_message\": \"Internal system error\",\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"sales_order_number\": \"123456\",\n      \"create_time\": \"2021-10-27T03:07:00.000Z\",\n      \"type\": \"failed_delivery, customer_return\",\n      \"items\": [\n        {\n          \"quantity\": \"1\",\n          \"fulfillment_sku_id\": \"12345678\",\n          \"fulfillment_sku_code\": \"12345678_PH-12345678\"\n        }\n      ],\n      \"status\": \"request_created, request_accepted, completed_reinbounded, request_cancelled\"\n    }\n  ],\n  \"success\": \"true\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "platform": "shopee",
+  "module": "payment",
+  "endpoint_name": "get_payout_detail",
+  "version": "v2",
+  "summary": "Get the installment state of shop",
+  "description": "Get the installment state of shop.",
+  "path": "/api/v2/payment/get_shop_installment_status",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "page_size",
+        "type": "int",
+        "required": true,
+        "description": "Number of pages returned max:100",
+        "sample": "10"
+      },
+      {
+        "name": "page_no",
+        "type": "int",
+        "required": true,
+        "description": "The page number min:1 default:1",
+        "sample": "1"
+      },
+      {
+        "name": "payout_time_from",
+        "type": "timestamp",
+        "required": true,
+        "description": "Strat time. Maximum time range is 15 days",
+        "sample": "1643365068"
+      },
+      {
+        "name": "payout_time_to",
+        "type": "timestamp",
+        "required": true,
+        "description": "End time",
+        "sample": "1659003469"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "{\n    \"payout_time_from\": \"1651680000\",\n    \"payout_time_to\": \"1651939200\",\n    \"page_size\": 5,\n    \"page_no\": 1\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Error message"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "5bd2a33faed0007f4883797f590e2a26",
+        "description": "The unique id for request."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "The business content of the response"
+      },
+      {
+        "name": "more",
+        "type": "boolean",
+        "sample": "false",
+        "description": ""
+      },
+      {
+        "name": "payout_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "payout_info",
+        "type": "object",
+        "sample": "",
+        "description": "The information of payout."
+      },
+      {
+        "name": "from_currency",
+        "type": "string",
+        "sample": "VND",
+        "description": "The settlement currency of orders."
+      },
+      {
+        "name": "payout_currency",
+        "type": "string",
+        "sample": "USD",
+        "description": "The actual currency of payout."
+      },
+      {
+        "name": "from_amount",
+        "type": "float",
+        "sample": "591797912.0",
+        "description": "The settlement amount."
+      },
+      {
+        "name": "payout_amount",
+        "type": "float",
+        "sample": "25678.64",
+        "description": "The actual amount of payout."
+      },
+      {
+        "name": "exchange_rate",
+        "type": "string",
+        "sample": "0.00",
+        "description": "The exchange rate."
+      },
+      {
+        "name": "payout_time",
+        "type": "timestamp",
+        "sample": "1651842208",
+        "description": "The time of payout."
+      },
+      {
+        "name": "pay_service",
+        "type": "string",
+        "sample": "Payoneer",
+        "description": "The service provider of seller. Available value: payoneer, pingpong, lianlian."
+      },
+      {
+        "name": "payee_id",
+        "type": "string",
+        "sample": "279016275538",
+        "description": "Seller's account to receive the payout."
+      },
+      {
+        "name": "escrow_list",
+        "type": "object[]",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "escrow_amount",
+        "type": "float",
+        "sample": "20865.0",
+        "description": "The total amount that the seller is expected to receive for the order."
+      },
+      {
+        "name": "currency",
+        "type": "string",
+        "sample": "VND",
+        "description": "The currency used for calculating escrow amount."
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "220404NF3CFFNY",
+        "description": "Shopee's unique identifier for an order."
+      },
+      {
+        "name": "offline_adjustment_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "The list of offline adjustments."
+      },
+      {
+        "name": "adjustment_amount",
+        "type": "float",
+        "sample": "2.0",
+        "description": "The amount of offline adjustments."
+      },
+      {
+        "name": "module",
+        "type": "string",
+        "sample": "Commission Fee",
+        "description": "The reason for offline adjustment."
+      },
+      {
+        "name": "remark",
+        "type": "string",
+        "sample": "DRC commission fee adjustment",
+        "description": "The remark for the reason."
+      },
+      {
+        "name": "scenario",
+        "type": "string",
+        "sample": "Commission Fee Adjustment",
+        "description": "The scenario of adjustment."
+      },
+      {
+        "name": "adjustment_level",
+        "type": "string",
+        "sample": "shop",
+        "description": "Dimension of offline adjustment. Available value: shop, order."
+      },
+      {
+        "name": "order_sn",
+        "type": "string",
+        "sample": "220322JUMMT0S0",
+        "description": "Shopee's unique identifier for an order."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"request_id\":\"5bd2a33faed0007f4883797f590e2a26\",\n    \"error\":\"\",\n    \"message\":\"\",\n    \"response\":{\n        \"more\":false,\n        \"payout_list\":[\n            {\n                \"payout_info\":{\n                    \"from_currency\":\"VND\",\n                    \"payout_currency\":\"USD\",\n                    \"from_amount\":591797912,\n                    \"payout_amount\":25678.64,\n                    \"exchange_rate\":\"0.00\",\n                    \"payout_time\":1651842208,\n                    \"pay_service\":\"Payoneer\",\n                    \"payee_id\":\"279016275538\"\n                },\n                \"escrow_list\":[\n                    {\n                        \"escrow_amount\":20865,\n                        \"currency\":\"VND\",\n                        \"order_sn\":\"220404NF3CFFNY\"\n                    },\n                    {\n                        \"escrow_amount\":53122,\n                        \"currency\":\"VND\",\n                        \"order_sn\":\"220411AQSDPW3U\"\n                    },\n                    {\n                        \"escrow_amount\":41451,\n                        \"currency\":\"VND\",\n                        \"order_sn\":\"2204108JRAHQ1B\"\n                    },\n                    {\n                        \"escrow_amount\":9018,\n                        \"currency\":\"VND\",\n                        \"order_sn\":\"220404MGU5BKPQ\"\n                    }\n                ],\n                \"offline_adjustment_list\":[\n                    {\n                        \"adjustment_amount\":2,\n                        \"module\":\"Commission Fee\",\n                        \"remark\":\"DRC commission fee adjustment\",\n                        \"scenario\":\"Commission Fee Adjustment\",\n                        \"adjustment_level\":\"shop\",\n                        \"order_sn\":\"220322JUMMT0S0\"\n                    },\n                    {\n                        \"adjustment_amount\":8928,\n                        \"module\":\"Commission Fee\",\n                        \"remark\":\"DRC commission fee adjustment\",\n                        \"scenario\":\"Commission Fee Adjustment\",\n                        \"adjustment_level\":\"shop\",\n                        \"order_sn\":\"220310J24P8WCW\"\n                    },\n                    {\n                        \"adjustment_amount\":45,\n                        \"module\":\"Refund Amount\",\n                        \"remark\":\"Order 220312Q2BN0SH1, New RR, compensate seller but system failed to refund seller. Refund seller according to email Re: [VN] New R/R flow - Offline Compensation for Mall CB Sellers\",\n                        \"scenario\":\"Refund Compensation\",\n                        \"adjustment_level\":\"shop\",\n                        \"order_sn\":\"220312Q2BN0SH1\"\n                    },\n                    {\n                        \"adjustment_amount\":1572,\n                        \"module\":\"Commission Fee\",\n                        \"remark\":\"DRC commission fee adjustment\",\n                        \"scenario\":\"Commission Fee Adjustment\",\n                        \"adjustment_level\":\"shop\",\n                        \"order_sn\":\"220313SMG81WP8\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "add_on.add_on_deal_item_under_btoc",
+      "message": "There are B2C items that can't be added into your promotion"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "error_server",
+      "message": "Internal server error"
+    },
+    {
+      "code": "error_param",
+      "message": "The request body is not a valid json format"
+    },
+    {
+      "code": "error_param",
+      "message": "This payment API is only applicable for cross boarder shop"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_shop_installment_status"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_shop_installment_status"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_shop_installment_status"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_shop_installment_status"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_shop_installment_status"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_shop_installment_status"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_shop_installment_status"
+      }
+    ]
+  }
+}

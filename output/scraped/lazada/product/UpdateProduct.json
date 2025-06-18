@@ -1,0 +1,559 @@
+{
+  "platform": "lazada",
+  "module": "product",
+  "endpoint_name": "UpdateProduct",
+  "version": null,
+  "summary": "Use this API to update attributes or SKUs of an existing product",
+  "description": "Use this API to update attributes or SKUs of an existing product. if need update inventory, offline, price, not recommended to use this API. The iteration 25/6/2020 Updated for DBS changes. Refer to Input Parameters Payload",
+  "path": "/product/update",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "payload",
+        "type": "String",
+        "required": true,
+        "description": "Parameter description (https://open.lazada.com/apps/doc/doc?nodeId=30715&docId=121228)"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/update\");\nrequest.addApiParameter(\"payload\", \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?> <Request>   <Product>     <ItemId>234234234</ItemId>     <Attributes>       <name>api update product sample</name>       <short_description>This is an amazing product</short_description>       <delivery_option_sof>Yes</delivery_option_sof>       <name_engravement>Yes</name_engravement>       <gift_wrapping>Yes</gift_wrapping> <!--should be set as \\u2018Yes\\u2019 only for products to be delivered by seller-->     </Attributes>     <Skus>       <Sku>         <SkuId>234</SkuId>         <coming_soon>2024-11-11 00:00:00</coming_soon>         <delay_delivery_days>20</delay_delivery_days>         <SellerSku>api-create-test-1</SellerSku>         <quantity>88</quantity>         <price>350</price>         <package_length>12</package_length>         <package_height>23</package_height>         <package_weight>34</package_weight>         <package_width>45</package_width>         <Images></Images>       </Sku>       <Sku>         <SkuId>235</SkuId>         <SellerSku>api-create-test-2</SellerSku>         <quantity>44</quantity>         <price>488.88</price>         <package_length>10</package_length>         <package_height>21</package_height>         <package_weight>32</package_weight>         <package_width>43</package_width>         <package_content>this is what's in the box, update</package_content>         <Images>           <Image>http://sg.s.alibaba.lzd.co/original/59046bec4d53e74f8ad38d19399205e6.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/179715d3de39a1918b19eec3279dd482.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/e2ae2b41afaf310b51bc5764c17306cd.jpg</Image>         </Images>       </Sku>     </Skus>     <trialProduct>false</trialProduct>   </Product> </Request>\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/update');\n$request->addApiParam('payload','<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?> <Request>   <Product>     <ItemId>234234234</ItemId>     <Attributes>       <name>api update product sample</name>       <short_description>This is an amazing product</short_description>       <delivery_option_sof>Yes</delivery_option_sof>       <name_engravement>Yes</name_engravement>       <gift_wrapping>Yes</gift_wrapping> <!--should be set as \\u2018Yes\\u2019 only for products to be delivered by seller-->     </Attributes>     <Skus>       <Sku>         <SkuId>234</SkuId>         <coming_soon>2024-11-11 00:00:00</coming_soon>         <delay_delivery_days>20</delay_delivery_days>         <SellerSku>api-create-test-1</SellerSku>         <quantity>88</quantity>         <price>350</price>         <package_length>12</package_length>         <package_height>23</package_height>         <package_weight>34</package_weight>         <package_width>45</package_width>         <Images></Images>       </Sku>       <Sku>         <SkuId>235</SkuId>         <SellerSku>api-create-test-2</SellerSku>         <quantity>44</quantity>         <price>488.88</price>         <package_length>10</package_length>         <package_height>21</package_height>         <package_weight>32</package_weight>         <package_width>43</package_width>         <package_content>this is what's in the box, update</package_content>         <Images>           <Image>http://sg.s.alibaba.lzd.co/original/59046bec4d53e74f8ad38d19399205e6.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/179715d3de39a1918b19eec3279dd482.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/e2ae2b41afaf310b51bc5764c17306cd.jpg</Image>         </Images>       </Sku>     </Skus>     <trialProduct>false</trialProduct>   </Product> </Request>');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/update\");\nrequest.AddApiParameter(\"payload\", \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?> <Request>   <Product>     <ItemId>234234234</ItemId>     <Attributes>       <name>api update product sample</name>       <short_description>This is an amazing product</short_description>       <delivery_option_sof>Yes</delivery_option_sof>       <name_engravement>Yes</name_engravement>       <gift_wrapping>Yes</gift_wrapping> <!--should be set as \\u2018Yes\\u2019 only for products to be delivered by seller-->     </Attributes>     <Skus>       <Sku>         <SkuId>234</SkuId>         <coming_soon>2024-11-11 00:00:00</coming_soon>         <delay_delivery_days>20</delay_delivery_days>         <SellerSku>api-create-test-1</SellerSku>         <quantity>88</quantity>         <price>350</price>         <package_length>12</package_length>         <package_height>23</package_height>         <package_weight>34</package_weight>         <package_width>45</package_width>         <Images></Images>       </Sku>       <Sku>         <SkuId>235</SkuId>         <SellerSku>api-create-test-2</SellerSku>         <quantity>44</quantity>         <price>488.88</price>         <package_length>10</package_length>         <package_height>21</package_height>         <package_weight>32</package_weight>         <package_width>43</package_width>         <package_content>this is what's in the box, update</package_content>         <Images>           <Image>http://sg.s.alibaba.lzd.co/original/59046bec4d53e74f8ad38d19399205e6.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/179715d3de39a1918b19eec3279dd482.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/e2ae2b41afaf310b51bc5764c17306cd.jpg</Image>         </Images>       </Sku>     </Skus>     <trialProduct>false</trialProduct>   </Product> </Request>\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/update')\nrequest.add_api_parameter(\"payload\", \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?> <Request>   <Product>     <ItemId>234234234</ItemId>     <Attributes>       <name>api update product sample</name>       <short_description>This is an amazing product</short_description>       <delivery_option_sof>Yes</delivery_option_sof>       <name_engravement>Yes</name_engravement>       <gift_wrapping>Yes</gift_wrapping> <!--should be set as \\u2018Yes\\u2019 only for products to be delivered by seller-->     </Attributes>     <Skus>       <Sku>         <SkuId>234</SkuId>         <coming_soon>2024-11-11 00:00:00</coming_soon>         <delay_delivery_days>20</delay_delivery_days>         <SellerSku>api-create-test-1</SellerSku>         <quantity>88</quantity>         <price>350</price>         <package_length>12</package_length>         <package_height>23</package_height>         <package_weight>34</package_weight>         <package_width>45</package_width>         <Images></Images>       </Sku>       <Sku>         <SkuId>235</SkuId>         <SellerSku>api-create-test-2</SellerSku>         <quantity>44</quantity>         <price>488.88</price>         <package_length>10</package_length>         <package_height>21</package_height>         <package_weight>32</package_weight>         <package_width>43</package_width>         <package_content>this is what's in the box, update</package_content>         <Images>           <Image>http://sg.s.alibaba.lzd.co/original/59046bec4d53e74f8ad38d19399205e6.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/179715d3de39a1918b19eec3279dd482.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/e2ae2b41afaf310b51bc5764c17306cd.jpg</Image>         </Images>       </Sku>     </Skus>     <trialProduct>false</trialProduct>   </Product> </Request>\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/update')\nrequest.add_api_param('payload', '<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?> <Request>   <Product>     <ItemId>234234234</ItemId>     <Attributes>       <name>api update product sample</name>       <short_description>This is an amazing product</short_description>       <delivery_option_sof>Yes</delivery_option_sof>       <name_engravement>Yes</name_engravement>       <gift_wrapping>Yes</gift_wrapping> <!--should be set as \\u2018Yes\\u2019 only for products to be delivered by seller-->     </Attributes>     <Skus>       <Sku>         <SkuId>234</SkuId>         <coming_soon>2024-11-11 00:00:00</coming_soon>         <delay_delivery_days>20</delay_delivery_days>         <SellerSku>api-create-test-1</SellerSku>         <quantity>88</quantity>         <price>350</price>         <package_length>12</package_length>         <package_height>23</package_height>         <package_weight>34</package_weight>         <package_width>45</package_width>         <Images></Images>       </Sku>       <Sku>         <SkuId>235</SkuId>         <SellerSku>api-create-test-2</SellerSku>         <quantity>44</quantity>         <price>488.88</price>         <package_length>10</package_length>         <package_height>21</package_height>         <package_weight>32</package_weight>         <package_width>43</package_width>         <package_content>this is what's in the box, update</package_content>         <Images>           <Image>http://sg.s.alibaba.lzd.co/original/59046bec4d53e74f8ad38d19399205e6.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/179715d3de39a1918b19eec3279dd482.jpg</Image>           <Image>http://sg.s.alibaba.lzd.co/original/e2ae2b41afaf310b51bc5764c17306cd.jpg</Image>         </Images>       </Sku>     </Skus>     <trialProduct>false</trialProduct>   </Product> </Request>')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/product/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22+%3F%3E+%3CRequest%3E+++%3CProduct%3E+++++%3CItemId%3E234234234%3C%2FItemId%3E+++++%3CAttributes%3E+++++++%3Cname%3Eapi+update+product+sample%3C%2Fname%3E+++++++%3Cshort_description%3EThis+is+an+amazing+product%3C%2Fshort_description%3E+++++++%3Cdelivery_option_sof%3EYes%3C%2Fdelivery_option_sof%3E+++++++%3Cname_engravement%3EYes%3C%2Fname_engravement%3E+++++++%3Cgift_wrapping%3EYes%3C%2Fgift_wrapping%3E+%3C%21--should+be+set+as+%E2%80%98Yes%E2%80%99+only+for+products+to+be+delivered+by+seller--%3E+++++%3C%2FAttributes%3E+++++%3CSkus%3E+++++++%3CSku%3E+++++++++%3CSkuId%3E234%3C%2FSkuId%3E+++++++++%3Ccoming_soon%3E2024-11-11+00%3A00%3A00%3C%2Fcoming_soon%3E+++++++++%3Cdelay_delivery_days%3E20%3C%2Fdelay_delivery_days%3E+++++++++%3CSellerSku%3Eapi-create-test-1%3C%2FSellerSku%3E+++++++++%3Cquantity%3E88%3C%2Fquantity%3E+++++++++%3Cprice%3E350%3C%2Fprice%3E+++++++++%3Cpackage_length%3E12%3C%2Fpackage_length%3E+++++++++%3Cpackage_height%3E23%3C%2Fpackage_height%3E+++++++++%3Cpackage_weight%3E34%3C%2Fpackage_weight%3E+++++++++%3Cpackage_width%3E45%3C%2Fpackage_width%3E+++++++++%3CImages%3E%3C%2FImages%3E+++++++%3C%2FSku%3E+++++++%3CSku%3E+++++++++%3CSkuId%3E235%3C%2FSkuId%3E+++++++++%3CSellerSku%3Eapi-create-test-2%3C%2FSellerSku%3E+++++++++%3Cquantity%3E44%3C%2Fquantity%3E+++++++++%3Cprice%3E488.88%3C%2Fprice%3E+++++++++%3Cpackage_length%3E10%3C%2Fpackage_length%3E+++++++++%3Cpackage_height%3E21%3C%2Fpackage_height%3E+++++++++%3Cpackage_weight%3E32%3C%2Fpackage_weight%3E+++++++++%3Cpackage_width%3E43%3C%2Fpackage_width%3E+++++++++%3Cpackage_content%3Ethis+is+what%27s+in+the+box%2C+update%3C%2Fpackage_content%3E+++++++++%3CImages%3E+++++++++++%3CImage%3Ehttp%3A%2F%2Fsg.s.alibaba.lzd.co%2Foriginal%2F59046bec4d53e74f8ad38d19399205e6.jpg%3C%2FImage%3E+++++++++++%3CImage%3Ehttp%3A%2F%2Fsg.s.alibaba.lzd.co%2Foriginal%2F179715d3de39a1918b19eec3279dd482.jpg%3C%2FImage%3E+++++++++++%3CImage%3Ehttp%3A%2F%2Fsg.s.alibaba.lzd.co%2Foriginal%2Fe2ae2b41afaf310b51bc5764c17306cd.jpg%3C%2FImage%3E+++++++++%3C%2FImages%3E+++++++%3C%2FSku%3E+++++%3C%2FSkus%3E+++++%3CtrialProduct%3Efalse%3C%2FtrialProduct%3E+++%3C%2FProduct%3E+%3C%2FRequest%3E\",\"timestamp\":\"1750231437874\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "Response body"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"item_status\": \"Active\",\n    \"variation\": {\n      \"Variation1\": {\n        \"has_image\": \"false\",\n        \"name\": \"color_family\",\n        \"options\": [],\n        \"customize\": \"true\"\n      },\n      \"Variation2\": {\n        \"has_image\": \"false\",\n        \"name\": \"color_family\",\n        \"options\": [],\n        \"customize\": \"true\"\n      },\n      \"Variation3\": {\n        \"has_image\": \"false\",\n        \"name\": \"color_family\",\n        \"options\": [],\n        \"customize\": \"false\"\n      },\n      \"Variation4\": {\n        \"has_image\": \"false\",\n        \"name\": \"color_family\",\n        \"options\": [],\n        \"customize\": \"false\"\n      }\n    }\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "1",
+      "message": "E001: Parameter %s is mandatory",
+      "description": "The parameter is mandatory but not specified."
+    },
+    {
+      "code": "5",
+      "message": "E005: Invalid Request Format",
+      "description": "The request format is not valid."
+    },
+    {
+      "code": "6",
+      "message": "E006: Unexpected internal error",
+      "description": "Unexpected internal error."
+    },
+    {
+      "code": "30",
+      "message": "E030: Empty Request",
+      "description": "The request URL is not complete."
+    },
+    {
+      "code": "201",
+      "message": "E201: %s Invalid CategoryId",
+      "description": "The specified category ID is not valid."
+    },
+    {
+      "code": "202",
+      "message": "E202: %s Invalid SPUId",
+      "description": "The specified SPU ID is not valid."
+    },
+    {
+      "code": "501",
+      "message": "E501: Update product failed",
+      "description": "Failed to update the product."
+    },
+    {
+      "code": "512",
+      "message": "E512: BIZ_CHECK_MANGROVE_RULE_QC",
+      "description": "The request failed because the category was banned"
+    },
+    {
+      "code": "901",
+      "message": "E901: The request is too frequent, or the requested functionality is temporarily disabled.",
+      "description": "Failed to return the requested data due to high calling frequency or disabled functionality. Please try again later."
+    },
+    {
+      "code": "1000",
+      "message": "Internal Application Error",
+      "description": "Internal system error."
+    },
+    {
+      "code": "4104",
+      "message": "BIZ_CHECK_PRICE_PRECISION_INVALID",
+      "description": "Price accuracy check failed"
+    },
+    {
+      "code": "4105",
+      "message": "BIZ_CHECK_SELLER_SKU_DUPLICATE",
+      "description": "SellerSku repeat"
+    },
+    {
+      "code": "4106",
+      "message": "CHK_CATPROP_CPV_INPUT_SIZE_LIMIT",
+      "description": "Item customization attributes exceeded the limit"
+    },
+    {
+      "code": "4107",
+      "message": "CHECK_CAT_PROP_INVALID_NUMBER",
+      "description": "The category attribute value is invalid"
+    },
+    {
+      "code": "4108",
+      "message": "CHK_BASIC_REQUIRED",
+      "description": "Basic attributes Mandatory verification"
+    },
+    {
+      "code": "4109",
+      "message": "CHK_SKU_PROPS_NOT_MATCH_SALE_PROP",
+      "description": "Sku sales attributes do not match"
+    },
+    {
+      "code": "4110",
+      "message": "BIZ_CHECK_CAT_PROP_MANDATORY",
+      "description": "Category attribute This parameter is mandatory"
+    },
+    {
+      "code": "4111",
+      "message": "CHK_CATPROP_CPV_TEXT_REPEAT",
+      "description": "Category attribute content repeats"
+    },
+    {
+      "code": "4112",
+      "message": "CHK_SKU_PROPS_DUPLICATE",
+      "description": "Duplicate Sku attributes"
+    },
+    {
+      "code": "4113",
+      "message": "CHK_SKU_PROPS_NOT_IDENTICAL",
+      "description": "Sales attribute is not filled in"
+    },
+    {
+      "code": "4114",
+      "message": "BIZ_CHECK_PRICE_SAMPLE_NON_ZERO",
+      "description": "The sample price is 0"
+    },
+    {
+      "code": "4115",
+      "message": "CHK_CATPROP_CPV_NOT_ENUM",
+      "description": "The CPV attribute is not one of the options provided by the category"
+    },
+    {
+      "code": "4116",
+      "message": "BIZ_CHECK_MAIN_IMAGE_DUPLICATE",
+      "description": "Repeat check of master diagram"
+    },
+    {
+      "code": "4117",
+      "message": "BIZ_CHECK_SPECIAL_PRICE_FROM_DATE_AFTER_TO_DATE",
+      "description": "Special offer date check"
+    },
+    {
+      "code": "4118",
+      "message": "BIZ_CHECK_PRICE_IS_ZERO",
+      "description": "Price is not 0 check"
+    },
+    {
+      "code": "4119",
+      "message": "BIZ_CHECK_SPECIAL_PRICE_RATE_OUT_OF_RANGE",
+      "description": "Special price range check"
+    },
+    {
+      "code": "4120",
+      "message": "CHK_CATPROP_CPV_MAX_LEGNTH",
+      "description": "Verify the maximum CPV value of a category"
+    },
+    {
+      "code": "4121",
+      "message": "BIZ_CHECK_SPECIAL_PRICE_PRECISION_INVALID",
+      "description": "Special accuracy check does not pass"
+    },
+    {
+      "code": "4122",
+      "message": "BIZ_CHECK_VIRTUAL_BUNDLE_SKU_SUB_OVER_LIMIT",
+      "description": "virtual bundle sku relation skuc over limit"
+    },
+    {
+      "code": "4123",
+      "message": "BIZ_CHECK_MANGROVE_RULE",
+      "description": "Restricted publication check"
+    },
+    {
+      "code": "4124",
+      "message": "BIZ_CHECK_MANGROVE_RULE_QC",
+      "description": "MANGROVE rule verification"
+    },
+    {
+      "code": "4125",
+      "message": "THD_IC_F_IC_DOMAIN_PROPERTY_002",
+      "description": "IC Verification category Attribute This parameter is mandatory"
+    },
+    {
+      "code": "4126",
+      "message": "THD_IC_F_IC_INFRA_PRODUCT_036",
+      "description": "SellerSku repeat"
+    },
+    {
+      "code": "4127",
+      "message": "THD_IC_F_IC_SCENE_PUBLISH_012",
+      "description": "ProductId repeat"
+    },
+    {
+      "code": "4128",
+      "message": "THD_IC_F_IC_DOMAIN_ACTOR_006",
+      "description": "Seller lock cannot be edited"
+    },
+    {
+      "code": "4129",
+      "message": "BIZ_CHECK_PROP_SPECIAL_CHAR",
+      "description": "Containssymbol/characterthatisnotallowed:\"<\".Pleaseremovethenre-upload"
+    },
+    {
+      "code": "4130",
+      "message": "BIZ_CHECK_OFFICIAL_STORE_BRAND_UNAUTHORIZED",
+      "description": "Uncertified brand"
+    },
+    {
+      "code": "4131",
+      "message": "BIZ_CHECK_CAT_PROP_SENSITIVE_WORDS",
+      "description": "description has sensitive words New brand"
+    },
+    {
+      "code": "4132",
+      "message": "Invalid Request Format",
+      "description": "Invalid Request Format"
+    },
+    {
+      "code": "4133",
+      "message": "Invalid variation",
+      "description": "Invalid variation"
+    },
+    {
+      "code": "4134",
+      "message": "CHK_CATEGORY_ID_NOT_LEAF_CATEGORY",
+      "description": "The category Id is Invalid"
+    },
+    {
+      "code": "4135",
+      "message": "THD_IC_ERR",
+      "description": "IC service error reported"
+    },
+    {
+      "code": "4136",
+      "message": "SELLER_SKU_NOT_FOUND",
+      "description": "Seller Sku is not found"
+    },
+    {
+      "code": "4137",
+      "message": "ITEM_NOT_FOUND",
+      "description": "item not found"
+    },
+    {
+      "code": "4138",
+      "message": "BIZ_CHECK_EXIST_OUTER_IMAGE",
+      "description": "The picture exists in the outer chain"
+    },
+    {
+      "code": "4139",
+      "message": "BIZ_CHECK_MAIN_IMAGE_REQUIRE",
+      "description": "Main image is require"
+    },
+    {
+      "code": "4140",
+      "message": "CHK_ENUM_PROP_VALUE_NOT_IN_OPTION",
+      "description": "Class does not have this attribute"
+    },
+    {
+      "code": "4141",
+      "message": "THD_IC_ERR_F_IC_INFRA_PRODUCT_036",
+      "description": "SellerSku repeat"
+    },
+    {
+      "code": "4142",
+      "message": "THD_BRAND_ID_IS_NOT_VALID_IN_CATEGORY",
+      "description": "This brand is not valid in the category package"
+    },
+    {
+      "code": "4143",
+      "message": "BIZ_CHECK_SALEPROP_ATTRIBUTE_INVALID",
+      "description": "The selling attributes are not defined in the variation"
+    },
+    {
+      "code": "4144",
+      "message": "BIZ_CHECK_SKU_NOT_CONTAIN_SALEPROP",
+      "description": "The sku does not contain the saleProp tag"
+    },
+    {
+      "code": "4145",
+      "message": "BIZ_CHECK_SALEPROP_AND_OLD_PARAM_REPEAT",
+      "description": "You can't put sales properties in both saleProp and sku"
+    },
+    {
+      "code": "4146",
+      "message": "BIZ_CHECK_SALEPROP_NOT_SUPPORT_THUMBNAIL",
+      "description": "Thumbnails are not supported for this sale attribute"
+    },
+    {
+      "code": "10002",
+      "message": "Incorrect/missing/unavailable product attributes",
+      "description": "Please check the details in the API response in order to confirm the properties that are causing the problem and the cause.And according to the content of the error, correct the attributes, options or delete the attributes without permission."
+    },
+    {
+      "code": "901",
+      "message": "Limit service request speed in server side temporarily.",
+      "description": "API level QPS limiting flow, please retry in the next second when you encounter this error."
+    },
+    {
+      "code": "10006",
+      "message": "the control price is not pass",
+      "description": "Global Plus products have a price control logic: the price limit is: sku without postal price ≤ (pre-upgrade retail price - LGS shipping cost) + (LGS shipping cost - Global Plus shipping cost) * 50%; beyond the upper limit, it is impossible to adjust the sku without postal price"
+    },
+    {
+      "code": "501",
+      "message": "Update product failed",
+      "description": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error."
+    },
+    {
+      "code": "10002",
+      "message": "System error update fail",
+      "description": "Please check the details in the API response in order to confirm the properties that are causing the problem and the cause.And according to the content of the error, correct the attributes, options or delete the attributes without permission."
+    },
+    {
+      "code": "10006",
+      "message": "the control price is not pass",
+      "description": "Global Plus products have a price control logic: the price limit is: sku without postal price ≤ (pre-upgrade retail price - LGS shipping cost) + (LGS shipping cost - Global Plus shipping cost) * 50%; beyond the upper limit, it is impossible to adjust the sku without postal price"
+    },
+    {
+      "code": "10006",
+      "message": "the control price is not pass",
+      "description": "Global Plus products have a price control logic: the price limit is: sku without postal price ≤ (pre-upgrade retail price - LGS shipping cost) + (LGS shipping cost - Global Plus shipping cost) * 50%; beyond the upper limit, it is impossible to adjust the sku without postal price"
+    },
+    {
+      "code": "10006",
+      "message": "the control price is not pass",
+      "description": "Global Plus products have a price control logic: the price limit is: sku without postal price ≤ (pre-upgrade retail price - LGS shipping cost) + (LGS shipping cost - Global Plus shipping cost) * 50%; beyond the upper limit, it is impossible to adjust the sku without postal price"
+    },
+    {
+      "code": "10002",
+      "message": "System error update fail",
+      "description": "Please check the details in the API response in order to confirm the properties that are causing the problem and the cause.And according to the content of the error, correct the attributes, options or delete the attributes without permission."
+    },
+    {
+      "code": "10002",
+      "message": "System error update fail",
+      "description": "Please check the details in the API response in order to confirm the properties that are causing the problem and the cause.And according to the content of the error, correct the attributes, options or delete the attributes without permission."
+    },
+    {
+      "code": "10002",
+      "message": "System error update fail",
+      "description": "Please check the details in the API response in order to confirm the properties that are causing the problem and the cause.And according to the content of the error, correct the attributes, options or delete the attributes without permission."
+    },
+    {
+      "code": "4137",
+      "message": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id.",
+      "description": "The item id in the request does not belong to the current store or country, please call the GetProduct/GetProductItem API to check the item id in the response again."
+    },
+    {
+      "code": "501",
+      "message": "Update product failed",
+      "description": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error."
+    },
+    {
+      "code": "501",
+      "message": "Update product failed",
+      "description": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error."
+    },
+    {
+      "code": "4218",
+      "message": "Update product failed",
+      "description": "The product has been penalized down to prohibit editing, if the seller has a problem with this product, please let the seller in the seller center to seller customer service or appeal."
+    },
+    {
+      "code": "4137",
+      "message": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id.",
+      "description": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id."
+    },
+    {
+      "code": "4137",
+      "message": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id.",
+      "description": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id."
+    },
+    {
+      "code": "10006",
+      "message": "the control price is not pass",
+      "description": "Global Plus products have a price control logic: the price limit is: sku without postal price ≤ (pre-upgrade retail price - LGS shipping cost) + (LGS shipping cost - Global Plus shipping cost) * 50%; beyond the upper limit, it is impossible to adjust the sku without postal price"
+    },
+    {
+      "code": "4137",
+      "message": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id.",
+      "description": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id."
+    },
+    {
+      "code": "SellerNotActive",
+      "message": "Seller not active,please check seller status",
+      "description": "The seller's store status is inactive can not call the commodity API, you can call the GetSeller API and based on the Status field to confirm the current status of the store, if the seller has questions about this status, please want to seller center seller customer service consulting how to modify the status."
+    },
+    {
+      "code": "901",
+      "message": "Limit service request speed in server side temporarily.",
+      "description": "API level QPS limiting flow, please retry in the next second when you encounter this error."
+    },
+    {
+      "code": "501",
+      "message": "Update product failed",
+      "description": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error."
+    },
+    {
+      "code": "4218",
+      "message": "Update product failed",
+      "description": "The product has been penalized down to prohibit editing, if the seller has a problem with this product, please let the seller in the seller center to seller customer service or appeal."
+    },
+    {
+      "code": "4216",
+      "message": "skuId is a mandatory field and must be filled in.",
+      "description": "Sku id is a mandatory parameter when updating a product."
+    },
+    {
+      "code": "4155",
+      "message": "Update product failed",
+      "description": "The product is locked by the penalty does not support the update, please create a new product or appeal in the seller center"
+    },
+    {
+      "code": "4152",
+      "message": "THD_INVENTORY_ERR_INV_PARAM_ILLEGAL:illegal parameter:quantity",
+      "description": "Negative numbers are not allowed in the quantity field."
+    },
+    {
+      "code": "4137",
+      "message": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id.",
+      "description": "The item id entered in the request does not exist on the current country and store, please call the GetProducts/GetProductItem API to query for the correct item id."
+    },
+    {
+      "code": "4115",
+      "message": "Attribute value that you input is not included in the dropdown list given. Please select from dropdown to avoid error",
+      "description": "A value in a single or multiple select attribute does not exist in the Option provided by Lazada, call the GetCategoryAttributes API to check the attribute in question and verify the Otpion."
+    },
+    {
+      "code": "4113",
+      "message": "CHK_SKU_PROPS_NOT_IDENTICAL",
+      "description": "The custom variant attribute you are using is not declared in the variation tag, so please declare the variant attribute first according to case3 in the UpdateProduct section of the Custom sales attributes document."
+    },
+    {
+      "code": "4108",
+      "message": "CHK_BASIC_REQUIRED",
+      "description": "The current product may have unfilled mandatory attributes due to category update, please call GetCategoryAttributes API first to query the latest category attribute list and confirm the new mandatory attributes and add the attributes in the payload."
+    },
+    {
+      "code": "209",
+      "message": "Invalid variation",
+      "description": "The number of variants in the payload exceeds the upper limit or does not meet the requirements, please check the message in the message to understand the detailed reasons and modify the payload."
+    },
+    {
+      "code": "1001",
+      "message": "The parameters are not in JSON format",
+      "description": "Make sure that your payload is JSON compliant, that the attributes and structure are filled out correctly according to the documentation and that all field values in the SKU are of string type."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

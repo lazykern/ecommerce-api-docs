@@ -1,0 +1,254 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "CreateOrUpdateCustomerWarehouse",
+  "version": null,
+  "summary": "External partner calls LAZADA to create or update warehouses",
+  "description": "External partner calls LAZADA to create or update warehouses",
+  "path": "/logistics/epis/customers/warehouses",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "externalSellerId",
+        "type": "String",
+        "required": true,
+        "description": "External seller ID"
+      },
+      {
+        "name": "platformName",
+        "type": "String",
+        "required": true,
+        "description": "Platform name"
+      },
+      {
+        "name": "warehouseCode",
+        "type": "String",
+        "required": true,
+        "description": "Account ID sent from CMS"
+      },
+      {
+        "name": "warehouseName",
+        "type": "String",
+        "required": true,
+        "description": "Warehouse name"
+      },
+      {
+        "name": "contactName",
+        "type": "String",
+        "required": true,
+        "description": "Warehouse contact name"
+      },
+      {
+        "name": "phone",
+        "type": "String",
+        "required": true,
+        "description": "Warehouse contact phone number. If no country phone prefix, EPIS will append the country prefix of current country"
+      },
+      {
+        "name": "email",
+        "type": "String",
+        "required": false,
+        "description": "Warehouse contact email"
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "required": true,
+        "description": "Enum: NORMAL / RETURN"
+      },
+      {
+        "name": "address",
+        "type": "Object",
+        "required": true,
+        "description": "Warehouse address"
+      },
+      {
+        "name": "solutionCodes",
+        "type": "String[]",
+        "required": true,
+        "description": "List of Lazada solution codes. Enum [LAZADA_STANDARD_VN, LAZADA_BULKY_VN]"
+      },
+      {
+        "name": "configuration",
+        "type": "Object",
+        "required": false,
+        "description": "Warehouse configuration"
+      },
+      {
+        "name": "dropshippingInfo",
+        "type": "Object",
+        "required": false,
+        "description": "drop shipping info"
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/epis/customers/warehouses\");\nrequest.addApiParameter(\"externalSellerId\", \"L001231321\");\nrequest.addApiParameter(\"platformName\", \"OneLink\");\nrequest.addApiParameter(\"warehouseCode\", \"L0000001\");\nrequest.addApiParameter(\"warehouseName\", \"OMS Warehouse HN\");\nrequest.addApiParameter(\"contactName\", \"John Wick\");\nrequest.addApiParameter(\"phone\", \"+84090123123\");\nrequest.addApiParameter(\"email\", \"email@gmail.com\");\nrequest.addApiParameter(\"type\", \"NORMAL\");\nrequest.addApiParameter(\"address\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\");\nrequest.addApiParameter(\"solutionCodes\", \"[\\\"LAZADA_STANDARD_VN\\\"]\");\nrequest.addApiParameter(\"configuration\", \"{\\\"deliveryNote\\\":\\\"Warehouse default delivery note\\\",\\\"services\\\":[{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"},{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"}]}\");\nrequest.addApiParameter(\"dropshippingInfo\", \"{\\\"originPlatformName\\\":\\\"Pancake\\\",\\\"originPartnerName\\\":\\\"Pancake\\\"}\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/epis/customers/warehouses');\n$request->addApiParam('externalSellerId','L001231321');\n$request->addApiParam('platformName','OneLink');\n$request->addApiParam('warehouseCode','L0000001');\n$request->addApiParam('warehouseName','OMS Warehouse HN');\n$request->addApiParam('contactName','John Wick');\n$request->addApiParam('phone','+84090123123');\n$request->addApiParam('email','email@gmail.com');\n$request->addApiParam('type','NORMAL');\n$request->addApiParam('address','{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}');\n$request->addApiParam('solutionCodes','[\\\"LAZADA_STANDARD_VN\\\"]');\n$request->addApiParam('configuration','{\\\"deliveryNote\\\":\\\"Warehouse default delivery note\\\",\\\"services\\\":[{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"},{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"}]}');\n$request->addApiParam('dropshippingInfo','{\\\"originPlatformName\\\":\\\"Pancake\\\",\\\"originPartnerName\\\":\\\"Pancake\\\"}');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/epis/customers/warehouses\");\nrequest.AddApiParameter(\"externalSellerId\", \"L001231321\");\nrequest.AddApiParameter(\"platformName\", \"OneLink\");\nrequest.AddApiParameter(\"warehouseCode\", \"L0000001\");\nrequest.AddApiParameter(\"warehouseName\", \"OMS Warehouse HN\");\nrequest.AddApiParameter(\"contactName\", \"John Wick\");\nrequest.AddApiParameter(\"phone\", \"+84090123123\");\nrequest.AddApiParameter(\"email\", \"email@gmail.com\");\nrequest.AddApiParameter(\"type\", \"NORMAL\");\nrequest.AddApiParameter(\"address\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\");\nrequest.AddApiParameter(\"solutionCodes\", \"[\\\"LAZADA_STANDARD_VN\\\"]\");\nrequest.AddApiParameter(\"configuration\", \"{\\\"deliveryNote\\\":\\\"Warehouse default delivery note\\\",\\\"services\\\":[{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"},{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"}]}\");\nrequest.AddApiParameter(\"dropshippingInfo\", \"{\\\"originPlatformName\\\":\\\"Pancake\\\",\\\"originPartnerName\\\":\\\"Pancake\\\"}\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/epis/customers/warehouses')\nrequest.add_api_parameter(\"externalSellerId\", \"L001231321\")\nrequest.add_api_parameter(\"platformName\", \"OneLink\")\nrequest.add_api_parameter(\"warehouseCode\", \"L0000001\")\nrequest.add_api_parameter(\"warehouseName\", \"OMS Warehouse HN\")\nrequest.add_api_parameter(\"contactName\", \"John Wick\")\nrequest.add_api_parameter(\"phone\", \"+84090123123\")\nrequest.add_api_parameter(\"email\", \"email@gmail.com\")\nrequest.add_api_parameter(\"type\", \"NORMAL\")\nrequest.add_api_parameter(\"address\", \"{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}\")\nrequest.add_api_parameter(\"solutionCodes\", \"[\\\"LAZADA_STANDARD_VN\\\"]\")\nrequest.add_api_parameter(\"configuration\", \"{\\\"deliveryNote\\\":\\\"Warehouse default delivery note\\\",\\\"services\\\":[{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"},{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"}]}\")\nrequest.add_api_parameter(\"dropshippingInfo\", \"{\\\"originPlatformName\\\":\\\"Pancake\\\",\\\"originPartnerName\\\":\\\"Pancake\\\"}\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/epis/customers/warehouses')\nrequest.add_api_param('externalSellerId', 'L001231321')\nrequest.add_api_param('platformName', 'OneLink')\nrequest.add_api_param('warehouseCode', 'L0000001')\nrequest.add_api_param('warehouseName', 'OMS Warehouse HN')\nrequest.add_api_param('contactName', 'John Wick')\nrequest.add_api_param('phone', '+84090123123')\nrequest.add_api_param('email', 'email@gmail.com')\nrequest.add_api_param('type', 'NORMAL')\nrequest.add_api_param('address', '{\\\"details\\\":\\\"199 \\u0110i\\u1EC7n Bi\\u00EAn Ph\\u1EE7 Qu\\u1EADn B\\u00ECnh Th\\u1EA1nh TP.H\\u1ED3 Ch\\u00ED Minh\\\",\\\"id\\\":\\\"R123765\\\"}')\nrequest.add_api_param('solutionCodes', '[\\\"LAZADA_STANDARD_VN\\\"]')\nrequest.add_api_param('configuration', '{\\\"deliveryNote\\\":\\\"Warehouse default delivery note\\\",\\\"services\\\":[{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"},{\\\"enable\\\":\\\"true\\\",\\\"serviceName\\\":\\\"vas_fd_storage\\\",\\\"properties\\\":\\\"{\\\\\\\"fd_storage_days\\\\\\\": \\\\\\\"4\\\\\\\"}\\\"}]}')\nrequest.add_api_param('dropshippingInfo', '{\\\"originPlatformName\\\":\\\"Pancake\\\",\\\"originPartnerName\\\":\\\"Pancake\\\"}')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/epis/customers/warehouses' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"address\":\"%7B%22details%22%3A%22199+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7+Qu%E1%BA%ADn+B%C3%ACnh+Th%E1%BA%A1nh+TP.H%E1%BB%93+Ch%C3%AD+Minh%22%2C%22id%22%3A%22R123765%22%7D\",\"dropshippingInfo\":\"%7B%22originPlatformName%22%3A%22Pancake%22%2C%22originPartnerName%22%3A%22Pancake%22%7D\",\"configuration\":\"%7B%22deliveryNote%22%3A%22Warehouse+default+delivery+note%22%2C%22services%22%3A%5B%7B%22enable%22%3A%22true%22%2C%22serviceName%22%3A%22vas_fd_storage%22%2C%22properties%22%3A%22%7B%5C%22fd_storage_days%5C%22%3A+%5C%224%5C%22%7D%22%7D%2C%7B%22enable%22%3A%22true%22%2C%22serviceName%22%3A%22vas_fd_storage%22%2C%22properties%22%3A%22%7B%5C%22fd_storage_days%5C%22%3A+%5C%224%5C%22%7D%22%7D%5D%7D\",\"contactName\":\"John+Wick\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"externalSellerId\":\"L001231321\",\"type\":\"NORMAL\",\"warehouseName\":\"OMS+Warehouse+HN\",\"warehouseCode\":\"L0000001\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"solutionCodes\":\"%5B%22LAZADA_STANDARD_VN%22%5D\",\"phone\":\"%2B84090123123\",\"sign_method\":\"sha256\",\"platformName\":\"OneLink\",\"email\":\"email%40gmail.com\",\"timestamp\":\"1750231615108\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "description": "Is fail request retryable"
+      },
+      {
+        "name": "traceId",
+        "type": "String",
+        "description": "Trace ID for debugging"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Request success or not"
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error code"
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "description": "Error field"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"retryable\": \"false\",\n  \"traceId\": \"0ba2887315172940728551014\",\n  \"code\": \"0\",\n  \"success\": \"true\",\n  \"errorMessage\": \"Bad request\",\n  \"errorCode\": \"BAD_REQUEST\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errors\": [\n    {\n      \"field\": \"$.items.name\",\n      \"errorMessage\": \"name must not be blank\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

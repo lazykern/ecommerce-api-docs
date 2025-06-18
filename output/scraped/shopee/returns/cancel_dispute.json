@@ -1,0 +1,160 @@
+{
+  "platform": "shopee",
+  "module": "returns",
+  "endpoint_name": "cancel_dispute",
+  "version": "v2",
+  "summary": "To get the dispute return reason",
+  "description": "To get the dispute return reason.",
+  "path": "/api/v2/returns/get_return_dispute_reason",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "return_sn",
+        "type": "string",
+        "required": true,
+        "description": "Shopee's unique serial number identifier for a Return Refund request. Note: Sellers can only cancel compensation disputes, not normal disputes. This means that sellers can only cancel disputes when the return_status is ACCEPTED and the compensation_status is COMPENSATION_REQUESTED.",
+        "sample": "2412100F5217W3H"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": true,
+        "description": "The operator's email address. For operation record keeping purposes (same as v2.returns.dispute API).",
+        "sample": "test@example.com"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"return_sn\": \"2412100F5217W3H\",\n    \"email\": \"test@example.com\"\n}"
+    },
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.post(\"https://partner.shopeemobile.com/api/v2/returns/cancel_dispute?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\")\n.header(\"Content-Type\",\"application/json\")\n.body(\"{\n   \\\"email\\\": \\\"test@example.com\\\",\n   \\\"return_sn\\\": \\\"2412100F5217W3H\\\"\n}\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/returns/cancel_dispute?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'POST',\n  CURLOPT_POSTFIELDS => '{\n    \"email\": \"test@example.com\",\n    \"return_sn\": \"2412100F5217W3H\"\n}',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request POST 'https://partner.shopeemobile.com/api/v2/returns/cancel_dispute?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n   \"email\": \"test@example.com\",\n   \"return_sn\": \"2412100F5217W3H\"\n}'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\nimport json\n\nurl = \"https://partner.shopeemobile.com/api/v2/returns/cancel_dispute?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload=json.dumps({\n  \"email\": \"test@example.com\",\n  \"return_sn\": \"2412100F5217W3H\"\n})\nheaders = {\n  'Content-Type': 'application/json'\n}\nresponse = requests.RPCRequest(\"POST\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "33e099960cdf420393ca5d5c35016f6d",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "return_sn",
+        "type": "string",
+        "sample": "2412100F5217W3H",
+        "description": "Shopee's unique serial number identifier for a Return Refund request."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "SUCCESS",
+        "description": "To indicate whether the cancel dispute operation is successful or failed."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"e3e3e7f328e6f2826eb18357c247bd01:010002a762916751:0000006d8199499e\",\n    \"response\": {\n        \"return_sn\": \"2412100F5217W3H\",\n        \"message\": \"SUCCESS\"\n    }\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "dispute.cancel.ineligible",
+      "message": "Cannot cancel dispute when compensation status is already in COMPENSATION_APPROVED"
+    },
+    {
+      "code": "dispute.cancel.ineligible",
+      "message": "Cannot cancel dispute when compensation status is not in COMPENSATION_REQUESTED"
+    },
+    {
+      "code": "dispute.cancel.ineligible",
+      "message": "Cannot cancel dispute when compensation status is not in COMPENSATION_REQUESTED"
+    },
+    {
+      "code": "dispute.cancel.ineligible",
+      "message": "Cannot cancel dispute when compensation status is already in COMPENSATION_REJECTED"
+    },
+    {
+      "code": "dispute.cancel.ineligible",
+      "message": "Cannot cancel dispute when return status is not in ACCEPTED"
+    },
+    {
+      "code": "dispute.cancel.ineligible",
+      "message": "Cannot cancel dispute because return SN is not eligible for compensation dispute"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/returns/get_return_dispute_reason"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/returns/get_return_dispute_reason"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/returns/get_return_dispute_reason"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/returns/get_return_dispute_reason"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/returns/get_return_dispute_reason"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/returns/get_return_dispute_reason"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/returns/get_return_dispute_reason"
+      }
+    ]
+  }
+}

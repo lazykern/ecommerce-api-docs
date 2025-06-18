@@ -1,0 +1,253 @@
+{
+  "platform": "lazada",
+  "module": "wallet",
+  "endpoint_name": "GiftCodeQuery",
+  "version": null,
+  "summary": "Gift Code - Query",
+  "description": "Gift Code - Query",
+  "path": "/wallet/giftcode/query",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "page",
+        "type": "Number",
+        "required": true,
+        "description": "The page to query, page should > 0 and < the total pages, default value is 1 if this parameter is null."
+      },
+      {
+        "name": "transfer_order_id",
+        "type": "String",
+        "required": true,
+        "description": "Transfer order Id on the ISV side, length <= 32"
+      },
+      {
+        "name": "records",
+        "type": "String[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "total_page",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "current_page",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "page_size",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "transfer_order_id",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "total_number",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "create_status",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "deposit",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/wallet/giftcode/query\");\nrequest.addApiParameter(\"page\", \"1\");\nrequest.addApiParameter(\"transfer_order_id\", \"test001\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/wallet/giftcode/query');\n$request->addApiParam('page','1');\n$request->addApiParam('transfer_order_id','test001');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/wallet/giftcode/query\");\nrequest.AddApiParameter(\"page\", \"1\");\nrequest.AddApiParameter(\"transfer_order_id\", \"test001\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/wallet/giftcode/query')\nrequest.add_api_parameter(\"page\", \"1\")\nrequest.add_api_parameter(\"transfer_order_id\", \"test001\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/wallet/giftcode/query')\nrequest.add_api_param('page', '1')\nrequest.add_api_param('transfer_order_id', 'test001')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/wallet/giftcode/query' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"transfer_order_id\":\"test001\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"page\":\"1\",\"timestamp\":\"1750231653477\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "records",
+        "type": "String[]",
+        "description": "The list of gift codes, need to finish unmask verification firstly."
+      },
+      {
+        "name": "total_page",
+        "type": "Number",
+        "description": "The total page number of the code list"
+      },
+      {
+        "name": "current_page",
+        "type": "Number",
+        "description": "The current queried page of the code list"
+      },
+      {
+        "name": "page_size",
+        "type": "Number",
+        "description": "The default max number of codes contained in one page."
+      },
+      {
+        "name": "transfer_order_id",
+        "type": "String",
+        "description": "Transfer order Id on the ISV side, length <= 32"
+      },
+      {
+        "name": "total_number",
+        "type": "String",
+        "description": "The amount of created gift code, precise to two decimal places"
+      },
+      {
+        "name": "create_status",
+        "type": "String",
+        "description": "The create status of the gift code"
+      },
+      {
+        "name": "deposit",
+        "type": "String",
+        "description": "The available balance of ISV"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"total_number\": \"0.01\",\n  \"code\": \"0\",\n  \"records\": [],\n  \"transfer_order_id\": \"test001\",\n  \"total_page\": \"5\",\n  \"create_status\": \"SUCCESS\",\n  \"deposit\": \"99.99\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"current_page\": \"1\",\n  \"page_size\": \"100\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "GIFT_CODE_LOCK_CONFLICT",
+      "message": "Gift code is already being createdplease wait for a moment and check the batch list",
+      "description": "Gift code is already being createdplease wait for a moment and check the batch list"
+    },
+    {
+      "code": "OPEN_API_CALL_EXCEED_LIMIT",
+      "message": "Open Api call times exceeds: apiName_limitType",
+      "description": "Open Api call times exceeds: apiName_limitType"
+    },
+    {
+      "code": "PROCEED_TRANSFER_EXCEPTION",
+      "message": "Internal error, please retry or contact lazada tech team.",
+      "description": "Internal error, please retry or contact lazada tech team."
+    },
+    {
+      "code": "USER_IS_NOT_LOGGED_IN",
+      "message": "The user is not logged in",
+      "description": "The user is not logged in"
+    },
+    {
+      "code": "APP_KEY_INVALID",
+      "message": "App key is invalid, please contact lazada tech team.",
+      "description": "App key is invalid, please contact lazada tech team."
+    },
+    {
+      "code": "TRANSFER_ERROR_TRANSFER_ORDER_ID_INVALID",
+      "message": "Transfer order ID is invalid",
+      "description": "Transfer order ID is invalid"
+    },
+    {
+      "code": "GIFT_CODE_QUERY_EMPTY",
+      "message": "There are no such gift code",
+      "description": "There are no such gift code"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

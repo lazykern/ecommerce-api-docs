@@ -1,0 +1,178 @@
+{
+  "platform": "lazada",
+  "module": "promotion",
+  "endpoint_name": "FreeShippingSelectedProductList",
+  "version": null,
+  "summary": "query free shipping promotion selected product list",
+  "description": "query free shipping promotion selected product list",
+  "path": "/promotion/freeshipping/products/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "curPage",
+        "type": "Number",
+        "required": false,
+        "description": "current page"
+      },
+      {
+        "name": "pageSize",
+        "type": "Number",
+        "required": false,
+        "description": "page size"
+      },
+      {
+        "name": "id",
+        "type": "Number",
+        "required": true,
+        "description": "promotion id"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_code",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/promotion/freeshipping/products/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"curPage\", \"1\");\nrequest.addApiParameter(\"pageSize\", \"10\");\nrequest.addApiParameter(\"id\", \"91471121124115\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/promotion/freeshipping/products/get','GET');\n$request->addApiParam('curPage','1');\n$request->addApiParam('pageSize','10');\n$request->addApiParam('id','91471121124115');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/promotion/freeshipping/products/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"curPage\", \"1\");\nrequest.AddApiParameter(\"pageSize\", \"10\");\nrequest.AddApiParameter(\"id\", \"91471121124115\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/promotion/freeshipping/products/get','GET')\nrequest.add_api_parameter(\"curPage\", \"1\")\nrequest.add_api_parameter(\"pageSize\", \"10\")\nrequest.add_api_parameter(\"id\", \"91471121124115\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/promotion/freeshipping/products/get','GET')\nrequest.add_api_param('curPage', '1')\nrequest.add_api_param('pageSize', '10')\nrequest.add_api_param('id', '91471121124115')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/promotion/freeshipping/products/get?timestamp=1750231471679&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&curPage=1&pageSize=10&id=91471121124115'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "response data"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "true | false"
+      },
+      {
+        "name": "error_code",
+        "type": "Number",
+        "description": "error code"
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "description": "error message"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"error_msg\": \"error msg\",\n  \"code\": \"0\",\n  \"data\": {\n    \"data_list\": [\n      {\n        \"sku_ids\": [],\n        \"product_id\": \"1902302002\"\n      }\n    ],\n    \"total\": \"6\",\n    \"current\": \"1\",\n    \"page_size\": \"10\"\n  },\n  \"success\": \"true\",\n  \"error_code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

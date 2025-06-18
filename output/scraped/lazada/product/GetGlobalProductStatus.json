@@ -1,0 +1,187 @@
+{
+  "platform": "lazada",
+  "module": "product",
+  "endpoint_name": "GetGlobalProductStatus",
+  "version": null,
+  "summary": "Use this API to query the status of the specified global product",
+  "description": "Use this API to query the status of the specified global product. It takes several minutes for the global product to be created on each site. (CrossBoarderSellersOnly)",
+  "path": "/product/global/status/get",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "params",
+        "type": "Object",
+        "required": true,
+        "description": "put the \"sellerSku\" as the key"
+      },
+      {
+        "name": "data",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/global/status/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"params\", \"{\\\"sellerSku\\\" : \\\"123\\\"}\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/global/status/get','GET');\n$request->addApiParam('params','{\\\"sellerSku\\\" : \\\"123\\\"}');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/global/status/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"params\", \"{\\\"sellerSku\\\" : \\\"123\\\"}\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/global/status/get','GET')\nrequest.add_api_parameter(\"params\", \"{\\\"sellerSku\\\" : \\\"123\\\"}\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/global/status/get','GET')\nrequest.add_api_param('params', '{\\\"sellerSku\\\" : \\\"123\\\"}')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/product/global/status/get?timestamp=1750231483145&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&params=%7B%22sellerSku%22+%3A+%22123%22%7D'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "data",
+        "type": "String",
+        "description": "result json type string"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "success flag"
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "description": "error code"
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "description": "error msg"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"error_msg\": \"get SKU failed\",\n  \"code\": \"0\",\n  \"data\": \"{}\",\n  \"success\": \"true\",\n  \"error_code\": \"E207\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "\"E0207\"",
+      "message": "\"E207: SKU not exist\"",
+      "description": "This SKU can not be found under your shop account."
+    },
+    {
+      "code": "E0208",
+      "message": "Product not exist",
+      "description": "The requested seller sku does not exist in the current store, please check the correctness of the seller sku."
+    },
+    {
+      "code": "E1000",
+      "message": "Internal Application Error",
+      "description": "Endpoint exception, please use MY endpoint for GSP related requests."
+    },
+    {
+      "code": "E0208",
+      "message": "Product not exist",
+      "description": "The requested seller sku does not exist in the current store, please check the correctness of the seller sku."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

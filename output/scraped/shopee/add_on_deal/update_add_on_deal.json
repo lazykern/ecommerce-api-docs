@@ -1,0 +1,350 @@
+{
+  "platform": "shopee",
+  "module": "add_on_deal",
+  "endpoint_name": "update_add_on_deal",
+  "version": "v2",
+  "summary": "Get Add-on Deal Sub Item",
+  "description": "Get Add-on Deal Sub Item",
+  "path": "/api/v2/add_on_deal/get_add_on_deal_sub_item",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "add_on_deal_id",
+        "type": "int",
+        "required": true,
+        "description": "Shopee's unique identifier for an add on deal activity.",
+        "sample": "12069"
+      },
+      {
+        "name": "start_time",
+        "type": "int",
+        "required": false,
+        "description": "The time when bundle deal activity start.The start time must be 1 hour than current time.",
+        "sample": "1656511212"
+      },
+      {
+        "name": "end_time",
+        "type": "int",
+        "required": false,
+        "description": "The time when bundle deal activity end. The end time must be later than start time.",
+        "sample": "1661868012"
+      },
+      {
+        "name": "purchase_min_spend",
+        "type": "float",
+        "required": false,
+        "description": "The minimum purchase amount that needs to be met to buy the gift with min.Spend",
+        "sample": "0.0"
+      },
+      {
+        "name": "per_gift_num",
+        "type": "int",
+        "required": false,
+        "description": "Number of gifts that buyers can get",
+        "sample": "0"
+      },
+      {
+        "name": "promotion_purchase_limit",
+        "type": "int",
+        "required": false,
+        "description": "Max. number of add-on products that a customer can purchase per order.",
+        "sample": "100"
+      },
+      {
+        "name": "sub_item_priority",
+        "type": "int[]",
+        "required": false,
+        "description": "The order of sub item",
+        "sample": "[100760424]"
+      },
+      {
+        "name": "add_on_deal_name",
+        "type": "string",
+        "required": false,
+        "description": "Title of the add on deal",
+        "sample": "bundle deal test qweass"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n    \"add_on_deal_id\": 12069,\n    \"add_on_deal_name\": \"bundle deal test qweass\",\n    \"sub_item_priority\": [],\n    \"sub_item_limit\": 1000\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error code"
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "The description of error code"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "a8a6c05ae225bef9e562c7b78a0b2677",
+        "description": "The identifier of the API request for error tracking"
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "start_time",
+        "type": "int",
+        "sample": "1656601200",
+        "description": "The time when add on deal activity start."
+      },
+      {
+        "name": "end_time",
+        "type": "int",
+        "sample": "1656604800",
+        "description": "The time when add on deal activity end"
+      },
+      {
+        "name": "promotion_type",
+        "type": "int",
+        "sample": "0",
+        "description": "The type of add on deal：add on discount =0；gift with mini spend=1"
+      },
+      {
+        "name": "purchase_min_spend",
+        "type": "float",
+        "sample": "0.0",
+        "description": "The minimum purchase amount that needs to be met to buy the gift with min.Spend"
+      },
+      {
+        "name": "add_on_deal_id",
+        "type": "int",
+        "sample": "12069",
+        "description": "Shopee's unique identifier for an add on deal activity."
+      },
+      {
+        "name": "per_gift_num",
+        "type": "int",
+        "sample": "0",
+        "description": "Number of gifts that buyers can get"
+      },
+      {
+        "name": "promotion_purchase_limit",
+        "type": "int",
+        "sample": "100",
+        "description": "Max. number of add-on products that a customer can purchase per order."
+      },
+      {
+        "name": "add_on_deal_name",
+        "type": "string",
+        "sample": "bundle deal test qweass",
+        "description": "Title of the add on deal"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"message\": \"\",\n    \"request_id\": \"a8a6c05ae225bef9e562c7b78a0b2677\",\n    \"response\": {\n        \"start_time\": 1656601200,\n        \"purchase_min_spend\": 0,\n        \"source\": 1,\n        \"add_on_deal_id\": 12069,\n        \"promotion_purchase_limit\": 100,\n        \"end_time\": 1656604800,\n        \"add_on_deal_name\": \"bundle deal test qweass\",\n        \"per_gift_num\": 0,\n        \"promotion_type\": 0,\n        \"sub_item_priority\": [\n            100760424\n        ]\n    },\n    \"error\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "add_on.add_on_deal_error_unknown",
+      "message": "The add on deal created by admin can't be edited"
+    },
+    {
+      "code": "add_on.add_on_item_delete_error",
+      "message": "At least one sub item should be added in add on deal"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "The purchase min spend and per gift num is not needed in add on discount"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "The purchase limit is not needed in gift with mini.spend"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "The start time of upcoming add on deal can't be shorted"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "Promotion end time can only be changed to an earlier timing."
+    },
+    {
+      "code": "add_on.add_on_deal_time_error",
+      "message": "The promotion period can't exceed 6 months"
+    },
+    {
+      "code": "add_on.add_on_deal_end_time_error",
+      "message": "The end time should be 1 hour later than start time"
+    },
+    {
+      "code": "add_on.add_on_deal_expired",
+      "message": "The expired add on deal can't be edited"
+    },
+    {
+      "code": "add_on.add_on_delete_error",
+      "message": "Only upcoming add on deal can be deleted"
+    },
+    {
+      "code": "add_on.add_on_deal_name_invalid",
+      "message": "The name of add on deal can't exceed 25 characters"
+    },
+    {
+      "code": "add_on.add_on_deal_not_exists",
+      "message": "The add on deal not existed"
+    },
+    {
+      "code": "add_on.add_on_update_error",
+      "message": "The {value} of ongoing add on deal can't be edited"
+    },
+    {
+      "code": "add_on.add_on_page_no_error",
+      "message": "Please input page number between 1-1000"
+    },
+    {
+      "code": "add_on.add_on_page_size_error",
+      "message": "Please input page type between 1-100"
+    },
+    {
+      "code": "add_on.add_on_deal_set_error",
+      "message": "Please input per gift number between 1 to 50"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "Please input correct promotion purchase limit"
+    },
+    {
+      "code": "add_on.add_on_status_error",
+      "message": "Please input correct promotion status:all: 0, ongoing: 1, upcoming: 2, expired: 3"
+    },
+    {
+      "code": "add_on.add_on_set_error",
+      "message": "Please input purchase min spend"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "Please enter a discount price less than the original price"
+    },
+    {
+      "code": "add_on.add_on_deal_set_error",
+      "message": "Please input add on deal purchase limit between 1 to 100"
+    },
+    {
+      "code": "add_on.add_on_edit_error",
+      "message": "Please input correct priority"
+    },
+    {
+      "code": "bundle.bundle_deal_item_under_block_categories",
+      "message": "This product is under a category that is prohibited from promotions due to regulations in your country"
+    },
+    {
+      "code": "bundle.bundle_deal_multi_tier_invalid_discount_value_per_item",
+      "message": "higher tier should have higher discount per item (discount per item = discount value off / item amount)"
+    },
+    {
+      "code": "bundle.bundle_deal_rule_type_value_error",
+      "message": "Wrong rule value"
+    },
+    {
+      "code": "bundle.bundle_deal_max_span_beyond",
+      "message": "The promotion period can't exceed 6 months"
+    },
+    {
+      "code": "follow_prize.end_time_max_limit",
+      "message": "End time cannot exceed 6 months after start time"
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    },
+    {
+      "code": "voucher_oversize_list",
+      "message": "You can only add up to 1000 products"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/add_on_deal/get_add_on_deal_sub_item"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/add_on_deal/get_add_on_deal_sub_item"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/add_on_deal/get_add_on_deal_sub_item"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/add_on_deal/get_add_on_deal_sub_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/add_on_deal/get_add_on_deal_sub_item"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/add_on_deal/get_add_on_deal_sub_item"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/add_on_deal/get_add_on_deal_sub_item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "platform": "lazada",
+  "module": "membership",
+  "endpoint_name": "GetLinkMemberList",
+  "version": null,
+  "summary": "Query all linkmembers of the seller",
+  "description": "Query all linkmembers of the seller",
+  "path": "/membership/linkmember/list",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "page_num",
+        "type": "String",
+        "required": true,
+        "description": "page number"
+      },
+      {
+        "name": "page_size",
+        "type": "String",
+        "required": true,
+        "description": "page size"
+      },
+      {
+        "name": "seller_id",
+        "type": "String",
+        "required": true,
+        "description": "seller id"
+      },
+      {
+        "name": "result",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/membership/linkmember/list\");\nrequest.addApiParameter(\"page_num\", \"1\");\nrequest.addApiParameter(\"page_size\", \"10\");\nrequest.addApiParameter(\"seller_id\", \"11417461071234\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/membership/linkmember/list');\n$request->addApiParam('page_num','1');\n$request->addApiParam('page_size','10');\n$request->addApiParam('seller_id','11417461071234');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/membership/linkmember/list\");\nrequest.AddApiParameter(\"page_num\", \"1\");\nrequest.AddApiParameter(\"page_size\", \"10\");\nrequest.AddApiParameter(\"seller_id\", \"11417461071234\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/membership/linkmember/list')\nrequest.add_api_parameter(\"page_num\", \"1\")\nrequest.add_api_parameter(\"page_size\", \"10\")\nrequest.add_api_parameter(\"seller_id\", \"11417461071234\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/membership/linkmember/list')\nrequest.add_api_param('page_num', '1')\nrequest.add_api_param('page_size', '10')\nrequest.add_api_param('seller_id', '11417461071234')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/membership/linkmember/list' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"page_num\":\"1\",\"seller_id\":\"11417461071234\",\"timestamp\":\"1750231509085\",\"page_size\":\"10\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "result",
+        "type": "Object",
+        "description": "result"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"result\": {\n    \"model_list\": [\n      {\n        \"buyer_id\": \"1013016816\",\n        \"seller_id\": \"1141746107\",\n        \"partneruser_id\": \"LorealLANSG-47C76E2D-2249-EC11-95A3-0050569FADEB\"\n      }\n    ],\n    \"total_count\": \"2289\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

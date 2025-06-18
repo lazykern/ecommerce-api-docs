@@ -1,0 +1,231 @@
+{
+  "platform": "shopee",
+  "module": "shop_flash_sale",
+  "endpoint_name": "get_item_criteria",
+  "version": "v2",
+  "summary": "creat shop flash sale",
+  "description": "creat shop flash sale",
+  "path": "/api/v2/shop_flash_sale/create_shop_flash_sale",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "criteria",
+        "type": "object[]",
+        "sample": "",
+        "description": "criteria detail"
+      },
+      {
+        "name": "criteria_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "min_product_rating",
+        "type": "float",
+        "sample": "",
+        "description": "Product Rating(0.0-5.0), -1 means no limit"
+      },
+      {
+        "name": "min_likes",
+        "type": "int32",
+        "sample": "",
+        "description": "Likes(s), -1 means no limit"
+      },
+      {
+        "name": "must_not_pre_order",
+        "type": "boolean",
+        "sample": "true",
+        "description": "Pre-Order(s)"
+      },
+      {
+        "name": "min_order_total",
+        "type": "int32",
+        "sample": "",
+        "description": "Orders in the last 30 day(s), -1 means no limit"
+      },
+      {
+        "name": "max_days_to_ship",
+        "type": "int32",
+        "sample": "",
+        "description": "Days to Ship, -1 means no limit"
+      },
+      {
+        "name": "min_repetition_day",
+        "type": "int32",
+        "sample": "",
+        "description": "Repetition Control (Same Product cannot Join ISFS within N Days) , -1 means no limit"
+      },
+      {
+        "name": "min_promo_stock",
+        "type": "int32",
+        "sample": "1",
+        "description": "Promo Stock, -1 means no limit"
+      },
+      {
+        "name": "max_promo_stock",
+        "type": "int32",
+        "sample": "10",
+        "description": "Promo Stock, -1 means no limit"
+      },
+      {
+        "name": "min_discount",
+        "type": "int64",
+        "sample": "10",
+        "description": "Discount Limit, 10 means 10%, -1 means no limit"
+      },
+      {
+        "name": "max_discount",
+        "type": "int64",
+        "sample": "100",
+        "description": "Discount Limit, 100 means 100%, -1 means no limit"
+      },
+      {
+        "name": "min_discount_price",
+        "type": "int64",
+        "sample": "10000000",
+        "description": "Discount Limit, -1 means no limit, real min discount price = min_discount_price / 100000"
+      },
+      {
+        "name": "max_discount_price",
+        "type": "int64",
+        "sample": "100000000",
+        "description": "Discount Limit, -1 means no limit, real max discount price = max_discount_price / 100000"
+      },
+      {
+        "name": "need_lowest_price",
+        "type": "boolean",
+        "sample": "true",
+        "description": "lower than lowest price in last 7 days (exclude Shopee Flash Deals)"
+      },
+      {
+        "name": "pair_ids",
+        "type": "object[]",
+        "sample": "",
+        "description": "the mapping relationship between criteria and category"
+      },
+      {
+        "name": "criteria_id",
+        "type": "int64",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "category_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "these are the categories that the shop has items, and the criteria will apply to these categories"
+      },
+      {
+        "name": "category_id",
+        "type": "int64",
+        "sample": "",
+        "description": "o means this is All category"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "sample": "",
+        "description": "category name"
+      },
+      {
+        "name": "parent_id",
+        "type": "int64",
+        "sample": "",
+        "description": "the parent category id, 0 means this category is L1 category"
+      },
+      {
+        "name": "overlap_block_category_ids",
+        "type": "int64[]",
+        "sample": "",
+        "description": "Due to regulations, the promotion of some products in these categories are prohibited in this region"
+      }
+    ],
+    "examples": []
+  },
+  "error_codes": [
+    {
+      "code": "marketing_error_no_premission",
+      "message": "You don't have permission for the operation"
+    },
+    {
+      "code": "common.error_server",
+      "message": "Something is wrong. Please try later."
+    },
+    {
+      "code": "common.error_shop",
+      "message": "Shopid is invalid."
+    },
+    {
+      "code": "shop_flash_sale_param_error",
+      "message": "The Wrong parameters, detail: {msg}."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop_flash_sale/create_shop_flash_sale"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop_flash_sale/create_shop_flash_sale"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_flash_sale/create_shop_flash_sale"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_flash_sale/create_shop_flash_sale"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_flash_sale/create_shop_flash_sale"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_flash_sale/create_shop_flash_sale"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_flash_sale/create_shop_flash_sale"
+      }
+    ]
+  }
+}

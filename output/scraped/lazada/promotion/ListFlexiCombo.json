@@ -1,0 +1,190 @@
+{
+  "platform": "lazada",
+  "module": "promotion",
+  "endpoint_name": "ListFlexiCombo",
+  "version": null,
+  "summary": "list flexi combo",
+  "description": "list flexi combo",
+  "path": "/promotion/flexicombo/list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "cur_page",
+        "type": "Number",
+        "required": true,
+        "description": "current page"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": false,
+        "description": "name"
+      },
+      {
+        "name": "page_size",
+        "type": "Number",
+        "required": true,
+        "description": "page size"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": false,
+        "description": "NOT_START | ONGOING | SUSPEND | FINISH"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/promotion/flexicombo/list\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"cur_page\", \"1\");\nrequest.addApiParameter(\"name\", \"test\");\nrequest.addApiParameter(\"page_size\", \"10\");\nrequest.addApiParameter(\"status\", \"NOT_START\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/promotion/flexicombo/list','GET');\n$request->addApiParam('cur_page','1');\n$request->addApiParam('name','test');\n$request->addApiParam('page_size','10');\n$request->addApiParam('status','NOT_START');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/promotion/flexicombo/list\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"cur_page\", \"1\");\nrequest.AddApiParameter(\"name\", \"test\");\nrequest.AddApiParameter(\"page_size\", \"10\");\nrequest.AddApiParameter(\"status\", \"NOT_START\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/promotion/flexicombo/list','GET')\nrequest.add_api_parameter(\"cur_page\", \"1\")\nrequest.add_api_parameter(\"name\", \"test\")\nrequest.add_api_parameter(\"page_size\", \"10\")\nrequest.add_api_parameter(\"status\", \"NOT_START\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/promotion/flexicombo/list','GET')\nrequest.add_api_param('cur_page', '1')\nrequest.add_api_param('name', 'test')\nrequest.add_api_param('page_size', '10')\nrequest.add_api_param('status', 'NOT_START')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X GET url + '/promotion/flexicombo/list?timestamp=1750231619501&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&cur_page=1&name=test&page_size=10&status=NOT_START'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "success"
+      },
+      {
+        "name": "error_code",
+        "type": "String",
+        "description": "error_code"
+      },
+      {
+        "name": "error_msg",
+        "type": "String",
+        "description": "error_msg"
+      },
+      {
+        "name": "data",
+        "type": "Object",
+        "description": "data"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"error_msg\": \"null\",\n  \"code\": \"0\",\n  \"data\": {\n    \"data_list\": [\n      {\n        \"stackable\": \"false\",\n        \"apply\": \"SPECIFIC_PRODUCTS\",\n        \"gift_skus\": [\n          {\n            \"product_id\": \"600956022\",\n            \"sku_id\": \"1742246015\"\n          }\n        ],\n        \"end_time\": \"1593878399000\",\n        \"discount_value\": [],\n        \"sample_skus\": [\n          {\n            \"product_id\": \"640558086\",\n            \"sku_id\": \"1926072105\"\n          }\n        ],\n        \"discount_type\": \"freeGift\",\n        \"type\": \"Flexi-combo\",\n        \"start_time\": \"1593705600000\",\n        \"order_used_numbers\": \"20\",\n        \"name\": \"终极\",\n        \"platform_channel\": \"null\",\n        \"id\": \"9786600553530\",\n        \"criteria_type\": \"QUANTITY\",\n        \"criteria_value\": [],\n        \"order_numbers\": \"10\",\n        \"status\": \"ONGOING\"\n      }\n    ],\n    \"total\": \"118\",\n    \"current\": \"1\",\n    \"page_size\": \"10\"\n  },\n  \"success\": \"true\",\n  \"error_code\": \"null\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "21",
+      "message": "E021: Internal System Error",
+      "description": "Internal System Error"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

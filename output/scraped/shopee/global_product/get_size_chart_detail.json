@@ -1,0 +1,191 @@
+{
+  "platform": "shopee",
+  "module": "global_product",
+  "endpoint_name": "get_size_chart_detail",
+  "version": "v2",
+  "summary": "Get the standardized tier variation defined by Shopee, which is currently a three-layer tree structure",
+  "description": "Get the standardized tier variation defined by Shopee, which is currently a three-layer tree structure. The top layer is variations, the second layer is groups, groups are used to divide options, and the third layer is options.",
+  "path": "/api/v2/global_product/get_variations",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "size_chart_id",
+        "type": "int32",
+        "required": true,
+        "description": "",
+        "sample": "700024639"
+      },
+      {
+        "name": "language",
+        "type": "string",
+        "required": false,
+        "description": "language should be in the list: [\"en\", \"zh-Hans\"]",
+        "sample": "\"en\""
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "{\n    \"size_chart_id\": 700024613\n}"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "warning",
+        "type": "string",
+        "sample": "",
+        "description": "Warning message."
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "The identifier for an API request for error tracking."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "size_chart_id",
+        "type": "int",
+        "sample": "",
+        "description": "ID of new size chart"
+      },
+      {
+        "name": "size_chart_name",
+        "type": "string",
+        "sample": "",
+        "description": "name of new size chart"
+      },
+      {
+        "name": "size_chart_table",
+        "type": "object",
+        "sample": "",
+        "description": "new size chart is a table format which include multiple columns. each column has column header (measurement) and multiple values (measurement value) of this column."
+      },
+      {
+        "name": "column_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "column list of new size chart table. it include one column (measurement) and multiple values (measurement value)"
+      },
+      {
+        "name": "measurement",
+        "type": "object",
+        "sample": "",
+        "description": "this is the column header which means a kind of measurement"
+      },
+      {
+        "name": "input_type",
+        "type": "string",
+        "sample": "",
+        "description": "there are 3 kinds of measurement type: Single Dropdown, Input Single Number, Input Range Number."
+      },
+      {
+        "name": "unit",
+        "type": "string",
+        "sample": "",
+        "description": "the unit of this size measurement."
+      },
+      {
+        "name": "display_name",
+        "type": "string",
+        "sample": "",
+        "description": "name of column header (measurement)"
+      },
+      {
+        "name": "measurement_value_list",
+        "type": "object[]",
+        "sample": "",
+        "description": "the list of measurement value"
+      },
+      {
+        "name": "value",
+        "type": "float",
+        "sample": "",
+        "description": "if the input_type of measurement is single input number, measurement will have one value which is returned by this field."
+      },
+      {
+        "name": "min_value",
+        "type": "float",
+        "sample": "",
+        "description": "if the input_type of measurement is input range number, measurement will be a range which is returned by 2 fields: min_value and max_value."
+      },
+      {
+        "name": "max_value",
+        "type": "float",
+        "sample": "",
+        "description": "if the input_type of measurement is input range number, measurement will be a range which is returned by 2 fields: min_value and max_value."
+      },
+      {
+        "name": "option",
+        "type": "string",
+        "sample": "",
+        "description": "if the input_type of measurement is single dropdown, measurement will have one value which is returned by this field."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n    \"error\": \"\",\n    \"message\": \"\",\n    \"request_id\": \"835424602d9bb0d8ea657fac2a35e020:020000ee07bc4e72:01000064d091d3e2\",\n    \"response\": {\n        \"size_chart_id\": 700024639,\n        \"size_chart_name\": \"testtestt\",\n        \"size_chart_table\": {\n            \"column_list\": [\n                {\n                    \"measurement\": {\n                        \"display_name\": \"test single input number\",\n                        \"input_type\": \"Input Single Number\",\n                        \"unit\": \"cm\"\n                    },\n                    \"measurement_value_list\": [\n                        {\n                            \"max_value\": null,\n                            \"min_value\": null,\n                            \"option\": null,\n                            \"value\": 1\n                        },\n                        {\n                            \"max_value\": null,\n                            \"min_value\": null,\n                            \"option\": null,\n                            \"value\": 2\n                        },\n                        {\n                            \"max_value\": null,\n                            \"min_value\": null,\n                            \"option\": null,\n                            \"value\": 3\n                        }\n                    ]\n                },\n                {\n                    \"measurement\": {\n                        \"display_name\": \"susu_input_range_number_with_special_unit_kg\",\n                        \"input_type\": \"Input Range Number\",\n                        \"unit\": \"kg\"\n                    },\n                    \"measurement_value_list\": [\n                        {\n                            \"max_value\": 13,\n                            \"min_value\": 12,\n                            \"option\": null,\n                            \"value\": null\n                        },\n                        {\n                            \"max_value\": 14,\n                            \"min_value\": 13,\n                            \"option\": null,\n                            \"value\": null\n                        },\n                        {\n                            \"max_value\": 16,\n                            \"min_value\": 14,\n                            \"option\": null,\n                            \"value\": null\n                        }\n                    ]\n                },\n                {\n                    \"measurement\": {\n                        \"display_name\": \"regional 001 dropdowm\",\n                        \"input_type\": \"Single Dropdown\",\n                        \"unit\": \"cm\"\n                    },\n                    \"measurement_value_list\": [\n                        {\n                            \"max_value\": null,\n                            \"min_value\": null,\n                            \"option\": \"01s\",\n                            \"value\": null\n                        },\n                        {\n                            \"max_value\": null,\n                            \"min_value\": null,\n                            \"option\": \"01m\",\n                            \"value\": null\n                        },\n                        {\n                            \"max_value\": null,\n                            \"min_value\": null,\n                            \"option\": \"01l\",\n                            \"value\": null\n                        }\n                    ]\n                }\n            ]\n        }\n    },\n    \"warning\": \"\"\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_variations"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_variations"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_variations"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_variations"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_variations"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_variations"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_variations"
+      }
+    ]
+  }
+}

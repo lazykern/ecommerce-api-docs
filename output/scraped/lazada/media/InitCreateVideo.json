@@ -1,0 +1,188 @@
+{
+  "platform": "lazada",
+  "module": "media",
+  "endpoint_name": "InitCreateVideo",
+  "version": null,
+  "summary": "A seller starts to upload a video file",
+  "description": "A seller starts to upload a video file",
+  "path": "/media/video/block/create",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "fileName",
+        "type": "String",
+        "required": true,
+        "description": "local file name of vedio file"
+      },
+      {
+        "name": "fileBytes",
+        "type": "Number",
+        "required": true,
+        "description": "video file's bytes, should be less than 100M"
+      },
+      {
+        "name": "upload_id",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "result_code",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "result_message",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": true,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/media/video/block/create\");\nrequest.addApiParameter(\"fileName\", \"show.mp4\");\nrequest.addApiParameter(\"fileBytes\", \"123456\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/media/video/block/create');\n$request->addApiParam('fileName','show.mp4');\n$request->addApiParam('fileBytes','123456');\nvar_dump($c->execute($request, $accessToken));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/media/video/block/create\");\nrequest.AddApiParameter(\"fileName\", \"show.mp4\");\nrequest.AddApiParameter(\"fileBytes\", \"123456\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/media/video/block/create')\nrequest.add_api_parameter(\"fileName\", \"show.mp4\")\nrequest.add_api_parameter(\"fileBytes\", \"123456\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/media/video/block/create')\nrequest.add_api_param('fileName', 'show.mp4')\nrequest.add_api_param('fileBytes', '123456')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/media/video/block/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"fileName\":\"show.mp4\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"fileBytes\":\"123456\",\"timestamp\":\"1750231568939\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "upload_id",
+        "type": "String",
+        "description": "return upload_id for further operation"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "whether the operation succeeds"
+      },
+      {
+        "name": "result_code",
+        "type": "String",
+        "description": "error code when the operation fails"
+      },
+      {
+        "name": "result_message",
+        "type": "String",
+        "description": "error message when the operation fails"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"upload_id\": \"123456ABCD\",\n  \"code\": \"0\",\n  \"result_message\": \"file size is too big\",\n  \"success\": \"true\",\n  \"result_code\": \"ok\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "ILLEGAL_PARAMETER",
+      "message": "detail message",
+      "description": "illegal parameter"
+    },
+    {
+      "code": "FAIL_TO_GET_SHOP_INFO",
+      "message": "detail message",
+      "description": "fail to get shop info"
+    },
+    {
+      "code": "FAIL_TO_BLOCK_INIT",
+      "message": "detail message",
+      "description": "fail to create block upload"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

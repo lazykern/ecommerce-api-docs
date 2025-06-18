@@ -1,0 +1,273 @@
+{
+  "platform": "lazada",
+  "module": "logistics",
+  "endpoint_name": "AddOrUpdatePickupStop",
+  "version": null,
+  "summary": "3PL call TPS to update pickup stops",
+  "description": "3PL call TPS to update pickup stops",
+  "path": "/logistics/tps/runsheets/stops",
+  "http_method": [
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "stopId",
+        "type": "String",
+        "required": true,
+        "description": "Stop ID"
+      },
+      {
+        "name": "sellerId",
+        "type": "String",
+        "required": true,
+        "description": "Seller ID (Sent in pickup request)"
+      },
+      {
+        "name": "warehouseCode",
+        "type": "String",
+        "required": true,
+        "description": "Warehouse code (Sent in pickup request)"
+      },
+      {
+        "name": "dopStationId",
+        "type": "String",
+        "required": false,
+        "description": "DOP station code"
+      },
+      {
+        "name": "dopStationName",
+        "type": "String",
+        "required": false,
+        "description": "DOP station name"
+      },
+      {
+        "name": "pickupType",
+        "type": "String",
+        "required": true,
+        "description": "Type: Pickup/Drop-off"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": true,
+        "description": "1. planned: when stop is dispatched to courier\\n 2. arrived: when driver arrived at stop and start pickup\\n 3. finished: when driver finished pickup at the stop\\n 4. skipped: when driver selected to skip the stop due to some reason\\n 5. removed: when the stop has 0 RTS"
+      },
+      {
+        "name": "statusUpdateTime",
+        "type": "Number",
+        "required": true,
+        "description": "actual process time when reaching the status"
+      },
+      {
+        "name": "dispatcherName",
+        "type": "String",
+        "required": false,
+        "description": "Dispatcher name"
+      },
+      {
+        "name": "dispatcherContact",
+        "type": "String",
+        "required": false,
+        "description": "Dispatcher phone number"
+      },
+      {
+        "name": "driverId",
+        "type": "String",
+        "required": false,
+        "description": "Driver ID"
+      },
+      {
+        "name": "driverName",
+        "type": "String",
+        "required": true,
+        "description": "Driver name"
+      },
+      {
+        "name": "driverContact",
+        "type": "String",
+        "required": false,
+        "description": "Driver phone number"
+      },
+      {
+        "name": "eta",
+        "type": "Number",
+        "required": false,
+        "description": "when the ETA is updated, need to update the data to Lazada side, scenario include: 1. without ETA >> with ETA 2. with ETA >> without ETA 3. ETA change from A to B"
+      },
+      {
+        "name": "successVolume",
+        "type": "String",
+        "required": false,
+        "description": "Success count"
+      },
+      {
+        "name": "failedVolume",
+        "type": "String",
+        "required": false,
+        "description": "Failed count"
+      },
+      {
+        "name": "failedVolumeList",
+        "type": "Object[]",
+        "required": false,
+        "description": "Failed list"
+      },
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/tps/runsheets/stops\");\nrequest.addApiParameter(\"stopId\", \"Stop001\");\nrequest.addApiParameter(\"sellerId\", \"200165961111\");\nrequest.addApiParameter(\"warehouseCode\", \"dropshipping\");\nrequest.addApiParameter(\"dopStationId\", \"SSG\");\nrequest.addApiParameter(\"dopStationName\", \"Sai Gon\");\nrequest.addApiParameter(\"pickupType\", \"Pickup\");\nrequest.addApiParameter(\"status\", \"planned\");\nrequest.addApiParameter(\"statusUpdateTime\", \"1659439136265\");\nrequest.addApiParameter(\"dispatcherName\", \"Geralt\");\nrequest.addApiParameter(\"dispatcherContact\", \"+841231231123\");\nrequest.addApiParameter(\"driverId\", \"DriverX\");\nrequest.addApiParameter(\"driverName\", \"John Wick\");\nrequest.addApiParameter(\"driverContact\", \"+841231231124\");\nrequest.addApiParameter(\"eta\", \"1659439136265\");\nrequest.addApiParameter(\"successVolume\", \"10\");\nrequest.addApiParameter(\"failedVolume\", \"1\");\nrequest.addApiParameter(\"failedVolumeList\", \"[{\\\"volume\\\":\\\"1\\\",\\\"reason\\\":\\\"Seller closed\\\",\\\"type\\\":\\\"Failed\\\"}]\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/tps/runsheets/stops');\n$request->addApiParam('stopId','Stop001');\n$request->addApiParam('sellerId','200165961111');\n$request->addApiParam('warehouseCode','dropshipping');\n$request->addApiParam('dopStationId','SSG');\n$request->addApiParam('dopStationName','Sai Gon');\n$request->addApiParam('pickupType','Pickup');\n$request->addApiParam('status','planned');\n$request->addApiParam('statusUpdateTime','1659439136265');\n$request->addApiParam('dispatcherName','Geralt');\n$request->addApiParam('dispatcherContact','+841231231123');\n$request->addApiParam('driverId','DriverX');\n$request->addApiParam('driverName','John Wick');\n$request->addApiParam('driverContact','+841231231124');\n$request->addApiParam('eta','1659439136265');\n$request->addApiParam('successVolume','10');\n$request->addApiParam('failedVolume','1');\n$request->addApiParam('failedVolumeList','[{\\\"volume\\\":\\\"1\\\",\\\"reason\\\":\\\"Seller closed\\\",\\\"type\\\":\\\"Failed\\\"}]');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/tps/runsheets/stops\");\nrequest.AddApiParameter(\"stopId\", \"Stop001\");\nrequest.AddApiParameter(\"sellerId\", \"200165961111\");\nrequest.AddApiParameter(\"warehouseCode\", \"dropshipping\");\nrequest.AddApiParameter(\"dopStationId\", \"SSG\");\nrequest.AddApiParameter(\"dopStationName\", \"Sai Gon\");\nrequest.AddApiParameter(\"pickupType\", \"Pickup\");\nrequest.AddApiParameter(\"status\", \"planned\");\nrequest.AddApiParameter(\"statusUpdateTime\", \"1659439136265\");\nrequest.AddApiParameter(\"dispatcherName\", \"Geralt\");\nrequest.AddApiParameter(\"dispatcherContact\", \"+841231231123\");\nrequest.AddApiParameter(\"driverId\", \"DriverX\");\nrequest.AddApiParameter(\"driverName\", \"John Wick\");\nrequest.AddApiParameter(\"driverContact\", \"+841231231124\");\nrequest.AddApiParameter(\"eta\", \"1659439136265\");\nrequest.AddApiParameter(\"successVolume\", \"10\");\nrequest.AddApiParameter(\"failedVolume\", \"1\");\nrequest.AddApiParameter(\"failedVolumeList\", \"[{\\\"volume\\\":\\\"1\\\",\\\"reason\\\":\\\"Seller closed\\\",\\\"type\\\":\\\"Failed\\\"}]\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/tps/runsheets/stops')\nrequest.add_api_parameter(\"stopId\", \"Stop001\")\nrequest.add_api_parameter(\"sellerId\", \"200165961111\")\nrequest.add_api_parameter(\"warehouseCode\", \"dropshipping\")\nrequest.add_api_parameter(\"dopStationId\", \"SSG\")\nrequest.add_api_parameter(\"dopStationName\", \"Sai Gon\")\nrequest.add_api_parameter(\"pickupType\", \"Pickup\")\nrequest.add_api_parameter(\"status\", \"planned\")\nrequest.add_api_parameter(\"statusUpdateTime\", \"1659439136265\")\nrequest.add_api_parameter(\"dispatcherName\", \"Geralt\")\nrequest.add_api_parameter(\"dispatcherContact\", \"+841231231123\")\nrequest.add_api_parameter(\"driverId\", \"DriverX\")\nrequest.add_api_parameter(\"driverName\", \"John Wick\")\nrequest.add_api_parameter(\"driverContact\", \"+841231231124\")\nrequest.add_api_parameter(\"eta\", \"1659439136265\")\nrequest.add_api_parameter(\"successVolume\", \"10\")\nrequest.add_api_parameter(\"failedVolume\", \"1\")\nrequest.add_api_parameter(\"failedVolumeList\", \"[{\\\"volume\\\":\\\"1\\\",\\\"reason\\\":\\\"Seller closed\\\",\\\"type\\\":\\\"Failed\\\"}]\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/tps/runsheets/stops')\nrequest.add_api_param('stopId', 'Stop001')\nrequest.add_api_param('sellerId', '200165961111')\nrequest.add_api_param('warehouseCode', 'dropshipping')\nrequest.add_api_param('dopStationId', 'SSG')\nrequest.add_api_param('dopStationName', 'Sai Gon')\nrequest.add_api_param('pickupType', 'Pickup')\nrequest.add_api_param('status', 'planned')\nrequest.add_api_param('statusUpdateTime', '1659439136265')\nrequest.add_api_param('dispatcherName', 'Geralt')\nrequest.add_api_param('dispatcherContact', '+841231231123')\nrequest.add_api_param('driverId', 'DriverX')\nrequest.add_api_param('driverName', 'John Wick')\nrequest.add_api_param('driverContact', '+841231231124')\nrequest.add_api_param('eta', '1659439136265')\nrequest.add_api_param('successVolume', '10')\nrequest.add_api_param('failedVolume', '1')\nrequest.add_api_param('failedVolumeList', '[{\\\"volume\\\":\\\"1\\\",\\\"reason\\\":\\\"Seller closed\\\",\\\"type\\\":\\\"Failed\\\"}]')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/logistics/tps/runsheets/stops' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"dispatcherName\":\"Geralt\",\"dopStationName\":\"Sai+Gon\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"stopId\":\"Stop001\",\"pickupType\":\"Pickup\",\"warehouseCode\":\"dropshipping\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"dispatcherContact\":\"%2B841231231123\",\"app_key\":\"1234567\",\"sellerId\":\"200165961111\",\"eta\":\"1659439136265\",\"driverId\":\"DriverX\",\"failedVolume\":\"1\",\"sign_method\":\"sha256\",\"dopStationId\":\"SSG\",\"driverName\":\"John+Wick\",\"successVolume\":\"10\",\"failedVolumeList\":\"%5B%7B%22volume%22%3A%221%22%2C%22reason%22%3A%22Seller+closed%22%2C%22type%22%3A%22Failed%22%7D%5D\",\"statusUpdateTime\":\"1659439136265\",\"timestamp\":\"1750231629840\",\"status\":\"planned\",\"driverContact\":\"%2B841231231124\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "retryable",
+        "type": "Boolean",
+        "description": "Is failed request retryable?"
+      },
+      {
+        "name": "success",
+        "type": "Boolean",
+        "description": "Is success?"
+      },
+      {
+        "name": "errors",
+        "type": "Object[]",
+        "description": "Error detail"
+      },
+      {
+        "name": "errorMessage",
+        "type": "String",
+        "description": "Error message"
+      },
+      {
+        "name": "errorCode",
+        "type": "String",
+        "description": "Error code"
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"retryable\": \"false\",\n  \"code\": \"0\",\n  \"success\": \"true\",\n  \"errorMessage\": \"traceId\\u003d0b190023897207ea244\",\n  \"errorCode\": \"BAD_REQUEST\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errors\": [\n    {\n      \"field\": \"$.name\",\n      \"errorMessage\": \"$.name is missing\",\n      \"errorCode\": \"INVALID_PARAMETER\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  "error_codes": [],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "Vietnam",
+        "endpoint": "https://api.lazada.vn/rest"
+      },
+      {
+        "region": "Singapore",
+        "endpoint": "https://api.lazada.sg/rest"
+      },
+      {
+        "region": "Philippines",
+        "endpoint": "https://api.lazada.com.ph/rest"
+      },
+      {
+        "region": "Malaysia",
+        "endpoint": "https://api.lazada.com.my/rest"
+      },
+      {
+        "region": "Thailand",
+        "endpoint": "https://api.lazada.co.th/rest"
+      },
+      {
+        "region": "Indonesia",
+        "endpoint": "https://api.lazada.co.id/rest"
+      }
+    ]
+  }
+}

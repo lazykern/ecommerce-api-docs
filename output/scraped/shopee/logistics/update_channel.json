@@ -1,0 +1,313 @@
+{
+  "platform": "shopee",
+  "module": "logistics",
+  "endpoint_name": "update_channel",
+  "version": "v2",
+  "summary": "Use this api to get all supported logistic channels",
+  "description": "Use this api to get all supported logistic channels.",
+  "path": "/api/v2/logistics/get_channel_list",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "logistics_channel_id",
+        "type": "int",
+        "required": true,
+        "description": "The identity of logistic channel.",
+        "sample": "14623"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean",
+        "required": false,
+        "description": "Whether to enable this logistic channel.",
+        "sample": "true"
+      },
+      {
+        "name": "cod_enabled",
+        "type": "boolean",
+        "required": false,
+        "description": "Whether to enable COD for this logistic channel. Only COD supported channels are applicable.",
+        "sample": "true"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [
+    {
+      "language": "payload",
+      "code": "{\n\t\"logistics_channel_id\": 14623,\n\t\"enabled\": true,\n\t\"cod_enabled\": true\n}"
+    },
+    {
+      "language": "java",
+      "code": "Unirest.setTimeouts(0, 0);\nHttpResponse<String> response = Unirest.post(\"https://partner.shopeemobile.com/api/v2/logistics/update_channel?shop_id=shop_id&partner_id=partner_id&sign=sign&access_token=access_token&timestamp=timestamp\")\n.header(\"Content-Type\",\"application/json\")\n.body(\"{\n   \\\"cod_enabled\\\": true,\n   \\\"enabled\\\": true,\n   \\\"logistics_channel_id\\\": 14623,\n   \\\"preferred\\\": true\n}\")\n.asString();"
+    },
+    {
+      "language": "php",
+      "code": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, array(\n  CURLOPT_URL => 'https://partner.shopeemobile.com/api/v2/logistics/update_channel?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp',\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => '',\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 0,\n  CURLOPT_FOLLOWLOCATION => true,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => 'POST',\n  CURLOPT_POSTFIELDS => '{\n    \"cod_enabled\": true,\n    \"enabled\": true,\n    \"logistics_channel_id\": 14623,\n    \"preferred\": true\n}',\n  CURLOPT_HTTPHEADER => array(\n    'Content-Type: application/json'\n  ),\n));\n\n$response = curl_exec($curl);\n\ncurl_close($curl);\necho $response;"
+    },
+    {
+      "language": "curl",
+      "code": "curl --location --request POST 'https://partner.shopeemobile.com/api/v2/logistics/update_channel?partner_id=partner_id&sign=sign&access_token=access_token&timestamp=timestamp&shop_id=shop_id' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n   \"cod_enabled\": true,\n   \"enabled\": true,\n   \"logistics_channel_id\": 14623,\n   \"preferred\": true\n}'"
+    },
+    {
+      "language": "python",
+      "code": "import requests\nimport json\n\nurl = \"https://partner.shopeemobile.com/api/v2/logistics/update_channel?access_token=access_token&partner_id=partner_id&shop_id=shop_id&sign=sign&timestamp=timestamp\"\n\npayload=json.dumps({\n  \"cod_enabled\": True,\n  \"enabled\": True,\n  \"logistics_channel_id\": 14623,\n  \"preferred\": True\n})\nheaders = {\n  'Content-Type': 'application/json'\n}\nresponse = requests.request(\"POST\",url,headers=headers, data=payload, allow_redirects=False)\n\nprint(response.text)"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "df17f35abb4244938b22a675211dc99c",
+        "description": "The identifier of the API request for error tracking."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "error_auth",
+        "description": "Indicate error type if hit error. Empty if no error happened."
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "sample": "Invalid access_token.",
+        "description": "Indicate error details if hit error. Empty if no error happened."
+      },
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": "Detail informations you are querying."
+      },
+      {
+        "name": "shop_id",
+        "type": "int",
+        "sample": "123123",
+        "description": "Shopee's unique identifier for a shop."
+      },
+      {
+        "name": "enabled",
+        "type": "boolean",
+        "sample": "true",
+        "description": "Whether this logistic channel is enabled."
+      },
+      {
+        "name": "cod_enabled",
+        "type": "boolean",
+        "sample": "false",
+        "description": "Whether COD is enabled for this channel."
+      },
+      {
+        "name": "logistics_channel_id",
+        "type": "int",
+        "sample": "14623",
+        "description": "The identity of logistic channel."
+      },
+      {
+        "name": "updated_channels",
+        "type": "object[]",
+        "sample": "",
+        "description": "List of channels that are updated in the operation (inclusive of dependent logistics channels)"
+      },
+      {
+        "name": "channel_id",
+        "type": "int",
+        "sample": "80025",
+        "description": "Logistics channel ID"
+      },
+      {
+        "name": "channel_display_name",
+        "type": "string",
+        "sample": "channel Anteraja",
+        "description": "Logistics channel name"
+      },
+      {
+        "name": "unsupport_warehouse",
+        "type": "object[]",
+        "sample": "",
+        "description": "List details of unsupported warehouses"
+      },
+      {
+        "name": "warehouse_id",
+        "type": "int",
+        "sample": "78",
+        "description": "Unsupported warehouse ID"
+      },
+      {
+        "name": "warehouse_name",
+        "type": "string",
+        "sample": "ID_WHS_03",
+        "description": "Unsupported warehouse name"
+      },
+      {
+        "name": "is_multi_warehouse",
+        "type": "boolean",
+        "sample": "false",
+        "description": ""
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n\t\"request_id\": \"df17f35abb4244938b22a675211dc99c\",\n\t\"error\": \"error_auth\",\n\t\"message\": \"Invalid access_token.\",\n\t\"response\": {\n\t\t\"shop_id\": 123123,\n\t\t\"enabled\": true,\n\t\t\"cod_enabled\": false,\n\t\t\"logistics_channel_id\": 14623,\n                \"is_multi_warehouse\": true,\n\t\t\"update_channels\": [{\n\t\t\t\"channel_id\": 1000,\n\t\t\t\"channel_display_name\": \"\",\n\t\t\t\"unsupport_warehouse\": [{\n\t\t\t\t\"warehouse_id\": 1,\n\t\t\t\t\"warehouse_name\": \"abc\"\n\t\t\t}]\n\t\t}]\n\t}\n\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "Shipping options of Direct Shop will follow Local Shop."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Channel is invalid. Please check the channel id."
+    },
+    {
+      "code": "error_not_found",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_param",
+      "message": "Wrong parameters, detail: {msg}."
+    },
+    {
+      "code": "error_permission",
+      "message": "Sorry you don't have the permission, detail: {msg}."
+    },
+    {
+      "code": "error_server",
+      "message": "System error. Please try again later."
+    },
+    {
+      "code": "logistics.has_item_in_bundle",
+      "message": "channel is not allow to disable due to there is item in the bundle"
+    },
+    {
+      "code": "logistics.error_param",
+      "message": "Invalid logistics_channel_id. Please check the logistics_channel_id."
+    },
+    {
+      "code": "error",
+      "message": "no supported warehouse address"
+    },
+    {
+      "code": "logistics.address_miss_long_lat",
+      "message": "Address miss long lat."
+    },
+    {
+      "code": "logistics.require_pickup_address",
+      "message": "Please go to set pickup address first."
+    },
+    {
+      "code": "logistics.not_allow_to_update_channel",
+      "message": "You are not allowed to enable or disable channel."
+    },
+    {
+      "code": "common.invalid_shop",
+      "message": "Shop id is invalid. Please check your shop."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Sorry that this masked channel can't be enabled."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Sorry that this masked channel can't be enabled."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Sorry that this channel can’t be disabled since it is force enabled."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Sorry that this channel can't be enabled since it doesn’t pass the validation (whitelist validation / exclusive validation / serviceable validation )."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Sorry that this masked channel can't be preferred."
+    },
+    {
+      "code": "logistics_error",
+      "message": "Sorry that this channel can't be enabled(disabled)/preferred/ COD enabled(COD disabled)."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no access_token in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "Invalid access_token."
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid partner_id."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no partner_id in query."
+    },
+    {
+      "code": "error_auth",
+      "message": "No permission to current api."
+    },
+    {
+      "code": "error_param",
+      "message": "There is no sign in query."
+    },
+    {
+      "code": "error_sign",
+      "message": "Wrong sign."
+    },
+    {
+      "code": "error_param",
+      "message": "no timestamp"
+    },
+    {
+      "code": "error_param",
+      "message": "Invalid timestamp"
+    },
+    {
+      "code": "error_network",
+      "message": "Inner http call failed"
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/get_channel_list"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/get_channel_list"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/get_channel_list"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/get_channel_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/get_channel_list"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/get_channel_list"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/get_channel_list"
+      }
+    ]
+  }
+}

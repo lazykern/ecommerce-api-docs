@@ -1,0 +1,125 @@
+{
+  "platform": "shopee",
+  "module": "payment",
+  "endpoint_name": "get_income_report",
+  "version": "v2",
+  "summary": "Trigger income report generation",
+  "description": "Trigger income report generation.",
+  "path": "/api/v2/payment/generate_income_report",
+  "http_method": [
+    "GET"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "income_report_id",
+        "type": "int64",
+        "required": true,
+        "description": "The identifier for income report file request.",
+        "sample": "123456"
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": []
+  },
+  "request_examples": [],
+  "response": {
+    "schema": [
+      {
+        "name": "response",
+        "type": "object",
+        "sample": "",
+        "description": ""
+      },
+      {
+        "name": "id",
+        "type": "int64",
+        "sample": "123456",
+        "description": "The identifier for income statement file request."
+      },
+      {
+        "name": "file_name",
+        "type": "string",
+        "sample": "weekly_report_20241111.pdf",
+        "description": "Income report file name."
+      },
+      {
+        "name": "status",
+        "type": "int32",
+        "sample": "1",
+        "description": "STATUS_INVALID = 0; STATUS_PROCESSING = 1; STATUS_DOWNLOADABLE = 2; STATUS_DOWNLOADED = 3; STATUS_FAILED = 4;"
+      },
+      {
+        "name": "generated_time",
+        "type": "int64",
+        "sample": "12345678987654",
+        "description": "File generation time."
+      },
+      {
+        "name": "file_link",
+        "type": "string",
+        "sample": "https://seller.uat.shopee.sg/api/v4/accounting/pc/seller_income/income_report/get_income_document_file?path=0/ODljOWY0MjYtOTExMS00MmIxLTkzOGEtNzQ1MmEyZThiZGJi/weekly_report_20241111.pdf",
+        "description": "Link to download income report file."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "sample": "",
+        "description": "Error Code"
+      },
+      {
+        "name": "msg",
+        "type": "string",
+        "sample": "",
+        "description": "Error Message"
+      },
+      {
+        "name": "request_id",
+        "type": "string",
+        "sample": "",
+        "description": "Request ID"
+      }
+    ],
+    "examples": []
+  },
+  "error_codes": [
+    {
+      "code": "error_param",
+      "message": "Shop is not a mart shop. Please use Mart Shop ID."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "surroundings": "URL",
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/generate_income_report"
+      },
+      {
+        "surroundings": "URL（Chinese Mainland）",
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/generate_income_report"
+      },
+      {
+        "surroundings": "URL（Brazil）",
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/generate_income_report"
+      },
+      {
+        "surroundings": "Test URL",
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/generate_income_report"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland）",
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/generate_income_report"
+      },
+      {
+        "surroundings": "Test URL Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/generate_income_report"
+      },
+      {
+        "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/generate_income_report"
+      }
+    ]
+  }
+}
