@@ -150,7 +150,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/sponsor/solutions/adgroup/searchAdgroupList' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"endDate\":\"2023-03-08\",\"campaignId\":\"101100023522308\",\"bizCode\":\"sponsoredSearch\",\"onlineStatus\":\"1\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"10\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"pageNo\":\"1\",\"adgroupName\":\"-\",\"sign_method\":\"sha256\",\"startDate\":\"2023-03-01\",\"timestamp\":\"1750231611038\"}'"
+      "code": "curl -X POST url + '/sponsor/solutions/adgroup/searchAdgroupList' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"endDate\":\"2023-03-08\",\"campaignId\":\"101100023522308\",\"bizCode\":\"sponsoredSearch\",\"onlineStatus\":\"1\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"10\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"pageNo\":\"1\",\"adgroupName\":\"-\",\"sign_method\":\"sha256\",\"startDate\":\"2023-03-01\",\"timestamp\":\"1750266969006\"}'"
     }
   ],
   "response": {

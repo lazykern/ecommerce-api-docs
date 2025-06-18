@@ -90,7 +90,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/fbl/fulfillment_sku_relation/get_by_skus' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"site\":\"MY%2CSG\",\"app_key\":\"1234567\",\"item_sku\":\"%7B%22sku_ids%22%3A%5B%22%5B1551058427%5D%22%2C%22%5B1551058427%5D%22%5D%2C%22item_ids%22%3A%5B%22%5B710230731%5D%22%2C%22%5B710230731%5D%22%5D%7D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750231679148\"}'"
+      "code": "curl -X POST url + '/fbl/fulfillment_sku_relation/get_by_skus' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"site\":\"MY%2CSG\",\"app_key\":\"1234567\",\"item_sku\":\"%7B%22sku_ids%22%3A%5B%22%5B1551058427%5D%22%2C%22%5B1551058427%5D%22%5D%2C%22item_ids%22%3A%5B%22%5B710230731%5D%22%2C%22%5B710230731%5D%22%5D%7D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750267078520\"}'"
     }
   ],
   "response": {

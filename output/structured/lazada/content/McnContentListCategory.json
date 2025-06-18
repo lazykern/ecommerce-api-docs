@@ -77,7 +77,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/content/mcn/category/list?timestamp=1750231494923&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC'"
+      "code": "curl -X GET url + '/content/mcn/category/list?timestamp=1750266985439&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC'"
     }
   ],
   "response": {

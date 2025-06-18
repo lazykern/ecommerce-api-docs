@@ -132,7 +132,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/partner/transaction' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"offset\":\"0\",\"created_after\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"sort_by\":\"updated_at\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sort_direction\":\"desc\",\"update_before\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"app_key\":\"1234567\",\"created_before\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"sign_method\":\"sha256\",\"limit\":\"100\",\"update_after\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"timestamp\":\"1750231530034\",\"status\":\"delivered\"}'"
+      "code": "curl -X POST url + '/partner/transaction' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"offset\":\"0\",\"created_after\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"sort_by\":\"updated_at\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sort_direction\":\"desc\",\"update_before\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"app_key\":\"1234567\",\"created_before\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"sign_method\":\"sha256\",\"limit\":\"100\",\"update_after\":\"2022-10-10T16%3A00%3A00%2B08%3A00\",\"timestamp\":\"1750267062514\",\"status\":\"delivered\"}'"
     }
   ],
   "response": {

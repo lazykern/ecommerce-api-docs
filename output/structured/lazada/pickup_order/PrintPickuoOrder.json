@@ -96,7 +96,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/pickup_order/print' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"box_number\":\"1\",\"app_key\":\"1234567\",\"pickup_order_no\":\"pickup_order_no\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750231449516\",\"pdf_size\":\"PICKUP_A4\"}'"
+      "code": "curl -X POST url + '/pickup_order/print' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"box_number\":\"1\",\"app_key\":\"1234567\",\"pickup_order_no\":\"pickup_order_no\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750267097431\",\"pdf_size\":\"PICKUP_A4\"}'"
     }
   ],
   "response": {

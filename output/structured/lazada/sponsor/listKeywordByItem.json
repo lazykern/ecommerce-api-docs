@@ -120,7 +120,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/sponsor/solutions/keyword/listKeywordByItem' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"campaignObjective\":\"2\",\"itemId\":\"123\",\"app_key\":\"1234567\",\"campaignType\":\"2\",\"bizCode\":\"sponsoredSearch\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750231600420\"}'"
+      "code": "curl -X POST url + '/sponsor/solutions/keyword/listKeywordByItem' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"campaignObjective\":\"2\",\"itemId\":\"123\",\"app_key\":\"1234567\",\"campaignType\":\"2\",\"bizCode\":\"sponsoredSearch\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750266954278\"}'"
     }
   ],
   "response": {

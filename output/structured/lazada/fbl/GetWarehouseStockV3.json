@@ -101,7 +101,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/fbl/stocks/getV3?timestamp=1750231502978&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&seller_sku=AP082ELAAXCXJVANID&marketplace=LAZADA_ID&fulfilment_sku=AP082ELAAXCXJVANID-75574360%2CWA362HBABISOANID-77873&store_code=OMS-LAZADA-SG-W-1'"
+      "code": "curl -X GET url + '/fbl/stocks/getV3?timestamp=1750267017464&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&seller_sku=AP082ELAAXCXJVANID&marketplace=LAZADA_ID&fulfilment_sku=AP082ELAAXCXJVANID-75574360%2CWA362HBABISOANID-77873&store_code=OMS-LAZADA-SG-W-1'"
     }
   ],
   "response": {

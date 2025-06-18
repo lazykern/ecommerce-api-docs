@@ -138,7 +138,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/choice/products/get' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"offset\":\"0\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"create_after\":\"2023-01-01T00%3A00%3A00%2B0800\",\"sku_seller_list\":\"+%5B%2239817%3A01%3A01%22%2C+%22Apple+6S+Black%22%5D\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"filter\":\"live\",\"update_before\":\"2023-10-01T00%3A00%3A00%2B0800\",\"site\":\"SG\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"update_after\":\"2023-01-01T00%3A00%3A00%2B0800\",\"limit\":\"10\",\"options\":\"1\",\"create_before\":\"2023-01-01T00%3A00%3A00%2B0800\",\"timestamp\":\"1750231683501\"}'"
+      "code": "curl -X POST url + '/choice/products/get' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"offset\":\"0\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"create_after\":\"2023-01-01T00%3A00%3A00%2B0800\",\"sku_seller_list\":\"+%5B%2239817%3A01%3A01%22%2C+%22Apple+6S+Black%22%5D\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"filter\":\"live\",\"update_before\":\"2023-10-01T00%3A00%3A00%2B0800\",\"site\":\"SG\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"update_after\":\"2023-01-01T00%3A00%3A00%2B0800\",\"limit\":\"10\",\"options\":\"1\",\"create_before\":\"2023-01-01T00%3A00%3A00%2B0800\",\"timestamp\":\"1750267064089\"}'"
     }
   ],
   "response": {

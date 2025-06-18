@@ -90,7 +90,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/content/ai/productImageMatch' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"match_num\":\"1\",\"app_key\":\"1234567\",\"image_url\":\"https%3A%2F%2Flzd-img-global.slatic.net%2Fus%2Fmedia%2Fe35ea7da89a197fa2fc2432c59e13365-750-400.jpg\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750231665968\"}'"
+      "code": "curl -X POST url + '/content/ai/productImageMatch' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"match_num\":\"1\",\"app_key\":\"1234567\",\"image_url\":\"https%3A%2F%2Flzd-img-global.slatic.net%2Fus%2Fmedia%2Fe35ea7da89a197fa2fc2432c59e13365-750-400.jpg\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750267047876\"}'"
     }
   ],
   "response": {

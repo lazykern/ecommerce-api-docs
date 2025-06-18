@@ -132,7 +132,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/seller/ar/config/syn' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"uid\":\"123456\",\"app_key\":\"1234567\",\"synDate\":\"synDate\",\"business\":\"LAZADA%E3%80%81ARISE\",\"contents\":\"%5B%5D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"siteId\":\"sg\",\"source\":\"PERFECT\",\"timestamp\":\"1750231479401\"}'"
+      "code": "curl -X POST url + '/seller/ar/config/syn' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"uid\":\"123456\",\"app_key\":\"1234567\",\"synDate\":\"synDate\",\"business\":\"LAZADA%E3%80%81ARISE\",\"contents\":\"%5B%5D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"siteId\":\"sg\",\"source\":\"PERFECT\",\"timestamp\":\"1750267022118\"}'"
     }
   ],
   "response": {

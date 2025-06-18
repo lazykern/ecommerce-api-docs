@@ -119,7 +119,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/finance/transaction/details/get?timestamp=1750231494153&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&offset=0&trans_type=-1&trade_order_id=123123213213&limit=100&start_time=2021-01-01&end_time=2021-01-05&trade_order_line_id=45645674566'"
+      "code": "curl -X GET url + '/finance/transaction/details/get?timestamp=1750267013762&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&offset=0&trans_type=-1&trade_order_id=123123213213&limit=100&start_time=2021-01-01&end_time=2021-01-05&trade_order_line_id=45645674566'"
     }
   ],
   "response": {

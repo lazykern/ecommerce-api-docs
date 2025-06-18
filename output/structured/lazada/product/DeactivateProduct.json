@@ -83,7 +83,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/product/deactivate' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"apiRequestBody\":\"%3CRequest%3E%3CProduct%3E%3CItemId%3E234234234%3C%2FItemId%3E%3CSkus%3E%3CSkuId%3E20690462002%3C%2FSkuId%3E%3CSellerSku%3E5000%3C%2FSellerSku%3E%3C%2FSkus%3E%3C%2FProduct%3E%3C%2FRequest%3E\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"timestamp\":\"1750231554896\"}'"
+      "code": "curl -X POST url + '/product/deactivate' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"apiRequestBody\":\"%3CRequest%3E%3CProduct%3E%3CItemId%3E234234234%3C%2FItemId%3E%3CSkus%3E%3CSkuId%3E20690462002%3C%2FSkuId%3E%3CSellerSku%3E5000%3C%2FSellerSku%3E%3C%2FSkus%3E%3C%2FProduct%3E%3C%2FRequest%3E\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"timestamp\":\"1750266967056\"}'"
     }
   ],
   "response": {

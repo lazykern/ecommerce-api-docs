@@ -101,7 +101,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/content/mcn/video/block/commit' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"coverUrl\":\"http%3A%2F%2Flazada.com%2Fcover\",\"app_key\":\"1234567\",\"uploadId\":\"ABCDEF\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"parts\":\"%5B%7B%22partNumber%22%3A1%2C%22eTag%22%3A%22AB693ADF0DF340F50637686D65CC062C%22%7D%2C%7B%22partNumber%22%3A2%2C%22eTag%22%3A%22557C398778A948415C388B347509CE1C%22%7D%5D\",\"title\":\"hello\",\"timestamp\":\"1750231479043\"}'"
+      "code": "curl -X POST url + '/content/mcn/video/block/commit' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"coverUrl\":\"http%3A%2F%2Flazada.com%2Fcover\",\"app_key\":\"1234567\",\"uploadId\":\"ABCDEF\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"parts\":\"%5B%7B%22partNumber%22%3A1%2C%22eTag%22%3A%22AB693ADF0DF340F50637686D65CC062C%22%7D%2C%7B%22partNumber%22%3A2%2C%22eTag%22%3A%22557C398778A948415C388B347509CE1C%22%7D%5D\",\"title\":\"hello\",\"timestamp\":\"1750266963840\"}'"
     }
   ],
   "response": {

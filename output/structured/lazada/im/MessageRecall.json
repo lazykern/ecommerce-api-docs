@@ -102,7 +102,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/im/message/recall' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"session_id\":\"100094063_2_1011822749_1_103\",\"message_id\":\"23Fp7TJ0BtmwA00132\",\"timestamp\":\"1750231582242\"}'"
+      "code": "curl -X POST url + '/im/message/recall' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"session_id\":\"100094063_2_1011822749_1_103\",\"message_id\":\"23Fp7TJ0BtmwA00132\",\"timestamp\":\"1750266947491\"}'"
     }
   ],
   "response": {

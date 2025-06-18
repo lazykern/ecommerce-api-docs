@@ -96,7 +96,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/sellercenter/msg/list' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"10\",\"language\":\"en_EN\",\"page\":\"1\",\"timestamp\":\"1750231469321\"}'"
+      "code": "curl -X POST url + '/sellercenter/msg/list' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"pageSize\":\"10\",\"language\":\"en_EN\",\"page\":\"1\",\"timestamp\":\"1750267008907\"}'"
     }
   ],
   "response": {

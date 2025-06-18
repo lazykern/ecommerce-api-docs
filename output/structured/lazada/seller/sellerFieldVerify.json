@@ -90,7 +90,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/seller/cb/register/fieldcheck' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%5B%7B%22countryRegion%22%3A%22CN%22%2C%22name%22%3A%22phone%22%2C%22value%22%3A%22110%22%7D%5D\",\"timestamp\":\"1750231515555\"}'"
+      "code": "curl -X POST url + '/seller/cb/register/fieldcheck' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%5B%7B%22countryRegion%22%3A%22CN%22%2C%22name%22%3A%22phone%22%2C%22value%22%3A%22110%22%7D%5D\",\"timestamp\":\"1750267070997\"}'"
     }
   ],
   "response": {

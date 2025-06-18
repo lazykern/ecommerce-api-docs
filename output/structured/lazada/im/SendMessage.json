@@ -155,7 +155,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/im/message/send' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"item_id\":\"1762013406\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"session_id\":\"100094063_2_1011822749_1_103\",\"promotion_id\":\"91471122422003\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"txt\":\"test+message\",\"app_key\":\"1234567\",\"img_url\":\"https%3A%2F%2Fsg-live-02.slatic.net%2Fp%2F0dc6fb4898f7e991bf44c45471dca9c9.jpg\",\"sign_method\":\"sha256\",\"width\":\"100\",\"template_id\":\"1\",\"order_id\":\"1762013406\",\"timestamp\":\"1750231597308\",\"height\":\"100\",\"video_id\":\"3678332\"}'"
+      "code": "curl -X POST url + '/im/message/send' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"item_id\":\"1762013406\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"session_id\":\"100094063_2_1011822749_1_103\",\"promotion_id\":\"91471122422003\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"txt\":\"test+message\",\"app_key\":\"1234567\",\"img_url\":\"https%3A%2F%2Fsg-live-02.slatic.net%2Fp%2F0dc6fb4898f7e991bf44c45471dca9c9.jpg\",\"sign_method\":\"sha256\",\"width\":\"100\",\"template_id\":\"1\",\"order_id\":\"1762013406\",\"timestamp\":\"1750266966743\",\"height\":\"100\",\"video_id\":\"3678332\"}'"
     }
   ],
   "response": {

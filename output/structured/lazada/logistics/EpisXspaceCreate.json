@@ -203,7 +203,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/logistics/epis/xspace/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"attachments\":\"url1%2Curl2\",\"orderId\":\"orderId\",\"subject\":\"subject\",\"buyerEmail\":\"buyerEmail\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"sellerName\":\"Bambooship\",\"description\":\"description\",\"externalSellerId\":\"109001\",\"buyerName\":\"buyerName\",\"sellerEmail\":\"email%40mail.com\",\"casePriority\":\"Normal\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"caseTemplateId\":\"123302\",\"sellerPhoneNo\":\"09887878998\",\"attributes\":\"attributes\",\"platformName\":\"OneLink\",\"trackingNumber\":\"trackingNumber\",\"categoryId\":\"11111\",\"timestamp\":\"1750231438880\"}'"
+      "code": "curl -X POST url + '/logistics/epis/xspace/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"attachments\":\"url1%2Curl2\",\"orderId\":\"orderId\",\"subject\":\"subject\",\"buyerEmail\":\"buyerEmail\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"sellerName\":\"Bambooship\",\"description\":\"description\",\"externalSellerId\":\"109001\",\"buyerName\":\"buyerName\",\"sellerEmail\":\"email%40mail.com\",\"casePriority\":\"Normal\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"caseTemplateId\":\"123302\",\"sellerPhoneNo\":\"09887878998\",\"attributes\":\"attributes\",\"platformName\":\"OneLink\",\"trackingNumber\":\"trackingNumber\",\"categoryId\":\"11111\",\"timestamp\":\"1750267110554\"}'"
     }
   ],
   "response": {

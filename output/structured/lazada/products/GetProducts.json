@@ -131,7 +131,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/products/get?timestamp=1750231610808&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&filter=live&update_before=2018-01-01T00%3A00%3A00%2B0800&create_before=2018-01-01T00%3A00%3A00%2B0800&offset=0&create_after=2010-01-01T00%3A00%3A00%2B0800&update_after=2010-01-01T00%3A00%3A00%2B0800&limit=10&options=1&sku_seller_list=+%5B%2239817%3A01%3A01%22%2C+%22Apple+6S+Black%22%5D'"
+      "code": "curl -X GET url + '/products/get?timestamp=1750267038724&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&filter=live&update_before=2018-01-01T00%3A00%3A00%2B0800&create_before=2018-01-01T00%3A00%3A00%2B0800&offset=0&create_after=2010-01-01T00%3A00%3A00%2B0800&update_after=2010-01-01T00%3A00%3A00%2B0800&limit=10&options=1&sku_seller_list=+%5B%2239817%3A01%3A01%22%2C+%22Apple+6S+Black%22%5D'"
     }
   ],
   "response": {

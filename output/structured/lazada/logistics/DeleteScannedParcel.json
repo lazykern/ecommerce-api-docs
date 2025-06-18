@@ -119,7 +119,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/logistics/station/v1/scanned-parcels/delete' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"serviceType\":\"SELLER_DROPOFF\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"trackingNumbers\":\"%5B%22TEST1231124VN%22%2C+%22TEST1231125VN%22%5D\",\"timestamp\":\"1750231561382\",\"stationId\":\"1234\"}'"
+      "code": "curl -X POST url + '/logistics/station/v1/scanned-parcels/delete' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"serviceType\":\"SELLER_DROPOFF\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"trackingNumbers\":\"%5B%22TEST1231124VN%22%2C+%22TEST1231125VN%22%5D\",\"timestamp\":\"1750267073869\",\"stationId\":\"1234\"}'"
     }
   ],
   "response": {

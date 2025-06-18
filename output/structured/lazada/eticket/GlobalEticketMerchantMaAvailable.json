@@ -132,7 +132,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/eticket/ma/available' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"consume_store_id\":\"143003\",\"app_key\":\"1234567\",\"code\":\"1c31ce6d1dc1691fc211\",\"pos_id\":\"2132312\",\"biz_type\":\"3001\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"serial_num\":\"sn1238475\",\"outer_id\":\"35900200436004\",\"consume_num\":\"1\",\"timestamp\":\"1750231491397\"}'"
+      "code": "curl -X POST url + '/eticket/ma/available' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"consume_store_id\":\"143003\",\"app_key\":\"1234567\",\"code\":\"1c31ce6d1dc1691fc211\",\"pos_id\":\"2132312\",\"biz_type\":\"3001\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"serial_num\":\"sn1238475\",\"outer_id\":\"35900200436004\",\"consume_num\":\"1\",\"timestamp\":\"1750266992681\"}'"
     }
   ],
   "response": {

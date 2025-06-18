@@ -119,7 +119,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/logistics/station/v1/inbounded-parcels/list?timestamp=1750231602182&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&stationId=1234&trackingNumbers=%5B%22TEST1231124VN%22%2C+%22TEST1231125VN%22%5D&serviceType=SELLER_DROPOFF'"
+      "code": "curl -X GET url + '/logistics/station/v1/inbounded-parcels/list?timestamp=1750266969334&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&stationId=1234&trackingNumbers=%5B%22TEST1231124VN%22%2C+%22TEST1231125VN%22%5D&serviceType=SELLER_DROPOFF'"
     }
   ],
   "response": {

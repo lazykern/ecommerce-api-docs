@@ -89,7 +89,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/content/mcn/product/validate?timestamp=1750231518601&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&lazOpAppKey=123456&itemIdList=4078878428%2C4234217729'"
+      "code": "curl -X GET url + '/content/mcn/product/validate?timestamp=1750267016392&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&lazOpAppKey=123456&itemIdList=4078878428%2C4234217729'"
     }
   ],
   "response": {

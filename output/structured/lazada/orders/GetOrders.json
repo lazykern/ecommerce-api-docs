@@ -131,7 +131,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/orders/get?timestamp=1750231514936&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&sort_by=updated_at&created_before=2018-02-10T16%3A00%3A00%2B08%3A00&created_after=2017-02-10T09%3A00%3A00%2B08%3A00&status=shipped&update_before=2018-02-10T16%3A00%3A00%2B08%3A00&sort_direction=DESC&offset=0&limit=10&update_after=2017-02-10T09%3A00%3A00%2B08%3A00'"
+      "code": "curl -X GET url + '/orders/get?timestamp=1750267050280&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&sort_by=updated_at&created_before=2018-02-10T16%3A00%3A00%2B08%3A00&created_after=2017-02-10T09%3A00%3A00%2B08%3A00&status=shipped&update_before=2018-02-10T16%3A00%3A00%2B08%3A00&sort_direction=DESC&offset=0&limit=10&update_after=2017-02-10T09%3A00%3A00%2B08%3A00'"
     }
   ],
   "response": {

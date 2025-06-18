@@ -144,7 +144,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/logistics/cnpms/address/query' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"country\":\"%E4%B8%AD%E5%9B%BD\",\"zipCode\":\"3455657\",\"userInfo\":\"%7B%22appUserKey%22%3A%2212345%22%7D\",\"city\":\"%E6%9D%AD%E5%B7%9E%E5%B8%82\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"remark\":\"%E5%A4%87%E6%B3%A8\",\"locale\":\"zh_CN\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"province\":\"%E6%B5%99%E6%B1%9F%E7%9C%81\",\"street\":\"%E8%92%8B%E6%9D%91%E8%A1%97%E9%81%93\",\"district\":\"%E8%A5%BF%E6%B9%96%E5%8C%BA\",\"sign_method\":\"sha256\",\"detailAddress\":\"%E6%96%87%E4%B8%80%E8%A5%BF%E8%B7%AF%E8%A5%BF%E6%BA%AA%E9%A6%96%E5%BA%A7\",\"client\":\"test\",\"timestamp\":\"1750231461946\"}'"
+      "code": "curl -X POST url + '/logistics/cnpms/address/query' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"country\":\"%E4%B8%AD%E5%9B%BD\",\"zipCode\":\"3455657\",\"userInfo\":\"%7B%22appUserKey%22%3A%2212345%22%7D\",\"city\":\"%E6%9D%AD%E5%B7%9E%E5%B8%82\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"remark\":\"%E5%A4%87%E6%B3%A8\",\"locale\":\"zh_CN\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"province\":\"%E6%B5%99%E6%B1%9F%E7%9C%81\",\"street\":\"%E8%92%8B%E6%9D%91%E8%A1%97%E9%81%93\",\"district\":\"%E8%A5%BF%E6%B9%96%E5%8C%BA\",\"sign_method\":\"sha256\",\"detailAddress\":\"%E6%96%87%E4%B8%80%E8%A5%BF%E8%B7%AF%E8%A5%BF%E6%BA%AA%E9%A6%96%E5%BA%A7\",\"client\":\"test\",\"timestamp\":\"1750266970088\"}'"
     }
   ],
   "response": {

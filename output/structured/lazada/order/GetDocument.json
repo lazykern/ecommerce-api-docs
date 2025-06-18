@@ -89,7 +89,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/order/document/get?timestamp=1750231483948&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&doc_type=shippingLabel&order_item_ids=%5B279709%2C+279709%5D'"
+      "code": "curl -X GET url + '/order/document/get?timestamp=1750267007890&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&doc_type=shippingLabel&order_item_ids=%5B279709%2C+279709%5D'"
     }
   ],
   "response": {

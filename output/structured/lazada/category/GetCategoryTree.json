@@ -83,7 +83,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/category/tree/get?timestamp=1750231582560&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&language_code=en_US'"
+      "code": "curl -X GET url + '/category/tree/get?timestamp=1750267002182&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&language_code=en_US'"
     }
   ],
   "response": {

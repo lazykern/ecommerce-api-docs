@@ -84,7 +84,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/lazlive/product/highlight' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"highLightRequest\":\"%7B%22itemId%22%3A%222774584032%22%2C%22presenterId%22%3A%22500209002194%22%2C%22action%22%3A%22HIGHLIGHT_START%22%7D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"timestamp\":\"1750231533809\"}'"
+      "code": "curl -X POST url + '/lazlive/product/highlight' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"highLightRequest\":\"%7B%22itemId%22%3A%222774584032%22%2C%22presenterId%22%3A%22500209002194%22%2C%22action%22%3A%22HIGHLIGHT_START%22%7D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"timestamp\":\"1750267036310\"}'"
     }
   ],
   "response": {

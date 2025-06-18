@@ -113,7 +113,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/promotion/flexicombo/products/list?timestamp=1750231625735&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&cur_page=1&page_size=10&id=9616200353530'"
+      "code": "curl -X GET url + '/promotion/flexicombo/products/list?timestamp=1750267014094&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&cur_page=1&page_size=10&id=9616200353530'"
     }
   ],
   "response": {

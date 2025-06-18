@@ -108,7 +108,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/logistics/cnpms/account/bind' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"userInfo\":\"%7B%22appUserKey%22%3A%22-%22%7D\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"client\":\"test\",\"remark\":\"%E5%A4%87%E6%B3%A8\",\"sellerList\":\"%5B%7B%22country%22%3A%22MY%22%2C%22sellerId%22%3A%222143243%22%2C%22sellerName%22%3A%22test%22%2C%22shortCode%22%3A%22MY1234%22%7D%5D\",\"locale\":\"zh_CN\",\"timestamp\":\"1750231456913\"}'"
+      "code": "curl -X POST url + '/logistics/cnpms/account/bind' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"userInfo\":\"%7B%22appUserKey%22%3A%22-%22%7D\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"client\":\"test\",\"remark\":\"%E5%A4%87%E6%B3%A8\",\"sellerList\":\"%5B%7B%22country%22%3A%22MY%22%2C%22sellerId%22%3A%222143243%22%2C%22sellerName%22%3A%22test%22%2C%22shortCode%22%3A%22MY1234%22%7D%5D\",\"locale\":\"zh_CN\",\"timestamp\":\"1750266963257\"}'"
     }
   ],
   "response": {

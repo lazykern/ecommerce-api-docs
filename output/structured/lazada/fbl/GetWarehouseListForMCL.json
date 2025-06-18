@@ -137,7 +137,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/fbl/warehouses/get?timestamp=1750231491319&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&country_code=MY&page=1&per_page=20'"
+      "code": "curl -X GET url + '/fbl/warehouses/get?timestamp=1750267001974&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&country_code=MY&page=1&per_page=20'"
     }
   ],
   "response": {

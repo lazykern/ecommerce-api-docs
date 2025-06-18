@@ -204,7 +204,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/insurance/order/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"subProductCode\":\"LZD202408072\",\"partnerCode\":\"DG_HP\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"insuranceType\":\"car_insurance\",\"serviceName\":\"marketplace\",\"subServiceFee\":\"5\",\"transactionId\":\"202408071\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"userToken\":\"gQk%2F8THS7TSQlVj42JP1lg%3D%3D\",\"app_key\":\"1234567\",\"productCode\":\"LZD202408071\",\"sellerId\":\"1234\",\"stampDuty\":\"1\",\"sstFee\":\"3\",\"subTransactionId\":\"202408072\",\"requestId\":\"1234\",\"sign_method\":\"sha256\",\"subItemPrice\":\"10\",\"itemPrice\":\"100\",\"currency\":\"MYR\",\"orderExistTime\":\"18000000\",\"timestamp\":\"1750231576310\"}'"
+      "code": "curl -X POST url + '/insurance/order/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"subProductCode\":\"LZD202408072\",\"partnerCode\":\"DG_HP\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"insuranceType\":\"car_insurance\",\"serviceName\":\"marketplace\",\"subServiceFee\":\"5\",\"transactionId\":\"202408071\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"userToken\":\"gQk%2F8THS7TSQlVj42JP1lg%3D%3D\",\"app_key\":\"1234567\",\"productCode\":\"LZD202408071\",\"sellerId\":\"1234\",\"stampDuty\":\"1\",\"sstFee\":\"3\",\"subTransactionId\":\"202408072\",\"requestId\":\"1234\",\"sign_method\":\"sha256\",\"subItemPrice\":\"10\",\"itemPrice\":\"100\",\"currency\":\"MYR\",\"orderExistTime\":\"18000000\",\"timestamp\":\"1750267103881\"}'"
     }
   ],
   "response": {

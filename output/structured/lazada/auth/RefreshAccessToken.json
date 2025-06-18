@@ -1,0 +1,242 @@
+{
+  "platform": "lazada",
+  "module": "auth",
+  "endpoint_name": "RefreshAccessToken",
+  "version": null,
+  "summary": "refresh access_token, the endpoint is https://auth",
+  "description": "refresh access_token, the endpoint is https://auth.lazada.com/rest",
+  "path": "/auth/token/refresh",
+  "http_method": [
+    "GET",
+    "POST"
+  ],
+  "parameters": {
+    "path": [],
+    "query": [
+      {
+        "name": "refresh_token",
+        "type": "String",
+        "required": true,
+        "description": "refresh_token"
+      },
+      {
+        "name": "expires_in",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "account_id",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "country",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "country_user_info_list",
+        "type": "Object[]",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "account_platform",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "account",
+        "type": "String",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "refresh_expires_in",
+        "type": "Number",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "refresh_token",
+        "type": "String",
+        "required": false,
+        "description": null
+      }
+    ],
+    "header": [],
+    "body": [],
+    "common": [
+      {
+        "name": "app_key",
+        "type": "String",
+        "required": true,
+        "description": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+      },
+      {
+        "name": "timestamp",
+        "type": "String",
+        "required": true,
+        "description": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "required": false,
+        "description": "API interface call credentials"
+      },
+      {
+        "name": "sign_method",
+        "type": "String",
+        "required": true,
+        "description": "The HMAC hash algorithm you are using to calculate your signature"
+      },
+      {
+        "name": "sign",
+        "type": "String",
+        "required": true,
+        "description": "here (https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068)"
+      }
+    ]
+  },
+  "request_examples": [
+    {
+      "language": "java",
+      "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/auth/token/refresh\");\nrequest.addApiParameter(\"refresh_token\", \"50001600212wcwiOabwyjtEH11acc19aBOvQr9ZYkYDlr987D8BB88LIB8bj\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);"
+    },
+    {
+      "language": "php",
+      "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/auth/token/refresh');\n$request->addApiParam('refresh_token','50001600212wcwiOabwyjtEH11acc19aBOvQr9ZYkYDlr987D8BB88LIB8bj');\nvar_dump($c->execute($request));"
+    },
+    {
+      "language": ".net",
+      "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/auth/token/refresh\");\nrequest.AddApiParameter(\"refresh_token\", \"50001600212wcwiOabwyjtEH11acc19aBOvQr9ZYkYDlr987D8BB88LIB8bj\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);"
+    },
+    {
+      "language": "ruby",
+      "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/auth/token/refresh')\nrequest.add_api_parameter(\"refresh_token\", \"50001600212wcwiOabwyjtEH11acc19aBOvQr9ZYkYDlr987D8BB88LIB8bj\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body"
+    },
+    {
+      "language": "python",
+      "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/auth/token/refresh')\nrequest.add_api_param('refresh_token', '50001600212wcwiOabwyjtEH11acc19aBOvQr9ZYkYDlr987D8BB88LIB8bj')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)"
+    },
+    {
+      "language": "curl",
+      "code": "curl -X POST url + '/auth/token/refresh' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"refresh_token\":\"50001600212wcwiOabwyjtEH11acc19aBOvQr9ZYkYDlr987D8BB88LIB8bj\",\"app_key\":\"1234567\",\"timestamp\":\"1750266956596\"}'"
+    }
+  ],
+  "response": {
+    "schema": [
+      {
+        "name": "expires_in",
+        "type": "Number",
+        "description": "The expiring time of the access token, in seconds"
+      },
+      {
+        "name": "account_id",
+        "type": "String",
+        "description": "Account IDAllow null. if(account_platform=seller_center) account_id=null"
+      },
+      {
+        "name": "country",
+        "type": "String",
+        "description": "The country ID (sg:Singapore, my:Malaysia, ph:Philippines, th:Thailand, id:Indonesia, vn:Vietnam)"
+      },
+      {
+        "name": "country_user_info_list",
+        "type": "Object[]",
+        "description": "Country user details"
+      },
+      {
+        "name": "account_platform",
+        "type": "String",
+        "description": "Account platform"
+      },
+      {
+        "name": "access_token",
+        "type": "String",
+        "description": "Access token"
+      },
+      {
+        "name": "account",
+        "type": "String",
+        "description": "User account(login user)"
+      },
+      {
+        "name": "refresh_expires_in",
+        "type": "Number",
+        "description": "The expiring time of th refresh token"
+      },
+      {
+        "name": "refresh_token",
+        "type": "String",
+        "description": "Refresh token, used to refresh the token when “refresh_expires_in”>0."
+      }
+    ],
+    "examples": [
+      {
+        "language": "json",
+        "code": "{\n  \"access_token\": \"50000601c30atpedfgu3LVvik87Ixlsvle3mSoB7701ceb156fPunYZ43GBg\",\n  \"country\": \"sg\",\n  \"refresh_token\": \"500016000300bwa2WteaQyfwBMnPxurcA0mXGhQdTt18356663CfcDTYpWoi\",\n  \"account_id\": \"7063844\",\n  \"code\": \"0\",\n  \"country_user_info_list\": [\n    {\n      \"country\": \"sg\",\n      \"user_id\": \"10101\",\n      \"seller_id\": \"1001\",\n      \"short_code\": \"SG001\"\n    }\n  ],\n  \"account_platform\": \"seller_center\",\n  \"refresh_expires_in\": \"60\",\n  \"expires_in\": \"10\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"account\": \"xxx@126.com\"\n}"
+      }
+    ]
+  },
+  "error_codes": [
+    {
+      "code": "IllegalRefreshToken",
+      "message": "\"The specified refresh token is invalid or expired\"",
+      "description": "\"The specified refresh token is invalid or expired\""
+    },
+    {
+      "code": "AUTH_TYPE_UNSUPPORTED",
+      "message": "XXX can only be authorized by market, not support refresh",
+      "description": "The APP has been uploaded to the service market and the validity period of the access token has been bound to the service market order, no need to refresh."
+    },
+    {
+      "code": "IllegalRefreshToken",
+      "message": "The specified refresh token is invalid or expired",
+      "description": "Please have your seller re-login for authorization."
+    },
+    {
+      "code": "AUTH_TYPE_UNSUPPORTED",
+      "message": "XXX can only be authorized by market, not support refresh",
+      "description": "The APP has been uploaded to the service market and the validity period of the access token has been bound to the service market order, no need to refresh."
+    },
+    {
+      "code": "IllegalRefreshToken",
+      "message": "The specified refresh token is invalid or expired",
+      "description": "Please have your seller re-login for authorization."
+    },
+    {
+      "code": "AUTH_TYPE_UNSUPPORTED",
+      "message": "XXX can only be authorized by market, not support refresh",
+      "description": "The APP has been uploaded to the service market and the validity period of the access token has been bound to the service market order, no need to refresh."
+    },
+    {
+      "code": "IllegalRefreshToken",
+      "message": "The specified refresh token is invalid or expired",
+      "description": "Please have your seller re-login for authorization."
+    },
+    {
+      "code": "IllegalRefreshToken",
+      "message": "The specified refresh token is invalid or expired",
+      "description": "Please have your seller re-login for authorization."
+    },
+    {
+      "code": "AUTH_TYPE_UNSUPPORTED",
+      "message": "appkey can only be authorized by market, not support refresh",
+      "description": "The APP has been uploaded to the service market and the validity period of the access token has been bound to the service market order, no need to refresh."
+    }
+  ],
+  "platform_specific": {
+    "service_endpoints": [
+      {
+        "region": "All",
+        "endpoint": "https://auth.lazada.com/rest"
+      }
+    ]
+  }
+}

@@ -102,7 +102,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/fbl/fulfillment_sku_relation/get_by_sc_items' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"seller_ids\":\"%5B100056775%2C100131295%2C1000029719%2C100076220%2C100191757%5D\",\"app_key\":\"1234567\",\"sc_item_ids\":\"%5B677725310474%5D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"biz_name\":\"Lazada%2FDaraz\",\"fulfillment_skus\":\"%5BCB-720504627-1582768814%5D\",\"timestamp\":\"1750231673695\"}'"
+      "code": "curl -X POST url + '/fbl/fulfillment_sku_relation/get_by_sc_items' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"seller_ids\":\"%5B100056775%2C100131295%2C1000029719%2C100076220%2C100191757%5D\",\"app_key\":\"1234567\",\"sc_item_ids\":\"%5B677725310474%5D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"biz_name\":\"Lazada%2FDaraz\",\"fulfillment_skus\":\"%5BCB-720504627-1582768814%5D\",\"timestamp\":\"1750267071299\"}'"
     }
   ],
   "response": {

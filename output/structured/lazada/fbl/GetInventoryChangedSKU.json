@@ -149,7 +149,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/fbl/inventory_changed_sku/get?timestamp=1750231444909&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&warehouse_code=OMS-LAZADA-MY-W-1&page=1&per_page=20&market_place=LAZADA_SG&operate_Time_From=2019-07-23&operate_Time_To=2019-08-24'"
+      "code": "curl -X GET url + '/fbl/inventory_changed_sku/get?timestamp=1750266937972&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&warehouse_code=OMS-LAZADA-MY-W-1&page=1&per_page=20&market_place=LAZADA_SG&operate_Time_From=2019-07-23&operate_Time_To=2019-08-24'"
     }
   ],
   "response": {

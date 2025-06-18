@@ -113,7 +113,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/order/reverse/return/update?timestamp=1750231574434&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&action=instantRefund&reverse_order_id=0&reverse_order_item_ids=%5B%5D&reason_id=0&comment=comment&image_info=%5B%7B%22name%22%3A%22name%22%2C%22url%22%3A%22url%22%7D%5D'"
+      "code": "curl -X GET url + '/order/reverse/return/update?timestamp=1750266948295&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&action=instantRefund&reverse_order_id=0&reverse_order_item_ids=%5B%5D&reason_id=0&comment=comment&image_info=%5B%7B%22name%22%3A%22name%22%2C%22url%22%3A%22url%22%7D%5D'"
     }
   ],
   "response": {

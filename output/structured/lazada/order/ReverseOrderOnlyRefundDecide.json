@@ -113,7 +113,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/order/reverse/onlyrefund/seller/decide?timestamp=1750231568323&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&action=agreeRefund&reverse_order_id=123&reverse_order_item_ids=%5B%5D&comment=%22%22&image_info_list=%5B%7B%22file_url%22%3A%22%5C%22%5C%22%22%2C%22file_name%22%3A%22%5C%22%5C%22%22%7D%5D&video_info_list=%5B%7B%22cover_url%22%3A%22%5C%22%5C%22%22%2C%22video_url%22%3A%22%5C%22%5C%22%22%7D%5D'"
+      "code": "curl -X GET url + '/order/reverse/onlyrefund/seller/decide?timestamp=1750266937589&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&action=agreeRefund&reverse_order_id=123&reverse_order_item_ids=%5B%5D&comment=%22%22&image_info_list=%5B%7B%22file_url%22%3A%22%5C%22%5C%22%22%2C%22file_name%22%3A%22%5C%22%5C%22%22%7D%5D&video_info_list=%5B%7B%22cover_url%22%3A%22%5C%22%5C%22%22%2C%22video_url%22%3A%22%5C%22%5C%22%22%7D%5D'"
     }
   ],
   "response": {

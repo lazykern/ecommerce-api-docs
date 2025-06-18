@@ -143,7 +143,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/logistics/epis/external/packages/dim_weight' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"authorization\":\"Authorization\",\"app_key\":\"1234567\",\"dimWeight\":\"%7B%22length%22%3A%22100.1%22%2C%22width%22%3A%22100.1%22%2C%22weight%22%3A%22100.1%22%2C%22height%22%3A%22100.1%22%7D\",\"rawPayload\":\"%7B%7D\",\"lexMsgType\":\"packageDimWeightUpdate\",\"packageCode\":\"FU2520082700000000000001323743212\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"externalOrderId\":\"FO073511135542999\",\"processTime\":\"1619681896000\",\"timestamp\":\"1750231675461\"}'"
+      "code": "curl -X POST url + '/logistics/epis/external/packages/dim_weight' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"authorization\":\"Authorization\",\"app_key\":\"1234567\",\"dimWeight\":\"%7B%22length%22%3A%22100.1%22%2C%22width%22%3A%22100.1%22%2C%22weight%22%3A%22100.1%22%2C%22height%22%3A%22100.1%22%7D\",\"rawPayload\":\"%7B%7D\",\"lexMsgType\":\"packageDimWeightUpdate\",\"packageCode\":\"FU2520082700000000000001323743212\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"externalOrderId\":\"FO073511135542999\",\"processTime\":\"1619681896000\",\"timestamp\":\"1750267064764\"}'"
     }
   ],
   "response": {

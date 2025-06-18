@@ -126,7 +126,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/logistics/cnpms/bigbag/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"userInfo\":\"%7B%22appUserKey%22%3A%2212345%22%7D\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"weight\":\"100\",\"locale\":\"zh_CN\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"orderCodeList\":\"%5B%22LZD1001%22%2C%22LZD1002%22%2C%22LZD1003%22%5D\",\"sign_method\":\"sha256\",\"client\":\"test\",\"orderCode\":\"LP000000123\",\"trackingNumber\":\"ST0000123\",\"timestamp\":\"1750231451633\",\"weightUnit\":\"g\"}'"
+      "code": "curl -X POST url + '/logistics/cnpms/bigbag/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"userInfo\":\"%7B%22appUserKey%22%3A%2212345%22%7D\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"weight\":\"100\",\"locale\":\"zh_CN\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"orderCodeList\":\"%5B%22LZD1001%22%2C%22LZD1002%22%2C%22LZD1003%22%5D\",\"sign_method\":\"sha256\",\"client\":\"test\",\"orderCode\":\"LP000000123\",\"trackingNumber\":\"ST0000123\",\"timestamp\":\"1750266955571\",\"weightUnit\":\"g\"}'"
     }
   ],
   "response": {

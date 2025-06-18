@@ -161,7 +161,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/fbl/fulfillment_sku_fbl/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"shelf_life_days\":\"100\",\"serial_number_flag\":\"true\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"sku_id\":\"45679245789\",\"offline_shelf_live\":\"5\",\"barcodes\":\"%5B%22barcode1%22%2C+%22barcode2%22%5D\",\"alert_shelf_live\":\"10\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"shelf_life_flag\":\"true\",\"reject_shelf_live\":\"20\",\"app_key\":\"1234567\",\"product_type\":\"food\",\"sign_method\":\"sha256\",\"temperature_requirement\":\"1\",\"hygroscopic\":\"true\",\"timestamp\":\"1750231607931\"}'"
+      "code": "curl -X POST url + '/fbl/fulfillment_sku_fbl/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"shelf_life_days\":\"100\",\"serial_number_flag\":\"true\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"sku_id\":\"45679245789\",\"offline_shelf_live\":\"5\",\"barcodes\":\"%5B%22barcode1%22%2C+%22barcode2%22%5D\",\"alert_shelf_live\":\"10\",\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"shelf_life_flag\":\"true\",\"reject_shelf_live\":\"20\",\"app_key\":\"1234567\",\"product_type\":\"food\",\"sign_method\":\"sha256\",\"temperature_requirement\":\"1\",\"hygroscopic\":\"true\",\"timestamp\":\"1750266986236\"}'"
     }
   ],
   "response": {

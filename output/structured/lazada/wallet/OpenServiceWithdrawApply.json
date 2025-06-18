@@ -138,7 +138,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/wallet/open/service/withdraw' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"withdraw_amount\":\"0.01\",\"user_id\":\"4DAGStK-mFFV8cK1h6z6gA\",\"withdrawable\":\"true\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"withdraw_request_id\":\"test001\",\"need_verify_full_kyc\":\"false\",\"timestamp\":\"1750231617869\"}'"
+      "code": "curl -X POST url + '/wallet/open/service/withdraw' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"withdraw_amount\":\"0.01\",\"user_id\":\"4DAGStK-mFFV8cK1h6z6gA\",\"withdrawable\":\"true\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"withdraw_request_id\":\"test001\",\"need_verify_full_kyc\":\"false\",\"timestamp\":\"1750266984441\"}'"
     }
   ],
   "response": {

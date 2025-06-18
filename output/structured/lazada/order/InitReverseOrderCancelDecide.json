@@ -95,7 +95,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/order/reverse/cancel/seller/decide?timestamp=1750231563296&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&reverse_order_id=1234567890&agree_cancel=false&reason_code=0'"
+      "code": "curl -X GET url + '/order/reverse/cancel/seller/decide?timestamp=1750267111444&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&reverse_order_id=1234567890&agree_cancel=false&reason_code=0'"
     }
   ],
   "response": {

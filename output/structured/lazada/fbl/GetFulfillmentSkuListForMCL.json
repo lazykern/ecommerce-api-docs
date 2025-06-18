@@ -161,7 +161,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/fbl/fulfillment_sku_list/get?timestamp=1750231655815&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&page=1&per_page=50&platform_name=LAZADA_TH&fulfillment_sku_name=Lenovo+Thinkpad&seller_sku=Brown-350&fulfillment_sku_code=245906966_VNAMZ-315595775&barcode=LZD000006614829&fulfillment_sku_codes=245906966_VNAMZ-315595775%2C245906966_VNAMZ-315595776'"
+      "code": "curl -X GET url + '/fbl/fulfillment_sku_list/get?timestamp=1750267047756&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&page=1&per_page=50&platform_name=LAZADA_TH&fulfillment_sku_name=Lenovo+Thinkpad&seller_sku=Brown-350&fulfillment_sku_code=245906966_VNAMZ-315595775&barcode=LZD000006614829&fulfillment_sku_codes=245906966_VNAMZ-315595775%2C245906966_VNAMZ-315595776'"
     }
   ],
   "response": {

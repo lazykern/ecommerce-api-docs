@@ -83,7 +83,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/size/chart/batch/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%7B%22Request%22%3A%7B%22Product%22%3A%7B%22SizeCharts%22%3A%7B%22SizeChart%22%3A%5B%7B%22product_id%22%3A%222871948231%22%2C%22size_chart%22%3A%22123%22%7D%2C%7B%22product_id%22%3A%222894116588%22%2C%22size_chart%22%3A%22234%22%7D%5D%7D%7D%7D%7D\",\"timestamp\":\"1750231535870\"}'"
+      "code": "curl -X POST url + '/size/chart/batch/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%7B%22Request%22%3A%7B%22Product%22%3A%7B%22SizeCharts%22%3A%7B%22SizeChart%22%3A%5B%7B%22product_id%22%3A%222871948231%22%2C%22size_chart%22%3A%22123%22%7D%2C%7B%22product_id%22%3A%222894116588%22%2C%22size_chart%22%3A%22234%22%7D%5D%7D%7D%7D%7D\",\"timestamp\":\"1750266937791\"}'"
     }
   ],
   "response": {

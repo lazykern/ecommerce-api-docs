@@ -125,7 +125,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X GET url + '/fbl/platform_products/get2?timestamp=1750231474197&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&per_page=50&seller_id=100056775&marketplace=LAZADA_SG&seller_sku=341355&platform_sku_name=normal+product+name+++&ready_for_inbound=true&platform_sku=222103860_TH-339012944&page=1'"
+      "code": "curl -X GET url + '/fbl/platform_products/get2?timestamp=1750266979559&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&per_page=50&seller_id=100056775&marketplace=LAZADA_SG&seller_sku=341355&platform_sku_name=normal+product+name+++&ready_for_inbound=true&platform_sku=222103860_TH-339012944&page=1'"
     }
   ],
   "response": {

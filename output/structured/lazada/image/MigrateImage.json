@@ -83,7 +83,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/image/migrate' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22+%3F%3E+%3CRequest%3E+++++%3CImage%3E+++++++++%3CUrl%3Ehttp%3A%2F%2Fpic4.nipic.com%2F20091217%2F3885730_124701000519_2.jpg%3C%2FUrl%3E+++++%3C%2FImage%3E+%3C%2FRequest%3E\",\"timestamp\":\"1750231645128\"}'"
+      "code": "curl -X POST url + '/image/migrate' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22+%3F%3E+%3CRequest%3E+++++%3CImage%3E+++++++++%3CUrl%3Ehttp%3A%2F%2Fpic4.nipic.com%2F20091217%2F3885730_124701000519_2.jpg%3C%2FUrl%3E+++++%3C%2FImage%3E+%3C%2FRequest%3E\",\"timestamp\":\"1750267085096\"}'"
     }
   ],
   "response": {

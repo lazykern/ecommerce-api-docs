@@ -149,7 +149,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/logistics/epis/packages/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"receiverAddress\":\"%7B%22details%22%3A%2225A+Nguy%E1%BB%85n+%C4%90%C3%ACnh+Chi%E1%BB%83u%22%2C%22id%22%3A%22R6846129%22%2C%22type%22%3A%22Home%22%7D\",\"totalAmount\":\"4.5\",\"insuranceAmount\":\"4.5\",\"app_key\":\"1234567\",\"receiverPhone\":\"0972018000\",\"deliveryNote\":\"Delivery+note\",\"packageCode\":\"FU2520016900000000000005515757120\",\"receiverName\":\"John\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750231681005\"}'"
+      "code": "curl -X POST url + '/logistics/epis/packages/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"receiverAddress\":\"%7B%22details%22%3A%2225A+Nguy%E1%BB%85n+%C4%90%C3%ACnh+Chi%E1%BB%83u%22%2C%22id%22%3A%22R6846129%22%2C%22type%22%3A%22Home%22%7D\",\"totalAmount\":\"4.5\",\"insuranceAmount\":\"4.5\",\"app_key\":\"1234567\",\"receiverPhone\":\"0972018000\",\"deliveryNote\":\"Delivery+note\",\"packageCode\":\"FU2520016900000000000005515757120\",\"receiverName\":\"John\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1750267072859\"}'"
     }
   ],
   "response": {

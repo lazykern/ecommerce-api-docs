@@ -120,7 +120,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/jit/purchase_order/batch_pickup_deliver' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"shipperAddressId\":\"1001\",\"purchaseOrderNoList\":\"%5B%22POJ1%22%2C%22POJ2%22%5D\",\"estimatedPickupDate\":\"2023-10-10\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"shipperAddressDetail\":\"1+road\",\"shipperName\":\"test\",\"shipperAreaCode\":\"CN\",\"shipperMobilePhone\":\"10086\",\"timestamp\":\"1750231667151\"}'"
+      "code": "curl -X POST url + '/jit/purchase_order/batch_pickup_deliver' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"shipperAddressId\":\"1001\",\"purchaseOrderNoList\":\"%5B%22POJ1%22%2C%22POJ2%22%5D\",\"estimatedPickupDate\":\"2023-10-10\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"shipperAddressDetail\":\"1+road\",\"shipperName\":\"test\",\"shipperAreaCode\":\"CN\",\"shipperMobilePhone\":\"10086\",\"timestamp\":\"1750267040481\"}'"
     }
   ],
   "response": {

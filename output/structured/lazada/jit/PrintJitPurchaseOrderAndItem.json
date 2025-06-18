@@ -102,7 +102,7 @@
     },
     {
       "language": "curl",
-      "code": "curl -X POST url + '/jit/purchase_order/print' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"purchase_order_no_list\":\"%5B%22POJ1001%22%5D\",\"print_barcode\":\"true\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"print_order\":\"true\",\"timestamp\":\"1750231444230\",\"pdf_size\":\"6030\"}'"
+      "code": "curl -X POST url + '/jit/purchase_order/print' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"purchase_order_no_list\":\"%5B%22POJ1001%22%5D\",\"print_barcode\":\"true\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"print_order\":\"true\",\"timestamp\":\"1750267091054\",\"pdf_size\":\"6030\"}'"
     }
   ],
   "response": {

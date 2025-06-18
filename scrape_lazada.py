@@ -54,11 +54,11 @@ async def scrape_table(page, table_locator):
                     cell = cells[i]
                     link_locator = cell.locator('a')
                     if await link_locator.count() > 0 and await link_locator.get_attribute('href'):
-                         link_text = (await link_locator.inner_text()).strip()
-                         link_href = (await link_locator.get_attribute('href')).strip()
-                         cell_content = f"{link_text} ({link_href})"
+                        link_text = (await link_locator.inner_text()).strip()
+                        link_href = (await link_locator.get_attribute('href')).strip()
+                        cell_content = f"{link_text} ({link_href})"
                     else:
-                         cell_content = (' '.join((await cell.inner_text()).split())).strip()
+                        cell_content = (' '.join((await cell.inner_text()).split())).strip()
                     row_data[header] = cell_content
             
             if not row_data or not row_data.get(headers[0]):
@@ -81,7 +81,7 @@ async def scrape_table(page, table_locator):
 
         table_data = root_items
     except Exception as e:
-        print(f"    - Error scraping table: {e}")
+        print(f"  - Error scraping table: {e}")
 
     return table_data
 
@@ -103,7 +103,7 @@ async def scrape_endpoint_details(page, path):
 
         # After waiting, check which condition was met.
         if not await page.locator('.api-detail').is_visible():
-            print(f"    - Content not loaded for endpoint: {path}. Skipping.")
+            print(f"  - Content not loaded for endpoint: {path}. Skipping.")
             return {}
 
         api_detail_block = page.locator('.api-detail')
@@ -146,12 +146,12 @@ async def scrape_endpoint_details(page, path):
             documentation['response_example'] = {}
         
     except PlaywrightTimeoutError:
-         print(f"    - Timeout waiting for content on endpoint: {path}. Skipping.")
+        print(f"  - Timeout waiting for content on endpoint: {path}. Skipping.")
     except Exception as e:
-        print(f"    - Could not scrape full details for endpoint: {path}. Error: {e}")
+        print(f"  - Could not scrape full details for endpoint: {path}. Error: {e}")
     
     finally:
-        # Cancel any tasks that didn't complete to prevent them running in the background.
+        # Cancel any tasks that didn't complete to prevent them from running in the background.
         for task in pending_tasks:
             task.cancel()
         
@@ -205,15 +205,23 @@ async def main(args):
             await page.wait_for_selector('.next-menu', timeout=30000)
             print("API navigation menu found.")
             
+            # --- Start of Fix ---
             category_headers = await page.locator('.next-menu-sub-menu-wrapper > .next-menu-item').all()
+            print(f"Found {len(category_headers)} category headers. Expanding any that are closed...")
             for header in category_headers:
                 try:
-                    await header.click(timeout=2000)
-                    await asyncio.sleep(0.2)
-                except Exception:
-                    pass
+                    # Check if the header is already opened/expanded by looking for the 'next-opened' class
+                    class_attribute = await header.get_attribute('class') or ''
+                    if 'next-opened' not in class_attribute:
+                        # If not opened, click to expand it
+                        await header.click(timeout=2000)
+                        await asyncio.sleep(0.2)  # Give it a moment for the expansion animation
+                except Exception as e:
+                    # Log error but continue, so one failed click doesn't stop the whole process
+                    print(f"Could not click or check a category header: {e}")
+            # --- End of Fix ---
             
-            print("Expanded all categories.")
+            print("Finished expanding all categories.")
             
             endpoint_links = await page.locator('li[data-spm^="d/"] a').all()
             endpoint_paths = []
@@ -277,4 +285,3 @@ if __name__ == "__main__":
         asyncio.run(main(args))
     except KeyboardInterrupt:
         print("\nScraping interrupted by user.")
-
