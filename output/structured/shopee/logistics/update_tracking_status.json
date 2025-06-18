@@ -3,9 +3,9 @@
   "module": "logistics",
   "endpoint_name": "update_tracking_status",
   "version": "v2",
-  "summary": "Use this api to batch initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels",
-  "description": "Use this api to batch initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels. Should call v2.logistics.get_shipping_parameter to fetch all required param first. It's recommended to initiate logistics one hour after the orders were placed since there is one-hour window buyer can cancel any order without request to seller.Only channel 90003 - Padrão in Brazil has the permission of this API.",
-  "path": "/api/v2/logistics/batch_ship_order",
+  "summary": "Only available for Brazil sellers",
+  "description": "Only available for Brazil sellers. This API is only available for orders/parcels which are fulfilled by seller's logistics (or \"Logística do Vendedor\"), or logistic_channel_id: 90021. OFG status can be updated to - Shipped (pickup_done) - Delivered (delivery_done) - Delivery Failed (delivery_failed) (Do not allow passing tracking number &/or tracking URL without status update to logistic_pickup_done)",
+  "path": "/api/v2/logistics/update_tracking_status",
   "http_method": [
     "POST"
   ],
@@ -102,31 +102,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/batch_ship_order"
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/update_tracking_status"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/batch_ship_order"
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/update_tracking_status"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/batch_ship_order"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/update_tracking_status"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/batch_ship_order"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/update_tracking_status"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/batch_ship_order"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/update_tracking_status"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/batch_ship_order"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/update_tracking_status"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/batch_ship_order"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/update_tracking_status"
       }
     ]
   }

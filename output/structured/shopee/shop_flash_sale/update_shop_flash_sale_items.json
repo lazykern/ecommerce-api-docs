@@ -3,9 +3,9 @@
   "module": "shop_flash_sale",
   "endpoint_name": "update_shop_flash_sale_items",
   "version": "v2",
-  "summary": "edit shop flash sale(enable, disable)",
-  "description": "edit shop flash sale(enable, disable)",
-  "path": "/api/v2/shop_flash_sale/update_shop_flash_sale",
+  "summary": "edit shop flash sale item, you can only edit the models in disbaled or enabled status",
+  "description": "edit shop flash sale item, you can only edit the models in disbaled or enabled status",
+  "path": "/api/v2/shop_flash_sale/update_shop_flash_sale_items",
   "http_method": [
     "POST"
   ],
@@ -222,31 +222,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/shop_flash_sale/update_shop_flash_sale"
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop_flash_sale/update_shop_flash_sale_items"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/shop_flash_sale/update_shop_flash_sale"
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop_flash_sale/update_shop_flash_sale_items"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_flash_sale/update_shop_flash_sale"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_flash_sale/update_shop_flash_sale_items"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_flash_sale/update_shop_flash_sale"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_flash_sale/update_shop_flash_sale_items"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_flash_sale/update_shop_flash_sale"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_flash_sale/update_shop_flash_sale_items"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_flash_sale/update_shop_flash_sale"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_flash_sale/update_shop_flash_sale_items"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_flash_sale/update_shop_flash_sale"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_flash_sale/update_shop_flash_sale_items"
       }
     ]
   }

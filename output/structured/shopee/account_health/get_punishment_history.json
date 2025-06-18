@@ -3,9 +3,9 @@
   "module": "account_health",
   "endpoint_name": "get_punishment_history",
   "version": "v2",
-  "summary": "Get the penalty point records generated in the current quarter",
-  "description": "Get the penalty point records generated in the current quarter.",
-  "path": "/api/v2/account_health/get_penalty_point_history",
+  "summary": "Get the punishment records generated in the current quarter",
+  "description": "Get the punishment records generated in the current quarter.",
+  "path": "/api/v2/account_health/get_punishment_history",
   "http_method": [
     "GET"
   ],
@@ -155,31 +155,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/account_health/get_penalty_point_history"
+        "http_address": "https://partner.shopeemobile.com/api/v2/account_health/get_punishment_history"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/account_health/get_penalty_point_history"
+        "http_address": "https://openplatform.shopee.cn/api/v2/account_health/get_punishment_history"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/account_health/get_penalty_point_history"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/account_health/get_punishment_history"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/account_health/get_penalty_point_history"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/account_health/get_punishment_history"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/account_health/get_penalty_point_history"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/account_health/get_punishment_history"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/account_health/get_penalty_point_history"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/account_health/get_punishment_history"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/account_health/get_penalty_point_history"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/account_health/get_punishment_history"
       }
     ]
   }

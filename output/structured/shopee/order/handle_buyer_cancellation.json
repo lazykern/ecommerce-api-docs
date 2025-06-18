@@ -3,9 +3,9 @@
   "module": "order",
   "endpoint_name": "handle_buyer_cancellation",
   "version": "v2",
-  "summary": "Use this api to cancel an order",
-  "description": "Use this api to cancel an order. This action can only be performed before an order has been shipped.",
-  "path": "/api/v2/order/cancel_order",
+  "summary": "Use this api to handle buyer's cancellation application",
+  "description": "Use this api to handle buyer's cancellation application.",
+  "path": "/api/v2/order/handle_buyer_cancellation",
   "http_method": [
     "POST"
   ],
@@ -167,31 +167,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/order/cancel_order"
+        "http_address": "https://partner.shopeemobile.com/api/v2/order/handle_buyer_cancellation"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/order/cancel_order"
+        "http_address": "https://openplatform.shopee.cn/api/v2/order/handle_buyer_cancellation"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/order/cancel_order"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/order/handle_buyer_cancellation"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/cancel_order"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/handle_buyer_cancellation"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/cancel_order"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/handle_buyer_cancellation"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/cancel_order"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/handle_buyer_cancellation"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/cancel_order"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/handle_buyer_cancellation"
       }
     ]
   }

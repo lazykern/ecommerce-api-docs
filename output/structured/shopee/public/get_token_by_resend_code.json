@@ -3,9 +3,9 @@
   "module": "public",
   "endpoint_name": "get_token_by_resend_code",
   "version": "v2",
-  "summary": "Use this API to refresh the access_token after it expires",
-  "description": "Use this API to refresh the access_token after it expires. Refresh_token can be used once only, this API will also return a new refresh_token. Please use the new refresh_token for the next RefreshAccessToken call",
-  "path": "/api/v2/auth/access_token/get",
+  "summary": "Use the resend code to get access token and refresh token",
+  "description": "Use the resend code to get access token and refresh token. When you lost your access token or refresh token, you can go to authorization management page to resend code by yourselves. You can only use this endpoint in live environment, we don't support in test-stable environment.",
+  "path": "/api/v2/public/get_token_by_resend_code",
   "http_method": [
     "POST"
   ],
@@ -142,31 +142,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/auth/access_token/get"
+        "http_address": "https://partner.shopeemobile.com/api/v2/public/get_token_by_resend_code"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/auth/access_token/get"
+        "http_address": "https://openplatform.shopee.cn/api/v2/public/get_token_by_resend_code"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/auth/access_token/get"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/public/get_token_by_resend_code"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/auth/access_token/get"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/public/get_token_by_resend_code"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/auth/access_token/get"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/public/get_token_by_resend_code"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/auth/access_token/get"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/public/get_token_by_resend_code"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/auth/access_token/get"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/public/get_token_by_resend_code"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "ads",
   "endpoint_name": "edit_manual_product_ads",
   "version": "v2",
-  "summary": "Use this API to edit Manual Selection Product Ad Keywords",
-  "description": "Use this API to edit Manual Selection Product Ad Keywords",
-  "path": "/api/v2/ads/edit_manual_product_ad_keywords",
+  "summary": "Use this API to edit Manual Selection Product Ads",
+  "description": "Use this API to edit Manual Selection Product Ads",
+  "path": "/api/v2/ads/edit_manual_product_ads",
   "http_method": [
     "POST"
   ],
@@ -266,31 +266,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/ads/edit_manual_product_ad_keywords"
+        "http_address": "https://partner.shopeemobile.com/api/v2/ads/edit_manual_product_ads"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/ads/edit_manual_product_ad_keywords"
+        "http_address": "https://openplatform.shopee.cn/api/v2/ads/edit_manual_product_ads"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/edit_manual_product_ad_keywords"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/edit_manual_product_ads"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/edit_manual_product_ad_keywords"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/edit_manual_product_ads"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/edit_manual_product_ad_keywords"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/edit_manual_product_ads"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/edit_manual_product_ad_keywords"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/edit_manual_product_ads"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/edit_manual_product_ad_keywords"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/edit_manual_product_ads"
       }
     ]
   }

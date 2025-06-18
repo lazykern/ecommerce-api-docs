@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "get_attribute_tree",
   "version": "v2",
-  "summary": "Get attributes",
-  "description": "Get attributes. Only for China mainland sellers and Korean sellers.",
-  "path": "/api/v2/global_product/get_attributes",
+  "summary": "Get the mtsku attribute trees for categories",
+  "description": "Get the mtsku attribute trees for categories",
+  "path": "/api/v2/global_product/get_attribute_tree",
   "http_method": [
     "GET"
   ],
@@ -305,31 +305,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_attributes"
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_attribute_tree"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_attributes"
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_attribute_tree"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_attributes"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_attribute_tree"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_attributes"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_attribute_tree"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_attributes"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_attribute_tree"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_attributes"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_attribute_tree"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_attributes"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_attribute_tree"
       }
     ]
   }

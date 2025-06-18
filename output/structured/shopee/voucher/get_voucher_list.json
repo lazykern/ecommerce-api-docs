@@ -3,9 +3,9 @@
   "module": "voucher",
   "endpoint_name": "get_voucher_list",
   "version": "v2",
-  "summary": "Get Voucher Detail",
-  "description": "Get Voucher Detail",
-  "path": "/api/v2/voucher/get_voucher",
+  "summary": "Get Voucher List",
+  "description": "Get Voucher List",
+  "path": "/api/v2/voucher/get_voucher_list",
   "http_method": [
     "GET"
   ],
@@ -234,31 +234,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/voucher/get_voucher"
+        "http_address": "https://partner.shopeemobile.com/api/v2/voucher/get_voucher_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/voucher/get_voucher"
+        "http_address": "https://openplatform.shopee.cn/api/v2/voucher/get_voucher_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/voucher/get_voucher"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/voucher/get_voucher_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/voucher/get_voucher"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/voucher/get_voucher_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/voucher/get_voucher"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/voucher/get_voucher_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/voucher/get_voucher"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/voucher/get_voucher_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/voucher/get_voucher"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/voucher/get_voucher_list"
       }
     ]
   }

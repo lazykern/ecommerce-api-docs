@@ -5,7 +5,7 @@
   "version": "v2",
   "summary": "Get the Problematic Listings to improve the listings to avoid incurring penalty points",
   "description": "Get the Problematic Listings to improve the listings to avoid incurring penalty points.",
-  "path": "/api/v2/product/get_category",
+  "path": "/api/v2/account_health/get_listings_with_issues",
   "http_method": [
     "GET"
   ],

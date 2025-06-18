@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "update_global_model",
   "version": "v2",
-  "summary": "Add global model",
-  "description": "Add global model. Only for China mainland sellers and Korean sellers.",
-  "path": "/api/v2/global_product/add_global_model",
+  "summary": "Update global model",
+  "description": "Update global model. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/update_global_model",
   "http_method": [
     "POST"
   ],
@@ -236,31 +236,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/add_global_model"
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/update_global_model"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/add_global_model"
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/update_global_model"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/add_global_model"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/update_global_model"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/add_global_model"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/update_global_model"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/add_global_model"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/update_global_model"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/add_global_model"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/update_global_model"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/add_global_model"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/update_global_model"
       }
     ]
   }

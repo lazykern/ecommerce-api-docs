@@ -5,9 +5,9 @@
   "version": "v2",
   "summary": "add one collection",
   "description": "add one collection",
-  "path": "/api/v2/top_picks/get_top_picks_list",
+  "path": "/api/v2/top_picks/add_top_picks",
   "http_method": [
-    "GET"
+    "POST"
   ],
   "parameters": {
     "path": [],

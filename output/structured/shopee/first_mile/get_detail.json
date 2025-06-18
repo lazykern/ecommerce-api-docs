@@ -3,9 +3,9 @@
   "module": "first_mile",
   "endpoint_name": "get_detail",
   "version": "v2",
-  "summary": "Use this api to get unbind order list",
-  "description": "Use this api to get unbind order list.",
-  "path": "/api/v2/first_mile/get_unbind_order_list",
+  "summary": "Use this api to get first mile detail",
+  "description": "Use this api to get first mile detail.",
+  "path": "/api/v2/first_mile/get_detail",
   "http_method": [
     "GET"
   ],
@@ -223,31 +223,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/first_mile/get_unbind_order_list"
+        "http_address": "https://partner.shopeemobile.com/api/v2/first_mile/get_detail"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/first_mile/get_unbind_order_list"
+        "http_address": "https://openplatform.shopee.cn/api/v2/first_mile/get_detail"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/first_mile/get_unbind_order_list"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/first_mile/get_detail"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/first_mile/get_unbind_order_list"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/first_mile/get_detail"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/first_mile/get_unbind_order_list"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/first_mile/get_detail"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/first_mile/get_unbind_order_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/first_mile/get_detail"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/first_mile/get_unbind_order_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/first_mile/get_detail"
       }
     ]
   }

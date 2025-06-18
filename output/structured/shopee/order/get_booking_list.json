@@ -3,9 +3,9 @@
   "module": "order",
   "endpoint_name": "get_booking_list",
   "version": "v2",
-  "summary": "For multi-warehouse shops, return all warehouses with packages that have not been SHIPPED including product_location_id and address_id",
-  "description": "For multi-warehouse shops, return all warehouses with packages that have not been SHIPPED including product_location_id and address_id. Compared to v2.shop.get_warehouse_detail, it covers some edge cases like warehouse that have been unlinked but still retain packages that have not been SHIPPED, and does not cover some cases like single warehouse with default product_location_id and FBS shop.",
-  "path": "/api/v2/order/get_warehouse_filter_config",
+  "summary": "Use this api to search bookings",
+  "description": "Use this api to search bookings. You may also filter them by status, if needed.",
+  "path": "/api/v2/order/get_booking_list",
   "http_method": [
     "GET"
   ],
@@ -152,31 +152,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/order/get_warehouse_filter_config"
+        "http_address": "https://partner.shopeemobile.com/api/v2/order/get_booking_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/order/get_warehouse_filter_config"
+        "http_address": "https://openplatform.shopee.cn/api/v2/order/get_booking_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/order/get_warehouse_filter_config"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/order/get_booking_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/get_warehouse_filter_config"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/get_booking_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/get_warehouse_filter_config"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/get_booking_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/get_warehouse_filter_config"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/get_booking_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/get_warehouse_filter_config"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/get_booking_list"
       }
     ]
   }

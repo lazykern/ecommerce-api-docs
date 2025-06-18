@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "get_global_item_list",
   "version": "v2",
-  "summary": "Get global item upload control",
-  "description": "Get global item upload control.",
-  "path": "/api/v2/global_product/get_global_item_limit",
+  "summary": "Get global item id list",
+  "description": "Get global item id list. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/get_global_item_list",
   "http_method": [
     "GET"
   ],
@@ -245,31 +245,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_global_item_limit"
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_global_item_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_global_item_limit"
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_global_item_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_global_item_limit"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_global_item_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_global_item_limit"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_global_item_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_global_item_limit"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_global_item_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_global_item_limit"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_global_item_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_global_item_limit"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_global_item_list"
       }
     ]
   }

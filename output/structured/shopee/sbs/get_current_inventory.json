@@ -3,9 +3,9 @@
   "module": "sbs",
   "endpoint_name": "get_current_inventory",
   "version": "v2",
-  "summary": "get bound warehouse by shop id",
-  "description": "get bound warehouse by shop id",
-  "path": "/api/v2/sbs/get_bound_whs_info",
+  "summary": "Get Seller Center Current Inventory Page Data",
+  "description": "Get Seller Center Current Inventory Page Data",
+  "path": "/api/v2/sbs/get_current_inventory",
   "http_method": [
     "GET"
   ],
@@ -320,31 +320,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/sbs/get_bound_whs_info"
+        "http_address": "https://partner.shopeemobile.com/api/v2/sbs/get_current_inventory"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/sbs/get_bound_whs_info"
+        "http_address": "https://openplatform.shopee.cn/api/v2/sbs/get_current_inventory"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/sbs/get_bound_whs_info"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/sbs/get_current_inventory"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/sbs/get_bound_whs_info"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/sbs/get_current_inventory"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/sbs/get_bound_whs_info"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/sbs/get_current_inventory"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/sbs/get_bound_whs_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/sbs/get_current_inventory"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/sbs/get_bound_whs_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/sbs/get_current_inventory"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "push",
   "endpoint_name": "get_lost_push_message",
   "version": "v2",
-  "summary": "you can get your app current push config setting through this api",
-  "description": "you can get your app current push config setting through this api",
-  "path": "/api/v2/push/get_app_push_config",
+  "summary": "Get the lost push messages that were lost within 3 days of the current time and not confirmed to have been consumed",
+  "description": "Get the lost push messages that were lost within 3 days of the current time and not confirmed to have been consumed",
+  "path": "/api/v2/push/get_lost_push_message",
   "http_method": [
     "GET"
   ],
@@ -121,31 +121,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/push/get_app_push_config"
+        "http_address": "https://partner.shopeemobile.com/api/v2/push/get_lost_push_message"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/push/get_app_push_config"
+        "http_address": "https://openplatform.shopee.cn/api/v2/push/get_lost_push_message"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/push/get_app_push_config"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/push/get_lost_push_message"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/push/get_app_push_config"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/push/get_lost_push_message"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/push/get_app_push_config"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/push/get_lost_push_message"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/push/get_app_push_config"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/push/get_lost_push_message"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/push/get_app_push_config"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/push/get_lost_push_message"
       }
     ]
   }

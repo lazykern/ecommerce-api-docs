@@ -3,9 +3,9 @@
   "module": "ads",
   "endpoint_name": "get_shop_toggle_info",
   "version": "v2",
-  "summary": "Use this API to return the seller's Real-time total balance of their ads credit including the paid credits and free credits",
-  "description": "Use this API to return the seller's Real-time total balance of their ads credit including the paid credits and free credits.",
-  "path": "/api/v2/ads/get_total_balance",
+  "summary": "Use this API to get Shop level info - i",
+  "description": "Use this API to get Shop level info - i.e. seller's toggle status is on/off",
+  "path": "/api/v2/ads/get_shop_toggle_info",
   "http_method": [
     "GET"
   ],
@@ -126,31 +126,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_total_balance"
+        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_shop_toggle_info"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_total_balance"
+        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_shop_toggle_info"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_total_balance"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_shop_toggle_info"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_total_balance"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_shop_toggle_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_total_balance"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_shop_toggle_info"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_total_balance"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_shop_toggle_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_total_balance"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_shop_toggle_info"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "get_variations",
   "version": "v2",
-  "summary": "Get publishable shop list for global item in pages",
-  "description": "Get publishable shop list for global item in pages.",
-  "path": "/api/v2/global_product/get_shop_publishable_status",
+  "summary": "Get the standardized tier variation defined by Shopee, which is currently a three-layer tree structure",
+  "description": "Get the standardized tier variation defined by Shopee, which is currently a three-layer tree structure. The top layer is variations, the second layer is groups, groups are used to divide options, and the third layer is options.",
+  "path": "/api/v2/global_product/get_variations",
   "http_method": [
     "GET"
   ],
@@ -141,31 +141,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_shop_publishable_status"
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_variations"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_shop_publishable_status"
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_variations"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_shop_publishable_status"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_variations"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_shop_publishable_status"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_variations"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_shop_publishable_status"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_variations"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_shop_publishable_status"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_variations"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_shop_publishable_status"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_variations"
       }
     ]
   }

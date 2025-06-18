@@ -3,9 +3,9 @@
   "module": "returns",
   "endpoint_name": "get_return_list",
   "version": "v2",
-  "summary": "Use this api to get detail information of a return by return id",
-  "description": "Use this api to get detail information of a return by return id.",
-  "path": "/api/v2/returns/get_return_detail",
+  "summary": "Use this api to get detail information of many return by shop id",
+  "description": "Use this api to get detail information of many return by shop id.",
+  "path": "/api/v2/returns/get_return_list",
   "http_method": [
     "GET"
   ],
@@ -667,31 +667,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/returns/get_return_detail"
+        "http_address": "https://partner.shopeemobile.com/api/v2/returns/get_return_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/returns/get_return_detail"
+        "http_address": "https://openplatform.shopee.cn/api/v2/returns/get_return_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/returns/get_return_detail"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/returns/get_return_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/returns/get_return_detail"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/returns/get_return_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/returns/get_return_detail"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/returns/get_return_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/returns/get_return_detail"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/returns/get_return_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/returns/get_return_detail"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/returns/get_return_list"
       }
     ]
   }

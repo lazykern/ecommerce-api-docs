@@ -5,9 +5,9 @@
   "version": "v2",
   "summary": "Use this api to cancel an order",
   "description": "Use this api to cancel an order. This action can only be performed before an order has been shipped.",
-  "path": "/api/v2/product/get_category",
+  "path": "/api/v2/order/cancel_order",
   "http_method": [
-    "GET"
+    "POST"
   ],
   "parameters": {
     "path": [],

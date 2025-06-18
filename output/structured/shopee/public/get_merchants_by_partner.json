@@ -3,9 +3,9 @@
   "module": "public",
   "endpoint_name": "get_merchants_by_partner",
   "version": "v2",
-  "summary": "get basic info of shops which have authorized to the partner",
-  "description": "get basic info of shops which have authorized to the partner.",
-  "path": "/api/v2/public/get_shops_by_partner",
+  "summary": "Use this API to get basic info of merchants which have authorized to the partner",
+  "description": "Use this API to get basic info of merchants which have authorized to the partner.",
+  "path": "/api/v2/public/get_merchants_by_partner",
   "http_method": [
     "GET"
   ],
@@ -151,31 +151,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/public/get_shops_by_partner"
+        "http_address": "https://partner.shopeemobile.com/api/v2/public/get_merchants_by_partner"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/public/get_shops_by_partner"
+        "http_address": "https://openplatform.shopee.cn/api/v2/public/get_merchants_by_partner"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/public/get_shops_by_partner"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/public/get_merchants_by_partner"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/public/get_shops_by_partner"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/public/get_merchants_by_partner"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/public/get_shops_by_partner"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/public/get_merchants_by_partner"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/public/get_shops_by_partner"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/public/get_merchants_by_partner"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/public/get_shops_by_partner"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/public/get_merchants_by_partner"
       }
     ]
   }

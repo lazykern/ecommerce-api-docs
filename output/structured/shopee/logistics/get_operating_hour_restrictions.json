@@ -3,9 +3,9 @@
   "module": "logistics",
   "endpoint_name": "get_operating_hour_restrictions",
   "version": "v2",
-  "summary": "This API is utilized to retrieve the existing operating hours of sellers including Pickup Operating Hours, Special Hours and Instant Operating Hours",
-  "description": "This API is utilized to retrieve the existing operating hours of sellers including Pickup Operating Hours, Special Hours and Instant Operating Hours.",
-  "path": "/api/v2/logistics/get_operating_hours",
+  "summary": "This API is designed to retrieve all restrictions related to inputting operating hours for the v2",
+  "description": "This API is designed to retrieve all restrictions related to inputting operating hours for the v2.logistics.update_operating_hours function. This API ensures that user are aware of any limitations or conditions that may affect their operating hours.",
+  "path": "/api/v2/logistics/get_operating_hour_restrictions",
   "http_method": [
     "GET"
   ],
@@ -936,31 +936,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/get_operating_hours"
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/get_operating_hour_restrictions"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/get_operating_hours"
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/get_operating_hour_restrictions"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/get_operating_hours"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/get_operating_hour_restrictions"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/get_operating_hours"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/get_operating_hour_restrictions"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/get_operating_hours"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/get_operating_hour_restrictions"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/get_operating_hours"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/get_operating_hour_restrictions"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/get_operating_hours"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/get_operating_hour_restrictions"
       }
     ]
   }

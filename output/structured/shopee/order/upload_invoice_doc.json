@@ -3,9 +3,9 @@
   "module": "order",
   "endpoint_name": "upload_invoice_doc",
   "version": "v2",
-  "summary": "API to obtain buyer submitted invoice info for VN, TH and PH local sellers only",
-  "description": "API to obtain buyer submitted invoice info for VN, TH and PH local sellers only.",
-  "path": "/api/v2/order/get_buyer_invoice_info",
+  "summary": "This endpoint is for PH and BR local seller",
+  "description": "This endpoint is for PH and BR local seller. Upload the invoice document",
+  "path": "/api/v2/order/upload_invoice_doc",
   "http_method": [
     "POST"
   ],
@@ -142,31 +142,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/order/get_buyer_invoice_info"
+        "http_address": "https://partner.shopeemobile.com/api/v2/order/upload_invoice_doc"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/order/get_buyer_invoice_info"
+        "http_address": "https://openplatform.shopee.cn/api/v2/order/upload_invoice_doc"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/order/get_buyer_invoice_info"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/order/upload_invoice_doc"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/get_buyer_invoice_info"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/order/upload_invoice_doc"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/get_buyer_invoice_info"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/order/upload_invoice_doc"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/get_buyer_invoice_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/order/upload_invoice_doc"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/get_buyer_invoice_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/order/upload_invoice_doc"
       }
     ]
   }

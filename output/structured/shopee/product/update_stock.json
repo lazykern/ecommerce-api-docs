@@ -3,9 +3,9 @@
   "module": "product",
   "endpoint_name": "update_stock",
   "version": "v2",
-  "summary": "Update price",
-  "description": "Update price.",
-  "path": "/api/v2/product/update_price",
+  "summary": "Use this API to update one item_id for each call, but still can support updating multiple model_ids stock of the same item_id (If you need batch modification, please call multiple times)This API will update only \"seller_stock\"",
+  "description": "Use this API to update one item_id for each call, but still can support updating multiple model_ids stock of the same item_id (If you need batch modification, please call multiple times)This API will update only \"seller_stock\".Whenever there is a promotion ongoing or upcoming, the total stock must be larger than or equal to real-time “reserved_stock” promotion stock (Please check v2.get_item_promotion API for more details). Items that are deleted will not be allowed to modify stock.",
+  "path": "/api/v2/product/update_stock",
   "http_method": [
     "POST"
   ],
@@ -20,7 +20,7 @@
         "sample": "1000"
       },
       {
-        "name": "price_list",
+        "name": "stock_list",
         "type": "object[]",
         "required": true,
         "description": "Length should be between 1 to 50.",
@@ -34,10 +34,24 @@
         "sample": ""
       },
       {
-        "name": "original_price",
-        "type": "float",
+        "name": "seller_stock",
+        "type": "object[]",
         "required": true,
-        "description": "Original price for this model.For CO local VAT responsible seller：Please remember the price you set in here must be VAT inclusive. If you have any doubts on how to calculate VAT for your product please refer to the Seller Education Hub（https://seller.shopee.com.co/edu/article/13565）For SG/MY/BR/MX/PL/ES/AR seller: Sellers can set the price with two decimal place, other regions can only set the price as an integer.",
+        "description": "new stock info（Please notice that stock(including Seller Stock and Shopee Stock) should be larger than or equal to real-time reserved stock）",
+        "sample": ""
+      },
+      {
+        "name": "location_id",
+        "type": "string",
+        "required": false,
+        "description": "location id, you can get the location id from v2.shop.get_warehouse_detail api, if seller don't have any warehouse, you don't need to upload this field.",
+        "sample": ""
+      },
+      {
+        "name": "stock",
+        "type": "int64",
+        "required": true,
+        "description": "stock",
         "sample": ""
       }
     ],
@@ -379,31 +393,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/product/update_price"
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/update_stock"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/product/update_price"
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/update_stock"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/product/update_price"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/update_stock"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/update_price"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/update_stock"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/update_price"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/update_stock"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/update_price"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/update_stock"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/update_price"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/update_stock"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "shop",
   "endpoint_name": "get_authorised_reseller_brand",
   "version": "v2",
-  "summary": "get Seller Center notification, the permission is controlled by App type",
-  "description": "get Seller Center notification, the permission is controlled by App type",
-  "path": "/api/v2/shop/get_shop_notification",
+  "summary": "Get the authorised reseller brand list for the shop",
+  "description": "Get the authorised reseller brand list for the shop.",
+  "path": "/api/v2/shop/get_authorised_reseller_brand",
   "http_method": [
     "GET"
   ],
@@ -124,31 +124,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/shop/get_shop_notification"
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop/get_authorised_reseller_brand"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/shop/get_shop_notification"
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop/get_authorised_reseller_brand"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/shop/get_shop_notification"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop/get_authorised_reseller_brand"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop/get_shop_notification"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop/get_authorised_reseller_brand"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop/get_shop_notification"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop/get_authorised_reseller_brand"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop/get_shop_notification"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop/get_authorised_reseller_brand"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop/get_shop_notification"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop/get_authorised_reseller_brand"
       }
     ]
   }

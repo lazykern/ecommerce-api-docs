@@ -3,9 +3,9 @@
   "module": "top_picks",
   "endpoint_name": "delete_top_picks",
   "version": "v2",
-  "summary": "update a collection info",
-  "description": "update a collection info",
-  "path": "/api/v2/top_picks/update_top_picks",
+  "summary": "delete a collection",
+  "description": "delete a collection",
+  "path": "/api/v2/top_picks/delete_top_picks",
   "http_method": [
     "POST"
   ],
@@ -144,31 +144,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/top_picks/update_top_picks"
+        "http_address": "https://partner.shopeemobile.com/api/v2/top_picks/delete_top_picks"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/top_picks/update_top_picks"
+        "http_address": "https://openplatform.shopee.cn/api/v2/top_picks/delete_top_picks"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/top_picks/update_top_picks"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/top_picks/delete_top_picks"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/top_picks/update_top_picks"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/top_picks/delete_top_picks"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/top_picks/update_top_picks"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/top_picks/delete_top_picks"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/top_picks/update_top_picks"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/top_picks/delete_top_picks"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/top_picks/update_top_picks"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/top_picks/delete_top_picks"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "bundle_deal",
   "endpoint_name": "add_bundle_deal_item",
   "version": "v2",
-  "summary": "create bundle deal",
-  "description": "create bundle deal. Relevant restrictions refer to FAQ：https://open.shopee.com/faq/254",
-  "path": "/api/v2/bundle_deal/add_bundle_deal",
+  "summary": "add product to bundle deal",
+  "description": "add product to bundle deal",
+  "path": "/api/v2/bundle_deal/add_bundle_deal_item",
   "http_method": [
     "POST"
   ],
@@ -217,31 +217,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/bundle_deal/add_bundle_deal"
+        "http_address": "https://partner.shopeemobile.com/api/v2/bundle_deal/add_bundle_deal_item"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/bundle_deal/add_bundle_deal"
+        "http_address": "https://openplatform.shopee.cn/api/v2/bundle_deal/add_bundle_deal_item"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/bundle_deal/add_bundle_deal"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/bundle_deal/add_bundle_deal_item"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/bundle_deal/add_bundle_deal"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/bundle_deal/add_bundle_deal_item"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/bundle_deal/add_bundle_deal"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/bundle_deal/add_bundle_deal_item"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/bundle_deal/add_bundle_deal"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/bundle_deal/add_bundle_deal_item"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/bundle_deal/add_bundle_deal"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/bundle_deal/add_bundle_deal_item"
       }
     ]
   }

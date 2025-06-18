@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "create_publish_task",
   "version": "v2",
-  "summary": "Update size chart for global item",
-  "description": "Update size chart for global item. Only for China mainland sellers and Korean sellers.",
-  "path": "/api/v2/global_product/update_size_chart",
+  "summary": "Create publish task for global item",
+  "description": "Create publish task for global item. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/create_publish_task",
   "http_method": [
     "POST"
   ],
@@ -598,31 +598,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/update_size_chart"
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/create_publish_task"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/update_size_chart"
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/create_publish_task"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/update_size_chart"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/create_publish_task"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/update_size_chart"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/create_publish_task"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/update_size_chart"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/create_publish_task"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/update_size_chart"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/create_publish_task"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/update_size_chart"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/create_publish_task"
       }
     ]
   }

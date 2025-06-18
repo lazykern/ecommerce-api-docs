@@ -3,9 +3,9 @@
   "module": "media_space",
   "endpoint_name": "init_video_upload",
   "version": "v2",
-  "summary": "this api is for searching attribute value list for attribute with support_search_value flag",
-  "description": "this api is for searching attribute value list for attribute with support_search_value flag",
-  "path": "/api/v2/global_product/search_global_attribute_value_list",
+  "summary": "Initiate video upload session",
+  "description": "Initiate video upload session. Video duration should be between 10s and 60s (inclusive).",
+  "path": "/api/v2/media_space/init_video_upload",
   "http_method": [
     "POST"
   ],
@@ -147,31 +147,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/search_global_attribute_value_list"
+        "http_address": "https://partner.shopeemobile.com/api/v2/media_space/init_video_upload"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/search_global_attribute_value_list"
+        "http_address": "https://openplatform.shopee.cn/api/v2/media_space/init_video_upload"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/search_global_attribute_value_list"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/media_space/init_video_upload"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/search_global_attribute_value_list"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/media_space/init_video_upload"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/search_global_attribute_value_list"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/media_space/init_video_upload"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/search_global_attribute_value_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/media_space/init_video_upload"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/search_global_attribute_value_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/media_space/init_video_upload"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "product",
   "endpoint_name": "update_model",
   "version": "v2",
-  "summary": "Add model",
-  "description": "Add model. More detail please check: https://open.shopee.com/developer-guide/219",
-  "path": "/api/v2/product/add_model",
+  "summary": "Update seller sku/ pre order/ model status for model",
+  "description": "Update seller sku/ pre order/ model status for model.",
+  "path": "/api/v2/product/update_model",
   "http_method": [
     "POST"
   ],
@@ -305,31 +305,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/product/add_model"
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/update_model"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/product/add_model"
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/update_model"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/product/add_model"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/update_model"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/add_model"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/update_model"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/add_model"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/update_model"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/add_model"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/update_model"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/add_model"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/update_model"
       }
     ]
   }

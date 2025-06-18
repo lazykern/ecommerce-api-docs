@@ -3,9 +3,9 @@
   "module": "payment",
   "endpoint_name": "get_escrow_detail",
   "version": "v2",
-  "summary": "Use this api to get first mile channel list",
-  "description": "Use this api to get first mile channel list.",
-  "path": "/api/v2/first_mile/get_channel_list",
+  "summary": "Use this API to fetch the accounting detail of order",
+  "description": "Use this API to fetch the accounting detail of order.",
+  "path": "/api/v2/payment/get_escrow_detail",
   "http_method": [
     "GET"
   ],
@@ -896,31 +896,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/first_mile/get_channel_list"
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_escrow_detail"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/first_mile/get_channel_list"
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_escrow_detail"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/first_mile/get_channel_list"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_escrow_detail"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/first_mile/get_channel_list"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_escrow_detail"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/first_mile/get_channel_list"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_escrow_detail"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/first_mile/get_channel_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_escrow_detail"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/first_mile/get_channel_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_escrow_detail"
       }
     ]
   }

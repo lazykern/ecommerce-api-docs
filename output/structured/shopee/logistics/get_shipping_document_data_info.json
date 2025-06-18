@@ -3,9 +3,9 @@
   "module": "logistics",
   "endpoint_name": "get_shipping_document_data_info",
   "version": "v2",
-  "summary": "Use this api to download shipping_document",
-  "description": "Use this api to download shipping_document. You have to call v2.logistics.create_shipping_document to create a new shipping document task first and call v2.logistics.get_shipping_document_resut to get the task status second. If the task is READY, you can download this shipping document.",
-  "path": "/api/v2/logistics/download_shipping_document",
+  "summary": "Use this api to fetch the logistics information of an order, these info can be used for airwaybill printing",
+  "description": "Use this api to fetch the logistics information of an order, these info can be used for airwaybill printing. May not be applicable for local channel airwaybill. Besides, this api supports returning personal info as images.",
+  "path": "/api/v2/logistics/get_shipping_document_data_info",
   "http_method": [
     "POST"
   ],
@@ -965,31 +965,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/download_shipping_document"
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/get_shipping_document_data_info"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/download_shipping_document"
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/get_shipping_document_data_info"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/download_shipping_document"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/get_shipping_document_data_info"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/download_shipping_document"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/get_shipping_document_data_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/download_shipping_document"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/get_shipping_document_data_info"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/download_shipping_document"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/get_shipping_document_data_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/download_shipping_document"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/get_shipping_document_data_info"
       }
     ]
   }

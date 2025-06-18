@@ -110,10 +110,21 @@ async def worker(browser, endpoint_names, worker_id):
             try:
                 endpoint_link_locator = page.locator(f".api-reference-item[data-ts-content_name='{endpoint_name}']")
                 await endpoint_link_locator.click()
-                await page.wait_for_load_state('networkidle', timeout=30000)
-                
+
+                # BUG FIX:
+                # Instead of just waiting for networkidle, wait for the title of the
+                # API documentation to update to the name of the endpoint we expect.
+                # This is a much more reliable method for SPAs.
+                expected_title_locator = page.locator(f".api-reference-name:has-text('{endpoint_name}')")
+                await expected_title_locator.wait_for(timeout=30000)
+
+                # A short, secondary wait for networkidle can still be beneficial to ensure
+                # that all lazy-loaded content (like code examples) has finished loading.
+                await page.wait_for_load_state('networkidle', timeout=15000)
+
                 documentation = await scrape_endpoint_documentation(page, endpoint_name)
                 worker_docs[endpoint_name] = documentation
+
             except PlaywrightTimeoutError:
                 print(f"  [Worker {worker_id}] Timeout processing endpoint {endpoint_name}. Skipping.")
                 continue
@@ -126,7 +137,7 @@ async def worker(browser, endpoint_names, worker_id):
     finally:
         await context.close()
         print(f"[Worker {worker_id}] Finished.")
-    
+
     return worker_docs
 
 async def main(args):

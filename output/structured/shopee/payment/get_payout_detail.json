@@ -3,9 +3,9 @@
   "module": "payment",
   "endpoint_name": "get_payout_detail",
   "version": "v2",
-  "summary": "Get the installment state of shop",
-  "description": "Get the installment state of shop.",
-  "path": "/api/v2/payment/get_shop_installment_status",
+  "summary": "This API is applicable for Cross Border (CB) sellers only to get the shop's payout data, such as the payout amount, currency, FX rate, the payout's associated order income and adjustment records etc",
+  "description": "This API is applicable for Cross Border (CB) sellers only to get the shop's payout data, such as the payout amount, currency, FX rate, the payout's associated order income and adjustment records etc.",
+  "path": "/api/v2/payment/get_payout_detail",
   "http_method": [
     "GET"
   ],
@@ -279,31 +279,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_shop_installment_status"
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_payout_detail"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_shop_installment_status"
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_payout_detail"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_shop_installment_status"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_payout_detail"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_shop_installment_status"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_payout_detail"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_shop_installment_status"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_payout_detail"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_shop_installment_status"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_payout_detail"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_shop_installment_status"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_payout_detail"
       }
     ]
   }

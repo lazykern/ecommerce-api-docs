@@ -3,9 +3,9 @@
   "module": "payment",
   "endpoint_name": "get_wallet_transaction_list",
   "version": "v2",
-  "summary": "Obtain payment method (no authentication required)",
-  "description": "Obtain payment method (no authentication required)",
-  "path": "/api/v2/payment/get_payment_method_list",
+  "summary": "Use this API to get the transaction records of wallet",
+  "description": "Use this API to get the transaction records of wallet. Only applicable for local shops",
+  "path": "/api/v2/payment/get_wallet_transaction_list",
   "http_method": [
     "GET"
   ],
@@ -297,31 +297,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_payment_method_list"
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_wallet_transaction_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_payment_method_list"
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_wallet_transaction_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_payment_method_list"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_wallet_transaction_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_payment_method_list"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_wallet_transaction_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_payment_method_list"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_wallet_transaction_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_payment_method_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_wallet_transaction_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_payment_method_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_wallet_transaction_list"
       }
     ]
   }

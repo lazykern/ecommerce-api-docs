@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "get_publishable_shop",
   "version": "v2",
-  "summary": "Get category tree data",
-  "description": "Get category tree data. More detail please check https://open.shopee.com/developer-guide/209",
-  "path": "/api/v2/product/get_category",
+  "summary": "Get publishable shop list for global item",
+  "description": "Get publishable shop list for global item. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/get_publishable_shop",
   "http_method": [
     "GET"
   ],

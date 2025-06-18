@@ -3,9 +3,9 @@
   "module": "logistics",
   "endpoint_name": "batch_ship_order",
   "version": "v2",
-  "summary": "For CB orders that fulfilled by 3PF, support 3PF Warehouse Vendors to update the tpf_tracking_status when 3PF warehouse receive the order and complete the outbound of the package",
-  "description": "For CB orders that fulfilled by 3PF, support 3PF Warehouse Vendors to update the tpf_tracking_status when 3PF warehouse receive the order and complete the outbound of the package. CB orders that fulfilled by 3PF： v2.shop.get_shop_info - shop_fulfillment_flag in {Pure - 3PF Shop,PFF - 3PF Shop,LFF Hybrid Shop} And v2.order.get_order_detail - fulfillment_flag = fulfilled_by_local_seller",
-  "path": "/api/v2/logistics/batch_update_tpf_warehouse_tracking_status",
+  "summary": "Use this api to batch initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels",
+  "description": "Use this api to batch initiate logistics including arrange pickup, dropoff or shipment for non-integrated logistic channels. Should call v2.logistics.get_shipping_parameter to fetch all required param first. It's recommended to initiate logistics one hour after the orders were placed since there is one-hour window buyer can cancel any order without request to seller.Only channel 90003 - Padrão in Brazil has the permission of this API.",
+  "path": "/api/v2/logistics/batch_ship_order",
   "http_method": [
     "POST"
   ],
@@ -430,31 +430,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/batch_ship_order"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/batch_ship_order"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/batch_ship_order"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/batch_ship_order"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/batch_ship_order"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/batch_ship_order"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/batch_update_tpf_warehouse_tracking_status"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/batch_ship_order"
       }
     ]
   }

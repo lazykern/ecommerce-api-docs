@@ -3,11 +3,11 @@
   "module": "product",
   "endpoint_name": "update_sip_item_price",
   "version": "v2",
-  "summary": "Get item promotion info",
-  "description": "Get item promotion info.",
-  "path": "/api/v2/product/get_item_promotion",
+  "summary": "Update sip item price",
+  "description": "Update sip item price.",
+  "path": "/api/v2/product/update_sip_item_price",
   "http_method": [
-    "GET"
+    "POST"
   ],
   "parameters": {
     "path": [],
@@ -203,31 +203,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_item_promotion"
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/update_sip_item_price"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_item_promotion"
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/update_sip_item_price"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_item_promotion"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/update_sip_item_price"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_item_promotion"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/update_sip_item_price"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_item_promotion"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/update_sip_item_price"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_item_promotion"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/update_sip_item_price"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_item_promotion"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/update_sip_item_price"
       }
     ]
   }

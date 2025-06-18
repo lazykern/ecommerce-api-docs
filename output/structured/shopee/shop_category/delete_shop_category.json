@@ -7,7 +7,7 @@
   "description": "Use this call to delete a existing shop collecion",
   "path": "/api/v2/shop_category/delete_shop_category",
   "http_method": [
-    "GET"
+    "POST"
   ],
   "parameters": {
     "path": [],

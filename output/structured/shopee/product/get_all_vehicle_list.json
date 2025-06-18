@@ -5,7 +5,7 @@
   "version": "v2",
   "summary": "Use this Open API to get all vehicle list",
   "description": "Use this Open API to get all vehicle list.",
-  "path": "/api/v2/product/get_category",
+  "path": "/api/v2/product/get_all_vehicle_list",
   "http_method": [
     "GET"
   ],

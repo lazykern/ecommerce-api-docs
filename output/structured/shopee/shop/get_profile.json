@@ -3,9 +3,9 @@
   "module": "shop",
   "endpoint_name": "get_profile",
   "version": "v2",
-  "summary": "Use this call to get information of shop",
-  "description": "Use this call to get information of shop",
-  "path": "/api/v2/shop/get_shop_info",
+  "summary": "This API support to get information of shop",
+  "description": "This API support to get information of shop.",
+  "path": "/api/v2/shop/get_profile",
   "http_method": [
     "GET"
   ],
@@ -158,31 +158,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/shop/get_shop_info"
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop/get_profile"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/shop/get_shop_info"
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop/get_profile"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/shop/get_shop_info"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop/get_profile"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop/get_shop_info"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop/get_profile"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop/get_shop_info"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop/get_profile"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop/get_shop_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop/get_profile"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop/get_shop_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop/get_profile"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "voucher",
   "endpoint_name": "delete_voucher",
   "version": "v2",
-  "summary": "Add voucher",
-  "description": "Add voucher",
-  "path": "/api/v2/voucher/add_voucher",
+  "summary": "Delete voucher",
+  "description": "Delete voucher",
+  "path": "/api/v2/voucher/delete_voucher",
   "http_method": [
     "POST"
   ],
@@ -136,31 +136,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/voucher/add_voucher"
+        "http_address": "https://partner.shopeemobile.com/api/v2/voucher/delete_voucher"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/voucher/add_voucher"
+        "http_address": "https://openplatform.shopee.cn/api/v2/voucher/delete_voucher"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/voucher/add_voucher"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/voucher/delete_voucher"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/voucher/add_voucher"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/voucher/delete_voucher"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/voucher/add_voucher"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/voucher/delete_voucher"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/voucher/add_voucher"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/voucher/delete_voucher"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/voucher/add_voucher"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/voucher/delete_voucher"
       }
     ]
   }

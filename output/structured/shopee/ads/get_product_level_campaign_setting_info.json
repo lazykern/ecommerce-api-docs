@@ -3,9 +3,9 @@
   "module": "ads",
   "endpoint_name": "get_product_level_campaign_setting_info",
   "version": "v2",
-  "summary": "Call this API to fetch all the product campaign ids displayed on advertiser platform under a specific Shop",
-  "description": "Call this API to fetch all the product campaign ids displayed on advertiser platform under a specific Shop",
-  "path": "/api/v2/ads/get_product_level_campaign_id_list",
+  "summary": "Call this API to fetch all the campaign setting info under this Shop",
+  "description": "Call this API to fetch all the campaign setting info under this Shop.",
+  "path": "/api/v2/ads/get_product_level_campaign_setting_info",
   "http_method": [
     "GET"
   ],
@@ -319,31 +319,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_product_level_campaign_id_list"
+        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_product_level_campaign_setting_info"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_product_level_campaign_id_list"
+        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_product_level_campaign_setting_info"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_product_level_campaign_id_list"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_product_level_campaign_setting_info"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_product_level_campaign_id_list"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_product_level_campaign_setting_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_product_level_campaign_id_list"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_product_level_campaign_setting_info"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_product_level_campaign_id_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_product_level_campaign_setting_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_product_level_campaign_id_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_product_level_campaign_setting_info"
       }
     ]
   }

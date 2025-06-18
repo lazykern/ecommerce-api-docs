@@ -3,11 +3,11 @@
   "module": "ads",
   "endpoint_name": "create_manual_product_ads",
   "version": "v2",
-  "summary": "Call this API to fetch all the campaign setting info under this Shop",
-  "description": "Call this API to fetch all the campaign setting info under this Shop.",
-  "path": "/api/v2/ads/get_product_level_campaign_setting_info",
+  "summary": "Use this API to create Manual Selection Product Ads",
+  "description": "Use this API to create Manual Selection Product Ads",
+  "path": "/api/v2/ads/create_manual_product_ads",
   "http_method": [
-    "GET"
+    "POST"
   ],
   "parameters": {
     "path": [],
@@ -299,31 +299,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_product_level_campaign_setting_info"
+        "http_address": "https://partner.shopeemobile.com/api/v2/ads/create_manual_product_ads"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_product_level_campaign_setting_info"
+        "http_address": "https://openplatform.shopee.cn/api/v2/ads/create_manual_product_ads"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_product_level_campaign_setting_info"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/create_manual_product_ads"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_product_level_campaign_setting_info"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/create_manual_product_ads"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_product_level_campaign_setting_info"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/create_manual_product_ads"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_product_level_campaign_setting_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/create_manual_product_ads"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_product_level_campaign_setting_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/create_manual_product_ads"
       }
     ]
   }

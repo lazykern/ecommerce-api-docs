@@ -3,23 +3,15 @@
   "module": "product",
   "endpoint_name": "get_boosted_list",
   "version": "v2",
-  "summary": "Boost item",
-  "description": "Boost item.",
-  "path": "/api/v2/product/boost_item",
+  "summary": "Get boosted item list",
+  "description": "Get boosted item list.",
+  "path": "/api/v2/product/get_boosted_list",
   "http_method": [
-    "POST"
+    "GET"
   ],
   "parameters": {
     "path": [],
-    "query": [
-      {
-        "name": "item_id_list",
-        "type": "int64[]",
-        "required": true,
-        "description": "Shopee's unique identifier for an item, limit:[1,5]",
-        "sample": ""
-      }
-    ],
+    "query": [],
     "header": [],
     "body": [],
     "common": []
@@ -198,31 +190,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/product/boost_item"
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_boosted_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/product/boost_item"
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_boosted_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/product/boost_item"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_boosted_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/boost_item"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_boosted_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/boost_item"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_boosted_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/boost_item"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_boosted_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/boost_item"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_boosted_list"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "product",
   "endpoint_name": "get_brand_list",
   "version": "v2",
-  "summary": "Get the attribute tree for categories",
-  "description": "Get the attribute tree for categories",
-  "path": "/api/v2/product/get_attribute_tree",
+  "summary": "Get the brand data of a leaf category",
+  "description": "Get the brand data of a leaf category. More detail please check: https://open.shopee.com/developer-guide/209",
+  "path": "/api/v2/product/get_brand_list",
   "http_method": [
     "GET"
   ],
@@ -268,31 +268,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_attribute_tree"
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_brand_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_attribute_tree"
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_brand_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_attribute_tree"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_brand_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_attribute_tree"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_brand_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_attribute_tree"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_brand_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_attribute_tree"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_brand_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_attribute_tree"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_brand_list"
       }
     ]
   }

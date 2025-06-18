@@ -3,9 +3,9 @@
   "module": "logistics",
   "endpoint_name": "create_booking_shipping_document",
   "version": "v2",
-  "summary": "Use this api to get the selectable shipping_document_type and suggested shipping_document_type",
-  "description": "Use this api to get the selectable shipping_document_type and suggested shipping_document_type.",
-  "path": "/api/v2/logistics/get_booking_shipping_document_parameter",
+  "summary": "Use this api to create shipping document task for each booking and this API is only available after retrieving the tracking number",
+  "description": "Use this api to create shipping document task for each booking and this API is only available after retrieving the tracking number.",
+  "path": "/api/v2/logistics/create_booking_shipping_document",
   "http_method": [
     "POST"
   ],
@@ -142,31 +142,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/get_booking_shipping_document_parameter"
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/create_booking_shipping_document"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/get_booking_shipping_document_parameter"
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/create_booking_shipping_document"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/get_booking_shipping_document_parameter"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/create_booking_shipping_document"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/get_booking_shipping_document_parameter"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/create_booking_shipping_document"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/get_booking_shipping_document_parameter"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/create_booking_shipping_document"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/get_booking_shipping_document_parameter"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/create_booking_shipping_document"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/get_booking_shipping_document_parameter"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/create_booking_shipping_document"
       }
     ]
   }

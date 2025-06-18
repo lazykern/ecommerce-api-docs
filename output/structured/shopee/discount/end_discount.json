@@ -5,9 +5,9 @@
   "version": "v2",
   "summary": "Use this api to end shop discount activity",
   "description": "Use this api to end shop discount activity",
-  "path": "/api/v2/product/get_category",
+  "path": "/api/v2/discount/end_discount",
   "http_method": [
-    "GET"
+    "POST"
   ],
   "parameters": {
     "path": [],

@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "update_tier_variation",
   "version": "v2",
-  "summary": "Only for China mainland sellers and Korean sellers",
-  "description": "Only for China mainland sellers and Korean sellers. If you only define color, it is one tier, if you define color and size, it is two tier. Support two tier structures at most. This API can change no tier to one tier, no tier to two tier, one tier to two tier, two tier to one tier, one tier to no tier, two tier to no tier. Please create variants after an interval of 5 seconds after creating an item, as there may be a delay.",
-  "path": "/api/v2/global_product/init_tier_variation",
+  "summary": "Update global product tier variation",
+  "description": "Update global product tier variation. Only for China mainland sellers and Korean sellers.This api can only be used without changing the tier structure, you can add options, delete options, and update the option image by this api.",
+  "path": "/api/v2/global_product/update_tier_variation",
   "http_method": [
     "POST"
   ],
@@ -309,31 +309,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/init_tier_variation"
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/update_tier_variation"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/init_tier_variation"
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/update_tier_variation"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/init_tier_variation"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/update_tier_variation"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/init_tier_variation"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/update_tier_variation"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/init_tier_variation"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/update_tier_variation"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/init_tier_variation"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/update_tier_variation"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/init_tier_variation"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/update_tier_variation"
       }
     ]
   }

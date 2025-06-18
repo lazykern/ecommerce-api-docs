@@ -3,9 +3,9 @@
   "module": "media_space",
   "endpoint_name": "complete_video_upload",
   "version": "v2",
-  "summary": "Upload video file by part using the upload_id in initiate_video_upload",
-  "description": "Upload video file by part using the upload_id in initiate_video_upload. The request Content-Type of this API should be of multipart/form-data",
-  "path": "/api/v2/media_space/upload_video_part",
+  "summary": "Complete the video upload and starts the transcoding process when all parts are uploaded successfully",
+  "description": "Complete the video upload and starts the transcoding process when all parts are uploaded successfully.",
+  "path": "/api/v2/media_space/complete_video_upload",
   "http_method": [
     "POST"
   ],
@@ -159,31 +159,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/media_space/upload_video_part"
+        "http_address": "https://partner.shopeemobile.com/api/v2/media_space/complete_video_upload"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/media_space/upload_video_part"
+        "http_address": "https://openplatform.shopee.cn/api/v2/media_space/complete_video_upload"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/media_space/upload_video_part"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/media_space/complete_video_upload"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/media_space/upload_video_part"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/media_space/complete_video_upload"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/media_space/upload_video_part"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/media_space/complete_video_upload"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/media_space/upload_video_part"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/media_space/complete_video_upload"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/media_space/upload_video_part"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/media_space/complete_video_upload"
       }
     ]
   }

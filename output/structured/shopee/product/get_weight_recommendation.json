@@ -3,9 +3,9 @@
   "module": "product",
   "endpoint_name": "get_weight_recommendation",
   "version": "v2",
-  "summary": "This api just used for Meta query the default model id list and only support TH",
-  "description": "This api just used for Meta query the default model id list and only support TH",
-  "path": "/api/v2/item/get_product_info",
+  "summary": "Get recommended weight",
+  "description": "Get recommended weight. Now only BR shop support to use this api to get recommended weight.",
+  "path": "/api/v2/product/get_weight_recommendation",
   "http_method": [
     "POST"
   ],
@@ -223,31 +223,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/item/get_product_info"
+        "http_address": "https://partner.shopeemobile.com/api/v2/product/get_weight_recommendation"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/item/get_product_info"
+        "http_address": "https://openplatform.shopee.cn/api/v2/product/get_weight_recommendation"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/item/get_product_info"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/product/get_weight_recommendation"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/item/get_product_info"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/product/get_weight_recommendation"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/item/get_product_info"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/product/get_weight_recommendation"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/item/get_product_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/product/get_weight_recommendation"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/item/get_product_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/product/get_weight_recommendation"
       }
     ]
   }

@@ -3,9 +3,9 @@
   "module": "logistics",
   "endpoint_name": "delete_address",
   "version": "v2",
-  "summary": "Use this API to set address config of your shop",
-  "description": "Use this API to set address config of your shop.",
-  "path": "/api/v2/logistics/set_address_config",
+  "summary": "Use this api to delete address",
+  "description": "Use this api to delete address.",
+  "path": "/api/v2/logistics/delete_address",
   "http_method": [
     "POST"
   ],
@@ -136,31 +136,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/set_address_config"
+        "http_address": "https://partner.shopeemobile.com/api/v2/logistics/delete_address"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/set_address_config"
+        "http_address": "https://openplatform.shopee.cn/api/v2/logistics/delete_address"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/set_address_config"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/logistics/delete_address"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/set_address_config"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/logistics/delete_address"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/set_address_config"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/logistics/delete_address"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/set_address_config"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/logistics/delete_address"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/set_address_config"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/logistics/delete_address"
       }
     ]
   }

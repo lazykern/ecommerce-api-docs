@@ -3,9 +3,9 @@
   "module": "account_health",
   "endpoint_name": "get_late_orders",
   "version": "v2",
-  "summary": "Get the Problematic Listings to improve the listings to avoid incurring penalty points",
-  "description": "Get the Problematic Listings to improve the listings to avoid incurring penalty points.",
-  "path": "/api/v2/account_health/get_listings_with_issues",
+  "summary": "Get the Late Orders to take action to avoid order cancellation and penalty points",
+  "description": "Get the Late Orders to take action to avoid order cancellation and penalty points.",
+  "path": "/api/v2/account_health/get_late_orders",
   "http_method": [
     "GET"
   ],
@@ -118,31 +118,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/account_health/get_listings_with_issues"
+        "http_address": "https://partner.shopeemobile.com/api/v2/account_health/get_late_orders"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/account_health/get_listings_with_issues"
+        "http_address": "https://openplatform.shopee.cn/api/v2/account_health/get_late_orders"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/account_health/get_listings_with_issues"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/account_health/get_late_orders"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/account_health/get_listings_with_issues"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/account_health/get_late_orders"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/account_health/get_listings_with_issues"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/account_health/get_late_orders"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/account_health/get_listings_with_issues"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/account_health/get_late_orders"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/account_health/get_listings_with_issues"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/account_health/get_late_orders"
       }
     ]
   }

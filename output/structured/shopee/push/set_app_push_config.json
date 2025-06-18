@@ -3,11 +3,11 @@
   "module": "push",
   "endpoint_name": "set_app_push_config",
   "version": "v2",
-  "summary": "You can get shopee ip address ranges through this open api",
-  "description": "You can get shopee ip address ranges through this open api.",
-  "path": "/api/v2/public/get_shopee_ip_ranges",
+  "summary": "you can turn on or turn off your app push config setting through this open api",
+  "description": "you can turn on or turn off your app push config setting through this open api",
+  "path": "/api/v2/push/set_app_push_config",
   "http_method": [
-    "GET"
+    "POST"
   ],
   "parameters": {
     "path": [],
@@ -141,31 +141,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/public/get_shopee_ip_ranges"
+        "http_address": "https://partner.shopeemobile.com/api/v2/push/set_app_push_config"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/public/get_shopee_ip_ranges"
+        "http_address": "https://openplatform.shopee.cn/api/v2/push/set_app_push_config"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/public/get_shopee_ip_ranges"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/push/set_app_push_config"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/public/get_shopee_ip_ranges"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/push/set_app_push_config"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/public/get_shopee_ip_ranges"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/push/set_app_push_config"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/public/get_shopee_ip_ranges"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/push/set_app_push_config"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/public/get_shopee_ip_ranges"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/push/set_app_push_config"
       }
     ]
   }

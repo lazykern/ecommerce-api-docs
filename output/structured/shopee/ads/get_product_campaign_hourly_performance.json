@@ -3,9 +3,9 @@
   "module": "ads",
   "endpoint_name": "get_product_campaign_hourly_performance",
   "version": "v2",
-  "summary": "Use this API to get Product level ads multiple-days daily performance",
-  "description": "Use this API to get Product level ads multiple-days daily performance.",
-  "path": "/api/v2/ads/get_product_campaign_daily_performance",
+  "summary": "Use this API to get Product level ads single-day hourly performance",
+  "description": "Use this API to get Product level ads single-day hourly performance.",
+  "path": "/api/v2/ads/get_product_campaign_hourly_performance",
   "http_method": [
     "GET"
   ],
@@ -299,31 +299,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_product_campaign_daily_performance"
+        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_product_campaign_hourly_performance"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_product_campaign_daily_performance"
+        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_product_campaign_hourly_performance"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_product_campaign_daily_performance"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_product_campaign_hourly_performance"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_product_campaign_daily_performance"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_product_campaign_hourly_performance"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_product_campaign_daily_performance"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_product_campaign_hourly_performance"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_product_campaign_daily_performance"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_product_campaign_hourly_performance"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_product_campaign_daily_performance"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_product_campaign_hourly_performance"
       }
     ]
   }

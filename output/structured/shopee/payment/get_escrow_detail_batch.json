@@ -3,9 +3,9 @@
   "module": "payment",
   "endpoint_name": "get_escrow_detail_batch",
   "version": "v2",
-  "summary": "This API is applicable for Cross Border (CB) sellers only to get the detailed payout transaction data, both released and to-be released transaction can be found in here",
-  "description": "This API is applicable for Cross Border (CB) sellers only to get the detailed payout transaction data, both released and to-be released transaction can be found in here",
-  "path": "/api/v2/payment/get_billing_transaction_info",
+  "summary": "Use this API to fetch the details of order income by batch",
+  "description": "Use this API to fetch the details of order income by batch.",
+  "path": "/api/v2/payment/get_escrow_detail_batch",
   "http_method": [
     "POST"
   ],
@@ -796,31 +796,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_billing_transaction_info"
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_escrow_detail_batch"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_billing_transaction_info"
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_escrow_detail_batch"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_billing_transaction_info"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_escrow_detail_batch"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_billing_transaction_info"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_escrow_detail_batch"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_billing_transaction_info"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_escrow_detail_batch"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_billing_transaction_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_escrow_detail_batch"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_billing_transaction_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_escrow_detail_batch"
       }
     ]
   }

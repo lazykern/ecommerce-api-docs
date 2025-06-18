@@ -3,9 +3,9 @@
   "module": "payment",
   "endpoint_name": "get_payout_info",
   "version": "v2",
-  "summary": "Use this API to fetch the accounting list of order",
-  "description": "Use this API to fetch the accounting list of order.",
-  "path": "/api/v2/payment/get_escrow_list",
+  "summary": "This is a new API which applicable for Cross Border (CB) sellers only to get the shop's payout data, will be used for the original API v2",
+  "description": "This is a new API which applicable for Cross Border (CB) sellers only to get the shop's payout data, will be used for the original API v2.get_payout_details replacement, we provide data such as the payout amount, currency, FX rate, the payout's associated order income and adjustment records etc.",
+  "path": "/api/v2/payment/get_payout_info",
   "http_method": [
     "GET"
   ],
@@ -247,31 +247,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_escrow_list"
+        "http_address": "https://partner.shopeemobile.com/api/v2/payment/get_payout_info"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_escrow_list"
+        "http_address": "https://openplatform.shopee.cn/api/v2/payment/get_payout_info"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_escrow_list"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/payment/get_payout_info"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_escrow_list"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/payment/get_payout_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_escrow_list"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/payment/get_payout_info"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_escrow_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/payment/get_payout_info"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_escrow_list"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/payment/get_payout_info"
       }
     ]
   }

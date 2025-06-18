@@ -3,11 +3,11 @@
   "module": "shop_category",
   "endpoint_name": "get_shop_category_list",
   "version": "v2",
-  "summary": "Use this call to add a new shop collecion",
-  "description": "Use this call to add a new shop collecion",
-  "path": "/api/v2/shop_category/add_shop_category",
+  "summary": "Use this call to get list of shop categories",
+  "description": "Use this call to get list of shop categories",
+  "path": "/api/v2/shop_category/get_shop_category_list",
   "http_method": [
-    "POST"
+    "GET"
   ],
   "parameters": {
     "path": [],
@@ -187,31 +187,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/shop_category/add_shop_category"
+        "http_address": "https://partner.shopeemobile.com/api/v2/shop_category/get_shop_category_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/shop_category/add_shop_category"
+        "http_address": "https://openplatform.shopee.cn/api/v2/shop_category/get_shop_category_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_category/add_shop_category"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_category/get_shop_category_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_category/add_shop_category"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_category/get_shop_category_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_category/add_shop_category"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_category/get_shop_category_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_category/add_shop_category"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_category/get_shop_category_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_category/add_shop_category"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_category/get_shop_category_list"
       }
     ]
   }

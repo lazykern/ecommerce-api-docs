@@ -3,9 +3,9 @@
   "module": "global_product",
   "endpoint_name": "get_publish_task_result",
   "version": "v2",
-  "summary": "Get publishable shop list for global item",
-  "description": "Get publishable shop list for global item. Only for China mainland sellers and Korean sellers.",
-  "path": "/api/v2/global_product/get_publishable_shop",
+  "summary": "Get publish task result for global item",
+  "description": "Get publish task result for global item. Only for China mainland sellers and Korean sellers.",
+  "path": "/api/v2/global_product/get_publish_task_result",
   "http_method": [
     "GET"
   ],
@@ -226,31 +226,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_publishable_shop"
+        "http_address": "https://partner.shopeemobile.com/api/v2/global_product/get_publish_task_result"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_publishable_shop"
+        "http_address": "https://openplatform.shopee.cn/api/v2/global_product/get_publish_task_result"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_publishable_shop"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/global_product/get_publish_task_result"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_publishable_shop"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/global_product/get_publish_task_result"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_publishable_shop"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/global_product/get_publish_task_result"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_publishable_shop"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/global_product/get_publish_task_result"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_publishable_shop"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/global_product/get_publish_task_result"
       }
     ]
   }

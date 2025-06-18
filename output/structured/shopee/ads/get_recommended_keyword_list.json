@@ -3,9 +3,9 @@
   "module": "ads",
   "endpoint_name": "get_recommended_keyword_list",
   "version": "v2",
-  "summary": "Use this API to get Shop level info - i",
-  "description": "Use this API to get Shop level info - i.e. seller's toggle status is on/off",
-  "path": "/api/v2/ads/get_shop_toggle_info",
+  "summary": "Use this API to get the list of Recommended keywords by item and optionally a search keyword",
+  "description": "Use this API to get the list of Recommended keywords by item and optionally a search keyword",
+  "path": "/api/v2/ads/get_recommended_keyword_list",
   "http_method": [
     "GET"
   ],
@@ -169,31 +169,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_shop_toggle_info"
+        "http_address": "https://partner.shopeemobile.com/api/v2/ads/get_recommended_keyword_list"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_shop_toggle_info"
+        "http_address": "https://openplatform.shopee.cn/api/v2/ads/get_recommended_keyword_list"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_shop_toggle_info"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/ads/get_recommended_keyword_list"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_shop_toggle_info"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/ads/get_recommended_keyword_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_shop_toggle_info"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/ads/get_recommended_keyword_list"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_shop_toggle_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/ads/get_recommended_keyword_list"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_shop_toggle_info"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/ads/get_recommended_keyword_list"
       }
     ]
   }

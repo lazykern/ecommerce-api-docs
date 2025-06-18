@@ -3,9 +3,9 @@
   "module": "follow_prize",
   "endpoint_name": "add_follow_prize",
   "version": "v2",
-  "summary": "delete shop flash sale items",
-  "description": "delete shop flash sale items",
-  "path": "/api/v2/shop_flash_sale/delete_shop_flash_sale_items",
+  "summary": "OpenAPI add Follow Prize",
+  "description": "OpenAPI add Follow Prize",
+  "path": "/api/v2/follow_prize/add_follow_prize",
   "http_method": [
     "POST"
   ],
@@ -232,31 +232,31 @@
     "service_endpoints": [
       {
         "surroundings": "URL",
-        "http_address": "https://partner.shopeemobile.com/api/v2/shop_flash_sale/delete_shop_flash_sale_items"
+        "http_address": "https://partner.shopeemobile.com/api/v2/follow_prize/add_follow_prize"
       },
       {
         "surroundings": "URL（Chinese Mainland）",
-        "http_address": "https://openplatform.shopee.cn/api/v2/shop_flash_sale/delete_shop_flash_sale_items"
+        "http_address": "https://openplatform.shopee.cn/api/v2/follow_prize/add_follow_prize"
       },
       {
         "surroundings": "URL（Brazil）",
-        "http_address": "https://openplatform.shopee.com.br/api/v2/shop_flash_sale/delete_shop_flash_sale_items"
+        "http_address": "https://openplatform.shopee.com.br/api/v2/follow_prize/add_follow_prize"
       },
       {
         "surroundings": "Test URL",
-        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/shop_flash_sale/delete_shop_flash_sale_items"
+        "http_address": "https://partner.test-stable.shopeemobile.com/api/v2/follow_prize/add_follow_prize"
       },
       {
         "surroundings": "Test URL（Chinese Mainland）",
-        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/shop_flash_sale/delete_shop_flash_sale_items"
+        "http_address": "https://openplatform.test-stable.shopee.cn/api/v2/follow_prize/add_follow_prize"
       },
       {
         "surroundings": "Test URL Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/shop_flash_sale/delete_shop_flash_sale_items"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.sg/api/v2/follow_prize/add_follow_prize"
       },
       {
         "surroundings": "Test URL（Chinese Mainland） Sandbox v2",
-        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/shop_flash_sale/delete_shop_flash_sale_items"
+        "http_address": "https://openplatform.sandbox.test-stable.shopee.cn/api/v2/follow_prize/add_follow_prize"
       }
     ]
   }
