@@ -174,8 +174,8 @@ def process_shopee_docs(input_dir, output_dir):
     print(f"Finished processing for {platform}.")
 
 
-def process_tiktok_docs(input_dir, output_dir):
-    platform = "tiktok"
+def process_tiktok_shop_docs(input_dir, output_dir):
+    platform = "tiktok_shop"
     input_file = os.path.join(input_dir, "tiktok_shop.json")
     print(f"Processing {input_file}...")
 
@@ -257,7 +257,7 @@ def main(args):
     processors = {
         "Lazada": process_lazada_docs,
         "Shopee": process_shopee_docs,
-        "TikTok Shop": process_tiktok_docs,
+        "TikTok Shop": process_tiktok_shop_docs,
     }
 
     for name, processor_func in processors.items():
