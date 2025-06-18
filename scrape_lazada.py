@@ -3,9 +3,11 @@ from playwright.async_api import async_playwright, TimeoutError as PlaywrightTim
 import json
 import re
 import time
+import argparse
+import os
 
 # Number of parallel workers to run
-# Increased to 8 to better match user environment and potentially speed up scraping.
+# This will be set by the command-line argument.
 CONCURRENT_WORKERS = 8
 
 async def scrape_table(page, table_locator):
@@ -180,15 +182,19 @@ async def worker(browser, endpoint_paths, worker_id):
     print(f"[Worker {worker_id}] Finished.")
     return worker_docs
 
-async def main():
+async def main(args):
     """Main function to orchestrate the Lazada API documentation scraping."""
     start_time = time.time()
     all_documentation = {}
     BASE_URL = "https://open.lazada.com/apps/doc/api"
 
+    # Use the number of workers from the arguments
+    global CONCURRENT_WORKERS
+    CONCURRENT_WORKERS = args.workers
+
     print("Starting Playwright...")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
+        browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
 
         try:
@@ -239,19 +245,36 @@ async def main():
             print(f"A critical error occurred during setup: {e}")
         
         finally:
-            output_filename = "lazada.json"
-            print(f"\nSaving {len(all_documentation)} scraped API docs to '{output_filename}'...")
-            with open(output_filename, 'w', encoding='utf-8') as f:
+            output_file = args.output_file
+            # Ensure the output directory exists
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            print(f"\nSaving {len(all_documentation)} scraped API docs to '{output_file}'...")
+            with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(all_documentation, f, indent=2, ensure_ascii=False)
             
-            print(f"Successfully saved data to '{output_filename}'.")
+            print(f"Successfully saved data to '{output_file}'.")
             await browser.close()
             end_time = time.time()
             print(f"Scraping complete in {end_time - start_time:.2f} seconds.")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Scrape Lazada API documentation.")
+    parser.add_argument(
+        '--output-file',
+        type=str,
+        default='output/scraped/lazada.json',
+        help='The path to the output JSON file.'
+    )
+    parser.add_argument(
+        '--workers',
+        type=int,
+        default=8,
+        help='The number of concurrent workers to use for scraping.'
+    )
+    args = parser.parse_args()
+
     try:
-        asyncio.run(main())
+        asyncio.run(main(args))
     except KeyboardInterrupt:
         print("\nScraping interrupted by user.")
 

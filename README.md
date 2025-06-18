@@ -16,16 +16,16 @@ The primary goal is to transform messy, inconsistent web documentation into a co
 │   └── structured/
 │       ├── lazada/
 │       ├── shopee/
-│       └── tiktok_shop/
+│       └── tiktok/
 ├── scrape_lazada.py
 ├── scrape_shopee.py
 ├── scrape_tiktok_shop.py
 └── build_structured_docs.py
 ```
 
-- **`scrape_[platform].py`**: These scripts use Playwright to browse and scrape the raw API documentation from each platform's developer portal.
-- **`build_structured_docs.py`**: This script reads the raw JSON files from `output/scraped/`, cleans and standardizes the data, and organizes it into a clear, module-based structure in `output/structured/`.
-- **`output/scraped/`**: Contains the raw, unprocessed JSON output directly from the scraper scripts. This data is often messy and contains platform-specific inconsistencies.
+- **`scrape_[platform].py`**: These scripts use Playwright to browse and scrape the raw API documentation from each platform's developer portal. They are configurable via the command line.
+- **`build_structured_docs.py`**: This script reads the raw JSON files from `output/scraped/`, cleans and standardizes the data, and organizes it into a clear, module-based structure in `output/structured/`. It is also configurable.
+- **`output/scraped/`**: Contains the raw, unprocessed JSON output directly from the scraper scripts.
 - **`output/structured/`**: Contains the final, clean, and structured API documentation. The data is organized by platform and module, making it easy to navigate and use.
 
 ## How to Use
@@ -45,8 +45,9 @@ python -m playwright install
 
 ### 2. Run the Scrapers
 
-Execute the scraper scripts to gather the raw documentation from each platform. The output will be saved in the `output/scraped/` directory.
+Execute the scraper scripts to gather the raw documentation. You can run them without arguments to use the default settings, or you can customize the behavior.
 
+#### Default Usage
 ```bash
 # Scrape Lazada documentation
 python scrape_lazada.py
@@ -57,13 +58,30 @@ python scrape_shopee.py
 # Scrape TikTok Shop documentation
 python scrape_tiktok_shop.py
 ```
+These commands will use the default settings: 8 workers and will save the output to `output/scraped/[platform].json`.
+
+#### Custom Usage
+You can specify the number of workers and the output file path.
+```bash
+# Example: Scrape Lazada with 4 workers and a custom output file
+python scrape_lazada.py --workers 4 --output-file custom/lazada_raw.json
+```
 
 ### 3. Build the Structured Documentation
 
-After scraping, run the build script to process the raw data. This will generate the final, clean documentation in the `output/structured/` directory.
+After scraping, run the build script to process the raw data.
 
+#### Default Usage
 ```bash
 python build_structured_docs.py
+```
+This will read from `output/scraped/` and write the structured documentation to `output/structured/`.
+
+#### Custom Usage
+You can specify the input and output directories.
+```bash
+# Example: Build docs from a custom source to a custom destination
+python build_structured_docs.py --input-dir custom/ --output-dir release/docs
 ```
 
 ## Output Data Model
@@ -74,7 +92,7 @@ The final JSON files in `output/structured/` follow a consistent data model, mak
 
 ```json
 {
-  "platform": "tiktok_shop",
+  "platform": "tiktok",
   "module": "product",
   "endpoint_name": "products_search",
   "version": "202405",
@@ -106,7 +124,7 @@ For platforms with prose documentation (like TikTok Shop), articles are also sav
 
 ```json
 {
-  "platform": "tiktok_shop",
+  "platform": "tiktok",
   "page_type": "article",
   "module": "products",
   "title": "Products API overview",

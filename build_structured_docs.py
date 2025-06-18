@@ -2,6 +2,7 @@ import json
 import os
 import re
 from urllib.parse import unquote
+import argparse
 
 OUTPUT_DIR = "docs"
 
@@ -63,9 +64,9 @@ def get_module_and_name_from_path(path):
     return 'general', '_'.join(parts)
 
 
-def process_lazada_docs():
+def process_lazada_docs(input_dir, output_dir):
     platform = "lazada"
-    input_file = "lazada_api_documentation.json"
+    input_file = os.path.join(input_dir, "lazada.json")
     print(f"Processing {input_file}...")
     
     try:
@@ -117,15 +118,15 @@ def process_lazada_docs():
             "platform_specific": { "service_endpoints": endpoint_data.get("service_endpoints", []) }
         }
         
-        output_path = os.path.join(OUTPUT_DIR, platform, module, f"{safe_endpoint_name}.json")
+        output_path = os.path.join(output_dir, platform, module, f"{safe_endpoint_name}.json")
         save_json(structured_data, output_path)
     
     print(f"Finished processing for {platform}.")
 
 
-def process_shopee_docs():
+def process_shopee_docs(input_dir, output_dir):
     platform = "shopee"
-    input_file = "shopee_api_documentation.json"
+    input_file = os.path.join(input_dir, "shopee.json")
     print(f"Processing {input_file}...")
 
     try:
@@ -167,15 +168,15 @@ def process_shopee_docs():
             "platform_specific": { "service_endpoints": endpoint_data.get("common_parameters", []) }
         }
         
-        output_path = os.path.join(OUTPUT_DIR, platform, module, f"{safe_endpoint_name}.json")
+        output_path = os.path.join(output_dir, platform, module, f"{safe_endpoint_name}.json")
         save_json(structured_data, output_path)
 
     print(f"Finished processing for {platform}.")
 
 
-def process_tiktok_docs():
-    platform = "tiktok_shop"
-    input_file = "tiktok_shop_api_documentation.json"
+def process_tiktok_docs(input_dir, output_dir):
+    platform = "tiktok"
+    input_file = os.path.join(input_dir, "tiktok_shop.json")
     print(f"Processing {input_file}...")
 
     try:
@@ -225,7 +226,7 @@ def process_tiktok_docs():
                 "platform_specific": {"original_url": url}
             }
             
-            output_path = os.path.join(OUTPUT_DIR, platform, module, f"{safe_endpoint_name}.json")
+            output_path = os.path.join(output_dir, platform, module, f"{safe_endpoint_name}.json")
             save_json(structured_data, output_path)
 
         elif page_type == 'Prose':
@@ -242,16 +243,16 @@ def process_tiktok_docs():
                 "platform_specific": {"original_url": url}
             }
 
-            output_path = os.path.join(OUTPUT_DIR, platform, module, f"{safe_title}.json")
+            output_path = os.path.join(output_dir, platform, module, f"{safe_title}.json")
             save_json(structured_data, output_path)
 
     print(f"Finished processing for {platform}.")
 
 
-def main():
+def main(args):
     """Main function to orchestrate the documentation processing."""
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
+    if not os.path.exists(args.output_dir):
+        os.makedirs(args.output_dir)
     
     processors = {
         "Lazada": process_lazada_docs,
@@ -261,12 +262,28 @@ def main():
 
     for name, processor_func in processors.items():
         try:
-            processor_func()
+            processor_func(args.input_dir, args.output_dir)
         except Exception as e:
             print(f"An error occurred processing {name}: {e}")
 
-    print(f"\nProcessing complete. Structured documentation is in '{OUTPUT_DIR}'.")
+    print(f"\nProcessing complete. Structured documentation is in '{args.output_dir}'.")
     print(f"You can explore the generated files to see the new structure.")
 
 if __name__ == "__main__":
-    main() 
+    parser = argparse.ArgumentParser(
+        description="Build structured API documentation from raw scraped JSON files."
+    )
+    parser.add_argument(
+        '--input-dir',
+        type=str,
+        default='output/scraped',
+        help='The directory containing the raw scraped JSON files.'
+    )
+    parser.add_argument(
+        '--output-dir',
+        type=str,
+        default='output/structured',
+        help='The directory where the structured JSON files will be saved.'
+    )
+    args = parser.parse_args()
+    main(args) 

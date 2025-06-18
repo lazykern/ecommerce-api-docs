@@ -3,6 +3,8 @@ from playwright.async_api import async_playwright, TimeoutError as PlaywrightTim
 import json
 import re
 import time
+import argparse
+import os
 
 # Number of parallel workers to run
 CONCURRENT_WORKERS = 8
@@ -127,15 +129,18 @@ async def worker(browser, endpoint_names, worker_id):
     
     return worker_docs
 
-async def main():
+async def main(args):
     """Main function to orchestrate the Shopee API documentation scraping."""
     start_time = time.time()
     all_documentation = {}
     BASE_API_REF_URL = "https://open.shopee.com/documents/v2/v2.product.get_category?module=89&type=1"
+    
+    global CONCURRENT_WORKERS
+    CONCURRENT_WORKERS = args.workers
 
     print("Starting Playwright...")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)  # Set headless=True to run without GUI
+        browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
 
         try:
@@ -148,19 +153,21 @@ async def main():
 
             endpoint_names = []
             for container in category_containers:
+                # This logic to expand categories seems to be based on the class,
+                # which might not be the most robust. Let's try to click if not expanded.
                 is_expanded = await container.query_selector('.category-folded-icon--expand') is not None
                 if not is_expanded:
                     category_name_box = await container.query_selector('.category-item-name-box')
                     if category_name_box:
                         await category_name_box.click()
-                        print(f"Expanded category: {category_name_box}")
+                        # It might be good to wait for a moment for the content to load
+                        await page.wait_for_timeout(200)
 
                 links = await container.query_selector_all('.api-reference-item')
                 for link in links:
                     name = await link.get_attribute('data-ts-content_name')
                     if name:
                         endpoint_names.append(name)
-                        print(f"Found endpoint: {name}")
 
             await page.close()
             print(f"Found a total of {len(endpoint_names)} endpoints to scrape.")
@@ -184,19 +191,35 @@ async def main():
             print(f"A critical error occurred during setup: {e}")
         
         finally:
-            output_filename = "shopee.json"
-            print(f"\nSaving {len(all_documentation)} scraped API docs to '{output_filename}'...")
-            with open(output_filename, 'w', encoding='utf-8') as f:
+            output_file = args.output_file
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            print(f"\nSaving {len(all_documentation)} scraped API docs to '{output_file}'...")
+            with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(all_documentation, f, indent=2, ensure_ascii=False)
             
-            print(f"Successfully saved data to '{output_filename}'.")
+            print(f"Successfully saved data to '{output_file}'.")
             await browser.close()
             end_time = time.time()
             print(f"Scraping complete in {end_time - start_time:.2f} seconds.")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Scrape Shopee API documentation.")
+    parser.add_argument(
+        '--output-file',
+        type=str,
+        default='output/scraped/shopee.json',
+        help='The path to the output JSON file.'
+    )
+    parser.add_argument(
+        '--workers',
+        type=int,
+        default=8,
+        help='The number of concurrent workers to use for scraping.'
+    )
+    args = parser.parse_args()
+    
     try:
-        asyncio.run(main())
+        asyncio.run(main(args))
     except KeyboardInterrupt:
         print("\nScraping interrupted by user.")
 

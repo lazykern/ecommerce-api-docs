@@ -3,6 +3,8 @@ from playwright.async_api import async_playwright, TimeoutError as PlaywrightTim
 import json
 import re
 import time
+import argparse
+import os
 
 CONCURRENT_WORKERS = 8
 
@@ -215,11 +217,14 @@ async def worker(browser, pages_to_scrape, worker_id):
     print(f"[Worker {worker_id}] Finished.")
     return worker_docs
 
-async def main():
+async def main(args):
     """Main function to orchestrate the TikTok Shop API documentation scraping."""
     start_time = time.time()
     all_documentation = {}
     BASE_URL = "https://partner.tiktokshop.com/docv2/page/666012dd609d4402cc3be995?external_id=666012dd609d4402cc3be995#"
+
+    global CONCURRENT_WORKERS
+    CONCURRENT_WORKERS = args.workers
 
     print("Starting Playwright for TikTok Shop...")
     async with async_playwright() as p:
@@ -245,32 +250,47 @@ async def main():
                 print("Sidebar expanded.")
 
             print("Expanding all categories...")
+            # Locate all category headers first.
             category_headers = await page.locator('a.style-module__side-menu-dir--IbLLG').all()
             for header in category_headers:
                 try:
-                    await header.click(timeout=2000, force=True)
-                    await asyncio.sleep(0.3)
+                    # Check if the category is already expanded by looking for a specific attribute or class.
+                    # This might need adjustment based on the actual DOM state for expanded items.
+                    is_expanded = await header.locator('svg.arco-icon-down').count() > 0
+                    if not is_expanded:
+                        await header.click(timeout=2000, force=True)
+                        await asyncio.sleep(0.3)
                 except Exception as e:
                     print(f"Could not click category header: {e}")
             print("Expanded all categories.")
             
-            # --- MODIFIED: Collect pages with their category context ---
-            all_menu_items = await page.locator('a.style-module__side-menu-item--pNjUL').all()
+            all_menu_items = await page.locator('div.style-module__side-menu--ZASKi div[role="menuitem"]').all()
             pages_to_scrape = []
             scraped_urls = set()
             current_category = "Uncategorized"
+
             for item in all_menu_items:
-                is_category = 'style-module__side-menu-dir--IbLLG' in (await item.get_attribute('class') or '')
-                if is_category:
-                    current_category = await item.locator('.style-module__side-menu-span--OT1zx').inner_text()
+                # Find the parent category group for the item.
+                # The structure seems to be that items are nested inside divs that have a category header.
+                # This is complex and might require a different approach if the DOM isn't consistent.
+                # A simpler way is to iterate and track the last seen category header.
                 
-                href = await item.get_attribute('href')
+                # Check if the item itself is a category header.
+                is_category_header = await item.locator('a.style-module__side-menu-dir--IbLLG').count() > 0
+                if is_category_header:
+                     header_element = item.locator('a.style-module__side-menu-dir--IbLLG')
+                     current_category = await header_element.locator('.style-module__side-menu-span--OT1zx').inner_text()
+                
+                # Process the link inside the menu item.
+                link_element = item.locator('a').first
+                href = await link_element.get_attribute('href')
+
                 if href and 'docv2/page/' in href:
                     full_url = f"https://partner.tiktokshop.com{href}"
                     if full_url not in scraped_urls:
                         pages_to_scrape.append((full_url, current_category.strip()))
                         scraped_urls.add(full_url)
-            
+
             await page.close()
             print(f"Found {len(pages_to_scrape)} unique pages to scrape (including articles).")
             
@@ -292,18 +312,34 @@ async def main():
             print(f"A critical error occurred during setup: {e}")
         
         finally:
-            output_filename = "tiktok_shop.json"
-            print(f"\nSaving {len(all_documentation)} scraped pages to '{output_filename}'...")
-            with open(output_filename, 'w', encoding='utf-8') as f:
+            output_file = args.output_file
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            print(f"\nSaving {len(all_documentation)} scraped pages to '{output_file}'...")
+            with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(all_documentation, f, indent=2, ensure_ascii=False)
             
-            print(f"Successfully saved data to '{output_filename}'.")
+            print(f"Successfully saved data to '{output_file}'.")
             await browser.close()
             end_time = time.time()
             print(f"Scraping complete in {end_time - start_time:.2f} seconds.")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Scrape TikTok Shop API documentation.")
+    parser.add_argument(
+        '--output-file',
+        type=str,
+        default='output/scraped/tiktok_shop.json',
+        help='The path to the output JSON file.'
+    )
+    parser.add_argument(
+        '--workers',
+        type=int,
+        default=8,
+        help='The number of concurrent workers to use for scraping.'
+    )
+    args = parser.parse_args()
+    
     try:
-        asyncio.run(main())
+        asyncio.run(main(args))
     except KeyboardInterrupt:
         print("\nScraping interrupted by user.")
