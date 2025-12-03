@@ -1,21 +1,19 @@
 API：[/product/global/extension](<https://open.lazada.com/apps/doc/api?cid=18&path=%2Fproduct%2Fglobal%2Fextension>)
 
- 
-
 **请求参数：**
 
-**参数** |  **类型** |  **描述**  
----|---|---  
-global_item_ids |  List<Long> |  根据globalId查询，返回所有国家的商品 // 优先使用这个进行查询 // 最多50个  
-item_ids |  List<Long> |  //global_item_ids 为空时查询，必须与country一起查询 // 最多50个  
-country |  String |  //global_item_ids 为空时查询，必须与item_ids一起查询  
-      
+参数 | 类型 | 描述
+---|---|---
+global_item_ids | List<Long> | 根据globalId查询，返回所有国家的商品 // 优先使用这个进行查询 // 最多50个
+item_ids | List<Long> | // global_item_ids 为空时查询，必须与country一起查询 // 最多50个
+country | String | // global_item_ids 为空时查询，必须与item_ids一起查询
+
+ 
+    
     
     "global_item_ids": [180226526], // 优先使用这个进行查询
     "item_ids": [13243454], //查询global时此字段为空
     "country": "SG" //查询global时此字段为空
-
- 
 
 **响应参数：**
     

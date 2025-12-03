@@ -1,50 +1,32 @@
 **LAZADA OPEN PLATFORM DEVELOPER AGREEMENT**
 
- 
-
 **INTRODUCTION**
-
- 
 
 The Lazada Open Platform provides a development environment for: (a) Developers to develop and integrate their applications with the Lazada systems via open APIs, and share the applications to Sellers; and (b) for Sellers to access and call open APIs via the Platform. Through the Platform, you (i.e. Sellers and Developers that use the Lazada Open Platform) can programmatically exchange approved categories of Data (including any relevant User Data or Buyer Data as defined below) relating to products, orders, package shipment, and finance to enable Developers to provide services to Sellers.
 
- 
-
 A developer may register as, or sign up to become, a Service Provider on the Lazada Seller Service Market via the Open Platform to offer, sell and/or provide their Services on the Lazada Seller Service Market in the Country Platform in which the Developer chooses to open its store.
-
- 
 
 Please read this Service Agreement, including any attachments, schedules and exhibits thereto which are incorporated by reference (collectively referred to as the "**Terms** ") carefully. These Terms govern your access to and use of the Open Platform and the Tools through which you may access the services offered by Lazada and its affiliates.
 
- 
-
-**By accessing or using the Open Platform and any of the Tools, you acknowledge that you have read and agree to be bound by these Terms as well as any other applicable terms, rules and policies as may from time to time be prescribed by Lazada. These may include the Developer Rules and the Security Measures, made available on the Open Platform Site.  If you do not agree to these terms, you must immediately cease access to and use of the Open Platform and the Tools.  ** Lazada may update the Terms of Use from time to time in accordance with these Terms and if you use the Open Platform or any of the Tools after the effective date of the amendment, you are deemed to have accepted such amendment in accordance with Clause 14 of these Terms. 
-
- 
+**By accessing or using the Open Platform and any of the Tools, you acknowledge that you have read and agree to be bound by these Terms as well as any other applicable terms, rules and policies as may from time to time be prescribed by Lazada. These may include the Developer Rules and the Security Measures, made available on the Open Platform Site. If you do not agree to these terms, you must immediately cease access to and use of the Open Platform and the Tools.** Lazada may update the Terms of Use from time to time in accordance with these Terms and if you use the Open Platform or any of the Tools after the effective date of the amendment, you are deemed to have accepted such amendment in accordance with Clause 14 of these Terms. 
 
 **If you are accessing or using the Open Platform and any of the Tools as an individual** , you represent and warrant that (i) you are at least 18 years of age or the minimum legal contracting age in all othfer relevant countries including the country in which you are resident or from which you use the Open Platform or the Tools, whichever is higher; and (ii) you are mentally sound and have sufficient mental capacity to enter into legally binding contractual arrangements.
 
- 
+**If you are accessing or using any of the Open Platform and the Tools on behalf of an entity,** you represent and warrant that (i) you have the full power, capacity and authority to bind that entity to the Terms; (ii) by accepting the Terms, you are doing so on behalf of that entity, and all references to "you" and similar expressions in these Terms shall mean you and that entity.
 
-**If you are accessing or using any of the Open Platform and the Tools on behalf of an entity,  **you represent and warrant that (i) you have the full power, capacity and authority to bind that entity to the Terms; (ii) by accepting the Terms, you are doing so on behalf of that entity, and all references to "you" and similar expressions in these Terms shall mean you and that entity.
-
- 
-
-**If you register as a Service Provider to offer, sell and/or provide Services on the Lazada Seller Service Market** , you agree that you shall accept and be bound by all rules, policies, guidelines, terms and conditions, etc that are applicable to Service Providers when accessing and using the Lazada Seller Service Market in the Country Platform in which you operate your store. For the avoidance of doubt, these Terms shall continue to apply to your access and use of the Open Platform and/or Tools (in addition to the rules, policies, guidelines, terms and conditions, etc that may be applicable to you as a Service Provider on the Lazada Seller Service Market).  
-
- 
+**If you register as a Service Provider to offer, sell and/or provide Services on the Lazada Seller Service Market** , you agree that you shall accept and be bound by all rules, policies, guidelines, terms and conditions, etc that are applicable to Service Providers when accessing and using the Lazada Seller Service Market in the Country Platform in which you operate your store. For the avoidance of doubt, these Terms shall continue to apply to your access and use of the Open Platform and/or Tools (in addition to the rules, policies, guidelines, terms and conditions, etc that may be applicable to you as a Service Provider on the Lazada Seller Service Market). 
 
 **1.DEFINITIONS AND INTERPRETATIONS**
 
-** ** 1.1. In these Terms, unless the context otherwise requires, the following definitions shall apply:
+**** 1.1. In these Terms, unless the context otherwise requires, the following definitions shall apply:
 
 "**Account** " has the meaning given to it in Clause 2.2.
 
 "**Affiliate** " with respect to a party means any person directly or indirectly controlling, controlled by, or under direct or indirect control with, such party, as the case may be.
 
-"**APIs** " means the application programming interfaces made available by Lazada via the Open Platform.  
+"**APIs** " means the application programming interfaces made available by Lazada via the Open Platform. 
 
-"**Applicable Laws** " means all applicable statutes, enactments, acts of the state legislature or parliament, laws, ordinances, rules, bye-laws, regulations, notifications, guidelines, directions, directives and orders of any governmental authority, statutory authority, tribunal, board, court or recognised stock exchange, as may be applicable, international treaties and regulations.  
+"**Applicable Laws** " means all applicable statutes, enactments, acts of the state legislature or parliament, laws, ordinances, rules, bye-laws, regulations, notifications, guidelines, directions, directives and orders of any governmental authority, statutory authority, tribunal, board, court or recognised stock exchange, as may be applicable, international treaties and regulations. 
 
 "**Application** " means the software application, website or other interface that you develop, own and/or operate in compliance with the Terms of Use for the specific use in connection with the Open Platform, Lazada Services, any Lazada Marketplace and/or in connection with the Services that you may offer, seller and/or provide on Lazada Seller Service Market platform, and shall include all Application Content and any fixes, updates, upgrades, modifications, enhancements, supplements to, revisions, new releases and new versions of such Application.
 
@@ -56,15 +38,15 @@ Please read this Service Agreement, including any attachments, schedules and exh
 
 "**Authorised User** " means any person or entity accessing or using the Account, and/or any of the Open Platform and the Tools on behalf of and/or under authorisation of the Developer;
 
-"**Buyer Data** " means any Personal Data relating to buyers (who access or use Lazada Marketplace and/or Lazada Services) that is processed by the Seller;
+“**Buyer Data** ” means any Personal Data relating to buyers (who access or use Lazada Marketplace and/or Lazada Services) that is processed by the Seller;
 
 "**Clause** " means a clause in these Terms.
 
 "**Confidential Information** " has the meaning given to it in Clause 13.1
 
- "**Control** " means either the ownership of share capital of a company (or its equivalent right of ownership) conferring more than 50% of the votes or power to direct its policies and/or management, whether by contract or otherwise and "**controls** ", "**controlling** " and "**controlled** " shall be construed accordingly.
+“**Control** ” means either the ownership of share capital of a company (or its equivalent right of ownership) conferring more than 50% of the votes or power to direct its policies and/or management, whether by contract or otherwise and “**controls** ”, “**controlling** ” and “**controlled** ” shall be construed accordingly.
 
-"**Country Platform** " means the country(ies) in which you choose to open a store to offer, sell and/or provide the Services via the Lazada Seller Service Market platform.
+“**Country Platform** ” means the country(ies) in which you choose to open a store to offer, sell and/or provide the Services via the Lazada Seller Service Market platform.
 
 "**Data** " means any data (including Personal Data), record, information and any other material, regardless of the form or media on which it may be recorded and includes, without limitation, all databases, text, graphics, photographs, animations, audio, music, video, links or other content made available by any party in connection with the use of the Open Platform and the Tools.
 
@@ -72,13 +54,13 @@ Please read this Service Agreement, including any attachments, schedules and exh
 
 "**Data Protection Laws** " means all applicable data protection and privacy laws and regulations, including all subsidiary legislation, regulations, orders, standards, guidelines or other like legal instruments related thereto and any amendments or re-enactments made from time to time which are applicable to the Personal Data.
 
-"**Developer** " or "**You** " means any person or entity which has submitted a valid application and has met the relevant authentication and other requirements to develop Applications for publication or distribution on the Open Platform in accordance with the Terms, and shall, where applicable, include any Authorised User of the Developer.
+“**Developer** ” or “**You** ” means any person or entity which has submitted a valid application and has met the relevant authentication and other requirements to develop Applications for publication or distribution on the Open Platform in accordance with the Terms, and shall, where applicable, include any Authorised User of the Developer.
 
 "**EULA** " refers to the end user license agreement between the Developer and the User entered into in accordance with Clause 5.1
 
 "**Force Majeure Event** " means any circumstance not within a party's reasonable control, including, without limitation (a) fire, storm, lightning, flood, drought, earthquake or other natural disaster or other similar acts of God; (b) epidemic or pandemic; (c) terrorist attack, civil war, civil commotion or riots, war, threat of or preparation for war, armed conflict, imposition of sanctions, embargo, or breaking off of diplomatic relations; (d) any law or any action taken by a governmental authority, including without limitation imposing an export or import restriction, quota or prohibition, or failing to grant a necessary licence or consent; (e) fire, explosion or accident; (f) any labour or trade dispute, strikes, industrial action or lockouts; (g) non-performance by suppliers or subcontractors; and (h) the unavailability, interruption or failure of utility services such as electricity, gas, water and telecommunications.
 
-"**Good Industry Practice(s)** " means the practices, procedures, methods and standards followed when work and services are undertaken in a sound and workmanlike manner, with due care and skill, with due expedition and without unnecessary or unreasonable delays, that are in accordance with applicable laws and that are consistent with best practice for an experienced, prudent and competent developer engaged in a similar type of undertaking under the same or similar circumstances as the Developer.
+“**Good Industry Practice(s)** ” means the practices, procedures, methods and standards followed when work and services are undertaken in a sound and workmanlike manner, with due care and skill, with due expedition and without unnecessary or unreasonable delays, that are in accordance with applicable laws and that are consistent with best practice for an experienced, prudent and competent developer engaged in a similar type of undertaking under the same or similar circumstances as the Developer.
 
 "**Lazada** " means Lazada South East Asia Pte. Ltd. (UEN: 201201679C), or any of its successors, permitted substitutes and permitted assigns (including pursuant to any assignments under Clause 19.1).
 
@@ -90,29 +72,29 @@ Please read this Service Agreement, including any attachments, schedules and exh
 
 "**Lazada Marketplaces** " means the Lazada-branded marketplaces on www.lazada.sg, www.lazada.com.my, www.lazada.co.th, www.lazada.com.ph, www.lazada.co.id, www.lazada.vn and any other internet domain property of any member of the Lazada Group. 
 
-"**Lazada Marketplace Entity** " means the relevant Lazada marketplace entities within Lazada Group which operate the Lazada Seller Service Market in the Country Platform where you choose to open a store to offer, sell and/or provide your Services.
+“**Lazada Marketplace Entity** ” means the relevant Lazada marketplace entities within Lazada Group which operate the Lazada Seller Service Market in the Country Platform where you choose to open a store to offer, sell and/or provide your Services.
 
 "**Lazada Policies** " means any relevant guidelines, notices, instructions, operating rules and policies (including the Open Platform Rules and the Privacy Policy) pertaining to access to, or use of, the Open Platform, Tools or Lazada Services which Lazada may issue, amend and/or update from time to time.
 
-"**Lazada Seller Service Market** " means the marketplace platform provided and operated by the relevant Lazada Marketplace Entity through which you may offer and provide your Services to Lazada Users. The Lazada Seller Service Market is accessible through the internet domain property that is operated by the relevant Lazada Marketplace Entity(ies) in the relevant Country Platform(s).
+“**Lazada Seller Service Market** ” means the marketplace platform provided and operated by the relevant Lazada Marketplace Entity through which you may offer and provide your Services to Lazada Users. The Lazada Seller Service Market is accessible through the internet domain property that is operated by the relevant Lazada Marketplace Entity(ies) in the relevant Country Platform(s).
 
 "**Lazada Services** " means the Lazada Marketplaces, the Lazada Content, the Lazada Seller Service Market and all other services, application and tools made available by Lazada Group to the Lazada Users (including but not limited to the Seller Centre) and all other services provided by Lazada Group under, pursuant to or in connection with each of the foregoing.
 
 "**Lazada User** " means any person who accesses any Lazada Marketplace and/or the Lazada Seller Service Market which for the avoidance of doubt, shall include (without limitation) any buyers and/or sellers who access or use Lazada Marketplace and/or Lazada Services (including the Lazada Seller Service Market).
 
-"**Losses** " means any and all liens, damages, penalties, losses, settlement sums, costs, expenses (of any kind or of any nature whatsoever (including third party claims, legal fees and expenses on a full indemnity basis, consultant's fees, experts' fees and other costs associated with litigation), disbursements, charges, obligations, actions, proceedings, litigation, judgments, suits, claims, demands and other liabilities, whether foreseeable or not, suffered or incurred by any person, whether arising in contract or tort (including negligence) or under any statute or under any other cause of action.
+"**Losses** " means any and all liens, damages, penalties, losses, settlement sums, costs, expenses (of any kind or of any nature whatsoever (including third party claims, legal fees and expenses on a full indemnity basis, consultant’s fees, experts’ fees and other costs associated with litigation), disbursements, charges, obligations, actions, proceedings, litigation, judgments, suits, claims, demands and other liabilities, whether foreseeable or not, suffered or incurred by any person, whether arising in contract or tort (including negligence) or under any statute or under any other cause of action.
 
 "**Intellectual Property Rights** " means all copyright, patents, trade marks, service marks, domain names, layout design rights, registered designs, design rights, database rights, trade or business names, rights protecting trade secrets and confidential information, rights protecting goodwill and reputation, and all other similar or corresponding proprietary rights and all applications for the same, whether presently existing or created in the future, anywhere in the world, whether registered or not, and all benefits, privileges, rights to sue, recover damages and obtain relief for any past, current or future infringement, misappropriation or violation of any of the foregoing rights.
 
-"**Marks** " means, with respect to an entity, such entity's names, trade marks, service marks, trade names, logos and other distinctive brand features.
+"**Marks** " means, with respect to an entity, such entity’s names, trade marks, service marks, trade names, logos and other distinctive brand features.
 
 "**Modification** " has the meaning given to it in Clause 14.1
 
 "**Open Platform** " means the online platform owned and operated by Lazada as part of the Lazada Open Platform Developers Program.
 
-"**Open Platform Rules** " means the rules, guidelines, and policies etc. applicable to your use of any of the Open Platform and the Tools, as they may appear on the Open Platform (including at <[Open Platform Rules and Penalty Measures](<https://open.lazada.com/doc/doc.htm?spm=a2o9m.11193494.0.0.191e266bBEvxZa#?nodeId=30411&docId=120730>)>) or be communicated to you from time to time by Lazada.
+“**Open Platform Rules** ” means the rules, guidelines, and policies etc. applicable to your use of any of the Open Platform and the Tools, as they may appear on the Open Platform (including at <[Open Platform Rules and Penalty Measures](<https://open.lazada.com/doc/doc.htm?spm=a2o9m.11193494.0.0.191e266bBEvxZa#?nodeId=30411&docId=120730>)>) or be communicated to you from time to time by Lazada.
 
-"**Personal Data** " shall mean all information as may be specified as "personal data", "personal information" or their equivalent under any applicable Data Protection Laws, and shall include, where applicable, any "sensitive personal information" or their equivalent under any applicable Data Protection Laws.
+"**Personal Data** " shall mean all information as may be specified as “personal data”, “personal information” or their equivalent under any applicable Data Protection Laws, and shall include, where applicable, any “sensitive personal information” or their equivalent under any applicable Data Protection Laws.
 
 "**Privacy Policy** " means the applicable privacy policy or privacy notice for the relevant Lazada Marketplace Entity through which you may offer and provide your Services to Users, or be communicated from time to time by Lazada.
 
@@ -127,21 +109,19 @@ Please read this Service Agreement, including any attachments, schedules and exh
   * is obscene, pornographic, indecent, counterfeited, fraudulent, stolen, harmful or otherwise illegal under the Applicable Laws; or
   * is or may be construed, in Lazada's sole opinion, as abusive, offensive or otherwise objectionable.
 
-
-
 "**Relevant Period** " has the meaning given to it in Clause 2.9.
 
 "**Security Measures** " means the security requirements and guidelines applicable to the development, deployment, operation, maintenance, and management of all Applications and Application Contents for use in connection with the Open Platform, the Lazada Services (including the Lazada Seller Service Market) and/or any Lazada Marketplace as made available on the Open Platform or be communicated from time to time by Lazada and/or its Affiliates.
 
-**" Seller" **means a registered seller on the Lazada Marketplaces.
+**“Seller”** means a registered seller on the Lazada Marketplaces.
 
-**" Seller Account" **has the meaning given to it in Clause 8.
+**“Seller Account”** has the meaning given to it in Clause 8.
 
-**" Seller Centre" **means any tool offered by Lazada to Seller for the operation of Seller's operations on the Lazada Marketplace and access to all the services and tools available at the Seller Centre.
+**“Seller Centre”** means any tool offered by Lazada to Seller for the operation of Seller’s operations on the Lazada Marketplace and access to all the services and tools available at the Seller Centre.
 
-"**Services** " means one or several products and service(s), which for the avoidance of doubt, may include (without limitation) digital products, software products and services, operation services, training services, design services and all other products and services that you may offer to Lazada Users on the Lazada Seller Service Market.
+“**Services** ” means one or several products and service(s), which for the avoidance of doubt, may include (without limitation) digital products, software products and services, operation services, training services, design services and all other products and services that you may offer to Lazada Users on the Lazada Seller Service Market.
 
-"**Service Provider** " means a service provider which offers the Services for sale on or through the Lazada Seller Service Market.
+“**Service Provider** ” means a service provider which offers the Services for sale on or through the Lazada Seller Service Market.
 
 "**Terms** " means the relevant terms of use (including but not limited to these Terms, the Lazada Policies, Open Platform Rules and the Privacy Policy) which apply to your use of the Open Platform and any of the Tools, as determined by Lazada.
 
@@ -149,11 +129,11 @@ Please read this Service Agreement, including any attachments, schedules and exh
 
 "**User** " means, in relation to any Application, the end-users of such Application, and anyone who sublicenses such Application.
 
-"**User Data " **means Data about Users (whether such end Users are natural persons or, to the extent consistent with privacy or data protection laws, legal persons).
+“**User Data”** means Data about Users (whether such end Users are natural persons or, to the extent consistent with privacy or data protection laws, legal persons).
 
-"**User Materials** " means any information, text, graphics, photographs and materials or content submitted by you through the Open Platform or any of your Applications.  
+"**User Materials** " means any information, text, graphics, photographs and materials or content submitted by you through the Open Platform or any of your Applications. 
 
-"**Vulnerability** " shall refer to any flaw or weakness in system security procedures, design, implementation, logic or internal controls, whether in software and hardware, that could be exercised (whether accidentally triggered or intentionally exploited by any party) and potentially result in a Data Breach affecting Personal Data or any unauthorised disclosure of Lazada Content.
+“**Vulnerability** ” shall refer to any flaw or weakness in system security procedures, design, implementation, logic or internal controls, whether in software and hardware, that could be exercised (whether accidentally triggered or intentionally exploited by any party) and potentially result in a Data Breach affecting Personal Data or any unauthorised disclosure of Lazada Content.
 
 "**Your Personnel** " means your employees, personnel, secondees, agents, principals, contractors and subcontractors.
 
@@ -169,19 +149,19 @@ Please read this Service Agreement, including any attachments, schedules and exh
 
 (e)references to writing includes any method of representing or reproducing words, figures, drawings or symbols in a visible and tangible form, whether in a physical document or in an electronic communication or form or otherwise;
 
-(f)reference to the singular shall include references to the plural and vice versa;  
+(f)reference to the singular shall include references to the plural and vice versa; 
 
 (g)references to a party to these Terms or another agreement or document includes the party's successors, permitted substitutes and permitted assigns (and, where applicable, the party's legal personal representatives);
 
-(h)references to legislation or to a provision of legislation includes a modification or re-enactment of it, a legislative provision substituted for it and a regulation or statutory instrument issued under it;  
+(h)references to legislation or to a provision of legislation includes a modification or re-enactment of it, a legislative provision substituted for it and a regulation or statutory instrument issued under it; 
 
-(i)unless the context otherwise requires, any provision in these Terms which uses the words "includes", "including", "for example", or similar expressions, does not limit the generality of what else might be included, and shall be deemed to be followed by the words "without limitation"; and
+(i)unless the context otherwise requires, any provision in these Terms which uses the words "includes", "including", "for example", or similar expressions, does not limit the generality of what else might be included, and shall be deemed to be followed by the words “without limitation”; and
 
 (j)nothing in these Terms is to be interpreted against a party solely on the ground that the party put forward these Terms or a relevant part of it
 
 **2.ACCOUNT**
 
-2.1. Your use of the Open Platform and the Tools is governed by a legal agreement between (i) you and (ii) Lazada or its Affiliates (as applicable) consisting of the Terms and all other applicable rules, policies, guidelines, terms and conditions, etc (including those which apply to your access and use of the Lazada Seller Service Market in the Country Platform (collectively referred to as the "**Lazada Seller Service Market Terms** "), as relevant). If you do not agree to the Terms (and the Lazada Seller Service Market Terms (where relevant)), you must immediately cease access to and use of the Platform and the Tools. In the event of a conflict or inconsistency between these Terms (and the Lazada Seller Service Market Terms (where relevant)), and any other documents (including but not limited to the Policies, the Platform Rules and the Privacy Policy), these Terms (and the Lazada Seller Service Market Terms (where relevant)) shall prevail unless a term set out in such document is expressly identified as amending a term in these Terms (and the Lazada Seller Service Market Terms (where relevant)) or taking precedence over such term, in which case the term in such other document shall take priority.
+2.1. Your use of the Open Platform and the Tools is governed by a legal agreement between (i) you and (ii) Lazada or its Affiliates (as applicable) consisting of the Terms and all other applicable rules, policies, guidelines, terms and conditions, etc (including those which apply to your access and use of the Lazada Seller Service Market in the Country Platform (collectively referred to as the “**Lazada Seller Service Market Terms** ”), as relevant). If you do not agree to the Terms (and the Lazada Seller Service Market Terms (where relevant)), you must immediately cease access to and use of the Platform and the Tools. In the event of a conflict or inconsistency between these Terms (and the Lazada Seller Service Market Terms (where relevant)), and any other documents (including but not limited to the Policies, the Platform Rules and the Privacy Policy), these Terms (and the Lazada Seller Service Market Terms (where relevant)) shall prevail unless a term set out in such document is expressly identified as amending a term in these Terms (and the Lazada Seller Service Market Terms (where relevant)) or taking precedence over such term, in which case the term in such other document shall take priority.
 
 2.2. You are only authorized to access or use the Tools and Lazada Services through an account registered with Lazada in connection with the Open Platform (each referred to as an "**Account** "). You shall not access or use (or attempt to access or use) any of the Tools, Lazada Services or any part or the whole of the Open Platform without an Account or by means which have not been authorised by Lazada. All Account registrations are subject to the approval of Lazada, and the opening of your Account shall be in accordance with the admission procedures prescribed by Lazada from time to time and subject to your satisfaction of the registration conditions stipulated from time to time by Lazada.
 
@@ -209,7 +189,7 @@ Please read this Service Agreement, including any attachments, schedules and exh
 
 2.8. You acknowledge and agree that (i) you are solely responsible for and will at all times maintain the security and prevent the misuse of your Account, any assigned keys and/or other credentials provided to you by or on behalf of Lazada in connection with the Open Platform, Lazada Services and/or Tools; (ii) you will keep a register of all Authorised Users which have or previously had access to your Account, any assigned keys and/or other credentials; (iii) you will ensure all Authorised Users granted access to your Account shall agree in writing to comply with these Terms, and all other agreement related to the use of the Open Platform, Lazada Services and the Tools which you enter into with Lazada; (iv) you shall be fully responsible for, and be bound by, any and all activity, access and use of the Open Platform, Lazada Services and the Tools, and any information, Data or communication referable to your Account, whether or not authorised by you; and (v) the Lazada Group shall (to the fullest extent permitted by the Applicable Laws) be entitled to act upon, rely on and hold you fully responsible and liable in respect thereof as if the same were carried out or transmitted by you. 
 
-2.9. Lazada reserves the right, exercisable in its sole and absolute discretion and without prior notice or any liability, to limit, disable, suspend, or terminate your Account, and/or limit, disable, suspend or terminate any Application developed, operated or distributed by you through the use of the Open Platforms, Lazada Services and the Tools if any such Account or Application is dormant for more than 90 consecutive days or for such other duration as Lazada may notify from time to time in the Open Platform Rules ("**Relevant Period** "). You are required to comply with the provisions of Clause 18 upon the termination or disabling of your Account.
+2.9. Lazada reserves the right, exercisable in its sole and absolute discretion and without prior notice or any liability, to limit, disable, suspend, or terminate your Account, and/or limit, disable, suspend or terminate any Application developed, operated or distributed by you through the use of the Open Platforms, Lazada Services and the Tools if any such Account or Application is dormant for more than 90 consecutive days or for such other duration as Lazada may notify from time to time in the Open Platform Rules (“**Relevant Period** ”). You are required to comply with the provisions of Clause 18 upon the termination or disabling of your Account.
 
 For the purpose of this Clause:
 
@@ -229,11 +209,11 @@ For the purpose of this Clause:
 
 3.4. Save as expressly agreed by Lazada in writing, under no circumstances shall any member of the Lazada Group be, nor shall you represent any member of the Lazada Group to be, (i) construed to be a party to (or to have endorsed, sponsored, certified or been involved in) any transaction between you and any third party; or (ii) liable in any way for any transaction between you and any third party, whether or not such transaction directly or indirectly relates to the Open Platform and/or the Tools or any Lazada Services.
 
-3.5. Any member of the Lazada Group (other than Lazada) may provide any part or the whole of the Open Platform and/or any of the Tools and Lazada Services on behalf of Lazada, and these Terms shall also govern your relationship with such member of the Lazada Group in respect of the Tools and Lazada Services, and any reference herein to "Lazada" shall be deemed to refer to such member of the Lazada Group. In such situations, Lazada South East Asia Pte. Ltd. shall have no liability for the performance or non-performance of such member of the Lazada Group, shall not be deemed as an agent of such member of the Lazada Group, and is not jointly and severally liable with such party, notwithstanding that Lazada South East Asia Pte. Ltd. is a party to these Terms.
+3.5. Any member of the Lazada Group (other than Lazada) may provide any part or the whole of the Open Platform and/or any of the Tools and Lazada Services on behalf of Lazada, and these Terms shall also govern your relationship with such member of the Lazada Group in respect of the Tools and Lazada Services, and any reference herein to “Lazada” shall be deemed to refer to such member of the Lazada Group. In such situations, Lazada South East Asia Pte. Ltd. shall have no liability for the performance or non-performance of such member of the Lazada Group, shall not be deemed as an agent of such member of the Lazada Group, and is not jointly and severally liable with such party, notwithstanding that Lazada South East Asia Pte. Ltd. is a party to these Terms.
 
 3.6. Nothing in these Terms shall prohibit or restrict Lazada or any other member of the Lazada Group from entering into similar or different agreements with third parties, or from acquiring, developing, licensing, marketing, promoting or distributing any products or services that may compete with your Applications or that may perform the same or similar functions as your Applications.
 
-3.7. The use of the Tools may require open source software or other third-party software, which may be subject to a separate license agreement between you and the applicable licensor of such open source software or third-party software. Lazada Group shall not be construed as endorsing or recommending such software and shall have no responsibility with regard to the selection or to your use of such software. You undertake to comply with the terms of such agreement at your own cost and risk. You further agree to unconditionally defend, indemnify and hold harmless, and, at Lazada's option, defend the Lazada Indemnitees, from and against any and all Losses arising out of, or relating to, any actual or alleged breach by you of such agreement. To the extent such agreement contains terms which are inconsistent with, and which expressly supersede, these Terms, those terms shall prevail to the extent of the inconsistency and solely with respect to the open-source software or third-party software which is the subject of such agreement.
+3.7. The use of the Tools may require open source software or other third-party software, which may be subject to a separate license agreement between you and the applicable licensor of such open source software or third-party software. Lazada Group shall not be construed as endorsing or recommending such software and shall have no responsibility with regard to the selection or to your use of such software. You undertake to comply with the terms of such agreement at your own cost and risk. You further agree to unconditionally defend, indemnify and hold harmless, and, at Lazada’s option, defend the Lazada Indemnitees, from and against any and all Losses arising out of, or relating to, any actual or alleged breach by you of such agreement. To the extent such agreement contains terms which are inconsistent with, and which expressly supersede, these Terms, those terms shall prevail to the extent of the inconsistency and solely with respect to the open-source software or third-party software which is the subject of such agreement.
 
 3.8. Notwithstanding anything else to the contrary in the Terms of Use, in the event of a dispute (including but not limited to any intellectual property disputes) over an Application developed, operated or distributed by you or otherwise in connection with your access and use of the Open Platform, Lazada Services and the Tools, you agree that Lazada and/or its Affiliates may, without further notice or consent being required, share your identity and contact information with any party filing such dispute with Lazada and/or its Affiliates.
 
@@ -243,7 +223,7 @@ For the purpose of this Clause:
 
 (a)If you charge a fee for your Application, you assume sole responsibility and liability for all related transactions and authentications, records and Taxes. Lazada will have no obligation to you with respect to such payment related matters, including without limitation, to track and process payments, authenticating payments, Users, maintaining or making available any records, or to pay, report or charge any Taxes.
 
-(b)If you provide an Application for free, you may not collect future charges from Users unless with reasonable prior written notice and subject to the User's consent to such charges. No charges shall be collected for the period during which the Users were allowed to use the Application for free.
+(b)If you provide an Application for free, you may not collect future charges from Users unless with reasonable prior written notice and subject to the User’s consent to such charges. No charges shall be collected for the period during which the Users were allowed to use the Application for free.
 
 4.2. Each Application is submitted under one of the specified categories on the Open Platform, which will determine the API groups that the Application Is granted access to. All Applications submitted are subject to the review and approval of Lazada before they are published. You will provide Lazada with the requested information, which includes the description of the Application, a high-level application architecture that describes the key functions of your Application, any modules within your Application (and their purpose), and dependency on third party modules or applications, and any data flows associated with such Application. As part of the review process we may, but shall not be obliged to, test your Application to verify that it complies with the requirements as may be stipulated by Lazada from time to time.
 
@@ -251,17 +231,17 @@ For the purpose of this Clause:
 
 4.4. You agree, and shall procure that your Authorised User agree that, that you will not use the Application Key of any other person, or sell, transfer, sub-license or otherwise disclose your Application Key to any third party at any time. You agree to immediately notify Lazada when you discover or suspect any unauthorized use of the Application Key. Lazada will not be liable for all usage of the Application Key of Developers, Sellers or Users, including but not limited to any unauthorized access, alteration or deletion, damage, corruption, loss or failure in storage.
 
-4.5. You shall not state or imply that Lazada has participated in the development of, sponsored, endorsed, is associated with, or recognized the Application developed and/or published by you, including but not limited to using any variations, abbreviation or misspelling of Lazada's or the Marks belonging to the Lazada Group or Affiliates in the name or URL or otherwise on the domain page f the Application or of the Developer, the Seller or the User.
+4.5. You shall not state or imply that Lazada has participated in the development of, sponsored, endorsed, is associated with, or recognized the Application developed and/or published by you, including but not limited to using any variations, abbreviation or misspelling of Lazada’s or the Marks belonging to the Lazada Group or Affiliates in the name or URL or otherwise on the domain page f the Application or of the Developer, the Seller or the User.
 
 4.6. Applications prohibited by the laws, regulations, sanctions and trade restrictions in any relevant country or jurisdiction worldwide are strictly forbidden on the Open Platform. 
 
 **5.ONLINE TRANSACTION OF APPLICATIONS**
 
-5.1. You shall, in relation to each of your Applications, enter into a binding agreement with each User before permitting the User to use the Application, and ensure that the agreement ("**EULA** ") complies with the minimum requirements in Exhibit A, and you will, when requested, provide Lazada with a copy of the EULA, and any other terms and conditions entered into between you and the User in relation to the Application, and promptly notify Lazada of any amendments thereto.
+5.1. You shall, in relation to each of your Applications, enter into a binding agreement with each User before permitting the User to use the Application, and ensure that the agreement (“**EULA** ”) complies with the minimum requirements in Exhibit A, and you will, when requested, provide Lazada with a copy of the EULA, and any other terms and conditions entered into between you and the User in relation to the Application, and promptly notify Lazada of any amendments thereto.
 
 5.2. Lazada shall have the right to display on the Open Platform or on any other portals owned, operated or managed by it and/or its Affiliates (including the Seller Center and the Lazada Seller Service Centre), the text description, pictures and/or photos of the Application provided by a Developer comprising the descriptions of the Application which the Developer lawfully owns and intends to trade. Lazada will not be responsible for the accuracy or content of description of Applications. You shall be responsible for ensuring that all Application descriptions and categorizations are accurately submitted.
 
-5.3. Any dispute arising from the Users' usage of the Applications and paid services provided by Developers shall be settled between the Users and the Developers on their own, for which Lazada will not be liable.
+5.3. Any dispute arising from the Users’ usage of the Applications and paid services provided by Developers shall be settled between the Users and the Developers on their own, for which Lazada will not be liable.
 
 5.4. Notwithstanding the foregoing, if you or your User breaches these Terms or any relevant Policies or rules, Lazada has the right to, where applicable and without any liability whatsoever, suspend, restrict or delete the Applications from the Platform or on any other portals on which it has listed such Application or restrict the functions thereof (whether in part or in whole), which may cause failure to provide services by the Applications purchased by users or inability to use such services.
 
@@ -277,7 +257,7 @@ For the purpose of this Clause:
 
 7.1. You agree to comply with the Security Measures and any other requirements as may be imposed by Lazada in the development, deployment, operation, maintenance, and management of your Application and/or your use of the Open Platform and the Tools. 
 
-7.2. While Lazada is not obligated to monitor the Application or its content, you agree to co-operate fully with Lazada and to provide Lazada with any authorisations and/or access required to: (a) conduct regular security testing on your Application, including but not limited to penetration testing and Vulnerability scanning against your Application and/or the Application's hosting infrastructure; (b) monitor and review (including by way of automatic means) of your Applications' public domain for compliance with the Terms of Use (including the Security Measures), and any other Applicable Laws.
+7.2. While Lazada is not obligated to monitor the Application or its content, you agree to co-operate fully with Lazada and to provide Lazada with any authorisations and/or access required to: (a) conduct regular security testing on your Application, including but not limited to penetration testing and Vulnerability scanning against your Application and/or the Application’s hosting infrastructure; (b) monitor and review (including by way of automatic means) of your Applications’ public domain for compliance with the Terms of Use (including the Security Measures), and any other Applicable Laws.
 
 7.3. Lazada may test your Application from time to time using either manual security testing methods or automated security testing methods, including but not limited to:
 
@@ -291,16 +271,18 @@ For the purpose of this Clause:
 
 7.5. Lazada may notify you of any Vulnerabilities identified by Lazada, and require you to undertake remedial actions to rectify or mitigate the Vulnerabilities within the following timeline (or such other timeline determined by Lazada), depending on the risk rating for such Vulnerability, which shall be determined by Lazada at its sole discretion:
 
-**Risk Rating** |  **Description** |  **No. of Days from Notification to Complete Remedial Actions**  
----|---|---  
-Critical |  Critical risk or vulnerabilities that place Lazada Content at immediate risk of Data Breaches |  Max. 14 days    
-High |  Severe risk that should be addressed immediately to protect Lazada Content |  Max. 30 days  
-Medium |  Unnecessary security risks that can lead to more serious vulnerabilities |  Max. 60 days  
-Low |  Areas of improvement to reduce risk |  Max. 90 days  
-  
-7.6. Upon such notification, you shall promptly propose to Lazada in writing the remedial actions to rectify or mitigate the vulnerabilities in a manner which is reasonably satisfactory to Lazada. Upon Lazada's approval (which may be withheld in Lazada's sole and absolute discretion), you shall complete such rectification or mitigation at your own cost and expense within the relevant timeline as set out in Clause 7.5 or such other timeline as may be determined by Lazada at its sole discretion.
+Risk Rating | Description | No. of Days from Notification to Complete Remedial Actions
+---|---|---
+Critical | Critical risk or vulnerabilities that place Lazada Content at immediate risk of Data Breaches | Max. 14 days
+High | Severe risk that should be addressed immediately to protect Lazada Content | Max. 30 days
+Medium | Unnecessary security risks that can lead to more serious vulnerabilities | Max. 60 days
+Low | Areas of improvement to reduce risk | Max. 90 days
 
-7.7. You agree to integrate your Application and all related Application Content with any security services that Lazada may provide ("**Lazada  Security Services**") at your own cost and expense. Any such requirement for integration shall be made known to you prior to your access to any Application Keys or APIs, and failure to comply will result in your inability to access such Application Keys or APIs. You acknowledge that Lazada will monitor such integration through the Lazada Security Services and may notify you of any suspicious or unauthorised activities. Upon receipt of such notification, you undertake to respond and act accordingly to remediate such issues to the reasonable satisfaction of Lazada within five (5) business days. Lazada may at its discretion notify you and require the addition or update of any Lazada Security Services integrated with your Application, and you undertake to authorise and carry out any such addition or update within thirty (30) days upon receipt of notification.
+ 
+
+7.6. Upon such notification, you shall promptly propose to Lazada in writing the remedial actions to rectify or mitigate the vulnerabilities in a manner which is reasonably satisfactory to Lazada. Upon Lazada’s approval (which may be withheld in Lazada’s sole and absolute discretion), you shall complete such rectification or mitigation at your own cost and expense within the relevant timeline as set out in Clause 7.5 or such other timeline as may be determined by Lazada at its sole discretion.
+
+7.7. You agree to integrate your Application and all related Application Content with any security services that Lazada may provide (“**Lazada Security Services** ”) at your own cost and expense. Any such requirement for integration shall be made known to you prior to your access to any Application Keys or APIs, and failure to comply will result in your inability to access such Application Keys or APIs. You acknowledge that Lazada will monitor such integration through the Lazada Security Services and may notify you of any suspicious or unauthorised activities. Upon receipt of such notification, you undertake to respond and act accordingly to remediate such issues to the reasonable satisfaction of Lazada within five (5) business days. Lazada may at its discretion notify you and require the addition or update of any Lazada Security Services integrated with your Application, and you undertake to authorise and carry out any such addition or update within thirty (30) days upon receipt of notification.
 
 7.8. You may host your Application on any server, whether or not approved by Lazada. The server that is hosting your Application must be properly configured to Internet industry standards so as to securely operate your Application and protect against unauthorised access to, disclosure or use of any information you receive from Lazada, including anonymised Data and/or Personal Data. Lazada reserves the right at any time to impose such terms and conditions as it deems appropriate in relation to the hosting of the Application. Such terms and conditions will be made publicly available to you, whether through publication of a Lazada Policy or otherwise, and you hereby agree to comply with such terms and conditions.
 
@@ -312,13 +294,13 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 (a)you shall comply with these Terms, the Policies and all Applicable Laws in your use or access of the Lazada Services, the Open Platform, the Tools, Lazada Seller Service Market, Lazada Marketplace and the Lazada Content in any way which may, directly or indirectly undermine the commercial interests of the Lazada Group;
 
-(b)If your Application requires a User to sign-in to the account of such User which is registered as a Seller with the relevant Lazada Marketplace ("**Seller Account** "), your Application may only access such account after the User has granted such access to your Application via a Lazada controlled sign-in and consent page ("**Authentication** ") and provided that such Authentication remains valid. Any Authentication is revocable at any time for any reason by the relevant User.
+(b)If your Application requires a User to sign-in to the account of such User which is registered as a Seller with the relevant Lazada Marketplace ("**Seller Account** "), your Application may only access such account after the User has granted such access to your Application via a Lazada controlled sign-in and consent page (“**Authentication** ”) and provided that such Authentication remains valid. Any Authentication is revocable at any time for any reason by the relevant User.
 
-(c)you will not request any Data (including any Lazada Content) or permission to access such Data from the User unless it is necessary to meaningfully improve the quality of the User's experience in the specific product or service for which the User has consented to share its Data;
+(c)you will not request any Data (including any Lazada Content) or permission to access such Data from the User unless it is necessary to meaningfully improve the quality of the User’s experience in the specific product or service for which the User has consented to share its Data;
 
 (d)you will not engage in any activity within the Open Platform and the Lazada Seller Service Market (including the development, operation and distribution of any Application) or use the Tools in a manner which:
 
-(i)violates a third party's terms of service or terms and conditions;
+(i)violates a third party’s terms of service or terms and conditions;
 
 (ii)facilitates (or otherwise permits) any User or Lazada User to breach the terms of use of the Lazada Marketplace or any Lazada Services, or otherwise interfere with any investigation into, enforcement of and implementation by Lazada (and other members of the Lazada Group) of such terms and conditions;
 
@@ -336,7 +318,7 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 (g)will violate any Applicable Law; require Lazada to obtain any license, authorization, or other permission from any governmental agency or other third party; contain any Prohibited Materials; or violate or infringe any Intellectual Property Rights, proprietary, or other rights of any person or entity (including contractual rights); 
 
-(h)you shall not do (or attempt to do) any of the following acts:   
+(h)you shall not do (or attempt to do) any of the following acts: 
 
 (i)publish, distribute or allow access or links the Lazada Services, including to the Tools, from any location or source other than your Application;
 
@@ -352,9 +334,9 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 (vii)introduce, use, post, promote or transmit, or permit the posting, promotion, or transmission through the Open Platform, Lazada Services or your Application any Prohibited Materials;
 
-(viii)capture, maintain, scan, retrieve, index, store, share, use, mine any Data (including but not limited to the Lazada Content) stored or transmitted in course of the Lazada Services or otherwise use data-mining technology, for any unauthorized activities, or in any way reproduce or circumvent the navigational structure or presentation of the Open Platform. For the purposes of this requirement, "unauthorized activities" mean the data mining or processing of data stored or transmitted through the Open Platform and the Lazada systems for an unrelated commercial purpose, to create private databases or for any other purpose than is explicitly authorised by Lazada;
+(viii)capture, maintain, scan, retrieve, index, store, share, use, mine any Data (including but not limited to the Lazada Content) stored or transmitted in course of the Lazada Services or otherwise use data-mining technology, for any unauthorized activities, or in any way reproduce or circumvent the navigational structure or presentation of the Open Platform. For the purposes of this requirement, “unauthorized activities” mean the data mining or processing of data stored or transmitted through the Open Platform and the Lazada systems for an unrelated commercial purpose, to create private databases or for any other purpose than is explicitly authorised by Lazada;
 
-(ix)interfere with another's utilization and enjoyment of the Open Platform, Lazada Marketplaces and the Lazada Services (including the Lazada Seller Service Centre);
+(ix)interfere with another’s utilization and enjoyment of the Open Platform, Lazada Marketplaces and the Lazada Services (including the Lazada Seller Service Centre);
 
 (x)modify, decompile (save as expressly permitted by Applicable Law), reverse engineer, disassemble, translate, or otherwise extract or derive or attempt to extract or derive any of the Tools, APIs or Lazada Content, or their respective source code(s), trade secrets, or Confidential Information therein; or
 
@@ -374,13 +356,13 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 8.3. You shall be fully responsible for your Applications, and for all costs and expenses related to your use of the Tools, including but not limited to the cost of developing and maintaining any Application. In particular, access to certain Tools, Lazada Content and increased API call limits may require special certifications and/or be subject to conditions which Lazada may impose from time to time. In the event that any special certification or additional condition is required, Lazada has the sole and absolute discretion to hold you responsible for any costs associated with such certification or condition, and to require you to make the necessary modifications to your Application to meet such certification criteria or condition at your sole expense;
 
-8.4. Lazada may disclose any information we have about you (including your identity) if we determine that such disclosure is necessary in connection with any investigation or complaint regarding your use of the Open Platform and/or the Tools and or your Application, or to identify, contact or bring legal action against someone who may be causing injury to or interference with (either intentionally or unintentionally) Lazada's rights or property, or the rights or property of visitors to or Users of your Application, including Lazada Users. Lazada reserves the right at all times to disclose any information that Lazada deems necessary to comply with any Applicable Law, legal process (including but not limited to any intellectual property disputes) or governmental request. Lazada also may disclose your information when Lazada determines that Applicable Law requires or permits such disclosure, including exchanging information with other companies and organizations for fraud protection purposes.
+8.4. Lazada may disclose any information we have about you (including your identity) if we determine that such disclosure is necessary in connection with any investigation or complaint regarding your use of the Open Platform and/or the Tools and or your Application, or to identify, contact or bring legal action against someone who may be causing injury to or interference with (either intentionally or unintentionally) Lazada’s rights or property, or the rights or property of visitors to or Users of your Application, including Lazada Users. Lazada reserves the right at all times to disclose any information that Lazada deems necessary to comply with any Applicable Law, legal process (including but not limited to any intellectual property disputes) or governmental request. Lazada also may disclose your information when Lazada determines that Applicable Law requires or permits such disclosure, including exchanging information with other companies and organizations for fraud protection purposes.
 
 **9.INTELLECTUAL PROPERTY RIGHTS**
 
 9.1. You hereby agree and acknowledge that:
 
-(a)all Intellectual Property Rights in this Open Platform, the Tools, Lazada Marketplaces and Lazada Services belong to the Lazada Group and the respective third-party proprietors;  
+(a)all Intellectual Property Rights in this Open Platform, the Tools, Lazada Marketplaces and Lazada Services belong to the Lazada Group and the respective third-party proprietors; 
 
 (b)save as expressly set out in this Clause, no other rights or licenses (including licenses or rights under any patent, copyright, trade mark or any other Intellectual Property Right) are granted either directly, by implication, or otherwise by the Lazada Group or the relevant third party proprietor thereof; and
 
@@ -422,17 +404,17 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 9.5. Subject to these Terms and your full compliance thereof, and the prior written consent of Lazada, Lazada grants you a royalty-free, limited, non-exclusive, non-transferable, non-sublicensable, revocable licence to display its Marks as set forth in the Lazada Policies for the purpose of promoting or advertising your Application on the Open Platform. You acknowledge and agree that:
 
-(a)altering Lazada's Marks is strictly prohibited. You agree that you will not alter Lazada's Marks provided to you in any way, including (without limitation) changing the colors, angle, dimensions or relationship between element or alter the word or change the format of any part of Lazada's Marks.
+(a)altering Lazada’s Marks is strictly prohibited. You agree that you will not alter Lazada’s Marks provided to you in any way, including (without limitation) changing the colors, angle, dimensions or relationship between element or alter the word or change the format of any part of Lazada’s Marks.
 
-(b)you will use Lazada's Marks in a lawful manner and in strict compliance with all format(s), guidelines, standards and other requirements prescribed by Lazada in writing from time to time;
+(b)you will use Lazada’s Marks in a lawful manner and in strict compliance with all format(s), guidelines, standards and other requirements prescribed by Lazada in writing from time to time;
 
 (c)all use by you of Lazada's Marks (including any goodwill associated therewith) will inure to the benefit of the Lazada Group; and
 
-(d)you shall not register or attempt to register any trademarks and/or domain names which are identical or similar to Lazada's Marks in relation to any classes of goods and services anywhere in the world.
+(d)you shall not register or attempt to register any trademarks and/or domain names which are identical or similar to Lazada’s Marks in relation to any classes of goods and services anywhere in the world.
 
 9.6. You may sub-licence rights granted under Clause 9.4 to your Users solely to the extent that such sub-licence is necessary to enable your Users to use your Application for the purposes permitted under these Terms of Use, and provided that any act or omission by your Users amounting to a breach of these Terms shall be deemed a breach by you.
 
-9.7. You may provide Lazada with feedback on your access or use of the Open Platform, the Tools and/or Lazada Services. You hereby grant Lazada all rights, title and ownership of such feedback, including without limitation all Intellectual Property Rights therein. Lazada may use such feedback for any and all purposes in its sole discretion without any obligations owed to you.    
+9.7. You may provide Lazada with feedback on your access or use of the Open Platform, the Tools and/or Lazada Services. You hereby grant Lazada all rights, title and ownership of such feedback, including without limitation all Intellectual Property Rights therein. Lazada may use such feedback for any and all purposes in its sole discretion without any obligations owed to you. 
 
 **10.USE OF LAZADA CONTENT**
 
@@ -450,7 +432,7 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 10.2. Without prejudice to such other guidelines which Lazada may issue from time to time, you hereby agree to comply with the following provisions:
 
-(a)All Lazada Content displayed within your Application shall be subject to the following provisions in respect of the display:  
+(a)All Lazada Content displayed within your Application shall be subject to the following provisions in respect of the display: 
 
 (i)in relation to any User, the Application may only display:
 
@@ -464,7 +446,7 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 (iii)Lazada Content must be kept reasonably up to date.
 
-(b)You shall seek Lazada's prior written consent before using any Lazada Content in a manner which allows you or your Users to derive any of the following information:
+(b)You shall seek Lazada’s prior written consent before using any Lazada Content in a manner which allows you or your Users to derive any of the following information:
 
 (i)any site-wide statistics across the Lazada Marketplaces or within any Lazada Marketplace;
 
@@ -474,21 +456,21 @@ Low |  Areas of improvement to reduce risk |  Max. 90 days
 
 (iv)average selling price or gross merchandise value sold for any Lazada category;
 
-(v)aggregated Seller or Buyer Data (for example, Personal Data, Lazada User's behavior or preference);
+(v)aggregated Seller or Buyer Data (for example, Personal Data, Lazada User’s behavior or preference);
 
 (vi)data relating to the performance of Sellers, either individually or in aggregate (for example, performance data related to promotional campaigns, ad placements, or sponsored listings);
 
 (vii)aggregated data relating to transactions conducted through third-party affiliates;
 
-(viii)data comparing User's utilisation of Lazada Services and the services of any third-party;
+(viii)data comparing User’s utilisation of Lazada Services and the services of any third-party;
 
-(ix)information relating to specific Lazada Users or types of Lazada Users;  
+(ix)information relating to specific Lazada Users or types of Lazada Users; 
 
 (x)conversion, completion or success rates; and
 
 (xi)any other information as may be prescribed by Lazada from time to time;
 
-whether directly from the Lazada Content or indirectly from the Lazada Content and any data and other information which you or your User has or is likely to have access. Lazada reserves the right to require you to cease the use of any Lazada Content which may allow for the derivation of any of the information set out above and/or where applicable and without any liability whatsoever, take one of more of the measures as set out in the Policies and/or the Terms.  
+whether directly from the Lazada Content or indirectly from the Lazada Content and any data and other information which you or your User has or is likely to have access. Lazada reserves the right to require you to cease the use of any Lazada Content which may allow for the derivation of any of the information set out above and/or where applicable and without any liability whatsoever, take one of more of the measures as set out in the Policies and/or the Terms. 
 
 (c)Unless expressly permitted by Lazada, you will not display any web page served by Lazada servers in an aggregated display of different web pages in a browser display area (for example, by framing or mirroring).
 
@@ -510,7 +492,7 @@ whether directly from the Lazada Content or indirectly from the Lazada Content a
 
 (f)complying with Applicable Laws and requests from any governmental authority, statutory authority or other authority;
 
-11.3. To the extent that you are a Seller you acknowledge and agree that your Processing of Buyer Data vis-a-vis Lazada (including, your Processing of Buyer Data in connection with the Open Platform, the Lazada Seller Service Market and/or the Tools) shall be governed by the data processing terms set out in the Lazada Terms of Service (Seller) (formerly known as Marketplace Agreement) and any other policies and/or guidelines issued by Lazada and communicated to you.
+11.3. To the extent that you are a Seller you acknowledge and agree that your Processing of Buyer Data vis-à-vis Lazada (including, your Processing of Buyer Data in connection with the Open Platform, the Lazada Seller Service Market and/or the Tools) shall be governed by the data processing terms set out in the Lazada Terms of Service (Seller) (formerly known as Marketplace Agreement) and any other policies and/or guidelines issued by Lazada and communicated to you.
 
 11.4. To the extent that you are a Developer:
 
@@ -522,15 +504,15 @@ whether directly from the Lazada Content or indirectly from the Lazada Content a
 
 (ii)only process Buyer Data in accordance with the instructions of the applicable Seller of your Application (including, without limitation, any instructions or prohibitions related to any cross-border transfer of any Personal Data) and only for the purposes of providing your services to the Seller;
 
-(iii)provide the applicable Seller and Lazada with any documentation as requested to evidence compliance with applicable Data Protection Laws and appropriate technical and organizational security measures (which shall, in any event comply with the Security Measures and the terms and conditions set out in Schedule 1 (Section 2: Cybersecurity) to enable the Seller and/or Lazada to carry out any due diligence which it may require in order to authorize you to access the Lazada Users' Personal Data via the Open Platform, the Lazada Seller Service Market and/or Tools;
+(iii)provide the applicable Seller and Lazada with any documentation as requested to evidence compliance with applicable Data Protection Laws and appropriate technical and organizational security measures (which shall, in any event comply with the Security Measures and the terms and conditions set out in Schedule 1 (Section 2: Cybersecurity) to enable the Seller and/or Lazada to carry out any due diligence which it may require in order to authorize you to access the Lazada Users’ Personal Data via the Open Platform, the Lazada Seller Service Market and/or Tools;
 
 (iv)where required by applicable Data Protection Law, enter into appropriate data processing terms with the Seller which govern your processing of Buyer Data on behalf of the Seller in accordance with the requirements of applicable Data Protection Law;
 
 (v)comply at all times with any and all obligations you are subject to under applicable Data Protection Laws, and use best endeavours to ensure that none of your acts or omissions cause Lazada and/or any members of the Lazada Group, whether directly or indirectly, to be in breach of any such laws.
 
-(c)You agree to unconditionally defend, indemnify and hold harmless, and, at Lazada's option, defend the Lazada Indemnitees, from and against any and all Losses arising out of, or relating to, any non-compliance with this Clause. If Lazada reasonably determines that any indemnified claim might adversely affect Lazada and/or any members of the Lazada Group in any way, Lazada may take control of the defense at your expense. You shall not consent to the entry of any judgment or enter into any settlement of a claim without Lazada's prior written consent.
+(c)You agree to unconditionally defend, indemnify and hold harmless, and, at Lazada’s option, defend the Lazada Indemnitees, from and against any and all Losses arising out of, or relating to, any non-compliance with this Clause. If Lazada reasonably determines that any indemnified claim might adversely affect Lazada and/or any members of the Lazada Group in any way, Lazada may take control of the defense at your expense. You shall not consent to the entry of any judgment or enter into any settlement of a claim without Lazada’s prior written consent.
 
-11.5. Without prejudice to the foregoing, with respect to any Data Breach involving any Personal Data of the Buyer, the Seller or any User accessed via the Open Platform, you shall comply with the terms and condition set out in Schedule 1 (Section 1: Developer's Data Breach).
+11.5. Without prejudice to the foregoing, with respect to any Data Breach involving any Personal Data of the Buyer, the Seller or any User accessed via the Open Platform, you shall comply with the terms and condition set out in Schedule 1 (Section 1: Developer’s Data Breach).
 
 **12.AUDIT RIGHTS**
 
@@ -580,7 +562,7 @@ whether directly from the Lazada Content or indirectly from the Lazada Content a
 
 **15.LIMITATION OF RESPONSIBILITY AND LIABILITY**
 
-15.1. The Open Platform, the Tools and Lazada Services are provided on an "as is" and "as available" basis. You agree that the use of the Open Platform, the Tools and Lazada Services is at your sole risk. To the fullest extent permitted by Applicable Laws, Lazada makes no representations or warranties of any kind, implied, express or statutory, including without limitation the warranties of accuracy, non-infringement of third-party rights, title, merchantability, satisfactory quality, fitness for a particular purpose or that your use or access to the Open Platform, the Tools or Lazada Services will be uninterrupted or error-free, in conjunction with the Open Platform, the Tools or Lazada Services.
+15.1. The Open Platform, the Tools and Lazada Services are provided on an “as is” and “as available” basis. You agree that the use of the Open Platform, the Tools and Lazada Services is at your sole risk. To the fullest extent permitted by Applicable Laws, Lazada makes no representations or warranties of any kind, implied, express or statutory, including without limitation the warranties of accuracy, non-infringement of third-party rights, title, merchantability, satisfactory quality, fitness for a particular purpose or that your use or access to the Open Platform, the Tools or Lazada Services will be uninterrupted or error-free, in conjunction with the Open Platform, the Tools or Lazada Services.
 
 15.2. Without prejudice to the generality of the foregoing, Lazada does not warrant:
 
@@ -616,7 +598,7 @@ whether directly from the Lazada Content or indirectly from the Lazada Content a
 
 15.5. Notwithstanding anything in these Terms, certain Applicable Laws may imply warranties or conditions or impose obligations upon Lazada which cannot be excluded, restricted or modified except to a limited extent. To the extent that such legislation applies, these Terms shall be read subject to such Applicable Laws and nothing in these Terms is intended to alter or restrict the operation of such Applicable Laws.
 
-15.6. Notwithstanding anything to the contrary in these Terms, Lazada's total aggregate liability towards you for any direct loss or damage due to any and all events arising out of or in connection with these Terms, whether in tort (including negligence), breach of contract or otherwise, shall be limited to a sum to USD 1,000. To the extent permitted by Applicable Laws, any claim by you under or in connection with these Terms must be notified to Lazada within six (6) months from the date on which you and/or the party bringing the claim became aware or ought reasonably become aware of the act or omission on which the claim is based. For the avoidance of doubt, no Lazada Indemnitee will be liable for any claim you make after said deadline.
+15.6. Notwithstanding anything to the contrary in these Terms, Lazada’s total aggregate liability towards you for any direct loss or damage due to any and all events arising out of or in connection with these Terms, whether in tort (including negligence), breach of contract or otherwise, shall be limited to a sum to USD 1,000. To the extent permitted by Applicable Laws, any claim by you under or in connection with these Terms must be notified to Lazada within six (6) months from the date on which you and/or the party bringing the claim became aware or ought reasonably become aware of the act or omission on which the claim is based. For the avoidance of doubt, no Lazada Indemnitee will be liable for any claim you make after said deadline.
 
 **16.INDEMNITIES**
 
@@ -646,7 +628,7 @@ To the extent permitted under Applicable Laws, Lazada will give you prompt notic
 
 16.3. Notwithstanding the foregoing, a Lazada Indemnitee reserves the right to control its own defense and follow such course of action as it reasonably deems necessary to protect its interests, and you shall fully indemnify the Lazada Indemnitee for all costs (including legal fees and settlement payments) reasonably incurred in such course of action. 
 
-**17.HYPERLINKS, ALERTS AND ADVERTISING  **
+**17.HYPERLINKS, ALERTS AND ADVERTISING**
 
 17.1. For your convenience, Lazada may include hyperlinks to other websites or content on the Internet that are owned or operated by third parties. Such linked websites or content are not under the control of Lazada and Lazada shall not be liable for any errors, omissions, delays, defamation, libel, slander, falsehood, obscenity, pornography, profanity, inaccuracy or any other objectionable material contained in the contents, or the consequences of accessing, any linked website. Any hyperlinks to any other websites or content are not an endorsement or verification of such websites or content and you agree that your access to or use of such linked websites or content is entirely at your own risk.
 
@@ -656,7 +638,7 @@ To the extent permitted under Applicable Laws, Lazada will give you prompt notic
 
 18.1. These Terms may be terminated by the following means:
 
-(a)Lazada may, from time to time, without giving any reason and without any liability, (i) disable, suspend, or terminate your Account, access to the Open Platform, the Tools, Lazada Services and any part thereof, or (ii) terminate these Terms and any licence granted to you hereunder, with seven (7) days' notice made through the Open Platform or by such other method of notification as Lazada may designate (which may include notification by way of e-mail or other modes of communications (such as in-app message, instant message etc));
+(a)Lazada may, from time to time, without giving any reason and without any liability, (i) disable, suspend, or terminate your Account, access to the Open Platform, the Tools, Lazada Services and any part thereof, or (ii) terminate these Terms and any licence granted to you hereunder, with seven (7) days’ notice made through the Open Platform or by such other method of notification as Lazada may designate (which may include notification by way of e-mail or other modes of communications (such as in-app message, instant message etc));
 
 (b)Lazada may terminate these Terms with immediate effect and without further notice if the Developer is:
 
@@ -668,7 +650,7 @@ To the extent permitted under Applicable Laws, Lazada will give you prompt notic
 
 18.2. Upon the termination of these Terms for any reason:
 
-(a)your Account (including all authorization and licences) granted by Lazada and/or Lazada User to you in respect of the Lazada Content and the Open Platform, the Tools or Lazada Services under these Terms will automatically terminate with immediate effect and all Applications submitted under your Account shall be suspended and/or removed with immediate effect;  
+(a)your Account (including all authorization and licences) granted by Lazada and/or Lazada User to you in respect of the Lazada Content and the Open Platform, the Tools or Lazada Services under these Terms will automatically terminate with immediate effect and all Applications submitted under your Account shall be suspended and/or removed with immediate effect; 
 
 (b)you will destroy and permanently delete all copies of Lazada Content (including Personal Data), Lazada Marks and Confidential Information in your possession, custody or control within fourteen (14) days (or within such time period as may be notified to you by Lazada), and provide written proof or certification of destruction to Lazada upon request unless the retention of such information is required by Applicable Laws. If you are required to keep Personal Data under Applicable Laws, you must retain proof of the applicable legal or regulatory requirement and provide it without undue delay if requested by Lazada or its Affiliates.
 
@@ -678,7 +660,7 @@ To the extent permitted under Applicable Laws, Lazada will give you prompt notic
 
 18.3. Termination of these Terms for any reason shall not affect any rights, remedies, obligations, or liabilities that have accrued up to the date of termination, including the right to claim damages in respect of any breach which existed at or before the date of termination.
 
-18.4. On termination of these Terms for any reason, Clauses which are by their nature intended to survive shall continue in full force and effect. Such Clauses include for example, Clauses 3 (General Terms Relating to the Open Platform), 9(Intellectual Property Rights), 11 (Data Protection), 12 (Audit Rights), 13 (Confidentiality), 15 (Limitation of Responsibility and Liability), 16 (Indemnities), 18 (Termination), 19 (General Provisions) and 20 (Governing Law and Dispute Resolution).   
+18.4. On termination of these Terms for any reason, Clauses which are by their nature intended to survive shall continue in full force and effect. Such Clauses include for example, Clauses 3 (General Terms Relating to the Open Platform), 9(Intellectual Property Rights), 11 (Data Protection), 12 (Audit Rights), 13 (Confidentiality), 15 (Limitation of Responsibility and Liability), 16 (Indemnities), 18 (Termination), 19 (General Provisions) and 20 (Governing Law and Dispute Resolution). 
 
 **19.GENERAL PROVISIONS**
 
@@ -726,17 +708,9 @@ To the extent permitted under Applicable Laws, Lazada will give you prompt notic
 
 20.1. These Terms and any non-contractual obligations arising out of or in connection with these Terms shall be governed by and construed in accordance with the laws of Singapore.
 
-20.2. Any dispute, controversy, difference or claim arising out of or relating to these Terms, including the existence, validity, interpretation, performance, breach or termination thereof or any dispute regarding non-contractual obligations arising out of or relating to it shall be referred to and finally resolved by arbitration administered by the Singapore International Arbitration Centre ("**SIAC** ") under the SIAC Administered Arbitration Rules in force when the Notice of Arbitration is submitted.  The seat of arbitration shall be Singapore.  The number of arbitrators shall be one.  The arbitration proceedings shall be conducted in English.
+20.2. Any dispute, controversy, difference or claim arising out of or relating to these Terms, including the existence, validity, interpretation, performance, breach or termination thereof or any dispute regarding non-contractual obligations arising out of or relating to it shall be referred to and finally resolved by arbitration administered by the Singapore International Arbitration Centre (“**SIAC** ”) under the SIAC Administered Arbitration Rules in force when the Notice of Arbitration is submitted. The seat of arbitration shall be Singapore. The number of arbitrators shall be one. The arbitration proceedings shall be conducted in English.
 
 20.3. Without prejudice to any other rights or remedies that the Lazada Group may have, you agree that damages alone would not be an adequate remedy for any breach of these Terms by you. Accordingly, the Lazada Group shall be entitled to the remedies of injunction, specific performance or other equitable relief for any threatened or actual breach of these Terms.
-
- 
-
- 
-
- 
-
- 
 
 **EXHIBIT A**
 
@@ -744,46 +718,42 @@ Minimum requirements for the EULA to be entered into between the Developer and a
 
   1. **Acknowledgment**. The EULA shall stipulate that use of the Application by the User shall be subject to these Terms, and the User agrees, to the extent applicable, to comply with these Terms.
   2. **Parties to the EULA.** You and the User shall acknowledge that the EULA is concluded between you and the User only and not with Lazada, and accordingly, the EULA shall stipulate that Lazada shall not be responsible for, and shall not have any liability whatsoever under the EULA, or any breach by you or any User of any of the terms of the EULA.
-  3. **Fees and Scope of Services.  **The EULA shall provide clear details of all services (including licenses) granted thereunder, and any fees payable. 
-  4. **Data Processing.  **Where required by applicable Data Protection Laws, the EULA shall specify the appropriate data processing terms with the User which govern your processing of any Personal Data of buyers or customers of the User in accordance with the requirements of the applicable Data Protection Law;
-  5. **Third-Party Beneficiary.  **The EULA shall stipulate that Lazada, and any member of the Lazada Group, are third-party beneficiaries to the EULA, and shall have the right (exercisable at its sole discretion) to enforce any term of the agreement (including, the termination clause) against the User directly.
+  3. **Fees and Scope of Services.** The EULA shall provide clear details of all services (including licenses) granted thereunder, and any fees payable. 
+  4. **Data Processing.** Where required by applicable Data Protection Laws, the EULA shall specify the appropriate data processing terms with the User which govern your processing of any Personal Data of buyers or customers of the User in accordance with the requirements of the applicable Data Protection Law;
+  5. **Third-Party Beneficiary.** The EULA shall stipulate that Lazada, and any member of the Lazada Group, are third-party beneficiaries to the EULA, and shall have the right (exercisable at its sole discretion) to enforce any term of the agreement (including, the termination clause) against the User directly.
   6. **Compliance with the Terms.** The EULA shall stipulate that the User's right to use the Application and any sub-licence granted by you to the User pursuant to these Terms shall be automatically terminated in the event that the Terms are terminated for any reason whatever, or in the event of any breach of these Terms (whether by you or the User), or if directed by Lazada (including where access to the Open Platform, the Tools, Lazada Services and/or the Application is disabled, suspended or terminated (whether in part or in whole) pursuant to these Terms).
-
-
-
- 
 
 **SCHEDULE 1**
 
 **DATA PROTECTION AND CYBERSECURITY**
 
-**Section 1: Developer 's Data Breach**
+**Section 1: Developer’s Data Breach**
 
 (a) The Developer shall comply with all of the following with respect to Data Breaches:
 
 (i)The Developer shall inform Lazada in writing, as soon as the Developer becomes aware of or suspects or has reasonable cause to suspect that a Data Breach has occurred. Such notification must be made immediately and in no event later than twelve (12) hours after the time of discovery or suspicion of the Data Breach.
 
-(ii)The Developer's notification to Lazada pursuant to sub-paragraph (i) above shall contain reasonably sufficient information about the Data Breach (if so requested, in the format requested by Lazada), including but not limited to information about (A) the date and time of the Data Breach, (B) the date and time the Data Breach was discovered, (C) the number of affected individuals, (D) the amount and type of affected Personal Data, (E) how Personal Data has been affected (e.g. unauthorised access, use, encryption, tampering, exfiltration etc), (F) whether the Data Breach has been contained and (G) the containment steps already taken or which will be taken by the Developer.
+(ii)The Developer’s notification to Lazada pursuant to sub-paragraph (i) above shall contain reasonably sufficient information about the Data Breach (if so requested, in the format requested by Lazada), including but not limited to information about (A) the date and time of the Data Breach, (B) the date and time the Data Breach was discovered, (C) the number of affected individuals, (D) the amount and type of affected Personal Data, (E) how Personal Data has been affected (e.g. unauthorised access, use, encryption, tampering, exfiltration etc), (F) whether the Data Breach has been contained and (G) the containment steps already taken or which will be taken by the Developer.
 
 (iii)Lazada may from time to time request for information regarding an actual or suspected Data Breach and the Developer shall use its best endeavours to provide such information to Lazada in writing (if so requested, in the format requested by Lazada) within six (6) hours of receiving a request from Lazada.
 
-(iv)The Developer's obligation to provide information about the Data Breach under sub-paragraphs (a)(i) and (ii) above shall continue until the Data Breach has been fully resolved (including, where appropriate, when the final decision has been issued by the data protection regulatory authority(ies)). The Developer shall promptly provide Lazada with any and all updated information regarding the Data Breach as and when any developments arise.
+(iv)The Developer’s obligation to provide information about the Data Breach under sub-paragraphs (a)(i) and (ii) above shall continue until the Data Breach has been fully resolved (including, where appropriate, when the final decision has been issued by the data protection regulatory authority(ies)). The Developer shall promptly provide Lazada with any and all updated information regarding the Data Breach as and when any developments arise.
 
-(vii)Notwithstanding anything else to the contrary in these Terms, Lazada reserves the right to suspend or terminate the Developer's access to Personal Data immediately if Lazada becomes aware or reasonably suspects that a Data Breach has been suffered by the Developer.
+(vii)Notwithstanding anything else to the contrary in these Terms, Lazada reserves the right to suspend or terminate the Developer’s access to Personal Data immediately if Lazada becomes aware or reasonably suspects that a Data Breach has been suffered by the Developer.
 
-(b) The Developer shall preserve and retain all relevant records and evidence in connection with the Data Breach for at least two (2) years from (i) the date of the Data Breach; or (ii) where there are any inquiries from or investigations conducted by the relevant regulatory authorities, the date when the final decision has been issued by such relevant regulatory authority(ies)(whichever is the later), unless mutually agreed otherwise by the Parties. The Developer shall make these records and evidence available for Lazada's inspection and audit upon request by Lazada which may be made at any time including after the expiration or earlier termination of these Terms.
+(b) The Developer shall preserve and retain all relevant records and evidence in connection with the Data Breach for at least two (2) years from (i) the date of the Data Breach; or (ii) where there are any inquiries from or investigations conducted by the relevant regulatory authorities, the date when the final decision has been issued by such relevant regulatory authority(ies)(whichever is the later), unless mutually agreed otherwise by the Parties. The Developer shall make these records and evidence available for Lazada’s inspection and audit upon request by Lazada which may be made at any time including after the expiration or earlier termination of these Terms.
 
-(c) Lazada is entitled to, and the Developer accepts and acknowledges Lazada's right to, conduct or appoint external parties to conduct scans, checks and assessments on the internet for any Vulnerabilities involving any Lazada-owned servers, assets or Lazada Content that may have been disclosed on the internet without Lazada's and/or Lazada User' authorisation. The Developer consents to the access by Lazada and/or such external parties appointed by Lazada to data stored in the Developer's servers and systems in the course of such scans, checks and assessment due to Vulnerabilities in the Developer's servers and/or systems. If a Vulnerability is discovered or suspected on the Developer's servers and/or systems, Lazada may in its discretion inform the Developer and Lazada may require the Developer to undertake remedial actions to rectify or mitigate the Vulnerability which affects any Lazada-owned assets or Lazada Content.
+(c) Lazada is entitled to, and the Developer accepts and acknowledges Lazada’s right to, conduct or appoint external parties to conduct scans, checks and assessments on the internet for any Vulnerabilities involving any Lazada-owned servers, assets or Lazada Content that may have been disclosed on the internet without Lazada’s and/or Lazada User’ authorisation. The Developer consents to the access by Lazada and/or such external parties appointed by Lazada to data stored in the Developer’s servers and systems in the course of such scans, checks and assessment due to Vulnerabilities in the Developer’s servers and/or systems. If a Vulnerability is discovered or suspected on the Developer’s servers and/or systems, Lazada may in its discretion inform the Developer and Lazada may require the Developer to undertake remedial actions to rectify or mitigate the Vulnerability which affects any Lazada-owned assets or Lazada Content.
 
-(i)Upon being notified of the Vulnerability, the Developer shall promptly propose remedial actions to rectify, remove or mitigate the Vulnerability within a mutually agreed timeline for Lazada's approval. Lazada shall not unreasonably withhold approval of the Developer's proposed remedial actions.
+(i)Upon being notified of the Vulnerability, the Developer shall promptly propose remedial actions to rectify, remove or mitigate the Vulnerability within a mutually agreed timeline for Lazada’s approval. Lazada shall not unreasonably withhold approval of the Developer’s proposed remedial actions.
 
-(ii)Upon Lazada's approval of the proposed remedial actions, the Developer shall complete the proposed remedial actions within a reasonable time as may be prescribed by Lazada depending on the risk rating for such Vulnerability and in any case no later than three (3) months after the date of Lazada's approval.
+(ii)Upon Lazada’s approval of the proposed remedial actions, the Developer shall complete the proposed remedial actions within a reasonable time as may be prescribed by Lazada depending on the risk rating for such Vulnerability and in any case no later than three (3) months after the date of Lazada’s approval.
 
-(iii)Lazada may from time to time request for information regarding the Vulnerability and the status of the Developer's remedial actions, and the Developer shall use its best endeavours to provide such information to Lazada in writing (if so requested, in the format requested by Lazada) within two (2) weeks of receiving the request from Lazada.
+(iii)Lazada may from time to time request for information regarding the Vulnerability and the status of the Developer’s remedial actions, and the Developer shall use its best endeavours to provide such information to Lazada in writing (if so requested, in the format requested by Lazada) within two (2) weeks of receiving the request from Lazada.
 
 (d) A breach by the Developer of any obligation under this Schedule shall be deemed a material breach of these Terms and without prejudice to any other rights, claims remedies available to Lazada, Lazada shall be entitled to terminate these Terms pursuant to Clause 18.1(b)(ii)
 
- **Section 2: Cybersecurity**
+**Section 2: Cybersecurity**
 
 (a) The Developer shall implement protective measures for data that are no less rigorous than Good Industry Practices and which are commensurate with the consequences and probability of unauthorised access to, or use, misuse, damage, destruction, or loss of, the data to the extent such data is under the control of or in the possession of the Developer including the requirements as set out in the Security Measures.
 
@@ -791,6 +761,6 @@ Minimum requirements for the EULA to be entered into between the Developer and a
 
 (c) A breach by the Developer of any obligation under this Section shall be deemed a material breach of this Agreement and without prejudice to any other rights, claims remedies available to Lazada, Lazada shall be entitled to terminate this Agreement pursuant to Clause 18.1(b)(ii).
 
-(d) Lazada reserves the right to suspend the Developer's access to Lazada's Content, information, material or systems if it becomes aware or reasonably suspects that the Developer is in breach of this Section.
+(d) Lazada reserves the right to suspend the Developer’s access to Lazada’s Content, information, material or systems if it becomes aware or reasonably suspects that the Developer is in breach of this Section.
 
-(e) The Developer shall notify Lazada of significant changes to its systems and security controls which may affect the Developer's compliance with this Section. The Parties agree to discuss in good faith measures or solutions to ensure the Developer's continued implementation of protective measures that are sufficient for the purposes of these Terms and/or Lazada Seller Service Market Terms.
+(e) The Developer shall notify Lazada of significant changes to its systems and security controls which may affect the Developer’s compliance with this Section. The Parties agree to discuss in good faith measures or solutions to ensure the Developer’s continued implementation of protective measures that are sufficient for the purposes of these Terms and/or Lazada Seller Service Market Terms.

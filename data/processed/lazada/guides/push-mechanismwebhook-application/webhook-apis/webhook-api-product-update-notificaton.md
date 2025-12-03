@@ -1,13 +1,11 @@
-Property| Value| Comment  
----|---|---  
-msg_type| 3| field to determine message type.  
-Retry times  
-| 12| Retry times when client failed to response  
-Retry Interval| 30min| delay between two retries  
-Auth Required| true| This notification need authorization  
-  
-  
+Property | Value | Comment
+---|---|---
+msg_type | 3 | field to determine message type.
+Retry times | 12 | Retry times when client failed to response
+Retry Interval | 30min | delay between two retries
+Auth Required | true | This notification need authorization
 
+  
 
 Triggered when new product/sku is added(includes publish and edit)
 
@@ -39,14 +37,13 @@ Triggered when new product/sku is added(includes publish and edit)
       "site" : "lazada-sg"
     }
 
-Property| Value| Comment  
----|---|---  
-msg_type| 4| field to determine message type.  
-Retry times  
-| 12| Retry times when client failed to response  
-Retry Interval| 30min| delay between two retries  
-Auth Required| true| This notification need authorization  
-  
+Property | Value | Comment
+---|---|---
+msg_type | 4 | field to determine message type.
+Retry times | 12 | Retry times when client failed to response
+Retry Interval | 30min | delay between two retries
+Auth Required | true | This notification need authorization
+
 Triggered when a product is edited()
     
     
@@ -69,18 +66,15 @@ Triggered when a product is edited()
 
   
 
-
   
 
+Property | Value | Comment
+---|---|---
+msg_type | 5 | field to determine message type.
+Retry times | 12 | Retry times when client failed to response
+Retry Interval | 30min | delay between two retries
+Auth Required | true | This notification need authorization
 
-Property| Value| Comment  
----|---|---  
-msg_type| 5| field to determine message type.  
-Retry times  
-| 12| Retry times when client failed to response  
-Retry Interval| 30min| delay between two retries  
-Auth Required| true| This notification need authorization  
-  
 Triggered when a product is deleted or a sku is deleted
     
     

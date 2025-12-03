@@ -170,20 +170,19 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 The following table lists the parameters that are required for creating a global product.
 
-**Name**| **Type**| **Description**  
----|---|---  
-Product| subsection| The product data node. Mandatory  
-PrimaryCategory| integer| The ID of the primary category for the product. To get the ID for each of the system’s categories, call GetCategoryTree. Mandatory. It’s optional if ‘AssociatedSku’ is provided.  
-SPUId| integer| The ID of the SPU. Optional  
-AssociatedSku| subsection| The unique identifier of a product that is already in the system, with which this product should be associated. Optional  
-Images| string| Spu level product image.Contains most 8 images URL. Optional  
-AutoAllocateStock| string| Support automatical stock allocation between sites when the stock of a site is 0. The stock allocation rule is transferring 1/2 stock from the one with the most stock quantity.  
-ventures| subsection| The target site to create the product, with MY as mandatory option. Optional values are SG, TH, PH, ID, and VN. If no value is specified, the prdocut will be created to all sites that the seller has permission.  
-SemiUpgradeVentures| subsection| The target site to upgrade the product to global plus Optional values are MY, SG, TH, PH, ID, and VN. If no value is specified, the prdocut will be created as normal product.  
-Attributes| subsection| All common attributes of products. Mandatory. It’s optional if ‘AssociatedSku’ is provided.  
-Skus| subsection| An array contains at least one SKU. Mandatory  
-  
-  
+Name | Type | Description
+---|---|---
+Product | subsection | The product data node. Mandatory
+PrimaryCategory | integer | The ID of the primary category for the product. To get the ID for each of the system’s categories, call GetCategoryTree. Mandatory. It’s optional if ‘AssociatedSku’ is provided.
+SPUId | integer | The ID of the SPU. Optional
+AssociatedSku | subsection | The unique identifier of a product that is already in the system, with which this product should be associated. Optional
+Images | string | Spu level product image.Contains most 8 images URL. Optional
+AutoAllocateStock | string | Support automatical stock allocation between sites when the stock of a site is 0. The stock allocation rule is transferring 1/2 stock from the one with the most stock quantity.
+ventures | subsection | The target site to create the product, with MY as mandatory option. Optional values are SG, TH, PH, ID, and VN. If no value is specified, the prdocut will be created to all sites that the seller has permission.
+SemiUpgradeVentures | subsection | The target site to upgrade the product to global plus Optional values are MY, SG, TH, PH, ID, and VN. If no value is specified, the prdocut will be created as normal product.
+Attributes | subsection | All common attributes of products. Mandatory. It’s optional if ‘AssociatedSku’ is provided.
+Skus | subsection | An array contains at least one SKU. Mandatory
 
+  
 
 ﻿The content of the ’Attributes" fields are dynamic. To view all available attributes, call the GetCategoryAttributes API. The following table provides some examples.

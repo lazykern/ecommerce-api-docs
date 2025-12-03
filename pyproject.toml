@@ -8,6 +8,7 @@ dependencies = [
     "requests>=2.32",
     "click>=8.1",
     "html2text>=2024.2.26",
+    "beautifulsoup4>=4.12",
 ]
 
 [project.scripts]

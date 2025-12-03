@@ -1,10 +1,10 @@
-Property| Value| Comment  
----|---|---  
-msg_type| 12| field to determine message type.  
-Retry times| 12| Retry times when client failed to response  
-Retry Interval| 30 min| delay between two retries  
-Auth Required| false| This notification DOES NOT need authorization  
-  
+Property | Value | Comment
+---|---|---
+msg_type | 12 | field to determine message type.
+Retry times | 12 | Retry times when client failed to response
+Retry Interval | 30 min | delay between two retries
+Auth Required | false | This notification DOES NOT need authorization
+
 Triggered when the product category tree were updated. 
 
 Note :

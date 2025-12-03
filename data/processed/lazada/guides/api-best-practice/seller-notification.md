@@ -16,28 +16,28 @@ Note: Currently, only active enquiry is supported, no push service is provided.
 
 ## API Request Parameter Analysis
 
-Field name| Type| Required or not| Description  
----|---|---|---  
-language| String| No| Set the language of API response, default response is English.ENUM: en_US,en_SG,th_TH,id_ID,vi_VN,fil_PH,ms_MY.Note: If the current country or field does not support the requested language it will respond in English.  
-page| String| No| Current page number, default value: 1.  
-pageSize| String| No| The number of messages that can be displayed on the current page. Default value: 10, Maximum value: 100.  
-  
+Field name | Type | Required or not | Description
+---|---|---|---
+language | String | No | Set the language of API response, default response is English. ENUM: en_US,en_SG,th_TH,id_ID,vi_VN,fil_PH,ms_MY. Note: If the current country or field does not support the requested language it will respond in English.
+page | String | No | Current page number, default value: 1.
+pageSize | String | No | The number of messages that can be displayed on the current page. Default value: 10, Maximum value: 100.
+
 ## API Response Parameter Analysis
 
-Field name| Description  
----|---  
-current| Number of current pages  
-total| Total number of notifications  
-pageSize| Current Page Size  
-appLink| Mobile link to the corresponding page in the Lazada Seller Centre  
-webLink| Link to the corresponding page in the web-end Seller Centre  
-description| Content of the notice  
-title| Title of the notice  
-categoryName| Category name of the current messageENUM: Orders, Logistics, Store, System, Lazada Program, Learn & Grow, Customer Care  
-picture| If the notification is accompanied by an image, a link to the image will be displayed here.  
-id| ID of the current notification  
-time| Time of publication of the notice  
-  
+Field name | Description
+---|---
+current | Number of current pages
+total | Total number of notifications
+pageSize | Current Page Size
+appLink | Mobile link to the corresponding page in the Lazada Seller Centre
+webLink | Link to the corresponding page in the web-end Seller Centre
+description | Content of the notice
+title | Title of the notice
+categoryName | Category name of the current message ENUM: Orders, Logistics, Store, System, Lazada Program, Learn & Grow, Customer Care
+picture | If the notification is accompanied by an image, a link to the image will be displayed here.
+id | ID of the current notification
+time | Time of publication of the notice
+
 ## API Response Example
 
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
@@ -145,7 +145,6 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 Some of the modules cannot be fully linked for technical reasons, you can use the following domain names to complete the links in "webLink" according to your seller's country.
 
   
-
 
 MY：https://sellercenter.lazada.com.my
 

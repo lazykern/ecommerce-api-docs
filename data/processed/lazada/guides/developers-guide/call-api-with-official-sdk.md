@@ -8,8 +8,6 @@ SDK is automatically generated for your application and includes functions like 
   * Python requires Python 3.0 or newer version
   * For Ruby, you can install it directly [here](<http://www.rubydoc.info/gems/lazop_api_client/1.1.0>).
 
-
-
 ## Downloading SDK
 
 Before you can download SDK, you need to have registered as a developer and able to login to Lazada Open Platform. 

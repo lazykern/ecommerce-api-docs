@@ -12,7 +12,7 @@
 
 DFD的示例如下所示：
 
- ![](https://img.alicdn.com/top/i1/LB1MhMlxhTpK1RjSZFGXXcHqFXa)
+![](https://img.alicdn.com/top/i1/LB1MhMlxhTpK1RjSZFGXXcHqFXa)
 
 请参考下面的DFD说明：
 
@@ -20,17 +20,17 @@ DFD的示例如下所示：
 
 外部实体：请参考User
 
-处理过程：请参考"Look up product availability"的执行动作
+处理过程：请参考“Look up product availability”的执行动作
 
-数据存储：请参考保存数据的"catalog", "product item"和"inventory item"框。
+数据存储：请参考保存数据的“catalog“, ”product item“和”inventory item”框。
 
- ![](https://img.alicdn.com/top/i1/LB1ERAnxmzqK1RjSZFHXXb3CpXa)
+![](https://img.alicdn.com/top/i1/LB1ERAnxmzqK1RjSZFHXXb3CpXa)
 
-外部实体：请参考Customer（流程开始和流程结束）。客户下订单时会触发此动作。订单详细信息和货物发票信息将发送到"Process Orders"框。
+外部实体：请参考Customer（流程开始和流程结束）。客户下订单时会触发此动作。订单详细信息和货物发票信息将发送到“Process Orders”框。
 
-处理过程：在"Process Orders"框中，"订单和派件"的详细信息被处理并发送到"数据存储 - Orders（数据存储）"
+处理过程：在“Process Orders”框中，“订单和派件”的详细信息被处理并发送到“数据存储 - Orders（数据存储）”
 
-数据存储：请参考"Orders"框，其中存储了所有订单详细信息。
+数据存储：请参考“Orders”框，其中存储了所有订单详细信息。
 
 或者：
 

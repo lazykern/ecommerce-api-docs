@@ -6,10 +6,7 @@ If you are new to Lazada Open Platform, this guide would help you step by step h
   4. **_[Request API permission](<https://open.lazada.com/apps/doc/doc?nodeId=10535&docId=108131>)_** for your application, so that your application can initiate calls to Lazada APIs.
   5. **_[Start development of your application](<https://open.lazada.com/apps/doc/doc?nodeId=10536&docId=108132>)_** \- Learn how to interact with Lazada API. You could find more technical details from the Developer’s Guide section.
 
-
-
   
-
 
 You may also be interested in the following topics:
 
@@ -19,12 +16,9 @@ You may also be interested in the following topics:
   4.  _[Call API with HTTP requests](<https://open.lazada.com/apps/doc/doc?nodeId=10540&docId=108136>)_ \- Instructions on how to assemble HTTP requests to call API
   5.  _[API sample codes](<https://open.lazada.com/apps/doc/doc?nodeId=10541&docId=108137>)_ \- JAVA, .Net, and PHP sample codes for calling Lazada API
 
-
-
 Official DingTalk group:
 
   
-
 
 Local store API Q&A
 
@@ -33,7 +27,6 @@ Local store API Q&A
 [Official Q&A 2nd] Lazada Open Platform:116000006208
 
   
-
 
 Crossborder store API Q&A
 

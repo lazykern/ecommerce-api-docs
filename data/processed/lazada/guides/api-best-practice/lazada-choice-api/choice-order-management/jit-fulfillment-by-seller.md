@@ -2,7 +2,6 @@
 
   
 
-
 ## Step 1: Call GetOrderItems API
 
 [GetOrderItems API](<https://open.lazada.com/apps/doc/api?path=%2Forder%2Fitems%2Fget>)

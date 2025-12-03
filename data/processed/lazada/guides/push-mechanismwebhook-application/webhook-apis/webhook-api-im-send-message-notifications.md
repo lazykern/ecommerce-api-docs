@@ -1,10 +1,12 @@
-Property | Value | Comment  
----|---|---  
-msg_type | 2 | field to determine message type.  
-Retry times | 12 | Retry times when client failed to response  
-Retry Interval | 30 min | delay between two retries  
-Auth Required | true | This notification need authorization  
-  
+Property | Value | Comment
+---|---|---
+msg_type | 2 | field to determine message type.
+Retry times | 12 | Retry times when client failed to response
+Retry Interval | 30 min | delay between two retries
+Auth Required | true | This notification need authorization
+
+ 
+
   
 
     

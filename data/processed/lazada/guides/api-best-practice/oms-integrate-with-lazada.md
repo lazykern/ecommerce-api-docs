@@ -8,8 +8,6 @@ An order management system (OMS) is a digital way to manage the lifecycle of an 
   * You want to link your own ERP with Lazadas stores.
   * Have development resources, and hope to meet the needs of the company requirements through customization
 
-
-
 # A basic OMS architecture
 
 ## System architecture
@@ -30,8 +28,6 @@ You should grant your OMS have Lazada stores access permission and a lazada open
   * [Seller authorization introduction](<https://open.lazada.com/apps/doc/doc?spm=a1zq7z.man121098.site_detail.2.289f7c73NxrAyt&nodeId=10777&docId=108260>)
   * [Configure seller authorization](<https://open.lazada.com/apps/doc/doc?nodeId=10434&docId=108056>)
 
-
-
 ## Modules
 
 ### Product Management 
@@ -45,8 +41,6 @@ Features:
   * Update Product stock only
   * Active/Deactive Product
 
-
-
 #### Basic flow of create product
 
 ![](https://tida.alicdn.com/oss_1671004819496_null_FpRmoUP9)
@@ -56,17 +50,9 @@ Features:
   * [Video Upload](<Video Upload>)
   * [Create a product](<https://open.lazada.com/apps/doc/doc?nodeId=30720&docId=120949>)
 
-
-
- 
-
- 
-
 You can also accept the Lazada message to update your product info in OMS. 
 
 OMS can monitor the product info from Lazada to check if the product info (such as price) is different between Lazada and your OMS.
-
- 
 
 ### Order Management
 
@@ -79,22 +65,14 @@ Features
   * Package Order
   * Get Reverse Reasons
 
-
-
 #### Basic flow of order management
 
 ![](https://tida.alicdn.com/oss_1671004877060_null_fq5XxaFb)
-
- 
 
 #### Best Practice of use Lazada order OpenAPI
 
   * [Order Status Flow](<https://open.lazada.com/apps/doc/doc?nodeId=29484&docId=120167>)
   * [Order management and processing](<https://open.lazada.com/apps/doc/doc?nodeId=10548&docId=108143>)
-
-
-
- 
 
 You can also accept the Lazada message to update your orders Status in OMS. OMS monitor the orders status change in Lazada such as buyers cancel the order. 
 

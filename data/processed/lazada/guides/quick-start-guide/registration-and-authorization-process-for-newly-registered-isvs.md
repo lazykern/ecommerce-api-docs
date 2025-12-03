@@ -46,7 +46,7 @@ You can find more details below
 
 ![](https://tida.alicdn.com/oss_1668756834045_null_8Z4oR8RI)
 
-c. If the app of type seller in house  is not whitelisted, the following error messages will appear
+c. If the app of type seller in house is not whitelisted, the following error messages will appear
 
 ![](https://tida.alicdn.com/oss_1668756849213_null_ACjjiIap)
 
@@ -137,8 +137,6 @@ a. Click API Testing Tool
 b.For users using the test tool, Malaysia can be selected as the region. No matter which country is selected when generating the authorization code in the previous step, Malaysia is selected as the region 
 
 Select Malaysia as the region (because there is only one service address of the GenerateAccessToken API [https://auth.lazada.com/rest](<https://auth.lazada.com/rest>) ）
-
- 
 
 ![](https://tida.alicdn.com/oss_1668757169596_null_wKWDL5E6)
 

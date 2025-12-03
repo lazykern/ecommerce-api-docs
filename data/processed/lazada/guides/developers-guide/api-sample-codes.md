@@ -2,7 +2,7 @@ Lazada Open Platform API is called based on the HTTPS protocol, so programming l
 
 ## Using official SDK to call API
 
-Take the "/order/get" API as example:
+Take the “/order/get” API as example:
 
 JAVA sample code 
     

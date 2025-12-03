@@ -1,10 +1,10 @@
-Property| Value| Comment  
----|---|---  
-msg_type| 14| field to determine message type.  
-Retry times| 12| Retry times when client failed to response  
-Retry Interval| 30 min| delay between two retries  
-Auth Required| true| This notification need authorization  
-  
+Property | Value | Comment
+---|---|---
+msg_type | 14 | field to determine message type.
+Retry times | 12 | Retry times when client failed to response
+Retry Interval | 30 min | delay between two retries
+Auth Required | true | This notification need authorization
+
 Triggered when fulfillment order is updated.
     
     
@@ -24,18 +24,15 @@ Triggered when fulfillment order is updated.
 
   
 
-
 STATUS :
 
   
-
 
 CANCELLED  
 READY_TO_SHIP  
 TRANSIT_TO_SHIP  
 INFO_ST_DOMESTIC_SC_SIGN_IN_SUCCESS  
 INFO_ST_DOMESTIC_PICKUP_SIGN_IN_SUCCESS  
-
 
 INFO_ST_DOMESTIC_PICKUP_SIGN_IN_FAILURE
 

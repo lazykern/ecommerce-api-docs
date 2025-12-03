@@ -4,23 +4,19 @@ The parameter corresponding to the signature is **http_sign.** You can obtain th
 
   
 
-
 # 二、How to get http_sign param
 
 The http_sign parameter is placed on the request URL, not in the request body. For example：https://api.taobao.global/test/push?app_key=103602&http_sign=124AEFA4A55F0B84D1E98DB302AA2F94F13348CD7EC36A7DC0A7FC62D545B3DC&sign_method=sha256&timestamp=1729589993688
 
   
 
-
 # 三、Signature Algorithm 
 
   
 
-
 Using Java code as an example：
 
   
-
 
 Input Parameter Explanation
 
@@ -28,8 +24,6 @@ Input Parameter Explanation
   2. **uri** ： api path, You can view the API path on the API documentation.
   3. **body** : Fixed value null
   4. **appSecret** ： app secret
-
-
 
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
@@ -49,7 +43,6 @@ Arrays.sort(keys);
 
   
 
-
 // second: connect all text parameters with key and value
 
 StringBuilder query = new StringBuilder();
@@ -57,7 +50,6 @@ StringBuilder query = new StringBuilder();
 query.append(uri);
 
   
-
 
 for (String key : keys) {
 
@@ -81,7 +73,6 @@ query.append(body);
 
   
 
-
 // next : sign the whole request
 
 byte[] bytes = encryptHMACSHA256(query.toString(), appSecret);
@@ -92,13 +83,11 @@ String s = byte2hex(bytes);
 
   
 
-
 return s;
 
 }
 
   
-
 
 private static byte[] encryptHMACSHA256(String data, String secret) throws IOException {
 
@@ -125,7 +114,6 @@ return bytes;
 }
 
   
-
 
 /**
 
@@ -157,12 +145,9 @@ return sign.toString();
 
   
 
-
   
 
-
   
-
 
 # 四、Example
 

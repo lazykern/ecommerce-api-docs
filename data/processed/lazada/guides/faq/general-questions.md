@@ -17,8 +17,6 @@ Lazada Open Platform is an integrated open platform, which provides end-to-end A
   1. To enables developers (ISVs and sellers) to develop and manage several types of applications for Lazada sellers, such as ERP system, omni-channel system, marketing APPs, accounting software, cataloguing tools, image enhancement tools, order management system, and warehouse management system.
   2. Solid security framework like user authorization and hosting environment is deployed to protect business data.
 
-
-
 #### Q: What are my benefits to move to Lazada Open Platform?
 
   1. Rich API endpoints for all the areas of e-commerce, including product, order, user, marketing, and payment management. Besides, more APIs will be open to meet the business requirements.
@@ -26,15 +24,11 @@ Lazada Open Platform is an integrated open platform, which provides end-to-end A
   3. The dashboard provides view of successful and failed API calls initiated by your applications, helping your monitor the performance of your applications.
   4. A migration guide is provided to ensure the smooth migration of your applications.
 
-
-
 #### Q: I want more information. How can I get it?
 
   1. Please direct any further questions to the Partner Support Center, or through the Lazada Open Platform [Contact Us](<https://open.lazada.com/apps/home/contact_us?spm=a1zq7z.27197287.droot_normal_ticket_system.droot_normal_raise_ticket.53a67c73VMwhWl
 >) menu.
   2. You can also get more support through the community. For details, see [Community](<https://open.lazada.com/apps/community/index?spm=a1zq7z.man108149.0.droot_normal_community.65837c73K6Hiv9>).
-
-
 
 ## Working with Lazada Open Platform
 
@@ -44,16 +38,12 @@ Lazada Open Platform is an integrated open platform, which provides end-to-end A
   2. After logging in Lazada Open Platform, complete your profile information and upload related documents in the **User ID** -> **Profile** menu.
   3. For detailed instructions, see [Become a developer](<https://open.lazada.com/apps/doc/doc?nodeId=10396&docId=108001>).
 
-
-
 #### Q: How to register my application?
 
   1. Firstly, apply for the APP category of your application. You will need to provide business justification and related documents (such as description of functions and features of your APP, design documentation, data flow diagrams, etc) to get the approval because the category defines the API groups that your application can access.
   2. After the category is approved, register your application by providing some basic information, like APP name, APP logo, and the callback URL.
   3. Download the official SDK for your application and start the development.
   4. For detailed instructions, see [Register an application](<https://open.lazada.com/apps/doc/doc?nodeId=10398&docId=108002>).
-
-
 
 #### Q: How does it take to approve my APP category request?
 

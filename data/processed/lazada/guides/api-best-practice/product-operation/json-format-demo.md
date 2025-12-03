@@ -1,27 +1,29 @@
 # APP Grayscale Time Schedule List:
 
-batch | Starting time | gray scale（%）  
----|---|---  
-first batch | 2022.4.13 | 5  
-second batch | 2022.4.18 | 20  
-The third batch | 2022.4.20 | 50  
-fourth batch | 2022.4.25 | 100  
-  
-  
+batch | Starting time | gray scale（%）
+---|---|---
+first batch | 2022.4.13 | 5
+second batch | 2022.4.18 | 20
+The third batch | 2022.4.20 | 50
+fourth batch | 2022.4.25 | 100
 
+ 
+
+  
 
 # The list of supported APIs is as follows：
 
-API Titel | API Path  
----|---  
-[CreateProduct](<https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fcreate>) | /product/create  
-[UpdateProduct](<https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fupdate>) | /product/update  
-[UpdatePriceQuantity](<https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fprice_quantity%2Fupdate>) | /product/price_quantity/update  
-[SetImages](<https://open.lazada.com/apps/doc/api?path=%2Fimages%2Fset>) | /images/set  
-[DeactivateProduct](<https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fdeactivate>) | /product/deactivate  
-  
-  
+API Titel | API Path
+---|---
+CreateProduct | /product/create
+UpdateProduct | /product/update
+UpdatePriceQuantity | /product/price_quantity/update
+SetImages | /images/set
+DeactivateProduct | /product/deactivate
 
+ 
+
+  
 
 # 1、CreateProduct API payload demo
     

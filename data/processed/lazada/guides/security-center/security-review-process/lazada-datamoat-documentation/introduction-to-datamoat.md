@@ -8,7 +8,7 @@ Targeting high-risk data risk points in systems, applications and accounts, Data
 
 ## Data Risk Identification
 
-Using a standard data access solution, the data from applications or logistics systems, such as from account logins, operational behaviors and system environments, can all be easily and conveniently connected to the Risk-Control Engine of DataMoat. Integrating massive amounts of basic data and the big data analysis capabilities of Alibaba, DataMoat can help you to analyze the accessed data with a data risk analysis model. You can literally "see" data risks when DataMoat discovers relevant data leakage risks that exist in accounts, personnel and systems in real time.
+Using a standard data access solution, the data from applications or logistics systems, such as from account logins, operational behaviors and system environments, can all be easily and conveniently connected to the Risk-Control Engine of DataMoat. Integrating massive amounts of basic data and the big data analysis capabilities of Alibaba, DataMoat can help you to analyze the accessed data with a data risk analysis model. You can literally “see” data risks when DataMoat discovers relevant data leakage risks that exist in accounts, personnel and systems in real time.
 
 ## Data Risk Early Warning
 

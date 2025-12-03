@@ -8,10 +8,6 @@ Because Current Fulfillment API got below issues:
   4. Optimize Get shipment provider API, Response Parameters based on fulfillment system: 3PL list or default;
   5. Provide Tracking number checking;
 
-
-
- 
-
 We will Revamp Fulfillment API, and Provide Totally New Fulfillment to ERP Seller;
 
 Old Fulfillment API will be offlined in **30th April 2023** ;
@@ -30,20 +26,14 @@ Old Fulfillment API will be offlined in **30th April 2023** ;
 
 ## 1.2 Order API Call Flow
 
- ![](https://tida.alicdn.com/oss_1683276528975_null_uFmHVZOn)
-
- 
+![](https://tida.alicdn.com/oss_1683276528975_null_uFmHVZOn)
 
 ![](https://id-live-02.slatic.net/p/76eb613c4fe167218d0347c5aacc1a8b.jpg)
 
 ## 1.3 Scnarios List
 
-![](https://id-live-02.slatic.net/p/176a81d137913b8a93960b88cb7c99bd.jpg) 
-
- 
+![](https://id-live-02.slatic.net/p/176a81d137913b8a93960b88cb7c99bd.jpg)
 
 **You may also be interested in the following topics:**
-
- 
 
 Click here to view [New Fulfillment API Details](<https://open.lazada.com/apps/doc/doc?nodeId=30765&docId=120984>)

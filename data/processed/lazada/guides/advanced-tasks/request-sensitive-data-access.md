@@ -7,7 +7,6 @@ Lazada Open Platform provides a security framework to protect the sensitive busi
 
   
 
-
 To request access to the sensitive business data, you need to go through a review process for your application on Lazada DataMoat, a security module that is integrated with Lazada Open Platform. 
 
 Take the following steps to request sensitive data access:  

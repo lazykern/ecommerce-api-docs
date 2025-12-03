@@ -1,16 +1,9 @@
 If you need more information about Lazada Open Platform, you can download the videos and decks in multiple languages.
 
- 
-
 ### Video for Lazada Open Platform
 
   1. [Video in English](<https://youtu.be/EPT7KvId8Io>)
   2. [Video in Thai](<https://www.youtube.com/watch?v=If5eJDivhLs>)
-
-
-
-
- 
 
 ### Training decks
 

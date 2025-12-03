@@ -22,45 +22,45 @@ If the status of the order item you need to cancel is not Pending\Packed\ReadyTo
 
 {
 
-  "data": {
+"data": {
 
-    "tip_content": "SKU stock may be set to 0* after cancellation due to reasons: ‘out of stock’ or ‘incorrect pricing’, to prevent new orders while you adjust your stock/pricing. You can adjust your stock back up at any time. This adjustment will not impact existing orders. Note that cancellations can impact your ability to sell on Lazada if not managed carefully.\n\n*For more information, please view Seller Cancellation Policy page",
+"tip_content": "SKU stock may be set to 0* after cancellation due to reasons: ‘out of stock’ or ‘incorrect pricing’, to prevent new orders while you adjust your stock/pricing. You can adjust your stock back up at any time. This adjustment will not impact existing orders. Note that cancellations can impact your ability to sell on Lazada if not managed carefully.\n\n*For more information, please view Seller Cancellation Policy page",
 
-    "reason_options": [
+"reason_options": [
 
-      {
+{
 
-        "reason_name": "Sourcing Delay",
+"reason_name": "Sourcing Delay",
 
-        "reason_id": "10000019"
+"reason_id": "10000019"
 
-      },
+},
 
-      {
+{
 
-        "reason_name": "Out of Stock",
+"reason_name": "Out of Stock",
 
-        "reason_id": "10000021"
+"reason_id": "10000021"
 
-      },
+},
 
-      {
+{
 
-        "reason_name": "Wrong Price or Pricing Error",
+"reason_name": "Wrong Price or Pricing Error",
 
-        "reason_id": "10000023"
+"reason_id": "10000023"
 
-      }
+}
 
-    ],
+],
 
-    "tip_type": "warning"
+"tip_type": "warning"
 
-  },
+},
 
-  "code": "0",
+"code": "0",
 
-  "request_id": "2101069616872400092505868"
+"request_id": "2101069616872400092505868"
 
 }
 
@@ -70,8 +70,6 @@ If the status of the order item you need to cancel is not Pending\Packed\ReadyTo
   2. If you select "Out of Stock" or "Wrong Price or Pricing Error" as the reason for cancellation, the stock of the corresponding item will be adjusted to 0 to prevent further incorrect orders.
   3. The reason_id may be different for each country.
   4. Only order items with the Pending ~ Ready To Ship status can be cancelled.
-
-
 
 # Step 3 Call the InitReverseOrderCancel API
 
@@ -83,17 +81,17 @@ Call this API and add the order id and order item id you need to cancel, as well
 
 {
 
-  "data": {
+"data": {
 
-    "tip_content": "The order has been cancelled and SKU stock may have been set to 0. Please ensure you check your stock/pricing under “Manage Products”. Your customer has also been informed of the cancellation and will receive a customer experience survey.\nPlease reach out to your customer if you would like to provide service recovery.",
+"tip_content": "The order has been cancelled and SKU stock may have been set to 0. Please ensure you check your stock/pricing under “Manage Products”. Your customer has also been informed of the cancellation and will receive a customer experience survey.\nPlease reach out to your customer if you would like to provide service recovery.",
 
-    "tip_type": "success"
+"tip_type": "success"
 
-  },
+},
 
-  "code": "0",
+"code": "0",
 
-  "request_id": "2140c3e616872414077912824"
+"request_id": "2140c3e616872414077912824"
 
 }
 

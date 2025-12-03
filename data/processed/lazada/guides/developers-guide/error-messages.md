@@ -6,8 +6,6 @@ When an API call fails, the system returns the request ID and error codes as wel
   * ISV: Business data error
   * ISP: Backend service error
 
-
-
 ## API platform error (ISV errors)
 
 The API platform errors usually occur because the request from a user does not fulfill the basic verification. When encountering such errors, check the authority, frequency and other conditions of the applications. Then, check the uploaded parameters for completeness and validity based on the API documentation.

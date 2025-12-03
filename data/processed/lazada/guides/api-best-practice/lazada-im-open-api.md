@@ -12,119 +12,82 @@ PATH /im/message/list
 
 #### **Request**
 
-**name**| **Type**| **Required**| **Demo Value**| **rule**| **Description**  
----|---|---|---|---|---  
-session_id| String| true| 100094063_2_1011822749_1_103|   
-| session id  
-start_time| long| true| 1555937067614| when request the first page pls input current timestamp，get the next page pls input previous page response field`next_start_time`| begin timestamp  
-last_message_id| String| false| 24jFlAu0BtRbP47190| it could be null when get the first page, get the next page pls input previous page response field`last_message_id`|   
-  
-page_size| int| true| 20| limit 20| page size  
-  
+name | Type | Required | Demo Value | rule | Description
+---|---|---|---|---|---
+session_id | String | true | 100094063_2_1011822749_1_103 |  | session id
+start_time | long | true | 1555937067614 | when request the first page pls input current timestamp，get the next page pls input previous page response field next_start_time | begin timestamp
+last_message_id | String | false | 24jFlAu0BtRbP47190 | it could be null when get the first page, get the next page pls input previous page response field last_message_id | 
+page_size | int | true | 20 | limit 20 | page size
+
 #### **Response**
 
   
 
+name | Type | Demo Value | Description
+---|---|---|---
+has_more | Boolean | true | Identifies whether there has more page，use this field to determine whether you need to continue to pull
+next_start_time | Long | 1624862839559 | the begin timestamp of next page，When pulling the next page, it needs to be passed in as an input parameter
+last_message_id | String | 24jFlAu0BtRbP47190 | The ID of the last message on this page. When pulling the next page, it needs to be passed in as an input parameter
+message_list | Object[] | [] | 
+|-message_id | String | 1zYOS7N0cuIqw96026 | message id
+|- content | String | {\"txt\":\"你好\",\"translatText\":\"hello\"} | message content in json format
+|- from_account_id | String | 1891549323 | sender account id
+|-from_account_type | Number | 1 | sender account type, 1 represents the buyer, 2 represents the seller
+|-send_time | long | 1596550789323 | message send timestamp
+|-template_id | Number | 1 | message template id, 1: normal text message, 3: picture message, 4: emoji message, 10006: represents item message, 10007: represents order message 10008: represents voucher message 10010: represents invite to follow message 6: represents video message, use this API to get video paly url
+|-to_account_type | Number | 2 | receiver account type, 1 represents the buyer, 2 represents the seller
+|-to_account_id | String | 231135951 | receiver account id
+|-type | Number | 1 | 1: message come from user 2: message come from system
+|- process_msg | String | NOTE: The message has not been sent. Please be polite and aware that you are required to comply with local laws & policies | If this field is not empty, it means that this message has not passed the security interception verification, which means that this message is only visible to the seller, and the ISV needs to display this prompt information to the seller on the screen
+|-status | Number | 0 | 0: message status normal 1: message has been recalled by sender
+|- auto_reply | Boolean | false | true: it is a auto reply message. false: it is not a auto reply message
+|-site_id | String | SG | country code
 
-**name**| **Type**| **Demo Value**| **Description**  
----|---|---|---  
-has_more| Boolean| true| Identifies whether there has more page，use this field to determine whether you need to continue to pull  
-next_start_time| Long| 1624862839559| the begin timestamp of next page，When pulling the next page, it needs to be passed in as an input parameter  
-last_message_id| String| 24jFlAu0BtRbP47190| The ID of the last message on this page. When pulling the next page, it needs to be passed in as an input parameter  
-message_list| Object[]| []|   
   
-|-message_id| String| 1zYOS7N0cuIqw96026| message id  
-|-content| String| {\"txt\":\"你好\",\"translatText\":\"hello\"}| message content in json format  
-|-from_account_id| String| 1891549323| sender account id   
-|-from_account_type| Number| 1| sender account type, 1 represents the buyer, 2 represents the seller  
-|-send_time| long| 1596550789323| message send timestamp  
-|-template_id| Number| 1| message template id,1: normal text message, 3: picture message, 4: emoji message, 10006: represents item message, 10007: represents order message 10008: represents voucher message10010: represents invite to follow message6: represents video message, use this [API](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193487.0.0.3ac413felykKHs#/api?cid=32&path=/media/video/get>) to get video paly url  
-|-to_account_type| Number| 2| receiver account type, 1 represents the buyer, 2 represents the seller  
-|-to_account_id| String| 231135951| receiver account id  
-|-type| Number| 1| 1: message come from user 2: message come from system   
-|-process_msg| String| NOTE: The message has not been sent. Please be polite and aware that you are required to comply with local laws & policies| If this field is not empty, it means that this message has not passed the security interception verification, which means that this message is only visible to the seller, and the ISV needs to display this prompt information to the seller on the screen  
-|-status| Number| 0| 0: message status normal1: message has been recalled by sender  
-|-auto_reply| Boolean| false| true: it is a auto reply message.false: it is not a auto reply message  
-|-site_id| String| SG| country code  
-  
-  
-
 
 ### **2.2 SendMessage**
 
   
 
-
 PATH /im/message/send
 
 #### **Request**
 
-**name**| **Type**| **Required**| **Demo Value**| **rule**| **Description**  
----|---|---|---|---|---  
-template_id| Number| true| 1|   
-| message template id,1: normal text message 3: picture message4: emoji message10006: item message10007: order message10008: voucher message10010: invite buyers to follow the store6: video message, use this [API](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193487.0.0.3ac413felykKHs#/api?cid=32&path=/media/video/block/create>) to upload video (The video duration is greater than 3s and less than 180s)  
-session_id| String| true| 100094063_2_1011822749_1_103|   
-| session id  
-txt| String| false| test message content|   
-|   
-  
-img_url| String| false| <https://xxx.jpg>|   
-|   
-  
-width| Number| false| 10|   
-|   
-  
-height| Number| false| 20|   
-|   
-  
-item_id| String| false| 1762013406|   
-|   
-  
-~~sku_id~~| ~~String~~| ~~false~~| ~~89123912~~|   
-|  not support   
-order_id| String| false| 1762013406|   
-|   
-  
-promotion_id| String| false| 91471122606001|   
-|   
-  
-video_id| String| false| 3443534|   
-|   
-  
-  
+name | Type | Required | Demo Value | rule | Description
+---|---|---|---|---|---
+template_id | Number | true | 1 |  | message template id, 1: normal text message 3: picture message 4: emoji message 10006: item message 10007: order message 10008: voucher message 10010: invite buyers to follow the store 6: video message, use this API to upload video (The video duration is greater than 3s and less than 180s)
+session_id | String | true | 100094063_2_1011822749_1_103 |  | session id
+txt | String | false | test message content |  | 
+img_url | String | false | https://xxx.jpg |  | 
+width | Number | false | 10 |  | 
+height | Number | false | 20 |  | 
+item_id | String | false | 1762013406 |  | 
+sku_id | String | false | 89123912 |  | not support
+order_id | String | false | 1762013406 |  | 
+promotion_id | String | false | 91471122606001 |  | 
+video_id | String | false | 3443534 |  | 
+
   1. text message example
-
-
 
 template_id: 1, session_id: xxxxxx, txt: test
 
   1. picture message example
 
-
-
 template_id: 3, session_id: xxxxxx, imgUrl: <https://sg-live.slatic.net/other/im/7e7a4185f2e3f27e071621067f321587.png,> width: 445, height: 168
 
   1. emoji message example
-
-
 
 template_id: 4, session_id: xxxxxx, txt: [confused]
 
   1. item message example
 
-
-
 template_id: 10006, session_id: xxxxxx, itemId: 1762013406
 
   1. order message example
 
-
-
 template_id: 10007, session_id: xxxxxx, orderId: 1762013406
 
   1. Invite buyers to follow the store message example 
-
-
 
 Use this [API](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193495.0.0.74e8130cEbcqx4#/api?cid=2&path=/shop/follow/status/batch/query>) to determine whether the buyer is a shop fan
 
@@ -132,15 +95,11 @@ template_id: 10010, session_id: xxxxxx
 
   1. voucher message example
 
-
-
 Use this [API](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193495.0.0.74e8130cEbcqx4#/api?cid=30&path=/promotion/vouchers/get>) to get voucher list
 
 template_id: 10008, session_id: xxxxxx, promotion_id: 91471122422003
 
   1. video message example
-
-
 
 Use this [API](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193487.0.0.3ac413felykKHs#/api?cid=32&path=/media/video/block/create>) to upload video
 
@@ -148,17 +107,13 @@ template_id: 6, session_id: xxxxxx, video_id: 3334313, width:220, height: 720
 
 #### **Response**
 
-**name**| **Type**| **Demo Value**| **Description**  
----|---|---|---  
-message_id| String| 21d0fLE0BtkPL79071| message id  
-error_code| String|   
-| 0  
-error_msg| String|   
-|   
-  
-  
-  
+name | Type | Demo Value | Description
+---|---|---|---
+message_id | String | 21d0fLE0BtkPL79071 | message id
+error_code | String |  | 0
+error_msg | String |  | 
 
+  
 
 ### **2.3 RecallMessage**
 
@@ -166,29 +121,23 @@ PATH /im/message/recall
 
 #### **Request**
 
-**name**| **Type**| **Required**| **Demo Value**| **rule**| **Description**  
----|---|---|---|---|---  
-session_id| String| true| 100094063_2_1011822749_1_103|   
-| conversation id  
-message_id| String| true| 21d0fLE0BtkPL79071| 1）Cannot be recalled more than two minutes since the message has been sent2）system message could not be recalled| the id of message that need to be recalled  
-  
+name | Type | Required | Demo Value | rule | Description
+---|---|---|---|---|---
+session_id | String | true | 100094063_2_1011822749_1_103 |  | conversation id
+message_id | String | true | 21d0fLE0BtkPL79071 | 1）Cannot be recalled more than two minutes since the message has been sent 2）system message could not be recalled | the id of message that need to be recalled
+
 #### **Response**
 
-**name**| **Type**| **Demo Value**| **Description**  
----|---|---|---  
-error_code| String|   
-| 0  
-error_msg| String|   
-|   
-  
-  
-  
+name | Type | Demo Value | Description
+---|---|---|---
+error_code | String |  | 0
+error_msg | String |  | 
 
+  
 
 ## **3 Session**
 
   
-
 
 ### **3.1 GetSessionList**
 
@@ -196,71 +145,65 @@ PATH /im/session/list
 
 #### **Request**
 
-**name**| **Type**| **Required**| **Demo Value**| **rule**| **Description**  
----|---|---|---|---|---  
-start_time| Long| true| 1618991702208| when pull first page pls input current timestamp，when pull next page pls input last page response field`next_start_time`| timestamp  
-last_session_id| String| false| 100094063_2_1011822321_1_103| it could be null when pull first page，when pull next page pls input last page response field`last_session_id`| The id of the last conversation on the previous page  
-page_size| Number| true| 20| limit 20| page size  
-  
+name | Type | Required | Demo Value | rule | Description
+---|---|---|---|---|---
+start_time | Long | true | 1618991702208 | when pull first page pls input current timestamp， when pull next page pls input last page response field next_start_time | timestamp
+last_session_id | String | false | 100094063_2_1011822321_1_103 | it could be null when pull first page，when pull next page pls input last page response field last_session_id | The id of the last conversation on the previous page
+page_size | Number | true | 20 | limit 20 | page size
+
 #### **Response**
 
-**name**| **Type**| **Demo Value**| **Description**  
----|---|---|---  
-has_more| boolean| true| Identifies whether there has more page，use this field to determine whether you need to continue to pull  
-next_start_time| String| 1618971891953| the begin timestamp of next page，When pulling the next page, it needs to be passed in as an input parameter  
-last_session_id| String| 100094063_2_1011822321_1_103| The last session id on this page, it needs to be passed in as an input parameter when pulling the next page  
-session_list| Object[]| []|   
-  
-|-session_id| String| 100094063_2_1011822749_1_103| session id  
-|-summary| String| test message| the summary of session  
-|-title| String| wangermazi| user nick name  
-|-head_url| String| <https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg>| user head picture url  
-|-last_message_id| String| 21cZj5X0BtkHT42670| last message id  
-|-last_message_time| Long| 1621495731445| last message born time  
-|-buyer_id| Long| 1011822749| buyer userId  
-|-unread_count| Number| 8| unread count  
-|-self_position| Long| 1621495410182| self read time  
-|-to_position| Long| 1621495410182| The other party's read time  
-|-tags| List<String>| ["official"]| session tag  
-|-site_id| String| SG| country code  
-  
-  
+name | Type | Demo Value | Description
+---|---|---|---
+has_more | boolean | true | Identifies whether there has more page，use this field to determine whether you need to continue to pull
+next_start_time | String | 1618971891953 | the begin timestamp of next page，When pulling the next page, it needs to be passed in as an input parameter
+last_session_id | String | 100094063_2_1011822321_1_103 | The last session id on this page, it needs to be passed in as an input parameter when pulling the next page
+session_list | Object[] | [] | 
+|-session_id | String | 100094063_2_1011822749_1_103 | session id
+|-summary | String | test message | the summary of session
+|-title | String | wangermazi | user nick name
+|-head_url | String | https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg | user head picture url
+|-last_message_id | String | 21cZj5X0BtkHT42670 | last message id
+|-last_message_time | Long | 1621495731445 | last message born time
+|- buyer_id | Long | 1011822749 | buyer userId
+|-unread_count | Number | 8 | unread count
+|-self_position | Long | 1621495410182 | self read time
+|-to_position | Long | 1621495410182 | The other party's read time
+|-tags | List<String> | ["official"] | session tag
+|-site_id | String | SG | country code
 
+  
 
 ### **3.2 GetSessionDetail**
 
   
 
-
 PATH /im/session/get
 
 #### **Request**
 
-**name**| **Type**| **Required**| **Sample**| **rule**| **Description**  
----|---|---|---|---|---  
-session_id| String| true| 100094063_2_1011822749_1_103|   
-| session id  
-  
+name | Type | Required | Sample | rule | Description
+---|---|---|---|---|---
+session_id | String | true | 100094063_2_1011822749_1_103 |  | session id
+
 #### **Response**
 
-**name**| **Type**| **Demo Value**| **Description**  
----|---|---|---  
-|-session_id| String| 100094063_2_1011822749_1_103| session id  
-|-content| String| test message| session summary  
-|-title| String| wangermazi| buyer nick name  
-|-head_url| String| <https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg>| buyer head url  
-|-last_message_id| String| 21cZj5X0BtkHT42670| last message id of session  
-|-last_message_time| Long| 1621495731445| last message send time of session  
-|-buyer_id|   
-| 1011822749| buyer user id  
-|-unread_count| Number| 8| unread count  
-|-self_position| Long| 1621495410182| self read time  
-|-to_position| Long| 1621495410182| The other party's read time  
-|-tags| List<String>| ["official"]| session tag  
-|-site_id| String| SG| country code  
-  
-  
+name | Type | Demo Value | Description
+---|---|---|---
+|-session_id | String | 100094063_2_1011822749_1_103 | session id
+|-content | String | test message | session summary
+|-title | String | wangermazi | buyer nick name
+|-head_url | String | https://sg-live-02.slatic.net/p/0dc6fb4898f7e991bf44c45471dca9c9.jpg | buyer head url
+|-last_message_id | String | 21cZj5X0BtkHT42670 | last message id of session
+|-last_message_time | Long | 1621495731445 | last message send time of session
+|- buyer_id |  | 1011822749 | buyer user id
+|-unread_count | Number | 8 | unread count
+|-self_position | Long | 1621495410182 | self read time
+|-to_position | Long | 1621495410182 | The other party's read time
+|-tags | List<String> | ["official"] | session tag
+|-site_id | String | SG | country code
 
+  
 
 ### **3.3 ReadSession**
 
@@ -268,22 +211,18 @@ PATH /im/session/read
 
 #### **Request**
 
-**name**| **Type**| **Required**| **Sample**| **rule**| **Description**  
----|---|---|---|---|---  
-session_id| String| true| 100094063_2_1011822749_1_103|   
-| session id  
-last_read_message_id| String| true| 1621498479918|   
-| last message id of user readed  
-  
+name | Type | Required | Sample | rule | Description
+---|---|---|---|---|---
+session_id | String | true | 100094063_2_1011822749_1_103 |  | session id
+last_read_message_id | String | true | 1621498479918 |  | last message id of user readed
+
 #### **Response**
 
-**name**| **Type**| **Demo Value**| **Description**  
----|---|---|---  
-data| Object| { "success": true, "err_code": "0", "err_message": "SUCCESS"}|   
-  
-  
-  
+name | Type | Demo Value | Description
+---|---|---|---
+data | Object | { "success": true, "err_code": "0", "err_message": "SUCCESS" } | 
 
+  
 
 ### **3.4 OpenSession**
 
@@ -293,23 +232,21 @@ When the order created by the buyer in the store is not more than 7 days old, th
 
 #### **Request**
 
-**name**| **Type**| **Required**| **Sample**| **rule**| **Description**  
----|---|---|---|---|---  
-order_id| Long| true| 232432432423|   
-| orderId  
-  
+name | Type | Required | Sample | rule | Description
+---|---|---|---|---|---
+order_id | Long | true | 232432432423 |  | orderId
+
 #### **Response**
 
-**name**| **Type**| **Demo Value**| **Description**  
----|---|---|---  
-session_id| String| 100148681_2_500210868055_1_103| unique id of a conversation  
-  
+name | Type | Demo Value | Description
+---|---|---|---
+session_id | String | 100148681_2_500210868055_1_103 | unique id of a conversation
+
 ## **4 Push**
 
 ### **4.1 Message**
 
   
-
 
 message body
 
@@ -349,11 +286,9 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
   
 
-
 ### **4.2 Session Update**
 
   
-
 
 message body
 
@@ -381,11 +316,9 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
   
 
-
 ## **5\. MessageConent**
 
   
-
 
 ### **templateId=1 normal text**
 
@@ -427,8 +360,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. happy
 
-
-
 {
 
 "txt": "[happy]",
@@ -440,8 +371,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 }
 
   1. veryhappy
-
-
 
 {
 
@@ -455,8 +384,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. laughing
 
-
-
 {
 
 "txt": "[laughing]",
@@ -468,8 +395,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 }
 
   1. smirking
-
-
 
 {
 
@@ -483,8 +408,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. inlove
 
-
-
 {
 
 "txt": "[inlove]",
@@ -496,8 +419,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 }
 
   1. thumbsup
-
-
 
 {
 
@@ -511,8 +432,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. surprised
 
-
-
 {
 
 "txt": "[surprised]",
@@ -524,8 +443,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 }
 
   1. shocked
-
-
 
 { 
 
@@ -539,8 +456,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. sad
 
-
-
 { 
 
 "txt": "[sad]",
@@ -552,8 +467,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 }
 
   1. crying
-
-
 
 {
 
@@ -567,8 +480,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. confused
 
-
-
 { 
 
 "txt": "[confused]",
@@ -580,8 +491,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 }
 
   1. shy
-
-
 
 { 
 
@@ -595,8 +504,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. angry
 
-
-
 {
 
 "txt": "[angry]",
@@ -609,8 +516,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 
   1. disgust
 
-
-
 {
 
 "txt": "[disgust]",
@@ -622,8 +527,6 @@ icon：<https://sg-live-01.slatic.net/other/im/dc9375aeaba4435212341c2c71bb2c52.
 }
 
   1. heart
-
-
 
 {
 
@@ -641,8 +544,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 
   1. thank you
 
-
-
 { 
 
 "txt": "[thank you]",
@@ -654,8 +555,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 }
 
   1. cheer up
-
-
 
 {
 
@@ -669,8 +568,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 
   1. red pocket
 
-
-
 {
 
 "txt": "[red pocket]",
@@ -682,8 +579,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 }
 
   1. yummy
-
-
 
 {
 
@@ -697,8 +592,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 
   1. dance
 
-
-
 { 
 
 "txt": "[dance]",
@@ -710,8 +603,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 }
 
   1. bye
-
-
 
 {
 
@@ -725,8 +616,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 
   1. gift
 
-
-
 {
 
 "txt": "[gift]",
@@ -738,8 +627,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 }
 
   1. thirsty
-
-
 
 {
 
@@ -753,8 +640,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 
   1. sleepy
 
-
-
 { 
 
 "txt": "[sleepy]",
@@ -766,8 +651,6 @@ icon：<https://sg-live.slatic.net/other/im/edd7b121015dfc3743316c1e132cecb7.png
 }
 
   1. fountain
-
-
 
 { 
 
@@ -785,8 +668,6 @@ icon：<https://sg-live.slatic.net/other/im/daa33e1afebefd388e616e82a7dc2071.png
 
   1. Lazzie yeah
 
-
-
 {
 
 "txt": "[Lazzie yeah]",
@@ -798,8 +679,6 @@ icon：<https://sg-live.slatic.net/other/im/daa33e1afebefd388e616e82a7dc2071.png
 }
 
   1. Lazzie gift
-
-
 
 {
 
@@ -813,8 +692,6 @@ icon：<https://sg-live.slatic.net/other/im/daa33e1afebefd388e616e82a7dc2071.png
 
   1. Lazzie heart
 
-
-
 {
 
 "txt": "[Lazzie heart]",
@@ -826,8 +703,6 @@ icon：<https://sg-live.slatic.net/other/im/daa33e1afebefd388e616e82a7dc2071.png
 }
 
   1. Christmas
-
-
 
 {
 
@@ -853,7 +728,6 @@ icon：<https://sg-live.slatic.net/other/im/daa33e1afebefd388e616e82a7dc2071.png
 
   
 
-
 ### **templateId=10008 coupon message**
 
 {"period":"${period}","appBuyerUrl":"${appBuyerUrl}","sellerMasterUserId":"${sellerMasterUserId}","voucherType":"${voucherType}","discountUnit":"${discountUnit}","cardType":"${cardType}","actionUrl":"${actionUrl}","discount":"${discount}","discountAmount":"${discountAmount}","title":"${title}","pcSellerUrl":"${pcSellerUrl}","pcBuyerUrl":"${pcBuyerUrl}","sellerId":"${sellerId}","minOrderAmount":"${minOrderAmount}","voucherId":"${voucherId}","action":"${action}","appSellerUrl":"${appSellerUrl}","actionCode":"${actionCode}","currency":"${currency}","iconUrl":"${iconUrl}","currencyCode":"${currencyCode}","desc":"${desc}"}
@@ -870,7 +744,6 @@ The seller sends this message to guide the buyer to become a fan of the store
 
   
 
-
 ### **templateId=10015 auto reply message**
 
 {"txt":"${txt}","sellerId":"${sellerId}","sellerMasterUserId":"${sellerMasterUserId}","buyerUserId":"${buyerUserId}","actionSize":"${actionSize}","action1Txt":"${action1Txt}","action1Code":"${action1Code}","action2Txt":"${action2Txt}","action2Code":"${action2Code}","action3Txt":"${action3Txt}","action3Code":"${action3Code}","action4Txt":"${action4Txt}","action4Code":"${action4Code}","action5Txt":"${action5Txt}","action5Code":"${action5Code}","action6Txt":"${action6Txt}","action6Code":"${action6Code}","action7Txt":"${action7Txt}","action7Code":"${action7Code}","action8Txt":"${action8Txt}","action8Code":"${action8Code}","action9Txt":"${action9Txt}","action9Code":"${action9Code}","action10Txt":"${action10Txt}","action10Code":"${action10Code}"}
@@ -878,7 +751,6 @@ The seller sends this message to guide the buyer to become a fan of the store
 ![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误_1721706284655__cQ0a.jpg)
 
   
-
 
 ### **templateId=10011 Refund order card**
 
@@ -890,7 +762,6 @@ when buyer refun his order, seller will receive this msg card.
 
   
 
-
 ### **templateId=6 Video message**
 
 message content like this:
@@ -900,7 +771,6 @@ message content like this:
 use this [API](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193487.0.0.3ac413felykKHs#/api?cid=32&path=/media/video/get>) to get video play url.
 
   
-
 
 ## **6 Session validity**
 
@@ -912,17 +782,16 @@ Session aging rules:![](https://lazada-open-platform-public.oss-ap-southeast-1.a
 
 ## **7 API best practices**
 
-/im/message/list| Please do not poll call these two interfaces, because there is a PUSH channel, the call volume of these two interfaces should be very low, if an ISV polling call is found, the API permissions will be immediately reclaimed.Best practice: After the seller successfully authorizes the ISV, it will trigger the synchronization of historical conversations and historical messages on the platform side (synchronize the conversations within one month and the total number does not exceed 3000, and each conversation synchronizes the messages within one month). It is recommended that ISV use these two interfaces to pull the seller’s historical conversations and historical messages within 10-15 minutes after the seller’s authorization is completed. Do not call the interface after the authorization is completed, because the platform side has not yet synchronized the historical data.  
----|---  
-/im/session/list  
-/im/message/send| The seller responds to the message in the ISV system, that is, the interface is called  
-/im/session/get| When the ISV receives the PUSH notification, it judges whether the session exists locally according to the session_id field in the message body, and if it does not exist, the interface is called to synchronize the session.  
-/im/session/read| When the seller clicks on an unread conversation in the ISV system, this interface is called.The role of this interface:1) The read status of the session is synchronized to the ASC, so that when the seller enters the ASC, the status of the session seen is consistent with the ISV system2) Synchronize the read status of the seller session to the buyer  
-PUSH Message| After receiving the PUSH, the ISV should put the message body into its own MQ queue, and then give the pusher a response, and try to avoid synchronization after receiving the PUSH.In order to ensure the efficiency and sequence of MQ consumption, it is recommended that ISV set up multiple partions in the MQ queue and hash to different partions according to the session ID.  
-PUSH Session Update| when buyer read conversation or seller read conversation on ASC, ISV will receive the PUSH   
-  
-  
+/im/message/list | Please do not poll call these two interfaces, because there is a PUSH channel, the call volume of these two interfaces should be very low, if an ISV polling call is found, the API permissions will be immediately reclaimed.Best practice: After the seller successfully authorizes the ISV, it will trigger the synchronization of historical conversations and historical messages on the platform side (synchronize the conversations within one month and the total number does not exceed 3000, and each conversation synchronizes the messages within one month). It is recommended that ISV use these two interfaces to pull the seller’s historical conversations and historical messages within 10-15 minutes after the seller’s authorization is completed. Do not call the interface after the authorization is completed, because the platform side has not yet synchronized the historical data.
+---|---
+/im/session/list | 
+/im/message/send | The seller responds to the message in the ISV system, that is, the interface is called
+/im/session/get | When the ISV receives the PUSH notification, it judges whether the session exists locally according to the session_id field in the message body, and if it does not exist, the interface is called to synchronize the session.
+/im/session/read | When the seller clicks on an unread conversation in the ISV system, this interface is called.The role of this interface: 1) The read status of the session is synchronized to the ASC, so that when the seller enters the ASC, the status of the session seen is consistent with the ISV system 2) Synchronize the read status of the seller session to the buyer
+PUSH Message | After receiving the PUSH, the ISV should put the message body into its own MQ queue, and then give the pusher a response, and try to avoid synchronization after receiving the PUSH.In order to ensure the efficiency and sequence of MQ consumption, it is recommended that ISV set up multiple partions in the MQ queue and hash to different partions according to the session ID.
+PUSH Session Update | when buyer read conversation or seller read conversation on ASC, ISV will receive the PUSH
 
+  
 
 **Message recall**
 

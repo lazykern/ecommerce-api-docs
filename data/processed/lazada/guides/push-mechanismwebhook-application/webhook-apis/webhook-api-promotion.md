@@ -1,12 +1,11 @@
-Property| Value| Comment  
----|---|---  
-msg_type| 11| field to determine message type.  
-Retry times| 3| Retry times when client failed to response  
-Retry Interval| 5 min| delay between two retries  
-Auth Required| true| This notification need authorization  
-  
-  
+Property | Value | Comment
+---|---|---
+msg_type | 11 | field to determine message type.
+Retry times | 3 | Retry times when client failed to response
+Retry Interval | 5 min | delay between two retries
+Auth Required | true | This notification need authorization
 
+  
 
 Triggered 72 hours before the end of the voucher
     
@@ -20,7 +19,6 @@ Triggered 72 hours before the end of the voucher
     }
 
   
-
 
 Seller Voucher Stock Notification
     

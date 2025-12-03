@@ -352,35 +352,35 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 ### **Partial field descriptions**
 
-Field Name| Require| Field Description  
----|---|---  
-Images| Optional| The Images property is used to upload images for this product.The Image field in the Images property must be of the array type, with a maximum of 8 images passed into each Image field.Putting Images in the sku attribute indicates that the image is a variant image, and putting it outside indicates an SPU image.  
-name| Mandatory| Product name.Maximum 255 characters.  
-AssociatedSku| Optional| In existing product,add some SKUs, this label is required for association.Note: the associated SKU must be displayed in the seller center normally  
-description| Optional| Maximum 25000 characters.HTML tags are allowed.Only Lazada image URLs are allowed, no external URLs.  
-short_description| Optional| Only text.images and URLs will be automatically filtered;Short descriptions can only use <ul> <li> or <ol> <li>  
-brand| Mandatory| "brand" will be deprecated please use "brand_ id"  
-brand_id| Mandatory| Use the "brand_id" field of the GetBrandByPages API as the value  
-video| Optional| After uploading the video, fill in the video id of the GetVideo or CompleteCreateVideo response, and the video status must be AUDIT_SUCCESS  
-gift_wrapping| Optional| Note: Whitelist function, if you need this function please contact PSC for more information.Enum: Yes/No  
-name_engravement| Optional| Note: Whitelist function, if you need this function please contact PSC for more information.Enum: Yes/No  
-preorder_enable| Optional| PreOrder switch for turning on or off products. ENUM: Yes/No  
-preorder_days| Optional| When PreOrder is on, it is used to enter the estimated number of processing days. The maximum and minimum values will change with the seller. This range is configured by Lazada operations staff, please contact PSC if you need to change it.   
-disableAutoFillAttribute| Optional| When the field value is true, the auto-fill feature will not be enabled.When creating products via the Open API endpoint, an auto-fill mechanism (enabled by default) may automatically populate unused product attributes in the payload based on algorithmic recommendations.Enum: true/false(default)  
-SellerSku| Mandatory| Customizable by the seller, unique in the same item.  
-price| Mandatory| The retail price of the product, which will be displayed if the "special price" field is not filled or expired  
-special_price| Optional| The actual sales price of the product, if the "special_from_date" and "special_to_date" fields are not filled in, then the validity time is Long Time(Permanent validity).  
-special_from_date| Optional| Special price start time.If this parameter is passed, then "special_price" is mandatory.  
-special_to_date| Optional| Special price end time.If this parameter is passed, then "special_price" is mandatory.  
-package_height| Mandatory| Maximum two decimal places.Unit:cm  
-package_length| Mandatory| Maximum two decimal places.Unit:cm  
-package_width| Mandatory| Maximum two decimal places.Unit:cm  
-package_weight| Mandatory| Maximum two decimal places.Unit:kg  
-package_content| Optional| Package details  
-saleProp| Optional| Sales attributes are divided into "saleProp" fields under SKU, used to distinguish sales attributes or non sales attributes  
-color_family| Optional| This is a standard variant attribute of this category, which is Optional when only one sku is created, but required when multiple sku are created.The standard variant property is different for each category, it may be "size" or something else, see [this document](<https://open.lazada.com/apps/doc/doc?nodeId=30717&docId=120946>) for an explanation of the "is_sale_prop" property.If the current category does not have a standard variant property, please refer to [this document](<https://open.lazada.com/apps/doc/doc?nodeId=30712&docId=120259>) to create a custom variant.  
-color_thumbnail| Optional| Variant thumbnail tags, only available when the SKU variant is a standard sales attribute.  
-  
+Field Name | Require | Field Description
+---|---|---
+Images | Optional | The Images property is used to upload images for this product. The Image field in the Images property must be of the array type, with a maximum of 8 images passed into each Image field. Putting Images in the sku attribute indicates that the image is a variant image, and putting it outside indicates an SPU image.
+name | Mandatory | Product name. Maximum 255 characters.
+AssociatedSku | Optional | In existing product,add some SKUs, this label is required for association. Note: the associated SKU must be displayed in the seller center normally
+description | Optional | Maximum 25000 characters. HTML tags are allowed. Only Lazada image URLs are allowed, no external URLs.
+short_description | Optional | Only text.images and URLs will be automatically filtered;Short descriptions can only use <ul> <li> or <ol> <li>
+brand | Mandatory | "brand" will be deprecated please use "brand_ id"
+brand_id | Mandatory | Use the "brand_id" field of the GetBrandByPages API as the value
+video | Optional | After uploading the video, fill in the video id of the GetVideo or CompleteCreateVideo response, and the video status must be AUDIT_SUCCESS
+gift_wrapping | Optional | Note: Whitelist function, if you need this function please contact PSC for more information. Enum: Yes/No
+name_engravement | Optional | Note: Whitelist function, if you need this function please contact PSC for more information. Enum: Yes/No
+preorder_enable | Optional | PreOrder switch for turning on or off products. ENUM: Yes/No
+preorder_days | Optional | When PreOrder is on, it is used to enter the estimated number of processing days. The maximum and minimum values will change with the seller. This range is configured by Lazada operations staff, please contact PSC if you need to change it.
+disableAutoFillAttribute | Optional | When the field value is true, the auto-fill feature will not be enabled. When creating products via the Open API endpoint, an auto-fill mechanism (enabled by default) may automatically populate unused product attributes in the payload based on algorithmic recommendations. Enum: true/false(default)
+SellerSku | Mandatory | Customizable by the seller, unique in the same item.
+price | Mandatory | The retail price of the product, which will be displayed if the "special price" field is not filled or expired
+special_price | Optional | The actual sales price of the product, if the "special_from_date" and "special_to_date" fields are not filled in, then the validity time is Long Time(Permanent validity).
+special_from_date | Optional | Special price start time. If this parameter is passed, then "special_price" is mandatory.
+special_to_date | Optional | Special price end time. If this parameter is passed, then "special_price" is mandatory.
+package_height | Mandatory | Maximum two decimal places. Unit:cm
+package_length | Mandatory | Maximum two decimal places. Unit:cm
+package_width | Mandatory | Maximum two decimal places. Unit:cm
+package_weight | Mandatory | Maximum two decimal places. Unit:kg
+package_content | Optional | Package details
+saleProp | Optional | Sales attributes are divided into "saleProp" fields under SKU, used to distinguish sales attributes or non sales attributes
+color_family | Optional | This is a standard variant attribute of this category, which is Optional when only one sku is created, but required when multiple sku are created. The standard variant property is different for each category, it may be "size" or something else, see this document for an explanation of the "is_sale_prop" property. If the current category does not have a standard variant property, please refer to this document to create a custom variant.
+color_thumbnail | Optional | Variant thumbnail tags, only available when the SKU variant is a standard sales attribute.
+
 ## **What else needs to be done before creating a product？**
 
 Get the category tree

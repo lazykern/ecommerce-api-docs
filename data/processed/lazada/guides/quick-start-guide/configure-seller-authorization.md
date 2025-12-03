@@ -1,4 +1,4 @@
-If your application needs to access Lazada sellers' business data, your application needs to get the authorization from sellers, and you need to guide them to complete the flow of “using Lazada seller account to log in and authorize”.
+If your application needs to access Lazada sellers’ business data, your application needs to get the authorization from sellers, and you need to guide them to complete the flow of “using Lazada seller account to log in and authorize”.
 
 ## Authorization strategy
 
@@ -13,15 +13,12 @@ Lazada Open Platform uses OAuth 2.0 protocol for user authentication and provide
 
   
 
-
 **Important**  
 The following 3 kinds of authorization policy are applied to different APP categories:
 
   * **Allow subscribers to authorize** : This authorization policy applies to the “ERP Syetem” 、 “ERP IM Chat” and some other commercial categories. For this policy, you need to first release your app to the Lazada Service MarketPlace, and sellers need to order before authorization. The authorization duration will be the same as the subscription duration. For example, if the seller orders for one month, the authorization duration is one month.
   * **Allow binding user to authorize** : This authorization policy applies to the “Seller In-house APP” 、 “In-house IM Chat” categories. For this policy, only sellers who have been configured in the “Authorized Seller Whitelist” field can authorize your application. Refer to the section below for details.The number of authorized users is limited to 30.
-  * **Allow login users to authorize** : This authorization policy applies to other categories such as "Lazrive". For this policy, any Lazada sellers can authorize your application, so you do not need to configure the seller whitelist. You can just send your authorization URL to your sellers for authorization.
-
-
+  * **Allow login users to authorize** : This authorization policy applies to other categories such as “Lazrive”. For this policy, any Lazada sellers can authorize your application, so you do not need to configure the seller whitelist. You can just send your authorization URL to your sellers for authorization.
 
 ## Specify seller whitelist
 

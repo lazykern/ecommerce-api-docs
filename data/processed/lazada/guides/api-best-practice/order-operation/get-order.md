@@ -10,14 +10,14 @@ Once a new store has authorized your app, you can call the GetOrders API to get 
 
 ## **1.Request parameter setting**
 
-Parameter Name| Parameter Type| Value| Field Description  
----|---|---|---  
-created_after| String| 2018-02-10T16:00:00+08:00| The time condition for querying orders, if you neet to get all orders in the store you can set this time to the store creation time or the time when the first order is generated.  
-status| String| all| Filter orders by order status, fill all will get all status of orders.  
-limit| String| 100| Number of orders that can be responded to per request.Maximum value: 100  
-offset| String| 0| The number of skipped data. If limit is set to 100, then offset should be set to 0/100/200/300 ......Maximum value: 5000  
-The rest of the parameters can be configured according to your needs  
-  
+Parameter Name | Parameter Type | Value | Field Description
+---|---|---|---
+created_after | String | 2018-02-10T16:00:00+08:00 | The time condition for querying orders, if you neet to get all orders in the store you can set this time to the store creation time or the time when the first order is generated.
+status | String | all | Filter orders by order status, fill all will get all status of orders.
+limit | String | 100 | Number of orders that can be responded to per request. Maximum value: 100
+offset | String | 0 | The number of skipped data. If limit is set to 100, then offset should be set to 0/100/200/300 ...... Maximum value: 5000
+The rest of the parameters can be configured according to your needs |  |  | 
+
 Common Parameters will not be introduced
 
 ## **2\. Recurring request and get order information**

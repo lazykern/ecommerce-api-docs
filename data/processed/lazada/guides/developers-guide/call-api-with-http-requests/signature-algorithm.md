@@ -8,8 +8,6 @@ The process of generating the signature is as follows:
 
   1. Sort all request parameters (including system and application parameters, but except the “sign” and parameters with byte array type) according to the parameter name in ASCII table. For example:
 
-
-
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 Before sort: foo=1, bar=2, foo_bar=3, foobar=4
@@ -18,15 +16,11 @@ After sort: bar=2, foo=1, foo_bar=3, foobar=4
 
   1. Concatenate the sorted parameters and their values into a string. For example:
 
-
-
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 bar2foo1foo_bar3foobar4
 
   1. Add the API name in front of the concatenated string. For example, adding the API name “/test/api”:
-
-
 
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
@@ -34,22 +28,17 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
   1. Encode the concatenated string in UTF-8 format and make a digest by the signature algorithm (using HMAC_SHA256). For example:
 
-
-
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 hmac_sha256(/test/apibar2foo1foo_bar3foobar4)
 
   1. Convert the digest to hexadecimal format. For example:
 
-
-
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 hex("helloworld".getBytes("utf-8")) = "68656C6C6F776F726C64"
 
   
-
 
 **Sample code for JAVA**
 
@@ -71,7 +60,6 @@ Arrays.sort(keys);
 
   
 
-
 // second: connect all text parameters with key and value
 
 StringBuilder query = new StringBuilder();
@@ -92,7 +80,6 @@ query.append(key).append(value);
 
   
 
-
 // third：put the body to the end
 
 if (body != null) {
@@ -102,7 +89,6 @@ query.append(body);
 }
 
   
-
 
 // next : sign the whole request
 
@@ -120,7 +106,6 @@ bytes = encryptHMACSHA256(query.toString(), appSecret);
 
   
 
-
 // finally : transfer sign result from binary to upper hex string
 
 return byte2hex(bytes);
@@ -128,7 +113,6 @@ return byte2hex(bytes);
 }
 
   
-
 
 private static byte[] encryptHMACSHA256(String data, String secret) throws IOException {
 
@@ -155,7 +139,6 @@ return bytes;
 }
 
   
-
 
 /**
 
@@ -187,7 +170,6 @@ return sign.toString();
 
   
 
-
 **Sample code for C#**
 
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
@@ -201,7 +183,6 @@ public static string SignRequest(IDictionary<string, string> parameters, string 
 IDictionary<string, string> sortedParams = new SortedDictionary<string, string>(parameters, StringComparer.Ordinal);
 
   
-
 
 // second : contact all params with key order
 
@@ -225,7 +206,6 @@ query.Append(kv.Key).Append(kv.Value);
 
   
 
-
 // third : add body to last
 
 if (!string.IsNullOrEmpty(body))
@@ -237,7 +217,6 @@ query.Append(body);
 }
 
   
-
 
 // next : sign the string
 
@@ -255,7 +234,6 @@ bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(query.ToString()));
 
   
 
-
 // finally : transfer binary byte to hex string
 
 StringBuilder result = new StringBuilder();
@@ -270,13 +248,11 @@ result.Append(bytes[i].ToString("X2"));
 
   
 
-
 return result.ToString();
 
 }
 
   
-
 
 **Sample code for PYTHON**
 
@@ -300,11 +276,9 @@ str().join('%s%s' % (key, parameters[key]) for key in sort_dict))
 
   
 
-
 h = hmac.new(secret.encode(encoding="utf-8"), parameters_str.encode(encoding="utf-8"), digestmod=hashlib.sha256)
 
   
-
 
 return h.hexdigest().upper()
 

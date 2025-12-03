@@ -14,8 +14,6 @@ c. It is suggested that the created app type is seller in house or ERP. The API 
 
 ![](https://tida.alicdn.com/oss_1667555436123_null_qBbAyBJA)
 
- 
-
 ## 2\. Create a test order
 
 ### 2.1 Borrow a test account
@@ -124,7 +122,7 @@ In order to facilitate testing, it is recommended that all test orders use goods
 
 #### ![](https://tida.alicdn.com/oss_1667556682002_null_KFcP9JfF)
 
-####  
+#### 
 
 #### 3.2.3 The seller waits to receive the buyer's package
 

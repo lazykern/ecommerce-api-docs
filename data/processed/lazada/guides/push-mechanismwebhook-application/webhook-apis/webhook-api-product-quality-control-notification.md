@@ -2,14 +2,13 @@ Triggered when product quality control status is updated.
 
   
 
+Property | Value | Comment
+---|---|---
+msg_type | 1 | field to determine message type.
+Retry times | 12 | Retry times when client failed to response
+Retry Interval | 30 min | delay between two retries
+Auth Required | true | This notification need authorization
 
-Property| Value| Comment  
----|---|---  
-msg_type| 1| field to determine message type.  
-Retry times| 12| Retry times when client failed to response  
-Retry Interval| 30 min| delay between two retries  
-Auth Required| true| This notification need authorization  
-  
   
 
     

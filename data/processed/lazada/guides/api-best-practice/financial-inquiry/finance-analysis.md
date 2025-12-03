@@ -4,5 +4,4 @@ Use the following finance APIs to view and analyze the finance statistics and tr
 
   
 
-
   1. Use **queryTransactionDetails** to retrieve transaction or fee details in a specified period. Transaction details include transaction date, type, number, amount, statement, payment status, order number, order item number, shipment type, shipment provider, and reference ID.

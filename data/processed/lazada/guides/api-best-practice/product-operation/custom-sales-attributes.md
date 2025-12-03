@@ -10,55 +10,28 @@ No change
 
 ### 1.2.1 Explain
 
-Level1 | Level2 | Level3 | Level4 | Description  
----|---|---|---|---  
-data | variation | Variation1 | name | Sales attribute names, such as color family, size, etc.Form a ref relationship with "color_family" in the sku below.  
-|  |  | hasImage | Sales attribute image settings, Only Variation1 Can set hasImage to true  
-|  |  | customize | Whether to customize sales attributes  
-|  |  | options | List of sales attribute value names  
-|  | Variation2 | name |   
-|  |  | hasImage |   
-|  |  | customize |   
-|  |  | options |   
-  
-|   
-| Variation3 | name | Very few cases will set this property. This attribute is not available for most categories  
-  
-|   
-|   
-| hasImage |   
-  
-  
-|   
-|   
-| customize |   
-  
-  
-|   
-|   
-| options |   
-  
-  
-|   
-| Variation4 | name | Very few cases will set this property. This attribute is not available for most categories  
-  
-|   
-|   
-| hasImage |   
-  
-  
-|   
-|   
-| customize |   
-  
-  
-|   
-|   
-| options |   
-  
-  
-  
+Level1 | Level2 | Level3 | Level4 | Description
+---|---|---|---|---
+data | variation | Variation1 | name | Sales attribute names, such as color family, size, etc.Form a ref relationship with "color_family" in the sku below.
+ |  |  | hasImage | Sales attribute image settings, Only Variation1 Can set hasImage to true
+ |  |  | customize | Whether to customize sales attributes
+ |  |  | options | List of sales attribute value names
+ |  | Variation2 | name | 
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ |  | Variation3 | name | Very few cases will set this property. This attribute is not available for most categories
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ |  | Variation4 | name | Very few cases will set this property. This attribute is not available for most categories
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
 
+ 
+
+  
 
 ### 1.2.2 DEMO
 
@@ -180,7 +153,6 @@ Custom sales attributes (1) + Standard sales attributes (1) + SKU pictures
     }
 
   
-
 
 #### CASE2
 
@@ -366,87 +338,61 @@ PATH: /product/create
 
   
 
-
 ## 2.1 Request Parameters
 
 ### 2.1.1 Explain
 
-Level1 | Level2 | Level3 | Level4 | Description  
----|---|---|---|---  
-data | variation | Variation1 | name | Sales attribute names, such as color family, size, etc.Form a ref relationship with "color_family" in the sku below.  
-|  |  | hasImage | Sales attribute image settings, Only Variation1 Can set hasImage to true  
-|  |  | customize | Whether to customize sales attributes  
-|  |  | options | List of sales attribute value names  
-|  | Variation2 | name |   
-|  |  | hasImage |   
-|  |  | customize |   
-|  |  | options |   
-  
-|   
-| Variation3 | name | Very few cases will set this property. This attribute is not available for most categories  
-  
-|   
-|   
-| hasImage |   
-  
-  
-|   
-|   
-| customize |   
-  
-  
-|   
-|   
-| options |   
-  
-  
-|   
-| Variation4 | name | Very few cases will set this property. This attribute is not available for most categories  
-  
-|   
-|   
-| hasImage |   
-  
-  
-|   
-|   
-| customize |   
-  
-  
-|   
-|   
-| options |   
-  
-| skus | Variation1-name | Variation1-options[i] | Reference the name and option of the variation declaration as the sales attribute and sales attribute valueThe name field of Variation1/Variation2/Variation3/Variation4An option element of Variation1/Variation2Variation3/Variation4  
-  
+Level1 | Level2 | Level3 | Level4 | Description
+---|---|---|---|---
+data | variation | Variation1 | name | Sales attribute names, such as color family, size, etc.Form a ref relationship with "color_family" in the sku below.
+ |  |  | hasImage | Sales attribute image settings, Only Variation1 Can set hasImage to true
+ |  |  | customize | Whether to customize sales attributes
+ |  |  | options | List of sales attribute value names
+ |  | Variation2 | name | 
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ |  | Variation3 | name | Very few cases will set this property. This attribute is not available for most categories
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ |  | Variation4 | name | Very few cases will set this property. This attribute is not available for most categories
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ | skus | Variation1-name | Variation1-options[i] | Reference the name and option of the variation declaration as the sales attribute and sales attribute value The name field of Variation1/Variation2/ Variation3/Variation4 An option element of Variation1/Variation2 Variation3/Variation4
+
+ 
+
 ### 2.1.2 Error
 
-Error Code | Error Message  
----|---  
-VARIATION_CATEGORY_PROHIBITION | The category is banned from using variation function.  
-REMOVE_SKU_PROHIBITION | The seller is prohibited from using the remove SKU function.  
-VARIATION_SELLER_PROHIBITION | The seller is prohibited from using the variation function.  
-VARIATION_EMPTY | The Variation is Empty  
-VARIATION_SIZE_LIMIT | The Variations Size Exceeds Maximum Size Limit, The Size Limit is: 2.   
-VARIATION_CONTENT_EMPTY | The Variation Content is Empty, The Variation Node is: __VariationX__  
-VARIATION_NAME_EMPTY | The Variation Name is Empty, The Variation Node is: __VariationX__  
-VARIATION_IMAGE_MUST_SET_VARIATION1 | Only Variation1 Can set hasImage to true, The Variation Node is: __VariationX__  
-VARIATION_NAME_DUPLICATE | The Variation Name Is Duplicate, The Variation Node is: __VariationX__ , The Duplicate Name is: __nameX__  
-VARIATION_NAME_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: __VariationX__ , The Length Limit is: 15, The Name is: __nameX__  
-VARIATION_OPTIONS_EMPTY | The Variation Options Is Empty, The Variation Node is: __VariationX__  
-OPTIONS_SIZE_LIMIT | The Variation Options Exceeds Maximum Size Limit, The Variation Node is: __VariationX__ , The Size Limit is: 50, The Name is: __nameX__  
-VARIATION_OPTION_EMPTY | The Variation Option Is Empty, The Variation Node is: __VariationX__  
-VARIATION_OPTION_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: __VariationX__ , The Length Limit is: 20, The Option is: optionX;  
-VARIATION_OPTION_DUPLICATE | The Variation Option Is Duplicate, The Variation Node is: __VariationX__ , The Duplicate Option is: __optionX, optionX__  
-VARIATION_IMAGE_SETTING_ERROR | There is No HasImage Set In The __VariationX__ , But Images Are Found In The SKU: " + sellerSKU  
-SKU_VARIATION_OPTION_NOT_EXIST | The SKU Variation Option is Not Exist, The SellerSKU is： __SellerSkuX__ , The SKU Variation Name is: __nameX__ , The SKU Variation Option is: __optionX__  
-SKU_VARIATION_NAME_MISSING | The SKU Variation Name is Missing, The SellerSKU is：is： __SellerSkuX__ , The Missing SKU Variation Name is: __nameX__  
-SKU_VARIATION_IMAGES_MISSING | The Variation set hasImage true, But The SKU Not Found Images. The SellerSKU is: __SellerSkuX__ , The Variation Name is: __nameX__  
-VARIATION_CATEGORY_SIZE_IMAGE | When size is passed in as a standard category attribute, it is not allowed to set hasImage true.  
-VARIATION_CATEGORY_ATTRIBUTE_INVALID | This attribute __nameX__ is not found in the category attribute library.  
-  
-  
+Error Code | Error Message
+---|---
+VARIATION_CATEGORY_PROHIBITION | The category is banned from using variation function.
+REMOVE_SKU_PROHIBITION | The seller is prohibited from using the remove SKU function.
+VARIATION_SELLER_PROHIBITION | The seller is prohibited from using the variation function.
+VARIATION_EMPTY | The Variation is Empty
+VARIATION_SIZE_LIMIT | The Variations Size Exceeds Maximum Size Limit, The Size Limit is: 2 .
+VARIATION_CONTENT_EMPTY | The Variation Content is Empty, The Variation Node is: VariationX
+VARIATION_NAME_EMPTY | The Variation Name is Empty, The Variation Node is: VariationX
+VARIATION_IMAGE_MUST_SET_VARIATION1 | Only Variation1 Can set hasImage to true, The Variation Node is: VariationX
+VARIATION_NAME_DUPLICATE | The Variation Name Is Duplicate, The Variation Node is: VariationX , The Duplicate Name is: nameX
+VARIATION_NAME_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: VariationX , The Length Limit is: 15, The Name is: nameX
+VARIATION_OPTIONS_EMPTY | The Variation Options Is Empty, The Variation Node is: VariationX
+OPTIONS_SIZE_LIMIT | The Variation Options Exceeds Maximum Size Limit, The Variation Node is: VariationX , The Size Limit is: 50, The Name is: nameX
+VARIATION_OPTION_EMPTY | The Variation Option Is Empty, The Variation Node is: VariationX
+VARIATION_OPTION_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: VariationX , The Length Limit is: 20, The Option is: optionX;
+VARIATION_OPTION_DUPLICATE | The Variation Option Is Duplicate, The Variation Node is: VariationX , The Duplicate Option is: optionX, optionX
+VARIATION_IMAGE_SETTING_ERROR | There is No HasImage Set In The VariationX , But Images Are Found In The SKU: " + sellerSKU
+SKU_VARIATION_OPTION_NOT_EXIST | The SKU Variation Option is Not Exist, The SellerSKU is： SellerSkuX , The SKU Variation Name is: nameX , The SKU Variation Option is: optionX
+SKU_VARIATION_NAME_MISSING | The SKU Variation Name is Missing, The SellerSKU is：is： SellerSkuX , The Missing SKU Variation Name is: nameX
+SKU_VARIATION_IMAGES_MISSING | The Variation set hasImage true, But The SKU Not Found Images. The SellerSKU is: SellerSkuX , The Variation Name is: nameX
+VARIATION_CATEGORY_SIZE_IMAGE | When size is passed in as a standard category attribute, it is not allowed to set hasImage true.
+VARIATION_CATEGORY_ATTRIBUTE_INVALID | This attribute nameX is not found in the category attribute library.
 
+ 
+
+  
 
 ### 2.1.3 DEMO
 
@@ -520,7 +466,6 @@ Create products with standard sales attributes
     }
 
   
-
 
 #### CASE2
 
@@ -601,16 +546,13 @@ Standard sales attributes (1) + custom sales attributes (1)
 
   
 
-
 ## 2.2 Response Parameters
 
 No change
 
   
 
-
   
-
 
 # 3\. UpdateProduct
 
@@ -618,87 +560,61 @@ PATH: /product/update
 
   
 
-
 ## 3.1 Request Parameters
 
 ### 3.1.1Explain
 
-Level1 | Level2 | Level3 | Level4 | Description  
----|---|---|---|---  
-data | variation | Variation1 | name | Sales attribute names, such as color family, size, etc.Form a ref relationship with "color_family" in the sku below.  
-|  |  | hasImage | Sales attribute image settings, Only Variation1 Can set hasImage to true  
-|  |  | customize | Whether to customize sales attributes  
-|  |  | options | List of sales attribute value names  
-|  | Variation2 | name |   
-|  |  | hasImage |   
-|  |  | customize |   
-|  |  | options |   
-  
-|   
-| Variation3 | name | Very few cases will set this property. This attribute is not available for most categories  
-  
-|   
-|   
-| hasImage |   
-  
-  
-|   
-|   
-| customize |   
-  
-  
-|   
-|   
-| options |   
-  
-  
-|   
-| Variation4 | name | Very few cases will set this property. This attribute is not available for most categories  
-  
-|   
-|   
-| hasImage |   
-  
-  
-|   
-|   
-| customize |   
-  
-  
-|   
-|   
-| options |   
-  
-| skus | Variation1-name | Variation1-options[i] | Reference the name and option of the variation declaration as the sales attribute and sales attribute valueThe name field of Variation1/Variation2/Variation3/Variation4An option element of Variation1/Variation2Variation3/Variation4  
-  
+Level1 | Level2 | Level3 | Level4 | Description
+---|---|---|---|---
+data | variation | Variation1 | name | Sales attribute names, such as color family, size, etc.Form a ref relationship with "color_family" in the sku below.
+ |  |  | hasImage | Sales attribute image settings, Only Variation1 Can set hasImage to true
+ |  |  | customize | Whether to customize sales attributes
+ |  |  | options | List of sales attribute value names
+ |  | Variation2 | name | 
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ |  | Variation3 | name | Very few cases will set this property. This attribute is not available for most categories
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ |  | Variation4 | name | Very few cases will set this property. This attribute is not available for most categories
+ |  |  | hasImage | 
+ |  |  | customize | 
+ |  |  | options | 
+ | skus | Variation1-name | Variation1-options[i] | Reference the name and option of the variation declaration as the sales attribute and sales attribute value The name field of Variation1/Variation2/ Variation3/Variation4 An option element of Variation1/Variation2 Variation3/Variation4
+
+ 
+
 ### 3.1.2 Error
 
-Error Code | Error Message  
----|---  
-VARIATION_CATEGORY_PROHIBITION | The category is banned from using variation function.  
-REMOVE_SKU_PROHIBITION | The seller is prohibited from using the remove SKU function.  
-VARIATION_SELLER_PROHIBITION | The seller is prohibited from using the variation function.  
-VARIATION_EMPTY | The Variation is Empty  
-VARIATION_SIZE_LIMIT | The Variations Size Exceeds Maximum Size Limit, The Size Limit is: __2__.   
-VARIATION_CONTENT_EMPTY | The Variation Content is Empty, The Variation Node is: __VariationX__  
-VARIATION_NAME_EMPTY | The Variation Name is Empty, The Variation Node is: __VariationX__  
-VARIATION_IMAGE_MUST_SET_VARIATION1 | Only Variation1 Can set hasImage to true, The Variation Node is: __VariationX__  
-VARIATION_NAME_DUPLICATE | The Variation Name Is Duplicate, The Variation Node is: __VariationX__ , The Duplicate Name is: __nameX__  
-VARIATION_NAME_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: __VariationX__ , The Length Limit is: 15, The Name is: __nameX__  
-VARIATION_OPTIONS_EMPTY | The Variation Options Is Empty, The Variation Node is: __VariationX__  
-OPTIONS_SIZE_LIMIT | The Variation Options Exceeds Maximum Size Limit, The Variation Node is: __VariationX__ , The Size Limit is: 50, The Name is: __nameX__  
-VARIATION_OPTION_EMPTY | The Variation Option Is Empty, The Variation Node is: __VariationX__  
-VARIATION_OPTION_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: __VariationX__ , The Length Limit is: 20, The Option is: optionX;  
-VARIATION_OPTION_DUPLICATE | The Variation Option Is Duplicate, The Variation Node is: __VariationX__ , The Duplicate Option is: __optionX, optionX__  
-VARIATION_IMAGE_SETTING_ERROR | There is No HasImage Set In The __VariationX__ , But Images Are Found In The SKU: " + sellerSKU  
-SKU_VARIATION_OPTION_NOT_EXIST | The SKU Variation Option is Not Exist, The SellerSKU is： __SellerSkuX__ , The SKU Variation Name is: __nameX__ , The SKU Variation Option is: __optionX__  
-SKU_VARIATION_NAME_MISSING | The SKU Variation Name is Missing, The SellerSKU is：is： __SellerSkuX__ , The Missing SKU Variation Name is: __nameX__  
-SKU_VARIATION_IMAGES_MISSING | The Variation set hasImage true, But The SKU Not Found Images. The SellerSKU is: __SellerSkuX__ , The Variation Name is: __nameX__  
-VARIATION_CATEGORY_SIZE_IMAGE | When size is passed in as a standard category attribute, it is not allowed to set hasImage true.  
-VARIATION_CATEGORY_ATTRIBUTE_INVALID | This attribute __nameX__ is not found in the category attribute library.  
-  
-  
+Error Code | Error Message
+---|---
+VARIATION_CATEGORY_PROHIBITION | The category is banned from using variation function.
+REMOVE_SKU_PROHIBITION | The seller is prohibited from using the remove SKU function.
+VARIATION_SELLER_PROHIBITION | The seller is prohibited from using the variation function.
+VARIATION_EMPTY | The Variation is Empty
+VARIATION_SIZE_LIMIT | The Variations Size Exceeds Maximum Size Limit, The Size Limit is: 2 .
+VARIATION_CONTENT_EMPTY | The Variation Content is Empty, The Variation Node is: VariationX
+VARIATION_NAME_EMPTY | The Variation Name is Empty, The Variation Node is: VariationX
+VARIATION_IMAGE_MUST_SET_VARIATION1 | Only Variation1 Can set hasImage to true, The Variation Node is: VariationX
+VARIATION_NAME_DUPLICATE | The Variation Name Is Duplicate, The Variation Node is: VariationX , The Duplicate Name is: nameX
+VARIATION_NAME_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: VariationX , The Length Limit is: 15, The Name is: nameX
+VARIATION_OPTIONS_EMPTY | The Variation Options Is Empty, The Variation Node is: VariationX
+OPTIONS_SIZE_LIMIT | The Variation Options Exceeds Maximum Size Limit, The Variation Node is: VariationX , The Size Limit is: 50, The Name is: nameX
+VARIATION_OPTION_EMPTY | The Variation Option Is Empty, The Variation Node is: VariationX
+VARIATION_OPTION_LENGTH_LIMIT | The Variation Name's Content Exceeds Maximum Length Limit, The Variation Node is: VariationX , The Length Limit is: 20, The Option is: optionX;
+VARIATION_OPTION_DUPLICATE | The Variation Option Is Duplicate, The Variation Node is: VariationX , The Duplicate Option is: optionX, optionX
+VARIATION_IMAGE_SETTING_ERROR | There is No HasImage Set In The VariationX , But Images Are Found In The SKU: " + sellerSKU
+SKU_VARIATION_OPTION_NOT_EXIST | The SKU Variation Option is Not Exist, The SellerSKU is： SellerSkuX , The SKU Variation Name is: nameX , The SKU Variation Option is: optionX
+SKU_VARIATION_NAME_MISSING | The SKU Variation Name is Missing, The SellerSKU is：is： SellerSkuX , The Missing SKU Variation Name is: nameX
+SKU_VARIATION_IMAGES_MISSING | The Variation set hasImage true, But The SKU Not Found Images. The SellerSKU is: SellerSkuX , The Variation Name is: nameX
+VARIATION_CATEGORY_SIZE_IMAGE | When size is passed in as a standard category attribute, it is not allowed to set hasImage true.
+VARIATION_CATEGORY_ATTRIBUTE_INVALID | This attribute nameX is not found in the category attribute library.
 
+ 
+
+  
 
 ### 3.1.3 DEMO
 
@@ -778,7 +694,6 @@ No declaration of Variation + modification of standard sales attribute value + n
 
   
 
-
 #### CASE3
 
 Declare Variation + Add custom sales attributes + No SKU image
@@ -835,9 +750,7 @@ No change
 
   
 
-
   
-
 
 # 4\. RemoveSKU
 
@@ -845,29 +758,22 @@ PATH: /product/sku/remove
 
   
 
-
 ## 4.1 Request Parameters
 
 ### 4.1.1 Explain
 
-Level1 | Level2 | Level3 | Level4 | Description  
----|---|---|---|---  
-| ItemId |  |  | Product ID that needs to be deleted  
-data | variation | Variation1 | name | Sales attributes that need to be deleted  
-|  | Variation2 | name | Sales attributes that need to be deleted  
-  
-|   
-| Variation3 | name | Sales attributes that need to be deleted  
-  
-|   
-| Variation4 | name | Sales attributes that need to be deleted  
-  
-|   
-| SellerSku |   
-| Sellersku that need to be deleted  
-  
-  
+Level1 | Level2 | Level3 | Level4 | Description
+---|---|---|---|---
+ | ItemId |  |  | Product ID that needs to be deleted
+data | variation | Variation1 | name | Sales attributes that need to be deleted
+ |  | Variation2 | name | Sales attributes that need to be deleted
+ |  | Variation3 | name | Sales attributes that need to be deleted
+ |  | Variation4 | name | Sales attributes that need to be deleted
+ |  | SellerSku |  | Sellersku that need to be deleted
 
+ 
+
+  
 
 ### 4.1.2 DEMO
 
@@ -888,7 +794,6 @@ Delete SKU
     </Request>
 
   
-
 
 #### CASE2
 
@@ -952,20 +857,21 @@ Delete sales attributes & delete SKU
 
   
 
-
 ## 4.2 Response Parameters
 
 ### 4.2.1 ERROR
 
-Error Code | Error Message  
----|---  
-REMOVE_SKU_PROHIBITION | The seller is prohibited from using the remove SKU function.  
-SALE_PROPS_DUPLICATE | Sale props is duplicate between sellerSku: __sellerSku1__ and sellerSku: __sellerSku2__  
-SALE_PROPS_EMPTY | Sale props can not be set empty when remove sale props  
-SALE_PROPS_EMPTY | Sale props of the product id: __9999999__ is 0, can not remove  
-CAN_NOT_REMOVE_ALL_SKU | Can not remove all sku  
-SELLER_SKU_NOT_FOUND | sellerSku: __SellerSkuX__ not found  
-  
+Error Code | Error Message
+---|---
+REMOVE_SKU_PROHIBITION | The seller is prohibited from using the remove SKU function.
+SALE_PROPS_DUPLICATE | Sale props is duplicate between sellerSku: sellerSku1 and sellerSku: sellerSku2
+SALE_PROPS_EMPTY | Sale props can not be set empty when remove sale props
+SALE_PROPS_EMPTY | Sale props of the product id: 9999999 is 0, can not remove
+CAN_NOT_REMOVE_ALL_SKU | Can not remove all sku
+SELLER_SKU_NOT_FOUND | sellerSku: SellerSkuX not found
+
+ 
+
 ### 4.2.3 DEMO
     
     

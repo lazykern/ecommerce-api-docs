@@ -47,8 +47,6 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
   5. Each seller can only call the inventory API 50 times per second, more than 50 may cause the request to fail due to traffic limitation.
   6. Quantity cannot be negative.
 
-
-
 ### **Multi-warehouse format (used by multi-warehouse sellers, can update dropshipping and multi-warehouse warehouses at the same time).**
 
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
@@ -102,8 +100,6 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
   5. Each seller can only call the inventory API 50 times per second, more than 50 may cause the request to fail due to traffic limitation.
   6. Quantity cannot be negative.
 
-
-
 # **UpdateProduct**
 
  _[API Document](<https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fupdate>)_
@@ -151,8 +147,6 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
   3. The updated inventory quantity must be greater than or equal to the inventory locked by the campaign (channelInventories), otherwise an error will be reported.
   4. Quantity cannot be negative.
 
-
-
 # **UpdateSellableQuantity**
 
  _[API Document](<https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fstock%2Fsellable%2Fupdate>)_
@@ -194,8 +188,6 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
   3. A maximum of 50 SKUs can be added per request, adding more SKUs will result in a timeout error.
   4. Each seller can only call the inventory API 50 times per second, more than 50 may cause the request to fail due to traffic limitation.
   5. Quantity cannot be negative.
-
-
 
 ### **Multi-warehouse format (used by multi-warehouse sellers, can update dropshipping and multi-warehouse warehouses at the same time).**
 
@@ -249,8 +241,6 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
   4. Each seller can only call the inventory API 50 times per second, more than 50 may cause the request to fail due to traffic limitation.
   5. Quantity cannot be negative.
 
-
-
 # **AdjustSellableQuantity**
 
  _[API Document](<https://open.lazada.com/apps/doc/api?path=%2Fproduct%2Fstock%2Fsellable%2Fadjust>)_
@@ -295,8 +285,6 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
   6. The updated sellable inventory quantity must be greater than or equal to the inventory locked by the campaign (channelInventories), otherwise an error will be reported.
   7. A maximum of 50 SKUs can be added per request, adding more SKUs will result in a timeout error.
   8. Each seller can only call the inventory API 50 times per second, more than 50 may cause the request to fail due to traffic limitation.
-
-
 
 ### **Multi-warehouse format (used by multi-warehouse sellers, can update dropshipping and multi-warehouse warehouses at the same time).**
 

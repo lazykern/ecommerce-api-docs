@@ -4,7 +4,6 @@ The **Data Dashboard** provides statistics of the following categories:
 
   
 
-
 **App Statistics** \- API calling statistics by region within a period
 
   * Date
@@ -16,7 +15,6 @@ The **Data Dashboard** provides statistics of the following categories:
 
   
 
-
 **Seller Statistics** \- API calling statistics by region and sellers within a period
 
   * Date
@@ -26,7 +24,6 @@ The **Data Dashboard** provides statistics of the following categories:
   * Average QPS (queries per second)
 
   
-
 
 **Error Code Statistics** \- Error codes by API and region within a period
 

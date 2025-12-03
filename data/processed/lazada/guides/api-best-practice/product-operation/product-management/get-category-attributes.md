@@ -6,13 +6,13 @@ This API is used to get the complete category tree of Lazada
 
 ## Field Description
 
-Field Name| Field Description  
----|---  
-children| List of subcategories of the current category ID  
-name| Category Name  
-leaf| Determine if the category is a leaf category, only leaf categories can be used to create products  
-category_id| The ID of the current category, used when creating products or getting category attributes  
-  
+Field Name | Field Description
+---|---
+children | List of subcategories of the current category ID
+name | Category Name
+leaf | Determine if the category is a leaf category, only leaf categories can be used to create products
+category_id | The ID of the current category, used when creating products or getting category attributes
+
 ## Sample response
     
     
@@ -56,7 +56,6 @@ category_id| The ID of the current category, used when creating products or gett
 
   
 
-
 ## Sample Analysis
 
 Lazada's product categories are tree-structured, and only leaf nodes can be used to create products. You cannot use branch nodes to create products.
@@ -71,18 +70,18 @@ Use the category ID obtained in the GetCategoryTree API to find the available or
 
 ## Field Description
 
-Field Name| Field Description  
----|---  
-is_key_prop| If it is 1, it means that this attribute is a key attribute, and the product score will be improved after filling in  
-is_sale_prop| If it is 1, it indicates that this attribute is a standard sales/variant attribute  
-name| Attribute name.As an attribute name, it must be in English.As an option name, it may respond to the local language depending on the "language_code" of the request.  
-input_type| The type of value that can be entered for this attribute1: singleselect: single selection does not support customization2: multiselect: multiselect does not support customization3: enuminput: single choice supports customization4: multienuminput: multi selection supports customization5: text: text can be customized6: numeric: the value can be customized7: date: date can be customized8: richText: rich text can be customized9: img: pictures can be customized  
-options| Available options for enumerating attributes of type  
-en_name| Option name, this field must be in English, if you need to fill in the enumeration when creating a product please use the value of this field  
-is_mandatory| If it is 1, it means that this attribute is required  
-attribute_type| If the value is "normal", this attribute should be filled in the "Attribute" field when creating or updating the product.If the value is "sku", this attribute should be filled in the "Sku" field when creating or updating the product.  
-label| Name of the field displayed in the seller center (this field cannot be used when creating or updating)  
-  
+Field Name | Field Description
+---|---
+is_key_prop | If it is 1, it means that this attribute is a key attribute, and the product score will be improved after filling in
+is_sale_prop | If it is 1, it indicates that this attribute is a standard sales/variant attribute
+name | Attribute name. As an attribute name, it must be in English. As an option name, it may respond to the local language depending on the "language_code" of the request.
+input_type | The type of value that can be entered for this attribute 1: singleselect: single selection does not support customization 2: multiselect: multiselect does not support customization 3: enuminput: single choice supports customization 4: multienuminput: multi selection supports customization 5: text: text can be customized 6: numeric: the value can be customized 7: date: date can be customized 8: richText: rich text can be customized 9: img: pictures can be customized
+options | Available options for enumerating attributes of type
+en_name | Option name, this field must be in English, if you need to fill in the enumeration when creating a product please use the value of this field
+is_mandatory | If it is 1, it means that this attribute is required
+attribute_type | If the value is "normal", this attribute should be filled in the "Attribute" field when creating or updating the product. If the value is "sku", this attribute should be filled in the "Sku" field when creating or updating the product.
+label | Name of the field displayed in the seller center (this field cannot be used when creating or updating)
+
 ## Example of seller center display
 
 ![image](https://intranetproxy.alipay.com/skylark/lark/0/2022/png/18857002/1656311216964-c5ec31cf-f247-48aa-a8ea-16fea3ba6635.png)

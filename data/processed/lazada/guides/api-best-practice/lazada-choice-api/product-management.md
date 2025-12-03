@@ -6,11 +6,11 @@ Developers can use the GetChoiceProducts and GetChoiceProductItem APIs to get th
 
 ## API List
 
-API Name| API Path| Description  
----|---|---  
-GetChoiceProducts| /choice/products/get| Batch query eligible products based on time, status and other conditions.  
-GetChoiceProductItem| /choice/product/item/get| Queries information about a single product based on item id.  
-  
+API Name | API Path | Description
+---|---|---
+GetChoiceProducts | /choice/products/get | Batch query eligible products based on time, status and other conditions.
+GetChoiceProductItem | /choice/product/item/get | Queries information about a single product based on item id.
+
 ## Response Example
 
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
@@ -191,36 +191,34 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 **Field Analysis**
 
-Field Name| Field Description  
----|---  
-Images| The Images property is used to upload images for this product.The Image field in the Images property must be of the array type, with a maximum of 8 images passed into each Image field.Putting Images in the sku attribute indicates that the image is a variant image, and putting it outside indicates an SPU image.  
-name| Product Title.  
-brand| Product Brand  
-primary_category| Product category ID, call [GetCategoryTree API](<https://open.lazada.com/apps/doc/api?path=%2Fcategory%2Ftree%2Fget>) to view the full category tree.  
-item_id| The id generated after the product is created.Current country unique.An item id can be associated with multiple sku ids.  
-created_time| The time when the product was created.  
-updated_time| The time when the product was updated.  
-Status| The current status of the SKU.Enum:active、inactive、deleted  
-skus| A list of SKUs for the current product.  
-skus.Status| The current status of the SKU.Enum:active、inactive、deleted  
-quantity| The total inventory of the current SKU.  
-SellerSku| Customizable by the seller, unique in the store.  
-SkuId| Sku id created by Lazada at the time of product creation.  
-multiWarehouseInventories| A seller may have multiple warehouses, and the inventory of each warehouse for the current SKU will be displayed in this list.  
-occupyQuantity| This inventory will be increased when the item is purchased and payment is successful.  
-withholdQuantity| This inventory will increase when an item is purchased but not yet paid for.  
-SellableQuantity| The quantity of stock that can be purchased by buyers.  
-totalQuantity| Total inventory(SellableQuantity+WithholdQuantity+OccupyQuantity).  
-item_type| Inventory management model for products.JIT (platform-controlled Virtual inventory) : Inventory is managed by the seller.VMI (Platform-controlled physical inventory) : The platform manages inventory with local physical stock.Enum: cn vmi ：1local vmi ：2cn jit：3local jit：4  
-  
-  
-
+Field Name | Field Description
+---|---
+Images | The Images property is used to upload images for this product. The Image field in the Images property must be of the array type, with a maximum of 8 images passed into each Image field. Putting Images in the sku attribute indicates that the image is a variant image, and putting it outside indicates an SPU image.
+name | Product Title.
+brand | Product Brand
+primary_category | Product category ID, call GetCategoryTree API to view the full category tree.
+item_id | The id generated after the product is created. Current country unique. An item id can be associated with multiple sku ids.
+created_time | The time when the product was created.
+updated_time | The time when the product was updated.
+Status | The current status of the SKU. Enum:active、inactive、deleted
+skus | A list of SKUs for the current product.
+skus.Status | The current status of the SKU. Enum:active、inactive、deleted
+quantity | The total inventory of the current SKU.
+SellerSku | Customizable by the seller, unique in the store.
+SkuId | Sku id created by Lazada at the time of product creation.
+multiWarehouseInventories | A seller may have multiple warehouses, and the inventory of each warehouse for the current SKU will be displayed in this list.
+occupyQuantity | This inventory will be increased when the item is purchased and payment is successful.
+withholdQuantity | This inventory will increase when an item is purchased but not yet paid for.
+SellableQuantity | The quantity of stock that can be purchased by buyers.
+totalQuantity | Total inventory(SellableQuantity+WithholdQuantity+OccupyQuantity).
+item_type | Inventory management model for products. JIT (platform-controlled Virtual inventory) : Inventory is managed by the seller. VMI (Platform-controlled physical inventory) : The platform manages inventory with local physical stock. Enum: cn vmi ：1 local vmi ：2 cn jit：3 local jit：4
 
   
 
+  
 
 **Inventory Management**
 
-API Name| API Path| Description  
----|---|---  
-EditChoiceSkuStock| /choice/stock/edit| This API can be called to update the sellable inventory of a Choice Sku.
+API Name | API Path | Description
+---|---|---
+EditChoiceSkuStock | /choice/stock/edit | This API can be called to update the sellable inventory of a Choice Sku.

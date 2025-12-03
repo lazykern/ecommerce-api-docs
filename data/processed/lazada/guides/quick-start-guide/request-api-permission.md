@@ -7,7 +7,6 @@ An application category can contain multiple API permission groups. When an appl
 
   
 
-
 Take the following steps to request API permission for your application:  
 1\. Open the **App Overview** page and navigate to the **API Permission Group** section.  
 2\. View the description and status of API permission groups and decide which API permission groups to request for your application.  

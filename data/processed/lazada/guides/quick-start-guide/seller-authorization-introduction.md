@@ -4,10 +4,10 @@ Lazada Open Platform adopts the “Code for token” mode, described as follows.
 
 ## **Service address**
 
-Environment| Service address  
----|---  
-Central: for all countries (SG/MY/TH/VN/ID/PH)| <https://auth.lazada.com/rest>  
-  
+Environment | Service address
+---|---
+Central: for all countries (SG/MY/TH/VN/ID/PH) | https://auth.lazada.com/rest
+
 ## **Authorization steps**
 
 The figure below shows the authorization steps:
@@ -26,17 +26,15 @@ Note that the “client_id” and “redirect_uri” should be replaced with the
 
 The following table lists the parameters and their description.
 
-Parameter| Required?| Value| Parameter  
----|---|---|---  
-client_id| Yes|   
-| The App Key of your application, assigned by Lazada Open Platform.  
-redirect_uri| Yes| The callback URL you provided when creating the application.| The “redirect_uri” is used for receiving the code when a seller completes the authorization. It must be the same with the callback URL you provided when creating the application on Lazada Open Platform.  
-response_type| Yes| code| The authorization type, with the value of “code”.  
-force_auth| No| true| Refresh the web browser cookie for a new authorization session.  
-state| No| Customizable, like 1212.| The status of the application; the same for input and response.  
-uuid| No|   
-| This field is currently unavailable, please do not use it, otherwise an error will be reported.  
-  
+Parameter | Required? | Value | Parameter
+---|---|---|---
+client_id | Yes |  | The App Key of your application, assigned by Lazada Open Platform.
+redirect_uri | Yes | The callback URL you provided when creating the application. | The “redirect_uri” is used for receiving the code when a seller completes the authorization. It must be the same with the callback URL you provided when creating the application on Lazada Open Platform.
+response_type | Yes | code | The authorization type, with the value of “code”.
+force_auth | No | true | Refresh the web browser cookie for a new authorization session.
+state | No | Customizable, like 1212. | The status of the application; the same for input and response.
+uuid | No |  | This field is currently unavailable, please do not use it, otherwise an error will be reported.
+
 ### **2\. Guide sellers to authorize**
 
 Guide a seller to open the above authorization URL through the web browser. The following window with the login panel is displayed. The permissions to be granted to the application after the authorization are listed on the left. The seller selects the country, enters seller account and password, and clicks the “Sign in And Authorize” button to complete the authorization of the application.
@@ -141,21 +139,20 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
   
 
-
 The following table lists the parameters in the token and their description.
 
-Key| Type| Sample| Description  
----|---|---|---  
-access_token| string| 50000601c30atpedfgu3LVvik87Ixlsvle3mSoB7701ceb156fPunYZ43GBg| Access token.  
-refresh_token| string| 500016000300bwa2WteaQyfwBMnPxurcA0mXGhQdTt18356663CfcDTYpWoi| Refresh token, used to refresh the token when “refresh_expires_in”>0.  
-expires_in| number| 25920 (expires in 25920 seconds)| The expiring time of the access token, in seconds. For APPs in "Test" status, the value is 7 days. For APPs in "Online" status, the value is 30 days.  
-refresh_expires_in| number| 25920 (expires in 25920 seconds)| The expiring time of the refresh token. For APPs in "Test" status, the value is 30 days. For APPs in "Online" status, the value is 180 days.  
-country| string| sg| The country ID (sg: Singapore, my: Malaysia, ph: Philippines, th: Thailand, id: Indonesia, vn: Vietnam).  
-account_id| string| 706388888| User ID, which can be ignored when “account_platform” = “seller_center”.  
-account| string| xxx@126.com| User account.  
-account_platform| string| seller_center| User platform, supporting multiple platforms.  
-country_user_info| json| [ { "country":"sg", "seller_id": "1001", "user_id": 10101 }, { "country":"my", "seller_id": "2001", "user_id": 20101 }]| Matching with the parent field “country”.if(country != 'cb'){ for(userInfo user_info : country_user_info){  if(user_info.country==country){ get user_info.user_id; get user_info.seller_id; break; } }} elseif(country != 'cb'){ for(userInfo user_info : country_user_info){  get user_info.user_id; get user_info.seller_id;  }}  
-  
+Key | Type | Sample | Description
+---|---|---|---
+access_token | string | 50000601c30atpedfgu3LVvik87Ixlsvle3mSoB7701ceb156fPunYZ43GBg | Access token.
+refresh_token | string | 500016000300bwa2WteaQyfwBMnPxurcA0mXGhQdTt18356663CfcDTYpWoi | Refresh token, used to refresh the token when “refresh_expires_in”>0.
+expires_in | number | 25920 (expires in 25920 seconds) | The expiring time of the access token, in seconds. For APPs in "Test" status, the value is 7 days. For APPs in "Online" status, the value is 30 days.
+refresh_expires_in | number | 25920 (expires in 25920 seconds) | The expiring time of the refresh token. For APPs in "Test" status, the value is 30 days. For APPs in "Online" status, the value is 180 days.
+country | string | sg | The country ID (sg: Singapore, my: Malaysia, ph: Philippines, th: Thailand, id: Indonesia, vn: Vietnam).
+account_id | string | 706388888 | User ID, which can be ignored when “account_platform” = “seller_center”.
+account | string | xxx@126.com | User account.
+account_platform | string | seller_center | User platform, supporting multiple platforms.
+country_user_info | json | [ { "country":"sg", "seller_id": "1001", "user_id": 10101 }, { "country":"my", "seller_id": "2001", "user_id": 20101 } ] | Matching with the parent field “country”. if(country != 'cb'){ for(userInfo user_info : country_user_info){ if(user_info.country==country){ get user_info.user_id; get user_info.seller_id; break; } } } elseif(country != 'cb'){ for(userInfo user_info : country_user_info){ get user_info.user_id; get user_info.seller_id; } }
+
 ## **Refresh authorization steps**
 
 ### **1\. Use “/auth/token/refresh” to refresh the access token**

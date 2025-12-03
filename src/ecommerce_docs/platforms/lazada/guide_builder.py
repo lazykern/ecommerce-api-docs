@@ -5,11 +5,12 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import List, Optional
 
 import html2text
+from bs4 import BeautifulSoup
 
 
 DEFAULT_INPUT_DIR = Path(__file__).resolve().parents[4] / "data" / "raw" / "lazada" / "guides"
@@ -26,14 +27,66 @@ def slugify(name: str) -> str:
     return name.strip("-") or "guide"
 
 
+def _table_to_markdown(table_html: str) -> str:
+    soup = BeautifulSoup(table_html, "html.parser")
+    rows: list[list[str]] = []
+
+    for tr in soup.find_all("tr"):
+        cells = tr.find_all(["th", "td"])
+        if not cells:
+            continue
+
+        row: list[str] = []
+        for cell in cells:
+            text = " ".join(cell.stripped_strings)
+            text = re.sub(r"\s+", " ", text).strip()
+            colspan = int(cell.get("colspan", 1) or 1)
+            for i in range(max(colspan, 1)):
+                row.append(text if i == 0 else "")
+
+        rows.append(row)
+
+    if not rows:
+        return ""
+
+    max_cols = max(len(r) for r in rows)
+    padded_rows = [r + [""] * (max_cols - len(r)) for r in rows]
+
+    header = padded_rows[0]
+    separator = "|".join(["---"] * max_cols)
+    body = padded_rows[1:]
+
+    lines = [
+        " | ".join(header),
+        separator,
+        *(" | ".join(r) for r in body),
+    ]
+    return "\n".join(lines)
+
+
 def html_to_markdown(html: str) -> str:
+    soup = BeautifulSoup(html or "", "html.parser")
+    table_placeholders: dict[str, str] = {}
+
+    for idx, table in enumerate(soup.find_all("table")):
+        placeholder = f"__TABLE_PLACEHOLDER_{idx}__"
+        table_placeholders[placeholder] = _table_to_markdown(str(table))
+        table.replace_with(soup.new_string(placeholder))
+
     parser = html2text.HTML2Text()
     parser.body_width = 0  # do not wrap
     parser.ignore_links = False
     parser.ignore_images = False
     parser.ignore_emphasis = False
     parser.protect_links = True
-    return parser.handle(html or "").strip()
+    markdown = parser.handle(str(soup)).strip()
+
+    for placeholder, table_md in table_placeholders.items():
+        replacement = f"\n\n{table_md}\n\n" if table_md else "\n\n"
+        markdown = markdown.replace(placeholder, replacement)
+
+    markdown = re.sub(r"\n{3,}", "\n\n", markdown)
+    return markdown.strip()
 
 
 @dataclass

@@ -2,7 +2,7 @@ After creating your developer account, you can start registering your applicatio
 
 ## Apply for application category
 
-Application category is used for initializing data configuration when the application is created. It is a template that defines the APP's authorization strategy, authorization duration, API group permission, API call limit strategy and other information. An application can belong to only one application category.
+Application category is used for initializing data configuration when the application is created. It is a template that defines the APP’s authorization strategy, authorization duration, API group permission, API call limit strategy and other information. An application can belong to only one application category.
 
 Currently, Lazada Open Platform provides the following application categories:
 
@@ -17,7 +17,6 @@ Currently, Lazada Open Platform provides the following application categories:
   * Customer Service - Application for customer service management
 
   
-
 
 Take the following steps to apply for the application category:  
 1\. Log in Lazada Open Platform and open the APP Console.  

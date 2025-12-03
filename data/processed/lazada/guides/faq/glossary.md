@@ -8,7 +8,7 @@ The key that is assigned to an application by Lazada Open Platform when the appl
 
 ### Developer
 
-ISVs or individuals developer who have completed registration and are ready to develop applications on Lazada Open Platform. Developers can also be called "Lazada partner".
+ISVs or individuals developer who have completed registration and are ready to develop applications on Lazada Open Platform. Developers can also be called “Lazada partner”.
 
 ### Application
 
@@ -28,17 +28,17 @@ Property, also known as attribute, is the name of a collection of attribute valu
 
 ### SPU
 
-SPU stands for "Standard Product Unit" and is a collection of reusable and retrievable standard information that describes the attributes of a product. Items belonging to the same SKU can be considered the same product to the consumers.
+SPU stands for “Standard Product Unit” and is a collection of reusable and retrievable standard information that describes the attributes of a product. Items belonging to the same SKU can be considered the same product to the consumers.
 
 ### Key property
 
 Once the value of a key property is specified, the values of other  
-properties of the item are also determined. A group of key properties can define an SPU. Key properties can be specified only on level 1 categories. For example, under the category "mobile phone", "brand" and "model" are both key properties.
+properties of the item are also determined. A group of key properties can define an SPU. Key properties can be specified only on level 1 categories. For example, under the category “mobile phone”, “brand” and “model” are both key properties.
 
 ### Sale property
 
-Sale properties define all the usable properties of SKU. For example, the "color" and "size" properties of the "apparel" category.
+Sale properties define all the usable properties of SKU. For example, the “color” and “size” properties of the “apparel” category.
 
 ### SKU
 
-SKU stands for "Standard Keeping Unit" and consists of sale properties and property values. Sellers need to select specific SKUs for the items to be created and posted. For example, under the "Men's Shoes" category, the collection of sale properties "color" \+ "size" and property values "white" \+ "39" is an SKU.
+SKU stands for “Standard Keeping Unit” and consists of sale properties and property values. Sellers need to select specific SKUs for the items to be created and posted. For example, under the “Men’s Shoes” category, the collection of sale properties “color” + “size” and property values “white” + “39” is an SKU.

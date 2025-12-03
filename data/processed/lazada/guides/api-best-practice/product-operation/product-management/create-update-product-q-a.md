@@ -8,14 +8,11 @@ This document will list common problems and solutions encountered when creating 
   * When the value of the Open Platform error code is 500 or 501, check the error response and business error code. 500 or 501 indicates a generic error code.
   * Some errors may not have business error code.
 
-
-
 # Q&A
 
 In this section, I will indicate in each QA the open platform error code and the business error code for that issue. You can use the Web Find (Ctrl + F) function to find the issue you are experiencing.
 
   
-
 
 **Q1:** The parameters are not in JSON format
 
@@ -28,7 +25,6 @@ For example the Images.Image field must be of array type and the Image field mus
 ![2.jpg](https://wirelsee-weex-tasp-public-oss.oss-cn-hangzhou.aliyuncs.com/oss_1686294876679_uxilHlzT)
 
   
-
 
 **Q2:** This variation attribute size is not found in the variation label,please make sure that this attribute is declared
 
@@ -49,7 +45,6 @@ Brand ID of "No Brand" in different countries：
 ![3.jpg](https://wirelsee-weex-tasp-public-oss.oss-cn-hangzhou.aliyuncs.com/oss_1686294876883_TYXYfxx0)
 
   
-
 
 **Q4** :This sale prop attribute xxx is not support thumbnail image
 
@@ -84,7 +79,6 @@ Brand ID of "No Brand" in different countries：
 **Sample Announcement** :[LAZADA D6 Campaign Downgrade Plan](<https://open.lazada.com/apps/announcement/detail?spm=a1zq7z.27201205.0.0.20377c73haBza3&docId=1849>)
 
   
-
 
 **Q8** :negative sellable on channel inventory
 
@@ -135,7 +129,6 @@ Notes:
 Please make sure the original product has used variant attributes, if the original product does not use variant attributes, you cannot add a new SKU
 
   
-
 
 **Q13** : Seller's online product count 1000 has reach limit 1000
 

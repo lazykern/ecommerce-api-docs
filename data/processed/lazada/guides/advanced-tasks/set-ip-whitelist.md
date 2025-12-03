@@ -3,5 +3,5 @@ The IP whitelist is a security policy that protects your application and seller 
 Take the following steps to enable the IP whitelist feature.  
 1\. Click **Manage** in the App list to open the **App Overview** page.  
 2\. In the **App Management** navigation panel, click **IP Whitelist**.  
-3\. On the page that is open, enter the IP address of your hosting server in the field. Supported formats include "10.10.10.*" and "10.10.10.0/24".  
+3\. On the page that is open, enter the IP address of your hosting server in the field. Supported formats include “10.10.10.*” and “10.10.10.0/24”.  
 4\. Click **Submit**.

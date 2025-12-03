@@ -8,118 +8,52 @@
 
 ## 1.2. request
 
-**Name**| **Type**| **Required or not**| **Description**  
----|---|---|---  
-gmt_create_begin| String| Yes| PO creation start time, the time range (i.e. end-begin) needs to be within 90 days. {yyyy-MM-dd HH:mm:ss}  
-gmt_create_end| String| Yes| The PO creates the end time, and the time range (i.e. end-begin) needs to be within 90 days. {yyyy-MM-dd HH:mm:ss}  
-purchase_order_no_list| String[]| No| Purchase Order (PO) list, 20 max.{["POJ1001","POJ1002"]}  
-logistics_no_list| String[]| No| List of logistics orders, maximum 10.{["LBX1001","LBX1002"]}  
-order_status| String| No| PO Status 10:To Pack; 20:Ready To Ship; 22:To Put Away; 25:Arrive ata Warehouse; 40:Completed; -100610:Timeout cancellation; -100:Buyer Cancellation;Without this parameter the API will respond to all state POs by default.  
-page_index| Number| No| Current page, default 1.  
-page_size| Number| No| Pagination size, maximum 50, default 20.  
-  
+Name | Type | Required or not | Description
+---|---|---|---
+gmt_create_begin | String | Yes | PO creation start time, the time range (i.e. end-begin) needs to be within 90 days. {yyyy-MM-dd HH:mm:ss}
+gmt_create_end | String | Yes | The PO creates the end time, and the time range (i.e. end-begin) needs to be within 90 days. {yyyy-MM-dd HH:mm:ss}
+purchase_order_no_list | String[] | No | Purchase Order (PO) list, 20 max.{["POJ1001","POJ1002"]}
+logistics_no_list | String[] | No | List of logistics orders, maximum 10.{["LBX1001","LBX1002"]}
+order_status | String | No | PO Status 10:To Pack; 20:Ready To Ship; 22:To Put Away; 25:Arrive ata Warehouse; 40:Completed; -100610:Timeout cancellation; -100:Buyer Cancellation; Without this parameter the API will respond to all state POs by default.
+page_index | Number | No | Current page, default 1.
+page_size | Number | No | Pagination size, maximum 50, default 20.
+
 ## 1.3. response
 
-result|   
-|   
-| Object|   
-  
----|---|---|---|---  
-  
-| data|   
-| Object|   
-  
-  
-|   
-| gmt_modified| Number| Updated time  
-  
-|   
-| supplier_id| Number| Supplier ID  
-  
-|   
-| delivery_method| String| Shipping method:parcel: express; truck: truck delivery or other; pickup: door-to-door;   
-  
-|   
-| store_contact_name| String| Warehouse contact name  
-  
-|   
-| supplier_code| String| Supplier Code  
-  
-|   
-| purchase_order_no| String| Purchase Order No  
-  
-|   
-| gmt_arrive_time| Number| Actual arrival time at the warehouse  
-  
-|   
-| seller_id| String| Seller id  
-  
-|   
-| total_quantity| Number| Purchase quantity  
-  
-|   
-| total_sku_count| Number| SKU quantity  
-  
-|   
-| store_name| String| Store name  
-  
-|   
-| biz_status| String| PO status  
-  
-|   
-| supplier_name| String| Supplier name  
-  
-|   
-| creator| String| creator id  
-  
-|   
-| gmt_create| Number| Created time  
-  
-|   
-| gmt_except_arrive_time| Number| Expected time of arrival  
-  
-|   
-| trade_order_id_list| String[]| order id  
-  
-|   
-| pickup_order_no| String| Pick up order number(PUO)  
-  
-|   
-| store_contact_phone| String| Store Contact Phone Number  
-  
-|   
-| logistics_no_list| String| List of logistics order numbers  
-  
-|   
-| store_address| String| Store Address  
-  
-|   
-| site_id| String| Recipient's country  
-  
-|   
-| store_code| String| Warehouse Code  
-  
-| page_index|   
-| Number| Current page number  
-  
-| page_size|   
-| Number| Page size  
-  
-| total_page|   
-| Number| Total pages  
-  
-| total_count|   
-| Number| Total number of records  
-  
-| success|   
-| Boolean| isSuccess  
-  
-| error_message|   
-| String| error msg  
-  
-| error_code|   
-| String| error code  
-  
+result |  |  | Object | 
+---|---|---|---|---
+ | data |  | Object | 
+ |  | gmt_modified | Number | Updated time
+ |  | supplier_id | Number | Supplier ID
+ |  | delivery_method | String | Shipping method: parcel: express; truck: truck delivery or other; pickup: door-to-door;
+ |  | store_contact_name | String | Warehouse contact name
+ |  | supplier_code | String | Supplier Code
+ |  | purchase_order_no | String | Purchase Order No
+ |  | gmt_arrive_time | Number | Actual arrival time at the warehouse
+ |  | seller_id | String | Seller id
+ |  | total_quantity | Number | Purchase quantity
+ |  | total_sku_count | Number | SKU quantity
+ |  | store_name | String | Store name
+ |  | biz_status | String | PO status
+ |  | supplier_name | String | Supplier name
+ |  | creator | String | creator id
+ |  | gmt_create | Number | Created time
+ |  | gmt_except_arrive_time | Number | Expected time of arrival
+ |  | trade_order_id_list | String[] | order id
+ |  | pickup_order_no | String | Pick up order number(PUO)
+ |  | store_contact_phone | String | Store Contact Phone Number
+ |  | logistics_no_list | String | List of logistics order numbers
+ |  | store_address | String | Store Address
+ |  | site_id | String | Recipient's country
+ |  | store_code | String | Warehouse Code
+ | page_index |  | Number | Current page number
+ | page_size |  | Number | Page size
+ | total_page |  | Number | Total pages
+ | total_count |  | Number | Total number of records
+ | success |  | Boolean | isSuccess
+ | error_message |  | String | error msg
+ | error_code |  | String | error code
+
 ## 1.4. demo
 
 ### 1.4.1. Normal Situation
@@ -328,81 +262,37 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 ## 2.2. request
 
-**Name**| **Type**| **Required or not**| **Description**  
----|---|---|---  
-purchase_order_no| String| Yes| JIT purchase order number  
-page_index| Number| No| Current page, default 1.  
-page_size| Number| No| Pagination size, maximum 200, default 20.  
-  
+Name | Type | Required or not | Description
+---|---|---|---
+purchase_order_no | String | Yes | JIT purchase order number
+page_index | Number | No | Current page, default 1.
+page_size | Number | No | Pagination size, maximum 200, default 20.
+
 ## 2.3. response
 
-result|   
-|   
-| Object|   
-  
----|---|---|---|---  
-  
-| data|   
-| Object|   
-  
-  
-|   
-| product_id| String| Product id  
-  
-|   
-| sc_item_code| String| Product code  
-  
-|   
-| buyer_qty| Number| Number of purchases  
-  
-|   
-| sc_item_id| Number| sc_item_id  
-  
-|   
-| barcodes| String[]| barcodes  
-  
-|   
-| received_normal_qty| Number| Number of products received in good condition  
-  
-|   
-| img_url| String| Product preview image  
-  
-|   
-| product_title| String| Product name  
-  
-|   
-| sc_item_name| String| 货品名称  
-  
-|   
-| seller_sku| String| sellerSku  
-  
-|   
-| sku_id| String| sku id  
-  
-|   
-| received_defective_qty| Number| Number of damaged items received  
-  
-| page_index|   
-| Number| Current page number  
-  
-| page_size|   
-| Number| Page size  
-  
-| total_page|   
-| Number| Total pages  
-  
-| total_count|   
-| Number| Total number of records  
-  
-| success|   
-| Boolean| is success  
-  
-| error_message|   
-| String| error msg  
-  
-| error_code|   
-| String| error code  
-  
+result |  |  | Object | 
+---|---|---|---|---
+ | data |  | Object | 
+ |  | product_id | String | Product id
+ |  | sc_item_code | String | Product code
+ |  | buyer_qty | Number | Number of purchases
+ |  | sc_item_id | Number | sc_item_id
+ |  | barcodes | String[] | barcodes
+ |  | received_normal_qty | Number | Number of products received in good condition
+ |  | img_url | String | Product preview image
+ |  | product_title | String | Product name
+ |  | sc_item_name | String | 货品名称
+ |  | seller_sku | String | sellerSku
+ |  | sku_id | String | sku id
+ |  | received_defective_qty | Number | Number of damaged items received
+ | page_index |  | Number | Current page number
+ | page_size |  | Number | Page size
+ | total_page |  | Number | Total pages
+ | total_count |  | Number | Total number of records
+ | success |  | Boolean | is success
+ | error_message |  | String | error msg
+ | error_code |  | String | error code
+
 ## 2.4. demo
 
 ### 2.4.1. Normal Situation
@@ -503,34 +393,20 @@ PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL
 
 ## 3.2. request
 
-**Name**| **Type**| **Required or not**| **Description**  
----|---|---|---  
-purchase_order_no_list| String[]| Yes| Purchase order list, max 100.{["POJ1001","POJ1002"]}  
-  
+Name | Type | Required or not | Description
+---|---|---|---
+purchase_order_no_list | String[] | Yes | Purchase order list, max 100.{["POJ1001","POJ1002"]}
+
 ## 3.3. response
 
-result|   
-|   
-| Object|   
-  
----|---|---|---|---  
-  
-| data|   
-| Object|   
-  
-  
-|   
-| status| String| 'success'  
-  
-| success|   
-| Boolean| is success  
-  
-| error_message|   
-| String| errror msg  
-  
-| error_code|   
-| String| error code  
-  
+result |  |  | Object | 
+---|---|---|---|---
+ | data |  | Object | 
+ |  | status | String | 'success'
+ | success |  | Boolean | is success
+ | error_message |  | String | errror msg
+ | error_code |  | String | error code
+
 ## 3.4. demo
 
 ### 3.4.1. Normal Situation
@@ -583,13 +459,11 @@ The API checks that the JIT PO's current status is 20.
 
   
 
-
 Call [3.Pack] first, then [4.Shipment].
 
 [3.Pack] is an asynchronous update, the current state may not be 20, and the call to [4.Shipment] will fail. You must confirm that the current state is 20 before calling [4.Shipment]. Otherwise it will increase the flow limit value and cause subsequent calls to limit the flow.
 
   
-
 
 NOTE: Currently the asynchronous processing time is 5~10 seconds.
 
@@ -601,13 +475,11 @@ Method 1 (Synchronization):
 
   
 
-
 1\. Query the current PO list status through the Query API.
 
 Rely on: [1. Query PO List] to query the PO list.
 
   
-
 
 Method 2 (asynchronous):
 
@@ -619,34 +491,31 @@ Dependency: [6. Push] Push JIT PO status.
 
 ## 4.4. request
 
-**Name**| **Type**| **Required or not**| **Description**  
----|---|---|---  
-purchaseOrderNoList| String[]| Yes| The purchase order list, maximum input of 500.{["POJ1001","POJ1002"]}_No cross-warehouse or cross-store allowed._  
-shipperAreaCode| String| Yes| Address area for pickup contact .ENUM: CN，VN，TH，PH，ID，MY  
-shipperAddressId| Number| Yes| Address id of pickup contact.It is necessary to check the Division ID of the corresponding country according to the excel sheet (it must be the last level).[📎TH_Divisions.xlsx](<https://www.yuque.com/attachments/yuque/0/2024/xlsx/22221212/1728455909495-c0dfe307-37e0-4910-bc90-edfc8655ff6d.xlsx>)[📎VN_Divisions.xlsx](<https://www.yuque.com/attachments/yuque/0/2024/xlsx/22221212/1728455504368-b5d180a2-d69b-486f-8490-dac702a1a75e.xlsx>)[📎MY_Divisions.xlsx](<https://www.yuque.com/attachments/yuque/0/2024/xlsx/22221212/1728455406609-f8b19c5f-5342-4f40-935c-8b84cb61a475.xlsx>)[📎ph_Divisions.xlsx](<https://www.yuque.com/attachments/yuque/0/2024/xlsx/22221212/1728455408491-56c2b310-351a-4939-8ed9-cb7846511268.xlsx>)[📎ID_Divisions.xlsx](<https://www.yuque.com/attachments/yuque/0/2024/xlsx/22221212/1728455409011-49ea8912-05f6-4444-a692-4ffb7aa8af56.xlsx>)If you are unable to download excel using this method, please submit a ticket inquiry on the open platform to get excel from another source.  
-shipperAddressDetail| String| Yes| Detailed address for pickup.  
-shipperMobilePhone| String| Yes| Contact phone number for pickup.  
-shipperName| String| Yes| Name of the contact person for the pickup.  
-estimatedPickupDate| String| No| Appointment Pickup Date {yyyy-MM-dd}, Mandatory if shipperAreaCode value is CN.  
-  
+Name | Type | Required or not | Description
+---|---|---|---
+purchaseOrderNoList | String[] | Yes | The purchase order list, maximum input of 500.{["POJ1001","POJ1002"]} No cross-warehouse or cross-store allowed.
+shipperAreaCode | String | Yes | Address area for pickup contact . ENUM: CN，VN，TH，PH，ID，MY
+shipperAddressId | Number | Yes | Address id of pickup contact. It is necessary to check the Division ID of the corresponding country according to the excel sheet (it must be the last level). 📎TH_Divisions.xlsx 📎VN_Divisions.xlsx 📎MY_Divisions.xlsx 📎ph_Divisions.xlsx 📎ID_Divisions.xlsx If you are unable to download excel using this method, please submit a ticket inquiry on the open platform to get excel from another source.
+shipperAddressDetail | String | Yes | Detailed address for pickup.
+shipperMobilePhone | String | Yes | Contact phone number for pickup.
+shipperName | String | Yes | Name of the contact person for the pickup.
+estimatedPickupDate | String | No | Appointment Pickup Date {yyyy-MM-dd}, Mandatory if shipperAreaCode value is CN.
+
 ## 4.5. response
 
-API Param Name| Param Type| Description| API Param Name  
----|---|---|---  
-result| Object| result| result  
-data| Object[]| data| data  
-status| String| success| status  
-error_message| String| error msg for single purchase order | error_message  
-pickup_no| String| pickup number| pickup_no  
-purchase_order_no| String| purchase order number| purchase_order_no  
-allow_date_range| String[]| Range of allowable collection dates| The format is {yyyy-MM-dd}  
-success| Boolean| true|   
-  
-error_message| String| error msg|   
-  
-error_code| String| error code|   
-  
-  
+API Param Name | Param Type | Description | API Param Name
+---|---|---|---
+result | Object | result | result
+data | Object[] | data | data
+status | String | success | status
+error_message | String | error msg for single purchase order | error_message
+pickup_no | String | pickup number | pickup_no
+purchase_order_no | String | purchase order number | purchase_order_no
+allow_date_range | String[] | Range of allowable collection dates | The format is {yyyy-MM-dd}
+success | Boolean | true | 
+error_message | String | error msg | 
+error_code | String | error code | 
+
 # 5\. Print PO and product barcodes
 
 ## 5.1. path
@@ -655,37 +524,23 @@ error_code| String| error code|
 
 ## 5.2. request
 
-**Name**| **Type**| **Required or not**| **Description**  
----|---|---|---  
-pdf_size| String| Yes| pdf style.{A4/6030/100150}  
-purchase_order_no_list| String[]| Yes| List of purchase order numbers, max 20.{["POJ1001","POJ1002"]}  
-print_order| Boolean| Yes| Whether or not to print the PO.{true/false}  
-print_barcode| String| Yes| Whether to print the product barcode.{true/false}  
-  
+Name | Type | Required or not | Description
+---|---|---|---
+pdf_size | String | Yes | pdf style.{A4/6030/100150}
+purchase_order_no_list | String[] | Yes | List of purchase order numbers, max 20.{["POJ1001","POJ1002"]}
+print_order | Boolean | Yes | Whether or not to print the PO.{true/false}
+print_barcode | String | Yes | Whether to print the product barcode.{true/false}
+
 ## 5.3. response
 
-result|   
-|   
-| Object|   
-  
----|---|---|---|---  
-  
-| data|   
-| Object|   
-  
-  
-|   
-| file| String| Pdf file download path. {file download url has an expiration time, after the expiration of the need to re-call the generated file url}  
-  
-| success|   
-| Boolean| is success  
-  
-| error_message|   
-| String| errror msg  
-  
-| error_code|   
-| String| error code  
-  
+result |  |  | Object | 
+---|---|---|---|---
+ | data |  | Object | 
+ |  | file | String | Pdf file download path. {file download url has an expiration time, after the expiration of the need to re-call the generated file url}
+ | success |  | Boolean | is success
+ | error_message |  | String | errror msg
+ | error_code |  | String | error code
+
 ## 5.4. demo
 
 ### 5.4.1. Normal Situation
@@ -734,15 +589,15 @@ Please read this document to learn about the Webhook standard for the Lazada Ope
 
 ## 6.1. State list
 
-State Enumeration| Description  
----|---  
-created| PO creation completed  
-pack_completed| PO Packaging Completed  
-arrived| PO has arrived at the warehouse  
-closed| PO has been closed  
-cancel_by_trade| PO transaction canceled  
-cancel_by_timeout| PO timeout canceled  
-  
+State Enumeration | Description
+---|---
+created | PO creation completed
+pack_completed | PO Packaging Completed
+arrived | PO has arrived at the warehouse
+closed | PO has been closed
+cancel_by_trade | PO transaction canceled
+cancel_by_timeout | PO timeout canceled
+
 ## 6.2. demo
 
 PlainBashC++C#CSSDiffHTML/XMLJavaJavascriptMarkdownPHPPythonRubySQL

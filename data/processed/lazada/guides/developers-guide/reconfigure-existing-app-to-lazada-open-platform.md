@@ -8,39 +8,24 @@ We strongly recommend you to use the official SDK to call Lazada Open Platform A
 
 Lazada Open Platform API has updated protocol than the Seller Center API. The differences between the request URLs, parameters, and responses are shown in the table below.
 
-**Items** | **Seller Center API** | **Lazada Open Platform API** | **Description**  
----|---|---|---  
-Request URL | https://api.sellercenter.lazada.{sg} | https://api.lazada.{sg}/rest | One URL for each venture  
-Parameters | ?Action=GetBrands | /brands/get? | API name: RESTful  
-&Timestamp=2015-07-01T11:11+0000 | &timestamp=2018-01-07+15%3A53%3A16 | Timestamp: supporting UTC format  
-&Version=1.0 | N/A |   
-&Signature=01286525c2fdba61ed1f5e | &sign_method=hmac  
-&sign=3ECA2FD80065FB779761F75F6D09D2C6 | Signature algorithm (Lazada Open Platform supports HMAC_SHA256)  
-&Format=XML / JSON | &format=json | LAZOP supports json format only  
-&UserID=a@b.c | &app_key=4272&partner_id=top-apitools&session=61003091b65c3d405 | Identity:
+Items | Seller Center API | Lazada Open Platform API | Description
+---|---|---|---
+Request URL | https://api.sellercenter.lazada.{sg} | https://api.lazada.{sg}/rest | One URL for each venture
+Parameters | ?Action=GetBrands | /brands/get? | API name: RESTful
+&Timestamp=2015-07-01T11:11+0000 | &timestamp=2018-01-07+15%3A53%3A16 | Timestamp: supporting UTC format | 
+&Version=1.0 | N/A |  | 
+&Signature=01286525c2fdba61ed1f5e | &sign_method=hmac &sign=3ECA2FD80065FB779761F75F6D09D2C6 | Signature algorithm (Lazada Open Platform supports HMAC_SHA256) | 
+&Format=XML / JSON | &format=json | LAZOP supports json format only | 
+&UserID=a@b.c | &app_key=4272 &partner_id=top-apitools &session=61003091b65c3d405 | Identity: APP：non -> app_key ISV：non -> partner_id user：UserEmail -> log in auth seesion | 
+&Limit=100 | &limit=100 | Changed to lowercase. For example, OrderId will be changed to order_id | 
+&Offset=0 | &offset=0 | Changed to lowercase | 
+Post body | <xml>...</xml> | <xml>...</xml> | No change
+Success response | Refer to the sample below | Refer to the sample below | Removed the "SuccessResponse", "Head", and "Body" tags The "RequestId" is on the same level with the results
+Error response | Refer to the sample below | Refer to the sample below | Kept the "ErrorResponse" tag Removed the "Head" tag
+SDK | For Java | For Java, C#, PHP, Ruby, and Python | 
 
-  * APP：non -> app_key
-  * ISV：non -> partner_id
-  * user：UserEmail -> log in auth seesion
+ 
 
-  
-&Limit=100 | &limit=100 | Changed to lowercase. For example, OrderId will be changed to order_id  
-&Offset=0 | &offset=0 |  Changed to lowercase  
-Post body | <xml>...</xml> | <xml>...</xml> | No change  
-Success response | Refer to the sample below | Refer to the sample below | 
-
-  * Removed the "SuccessResponse", "Head", and "Body" tags
-  * The "RequestId" is on the same level with the results
-
-  
-Error response | Refer to the sample below | Refer to the sample below | 
-
-  * Kept the "ErrorResponse" tag
-  * Removed the "Head" tag
-
-  
-SDK | For Java | For Java, C#, PHP, Ruby, and Python |   
-  
 ## Seller Center API
 
 #### Request：
@@ -134,34 +119,34 @@ SDK | For Java | For Java, C#, PHP, Ruby, and Python |
 
 Lazada Open Platform APIs are RESTful APIs. The following table shows the mapping of the API method name and the Lazada Open Platform API path.
 
-API  | **API path**  
----|---  
-GetBrands  | [/brands/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.4b42266b96HkgB#/api?cid=5&path=/brands/get>)  
-GetCategoryAttributes  | [/category/attributes/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.4b42266b96HkgB#/api?cid=5&path=/category/attributes/get>)  
-GetCategoryTree  | [/category/tree/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/category/tree/get>)  
-GetPayoutStatus  | [/finance/payout/status/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=9&path=/finance/payout/status/get>)  
-GetTransactionDetails  | [/finance/transaction/detail/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=9&path=/finance/transaction/detail/get>)  
-GetDocument  | [/order/document/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/document/get>)  
-GetFailureReasons  | [/order/failure_reason/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/failure_reason/get>)  
-GetMultipleOrderItems  | [/orders/items/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/orders/items/get>)  
-GetOrder  | [/order/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/get>)  
-GetOrderItems  | [/order/items/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/items/get>)  
-GetOrders  | [/orders/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/orders/get>)  
-GetShipmentProviders  | [/shipment/providers/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=6&path=/shipment/providers/get>)  
-SetInvoiceNumber  | [/order/invoice_number/set](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/invoice_number/set>)  
-SetStatusToCanceled  | [/order/cancel](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/cancel>)  
-SetStatusToPackedByMarketplace  | [/order/pack](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/pack>)  
-SetStatusToReadyToShip  | [/order/rts](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=8&path=/order/rts>)  
-CreateProduct  | [/product/create](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/product/create>)  
-GetProducts  | [/products/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/products/get>)  
-GetQcStatus  | [/product/qc/status/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/product/qc/status/get>)  
-GetResponse  | [/image/response/get](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/image/response/get>)  
-MigrateImage  | [/image/migrate](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/image/migrate>)  
-MigrateImages  | [/images/migrate](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/images/migrate>)  
-RemoveProduct  | [/product/remove](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/product/remove>)  
-SetImages  | [/images/set](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/images/set>)  
-UpdatePriceQuantity  | [/product/price_quantity/update](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/product/price_quantity/update>)  
-UpdateProduct  | [/product/update](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/product/update>)  
-UploadImage  | [/image/upload](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=5&path=/image/upload>)  
-SellerUpdate  | [/seller/update](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=2&path=/seller/update>)  
-UserUpdate  | [/user/update](<https://open.lazada.com/doc/api.htm?spm=a2o9m.11193494.0.0.fef1266bJUa06b#/api?cid=2&path=/user/update>)
+API | API path
+---|---
+GetBrands | /brands/get
+GetCategoryAttributes | /category/attributes/get
+GetCategoryTree | /category/tree/get
+GetPayoutStatus | /finance/payout/status/get
+GetTransactionDetails | /finance/transaction/detail/get
+GetDocument | /order/document/get
+GetFailureReasons | /order/failure_reason/get
+GetMultipleOrderItems | /orders/items/get
+GetOrder | /order/get
+GetOrderItems | /order/items/get
+GetOrders | /orders/get
+GetShipmentProviders | /shipment/providers/get
+SetInvoiceNumber | /order/invoice_number/set
+SetStatusToCanceled | /order/cancel
+SetStatusToPackedByMarketplace | /order/pack
+SetStatusToReadyToShip | /order/rts
+CreateProduct | /product/create
+GetProducts | /products/get
+GetQcStatus | /product/qc/status/get
+GetResponse | /image/response/get
+MigrateImage | /image/migrate
+MigrateImages | /images/migrate
+RemoveProduct | /product/remove
+SetImages | /images/set
+UpdatePriceQuantity | /product/price_quantity/update
+UpdateProduct | /product/update
+UploadImage | /image/upload
+SellerUpdate | /seller/update
+UserUpdate | /user/update
