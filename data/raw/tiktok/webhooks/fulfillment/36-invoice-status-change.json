@@ -1,0 +1,20 @@
+{
+  "title": "(36) Invoice status change",
+  "content": "# 1. Trigger scenario\nThis webhook is triggered when the status of an invoice upload changes after using the [POST Upload Invoice](upload-invoice) endpoint.\n**Note**: The [POST Upload Invoice](upload-invoice) API is currently only applicable to the Brazil market.\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| shop_id | string | \"7494049642642441621\" | The TikTok Shop ID. |\n| type | int64 | 36 | The ID of this webhook topic, which is 36. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| timestamp | int64 | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ package_id | string | \"123456\" | The ID of the package. |\n| └ order_ids | []string | [\"152523\", \"532123\"] | List of order IDs in the corresponding `package_id`. |\n| └ invoice_status | string | \"SUCCESS\" | The status of the invoice upload. Possible values: <br>  <br> * `SUCCESS` <br> * `PROCESSING` <br> * `FAILED` <br> * `INVALID` |\n| └ invalid_reason | string | \"NOT_FOUND\" | The reason why `invoice_status = INVALID`. Possible values: <br>  <br> * `UNKNOWN`: Internal system error. Please try again later. <br> * `FAILED`: The NFe file or access key is invalid. Please check the XML file for correctness. <br> * `NOT_FOUND`: The NFe was not found. This may be due to data delay. Please try again later. <br> * `NOT_AUTHORIZED`: The NFe is not legally authorized. It may not have been issued or has been canceled. <br> * `ACCESS_KEY_DUPLICATE`: The access key already exists. You cannot upload an invoice with duplicate access key. |\n## Event example\n```json\n{\n    \"type\":36,\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"shop_id\": \"7494049642642441621\",\n    \"timestamp\": 1644412885,\n    \"data\":{\n        \"package_id\": \"123456\",\n        \"order_ids\": [\"152523\", \"532123\"],\n        \"invoice_status\": \"INVALID\",\n        \"invalid_reason\": \"NOT_FOUND\"\n    }\n}\n```\n\n\n",
+  "update_time": "1751450059",
+  "view_count": 0,
+  "prev_document_id": "66143486ef8a1202dc323258",
+  "prev_document_path": "14-new-message",
+  "next_document_id": "6708f866a88d1103246fed6a",
+  "next_document_path": "21-inbound-fbt-order-status-change",
+  "is_api_doc": false,
+  "document_id": "67b68ca185619104a6772e5d",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

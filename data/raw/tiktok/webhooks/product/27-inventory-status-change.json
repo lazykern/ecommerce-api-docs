@@ -1,0 +1,20 @@
+{
+  "title": "(27) Inventory status change",
+  "content": "# 1. Trigger scenario\nThis webhook will be triggered in either of the following situations:\n\n* The `current_inventory_status` has dropped to LOW_STOCK / OUT_OF_STOCK.\n* TikTok Shop predicts the `available_quantity` will drop to `0` in X days.\n\n> Note: The value of X can be system-configured or manually set by the seller.\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 27 | The ID of this webhook topic, which is 27. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ product_id | string | \"732357708734418520388\" | The ID of the product. |\n| └ sku_id | string | \"73235770873441823254\" | The ID of the SKU. |\n| └ trigger_reason | object |  |  |\n| └└ alert_type | string | \"PREDICTION\" | PREDICTION: TikTok Shop predicts the inventory will go out of stock in X days <br> REALTIME: The inventory has reached LOW_STOCK or OUT_OF_STOCK |\n| └└ lead_days | int | 21 | When `alert_type == PREDICTION`, the value is the time slot between `update_time` and the predicted out-of-stock date. <br> When `alert_type == REALTIME`, the parameter is not returned. |\n| └└ low_stock_threshold | int | 0 | When `alert_type == REALTIME`, the value is the low stock threshold met. <br> When `alert_type == PREDICTION`, the parameter is not returned. |\n| └ current_inventory_status | string | \"LOW_STOCK\" | SUFFICIENT_STOCK: defined as having enough stocks. <br> LOW_STOCK: defined as available stock ≤ stock alert value <br> OUT_OF_STOCK: defined as having 0 available stock. |\n| └ inventory_distribution | object |  |  |\n| └└ total_quantity | int | 100 | The total quantity of the stock physically in the warehouses. `total_quantity`=`available_quantity` + `creator_reserved_quantity` + `campaign_reserved_quantity` + `committed_quantity`. |\n| └└ available_quantity | int | 50 | The total number of SKUs available for ordering in the warehouses. |\n| └└ creator_reserved_quantity | int | 20 | The total number of SKUs reserved for creators in the warehouses. |\n| └└ campaign_reserved_quantity | int | 20 | The total number of SKUs reserved for campaigns in the warehouses. |\n| └└ committed_quantity | int | 10 | The total number of SKUs reserved by existing customer orders in the warehouses. |\n| └ update_time | int | 1627587600 | The time when the status changed, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 27,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"732357708734418520388\"\n    \"sku_id\": \"73235770873441823254\"\n    \"trigger_reason\": {\n        \"alert_type\": \"PREDICTION\",\n        \"lead_days\": 21\n    },\n    \"current_inventory_status\": \"LOW_STOCK\",\n    \"inventory_distribution\": {\n        \"total_quantity\": 100,\n        \"available_quantity\": 50,\n        \"creator_reserved_quantity\": 20,\n        \"campaign_reserved_quantity\": 20,\n        \"committed_quantity\": 10\n    },\n    \"update_time\": 1627587600\n  }\n}\n```\n\n\n",
+  "update_time": "1751450133",
+  "view_count": 0,
+  "prev_document_id": "6710c02ba88d1103248e82b2",
+  "prev_document_path": "25-opportunity-matching-status-change",
+  "next_document_id": "67b5c6cba42623049abe5062",
+  "next_document_path": "37-product-audit-status-change",
+  "is_api_doc": false,
+  "document_id": "672995e79ba2a002fe5dc92e",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

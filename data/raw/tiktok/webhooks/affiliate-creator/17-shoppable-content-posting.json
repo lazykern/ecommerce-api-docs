@@ -1,0 +1,20 @@
+{
+  "title": "(17) Shoppable content posting",
+  "content": "## Trigger scenario\nThe shoppable content posting webhook is triggered when the creator adds, updates, or removes a product link in a video or livestream.\n> This webhook will only be triggered after the creator has authorized the `Read Creator Affiliate Collaborations` scope.\n\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `17` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| creator_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the creator. To get the value, see [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └product_id | string | `\"789078671231\"` | ID of the product promoted in the creator's video. |\n| └event | object |  |  |\n| └└type | string | `\"ADD\"` | The action which the creator takes to the product promoted in the video or live stream. The possible enumerations are: <br>  <br> * `ADD`: Add the product. <br> * `UPDATE`: Update the product. <br> * `REMOVE`: Remove the product. |\n| └└scene | string | `\"VIDEO\"` | The scene where the creator promotes the product. The possible enumerations are: <br>  <br> * `VIDEO`: short video. |\n| └└content_id | string | `\"789078671231\"` | The ID of the short video. |\n## Event example\n```JSON\n{\n  \"type\": 17,\n  \"creator_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"789078671231\",\n    \"event\": {\n      \"type\": \"ADD\",\n      \"scene\": \"VIDEO\",\n      \"content_id\": \"789078671231\"\n    }\n  }\n}\n```\n\n\n",
+  "update_time": "1751450028",
+  "view_count": 0,
+  "prev_document_id": "650ac12b4a0bb702c070e7c3",
+  "prev_document_path": "confirm-package-shipment-202309",
+  "next_document_id": "6711e6d663de6102f8181142",
+  "next_document_path": "20-creator-deauthorization",
+  "is_api_doc": false,
+  "document_id": "66851c2c37c1a902f8f2c3ac",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

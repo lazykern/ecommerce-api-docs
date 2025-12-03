@@ -1,0 +1,20 @@
+{
+  "title": "(23) Goods match",
+  "content": "## Trigger scenario\nThis webhook is triggered when the seller matches / unmatches the TikTok Shop product to the FBT Goods.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `23` | The ID of this webhook topic, which is 23. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ match_type | string | `\"MATCH\"` | Indicates whether the seller is matching or unmatching products. Possible enumerations are: `MATCH` and `UNMATCH`. |\n| └ product_type | string | `\"LOCAL\"` | Possible enumerations are: `LOCAL` and `GLOBAL`. |\n| └ goods_id | string | `\"732357708734418520388\"` | FBT Goods ID. |\n| └ product_id | string | `\"123513234\"` | TikTok Shop product ID. |\n| └ sku_id | string | `\"123563781\"` | TikTok Shop SKU ID. |\n| └ update_time | int | `1644412845` | The time when the action occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 23,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"match_type\": \"MATCH\",\n    \"product_type\": \"LOCAL\",\n    \"goods_id\": \"732357708734418520388\",\n    \"product_id\": \"123513234\",\n    \"sku_id\": \"123563781\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+  "update_time": "1751450073",
+  "view_count": 0,
+  "prev_document_id": "6708f86842f5af03316bccff",
+  "prev_document_path": "22-fbt-merchant-onboarding",
+  "next_document_id": "6708f86d24e99e035deee8b9",
+  "next_document_path": "24-fbt-inventory-update",
+  "is_api_doc": false,
+  "document_id": "6708f86aed6fab0308fa780e",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

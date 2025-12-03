@@ -1,0 +1,25 @@
+{
+  "title": "EU market: New compliance data required - CLP/Biocides ",
+  "content": "# Summary\nStarting **September 8th, 2025**, we will be introducing **new attributes in the EU market** to collect required product information from sellers who are listing **home appliance products** that contain biocides. This will ensure the correct label will be displayed to customers in compliance with EU rules.\n# Impact\n|  |  |\n| --- | --- |\n| Impacted market(s) | * Europe (EU) - Local and cross-border |\n| Impacted version(s) | * 202309 (and later) |\n# What's new?\nTo support Biocides data collection, 4 new attributes will be added to certain categories on **September 8th, 2025**:\n\n* Attribute 1: Product qualifies as biocidal product\n* Attribute 2: Product contains chemicals\n* Attribute 3: Select hazardous pictograms\n* Attribute 4: Select H phrases\n\n**Product endpoints affected:** \n\n* [Get Attributes ](https://partner.tiktokshop.com/docv2/page/get-attributes-202309)\n* [Get Category Rules ](https://partner.tiktokshop.com/docv2/page/get-category-rules-202309#Back%20To%20Top)\n\n# Next steps\nTo avoid errors when creating products, you **must** update required category fields in your app to surface the new attributes per category rules.\n**General recommendation**: Product categories are updated frequently, so it's recommended to call the API in real time to ensure you are using the latest category data. Caching category data locally may result in using outdated information, leading to errors when creating products.\n",
+  "update_time": "1757350195",
+  "view_count": 0,
+  "prev_document_id": "68a63092c4b96f0496bade48",
+  "prev_document_path": "npb6fvbh",
+  "next_document_id": "68ed3f3f651aa60499443526",
+  "next_document_path": "7s72ctzw",
+  "is_api_doc": false,
+  "document_id": "68bf07d6d40cf204a1b01fcc",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

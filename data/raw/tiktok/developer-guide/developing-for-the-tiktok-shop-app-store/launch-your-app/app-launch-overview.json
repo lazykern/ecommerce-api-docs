@@ -1,0 +1,20 @@
+{
+  "title": "App launch overview",
+  "content": "Depending on the type of app you are launching, the process involves publishing and listing it on the TikTok Shop (TTS) App and Service Store.\n\n* Publishing your app is the act of going live (or changing your app's status from draft to active).\n* Listing your app is the act of making it available on the TTS App and Service store for sellers in your market to use.\n\nThe requirements for launching an app differ based on whether you are working with a public or custom app.\n# Discoverability\nDiscoverability of your app on the **App & Service Store** depends on three key factors:\n\n* **App type:** Only public apps are discoverable on the **App & Service Store.**\n* **Seller type:** Distinguishing between local-to-local and cross-border sellers.\n* **Market availability:** Availability of the app is exclusive to sellers operating within that market.\n\n# Public App\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/7758accf68a04188b10d26ea5049ae2e~tplv-10qhjjqwgv-image.image)\nOnce you submit the basic information for your public app in Partner Center and establish your workspace, you must meet the following prerequisites before you can publish your app:\n\n1. Initiate and complete the [app review process](app-review-process), where we assess whether your app meets the requirements outlined in the App Requirement Document (ARD).\n2. Fill out the language listings form for each market where you intend to publish your app and pass the listing reviews.\n3. Pass the [compliance and legal review](data-security-and-privacy-review) that you initiated during the onboarding process to ensure your app adheres to all relevant regulations and guidelines.\n   **Note:** Contact the Partner Development & Management team for your market if you have not already initiated the compliance and legal review process.\n\n**Learn more:** Refer to [Publish and list a public app](publish-and-list-public-app) for information how to launch your public app.\n# Custom App\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/1615b0ef0fee4f9681dec7ea25d10de6~tplv-10qhjjqwgv-image.image)\nOnce you submit the basic information for your custom app in Partner Center and establish your workspace, you are free to publish your app. Custom apps are not publicly available on the TTS App and Service Store, so we do not require you to provide any additional listing information. In addition, most custom apps (depending on the category) do not require any reviews.\n**Learn more:** Refer to [Publish a Custom App](publish-custom-app)for information on how to publish your custom app or how to convert a custom app to a public app.\n\n",
+  "update_time": "1751449755",
+  "view_count": 0,
+  "prev_document_id": "64f1998564ed2e0295f3d87d",
+  "prev_document_path": "test-your-app",
+  "next_document_id": "64f199f09495ef0281852c7d",
+  "next_document_path": "publish-and-list-public-app",
+  "is_api_doc": false,
+  "document_id": "64f199d8dc7f3e028d383b99",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

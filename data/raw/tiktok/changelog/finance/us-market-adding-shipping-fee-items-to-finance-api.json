@@ -1,0 +1,20 @@
+{
+  "title": "US market: Adding shipping fee items to Finance API",
+  "content": "## Summary\nTikTok Shop is rolling out **Co-Funded Free Shipping** in the US Market. New fields are added to both v202309 and v202212.\n## API Changes\nNew fields to be added in 202309 ver. API:\n\n* Customer shipping fee offset\n* FBT fulfillment fee\n* Promo Sign up shipping incentive\n\nNew fields to be added in 202212 ver. API:\n\n* Limited-time Sign up incentive\n* Limited-time Sign up incentive refund\n\n## Detailed Changes\n### Get Statement Transactions v202309\n\n* Change 1: Three new properties added as per the table below:\n\n| Property | Details |\n| --- | --- |\n| `customer_shipping_fee_offset_amount` | This billing item is currently applicable to US sellers only. Although included on FBT invoices, it will not lead to any net charges for sellers. Any shipping fees paid by the customer or the platform will be debited and forwarded to TikTok Shop. |\n| `fbt_fulfillment_fee_amount` | The shipping fee incurred by sellers for orders fulfilled by TikTok. |\n| `promo_shipping_incentive_amount` | From Aug 26, 2024 to Dec 31, 2024, TikTok shop will provide additional logistics incentives for sellers that have registered for the co-funded free shipping program. Negative amounts mean a clawback of the incentives given. |\n\n* Change 2: The value existing field `shipping_cost_amount` is the sum of the three properties above.\n\nThere are no changes to the API parameters or error codes.\n### Get Order Statement Transactions v202309\n\n* Change 1: Three new properties added as per the table below:\n\n| Property | Details |\n| --- | --- |\n| `customer_shipping_fee_offset_amount` | This billing item is currently applicable to US sellers only. Although included on FBT invoices, it will not lead to any net charges for sellers. Any shipping fees paid by the customer or the platform will be debited and forwarded to TikTok Shop. |\n| `fbt_fulfillment_fee_amount` | The shipping fee incurred by sellers for orders fulfilled by TikTok. |\n| `promo_shipping_incentive_amount` | From Aug 26, 2024 to Dec 31, 2024, TikTok shop will provide additional logistics incentives for sellers that have registered for the co-funded free shipping program. Negative amounts mean a clawback of the incentives given. |\n\n* Change 2: The value existing field `shipping_cost_amount` is the sum of the three properties above.\n\nThere are no changes to the API parameters or error codes.\n### Get Settlements v202212\n\n* Change 1: Two new properties added as per the table below:\n\n| Property | Details |\n| --- | --- |\n| `promo_shipping_incentive_amount` | For seller who signed up Co-funded free shipping program or joined FBT since 8/26, they will be eligible for an additional shipping incentives for orders if meet platform policy requirement. Incentives will ended up at 2024/12/31. |\n| `promo_shipping_incentive_refund_amount` | Refund of promo_shipping_incentive_amount. |\nThere are no changes to the API parameters or error codes.\n### Get Order Settlements v202212\n\n* Change 1: Two new properties added as per the table below:\n\n| Property | Details |\n| --- | --- |\n| `promo_shipping_incentive_amount` | For seller who signed up Co-funded free shipping program or joined FBT since 8/26, they will be eligible for an additional shipping incentives for orders if meet platform policy requirement. Incentives will ended up at 2024/12/31. |\n| `promo_shipping_incentive_refund_amount` | Refund of promo_shipping_incentive_amount. |\nThere are no changes to the API parameters or error codes.\n\n",
+  "update_time": "1726013790",
+  "view_count": 0,
+  "prev_document_id": "66c5d9b6290e4202f857d5b7",
+  "prev_document_path": "us-and-uk-markets-new-properties-added-to-finance-api",
+  "next_document_id": "677ccdc6e5dadc0306a56b59",
+  "next_document_path": "new-version-v202501-for-statement-transactions-and-order-statement-transactions",
+  "is_api_doc": false,
+  "document_id": "66e0e14b0d161503013ca73f",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

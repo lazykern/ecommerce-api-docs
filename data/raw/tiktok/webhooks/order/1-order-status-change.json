@@ -1,0 +1,20 @@
+{
+  "title": "(1) Order status change",
+  "content": "# 1. Trigger scenario\nThe **order status change** webhook is triggered when the `order_status` of an order changes.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| order_id | 576462377512830168 | The identification of a TikTok Shop order |\n| order_status | CANCEL | The most recent order status, with possible values: <br>  <br> * `UNPAID` <br> * `ON_HOLD` <br> * `AWAITING_SHIPMENT` <br> * `AWAITING_COLLECTION` <br> * `CANCEL` <br> * `IN_TRANSIT` <br> * `DELIVERED` <br> * `COMPLETED` |\n| is_on_hold_order | false | Indicates whether the order has experienced or will experience `ON_HOLD` status |\n| update_time | 1627587505 | The order status update time, represented as a Unix timestamp (seconds). |\n## Event example\n```json\n{\n    \"type\":1,\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"shop_id\":\"7494049642642441621\",\n    \"timestamp\":1644412885,\n    \"data\":{\n        \"order_id\":\"576486316948490001\",\n        \"order_status\":\"UNPAID\",\n        \"is_on_hold_order\": false,\n        \"update_time\":1644412885\n    }\n}\n```\n\n\n",
+  "update_time": "1751450092",
+  "view_count": 0,
+  "prev_document_id": "650955cabace3e02b73cc886",
+  "prev_document_path": "4-package-update",
+  "next_document_id": "65030150746462028285f657",
+  "next_document_path": "11-cancellation-status-change",
+  "is_api_doc": false,
+  "document_id": "650300b8a57708028b430b4a",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "Order Status Update",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

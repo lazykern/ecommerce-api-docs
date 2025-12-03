@@ -1,0 +1,20 @@
+{
+  "title": "US&UK Markets: Hazmat Deadline Extension",
+  "content": "## What is changing?\nThe previous deadline of hazmat requirements have been extended from 2025-01-05 to **2025-03-05**. Developers are encouraged to make changes prior to this date.\n## Which markets and versions are affected?\nAll US and UK local sellers are impacted by this change. The change is applicable to all API versions.\n## API Changes\nPlease refer to the following changelogs for more details:\n[US Market Hazmat Changes](us-market-mandatory-hazmat-attributes-added)\n[UK Market Hazmat Changes](uk-market-mandatory-hazmat-attributes-added)\n\n",
+  "update_time": "1735918930",
+  "view_count": 0,
+  "prev_document_id": "673d539a58db2002f52a44a7",
+  "prev_document_path": "external-product-attribution-for-reviews-and-ads",
+  "next_document_id": "6782326ec399d90301e139df",
+  "next_document_path": "product-audit-status-is-added-to-products-api",
+  "is_api_doc": false,
+  "document_id": "6778053bb482920307e10979",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

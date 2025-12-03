@@ -1,0 +1,20 @@
+{
+  "title": "New Endpoint: Diagnose and Optimize Product",
+  "content": "## Summary\nTo improve product visibility, we are releasing a new endpoint called Diagnose and Optimize Product. It is not meant to be used for listing products, but rather for optimizing the product details and listing for existing products that are already live. This endpoint can help improve listing information, drive product traffic and increase conversions. The version for the [Diagnose and Optimize Product API](diagnose-and-optimize-product) is **v202411** and applies to all markets and all seller types.\n*Please note that listing quality information is currently US-only. Other features of this endpoint, such as diagnosing issues with the current product details and the overall recommendations and auto-generated optimization suggestions targeted for specific product fields, including the title, are available in all markets and to all sellers.*\n## What is changing\nPreviously, TikTok Shop had released a [Check Product Listing](check-product-listing) endpoint that helped identify any issues with product properties before submitting them for listing. This endpoint also diagnosed and optimized product information. We have now removed this logic from the API, and created this new endpoint called [Diagnose and Optimize Product API](diagnose-and-optimize-product) that hopes to provide insights on areas of improvement. This move lets us provide you with information on both products that are live in addition to new products that have not yet been listed.\n\n* To diagnose a live product, provide the `product_id` and `category_id`, leaving all other fields blank.\n* To diagnose a new product not yet listed, please *omit* the `product_id` and provide the rest of the necessary information.\n* You can also provide an existing `product_id` and `category_id` along with any new information, so that you can check any updates that might be made to a product.\n\nIn addition, the Check Product Listing API will deprecate the `is_diagnosis_required` request parameter, along with `listing_quality` and `diagnoses` values in the response.\nTo diagnose multiple live products, please use the [Product Information Issue Diagnosis API](product-information-issue-diagnosis). To verify listing requirements, use [Check Product Listing](check-product-listing)\n## What action is required\nThis is an optional API that can help boost GMV. We recommend adopting this API so that you can boost listing quality and improve the Product Details Page (PDP).\n## What markets and version is affected\nThis change is applicable to **v202411** applies to all markets and all sellers.\n\n",
+  "update_time": "1737512261",
+  "view_count": 0,
+  "prev_document_id": "6790551a84178a030d74ed37",
+  "prev_document_path": "price-and-inventory-is-optional-when-editing-products",
+  "next_document_id": "67b07846219ddf04aedffb33",
+  "next_document_path": "mx-market-minimum-product-price-adjustment",
+  "is_api_doc": false,
+  "document_id": "6790551c38b3f103169c3ce8",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

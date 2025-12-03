@@ -1,0 +1,20 @@
+{
+  "title": "Updates to Product API Mandatory Certifications",
+  "content": "# What is changing?\nTikTok Shop is implementing new Mandatory Certifications for certain categories.\nStarting from **2025-02-21**, Product APIs will be updated to require Mandatory Certifications for the following categories:\n\n* <span style=\"background-color: rgb(255, 245, 235)\"><strong>COA for Collectibles</strong></span><span style=\"background-color: rgb(255, 245, 235)\"> and </span><span style=\"background-color: rgb(255, 245, 235)\"><strong>Certificate for Autograph Collectibles</strong></span><span style=\"background-color: rgb(255, 245, 235)\"> will be required for the Collectibles category</span>\n* <span style=\"background-color: rgb(255, 245, 235)\"><strong>Test reports</strong></span><span style=\"background-color: rgb(255, 245, 235)\"> and </span><span style=\"background-color: rgb(255, 245, 235)\"><strong>Tracking info labelling</strong></span><span style=\"background-color: rgb(255, 245, 235)\"> will be required for the Toys & Hobbies category</span>\n\n\n# Which markets are affected?\nThe updates of the requirements apply to local sellers in the US market\n# Who is affected?\nDevelopers with applications that use Create Product, Edit Product, and Partial Edit Product\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nWithout mandatory product certifications, sellers will not be able to create and update products within specific categories\nUse the [Get Category Rule](get-category-rules) to check what product certifications are required for which categories, and pass the product certification files via the Create Product, Edit Product, and Partial Edit Product to help sellers submit product certification.\n\n",
+  "update_time": "1733456323",
+  "view_count": 0,
+  "prev_document_id": "675910ccc6a443030d96b937",
+  "prev_document_path": "eu-gpsr-communication-doc-adding-responsible-person-manufacturer-and-safety-label-information",
+  "next_document_id": "654b225e080aee02c31ac1f8",
+  "next_document_path": "new-property-added-to-recommend-category-api-to-indicate-whether-sellers-can-use-recommended-category",
+  "is_api_doc": false,
+  "document_id": "6752715b28a1690305f1e7dd",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

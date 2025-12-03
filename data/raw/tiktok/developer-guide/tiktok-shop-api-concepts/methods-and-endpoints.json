@@ -1,0 +1,20 @@
+{
+  "title": "Methods and endpoints",
+  "content": "# Methods\nTikTok Shop APIs support four common RESTful HTTP methods:\n\n* **GET**: access resources that are located at the specified URL on the server\n* **POST**: send data to the server\n* **PUT**: update existing resources on the server\n* **DELETE**: remove the resource\n\n# Endpoints\nTikTok Shop API endpoints are organized by resource type and follow the pattern:\n**https://{domain}/{category}/{version}/{resource}**\nWe have one environment for **{domain}**:\n| **Environment** | **URI** | **Use case** |\n| --- | --- | --- |\n| Production | `https://open-api.tiktokglobalshop.com` | The request address used by developer to call the interface after creating an application. Please use the HTTPS protocol. |\n\nThe **/{category}/{version}/{resource}** segment can be found in the corresponding reference doc for any TikTok Shop API.\nFor example, to call [Get Authorized Shops](get-authorized-shops), the endpoint would be:\n```plaintext\nhttps://open-api.tiktokglobalshop.com/authorization/202309/shops\n```\n\n\n",
+  "update_time": "1751449662",
+  "view_count": 0,
+  "prev_document_id": "64f1990b93f5dc028e35604b",
+  "prev_document_path": "tts-api-concepts-overview",
+  "next_document_id": "678e3a4278f4c20311b8b57e",
+  "next_document_path": "common-parameters",
+  "is_api_doc": false,
+  "document_id": "678e3a40c0833b03100a46b1",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

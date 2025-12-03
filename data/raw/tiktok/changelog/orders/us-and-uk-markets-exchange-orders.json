@@ -1,0 +1,20 @@
+{
+  "title": "US and UK markets: Exchange orders",
+  "content": "## Summary\nTo provide a smoother after-sales experience, we've added a couple of response parameters that should help sellers keep track of their exchange orders.\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* United States (US)\n* United Kingdom (UK)\n\nThis change applies to the following API version(s):\n\n* 202309 (and later)\n\n## What's changing?\n### Order APIs\n| **Endpoint(s)** | **Change(s)** |\n| --- | --- |\n| * [Get Order List](get-order-list) <br> * [Get Order Detail](get-order-detail) | New response parameters: <br>  <br> * `is_exchange_order`: Indicates an exchange order when **TRUE**. <br> * `exchange_order_source_id`: If `is_exchange_order=TRUE`, returns the ID of the original order. |\n\n",
+  "update_time": "1748465730",
+  "view_count": 0,
+  "prev_document_id": "680febada6eb9c049050ea37",
+  "prev_document_path": "us-market-pre-order-made-to-order-back-order-functionality-delivery-sla",
+  "next_document_id": "681d1e91d2dec604acd934cc",
+  "next_document_path": "us-market-fast-delivery-program",
+  "is_api_doc": false,
+  "document_id": "68113dc7d831b1049f307323",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

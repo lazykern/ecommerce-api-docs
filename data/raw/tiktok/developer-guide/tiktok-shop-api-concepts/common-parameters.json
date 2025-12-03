@@ -1,0 +1,20 @@
+{
+  "title": "Common parameters",
+  "content": "When calling any TikTok Shop API, these are the **required** common parameters:\n| **Parameter** | **Location** | **Type** | **Description** | **Sample** |\n| --- | --- | --- | --- | --- |\n| `app_key` | Query | string | The unique key assigned to your app. Refer to [Create your app](create-your-app) to find out where to get your **`app_key`**. | 29a39d |\n| `sign` | Query | string | A HMAC-SHA256 hash based on the parameter values, used by the service to verify the sender of the request in addition to the bearer/authorization token. <br> Refer to [Sign your API request](sign-your-api-request) to learn how to generate this signature. | bc721f0e0182914e3487b81df204de37a352fc3aa96947efda6dc1e5dd0d5290 |\n| `timestamp` | Query | Unix timestamp | A timestamp in Unix epoch format to ensure timeliness of the request and to prevent replay attack. This is also used to generate the digital signature for the **`sign`** parameter. <br> Valid range: [Current time – 5 mins, current time + 30 secs] | 1623812664 |\n\n",
+  "update_time": "1751449665",
+  "view_count": 0,
+  "prev_document_id": "678e3a40c0833b03100a46b1",
+  "prev_document_path": "methods-and-endpoints",
+  "next_document_id": "678e3a3d4ddec3030b238faf",
+  "next_document_path": "sign-your-api-request",
+  "is_api_doc": false,
+  "document_id": "678e3a4278f4c20311b8b57e",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

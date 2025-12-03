@@ -1,0 +1,25 @@
+{
+  "title": "US market: Pre-order, made-to-order, back-order functionality; delivery SLA",
+  "content": "## Summary\nIn the US market, we're adding the capability to specify new order types in our Order APIs, namely pre-order, made-to-order, and back-order.\n\nCompared to normal orders, these orders will sit longer in the **Ship To** tab of Order Management. Sellers now have the ability to filter for these new order types quickly to assess the necessary next steps in fulfillment.\n\nSpecifically for back-orders, Order Management has enabled tracking and visibility against incoming inventory. Back-orders have SLAs that are extended to allow sellers more time to fulfill the order. At the time of purchase, the **Ship By** date is calculated based on the replenishment days associated with the inventory counted as back-order inventory. Beyond this **Ship By** date, all other existing governance and fulfillment policies are unchanged.\n\nFinally, we're adding visibility for an on-time delivery rate calculation, `delivery_sla_time`, that should help sellers avoid late delivery penalties, especially with the rollout of the aforementioned order types.\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* United States (US)\n\nThis change applies to the following API version(s):\n\n* 202309 (and later)\n\n## API changes\n### Order APIs\nFor the [POST Get Order List](get-order-list) and [GET Get Order Detail](get-order-detail) endpoints, we're introducing a new `order_type` response parameter.\n| **New** **`order_type` value** | **Definition** |\n| --- | --- |\n| `PRE_ORDER` | An advance order for items that are not yet available or released. **Fulfillment starts on a specific date in the future.** |\n| `MADE_TO_ORDER` | An order for items that are produced only after the order is received. **Fulfillment starts after the product is produced.** |\n| `BACK_ORDER` | An order for items that are out of stock but expected to be restocked. **Fulfillment starts after the product is restocked.** |\n\nWe've also added and deprecated a couple of response parameters to support these new order types and business logic.\n| **Response parameter** | **Details** | **Status** |\n| --- | --- | --- |\n| `delivery_sla_time` | The date an order should arrive by to be considered on-time and to avoid late delivery penalties. | **NEW** |\n| `release_date` | The date on which order handling starts and the status of the order changes to [AWAITING_SHIPMENT](order-api-overview). Applicable only if the `order_type` is `PRE_ORDER`. **Note**: When a pre-order status is `ON_HOLD`, the product is still awaiting release, so payment will only be authorized 1 day before the release. | **NEW** |\n| `handling_duration` | The duration for the seller to process the order and hand it over to a shipping carrier after the order is placed. Applicable only if the `order_type` is `MADE_TO_ORDER` or `BACK_ORDER`. | **NEW** |\n| `handling_duration_days` | Replaced by `handling_duration`. | **DEPRECATED** |\n| `sku_type` | Replaced by `order_type`. | **DEPRECATED** |\n\n",
+  "update_time": "1748465730",
+  "view_count": 0,
+  "prev_document_id": "67ca5b63fc1c0704c4484a75",
+  "prev_document_path": "adding-co-founded-shipping-discount-fields",
+  "next_document_id": "68113dc7d831b1049f307323",
+  "next_document_path": "us-and-uk-markets-exchange-orders",
+  "is_api_doc": false,
+  "document_id": "680febada6eb9c049050ea37",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

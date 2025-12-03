@@ -1,0 +1,20 @@
+{
+  "title": "(42) Combined listing change",
+  "content": "# 1. Trigger scenario\nThis webhook is triggered when a combined listing is created, updated (the list of products in the combined listing changes), or deleted.\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 42 | The ID of this webhook topic, which is 42. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ combined_listing_id | string | \"123456789\" | The combined listing ID. |\n| └ products | []object |  | The current list of products in this combined listing after the change. |\n| └└ id | string | \"987654321\" | The product id. |\n| └ status | string | \"LIVE\" | The status of the combined listing. <br> Possible values: <br>  <br> * LIVE <br> * SYSTEM_DEACTIVATED <br> * SELLER_DEACTIVATED <br> * DELETED <br>  <br> Note: Only products in LIVE combined listings will appear on the product display page. |\n| └ change_type | string | \"UPDATE\" | The type of change made to this combined listing. <br> Possible values: <br>  <br> * CREATE: The combined listing was created. <br> * UPDATE: The combined listing was updated to add or remove products. <br> * DELETE: The combined listing was deleted. |\n| └ added_product_ids | []string | [\"987654321\"] | The list of products that were newly added to the combined listing. |\n| └ removed_product_ids | []string | [\"987654322\"] | The list of products that were removed from the combined listing. |\n## Event example\n```JSON\n{\n  \"type\": 42,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"combined_listing_id\": \"123456789\",\n    \"products\": [\n      {\n        \"id\": \"987654321\"\n      },\n      {\n        \"id\": \"987654322\"\n      }\n    ],\n    \"status\": \"LIVE\",\n    \"change_type\": \"UPDATE\",\n    \"added_product_ids\": [\"987654321\"],\n    \"removed_product_ids\": [\"987654333\"]    \n  }\n}\n```\n\n\n",
+  "update_time": "1751450144",
+  "view_count": 0,
+  "prev_document_id": "67c6f62e6704d704a6e5deed",
+  "prev_document_path": "38-strikethrough-price-expired",
+  "next_document_id": "684f8d9bcc4e44049347a12e",
+  "next_document_path": "46-image-translation-completed",
+  "is_api_doc": false,
+  "document_id": "68232cac0b038904a68c3753",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

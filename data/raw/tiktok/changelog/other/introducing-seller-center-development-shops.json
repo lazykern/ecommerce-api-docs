@@ -1,0 +1,20 @@
+{
+  "title": "Introducing Seller Center development shops",
+  "content": "# Development Shop Introduction\nSeller Center Development Shops offer developers the ability to easily and efficiently generate Test Seller Center accounts that can be used for testing and development of TikTok Shop APIs. These test accounts will replicate production Seller Center Accounts and provide access to all production features and functionalities. Seller Center Development Shops are created exclusively for each Partner Center account. The key difference between Seller Center Development Shops and Product TikTok Shop Seller Center accounts is that Development Shops can not be discovered by TikTok users in the regular TikTok Apps.\n## Examples of actions in Seller Development Shops\n\n* Create products\n* Place TikTok Shop orders\n* Place orders within Seller Center Development Shops without payments\n* Explore TikTok Shop and TikTok Product discoverability and buying experience through Test Buyer accounts\n* Place order payments through Test Buyer accounts with real payments\n* Fulfill orders\n* Process returns and refunds\n* Extract financial statements and settlements for the shop\n* Enable customer messaging services\n\n# Supported markets and seller types\nSeller Development Shops are now available for the US and UK markets.\nDevelopers will still need to use Sandbox 1.0 when developing apps for local sellers in the ID, MY, TH, SG, VN, PH markets or cross-border sellers in all regions including the US and UK.\n# Getting Started\nWe have published a user guide on how to leverage this as part of your API development process here: [Seller Center development shops](seller-center-development-shops).\n\n",
+  "update_time": "1703713492",
+  "view_count": 0,
+  "prev_document_id": "6566dd463022b702d8841afb",
+  "prev_document_path": "upcoming-updates-to-tts-open-api-release-december-2023-q1-2024",
+  "next_document_id": "659e0fff81b5ab02dfc154b7",
+  "next_document_path": "new-function-pre-publish-checklist",
+  "is_api_doc": false,
+  "document_id": "658c988a92e82502df316c54",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

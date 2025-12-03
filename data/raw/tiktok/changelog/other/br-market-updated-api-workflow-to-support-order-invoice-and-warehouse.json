@@ -1,0 +1,20 @@
+{
+  "title": "BR market: Updated API workflow to support Order, Invoice and Warehouse",
+  "content": "## Summary\nIn the Brazil market, marketplace sellers are required to upload invoices to marketplace before they can fulfill the order. So the API workflow has been adjusted and new fields added to fit into the invoicing process.\n## Affected Markets and Versions\nThis change applies to the BR market and v202309 of the API.\n## API Changes\nPlease refer to the [developer guide](https://bytedance.sg.larkoffice.com/docx/YOIKdbMUtotNTFxNjx2chiitnOd) on how to manage BR market by effectively using the invoicing and fulfillment APIs\n### Get Order List, Get Order Detail\nResponses have the following new properties:\n\n* `need_upload_invoice`: Whether an invoice needs to be uploaded (only for Brazil market).\n   * UNKNOWN\n   * NEED_INVOICE\n   * NO_NEED\n   * INVOICE_UPLOADED\n* `CPF`: CPF (invoice number) used to issue an invoice. Exclusive for the Brazil market.\n* `CPF_name`: Name belonging to the CPF number for the Brazil market.\n\n### Upload Invoice\nA new [Upload Invoice endpoint](upload-invoice) to upload the invoice document. **Note**: Applicable only for local sellers in the Brazil market.\n### Get Package Shipping Document\nA new input parameter `INVOICE_LABEL`. For Brazil market only, document_size is fixed to A6, and you don't need to specify document_size.\n### Get Warehouse List\n[Get Warehouse List](get-warehouse-list) retrieves all warehouse information associated with the seller. Compared with other markets (e.g. US market), the warehouse entity of Brazil market has four address lines, with each indicating:\n| Field | Description |\n| --- | --- |\n| address_line1 | The first line of the warehouse address, like street name and street number. **Note:** For Brazilian market, this represents the neighborhood or district. |\n| address_line2 | The second line of the warehouse address, like flat, apartment, or suite. **Note:** For Brazilian market, this represents the street name. |\n| address_line3 | This represents the street number. If it's s/n, it means null. **Note:** Available only in Brazilian market. |\n| address_line4 | This represents supplementary information, like flat, apartment, or suite (optional). **Note:** Available only in Brazilian market. |\n### Webhook: Invoice Status Change\nA [new webhook that is triggered](36-invoice-status-change) when the status of an invoice upload changes after using the POST Upload Invoice endpoint. **Note**: The POST Upload Invoice API is currently only applicable to the Brazil market.\n\n",
+  "update_time": "1741314967",
+  "view_count": 0,
+  "prev_document_id": "66fa4e34f70f7203045b9497",
+  "prev_document_path": "id-market-tokopedia-shop-open-api-integration-one-pager",
+  "next_document_id": "67eb5e81684be504c20ce560",
+  "next_document_path": "jp-market-updated-apis-for-products-orders-logistics-and-customer-service",
+  "is_api_doc": false,
+  "document_id": "67ca5b6c49162f049f2d1fa6",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

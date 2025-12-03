@@ -1,0 +1,20 @@
+{
+  "title": "For local sellers in the UK market: Introducing item level order split shipping",
+  "content": "# What is changing?\nEffective today, we have released [Mark Package As Shipped](mark-package-as-shipped) API for local sellers in the UK market.\n\n\nThis API is designed for sellers who manage order fulfillment via their preferred logistics carriers. It facilitates the seamless uploading of valid package information (such as the items in packages, shipping provider details, and tracking numbers) directly to TikTok Shop. This feature applies to both individual orders and order line items.\n# Which markets are affected?\nThis change applies to local sellers in the UK market.\n# Who is affected?\nDevelopers with applications that manage order shipping for sellers who opt for seller shipping as their fulfillment method will be affected by this change.\n# What action is required?\nTo align with this update and support the business needs of sellers—particularly the ability to split order shipping at the item level—it is essential to upgrade your application to integrate this new API functionality.\n\n",
+  "update_time": "1700554028",
+  "view_count": 0,
+  "prev_document_id": "65532219ff8ea502bd3df6a2",
+  "prev_document_path": "for-local-and-cross-border-sellers-in-us-market-shipping-information-update-time-window-extended-to-72-hours",
+  "next_document_id": "6543158d6f932c02ba1b78a8",
+  "next_document_path": "for-local-sellers-in-us-market-warning-information-added-to-mark-package-as-shipped-api",
+  "is_api_doc": false,
+  "document_id": "655c6230f4488c02df97fb13",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

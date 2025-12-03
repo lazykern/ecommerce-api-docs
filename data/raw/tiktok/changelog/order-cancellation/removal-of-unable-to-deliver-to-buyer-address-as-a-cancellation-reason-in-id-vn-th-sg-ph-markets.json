@@ -1,0 +1,20 @@
+{
+  "title": "Removal of \"unable to deliver to buyer address\" as a cancellation reason in ID, VN, TH, SG, PH markets",
+  "content": "# What is changing?\nStarting March 1, 2024, sellers will no longer be able to use \"unable to deliver to buyer address\" as a reason for canceling orders. This change is intended to encourage sellers to provide more solid reasons for cancellations.\n# Which markets are affected?\nThis update affects local sellers in ID, SG, TH, VN, and PH markets\n# Who is affected?\nDevelopers who have integrated the [Cancel Order](cancel-order) endpoint into their apps are impacted by this change.\n# What action is required?\nIf your app integration includes **\"unable to deliver to buyer address\"** as a [cancellation reason](cancel-reasons) for seller-initiated cancellations, you need to remove this option from your app before March 1, 2024.\n\n",
+  "update_time": "1703226376",
+  "view_count": 0,
+  "prev_document_id": "65a848f4ea874002e1f672d1",
+  "prev_document_path": "us-only-order-cancellation-workflow-updates",
+  "next_document_id": "6875f39c5c6c9604a9e53580",
+  "next_document_path": "three-seller-initiates-cancel-reasons-will-be-changed",
+  "is_api_doc": false,
+  "document_id": "65852b58bb426602df90ebba",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

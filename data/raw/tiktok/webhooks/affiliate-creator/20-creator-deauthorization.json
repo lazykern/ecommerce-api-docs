@@ -1,0 +1,20 @@
+{
+  "title": "(20) Creator deauthorization",
+  "content": "## Trigger scenario\nWhen a creator completely removes the App's access to his/her data.\n## Data business parameters\n| Parameter name | Data Type | Sample | Description |\n| --- | --- | --- | --- |\n| type | int | `20` | Webhook type, fixed to `20` for this webhook. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| creator_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the creator. To get the value, see [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └ cancel_time | string | `\"1644412885\"` | The UNIX timestamp when this event happened. |\n## Event example\n```JSON\n{\n  \"type\": 20,\n  \"creator_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"cancel_time\": 1644412885\n  }\n}\n```\n\n\n",
+  "update_time": "1751450031",
+  "view_count": 0,
+  "prev_document_id": "66851c2c37c1a902f8f2c3ac",
+  "prev_document_path": "17-shoppable-content-posting",
+  "next_document_id": "692642e6d70f1a06103f0a2c",
+  "next_document_path": "iygh3ycz",
+  "is_api_doc": false,
+  "document_id": "6711e6d663de6102f8181142",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

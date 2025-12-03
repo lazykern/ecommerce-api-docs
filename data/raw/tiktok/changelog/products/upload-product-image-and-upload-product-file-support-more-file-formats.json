@@ -1,0 +1,20 @@
+{
+  "title": "Upload Product Image and Upload Product File support more file formats",
+  "content": "## Summary\nFile formats supported by Upload Product Image and Upload Product File have been expanded.\n## Which markets and versions are affected?\nThis change applies to **v202309** and affects all markets and sellers.\n## API Changes\n### Upload Product Image\nWe now support WEBP, HEIC, and BMP in addition to the previously supported JPG, JPEG, and PNG formats.\n### Upload Product File\nFor video formats, we support MP4, MOV, MKV, WMV, WEBM, AVI, 3GP, FLV, and MPEG, in addition to the previously supported MP4 format.\n\n",
+  "update_time": "1741314965",
+  "view_count": 0,
+  "prev_document_id": "67ca5b6649162f049f2d1f8f",
+  "prev_document_path": "mandatory-certifications-for-certain-categories-added",
+  "next_document_id": "67ecb3ce8ceb0d04a3723b82",
+  "next_document_path": "streamlining-of-invite-only-product-categories",
+  "is_api_doc": false,
+  "document_id": "67ca5b69c925e304ad101829",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

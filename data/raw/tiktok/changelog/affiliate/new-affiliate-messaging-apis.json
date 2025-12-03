@@ -1,0 +1,20 @@
+{
+  "title": "New affiliate messaging APIs",
+  "content": "## Summary\nThis update centers around managing Affiliate Messaging, releasing 6 new endpoints.\n## What is changing\nAs we continue to refine and expand our Creator Collaboration and Affiliate APIs, our goal is to empower ISVs with the tools they need to develop impactful and innovative solutions for TikTok Shop Sellers. Here are the newly released endpoints:\n\n* Get Message in the Conversation\n* Get Conversation List\n* Send Message\n* Create Conversation with Creator\n* Mark Conversation Read\n* Get Latest Unread Messages\n\n## What action is required\nIf you are approved to use these APIs, we hope this improves your integration experience and can build functionality that is more native to your app.\n\n",
+  "update_time": "1738809461",
+  "view_count": 0,
+  "prev_document_id": "66978e5099c26c02ff76472b",
+  "prev_document_path": "new-apis-and-webhook-for-affiliates-beta",
+  "next_document_id": "68bf0bdd9370fc0490f8bc07",
+  "next_document_path": "3obfokj6",
+  "is_api_doc": false,
+  "document_id": "67a4205d9c908d0304dd8b22",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

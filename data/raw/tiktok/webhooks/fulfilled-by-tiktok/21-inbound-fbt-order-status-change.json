@@ -1,0 +1,20 @@
+{
+  "title": "(21) Inbound FBT order status change",
+  "content": "## Trigger scenario\nThis webhook is triggered when the status of an FBT inbound order changes.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `21` | The ID of this webhook topic, which is 21. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ inbound_order_id | string | `\"IBR577087614418520388\"` | FBT inbound order ID. |\n| └ order_status | string | `\"CANCELLED\"` | Inbound order status. Possible enumerations: <br>- TO_BE_RECEIVED <br>- ARRIVE_HUB, <br>- RECEIVING, <br>- PARTIALLY_RECEIVED, <br>- RECEIVED, <br>- CANCELLED |\n| └ update_time | int | `1644412845` | The time when the change occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 21,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"inbound_order_id\": \"IBR577087614418520388\",\n    \"order_status\": \"CANCELLED\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+  "update_time": "1751450066",
+  "view_count": 0,
+  "prev_document_id": "67b68ca185619104a6772e5d",
+  "prev_document_path": "36-invoice-status-change",
+  "next_document_id": "6708f86842f5af03316bccff",
+  "next_document_path": "22-fbt-merchant-onboarding",
+  "is_api_doc": false,
+  "document_id": "6708f866a88d1103246fed6a",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

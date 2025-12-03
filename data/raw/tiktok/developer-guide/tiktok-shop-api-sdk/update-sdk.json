@@ -1,0 +1,20 @@
+{
+  "title": "Update SDK",
+  "content": "When you need new TikTok Shop API access scopes in the SDK, new APIs in the existing API access scopes, or new features of the SDK, you can update the SDK integrated in your project. Find the updated SDK on the same page where you [downloaded the original version of SDK](download-sdk).\nThe SDKs shown in the console are updated in the following cases:\n\n* There are changes (additions or reductions) in the collection of API access scopes corresponding to your effective apps.\n* There are additions, reductions, upgrades (including upgrades to the original version and new versions), or sunsetting of APIs within your collection of API access scope.\n* There are upgrades to the SDK framework.\n* There are upgrades to the supported language versions.\n\nYou'll receive notifications in [TikTok Shop message center](https://partner.tiktokshop.com/message/list) when there are updates on the SDK.\n![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Developer_Guide/TTSPC_API_SDK/message_center.png)\nThe SDKs are generated on a daily basis. You can also accelerate the process by clicking the `check for updates` button.\n![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Developer_Guide/TTSPC_API_SDK/check_for_updates.png)\nWe endeavor to maintain backward compatibility with new SDK versions. Upon downloading the latest SDK, you may seamlessly integrate it into your existing project.\n\n",
+  "update_time": "1751449729",
+  "view_count": 0,
+  "prev_document_id": "67c83e11bc0b7d049fb53715",
+  "prev_document_path": "integrate-node-js-sdk",
+  "next_document_id": "665999954daf0702ca7ff7c9",
+  "next_document_path": "tts-widgets-overview",
+  "is_api_doc": false,
+  "document_id": "67c83e13bc0b7d049fb53726",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

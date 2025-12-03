@@ -1,0 +1,20 @@
+{
+  "title": "Price and Inventory is optional when editing products",
+  "content": "## Summary\nWhen calling [Edit Product](edit-product) and [Partial Edit Product APIs](partial-edit-product), the **price** and **inventory** fields are now optional. This change applies to all markets, and both cross-boar and local sellers. Developers integrated with v202309 version of these endpoints can leverage these changes.\n## What is changing\nThe schema of both [Edit Product](edit-product) and [Partial Edit Product APIs](partial-edit-product) have been changed so that `price` and `inventory` are not required anymore. If you omit these objects in the API request, the existing price and inventory will remain unchanged.\n## What action is required\nNo action is required unless you are a developer who will gain flexibility by omitting the above fields.\n## What markets and version is affected\nThis change applies to all markets and all sellers.\n\n",
+  "update_time": "1737512261",
+  "view_count": 0,
+  "prev_document_id": "6782326ec399d90301e139df",
+  "prev_document_path": "product-audit-status-is-added-to-products-api",
+  "next_document_id": "6790551c38b3f103169c3ce8",
+  "next_document_path": "new-endpoint-diagnose-and-optimize-product",
+  "is_api_doc": false,
+  "document_id": "6790551a84178a030d74ed37",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "For the SEA Market Partner & Developer: Add Expire Date on Product Certifications",
+  "content": "# What is changing?\nA new attribute expiration_date was added under product certifications in APIs Check Product Listing, Create Product, Partial Edit Products and Edit Product. Before creating, publishing or editing products, please call Get Category Rules to make sure whether expiration_date is mandatory after 2025-6-28.\nThere would be an expiration_date field under product certifications in the response body when getting category rules or getting product. The APIs include Get Category Rules and Get Product.\n# Which markets are affected?\nThe updates of the requirements apply to the local sellers in Singapore, Philippines, Vietnam, Thailand, Indonesia and Malaysia markets.\n# Who is affected?\nDevelopers with applications that use Check Product Listing, Create Product, Partial Edit Products, Edit Product, Get Category Rules and Get Product.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nIf expiration_date is mandatory, without this attribute sellers will not be able to create or edit products.\nUse the Get Attributes or Get Category Rules to check what attributes are mandatory and pass attribute values via Check Product Listing, Create Product, Partial Edit Products and Edit Product to help sellers fill in the attribute values.\n\n",
+  "update_time": "1748465730",
+  "view_count": 0,
+  "prev_document_id": "686c667683ee46049a44aecc",
+  "prev_document_path": "new-image-translation-apis",
+  "next_document_id": "675910ccc6a443030d96b937",
+  "next_document_path": "eu-gpsr-communication-doc-adding-responsible-person-manufacturer-and-safety-label-information",
+  "is_api_doc": false,
+  "document_id": "68198c221062240497df0541",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

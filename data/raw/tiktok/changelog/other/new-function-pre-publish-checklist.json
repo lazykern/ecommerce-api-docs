@@ -1,0 +1,20 @@
+{
+  "title": "New function: Pre-publish checklist",
+  "content": "# What is changing ?\nDevelopers can use the new feature of checklist to check what needs to do before App publishing.\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/43ad8c2f17364479b1e8792044fb7b34~tplv-10qhjjqwgv-image.image\" width=\"2838px\" /></div>\n\nOnce you're ready to launch your public app, you must go through review requirements before you can make your app live:\n\n1. Pass the registration review\n2. Complete and submit your language listing form for review.\n3. Initiate and complete your app review.\n4. If required by your case, ensure you've passed the compliance and legal review you initiated during onboarding.\n   1. **Note:** Contact the Partner Development & Management team for your market if you have not already initiated the compliance and legal review process.\n5. App reviews and beta testing are required for apps that fall under the \"Connector\" category.\n\n# Who is affected?\nAll App developers and TikTok Shop developers\n\n",
+  "update_time": "1704858214",
+  "view_count": 0,
+  "prev_document_id": "658c988a92e82502df316c54",
+  "prev_document_path": "introducing-seller-center-development-shops",
+  "next_document_id": "65a851046032c702e0bdbee6",
+  "next_document_path": "for-us-local-sellers-retail-delivery-fee-is-added-to-api",
+  "is_api_doc": false,
+  "document_id": "659e0fff81b5ab02dfc154b7",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "checklist",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

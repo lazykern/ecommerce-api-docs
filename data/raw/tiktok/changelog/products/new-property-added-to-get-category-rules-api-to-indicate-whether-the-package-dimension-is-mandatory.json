@@ -1,0 +1,20 @@
+{
+  "title": "New property added to Get Category Rules API to indicate whether the package dimension is mandatory",
+  "content": "# What is changing?\nWe've introduced a new component, `package_dimension` , to version 202309 of the [Get Category Rules](get-category-rules) API response, including the following property:\n\n* `is_required`: Indicate whether the package dimension is mandatory when creating or editing a product. For example:\n\n```JSON\n{\n  \"code\": 0,\n  \"data\": {\n    \"cod\": {\n      \"is_supported\": true\n    },\n    \"package_dimension\": {\n        \"is_required\": true // newly added property\n    },\n    \"product_certifications\": [\n      {\n        \"id\": \"602362\",\n        \"is_required\": true,\n        \"name\": \"SNI Certificate\",\n        \"sample_image_url\": \"https://p-boei18n.byted.org/tos-boei18n-i-jvtte31kaf/80b32f2896829eeb69d4b278c4f3aa75.jpg~tplv-jvtte31kaf-origin-jpeg.jpeg\"\n      }\n    ],\n    \"size_chart\": {\n      \"is_required\": true,\n      \"is_supported\": true\n    }\n  },\n  \"message\": \"Success\",\n  \"request_id\": \"202203070749000101890810281E8C70B7\"\n}\n```\n\n# Which markets are affected?\nThe new property is added for **local sellers** in all markets.\n# Who is affected?\nDevelopers who use version 202309 of the \"Get Category Rules API\" in their applications can now leverage this update for enhanced functionality.\n# Which version is applicable?\nThis new property will be exclusively added into version 202309 of the Get Category Rules API. To access it, you need to use the updated path, specifying the version in the path parameter. As in the following example: `/product/202309/categories/{category_id}/rules`.\nLearn more about [Upgrading to API version 202309](upgrading-to-api-version-202309).\n# What action is required?\nTo ensure seamless integration with this update, developers should:\n\n1. Integrate the `is_required` property into their applications.\n2. Implement validation to inform sellers about the requirement of package dimensions, which varies based on the product category.\n3. Enable input fields for sellers to provide package dimension details when required.\n\n## Note for UK market applications\nWe have revised the requirement for product package dimensions, making them optional for [59 categories](https://bytedance.larkoffice.com/sheets/ZoGosN8pmh358dtXQK0cHdd7nbb) (second-level) in the UK market. Developers managing product listings for UK sellers should **integrate and utilize** the `is_required` property in the [Get Category Rule](get-category-rules) API to adapt their application's functionality. This includes modifying the implementation to treat package dimensions as optional for categories where this information is not mandatory.\n## Note for applications that work with cross-border sellers\nThe product package dimension information is mandatory for cross-border sellers across all markets. Please be aware that the '`is_required`' property will not be returned in the response from the Get Category Rules API for cross-border sellers.\n\n",
+  "update_time": "1701671237",
+  "view_count": 0,
+  "prev_document_id": "654b225e080aee02c31ac1f8",
+  "prev_document_path": "new-property-added-to-recommend-category-api-to-indicate-whether-sellers-can-use-recommended-category",
+  "next_document_id": "65a029e6a7406102df5e951e",
+  "next_document_path": "changes-to-check-listing-prerequisite-api-in-v202312",
+  "is_api_doc": false,
+  "document_id": "656d70d9cca08202dbc037f8",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

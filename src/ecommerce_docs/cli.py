@@ -8,6 +8,8 @@ from ecommerce_docs.platforms.lazada import scraper as lazada_scraper
 from ecommerce_docs.platforms.shopee import guide_builder
 from ecommerce_docs.platforms.shopee import openapi_builder
 from ecommerce_docs.platforms.shopee import scraper as shopee_scraper
+from ecommerce_docs.platforms.tiktok import guide_builder as tiktok_guide_builder
+from ecommerce_docs.platforms.tiktok import scraper as tiktok_scraper
 
 
 @click.group()
@@ -53,6 +55,19 @@ def scrape_shopee(workers: int | None, output_dir: str | None) -> None:
 def scrape_lazada(workers: int | None, output_dir: str | None) -> None:
     """Run the Lazada scraper (guides + APIs)."""
     lazada_scraper.main(workers=workers or lazada_scraper.MAX_WORKERS, output_dir=output_dir)
+
+
+@scrape.command("tiktok")
+@click.option("--workers", type=int, default=None, help="Override worker count.")
+@click.option(
+    "--output-dir",
+    type=click.Path(file_okay=False, dir_okay=True),
+    default=None,
+    help="Where to store raw TikTok Shop scrape output.",
+)
+def scrape_tiktok(workers: int | None, output_dir: str | None) -> None:
+    """Run the TikTok Shop scraper (docs + specs)."""
+    tiktok_scraper.main(workers=workers or tiktok_scraper.MAX_WORKERS, output_dir=output_dir)
 
 
 @build.command("shopee-openapi")
@@ -125,6 +140,24 @@ def generate_lazada_openapi(apis_dir: str, output_file: str) -> None:
 def generate_lazada_guides(input_dir: str, output_dir: str) -> None:
     """Normalize Lazada developer guides into Markdown + metadata."""
     lazada_guide_builder.main(input_dir=input_dir, output_dir=output_dir)
+
+
+@build.command("tiktok-guides")
+@click.option(
+    "--input-dir",
+    type=click.Path(exists=True, file_okay=False),
+    default=str(tiktok_guide_builder.DEFAULT_INPUT_DIR),
+    show_default=True,
+)
+@click.option(
+    "--output-dir",
+    type=click.Path(dir_okay=True, file_okay=False),
+    default=str(tiktok_guide_builder.DEFAULT_OUTPUT_DIR),
+    show_default=True,
+)
+def generate_tiktok_guides(input_dir: str, output_dir: str) -> None:
+    """Normalize TikTok Shop guides into Markdown + metadata."""
+    tiktok_guide_builder.main(input_dir=input_dir, output_dir=output_dir)
 
 
 if __name__ == "__main__":

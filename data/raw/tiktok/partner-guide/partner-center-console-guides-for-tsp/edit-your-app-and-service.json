@@ -1,0 +1,20 @@
+{
+  "title": "Edit  your app and service ",
+  "content": "## **🔥 Optimization Overview**\n## Why do we build this feature?\nFor ISV and TSP, they are not able to change product information once the service has been published online. This brings inconvenience for TSP&ISV to build authorization with a new Seller.\n## ⭐️ **Key updates**\n### Support ISV & Cross border TSP to add new Seller Market\nIf you want to add a new target seller to your public/custom service, you can go to service detail page and click edit seller type\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/cdf7e940a5864e39b109e3597af2d3f9~tplv-10qhjjqwgv-image.image\" width=\"1280px\" /></div>\n\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/936ba4f8ad2c45efaaf13c00a943fef0~tplv-10qhjjqwgv-image.image\" width=\"1882px\" /></div>\n\nYou can add a new seller type or delete the existing seller type.\nPlease note:\n\n* If you are adding a new seller type and click save, you need to provide a service listing based on the target seller language\n* If you are adding a new seller type without the category certification in this market, you can go to my account page to apply for category certification first\n* If you delete the seller type and click save, the corresponding listing will also be deleted\n\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/2226f90a7d4d48418e1a45f0c3041277~tplv-10qhjjqwgv-image.image)\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/b5a3c840ec1749fc88b736accac3df62~tplv-10qhjjqwgv-image.image)\n### Support ISV&TSP modify service listing\nISV and TSP can change the service listing(content) by clicking edit draft on the service listing page.\nPlease note：\nMake sure to confirm all changes are made based on your needs before submitting.\nIf it's a public service, your edited service will be reviewed by the platform again before replacing the old one.\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/4aaf0ff896784d3893c93b931229502f~tplv-10qhjjqwgv-image.image)\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/d9ea322b03604f9eaeca198c3282685e~tplv-10qhjjqwgv-image.image)\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/52e2042f8f054dd18843d89e275ce2ca~tplv-10qhjjqwgv-image.image\" width=\"1768px\" /></div>\n\n### Support Republish app/service that has been deactivated\nTSP and ISV can republish the APP/Service that has been deactivated by themselves(off-status service/app). You can click \"Publish changes\" to reactivate this service/app,\nPlease note:\nOnly public service that has been approved and deactivated before can be reactivated(eg \"under review\" service can not be reactivated)\nAfter reactivation, your public service will go through a review process before online\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/cf9a5f2035484e9e897b29169f8d648f~tplv-10qhjjqwgv-image.image\" width=\"1832px\" /></div>\n\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/f052d16434674479b3583119cec008ef~tplv-10qhjjqwgv-image.image\" width=\"1664px\" /></div>\n\n\n",
+  "update_time": "1746519405",
+  "view_count": 0,
+  "prev_document_id": "650411a75a12ff0294023d30",
+  "prev_document_path": "650411a75a12ff0294023d30",
+  "next_document_id": "67162b1c50a484031dd4dadb",
+  "next_document_path": "67162b1c50a484031dd4dadb",
+  "is_api_doc": false,
+  "document_id": "65fb2c789980e402be63e05b",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

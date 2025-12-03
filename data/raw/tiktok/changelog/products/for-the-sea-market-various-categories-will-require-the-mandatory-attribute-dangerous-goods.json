@@ -1,0 +1,25 @@
+{
+  "title": "For the SEA market: Various categories will require the mandatory attribute - \"Dangerous Goods\"",
+  "content": "# What is changing?\nThe new mandatory attribute will be required for product listing. It will be effective in the ID, SG, PH, VN, TH and MY markets, local sellers starting from **2024-10-10.**\nVarious categories will require this mandatory attribute - \"Dangerous Goods\". The categories list can be checked below.\n| **Leaf Category Name** | **Leaf Category ID** |\n| --- | --- |\n| Paint Care | 945544 |\n| Oils | 851600 |\n| Batteries & Accessories | 814992 |\n| Batteries & Accessories | 816656 |\n| Air Compressors | 980616 |\n| Angle Grinders | 882056 |\n| Blowers | 881928 |\n| Electric Drills | 881544 |\n| Electric Saws | 881800 |\n| Electric Screwdrivers | 881672 |\n| Electric Wrenches | 882312 |\n| Glue Guns | 882824 |\n| Heat Guns | 882696 |\n| Nail Guns | 882440 |\n| Polishers | 882184 |\n| Power Tool Accessories | 882952 |\n| Power Tool Sets | 883080 |\n| Pressure Washers | 980360 |\n| Specialty Power Tools | 801296 |\n| Spray Guns | 882568 |\n| Wood Routers | 994056 |\n| Men's Perfume | 855696 |\n| Perfume Sets | 856080 |\n| Unisex Perfume | 855824 |\n| Women's Perfume | 855952 |\n| Power Banks | 910728 |\n| Phone Batteries | 601927 |\n| Toners | 601608 |\n| Tanning Oils & Self Tanners | 978056 |\n| Serums & Essences | 601619 |\n| Moisturizers & Mists | 601615 |\n| Mobile Phone Parts | 909832 |\n| Cables, Chargers & Adapters | 601937 |\n| Handheld Games Consoles | 913672 |\n| Console Accessories | 913928 |\n| Servers | 978568 |\n| Laptops | 601756 |\n| Desktop Computers | 601836 |\n| All-in-One Desktops | 854672 |\n| UPS & Stabilizers | 826248 |\n| Power Supply Units | 825992 |\n| Network Attached Storage (NAS) | 828552 |\n| Laptop Chargers & Adapters | 827912 |\n| Laptop Batteries | 827784 |\n| Electric Toy Accessories | 868104 |\n| Digital Cameras | 842768 |\n| Large Appliance Parts & Accessories | 850824 |\n| Kitchen Appliance Parts | 935432 |\n| Tablets | 825224 |\n| Mobile Phones | 602097 |\n| Car Battery Repair Tools | 941448 |\n| Button Batteries | 842000 |\n| Dry Cell Batteries | 841872 |\n| Universal Battery Chargers | 842128 |\n| Car Fragrance | 842256 |\n| Electric Eyebrow Shapers | 601669 |\n| Electric Shavers | 873992 |\n| Electric Toothbrushes | 874120 |\n| Facial Beauty Devices | 601672 |\n| Airplanes & Helicopters | 867080 |\n| Animals | 867720 |\n| Boats & Submarines | 867464 |\n| Cars, Lorries & Trains | 867592 |\n| Dance Mats | 821264 |\n| Electronic Pets | 821648 |\n| Karaoke Machines | 821392 |\n| Motorcycles | 867336 |\n| Robots | 867976 |\n| Tanks | 867848 |\n| Walkie Talkies | 821520 |\n| Toy Tablets & Computers | 864136 |\n| E-sports | 970504 |\n| Laptops | 880528 |\n| Mobile Phones | 862864 |\n| Tablets | 862992 |\n| Smart Watches | 859152 |\n| E-dictionaries | 914568 |\n| Electronic Learning Devices | 985224 |\n| Electronic Notebooks | 984968 |\n| Reading Pens & Devices | 985096 |\n| Writing Tablets | 984840 |\n| eReader Device | 914440 |\n| Mirrorless Cameras | 910984 |\n| Point & Shoot Cameras | 910856 |\n| DSLRs | 911624 |\n| Drones & Accessories | 912008 |\n| Action Cameras | 911112 |\n| Home Fragrances | 600477 |\n| Household Cleaners | 600812 |\n| Pest & Weed Control | 600466 |\n| Pest Control | 899848 |\nThis categories list will keep updated in the file below.\n[Dangerous Goods Attribute Update](https://bytedance.sg.larkoffice.com/sheets/RYU1sKjKYhbpKnt5lUHlCIQygNd?from=from_copylink)\n# Which markets are affected?\nThe updates of the requirements apply to the local sellers in the ID, SG, PH, VN, TH and MY markets.\n# Who is affected?\nDevelopers with applications that use [Create Product](create-product), [Edit Product](edit-product), and [Partial Edit Product](partial-edit-product)\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nWithout this mandatory attribute sellers will not be able to create and update products.\nUse the Get Attributes to check what attributes are mandatory and pass attribute values via the Create Product, Edit Product, and Partial Edit Product to help sellers fill in the attribute values.\n\n",
+  "update_time": "1723188334",
+  "view_count": 0,
+  "prev_document_id": "66b58ce40d6ef902f1b3bc27",
+  "prev_document_path": "for-ph-market-updates-to-mandatory-attributes-on-fresh-and-frozen-related-categories",
+  "next_document_id": "66c5d9b4e863d902fac36b74",
+  "next_document_path": "new-webhook-product-creation",
+  "is_api_doc": false,
+  "document_id": "66b5c41e0d6ef902f1b49220",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

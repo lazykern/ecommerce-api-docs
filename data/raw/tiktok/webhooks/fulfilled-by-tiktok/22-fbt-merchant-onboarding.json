@@ -1,0 +1,20 @@
+{
+  "title": "(22) FBT merchant onboarding",
+  "content": "## Trigger scenario\nThis webhook is triggered when the TikTok Shop seller onboards FBT platform to enable FBT service.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `22` | The ID of this webhook topic, which is 22. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when the FBT onboarding status is updated. |\n| data | object |  |  |\n| └ onboarded_regions | []object |  | All onboarded FBT regions. |\n| └└ region_code | string | `\"GB\"` | Onboarded FBT region code. |\n| └ update_time | int | `1644412845` | The latest update time. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 22,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"onboarded_regions\": [\n      {\n        \"region_code\": \"GB\"\n      }\n    ],\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+  "update_time": "1751450069",
+  "view_count": 0,
+  "prev_document_id": "6708f866a88d1103246fed6a",
+  "prev_document_path": "21-inbound-fbt-order-status-change",
+  "next_document_id": "6708f86aed6fab0308fa780e",
+  "next_document_path": "23-goods-match",
+  "is_api_doc": false,
+  "document_id": "6708f86842f5af03316bccff",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "(19) Size chart change",
+  "content": "# 1. Trigger scenario\nThis webhook is triggered when a product size chart is created, edited, or deleted.\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `19` | The ID of this webhook topic, which is 19. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ size_chart_template_id | string | `\"789078671231\"` | The ID of the size chart template that's being changed. |\n| └ size_chart_template_name | string | `\"600001\"` | The name of the size chart template that's being changed. |\n| └ event_type | string | `\"EDIT\"` | The change that occurred for the size chart. Possible values: <br> - `CREATE`: A new size chart is created <br> - `EDIT`: The size chart is edited <br> - `DELETE`: The size chart is deleted |\n| └ update_time | int | `1644412845` | The time when the change occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 19,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"size_chart_template_id\": \"789078671231\",\n    \"size_chart_template_name\": \"600001\",\n    \"event_type\": \"EDIT\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+  "update_time": "1751450122",
+  "view_count": 0,
+  "prev_document_id": "668764a371f16d02eef1f393",
+  "prev_document_path": "18-product-category-change",
+  "next_document_id": "6710c02ba88d1103248e82b2",
+  "next_document_path": "25-opportunity-matching-status-change",
+  "is_api_doc": false,
+  "document_id": "66befac437ede902f8dd21d1",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

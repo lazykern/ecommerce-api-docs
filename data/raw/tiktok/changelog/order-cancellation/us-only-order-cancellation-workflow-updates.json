@@ -1,0 +1,25 @@
+{
+  "title": "US only: Order cancellation workflow updates",
+  "content": "# What is changing?\nSellers can reject the buyer's cancel requests by shipping the packages. Previously, when the seller tried to ship the package, the following APIs would return an error: [Ship Package](https://partner.tiktokshop.com/docv2/page/ship-package), [Batch Ship Package](https://partner.tiktokshop.com/docv2/page/batch-ship-packages), [Mark Package As Shipped](https://partner.tiktokshop.com/docv2/page/mark-package-as-shipped) with the message `{\"fail_code\":21011007,\"fail_reason\":\"Package item has after-sale request\"}`. The parameters and responses of these APIs are not changed. See [below](#API Changes) for the endpoints that have changed.\nAfter this change:\n\n1. When there is a customer cancellation request pending process, we allow sellers to ship the package instead of previously returning API errors.\n2. When sellers successfully ship the package, the cancellation request will be rejected automatically by TikTok Shop. Previously, sellers had to go to Seller Center to reject the cancellation request manually.\n\n## API Changes\n### Get Order List\n| **Type** | **Changes** | **Notes** |\n| --- | --- | --- |\n| Request Body | Added `is_buyer_request_cancel` parameter | Set this to `TRUE` to retrieve orders that have a buyer cancel request. |\n| Response | New property `is_buyer_request_cancel` | Returns `TRUE` if buyer has requested cancellation |\n|  | New property `request_cancel_time` | The time when buyer requested cancellation |\n### Get Order Detail\n| **Type** | **Changes** | **Notes** |\n| --- | --- | --- |\n| Response | New property `is_buyer_request_cancel` | Returns `TRUE` if buyer has requested cancellation |\n|  | New property `request_cancel_time` | The time when buyer requested cancellation |\n# Which markets are affected?\nThis backend logic change is only for the US Market.\n# Who is affected?\nLocal and cross-border sellers in the US Market are affected.\n# Which version is applicable?\nThese changes are only for **v202309**.\n# What action is required?\n## Integration suggestions\n\n1. Let sellers know they can reject the buyer's cancel requests by shipping the packages\n2. Show sellers the orders that are attached with cancel requests\n   * Use `is_buyer_request_cancel` in Orders API to let sellers know which orders have pending cancel requests from buyers (the Search Cancellation API also works in this case)\n3. Use fulfillment APIs to ship packages and reject cancel requests\n4. Stop using the Reject Cancellation endpoint before **March 31, 2024**.\n\n\n",
+  "update_time": "1705528841",
+  "view_count": 0,
+  "prev_document_id": "68e6a1118e2c77049551eb08",
+  "prev_document_path": "8cpq7zt5",
+  "next_document_id": "65852b58bb426602df90ebba",
+  "next_document_path": "removal-of-unable-to-deliver-to-buyer-address-as-cancellation-reason-in-id-vn-th-sg-ph-markets",
+  "is_api_doc": false,
+  "document_id": "65a848f4ea874002e1f672d1",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

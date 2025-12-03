@@ -1,0 +1,20 @@
+{
+  "title": "(5) Product status change",
+  "content": "# 1. Trigger scenario\nThe **product status change** webhook triggers when a product audit status changes or is completed:\n\n* Product passes the first audit: `PRODUCT_FIRST_PASS_REVIEW`\n* Product status changes by platform: `PRODUCT_STATUS_CHANGED`\n* Product audit fails: `PRODUCT_AUDIT_FAILURE`\n\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| product_id | 1X2X3X4X5 | The identification of a TikTok Shop product |\n| status | Live-On sell | Product audit status, with possible values: <br>  <br> * PRODUCT_FIRST_PASS_REVIEW <br> * PRODUCT_STATUS_CHANGED <br> * PRODUCT_AUDIT_FAILURE |\n| suspended_reason | 1X2X3X4X5 | The reason a product audit was rejected or frozen |\n| update_time | 1627587600 | The time when the status changed, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 5,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": 576486316948490000,\n    \"status\": \"PRODUCT_FIRST_PASS_REVIEW\",\n    \"suspended_reason\": \"\",\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+  "update_time": "1751450101",
+  "view_count": 0,
+  "prev_document_id": "65030150746462028285f657",
+  "prev_document_path": "11-cancellation-status-change",
+  "next_document_id": "65d6f41411a60f02dc1cf8bf",
+  "next_document_path": "15-product-information-change",
+  "is_api_doc": false,
+  "document_id": "650956aff1fd3102b90b6261",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

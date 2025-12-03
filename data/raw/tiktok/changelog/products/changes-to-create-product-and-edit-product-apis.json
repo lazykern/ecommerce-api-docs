@@ -1,0 +1,20 @@
+{
+  "title": "Changes to Create Product and Edit Product APIs",
+  "content": "# Summary\nWhen sellers create or edit products via API, they can pass values to optional product fields such as GTIN, product attributes, and brand_id. If the format validation fails for these fields, previously the API call would fail. Now, the API call will succeed by adopting sane defaults. The API will return a new property, `warnings.message` and will contain information on which fields have been reset. Only the following parameters are affected:\n\n* `brand_id`\n* `identifier_code`\n* `product_attributes`\n\n# What is changing?\n## Brand ID (brand_id)\n| Before | After |\n| --- | --- |\n| API calls fail when the brand chosen does not fit the product category | * API calls will be successful and the brand parameter will default to \"No Brand\". <br> * New property `warnings.message` will be returned indicating the original brand value is wiped out and defaulted to \"No Brand\". |\n## Identifier Code (identifier_code)\n| Before | After |\n| --- | --- |\n| API calls fail when the GTIN format (14 digits, the last digit is character) is not correct. | * Only applies for the **GTIN** type <br> * API calls will be successful and the `identifier_code.code` parameter value will be empty. <br> * New property `warnings.message` will be returned indicating the GTIN value is wiped out and reset to default. |\n## Product Attributes (product_attributes)\n| Before | After |\n| --- | --- |\n| API calls fail when product attributes value are in the wrong format. Format validation rules vary according to different attributes and markets. | * API calls will be successful and the `product_attributes.values.name` parameter value will be empty. <br> * New property `warnings.message` will be returned indicating the fields that are reset to default. |\n# What markets & sellers are affected?\n**All** **markets** and **all** **sellers** are impacted by this change.\n# What versions are these changes for?\nThis change is applicable to **all** **versions**.\n# Required Actions\nWe recommend adopting this new version and taking advantage of the feature where API calls will not fail but reset to defaults.\n\n",
+  "update_time": "1705005355",
+  "view_count": 0,
+  "prev_document_id": "65a029e6a7406102df5e951e",
+  "prev_document_path": "changes-to-check-listing-prerequisite-api-in-v202312",
+  "next_document_id": "65a052028350e302e20d21f1",
+  "next_document_path": "draft-status-available-for-create-product-api",
+  "is_api_doc": false,
+  "document_id": "65a0406cb8a10102da32c57d",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "BR and MX markets: Changes to name logic",
+  "content": "## Summary\nWe're making some changes to the API logic in [Get Order Detail](get-order-detail) to address common issues around the different `name`-related parameters.\n## Impact\n|  |  |\n| --- | --- |\n| Impacted market(s) | * Brazil (BR) <br> * Mexico (MX) |\n| Impacted version(s) | * 202309 (and later) |\n## Changes\n### Get Order Detail\nCurrently, when buyers place an order, they provide a `first_name` and `last_name` that are returned in the `recipient_address` response for Get Order Detail. The two parameters are additionally concatenated to return the `name` field:\n| `first_name` | `last_name` | `name` |\n| --- | --- | --- |\n| John | Doe | John Doe |\n\nFor the **BR** and **MX** markets, buyers will now only need to provide a single `name`, and the API logic will synchronize this into the `first_name` field as well, leaving the `last_name` field empty:\n| `first_name` | `last_name` | `name` |\n| --- | --- | --- |\n| John Doe |  | John Doe |\n\nWe are hoping this will remove some confusion around the difference(s) between these three fields.\n## Next steps\nSince this is only a logic change, please ensure your logic is still compatible. There are no new or deprecated parameters that need to be supported.\n\n",
+  "update_time": "1748554033",
+  "view_count": 0,
+  "prev_document_id": "682fda578992fb0499d40ed3",
+  "prev_document_path": "us-market-changes-to-recipient-address-masking",
+  "next_document_id": "68b895bfc2ee02049b660272",
+  "next_document_path": "yeklql2a",
+  "is_api_doc": false,
+  "document_id": "6838d11c66af0d04a7c2a149",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Update",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

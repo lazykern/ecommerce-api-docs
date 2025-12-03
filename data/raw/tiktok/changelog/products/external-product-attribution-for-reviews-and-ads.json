@@ -1,0 +1,20 @@
+{
+  "title": "External Product Attribution for Reviews and Ads",
+  "content": "## Summary\nIt is important for sellers to be able to match their TikTok Shop products with external e-commerce platforms that act as a \"source of truth\" as they can be used in various business operations such as product reviews syndication, ads attribution, etc. Please provide an external identifier as a value for the `external_product_id` field so that TikTok Shop can tie attribution for these business operations.\n## Required Actions\nAs Connector App managing products for sellers, we need your support in syncing sellers' external product IDs to TikTok Shop products.\n![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/teh7svth/19133a66-485c-4a51-9625-1ab8e9416aa6.png)\n| Ext Platform Field | Ext. Platform Field Description | TikTok Shop Field | Relevant API |\n| --- | --- | --- | --- |\n| product.id | Represents a product | external_product_id | Create API, Partial Edit Product API |\n| variants.id | Represents a SKU | external_sku_id | Create API, Partial Edit Product API |\n| variants.barcode | Represents an identifier code | identifier_code.code | Create API, Partial Edit Product API |\n**NOTE**:\n\n* When passing the Shopify barcode values to TikTok Shop, using `identifier_code.type` = `GTIN`\n* The value format should be 8, 12, 13, 14 digits, or exactly 9 digits followed by an uppercase `X`\n\nPlease ensure all TikTok Shop products created by your App are populated with external_product_id and external_sku_id. The ideal result of the above actions should be: all TikTok products synced or managed by your Apps are populated with external product IDs.\n\n",
+  "update_time": "1732072368",
+  "view_count": 0,
+  "prev_document_id": "6736aff0ecc4ab030e0be6fc",
+  "prev_document_path": "html-tags-are-supported-in-product-descriptions",
+  "next_document_id": "6778053bb482920307e10979",
+  "next_document_path": "us-uk-markets-hazmat-deadline-extension",
+  "is_api_doc": false,
+  "document_id": "673d539a58db2002f52a44a7",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

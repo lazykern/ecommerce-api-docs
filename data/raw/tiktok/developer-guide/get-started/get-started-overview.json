@@ -1,0 +1,20 @@
+{
+  "title": "Get started overview",
+  "content": "There are three types of TikTok Shop Developers:\n\n1. eCommerce platform plugin/connector developers\n2. eCommerce system integrators, eCommerce SaaS developers\n3. Sellers that want access to their own data\n\n\n## eCommerce platform developers\n**eCommerce platform developers** are developers that create plugins for popular eCommerce platforms such as Shopify, WooCommerce, or Adobe Magento. These plugins typically extend the functionality of the eCommerce platform to include support for a specific eCommerce site such as Amazon, Walmart, or TikTok Shop.\n\nThis type of developer typically does not need to store seller OAuth credentials or data.\n## eCommerce system integrators\n**eCommerce system integrators** are developers that create eCommerce systems to manage advertising, product promotion, marketing, and other business functions on behalf of their customers, sellers and merchants on popular eCommerce sites such as Amazon, Walmart, and others. Some of these systems are software-as-a-service providing functionality to Sellers via a user interface while others may manage business operations directly using solutions they develop themselves.\n\nThis type of developer typically requires direct access to a seller's data and is trusted to store and generate OAuth credentials such as bearer and refresh tokens. This type of developer may store, aggregate, and analyze seller data to provide insights and recommendations to their customers.\n## TikTok Shop seller developer\n**Tiktok Shop seller developers** are TikTok Shop Sellers who have an active TikTok Shop and want to develop an integration to serve their own shop needs.\n\nThis type of developer has access to their own OAuth credentials and data only.\n## Next steps\nYour first step in getting started is [Developer onboarding](/4n48cxi1/developer-onboarding).\n\n",
+  "update_time": "1753301176",
+  "view_count": 0,
+  "prev_document_id": "656559fcf4488c02dfe8ce82",
+  "prev_document_path": "tts-developer-guide",
+  "next_document_id": "6789f73f18828103147a8ca1",
+  "next_document_path": "developer-onboarding",
+  "is_api_doc": false,
+  "document_id": "6789f72c92b0f403149035d0",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

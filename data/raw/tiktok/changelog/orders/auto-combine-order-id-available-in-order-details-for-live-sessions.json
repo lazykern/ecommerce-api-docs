@@ -1,0 +1,20 @@
+{
+  "title": "Auto Combine Order ID available in Order Details for LIVE sessions",
+  "content": "## What is changing?\nA new API response field `auto_combine_order_id` is added to GET Order Details to identify orders assigned from the same customer during a LIVE session.\n## Which markets and versions are affected?\nThis change applies to all markets and all sellers.\n## API Changes\nPlease refer to the [GET Order Details API](get-order-detail) for more information about this change.\n\n",
+  "update_time": "1741221195",
+  "view_count": 0,
+  "prev_document_id": "662153a2bfca1402d27eb5f5",
+  "prev_document_path": "for-sea-market-upcoming-changes-on-tracking-number-availability",
+  "next_document_id": "67ca5b63fc1c0704c4484a75",
+  "next_document_path": "adding-co-founded-shipping-discount-fields",
+  "is_api_doc": false,
+  "document_id": "67c8ed2e2b63a404b7ad64ce",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

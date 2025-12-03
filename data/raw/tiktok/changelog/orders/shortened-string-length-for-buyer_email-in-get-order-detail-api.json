@@ -1,0 +1,20 @@
+{
+  "title": "Shortened string length for buyer_email in Get Order Detail API",
+  "content": "# What is changing?\nIn August, we added a new property called `buyer_email` to the [Get Order Detail](get-order-detail) API.\n\n\nAs of today, we've shortened the string value of the buyer_email property to less than 45 characters. This change improves compatibility with external systems like shipping software.\n# Which markets are affected?\nThe shortened buyer_email string is available in these markets and for these seller types:\n\n* US and ID markets for local sellers\n* MY, PH, VN, TH, SG, UK markets for local and cross-border sellers\n\n# Who is affected?\nDevelopers with applications that use the Get Order Detail API to manage orders for sellers are affected.\n# What action is required?\nThe length of the existing property buyer_email in the Get Order Detail API response has been shortened.\n\n\nIf your application syncs TikTok Shop orders to external systems like shipping software, you can use the shortened buyer_email value and make sure relevant customer information is still correctly synced back to those external systems.\n\n",
+  "update_time": "1698136678",
+  "view_count": 0,
+  "prev_document_id": "68704c5d6e6e7404973b5cea",
+  "prev_document_path": "order_orders_post_town",
+  "next_document_id": "656d9d5fe87cdf02c1625d01",
+  "next_document_path": "for-us-and-uk-markets-introducing-on-hold-order-status",
+  "is_api_doc": false,
+  "document_id": "653779d99971b602ba81187d",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

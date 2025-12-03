@@ -1,0 +1,20 @@
+{
+  "title": "Development shops supports creating accounts for cross-border shops",
+  "content": "As of today, the Development Shops tool, formerly known as Sandbox Shops, supports creating test accounts for cross-border shops.\n## Available markets\nThis update is available for TH, VN, SG, PH, MY, US and UK markets.\n## Steps\n\n1. From your Partner Center, click **Development Kits - Development Shops**\n2. Click **Enter** and choose a market\n3. On the \"Manage accounts\" page, click **Create test account**, and choose \"Core function\", then click **Next**\n4. Then for the \"Shop type\", choose **Cross border**\n\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/0ddc503c85b0476b9fa2e9f954a9a93f~tplv-10qhjjqwgv-image.image)\nLearn more about how to start testing with the Development Shops from [Seller Center Development Shops](seller-center-development-shops).\n\n",
+  "update_time": "1713190751",
+  "view_count": 0,
+  "prev_document_id": "65b8ca9afa59d87f8384eb4d",
+  "prev_document_path": "for-sea-markets-introducing-development-shops",
+  "next_document_id": "6626f71ad3869d02da297554",
+  "next_document_path": "ard-updates",
+  "is_api_doc": false,
+  "document_id": "661d36d77dcc9602c67ecd0a",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

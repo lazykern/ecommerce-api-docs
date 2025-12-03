@@ -1,0 +1,20 @@
+{
+  "title": "SLA information now available in Orders API",
+  "content": "# What is changing?\nWhen sellers choose the express shipping option to facilitate faster delivery to customers, TikTok Shop will evaluate the shipping and collection time of the orders to provide a satisfactory user experience. In Seller Center, there are notifications to tell sellers about the shipping and collection time window and this change reflects these time windows in the API as `*_due_time` - `shipping_due_time`, `collection_due_time`, and `delivery_due_time`.\nThere are also three other new properties: `collection_time`, `delivery_time`, `cancel_time` that reflect the actual collection, delivery and cancel time to help sellers have a better view of their order performance.\nThese fields are available in the response from both the [Get Order List](get-order-list) and [Get Order Details](get-order-detail) APIs.\nAdditionally, **cancel_order_sla_time** **is** **deprecated**.\n# Which markets are affected?\nThis change is applicable to **all markets**.\n# Who is affected?\n**All seller types** are affected by this change.\n# Which version is applicable?\nThese changes are applicable to API **v202309**.\n# What action is required?\nWe recommend adopting these changes so sellers can handle orders effectively in a timely manner. It also allows sellers to see their current order performance. Please note that **cancel_order_sla_time** **is** **deprecated**.\nBelow is the list of the newly added properties:\n| **Property** | **Type** | **Description** |\n| --- | --- | --- |\n| delivery_option_required_delivery_time | int | Order should be delivered before this time. |\n| shipping_due_time | int | If the order status has not been updated to \"AWAITING_COLLECTION\" before this time, the order will be canceled by TikTok Shop. |\n| collection_due_time | int | If the order status has not been updated to \"IN_TRANSIT\" before this time, the order will be canceled by TikTok Shop. |\n| delivery_due_time | int | If the order has not been updated to \"DELIVERED\" before this time, the order will be canceled by TikTok Shop. |\n| collection_time | int | The time of order status update to \"IN_TRANSIT\" |\n| delivery_time | int | The time of order status update to \"DELIVERED\" |\n| cancel_time | int | The time of order status update to \"CANCELLED\" |\n\n",
+  "update_time": "1705013647",
+  "view_count": 0,
+  "prev_document_id": "656d9d5fe87cdf02c1625d01",
+  "prev_document_path": "for-us-and-uk-markets-introducing-on-hold-order-status",
+  "next_document_id": "65a835db4420b502df0a9db3",
+  "next_document_path": "delivery-instructions-now-available-in-orders-api",
+  "is_api_doc": false,
+  "document_id": "65a0693b9e905f02dfa80acf",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

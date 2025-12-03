@@ -1,0 +1,20 @@
+{
+  "title": "US market: Supplementary SKU images",
+  "content": "## Summary\nPreviously, L2L sellers could only list a single image per product variant. We've introduced the ability to add multiple product variant images to better support our sellers.\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* United States (US)\n\nThis change applies to the following API version(s):\n\n* 202309 (and later)\n\n## API changes\n### Product APIs\n| **Endpoint(s)** | **Change(s)** |\n| --- | --- |\n| * Create Product <br> * Edit Product <br> * Partial Edit Product <br> * Check Product Listing | * Added new body parameter: `supplementary_sku_images`. <br> * A list of supplementary images for each value (e.g. red) of the primary sales attribute (e.g. color) to provide multiple views or details of the product for that attribute value. These appear in the product options gallery on TikTok Shop. <br> * A maximum of 8 supplementary image URIs are allowed, and should be arranged in the order you wish for them to appear on TikTok Shop. |\n| * Get Product <br>  <br>  | * Added new response parameter: `supplementary_sku_images`. |\n\n",
+  "update_time": "1748465732",
+  "view_count": 0,
+  "prev_document_id": "67ecb3ce8ceb0d04a3723b82",
+  "prev_document_path": "streamlining-of-invite-only-product-categories",
+  "next_document_id": "68114772d5057104a0411e8e",
+  "next_document_path": "us-uk-and-sea-markets-pre-order-and-made-to-order-product-types",
+  "is_api_doc": false,
+  "document_id": "680ffa16ad835c04a2d81b79",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

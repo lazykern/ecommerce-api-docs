@@ -1,0 +1,20 @@
+{
+  "title": "New fields added to Product API for Shop Ads",
+  "content": "# Summary\nMore sellers are deploying ShopAds. To make sure your connector app is ads-ready, please ensure two fields are included when you are calling the Create Product and Edit Product API: external_sku_id (The SKU ID in the other platform) and external_url (The product listing page URL). All TikTok 1P connector apps are making this update as well.\n\nThese two fields are under [Create Product API / Edit Product API -> Skus](create-product).\n\nTo construct the external_url, you can combine store domain with product handle using the relevant APIs from the connector platform.\n\n",
+  "update_time": "1720476946",
+  "view_count": 0,
+  "prev_document_id": "666bb8aa9962ee02c1826afe",
+  "prev_document_path": "for-th-market-updates-to-mandatory-attributes-and-product-certifications-for-certain-product-categories",
+  "next_document_id": "6695695742784f0300c36d38",
+  "next_document_path": "for-th-market-updates-to-mandatory-certifications-for-certain-product-categories",
+  "is_api_doc": false,
+  "document_id": "668c6009737c3702ef0269df",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

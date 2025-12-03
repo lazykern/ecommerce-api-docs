@@ -1,0 +1,25 @@
+{
+  "title": "For US local sellers: Item level tax rate added to the Order resource",
+  "content": "# What is changing?\nWe've introduced a new `tax_rate` property for the Order resource. This `tax_rate` represents the item's tax rate within an order, calculated by TikTok Shop. Factors influencing this rate include US Sales Tax regulations and the product's category.\nDevelopers can access the `tax_rate` in version 202309 of the Get Order List and Get Order Detail API. For example:\n\n* API request path: `/order/202309/orders`\n* API response:\n\n```JSON\n{\n    \"code\": 0,\n    \"data\": {\n        \"orders\": [\n            {\n                \"line_items\": [\n                    {\n                        \"display_status\": \"TO_SHIP\",\n                        \"id\": \"577086512123755123\",\n                        \"is_gift\": false,\n                        \"item_tax\": [\n                            {\n                                \"tax_amount\": \"21.2\",\n                                \"tax_type\": \"SALES_TAX\",\n                                \"tax_rate\": \"0.03\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"Success\",\n    \"request_id\": \"202203070749000101890810281E8C70B7\"\n}\n```\n\n# Which markets are affected?\nThe new property is applicable to **local sellers** in the US markets.\n# Who is affected?\nDevelopers utilizing version 202309 of either the Get Order List API or the Get Order Detail API will benefit from this update, enabling enhanced functionality in their applications.\n## Which version is applicable?\nThis `tax_rate` property is a feature exclusive to version 202309 of the Get Order List API or Get Order Detail API. To utilize it, ensure you're using the updated API path that includes the version number, as shown in the example: `/order/202309/orders`.\nLearn more about [Upgrading to API version 202309](upgrading-to-api-version-202309).\n# What action is required?\nDevelopers who build order management features for sellers are required to integrate this new property and meet the tax reporting requirement of the sellers.\n\n",
+  "update_time": "1705527498",
+  "view_count": 0,
+  "prev_document_id": "65a835db4420b502df0a9db3",
+  "prev_document_path": "delivery-instructions-now-available-in-orders-api",
+  "next_document_id": "65a8c3944f1c9102d961b181",
+  "next_document_path": "for-sea-market-upcoming-changes-on-tracking-number-availability-in-orders-api",
+  "is_api_doc": false,
+  "document_id": "65a848b169663802db44999c",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

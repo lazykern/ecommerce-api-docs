@@ -1,0 +1,25 @@
+{
+  "title": "US market: Removing some reject reasons for returns",
+  "content": "## Summary\nThe following return reasons **will be removed on October 4** and can no longer be used to reject a return:\n| Rejection Reason | Reason ID |\n| --- | --- |\n| Buyer return reason is not valid | reverse_reject_request_reason_1 |\n| Change of mind returns are not applicable | reverse_reject_request_reason_2 |\n| Not eligible for return (e.g. used or broken) | reverse_reject_request_reason_3 |\n| You have reached an agreement with the buyer | reverse_reject_request_reason_5 |\n\n",
+  "update_time": "1727234357",
+  "view_count": 0,
+  "prev_document_id": "66f304521006d602ec0d54a4",
+  "prev_document_path": "reminder-legacy-api-sunsets-on-dec-31-2024",
+  "next_document_id": "66fa4e34f70f7203045b9497",
+  "next_document_path": "id-market-tokopedia-shop-open-api-integration-one-pager",
+  "is_api_doc": false,
+  "document_id": "66f3810b177a6a033b363a84",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

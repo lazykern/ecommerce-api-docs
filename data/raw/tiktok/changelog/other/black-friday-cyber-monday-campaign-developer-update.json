@@ -1,0 +1,20 @@
+{
+  "title": "Black Friday Cyber Monday campaign developer update",
+  "content": "This document details the information developers must know to successfully support the TikTok Shop (TTS) Black Friday Cyber Monday (BFCM) campaign.\n\n\nThe BFCM campaign aims to increase sales and business growth for our sellers and creators during this year's holiday season. The campaign takes place across the US, local, and cross-border markets, and consists of three main stages:\n\n1. Early Black Friday\n2. Official Sale\n3. Extended Cyber Monday\n\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/82c358f16d0d40efa06f3c7aa2a52e05~tplv-10qhjjqwgv-image.image)\n# BFCM Seller Enrollment\nSellers can enroll in TikTok Shop 2023 Holiday Campaigns such as the BFCM campaign in the Campaigns section of the Seller Center (*Seller Center -> Marketing -> Campaigns*).\n\n\nTTS only allows sellers that meet a specific set of performance requirements to participate in holiday campaigns. Refer to the 2023 Holiday Campaigns topic within TikTok Shop Academy to learn more about campaign eligibility and policies.\n# API Restrictions during BFCM\nIf eligible and participating sellers use your integrations during the BFCM campaign, we have made some restrictions to how some of our APIs function with the platform. For sellers participating in the BFCM campaign, products will have a campaign price that you *can not* modify via the Update Price API.\n## Campaign Price\nSellers participating in the BFCM campaign can set a campaign price for a given product. The campaign price is a promotional price for a product that is lower than the original retail price. This price is set by the seller via the Seller Center for the product(s) they register as part of the BFCM campaign.\nAs a developer, keep the following in mind:\n\n* You *can't* use the [Update Price API](update-price) to modify the **Campaign Price** field of a BFCM campaign. It does not contain a field for the campaign price.\n* The campaign price is independent of the retail price, which is **** the original daily price of the product.\n   * The **Campaign Price** field can only be modified by sellers within the Seller Center.\n   * You can only use the Update Price API to modify the **Retail Price** field.\n\n**Note:** The campaign price reverts to the retail price once the campaign stock is sold out.\n# Managing Inventory during BFCM\n**Important:** Based on the possibility of high order rates, there is a risk of overselling. It's the sellers' responsibility to ensure that they have adequate inventory in TTS to support BFCM campaigns. However, we highly recommend communicating with your BFCM participating sellers on how to best sync orders and mitigate any risk of overselling.\n\n",
+  "update_time": "1698291464",
+  "view_count": 0,
+  "prev_document_id": "6509b2aec16ffe02b8d7623c",
+  "prev_document_path": "introducing-api-version-202309",
+  "next_document_id": "655d791328310802de8aa39d",
+  "next_document_path": "tts-open-api-release-update-november-2023",
+  "is_api_doc": false,
+  "document_id": "6539de15a3d5b702be6167e4",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

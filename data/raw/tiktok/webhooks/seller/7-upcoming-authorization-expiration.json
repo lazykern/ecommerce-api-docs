@@ -1,0 +1,20 @@
+{
+  "title": "(7) Upcoming authorization expiration",
+  "content": "# 1. Trigger scenario\nThe **upcoming authorization expiration** webhook is triggered 30 days before authorization automatically expires. This webhook continues to notify the seller once a day at 0:00 until re-authorization is completed.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| type | 7 | The identification of each type of notification |\n| shop_id | 123455 | The identification of the shop |\n| timestamp | 1627587506 | The time when the notification is pushed, represented as a Unix timestamp (seconds). |\n| data | \"data\": {\"message\": \"Authorization of shop_id {xxx} is expiring in {} days. Please direct the merchant to re-authorize.\", \"expiration_time\": \"1627587506\"} | The object contains business parameters related to the specific notification type. |\n## Event example\n```JSON\n{\n  \"type\": 7,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"message\": \"Authorization of shop_id {xxx} is expiring in {x} days. Please direct the merchant to re-authorize.\",\n    \"expiration_time\": \"1627587506\"\n  }\n}\n```\n\n\n",
+  "update_time": "1751450172",
+  "view_count": 0,
+  "prev_document_id": "65095746defece02be4d749d",
+  "prev_document_path": "6-seller-deauthorization",
+  "next_document_id": "678f43b378f4c20311becd07",
+  "next_document_path": "35-tokopedia-mirror-status-change",
+  "is_api_doc": false,
+  "document_id": "6509579c0fcef602bf11312c",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

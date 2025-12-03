@@ -1,0 +1,20 @@
+{
+  "title": "New shipping label format launched in the ID, MY and VN markets",
+  "content": "# What is changing?\nPreviously, we announced updates to the format and size of the shipping label file and the shipping label with packing list file.\n\n\nWith the launch of the new shipping label format, there are important changes to the content area on the shipping labels. Developers must ensure they render the shipping labels as-is for printing. Cropping or using OCR methods based on the original label format may result in broken content.\n\n\nFor comprehensive details about this change and the required actions, please review the following content.\n# Which markets are affected?\nThis applies to the ID, MY and VN markets, cross-border and local sellers.\n# Who is affected?\nDevelopers with applications that use any version of the `Get Package Shipping Document (V1)` API or the `Get Shipping Document (V1)` API are affected.\n\n\nIf you use the APIs, you need to find whether your applications are using the APIs to get shipping label documents and crop them as images. If your apps don't crop the original shipping label and shipping label with packing list from APIs, there is no action required from your side.\n\n\nHowever, because the content area on shipping labels gets smaller, your current methods of cropping images may generate broken images. Also, there may be mistakes if you use OCR methods to extract text based on shipping label documents.\n# What action is required?\nNo specific action required if you render the labels as-is for printing.\n\n\nIf you have the use cases of further processing shipping labels and need to test your application with the new shipping label format, you can refer to our [Use case guide on the new shipping label formats](https://bytedance.feishu.cn/docx/YcG1dX6kwotudMxkWO6cMi8ensf) in ID, MY and VN markets and download sample shipping label document files for testing purposes.\n\n\n**TikTok Shop periodically updates the format of shipping labels** to meet evolving seller needs. Therefore, render the label as-is for printing and **avoid further processing the shipping label file**.\n\n\nDevelopers can also use the `Get Package Shipping Document (V1)` API to generate shipping labels in the PNG format to meet more use cases. Learn more about how to get shipping labels in PNG format from this [developer guide](https://bytedance.feishu.cn/docx/YcG1dX6kwotudMxkWO6cMi8ensf#Ve2vdeldWodWDKxuHpFcugalnrB).\n\n\n",
+  "update_time": "1699596107",
+  "view_count": 0,
+  "prev_document_id": "661f02b62e1a5d02e267d159",
+  "prev_document_path": "authorization-page-updates",
+  "next_document_id": "65532219ff8ea502bd3df6a2",
+  "next_document_path": "for-local-and-cross-border-sellers-in-us-market-shipping-information-update-time-window-extended-to-72-hours",
+  "is_api_doc": false,
+  "document_id": "654dc3fca1dde702c05579f8",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

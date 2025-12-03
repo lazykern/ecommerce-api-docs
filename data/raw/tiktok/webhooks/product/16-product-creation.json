@@ -1,0 +1,20 @@
+{
+  "title": "(16) Product creation",
+  "content": "# 1. Trigger scenario\nTriggers a webhook message when a product is created\n# 2. Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| product_id | int | 1X2X3X4X5 | The identification of a TikTok Shop product |\n| product_types | []string | [\"GPR_PRODUCT\"] | The type of product, including: <br>  <br> * COMBINED_PRODUCT: Virtual bundle product. <br> * GPR_PRODUCT: Target products created using the GPR tool |\n| update_time | int | 1627587600 | The time when the product was created, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 16,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": 576486316948490000,\n    \"product_types\": [\"GPR_PRODUCT\"],\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+  "update_time": "1751945690",
+  "view_count": 0,
+  "prev_document_id": "65d6f41411a60f02dc1cf8bf",
+  "prev_document_path": "15-product-information-change",
+  "next_document_id": "668764a371f16d02eef1f393",
+  "next_document_path": "18-product-category-change",
+  "is_api_doc": false,
+  "document_id": "663c98b566828e02e4515580",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

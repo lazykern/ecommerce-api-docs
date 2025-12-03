@@ -1,0 +1,20 @@
+{
+  "title": "When SEA POP sellers add, edit or publish global products by API, some specific categories will be prohibited and restricted directly",
+  "content": "# What is changing?\nWhen adding, editing or publishing global products by API to single or multiple warehouses in mainland China or Hong Kong, SEA POP sellers can successfully call API without error message even these products are prohibited and restricted in some target markets, but these products would be rejected at the release stage. From December 30 2024, when SEA POP sellers add, edit or publish these kinds of global products by API, they will get an error message \"The warehouse is unavailable because this product cannot be shipped to the target market from this warehouse\" with error code 12052364.\n# Which markets are affected?\nThe updates of the requirements apply to the POP sellers for the SG, PH, VN, TH and MY markets.\n# Who is affected?\nDevelopers with applications that use Create Global Product, Edit Global Product and Publish Global Product.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nDevelopers need to check whether to use these APIs and handle this error message.\n\n",
+  "update_time": "1734318229",
+  "view_count": 0,
+  "prev_document_id": "66f1364a332c7c02ff0459c7",
+  "prev_document_path": "for-sea-market-partner-developer-parameters-handover-method-in-api-ship-package-and-batch-ship-package-will-be-useless",
+  "next_document_id": "680bec69106224049782f255",
+  "next_document_path": "br-market-zpl-format-support-for-shipping-documents",
+  "is_api_doc": false,
+  "document_id": "675f9886817e9b0311fbbdd4",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

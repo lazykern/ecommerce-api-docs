@@ -1,0 +1,20 @@
+{
+  "title": "(6) Seller deauthorization",
+  "content": "# 1. Trigger scenario\nThe **seller deauthorization** webhook is triggered after a seller is deauthorized. This is important to prevent developers from assuming there is an issue with the platform authorization function.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| type | 6 | The identification of each type of notification |\n| shop_id | 123455 | The identification of the shop |\n| timestamp | 1627587506 | The time when the notification is pushed, represented as a Unix timestamp (seconds). |\n| data | \"data\": {\"message\": \"Shop_id {xxx} is deauthorized from your APP by merchant.\"} | The object contains business parameters related to the specific notification type |\n## Event example\n```JSON\n{\n  \"type\": 6,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"message\": \"Shop_id {xxx} is deauthorized from your APP by merchant.\"\n  }\n}\n```\n\n\n",
+  "update_time": "1751450168",
+  "view_count": 0,
+  "prev_document_id": "65030162bb2a4d028d50cc51",
+  "prev_document_path": "12-return-status-change",
+  "next_document_id": "6509579c0fcef602bf11312c",
+  "next_document_path": "7-upcoming-authorization-expiration",
+  "is_api_doc": false,
+  "document_id": "65095746defece02be4d749d",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

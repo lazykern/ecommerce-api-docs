@@ -1,0 +1,20 @@
+{
+  "title": "(4) Package update",
+  "content": "# 1. Trigger scenario\nThe **package update** webhook is triggered when package updates such as combine, split, cancel the combine package operation, etc. occur.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| sc_type | COMBINE | Type of the event trigger, with possible values: <br>  <br> * COMBINE <br> * CANCEL_COMBINE <br> * SPLIT <br> * CANCEL_SPLIT <br> * ADDRESS_UPDATE_SPLIT <br> * CANCEL_FULFILL_SPLIT <br> * FULFILL_UNCOMBINE <br> * PARTLY_CANCEL_SPLIT <br> * SPLIT_BY_SKU_CANCEL |\n| role_type | ROLE_USER | Operator of the event trigger, with possible values: <br>  <br> * ROLE_USER <br> * ROLE_SELLER <br> * ROLE_OPERATOR <br> * ROLE_SYSTEM |\n| package_list | []object | Package list updated by the event trigger |\n| └ package_id | \"123456\" | The identification of a package |\n| └ order_id_list | [\"152523\", \"532123\"] | List of order IDs in a given package |\n| update_time | 1627587600 | The time when the package was updated, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 4,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"sc_type\": \"COMBINE\",\n    \"role_type\": \"ROLE_USER\",\n    \"package_list\": [\n      {\n        \"package_id\": \"123456\",\n        \"order_id_list\": [\n          \"152523\",\n          \"532123\"\n        ]\n      }\n    ],\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+  "update_time": "1751450086",
+  "view_count": 0,
+  "prev_document_id": "650301af5a12ff0294ea3bf9",
+  "prev_document_path": "3-recipient-address-update",
+  "next_document_id": "650300b8a57708028b430b4a",
+  "next_document_path": "1-order-status-change",
+  "is_api_doc": false,
+  "document_id": "650955cabace3e02b73cc886",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

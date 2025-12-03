@@ -1,0 +1,20 @@
+{
+  "title": "(33) New message listener",
+  "content": "## Trigger scenario\nWhen a creator sends a message to the seller.\n## Data business parameters\n| Parameter name | Data Type | Sample | Description |\n| --- | --- | --- | --- |\n| type | int64 | `33` | Webhook type, fixed to `33` for this webhook. |\n| shop_id | string | `\"7494049642642441621\"` | TikTok shop ID. |\n| tts_notification_id | string | `\"7327112393057371910\"` | ID of the webhook. |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └index | string | `\"1735032460678899\"` | Index of the message in the conversation. A large index number corresponds to newer message. |\n| └message_id | string | `\"7451907556216407553\"` | Message ID. |\n| └conversation_id | string | `\"7451873679308620048\"` | ID of the conversation to which the message belongs. |\n| └msg_type | string | `\"TEXT\"` | Message type, with possible values: <br>  <br> * TEXT <br> * PRODUCT_CARD <br> * TARGET_COLLABORATION_CARD <br> * FREE_SAMPLE_CARD |\n| └content | string | `\"Hello\"` | Message content, in JSON serialized string. <br>  <br> * TEXT: {\"content\": \"simple text\"} <br> * PRODUCT_CARD: {\"product_id\": \"12345\"} <br> * TARGET_INVITATION_CARD: {\"invitation_group_id\": \"1234\"} <br> * FREE_SAMPLE_CARD: {\"apply_id\": \"1234\"} |\n| └create_time | string | `1691411573` | Message creation time, represented as a Unix timestamp (seconds). |\n| └sender | object |  |  |\n| └└sender_im_user_id | string | `\"2368694990397660924\"` | ID in IM system for the sender. |\n## Event example\n```JSON\n{\n  \"type\": 33,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"index\": \"1735032460678899\",\n    \"message_id\": \"7451907556216407553\",\n    \"conversation_id\": \"7451873679308620048\",\n    \"msg_type\": \"TEXT\",\n    \"content\": \"Hello\",\n    \"create_time\": \"1691411573\",\n    \"sender\": {\n      \"sender_im_user_id\": \"2368694990397660924\"\n    }\n  }\n}\n```\n\n\n",
+  "update_time": "1751450037",
+  "view_count": 0,
+  "prev_document_id": "692642e6d70f1a06103f0a2c",
+  "prev_document_path": "iygh3ycz",
+  "next_document_id": "6614330bfe9fdc02e002abfd",
+  "next_document_path": "13-new-conversation",
+  "is_api_doc": false,
+  "document_id": "6790b76eb59cf9030997b783",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "For US local sellers: Retail delivery fee is added to API",
+  "content": "# What is changing?\nThe states of Colorado enacted a new retail delivery fee, with Minnesota introducing a similar policy effective July 2024.\nTo be compliant with these laws, TikTok Shop will collect retail delivery fees from CO & MN states' buyers and show retail delivery fees on the place order page and invoice. The estimated launch time will be beginning of October. The following APIs will reflect the change:\n## Get Order List, Get Order Details\nA new property, `retail_delivery_fee`is added to the API response.\n## Search Cancellations\nA new property `refund_retail_delivery_fee` (the retail delivery fee refunded to buyer) is added to the API response as part of the `refund_amount` and `cancel_line_items` object.\n## Search Return\nA new property `refund_retail_delivery_fee` (the retail delivery fee refunded to buyer) is added to the API response as part of the `refund_amount` and `return_line_items` object.\n## Calculate Refund\nA new property `refund_retail_delivery_fee` (the retail delivery fee refunded to buyer) is added to the API response, in the `order_refund_amount` object.\n# Which markets are affected?\nThis change is only for the **US market.**\n# Who is affected?\nAll **local** sellers in the US will be affected by this change.\n# Which version is applicable?\nThis change is applicable to **v202309**.\n# What action is required?\nWe recommend that all integrations that serve these markets and use the API version update the processing logic to include these changes.\n\n",
+  "update_time": "1705530339",
+  "view_count": 0,
+  "prev_document_id": "659e0fff81b5ab02dfc154b7",
+  "prev_document_path": "new-function-pre-publish-checklist",
+  "next_document_id": "65a854399e905f02dfed7ab9",
+  "next_document_path": "return-amount-detail-information-available-in-search-return-api",
+  "is_api_doc": false,
+  "document_id": "65a851046032c702e0bdbee6",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

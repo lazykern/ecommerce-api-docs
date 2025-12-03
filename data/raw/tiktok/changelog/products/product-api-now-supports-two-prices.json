@@ -1,0 +1,20 @@
+{
+  "title": "Product API now supports two prices",
+  "content": "## Summary\nPreviously, developers could only sync a single price to TikTok Shop, limiting merchants who use multiple pricing structures (e.g., Shopify's \"Compare at Price\" and \"Sale Price\"). Starting at the end of February, TTS will support syncing two prices — **List Price** and **Retail Price** — via the API, enabling better discount management and pricing consistency. After the end of February, TikTok Shop will also introduce a new private API called **External Verification API** that will allow approved developers to verify the authenticity of the original listing price.\n## Change Details\nThe following endpoints will be updated to support two product prices:\n\n* Check Product Listing\n* Create Product\n* Edit Product\n* Partial Edit Product\n* Update Price\n* Get Product Details\n* Search Product\n\n### Payload Changes\n#### Public APIs\nThe **request parameters** has each object in the `skus` array modified to contain both `price` (the **Retail Price**) and `list_price` (the **List Price**) as shown below:\n```json\n{\n  \"skus\": [\n    {\n      \"price\": {\n        \"currency\": \"USD\",\n        \"amount\": \"1.21\"\n      },\n      \"list_price\": {\n        \"amount\": \"2.00\",\n        \"currency\": \"USD\"\n      },\n      \"external_list_prices\": [\n        {\n          \"source\": \"shopify_compare_at_price\",\n          \"amount\": \"2.00\",\n          \"currency\": \"USD\"\n        }\n      ],\n      \"seller_sku\": \"Color-Red-XM001\"\n    }\n  ]\n}\n```\n\nThe **response** will also contain a similarly modified array of objects, with each object having both a `price` and `list_price`.\n#### Private API: External Price Verification\nApproved developers can use this API to send an external verification price (the highest sold price on a DTC website) to validate the List Price, enabling it to be displayed as a Strikethrough price on TTS.\n## Required Actions\nIf you have sellers wishing to display discounted pricing, this new way will be a lot easier than managing promotions individually. We highly recommend that you adopt this feature.\n## Markets and Versions\nThis change applies to all markets and all versions.\n\n",
+  "update_time": "1739931816",
+  "view_count": 0,
+  "prev_document_id": "67b07846219ddf04aedffb33",
+  "prev_document_path": "mx-market-minimum-product-price-adjustment",
+  "next_document_id": "67c1198b99a7510498374eeb",
+  "next_document_path": "create-product-api-now-supports-an-idempotency-key",
+  "is_api_doc": false,
+  "document_id": "67b540942cff3804b29aa359",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

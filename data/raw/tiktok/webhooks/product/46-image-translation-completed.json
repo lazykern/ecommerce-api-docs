@@ -1,0 +1,20 @@
+{
+  "title": "(46) Image translation completed",
+  "content": "# 1. Trigger scenario\nThis webhook is triggered when an image translation is completed or failed.\n\n\nApplicable only for sellers that sell across EU.\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 46 | The ID of this webhook topic, which is 46. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ translation_task | object |  | The image translation task and the corresponding results. Each task corresponds to the translation of 1 image into 1 target language. |\n| └ └ id | string | 764c6e87eedcea90399a0dafcd572b71 | The ID to identify the image translation task. |\n| └ └ status | string | COMPLETED | The translation status. <br> Possible values: <br> - PROCESSING: Translation is underway and has not yet completed. <br> - COMPLETED: Translation has completed and results are ready. <br> - FAILED: Translation did not complete due to an error. |\n| └ └ fail_reason | string |  | The reason why the translation task failed. |\n| └ └ target_language | string | it-IT | The target language to translate the image into. <br> Possible values: <br> - de-DE <br> - en-IE <br> - es-ES <br> - fr-FR <br> - it-IT |\n| └ └ original_image | string |  | The original image to be translated. |\n| └ └ └ uri | string | tos-useast2a-i-tulkllf4y5-euttp/748e39ecff38453ab8396a36a53dbb92 | The URI of the original image. |\n| └ └ └ url | string | https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xyz-sg/sample.jpeg | The URL of the original image. |\n| └ └ translated_image | object |  | The translated image. |\n| └ └ └ uri | string | tos-maliva-i-o3syd03w52-us/53b55d6e8cdf1f315affa7e70b45707d | The URI of the translated image. |\n| └ └ └ url | string | https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/sample.jpeg | The URL of the translated image. |\n\n---\n\n\n## Event example\n```JSON\n{\n    \"type\": 46,\n    \"shop_id\": \"7494049642642441621\",\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"timestamp\": 1644412885,\n    \"data\": {\n        \"translation_task\": {\n            \"id\": \"764c6e87eedcea90399a0dafcd572b71\",\n            \"status\": \"COMPLETED\",\n            \"fail_reason\": \"\",            \n            \"target_lang\": \"it-IT\",\n            \"original_image\": {\n                \"uri\": \"tos-useast2a-i-tulkllf4y5-euttp/748e39ecff38453ab8396a36a53dbb92\",\n                \"url\": \"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xyz-sg/sample.jpeg\"\n            },\n            \"translated_image\": {\n                \"uri\": \"tos-maliva-i-o3syd03w52-us/53b55d6e8cdf1f315affa7e70b45707d\",\n                \"url\": \"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/sample.jpeg\"\n            }\n        }\n    }\n}\n```\n\n\n",
+  "update_time": "1756905018",
+  "view_count": 0,
+  "prev_document_id": "68232cac0b038904a68c3753",
+  "prev_document_path": "42-combined-listing-change",
+  "next_document_id": "68b83e1629f2990489c3d277",
+  "next_document_path": "7nzxgima",
+  "is_api_doc": false,
+  "document_id": "684f8d9bcc4e44049347a12e",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "JP market: Updated APIs for Products, Orders, Logistics, and Customer service",
+  "content": "## Summary\nAs of today, developers can start using TikTok Shop APIs to build apps for the Japan market. The APIs and workflows are generally consistent with other regions/markets, but there are a few JP-specific updates worth calling out.\n**Note**: Before building order management modules, developers should familiarize themselves with our [Orders API overview](order-api-overview) and our [Fulfillment API overview](fulfillment-api-overview).\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* Japan (JP)\n\nThis change applies to the following API version(s):\n\n* 202309 (and later)\n\n## API changes\n### Product APIs\n| **Endpoint(s)** | **Change(s)** |\n| --- | --- |\n| * Create Product <br> * Edit Product <br> * Partial Edit Product <br> * Check Product Listing <br> * Diagnose and Optimize Product <br> * Recommend Category | * Each product can contain up to 300 SKUs <br> * The product price range should be within [1, 500,000] JPY <br> * The characters of the product title should be within [1,255] <br> * Use GRAM as the package weight unit for product listing |\n| * Publish Global Product <br> * Edit Global Product <br> * Edit Product <br> * Partial Edit Product <br> * Update Price <br> * Get Global Product | Added **mandatory** parameter `sale_price`, indicating the SKU's local selling price displayed on the product page before any discounts, inclusive of taxes. The `sale_price` parameter is only applicable to cross-border (GS-POP) sellers, and is optional in other markets. |\n| * Get Categories <br> * Get Category Rules <br> * Get Attributes <br> * Update Price <br> * Search Size Chart <br> * Search Products | Added parameter values related to locale `ja-JP`, currency `JPY`, and regions `JP` have been added. |\n| * Get Global Categories <br> * Get Global Category Rules <br> * Get Global Attributes | Added parameter values related to locale `ja-JP` and region `JP`. |\n### Get Order Detail, Get Order List\nTwo response parameters have been added under `recipient_address`:\n\n* `first_name_local_script`: first name in katakana\n* `last_name_local_script`: last name in katakana\n\n### Manage Shipments\nFour response parameters have been added:\n\n* `first_name`: first name in kanji\n* `last_name`: last name in kanji\n* `first_name_local_script`: first name in katakana\n* `last_name_local_script`: last name in katakana\n\n### Customer service APIs\nAll customer service API endpoints have been updated to support sending and receiving messages in Japanese.\n### Fulfillment APIs\n#### Local sellers\nBy default, local sellers in the Japan market should follow the seller shipping (3PL) workflow (see the [Fulfillment API overview](fulfillment-api-overview) for more details). Sellers must use the following integrated carriers for shipping:\n\n* Yamato\n* Sagawa Express\n* Japan Post\n* Seino Transportation\n* Seino Super Express\n\nFor local sellers, the seller shipping workflow should generally follow these steps:\n\n1. The seller ships the package and obtains the shipment tracking number from the shipping carrier.\n2. Use the [Get Shipping Providers](get-shipping-providers) endpoint to retrieve the shipping service provider IDs supported by TikTok Shop.\n3. Use the [Mark Package as Shipped](mark-package-as-shipped) endpoint to upload the tracking number and shipping provider ID.\n\n#### China cross-border (GS-POP) sellers\nChina cross-border sellers should use the following fulfillment workflows:\n| **Shipping type** | **Endpoint(s)** |\n| --- | --- |\n| Oversea warehouse | 1. The seller ships the package and obtains the shipment tracking number from the shipping carrier. <br> 2. Use the [Get Shipping Providers](get-shipping-providers) endpoint to retrieve the shipping service provider IDs supported by TikTok Shop. <br> 3. Use the [Mark Package as Shipped](mark-package-as-shipped) endpoint to upload the tracking number and shipping provider ID. |\n| Direct shipping | 1. The seller schedules the package handover time and method with the shipping provider. <br> 2. Use the [Ship Package](ship-package) endpoint to schedule the package handover time and method. <br> 3. Use the [Get Package Shipping Document](get-package-shipping-document) endpoint to get the shipping label. |\n\n",
+  "update_time": "1748465733",
+  "view_count": 0,
+  "prev_document_id": "67ca5b6c49162f049f2d1fa6",
+  "prev_document_path": "br-market-updated-api-workflow-to-support-order-invoice-and-warehouse",
+  "next_document_id": "6864f928f4938304ab047f2b",
+  "next_document_path": "mx-market-gs-pop-api-updates",
+  "is_api_doc": false,
+  "document_id": "67eb5e81684be504c20ce560",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

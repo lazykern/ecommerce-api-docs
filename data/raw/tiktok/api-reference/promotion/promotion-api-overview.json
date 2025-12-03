@@ -1,0 +1,20 @@
+{
+  "title": "Promotion API overview",
+  "content": "TikTok Shop provides you with a variety of promotion activities with which you can create a rich shopping experience for TikTok users.\nYou can use Promotion APIs to create and manage three kinds of promotion activities on TikTok Shop: \n\n* Product Discount\n* Flash Deal\n* Coupon in the US / Voucher in other districts (You cannot use OpenAPI to create coupon activities.)\n\n> Notes:\n\n> * All three of the above activities are seller promotion activities which are 100% funded by the seller on TikTok Shop.\n> * When a product is listed in both a flash deal promotion and a product discount promotion, only the flash deal price is effective. \n> * When a product is listed in both a flash deal and a TikTok campaign, the campaign price will always be effective.\n> * Coupons are always applicable whether or not the product is listed in other promotion activities or a TikTik campaign.\n\n### Product Discount\nYou can use the Product Discount activity to create discounts for your specific products. The prices after discount are shown with the original prices crossed out. Here's an example:\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/40b6766f105c4916a78027cd85465bbe~tplv-10qhjjqwgv-image.image\" width=\"200px\" /></div>\n\n\nYou can apply the activity on product detail pages, livestreams, and showcases. The visual effects are almost the same in these scenarios.\nThere are two discount types: \n\n* Fixed Price: Specify the final price after discount.\n* Percentage Off: Specify the portion of the deduction amount to the original price.\n\n\n### Flash Deal\nYou can use the Flash Deal activity to create discounts for your specific products. The products in a flash deal will be highlighted with a limited-time countdown. Here's an example:\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/ed42ed826f6d41b6bf858aa24f0f5c57~tplv-10qhjjqwgv-image.image\" width=\"300px\" /></div>\n\nThe deal price for each product needs to be equal to or lower than the price paid by customers in the last 30 days.\n### Coupon / Seller Voucher\nYou can use coupon activities in the US, or seller voucher activities in other districts, in combination with other promotional activities. You can set this up in the Seller Center, and the visual effect of the coupon depends on your setting.\nYou cannot set this up using OpenAPI, but you can search for and get the details of the existing coupon activities.\n\n## API List\nYou can create and manage your promotion activities in Seller Center and Seller App; you can also do that with Promotion APIs. Here's the list of Promotion APIs:\n\n* To manage product discount or flash deal activities, refer to:\n   * [Create Activity](650c33c155bc3202b762b507);\n   * [Search Activities](650acfbaf1fd3102b9315a3a);\n   * [Get Activities](650acd920fcef602bf36ee2b);\n   * [Update Activity](650c584d82c3a602befa4ab8);\n   * [Deactivate Activities](650acf9adefece02be7380cf).\n* To update the products included in a product discount or a flash deal activity, refer to:\n   * [Update Activity Product](650d32c42aaa3602b86ccb5c);\n   * [Remove Activity Product](650acfd84a0bb702c072b4eb).\n* To search and get the details of a coupon activity, refer to:\n   * [Search Coupons](6699dcdf115ebe02f841e4cd);\n   * [Get Coupons](6699dce0de15e502ed219e37).\n",
+  "update_time": "1744350009",
+  "view_count": 0,
+  "prev_document_id": "69082631ff1d8e04a996fe52",
+  "prev_document_path": "partial-edit-global-product-202509",
+  "next_document_id": "67e3b059e7dc4f04a4ff9e09",
+  "next_document_path": "shipping-discount-supported-areas",
+  "is_api_doc": true,
+  "document_id": "650da1ab55bc3202b76f8d21",
+  "doc_type": 10,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

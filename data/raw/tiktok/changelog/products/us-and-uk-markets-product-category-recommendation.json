@@ -1,0 +1,25 @@
+{
+  "title": "US and UK markets: Product category recommendation",
+  "content": "# What is changing?\nTikTok Shop is hoping to improve the accuracy of product categorization, and help sellers reduce the number of miscategorized products. To accomplish this, we are discouraging sellers from manually mapping categories between TikTok Shop and another platform, and encouraging developers to instead implement our [POST Recommended Category API](recommend-category).\n# Which markets are affected?\nThis change is applicable to local and cross-border sellers in the US and UK markets.\n# Who is affected?\nThis change is applicable to all developers who integrate with TikTok Shop API.\n# Which version is applicable?\nThis change is applicable to version **202309**.\n# What action is required?\nDevelopers are incentivized to implement the [POST Recommended Category API](recommend-category) in order to map categories for seller products. This API **requires** you to provide a product title, description, and images, and will return a recommended category for the product.\n<span style=\"background-color: rgb(255, 245, 235)\">📌 </span><span style=\"background-color: rgb(255, 245, 235)\"><strong>Note</strong></span><span style=\"background-color: rgb(255, 245, 235)\">: The current </span><span style=\"background-color: rgb(255, 245, 235)\"><strong>202309</strong></span><span style=\"background-color: rgb(255, 245, 235)\"> version of POST Recommended Category does not require a product description or product images; however, providing these parameters will greatly improve the quality of the product recommendation. Please ensure you provide both these parameters, as they will become required in a future version of the Recommended Category API.</span>\n\n",
+  "update_time": "1722640364",
+  "view_count": 0,
+  "prev_document_id": "66957bc499c26c02ff6c57a9",
+  "prev_document_path": "us-market-mandatory-hazmat-attributes-added",
+  "next_document_id": "66b58ce40d6ef902f1b3bc27",
+  "next_document_path": "for-ph-market-updates-to-mandatory-attributes-on-fresh-and-frozen-related-categories",
+  "is_api_doc": false,
+  "document_id": "66ad61aab3950e02ff3c345a",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

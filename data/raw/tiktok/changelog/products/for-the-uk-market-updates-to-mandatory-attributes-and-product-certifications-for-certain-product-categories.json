@@ -1,0 +1,20 @@
+{
+  "title": "For the UK market: Updates to mandatory attributes and product certifications for certain product categories",
+  "content": "# What is changing?\nTikTok Shop is implementing safety-related Mandatory Attributes and Product Safety and Compliance Image requirements for Toys, Beauty Products, Electronics, Food & Beverage, and Pet Food categories.\nStarting from **2024-06-19**, Products API will be updated to require safety-related Mandatory Attributes and Product Certifications (known as Mandatory Product Safety and Compliance Image Requirements in the image below).\n<div style=\"text-align: center\"><img src=\"https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/03886c034a8c41b3ae77094bce5d1691~tplv-10qhjjqwgv-image.image\" width=\"1280px\" /></div>\n\n# Which markets are affected?\nThe updates of the requirements apply to the local sellers in the UK market\n# Who is affected?\nDevelopers with applications that use [Create Product](create-product), [Edit Product](edit-product), and [Partial Edit Product](partial-edit-product)\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nWithout mandatory attributes and product certifications for products within specific categories, sellers will not be able to create and update products.\nUse the Get Attributes to check what attributes are mandatory and pass attribute values via the Create Product, Edit Product, and Partial Edit Product to help sellers fill in the attribute values.\nUse the Get Category Rule to check what product certifications are required and pass the product certification files via the Create Product, Edit Product and Partial Edit Product to help sellers submit product certification.\n\n",
+  "update_time": "1714592060",
+  "view_count": 0,
+  "prev_document_id": "65d3fea12184f602e3da78b1",
+  "prev_document_path": "uk-market-only-size-chart-is-now-mandatory-for-product-listings",
+  "next_document_id": "6658fcae39313f02dd4e1b47",
+  "next_document_path": "us-market-product-category-expansion",
+  "is_api_doc": false,
+  "document_id": "66329335cb261f02e0b66da9",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

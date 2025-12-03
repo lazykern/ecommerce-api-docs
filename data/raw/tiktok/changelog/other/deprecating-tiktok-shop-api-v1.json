@@ -1,0 +1,20 @@
+{
+  "title": "Deprecating TikTok Shop API V1",
+  "content": "To better serve our global developer community, **TikTok Shop Open Platform** is committed to building a high-performance, stable, and industry-compliant API system. Currently, we offer two main versions of our Open API:\n\n* **V1 (Legacy version)**: version numbers below 202309;\n* **V2 (Standard version)**: version numbers 202309 and above.\n\nThe V1 API was introduced in the early stages of our platform. To enhance the developer experience and improve integration compatibility, we launched the V2 version in **Q3 2023**, following modern industry standards.\n## V1 API Deprecation Timeline\nAs part of our ongoing efforts to improve the platform, TikTok Shop will **gradually deprecate the V1 (Legacy) API** and fully shift to supporting and optimizing the V2 version. The deprecation will follow the timeline below:\n\n* **Starting from July 1, 2025**, we will begin **phased deprecation of V1 APIs**;\n* **By December 31, 2025**, all **V1 APIs will be fully sunset**.\n\nDuring the phased deprecation period, the platform will gradually apply **request throttling policy** to the APIs scheduled for sunset and **include clear error messages** in the response to guide developers toward timely migration to the latest version.\n\n\nIn parallel, we will also establish a standardized API lifecycle management mechanism to ensure better control and predictability across the full lifecycle - from release and maintenance to deprecation. This will provide developers with a clearer, more efficient, and reliable integration experience.\n## Call to Action for Developers\nWe strongly encourage all partners to **plan ahead for V2 migration**. TikTok Shop will provide a comprehensive **migration guide** and **technical support** to ensure a smooth transition and continued access to core e-commerce capabilities. For details, please visit [Migration Guide](upgrading-to-api-version-202309).\n\n\nThank you for your continued support of the TikTok Shop Open Platform.\n\n\nRegards,\n\n\nTikTok Shop Open Platform Team\n\n",
+  "update_time": "1749121704",
+  "view_count": 0,
+  "prev_document_id": "68d6ce2d8e2c770495cced8c",
+  "prev_document_path": "j5k1cmia",
+  "next_document_id": "6509b2aec16ffe02b8d7623c",
+  "next_document_path": "introducing-api-version-202309",
+  "is_api_doc": false,
+  "document_id": "68417994603891048c65f4c2",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

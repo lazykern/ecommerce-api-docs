@@ -1,0 +1,30 @@
+{
+  "title": "Authorization page updates",
+  "content": "# What is changing?\nTo comply with GDPR ruling, there are changes coming to the app installation and authorization workflow. When creating an application, developers are now required to select API scopes their application will need to function as expected. Sellers are then shown the same list of scopes when installing the application, and are given the option to reject the authorization request. This is a major change from the previous flow where apps were implicitly granted all scopes and the seller was shown all options with no obvious way to reject the authorization request.\n# Which markets are affected?\nThis change is for all markets.\n# Who is affected?\nThis change affects all sellers (both local and cross border).\n# Which version is applicable?\nThis change is for the Access Token endpoint, which is applicable for all versions.\n# What action is required?\nApplications that are already authorized will continue to work until the authorization expires.\nApplications that are new or have expired authorization:\n\n1. The scopes for the app need to be selected in Partner Center.\n2. The API request to get the access token must include the scopes in the request\n3. The response will contain the scopes that were granted\n4. Existing sellers who have authorized the application will need to renew their authorization before the scopes can take effect.\n   1. When they do this, only the scopes that have been selected by the developer will be shown during the flow.\n5. Redirect URL will contain the code if everything is working well\n   1. In case of an error, there will be `error=access_denied` added to the redirect URL query parameters.\n\nAny APIs that are called without scopes associated with the access token will fail with a 401 status code.\n## Get Access Token API Changes\n### Parameters\nNo changes\n### Responses\nA new array of strings titled `granted_permissions` will be present in the response body. These strings represent the scopes the user has authorized to access and are in upper snake case (ex [\"MANAGE_GLOBAL_PRODUCTS\", \"LIVEROOM_INFO\"]).\n## Seller App Authorization Flow Changes\nSellers will see the scopes that the developer has chosen when installing an application. Before this change, the seller had no choice to reject the connection and was forced to install the application. Now there is a new \"Discard\" button that they can click which will cancel the installation process. In this situation, the system will redirect to the URL specified by the application and will include `error=access_denied&code=null` as query parameters.\n### Change Summary\n| Description | Scope Changes | Actions Required |\n| --- | --- | --- |\n| Existing apps with all API scopes | Existing apps have all the Public API scopes. <br> No extra configuration needed. | After the change, sellers still authorize all the Public API scopes to their existing apps. <br> **Good to know** for developers, no extra action needed |\n| New apps with all API scopes | Developers choose all Public API scopes. | After the change, sellers still authorize all the Public API scopes to their existing apps. <br> **Good to know** for developers, no extra action needed |\n| New apps with **selected API scopes** | Developers choose only **certain Public API scopes.** | * When developers don't need new scopes for the app, no extra action is needed <br> * When developers need new scopes for building new features for the app, they need **turn on the needed scope** from Partner Center to have permission to call the related APIs and also: <br> * Existing sellers will not give their shops authorization with new scopes by default, need guide them to **renew the authorization in order to grant new scopes to the App** <br> * Newly installed sellers will give their shop authorization with new scopes to the App <br>  |\n\n",
+  "update_time": "1715273404",
+  "view_count": 0,
+  "prev_document_id": "68bf0bdd9370fc0490f8bc07",
+  "prev_document_path": "3obfokj6",
+  "next_document_id": "654dc3fca1dde702c05579f8",
+  "next_document_path": "new-shipping-label-format-launched-in-id-my-and-vn-markets",
+  "is_api_doc": false,
+  "document_id": "661f02b62e1a5d02e267d159",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

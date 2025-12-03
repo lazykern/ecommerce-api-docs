@@ -1,0 +1,25 @@
+{
+  "title": "US market: POP USPS label restriction",
+  "content": "# Summary\nBeginning **October 27th, 2025**, 3PL USPS labels will be restricted under our new shipping policy for POP sellers. If sellers want to use USPS labels, they will have to purchase them through TikTok Shipping, which will require all apps used by POP sellers to integrate with TikTok Shipping.\n|  |  |\n| --- | --- |\n| Impacted market(s) | * United States (US) - Cross-border and ACCU |\n| Impacted version(s) | * 202309 (and later) |\n# What's new?\nUS cross-border merchants and ACCU merchants will **no longer be allowed to use USPS** as a shipping carrier when fulfilling orders. This change applies to the following API endpoints:\n| **API** | **Affected Parameter** |\n| --- | --- |\n| [POST Ship Package](https://partner.tiktokshop.com/docv2/page/ship-package-202309) | `self_shipment.shipping_provider_id` |\n| [POST Batch Ship Packages](https://partner.tiktokshop.com/docv2/page/batch-ship-packages-202309) | `self_shipment.shipping_provider_id` |\n| [POST Mark Package as Shipped](https://partner.tiktokshop.com/docv2/page/mark-package-as-shipped-202309) | `shipping_provider_id` |\n| [POST Create Packages](https://partner.tiktokshop.com/docv2/page/create-packages-202309) | `shipping_service_id` |\n\n",
+  "update_time": "1761698256",
+  "view_count": 0,
+  "prev_document_id": "68917f7c4d7a56049a5a0ef1",
+  "prev_document_path": "t9ucngno",
+  "next_document_id": "68704c5d6e6e7404973b5cea",
+  "next_document_path": "order_orders_post_town",
+  "is_api_doc": false,
+  "document_id": "69015eaf5b602804822560ba",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Breaking Change",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Draft editing support for published listings",
+  "content": "## Summary\nPreviously, the TikTok Shop Seller Center only allowed draft editing prior to publishing a listing. We've recently expanded this feature to additionally enable sellers to edit and save drafts for products that have already been listed, and are now ensuring it is reflected in our APIs.\n\n## Impact\n|  |  |\n| --- | --- |\n| Impacted market(s) | * United States (US) - Local <br> * United Kingdom (UK) - Local <br> * Europe (EU) - Local <br> * Southeast Asia (SEA) - Local <br> * Japan (JP) - Local <br> * Platform Open Plan (POP) - US, UK, EU, SEA |\n| Impacted version(s) | 202309 (and later) |\n## Changes\n### Product APIs\n| **Endpoint(s)** | **Change(s)** |\n| --- | --- |\n| * [PUT Edit Product](https://partner.tiktokshop.com/docv2/page/edit-product-202309) <br> * [POST Partial Edit Product](https://partner.tiktokshop.com/docv2/page/partial-edit-product-202309) | New request parameter: `save_mode` <br> Possible values: <br>  <br> * `AS_DRAFT`: Save the product as a draft for future editing. <br> * `LISTING`: Immediately list the product in the shop. |\n| * [GET Product](https://partner.tiktokshop.com/docv2/page/get-product-202309) <br> * [POST Search Products](https://partner.tiktokshop.com/docv2/page/search-products-202502) | New request parameter: `return_draft_version` <br> Filter products to show only those that have a draft. <br>  <br> * `true`: Returns products in their draft version only. Excludes those without a draft. <br> * `false`: Returns all products regardless of whether they have a draft. |\n| * [POST Search Products](https://partner.tiktokshop.com/docv2/page/search-products-202502) | New response parameter: `has_draft` <br> Indicates whether the product has a draft. <br>  <br> * `true`: It has a draft. <br> * `false`: It does not have a draft. |\n## Next steps\nFor more details on the new parameters, please visit our individual API documentation for each endpoint, as linked above. \n",
+  "update_time": "1753715758",
+  "view_count": 0,
+  "prev_document_id": "682ede19f8268a04839b6627",
+  "prev_document_path": "us-market-updates-to-mandatory-attributes",
+  "next_document_id": "689ba401dc20310498f3140d",
+  "next_document_path": "a5crrkzs",
+  "is_api_doc": false,
+  "document_id": "68878ecf1564fc04a945662d",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

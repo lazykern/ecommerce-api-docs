@@ -1,0 +1,20 @@
+{
+  "title": "Create Product API now supports an idempotency key",
+  "content": "## Summary\nThe [Create Product](create-product) endpoint now supports an idempotency key. This can help duplicate products being created when an API call is retried with the same parameters.\n*We recommend that you generate v4 UUIDs for use as keys with a maximum length of 128 characters.*\n## Change Details\nA new key named `idempotency_key` can now be supplied in the body of the Create Product request so that you can prevent duplicate products being created whenever the API request is retried. It is a unique key to recognize a request and prevent duplicate processing of the same request, especially in cases of connection issues. Ensure this key is unique within the shop for each request to avoid accidental duplicates. It can be used to track requests across the shop. Maximum length is 128 characters.\n**Note**: We recommend that you generate v4 UUIDs for use as keys.\nThere are no changes to the responses and error messages.\n## Required Actions\nIf you experience issues where the retry logic creates duplicate products, it is highly recommended you adopt this change.\n## Markets and Versions\nThis change applies to all markets and v202309 of [Create Product](create-product).\n\n",
+  "update_time": "1740708254",
+  "view_count": 0,
+  "prev_document_id": "67b540942cff3804b29aa359",
+  "prev_document_path": "product-api-now-supports-two-prices",
+  "next_document_id": "67c8ed30d5d9d004a2f5cd73",
+  "next_document_path": "hazmat-deadline-extended-to-april-15",
+  "is_api_doc": false,
+  "document_id": "67c1198b99a7510498374eeb",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

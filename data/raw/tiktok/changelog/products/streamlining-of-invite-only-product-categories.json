@@ -1,0 +1,25 @@
+{
+  "title": "Streamlining of invite-only product categories",
+  "content": "## What is changing?\nPreviously, TikTok Shop sellers had to apply for the necessary permission(s) in Seller Center to list products under invite-only categories. We've updated this workflow to allow sellers to first list such products, then apply for permission(s).\n\n\n\nNow, when a seller lists a product under an invite-only category they do not have permission for, the product will be in the `PENDING` status and unavailable to buyers. Similarly, the product audit status will be `PRE_APPROVED` if it has passed product audit but the seller still does not have the required permission(s).\n\n\n\n**Note**: In Seller Center, **invite-only** categories may also be displayed as **restricted**.\n![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Changelog/Invite-only%20products/Screenshot%202025-04-01%20at%2011.57.04%E2%80%AFAM.png)\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* US (local sellers)\n\nThis change applies to the following API version(s):\n\n* All versions\n\n## API changes\n### Get Category Rules\nPreviously, when a seller did not have the necessary permission(s) for an invite-only category, inputting a `category_id` would return an error. This has been updated to always return the category rules regardless of permission(s).\n### Create Product, Edit Product\nSimilar to the Get Category Rules endpoint, inputting the `category_id` will allow the seller to create a new product listing, or modify the product category, regardless of whether they have the necessary permission(s) for the category.\n\n\n\nThese products will remain in the `PENDING` status and `PRE_APPROVED` audit status (if product audit has been passed), and will be unavailable to buyers until the seller has acquired the necessary permission(s) through the Qualification Center in the TikTok Shop Seller Center.\n### Get Product\nThe `audit.status` response parameter now has a new possible value:\n\n* `PRE_APPROVED`: The product has passed the audit but is not yet listed due to pending prerequisites. Refer to `pre_approved_reasons` for the prerequisites.\n\nThe `audit.pre_approved_reasons` response parameter has been added and is applicable only if `audit.status=PRE_APPROVED`, otherwise it returns an empty array.\n\n\n\nFor a product listed under an invite-only category that a seller does not have permission(s) for, but has passed audit, the `audit.status` will be `PRE_APPROVED` and the `audit.pre_approved_reasons` will be `RESTRICTED_CATEGORY_PENDING`.\n### New webhook: product audit status change\nThe [product audit status change](37-product-audit-status-change) webhook has been launched. When the product audit status changes, developers will receive this webhook. With this webhook, developers can easily get the audit status information of a product instead of calling Get Product API. To receive this webhook, you must ensure the Product Basic API scope is enabled in Partner Center.\n\n\n\nIn this webhook, the invite-only category related fields are the same as the new properties added for the Get Product API: `audit.status` and `audit.pre_approved_reasons`.\n## What action is required?\n\n1. Developers should notify sellers when they list a product under an invite-only category they do not have permission(s) for, and prompt sellers to apply in the [Seller Center Qualification Center](https://seller-us.tiktok.com/qualification?tab=category).\n\n![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Changelog/Invite-only%20products/Screenshot%202025-04-01%20at%2012.22.37%E2%80%AFPM.png)\n\n2. Developers should integrate with the `audit.status` and `audit.pre_approved_reasons` parameters, as well as the new product audit status change webhook, to display the correct statuses on their app's interface.\n\n\n",
+  "update_time": "1748465732",
+  "view_count": 0,
+  "prev_document_id": "67ca5b69c925e304ad101829",
+  "prev_document_path": "upload-product-image-and-upload-product-file-support-more-file-formats",
+  "next_document_id": "680ffa16ad835c04a2d81b79",
+  "next_document_path": "us-market-supplementary-sku-images",
+  "is_api_doc": false,
+  "document_id": "67ecb3ce8ceb0d04a3723b82",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

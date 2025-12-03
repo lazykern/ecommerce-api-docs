@@ -1,0 +1,20 @@
+{
+  "title": "New property added to Recommend Category API to indicate whether sellers can use the recommended category",
+  "content": "# What is changing?\nWe added the `permission_statuses` response property to all versions of the [Recommend Category API](recommend-category). `Permission_statuses` indicates whether the seller has permission to use the recommended category for a product listing. The possible values are:\n\n* `AVAILABLE`: You have permission for this category and can create products under this category.\n* `INVITE_ONLY` : This category is an invitation category, and you can not use it to create products. Contact the account manager or TikTok Shop support team for permission to access this category or select another one.\n\n# Which markets are affected?\nLocal and cross-border sellers in all markets can use the new `permission_statuses` property.\n# Who is affected?\nThis change applies to developers with applications that use any version of the Recommend Category API.\n# What action is required?\nWhen you receive `permission_statuses` in the API response, adopt the new field in your integration. Clearly communicate the permission status to sellers so they know which recommended categories they can use for product listings. Guide sellers on how to request access to categories marked as `INVITE_ONLY` or `NON_MAIN_CATEGORY`.\n\n",
+  "update_time": "1699422953",
+  "view_count": 0,
+  "prev_document_id": "6752715b28a1690305f1e7dd",
+  "prev_document_path": "updates-to-product-api-mandatory-certifications",
+  "next_document_id": "656d70d9cca08202dbc037f8",
+  "next_document_path": "new-property-added-to-get-category-rules-api-to-indicate-whether-package-dimension-is-mandatory",
+  "is_api_doc": false,
+  "document_id": "654b225e080aee02c31ac1f8",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

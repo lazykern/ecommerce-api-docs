@@ -1,0 +1,20 @@
+{
+  "title": "For US market: Replacement orders now available",
+  "content": "# Summary\nPrior to releasing this new feature, the only choice available to buyers who received missing, damaged or otherwise compromised items in an order was to request a return or refund. To improve the buyer experience and help sellers provide better customer satisfaction, TikTok Shop has released a new feature where a buyer can ask for a replacement for the item they paid for. Sellers can approve the request for replacement and send them a new item by creating a new \"Replacement\" order. If the seller does not want to provide replacements, the request can be canceled and issue a refund instead.\n**This change is only for the US market and affects local sellers. Developers who build return apps, connector apps, or multi-channel apps are** <span style=\"color: rgb(222, 120, 2)\"><strong>recommended</strong></span> **to adopt this change.**\n# Upcoming Changes\n## Seller Operation Flow\n![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/b0f79e23e4184e7fb250abb15e0562e9~tplv-10qhjjqwgv-image.image)\n## API Changes\nThe following APIs will be impacted by this change:\n\n* [GET Order List](get-order-list)\n* [GET Order Details](get-order-detail)\n* [Search Returns](search-returns)\n* [Approve Return](approve-return)\n* [Reject Return](reject-return)\n\nFor details about these API changes, please go to the API reference page by clicking on the links above.\n## Webhook Changes\nThe webhook relevant for this change is the [Return Status Change](12-return-status-change) webhook.\n\n",
+  "update_time": "1710212026",
+  "view_count": 0,
+  "prev_document_id": "65a8c3944f1c9102d961b181",
+  "prev_document_path": "for-sea-market-upcoming-changes-on-tracking-number-availability-in-orders-api",
+  "next_document_id": "660d8bab589cba02c0ee3c28",
+  "next_document_path": "for-us-market-new-property-address-level-field-added-to-orders-api",
+  "is_api_doc": false,
+  "document_id": "65e97f2d27659802db37f0cf",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

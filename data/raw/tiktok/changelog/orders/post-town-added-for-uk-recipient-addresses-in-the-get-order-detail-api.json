@@ -1,0 +1,20 @@
+{
+  "title": "Post town added for UK recipient addresses in the Get Order Detail API",
+  "content": "# Summary\nAddresses in the United Kingdom (UK) require a [Post Town](https://en.wikipedia.org/wiki/Post_town), so we've added a data field for UK buyers to include their Post Town information.\n## What's changed?\nTo support this, we've added a new property `post_town` to the `recipient_addresses` object in the [Get Order Detail API](get-order-detail).\n## Which markets are affected?\nThis change affects the UK market only.\n## Who is affected?\nDevelopers with applications that use the Get Order Detail API to manage orders for sellers are affected.\n## What action is required?\nApplications that include an integration with the [Get Order Detail API](get-order-detail) should be updated to include support for `post_town` field in the `recipient_addresses` object.\n\n",
+  "update_time": "1752190095",
+  "view_count": 0,
+  "prev_document_id": "69015eaf5b602804822560ba",
+  "prev_document_path": "gt8qv13g",
+  "next_document_id": "653779d99971b602ba81187d",
+  "next_document_path": "shortened-string-length-for-buyer-email-in-get-order-detail-api",
+  "is_api_doc": false,
+  "document_id": "68704c5d6e6e7404973b5cea",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

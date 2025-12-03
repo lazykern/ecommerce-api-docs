@@ -1,0 +1,20 @@
+{
+  "title": "Mandatory certifications for certain categories added",
+  "content": "## Summary\nTikTok Shop is implementing new Mandatory Certifications for categories in Beauty & Personal Care and Health.\nStarting from 2025-04-19, Products API will be updated to require 510(k) PreMarket Notification for Class 2 Consumer Medical Products and Establishment Registration & Device Listing Account (FURLS) for Class 1, 2, and 3 Consumer Medical Products.\n## Which markets and versions are affected?\nThis change applies to all versions and local sellers in the US market.\n## API Changes\nDevelopers with applications that use Create Product, Edit Product, and Partial Edit Product\nThere is no parameter or property changed for the Products API. When the Ops team configures the API to be effective, the TTS system will validate if the required Product Certifications are submitted via APIs. Without the required attributes and Product Certifications, API calls will return failure.\n## Required Actions\nWithout mandatory product certifications, sellers will not be able to create and update products within specific categories\nUse the Get Category Rule to check what product certifications are required for which categories, and pass the product certification files via the Create Product, Edit Product, and Partial Edit Product to help sellers submit product certification.\n\n",
+  "update_time": "1741314965",
+  "view_count": 0,
+  "prev_document_id": "67c8ed30d5d9d004a2f5cd73",
+  "prev_document_path": "hazmat-deadline-extended-to-april-15",
+  "next_document_id": "67ca5b69c925e304ad101829",
+  "next_document_path": "upload-product-image-and-upload-product-file-support-more-file-formats",
+  "is_api_doc": false,
+  "document_id": "67ca5b6649162f049f2d1f8f",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

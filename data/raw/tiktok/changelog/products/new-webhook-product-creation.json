@@ -1,0 +1,20 @@
+{
+  "title": "New webhook: Product creation",
+  "content": "## Summary\nA new webhook will be sent when products are created. This allows partners to now create products on other platforms when they are added to TikTok Shop.\nA message will be sent to developer when a product is created via any channel (API, Seller Center, App, Excel). Once the product_id is generated, before sending the product to audit, the message will be sent.\n## Affected Markets and Sellers\nThis change is for all markets and for all sellers.\n## Applicable API Versions\nSince this a webhook change, it is not directly tied to any version changes.\n## Required Actions\nPartners who develop connectors and multi-channel applications are recommended to integrate this webhook. Subscribe to this webhook and process them like any other webhook. Here is an example of a webhook:\n```JSON\n{  \n  \"type\": 16,  \n  \"tts_notification_id\": \"7327112393057371910\",  \n  \"shop_id\": \"7494049642642441621\",  \n  \"timestamp\": 1644412885,  \n  \"data\": {  \n    \"product_id\": \"576486316948490000\",  \n    \"product_type\": [\"GPR_PRODUCT\"],  \n    \"update_time\": 1644412885  \n  }  \n}\n```\n\n\n",
+  "update_time": "1724242698",
+  "view_count": 0,
+  "prev_document_id": "66b5c41e0d6ef902f1b49220",
+  "prev_document_path": "for-sea-market-various-categories-will-require-mandatory-attribute-dangerous-goods",
+  "next_document_id": "66cbf1e7597571030d9e5fdb",
+  "next_document_path": "sunsetting-listing-schemas-endpoint",
+  "is_api_doc": false,
+  "document_id": "66c5d9b4e863d902fac36b74",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

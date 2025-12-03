@@ -1,0 +1,20 @@
+{
+  "title": "Supplementary Notice on API Deprecation: Finance APIs",
+  "content": "Following the announcement of **V1 API deprecation** by the TikTok Shop Open Platform, we are issuing an additional clarification regarding the deprecation plan for the following two Finance category APIs:\n\n* [Get Transactions by Order](get-transactions-by-order);\n* [Get Transactions by Statement](get-transactions-by-statement).\n\n## Action Required\nIn addition to the deprecation of all V1 APIs (version number < 202309), the **202309 versions** of the above two APIs will also be included in the deprecation plan. These endpoints will no longer be supported after the official sunset date. You must migrate to the latest V2 versions as soon as possible.\n## 🔍 Scope of Impact\n| API Name | Deprecated Version | Replacement |\n| --- | --- | --- |\n| [Get Transactions by Order](get-transactions-by-order) | 202309 | 202501 |\n| [Get Transactions by Statement](get-transactions-by-statement) | 202309 | 202501 |\n## Deprecation Timeline\n\n* **From July 1, 2025**: Gradual deprecation begins. You will start encountering stricter request limits and errors as part of the deprecation process. To avoid disruptions, please migrate to the new version promptly.\n* **By December 31, 2025**: The 202309 version of these APIs will be fully sunset, and all requests will be blocked.\n\n## Reference\nPlease refer to:\n\n* Full deprecation policy: [Deprecating TikTok Shop API V1](deprecating-tts-api-v1);\n* Finance API official upgrade announcement: [New version (v202501) for Statement Transactions and Order Statement Transactions](new-version-v202501-for-statement-transactions-and-order-statement-transactions).\n\n## Next Steps for Developers\n\n* Review your system to identify whether the above APIs in **202309 version** are still being used;\n* Upgrade to the corresponding latest **V2 API versions** as soon as possible;\n* A detailed **migration guide** will be published soon. Please stay tuned for further updates.\n\n\n---\n\n\nThank you for your continued support and cooperation.\n\n\nRegards,\n\n\nTikTok Shop Open Platform Team\n\n",
+  "update_time": "1750671085",
+  "view_count": 0,
+  "prev_document_id": "6740642f29926a030df796bd",
+  "prev_document_path": "maintenance-scheduled-downtime-for-promotion-apis",
+  "next_document_id": "66c5d9b6290e4202f857d5b7",
+  "next_document_path": "us-and-uk-markets-new-properties-added-to-finance-api",
+  "is_api_doc": false,
+  "document_id": "68591ecdbaf007048f512484",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

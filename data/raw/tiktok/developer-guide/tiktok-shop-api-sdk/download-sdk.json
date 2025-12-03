@@ -1,0 +1,20 @@
+{
+  "title": "Download SDK",
+  "content": "## Prerequisites\nIf you are a developer who has developed Apps for TikTok Shop, you can download TikTok Shop API SDK on the [TikTok Shop Partner Center console](https://partner.tiktokshop.com/openlearn/api-sdk).\nIf you are a developer new to TikTok Shop, you must [create a TikTok Shop App](create-tts-app-oauth-client) before downloading the SDK on the [console](https://partner.tiktokshop.com/openlearn/api-sdk).\n## Download SDK\nThe SDK includes APIs of the combined collection of access scopes corresponding to your effective apps. The effective apps and combined access scopes, private API scopes included, are listed on the page. Confirm the API access scopes included in the SDK before downloading the SDK.\n![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Developer_Guide/TTSPC_API_SDK/download_sdk.PNG)\n\n",
+  "update_time": "1751449715",
+  "view_count": 0,
+  "prev_document_id": "67c83e0799a75104986ae498",
+  "prev_document_path": "tts-api-sdk-overview",
+  "next_document_id": "67c83e0c6f5eed04a038208e",
+  "next_document_path": "integrate-java-sdk",
+  "is_api_doc": false,
+  "document_id": "67c83e0a65c8c504be4417f8",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "For ID market: One Change for Privacy Improvement of Image Message",
+  "content": "There is one change for privacy improvement of image message in Indonesian market which will be effective on September 30, 2025.\nWhen sellers check image messages (from [Customer Service API](https://partner.tiktokshop.com/docv2/page/customer-service-api-overview)) and download images through HTTP to access the image link, they need to include two parameters\n\n* Header：x-tts-access-token\n* Query：shop_cipher\n\n# Which markets are affected?\nThe updates of the requirements apply to the Local to Local sellers for the Indonesian market.\n# Who is affected?\nDevelopers with applications that use HTTP to access image links to download images in messages.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related API.\n# What action is required?\nDevelopers need to check whether to use this HTTP and handle the related error messages.\n",
+  "update_time": "1753864391",
+  "view_count": 0,
+  "prev_document_id": "6864f928f4938304ab047f2b",
+  "prev_document_path": "mx-market-gs-pop-api-updates",
+  "next_document_id": "68ad7aa69e6e2a049311af0f",
+  "next_document_path": "k1156vkq",
+  "is_api_doc": false,
+  "document_id": "6889d8440e2f630494b09e9c",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

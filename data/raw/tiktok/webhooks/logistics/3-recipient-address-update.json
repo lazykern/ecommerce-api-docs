@@ -1,0 +1,20 @@
+{
+  "title": "(3) Recipient address update",
+  "content": "# 1. Trigger scenario\nThe **recipient address update** webhook triggers when an order recipient's address is updated.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| order_id | 1X2X3X4X5 | The identification of a TikTok Shop order |\n| update_time | 1627587600 | The time when recipient address is updated, represented as a Unix timestamp (seconds). |\n## Event example\n```json\n{\n    \"type\":3,\n    \"shop_id\":\"7494049642642441621\",\n    \"timestamp\":1644412885,\n    \"data\":{\n        \"order_id\":\"576486316948490001\",\n        \"update_time\":1644412885\n    }\n}\n```\n\n\n",
+  "update_time": "1751450083",
+  "view_count": 0,
+  "prev_document_id": "6708f86d24e99e035deee8b9",
+  "prev_document_path": "24-fbt-inventory-update",
+  "next_document_id": "650955cabace3e02b73cc886",
+  "next_document_path": "4-package-update",
+  "is_api_doc": false,
+  "document_id": "650301af5a12ff0294ea3bf9",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "Recipient Address Update",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

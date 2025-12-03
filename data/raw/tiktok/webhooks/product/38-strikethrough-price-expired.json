@@ -1,0 +1,20 @@
+{
+  "title": "(38) Strikethrough price expired",
+  "content": "# 1. Trigger scenario\nThis webhook will be triggered when the strikethrough pricing verification information expires, 90 days after submission.\nPrerequisite: The \"Strikethrough Price\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 38 | The ID of this webhook topic, which is 38. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ product_id | string | \"732357708734418520388\" | The TikTok Shop product ID. |\n| └ sku_id | string | \"73235770873441823254\" | The TikTok Shop SKU ID. |\n## Event example\n```JSON\n{\n  \"type\": 38,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"732357708734418520388\",\n    \"sku_id\": \"73235770873441823254\"\n  }\n}\n```\n\n\n",
+  "update_time": "1751450141",
+  "view_count": 0,
+  "prev_document_id": "67b5c6cba42623049abe5062",
+  "prev_document_path": "37-product-audit-status-change",
+  "next_document_id": "68232cac0b038904a68c3753",
+  "next_document_path": "42-combined-listing-change",
+  "is_api_doc": false,
+  "document_id": "67c6f62e6704d704a6e5deed",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "US market: Existing SKU standardization",
+  "content": "# Summary\nCurrently, there are some data inconsistencies as a result of custom SKU properties. We'd like to address this by introducing a way to standardize new SKU property values, as well as migrate existing custom ones. These custom attributes—previously used when creating products—will be processed through an algorithm, and the system will replace eligible custom attributes with the platform’s standardized attributes. As a result, both the attribute ID and attribute name will change.\n# Impact\n|  |  |\n| --- | --- |\n| Impacted market(s) | * United States (US) - Local |\n| Impacted version(s) | * 202309 (and later) |\n# What's new?\n## [GET Product API](https://partner.tiktokshop.com/docv2/page/get-product-202309)\nSome custom SKU attributes may change as a result of migration.\n# Next steps\nEnsure that the SKU attribute changes are accounted for.\n\n",
+  "update_time": "1762544725",
+  "view_count": 0,
+  "prev_document_id": "68ed3f3f651aa60499443526",
+  "prev_document_path": "7s72ctzw",
+  "next_document_id": "6740642f29926a030df796bd",
+  "next_document_path": "maintenance-scheduled-downtime-for-promotion-apis",
+  "is_api_doc": false,
+  "document_id": "690e4911c6ef97049d5beb1b",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "(35) Tokopedia mirror status change",
+  "content": "# 1. Trigger scenario\nThis webhook is triggered when the TikTok Shop to Tokopedia mirroring process is completed or rolled back. Applicable only for the **Indonesia** market.\n\n**Prerequisite**: The shop is [active](get-active-shops), and the \"**Shop Authorized Information**\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 35 | The ID of this webhook topic, which is 35. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| seller_open_id | string | \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\" | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ tts_shop_id | string | \"7494049642642441621\" | The shop ID in TikTok Shop. |\n| └ update_time | int | 1627587600 | The time when the change occurred. Unix timestamp. |\n| └ mirror_status | string | \"MIRRORED\" | The shop mirroring status: <br> - MIRRORED <br> - ROLLED_BACK <br> - CANCELED |\n## Event example\n```JSON\n{\n  \"type\": 35,\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"tts_shop_id\": \"7494049642642441621\",\n    \"mirror_status\" : \"MIRRORED\",\n    \"update_time\": 1627587600\n  }\n}\n```\n\n\n",
+  "update_time": "1751450178",
+  "view_count": 0,
+  "prev_document_id": "6509579c0fcef602bf11312c",
+  "prev_document_path": "7-upcoming-authorization-expiration",
+  "next_document_id": "66063c677be39902c7774b24",
+  "next_document_path": "66063c677be39902c7774b24",
+  "is_api_doc": false,
+  "document_id": "678f43b378f4c20311becd07",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

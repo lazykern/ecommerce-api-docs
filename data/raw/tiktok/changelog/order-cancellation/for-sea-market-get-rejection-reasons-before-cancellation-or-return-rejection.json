@@ -1,0 +1,25 @@
+{
+  "title": "For SEA market: Get Rejection Reasons before Cancellation or Return Rejection",
+  "content": "Since cancellation or return rejection reasons change sometimes, please call [Get Rejection Reasons](https://partner.tiktokshop.com/docv2/page/get-reject-reasons-202309#Back%20To%20Top) and show seller the usable rejection reason list if seller wants to reject buyer's cancellation or return request. You can get this list from the \"reasons\" parameter in this API's response payload. It will be effective after Sep. 24, 2025. \nBy the way, you can get the newest [return reasons](https://partner.tiktokshop.com/docv2/page/return-reasons), [refund reasons](https://partner.tiktokshop.com/docv2/page/refund-reasons) and [cancel reasons](https://partner.tiktokshop.com/docv2/page/cancel-reasons) from links as below:\n\n* Return reasons: https://partner.tiktokshop.com/docv2/page/return-reasons\n* Refund reasons: https://partner.tiktokshop.com/docv2/page/refund-reasons\n* Cancel reasons: https://partner.tiktokshop.com/docv2/page/cancel-reasons\n\n# Which markets are affected?\nThe updates of the requirements apply to the Local to Local sellers for Singapore, Philippines, Vietnam, Thailand, Malaysia and Indonesia markets.\n# Who is affected?\nDevelopers with applications that use Cancellation, Return or Refund related APIs.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related API\n# What action is required?\nDevelopers need to check whether to use these APIs. Please call [Get Rejection Reasons](https://partner.tiktokshop.com/docv2/page/get-reject-reasons-202309#Back%20To%20Top) and show seller the usable rejection reason list if seller wants to reject buyer's cancellation or return request.\n",
+  "update_time": "1757661788",
+  "view_count": 0,
+  "prev_document_id": "6875f39c5c6c9604a9e53580",
+  "prev_document_path": "three-seller-initiates-cancel-reasons-will-be-changed",
+  "next_document_id": "68edc38c6f0c12048cfdafb1",
+  "next_document_path": "jsqxpibu",
+  "is_api_doc": false,
+  "document_id": "68c3c9a9b084cc049407fce8",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

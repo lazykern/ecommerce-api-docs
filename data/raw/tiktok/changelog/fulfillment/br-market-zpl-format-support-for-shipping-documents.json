@@ -1,0 +1,20 @@
+{
+  "title": "BR market: ZPL format support for shipping documents",
+  "content": "## Summary\nTo better support our fulfillment APIs in the BR market, we've added the Zebra Programming Language (ZPL) format to our [Get Package Shipping Document](get-package-shipping-document) endpoint.\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* Brazil (BR)\n\nThis change applies to the following API version(s):\n\n* 202309 (and later)\n\n## API changes\n### Fulfillment APIs\n| **Endpoint(s)** | **Change(s)** |\n| --- | --- |\n| * Get Package Shipping Document | * Added new query parameter: `document_format`. <br> * Shipping labels can be printed as `PDF`(default) or `ZPL`(BR market only). |\n\n",
+  "update_time": "1748465728",
+  "view_count": 0,
+  "prev_document_id": "675f9886817e9b0311fbbdd4",
+  "prev_document_path": "when-sea-pop-sellers-add-edit-or-publish-global-products-by-api-some-specific-categories-will-be-prohibited-and-restricted-directly",
+  "next_document_id": "682e40f58d17bd04a10a1d96",
+  "next_document_path": "us-market-tiktok-shipping-label-allocation",
+  "is_api_doc": false,
+  "document_id": "680bec69106224049782f255",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

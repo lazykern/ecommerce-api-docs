@@ -1,0 +1,20 @@
+{
+  "title": "Make your first API call overview",
+  "content": "Before you begin this tutorial to make your first TikTok Shop API call, you need to have a [TikTok Shop Partner Center](https://partner-sso.tiktok.com/account/login) account, and that account must be [registered as a developer](developer-onboarding).\nIf you've completed those steps, the tutorial to make your first TikTok Shop API call has the following steps:\n\n1. [Create a TikTok Shop App (OAuth client)](create-tts-app-oauth-client)\n2. [Create a test seller account](create-test-seller-account)\n3. [Generate a test access token](generate-test-access-token)\n4. [Create a hash to sign your test API call](create-hash-to-sign-your-test-api-call)\n5. [Call Get Authorized Shops](call-get-authorized-shops)\n\n## Next steps\nThe first step in making your first TikTok Shop API call is to [Create a TikTok Shop App (OAuth client)](create-tts-app-oauth-client).\n\n",
+  "update_time": "1752016832",
+  "view_count": 0,
+  "prev_document_id": "678e3a3b9c908d03044b58e9",
+  "prev_document_path": "authorization-via-app-store",
+  "next_document_id": "686da778633023048bd10368",
+  "next_document_path": "create-tts-app-oauth-client",
+  "is_api_doc": false,
+  "document_id": "686da776c4c6e104a77d0f99",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

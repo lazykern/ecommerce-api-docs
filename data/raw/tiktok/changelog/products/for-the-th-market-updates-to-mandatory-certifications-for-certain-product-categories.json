@@ -1,0 +1,20 @@
+{
+  "title": "For the TH market: Updates to mandatory certifications for certain product categories",
+  "content": "# What is changing?\nFor the TH market, TikTok Shop is implementing new Mandatory Qualifications for certain product categories.\n| **Category** | **New requirement Mandatory Qualifications** |\n| --- | --- |\n| Tools & Hardware > Hand Tools > Industrial Scales | Important Document Showing Certification of Weights and Measures |\n| Kitchenware > Kitchen Utensils & Gadgets > Kitchen Scales | Image of product with 'Do not use the scale for trading' mark |\n| For multiple categories of Household Appliances | TIS Certificate Mark on Product Label |\n\nStarting from **2024-09-10**, Products API will be updated to require the above Mandatory Certifications.\n# Which markets are affected?\nThe updates of the requirements apply to the local and cross-border sellers in the TH market\n# Who is affected?\nDevelopers with applications that use [Create Product](create-product), [Edit Product](edit-product), and [Partial Edit Product](partial-edit-product)\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nWithout mandatory attributes and product certifications for products within specific categories, sellers will not be able to create and update products.\nUse the Get Category Rule to check what product certifications are required and pass the product certification files via the Create Product, Edit Product and Partial Edit Product to help sellers submit product certification.\n\n",
+  "update_time": "1721068024",
+  "view_count": 0,
+  "prev_document_id": "668c6009737c3702ef0269df",
+  "prev_document_path": "new-fields-added-to-product-api-for-shop-ads",
+  "next_document_id": "66957b8688c8b702f75ff09c",
+  "next_document_path": "new-promotion-apis-gift-with-purchase-and-free-sample",
+  "is_api_doc": false,
+  "document_id": "6695695742784f0300c36d38",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

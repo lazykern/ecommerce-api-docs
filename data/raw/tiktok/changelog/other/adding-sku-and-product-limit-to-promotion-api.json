@@ -1,0 +1,25 @@
+{
+  "title": "Adding SKU and product limit to Promotion API",
+  "content": "# What is changing?\nWhen using [Update Activity Product](update-activity-product) and [Remove Activity Product](remove-activity-product) endpoints, a list of product_id and sku_id parameters is passed to determine which products and SKUs are updated or removed for certain promotional activity.\nStarting from **August 21, 2024**, we will enforce a limit of 300 SKUs and 300 products per API call for these two endpoints. Any API calls that exceed this limit will fail and return a specific error code \"17029046\".\n# Which markets are affected?\nThe update applies to the local and cross-border sellers in **ALL** the markets\n# Who is affected?\nDevelopers with applications that use [Update Activity Product](update-activity-product) and [Remove Activity Product](remove-activity-product)\n# Which version is applicable?\nThe limits apply to all versions of the related APIs\n# What action is required?\nPlease ensure your usage complies with this new limit to avoid disruptions in service.\n\n",
+  "update_time": "1722492385",
+  "view_count": 0,
+  "prev_document_id": "6626f71ad3869d02da297554",
+  "prev_document_path": "ard-updates",
+  "next_document_id": "66f304521006d602ec0d54a4",
+  "next_document_path": "reminder-legacy-api-sunsets-on-dec-31-2024",
+  "is_api_doc": false,
+  "document_id": "66ab20d2d452bf02e7ef8f3b",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

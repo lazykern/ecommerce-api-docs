@@ -1,0 +1,20 @@
+{
+  "title": "(24) FBT inventory update",
+  "content": "## Trigger scenario\nThis webhook is triggered when the FBT inventory updates.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| Parameter Name <!-- width:240px --> | Data Type | Sample | Description |\n| --- | --- | --- | --- |\n| type | int | `24` | The ID of this webhook topic, which is 24. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ goods_id | string | `\"732357708734418520388\"` | FBT goods ID. |\n| └ sku_id | string | `\"123513234\"` | TikTok Shop SKU ID. |\n| └ fbt_warehouse_inventory | []object |  | Inventory in different FBT warehouses. |\n| └└ fbt_warehouse_id | string | `\"73823232239293999999\"` | ID of the FBT warehouse. |\n| └└ on_hand_detail | object |  | The number of units physically in the warehouse, excluding those in transit or damaged. |\n| └└└ total_quantity | int | `7` | The total number of units. |\n| └└└ reserved_quantity | int | `5` | The number of units reserved for confirmed orders and yet to be outbound. |\n| └└└ available_quantity | int | `2` | The number of units available for sale. This does not include reserved units. |\n| └ update_time | int | `1644412845` | The time when the action occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 24,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"goods_id\": \"732357708734418520388\",\n    \"sku_id\": \"123513234\",\n    \"fbt_warehouse_inventory\": [\n        {\n            \"fbt_warehouse_id\": \"73823232239293999999\",\n            \"on_hand_detail\": {\n                \"total_quantity\": 7,\n                \"reserved_quantity\": 5,\n                \"available_quantity\": 2\n            }\n        }\n    ],\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+  "update_time": "1751450076",
+  "view_count": 0,
+  "prev_document_id": "6708f86aed6fab0308fa780e",
+  "prev_document_path": "23-goods-match",
+  "next_document_id": "650301af5a12ff0294ea3bf9",
+  "next_document_path": "3-recipient-address-update",
+  "is_api_doc": false,
+  "document_id": "6708f86d24e99e035deee8b9",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

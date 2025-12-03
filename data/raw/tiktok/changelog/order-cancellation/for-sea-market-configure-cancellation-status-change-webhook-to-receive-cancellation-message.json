@@ -1,0 +1,25 @@
+{
+  "title": "For SEA market: Configure \"Cancellation status change\" webhook to receive cancellation message",
+  "content": "Since TikTok Shop is proposing to allow buyers to cancel eligible orders between the status Ready To Ship (RTS) and Transit To Ship (TTS), please configure the \"[Cancellation status change](https://partner.tiktokshop.com/docv2/page/11-cancellation-status-change)\" webhook to receive cancellation messages. If sellers receive such a cancellation message, they need to takeout the parcel and do not ship it.\nThis webhook's related links are as below:\n\n* \"Cancellation status change\" webhook: https://partner.tiktokshop.com/docv2/page/11-cancellation-status-change\n* Webhook overview: https://partner.tiktokshop.com/docv2/page/tts-webhooks-overview\n* Webhook configuration guide: https://partner.tiktokshop.com/docv2/page/configuration-guide\n\nIf you have configured this webhook, please ignore this change log.\n# Which markets are affected?\nThe updates of the requirements apply to the Local to Local sellers for Singapore, Philippines, Vietnam, Thailand, Malaysia and Indonesia markets.\n# Who is affected?\nDevelopers with applications that use Cancellation, Return or Refund related functions.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related webhook.\n# What action is required?\nDevelopers need to config \"[Cancellation status change](https://partner.tiktokshop.com/docv2/page/11-cancellation-status-change)\" webhook to receive cancellation messages. If developers have configured this webhook, please ignore this change log.\n",
+  "update_time": "1760412719",
+  "view_count": 0,
+  "prev_document_id": "68c3c9a9b084cc049407fce8",
+  "prev_document_path": "c44syeeb",
+  "next_document_id": "6879c09e150e8c0490284099",
+  "next_document_path": "updates-to-product-errors",
+  "is_api_doc": false,
+  "document_id": "68edc38c6f0c12048cfdafb1",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "US, UK, and SEA markets: Pre-order and made-to-order product types",
+  "content": "## Summary\nWe're introducing a couple of new `pre_sale` product types to better support TikTok Shop seller needs. There are a couple key business logic distinctions based on the market, as follows:\n\nFor the **US** market, this includes pre-order and made-to-order products:\n\n* **Pre-order**: The buyer can place an order for a product before a **fixed** release date set by the seller.\n* **Made-to-order**: The buyer can place an order for a customized product that is made-to-order. The shipping lead time depends on the order placement date/time, as well as the production time required for each individual order, rather than a fixed release date.\n* **Custom**: The seller can select a specific SKU and set a handling time that's longer than the platform policy of 3 business days. The estimated delivery time and late dispatch evaluation will be based on the handling time set.\n\nFor the **UK** and **SEA** markets, this is currently limited to pre-order products only:\n\n* **Pre-order**: The buyer can place an order for a product before release, but the shipping lead time depends on the order placement date/time and the production time required for each individual order, rather than a fixed release date.\n\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* United States (US)\n* United Kingdom (UK)\n* Southeast Asia (SEA)\n\nThis change applies to the following API version(s):\n\n* 202309 (and later)\n\n## What's changing?\n### Product APIs\n| **Endpoint(s)** | **Change(s)** |\n| --- | --- |\n| * [Get Category Rules](get-category-rules) | New response parameter, `allowed_special_product_types`: The list of special product types that are allowed for your shop in this category. If no special types are allowed, this parameter is omitted. |\n| * [Create Product](create-product#Back%20To%20Top) <br> * [Edit Product](edit-product) <br> * [Partial Edit Product](partial-edit-product) | New request body parameter, `pre_sale`: SKU pre-sale information, used to tag a product as a pre-sale product based on its pre-sale type. Applicable only if `allowed_special_product_types` from Get Category Rules is not empty. |\n| * [Check Product Listing](check-product-listing#Back%20To%20Top) <br> * [Search Products](search-products) <br> * [Get Product](get-product) | New response parameter, `pre_sale`: SKU pre-sale information, used to tag a product as a pre-sale product based on its pre-sale type. If this is not returned, it indicates that the product is a regular (not pre-sale) item. |\n## Related changes\n\n* [US market: Pre-order, made-to-order, back-order functionality; delivery SLA](us-market-pre-order-made-to-order-back-order-functionality-delivery-sla)\n\n\n",
+  "update_time": "1748465732",
+  "view_count": 0,
+  "prev_document_id": "680ffa16ad835c04a2d81b79",
+  "prev_document_path": "us-market-supplementary-sku-images",
+  "next_document_id": "682ede19f8268a04839b6627",
+  "next_document_path": "us-market-updates-to-mandatory-attributes",
+  "is_api_doc": false,
+  "document_id": "68114772d5057104a0411e8e",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

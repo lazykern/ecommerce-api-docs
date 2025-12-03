@@ -1,0 +1,25 @@
+{
+  "title": "For SEA market: Upcoming changes on tracking number availability",
+  "content": "# What is changing?\nIn the past, the tracking_number field was automatically populated when you fetched package information from APIs.\nOn January 25, 2024, we announced an update for the tracking_number field remaining empty before package shipping. Learn more about this announcement from our [changelog](for-sea-market-upcoming-changes-on-tracking-number-availability-in-orders-api). This is the second time announcement for this upcoming API change.\nStarting from **May 31, 2024**, when retrieving package information from [Get Package Detail](get-package-detail), [Get Order Detail](get-order-detail) and [Get Order List](get-order-list), the tracking_number field will remain empty until the package is shipped or shipping label is printed.\n# Which markets are affected?\nThis change applies to local shops and cross-border shops in TH, SG, MY, PH, VN markets, and local shops in the ID market.\n# Who is affected?\nDevelopers with apps that retrieve order and package information should take note of this change.\n# Which version is applicable?\nThis change applies to all versions of the [Get Package Detail](get-package-detail), [Get Order Detail](get-order-detail) and [Get Order List](get-order-list).\n# What action is required?\nIf your application relies on the tracking_number before the package is shipped or shipping label is created, you'll need to update your code before **May 31, 2024**, to prevent any disruptions.\nMoreover, for sellers using TikTok Shipping as their shipping method, it's not necessary to supply the tracking_number when calling the Ship Package API.\n\n",
+  "update_time": "1713460219",
+  "view_count": 0,
+  "prev_document_id": "660e1827941bca02c0aaab6c",
+  "prev_document_path": "virtual-bundles-are-now-available-in-order-details",
+  "next_document_id": "67c8ed2e2b63a404b7ad64ce",
+  "next_document_path": "auto-combine-order-id-available-in-order-details-for-live-sessions",
+  "is_api_doc": false,
+  "document_id": "662153a2bfca1402d27eb5f5",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

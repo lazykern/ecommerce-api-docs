@@ -1,0 +1,25 @@
+{
+  "title": "For SEA Market: Recommended Default Order Sorting Logic to Support Fast Delivery Service",
+  "content": "With the rollout of new fast delivery services across SEA (including Next Day Delivery, Instant, and Same Day), it's important to help merchants prioritize these fast delivery orders effectively. \nWe recommend developers to update your **default sorting logic** to support merchants with better order processing prioritization.\nThe sorting will **require 2 layers**:\n\n1. Shipping SLA (`tts_sla_time`)\n2. Logistics Priority (`fulfillment_priority_level`)\n\nFor comprehensive details about this change and the required actions, please review the following content. The change will be effective on September 30, 2025.\n# Which markets are affected?\nThe updates of the requirements apply to the local sellers in the ID, SG, PH, VN, TH and MY markets.\n# What action is required\nDevelopers need to adjust your default sorting logic to follow platform strategy.\n# API changes\n## Fulfillment APIs\n| **Sorting layer** | **API** | **Field name** | **Type** | **Field Value** | **Changing log** |\n| --- | --- | --- | --- | --- | --- |\n| Primary | [Get Order Detail](https://partner.tiktokshop.com/docv2/page/get-order-detail-202309), <br> [Get Order List](https://partner.tiktokshop.com/docv2/page/get-order-list-202309) | `tts_sla_time` | `int` | The latest collection time specified by the platform. Unix timestamp. | * For \"Next day delivery\" order, tts_sla_time is fast delivery deadline. <br> * For other orders, there is no change. |\n| Secondary |  | `fulfillment_priority_level` <br>  | `int` <br>  | Fulfillment priority value that can be used for sorting. <br> Available values: <br> `100` = Instant <br> `200` = Sameday 8 hours <br> `300` = Sameday <br> `400` = Next Day Delivery <br> `500` = Express <br> `600` = Standard <br> `700` = Economy <br> `800` = Cargo | This is a new field added |\n",
+  "update_time": "1754365956",
+  "view_count": 0,
+  "prev_document_id": "682e40f58d17bd04a10a1d96",
+  "prev_document_path": "us-market-tiktok-shipping-label-allocation",
+  "next_document_id": "69015eaf5b602804822560ba",
+  "next_document_path": "gt8qv13g",
+  "is_api_doc": false,
+  "document_id": "68917f7c4d7a56049a5a0ef1",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

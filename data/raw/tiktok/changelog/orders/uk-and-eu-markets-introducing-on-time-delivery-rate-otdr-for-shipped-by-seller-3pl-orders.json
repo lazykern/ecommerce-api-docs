@@ -1,0 +1,20 @@
+{
+  "title": "UK and EU markets: Introducing On Time Delivery Rate (OTDR) for Shipped by Seller (3PL) Orders ",
+  "content": "# Summary\n**On Time Delivery Rate** (OTDR) is a measurement used to assess a seller's ability to fulfill customer orders within the promised delivery timeframe. OTDR is defined as the percentage of all packages (delivered over a period of 7 calendar days) that take less than **5 business days** to be delivered. \n\nFrom **August 25th, 2025**, sellers in the UK and EU using the **Shipped by Seller** (3PL) fulfillment method will receive `delivery_sla_time` data with each order, enabling better management of delivery expectations. OTDR will impact shop health in the future.\n# Impact\n|  |  |\n| --- | --- |\n| Impacted market(s) | * United Kingdom (UK) - Local and cross-border <br> * Europe (EU) - Local |\n| Impacted version(s) | * 202309 (and later) |\n# What's new?\nWhile we aren't introducing any new endpoints or parameters, the existing`delivery_sla_time `parameter in the **** [POST Get Order List ](https://partner.tiktokshop.com/docv2/page/get-order-list-202309)and **** [GET Order Details](https://partner.tiktokshop.com/docv2/page/get-order-detail-202507) APIs will be populated with data in the **UK** and **EU** going forward.\n| Parameter | Type | Sample | Description |\n| --- | --- | --- | --- |\n| `delivery_sla_time` <br>  | int64 | 1678389618 | Order should arrive by this date to be considered on-time and to avoid late delivery penalties. |\n# Next steps\nEnsure your application can safely handle the additional field data in the response.\nUpdate your integration to **pass** **`delivery_sla_time` back to your Order Management System (OMS)** so that sellers are aware of the delivery SLA time for each order.\n# Related changes\n| **Changelog** | **Description** |\n| --- | --- |\n| [US market: Pre-order, made-to-order, back-order functionality; delivery SLA](https://partner.tiktokshop.com/docv2/page/us-market-pre-order-made-to-order-back-order-functionality-delivery-sla) | Original changelog for US market introduction of `delivery_sla_time `parameter. |\n",
+  "update_time": "1756928427",
+  "view_count": 0,
+  "prev_document_id": "6838d11c66af0d04a7c2a149",
+  "prev_document_path": "br-and-mx-markets-changes-to-name-logic",
+  "next_document_id": "68e6a1118e2c77049551eb08",
+  "next_document_path": "8cpq7zt5",
+  "is_api_doc": false,
+  "document_id": "68b895bfc2ee02049b660272",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

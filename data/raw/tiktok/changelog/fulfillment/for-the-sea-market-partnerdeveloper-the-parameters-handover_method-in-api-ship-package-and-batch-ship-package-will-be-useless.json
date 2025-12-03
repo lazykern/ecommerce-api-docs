@@ -1,0 +1,20 @@
+{
+  "title": "For the SEA market partner&developer: The parameters \"handover_method\" in API Ship Package and Batch Ship Package will be useless",
+  "content": "# What is changing?\nFrom June 17, 2024, Platform updated the collection method to support sellers to choose different collection methods for different warehouse content. The parameters \"handover_method\" in api Ship Package and Batch Ship Package will be useless from Oct. 30, 2024.\n# Which markets are affected?\nThe updates of the requirements apply to the local sellers in the ID, SG, PH, VN, TH and MY markets.\n# Who is affected?\nDevelopers with applications that use api Ship Package and Batch Ship Package.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nDevelopers need to check whether to use handover_method to update the collection method. It will be useless.\nIf sellers want to know the order's collection method, they need to go to Seller Center to see the setting of related warehouses. The path is \"Orders\"->\"Manage Orders\"->\"Fulfillment settings\"->\"Collection method settings\".\n\n",
+  "update_time": "1727084117",
+  "view_count": 0,
+  "prev_document_id": "6543158d6f932c02ba1b78a8",
+  "prev_document_path": "for-local-sellers-in-us-market-warning-information-added-to-mark-package-as-shipped-api",
+  "next_document_id": "675f9886817e9b0311fbbdd4",
+  "next_document_path": "when-sea-pop-sellers-add-edit-or-publish-global-products-by-api-some-specific-categories-will-be-prohibited-and-restricted-directly",
+  "is_api_doc": false,
+  "document_id": "66f1364a332c7c02ff0459c7",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

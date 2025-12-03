@@ -1,0 +1,25 @@
+{
+  "title": "Sunsetting listing schemas endpoint",
+  "content": "## Summary\nThe Listing Schema endpoint will be sunset on **August 31, 2024**.\n## Affected Markets and API Versions\nThis change is for all markets and all API versions.\n## Required Actions\nThe capabilities of the Listing Schema endpoint can be fulfilled by the [Get Attributes](get-attributes) and [Get Category Rules](get-category-rules) endpoints, which will remain available. Please transition to using these two endpoints and discontinue using the Listing Schema endpoint in your app by August 31, 2024.\n\n",
+  "update_time": "1724641778",
+  "view_count": 0,
+  "prev_document_id": "66c5d9b4e863d902fac36b74",
+  "prev_document_path": "new-webhook-product-creation",
+  "next_document_id": "66df5a6a6ad64c02fa1a9550",
+  "next_document_path": "uk-market-mandatory-hazmat-attributes-added",
+  "is_api_doc": false,
+  "document_id": "66cbf1e7597571030d9e5fdb",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "TikTok Shop developer guide",
+  "content": "Welcome to the Developer Guide for the TikTok Shop API.\n\nThe TikTok Shop API provides programmatic access to the TikTok Shop platform for TikTok Shop application and service integrators.\n\nIf you're just getting started, we recommend you start with the TikTok Shop API [Get started overview](/4n48cxi1/tts-developer-types). You can learn more about [Developer onboarding](/4n48cxi1/developer-onboarding), and how to get access to Seller data in the  [Authorization overview (202407)](/4n48cxi1/authorization-overview-202407).\n\nWe also have a full API reference section organized by TikTok Shop data domain:\n\n   * [Seller API overview](/605hu9kk/seller-api-overview)\n   * [Products API overview](/605hu9kk/products-api-overview)\n   * [Order API overview](/605hu9kk/order-api-overview)\n   * [Fulfillment API overview](/605hu9kk/fulfillment-api-overview)\n   * [Logistic API overview](/605hu9kk/logistic-api-overview)\n   * [Finance API overview](/605hu9kk/finance-api-overview)\n   * All other domains are included in the \"API Reference\" tab.\n\n\nFor more details about how to integrate with each domain's API, we've created a set of use case guides to walk you through some common integration scenarios with code flow diagrams.\n\nWe also provide a full set of webhooks that your application can subscribe to and get notifications from the TikTok Shop platform. Learn more in the webhooks [Overview](/4n48cxi1/tts-webhooks-overview).\n\nIf you're looking for more information about including your application in the TikTok Shop App Store, see the [App development overview](/4n48cxi1/app-development-overview).\n## Next steps\nIf you're new to the TikTok Shop API, the best place to start is the [Get started overview](/4n48cxi1/tts-developer-types).\n\n",
+  "update_time": "1760689254",
+  "view_count": 0,
+  "prev_document_id": "6746beaec77842030e83274c",
+  "prev_document_path": "6746beaec77842030e83274c",
+  "next_document_id": "6789f72c92b0f403149035d0",
+  "next_document_path": "tts-developer-types",
+  "is_api_doc": false,
+  "document_id": "656559fcf4488c02dfe8ce82",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

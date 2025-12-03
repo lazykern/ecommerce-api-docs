@@ -1,0 +1,20 @@
+{
+  "title": "(13) New conversation",
+  "content": "# 1. Trigger scenario\nThis **new conversation** webhook is triggered when a customer service agent joins or leaves a conversation.\nWe recommend refreshing the conversation list when receiving this event.\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| conversation_id | string | 576486316948490001 | The identification of the conversation |\n| create_time | int | 1627587506 | Conversation creation time, represented as a Unix timestamp (in seconds). |\n## Event example\n```JSON\n{\n  \"type\": 13,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {    \n    \"conversation_id\": \"576486316948490001\",\n    \"create_time\": 1627587506\n  }\n}\n```\n\n\n",
+  "update_time": "1751450044",
+  "view_count": 0,
+  "prev_document_id": "6790b76eb59cf9030997b783",
+  "prev_document_path": "33-new-message-listener",
+  "next_document_id": "66143486ef8a1202dc323258",
+  "next_document_path": "14-new-message",
+  "is_api_doc": false,
+  "document_id": "6614330bfe9fdc02e002abfd",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

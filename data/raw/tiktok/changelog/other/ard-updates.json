@@ -1,0 +1,20 @@
+{
+  "title": "ARD updates",
+  "content": "# Summary\nThe [Connector ARD](connector-multi-channel-dropshipping-and-print-on-demand) has been updated to include a few new use cases, like:\n\n* On Hold Order Status\n* Get Warehouse API Calls\n* Toggle Options for Product fields\n* Listing Schemas for Categories\n* Check Prerequisites before product listing\n\nAdditionally, a new [Customer Service ARD](app-features) has also been published.\n\n",
+  "update_time": "1713829824",
+  "view_count": 0,
+  "prev_document_id": "661d36d77dcc9602c67ecd0a",
+  "prev_document_path": "development-shops-supports-creating-accounts-for-cross-border-shops",
+  "next_document_id": "66ab20d2d452bf02e7ef8f3b",
+  "next_document_path": "adding-sku-and-product-limit-to-promotion-api",
+  "is_api_doc": false,
+  "document_id": "6626f71ad3869d02da297554",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

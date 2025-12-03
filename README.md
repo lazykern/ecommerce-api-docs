@@ -56,6 +56,10 @@ uv run ecomdocs scrape shopee
 uv run ecomdocs scrape lazada
 # add --workers N or --output-dir PATH if needed
 
+uv run ecomdocs scrape tiktok
+# add --workers N or --output-dir PATH if needed
+# writes doc + spec JSON into data/raw/tiktok/ by default
+
 uv run ecomdocs build shopee-openapi
 # add --apis-dir PATH or --output-file PATH to override
 
@@ -66,6 +70,9 @@ uv run ecomdocs build lazada-guides
 # add --input-dir PATH or --output-dir PATH to override
 
 uv run ecomdocs build shopee-guides
+# add --input-dir PATH or --output-dir PATH to override
+
+uv run ecomdocs build tiktok-guides
 # add --input-dir PATH or --output-dir PATH to override
 ```
 

@@ -1,0 +1,20 @@
+{
+  "title": "New endpoint: Listing schema",
+  "content": "<span style=\"background-color: rgb(255, 245, 235)\">[📌 </span><span style=\"background-color: rgb(255, 245, 235)\"><strong>Retired: This API was retired on August 31, 2024 and is no longer available.]</strong></span>\n# What is changing?\nA new API endpoint is now added to return the field requirements for creating a product. By providing the leaf category ID, you can now obtain the field information and input methods for product creation requirements. **The endpoint is: Listing Schema**. Please refer to the API reference for detailed information.\n# Which markets are affected?\nThis change applies to **all markets**.\n# Who is affected?\nThis change applies to **all sellers**.\n# Which version is applicable?\nThis change is applicable to **v202401**.\n# What action is required?\nWe recommend adopting this API to cut down on the number of calls you have to make to get listing requirements. Previously, you had to make 3 API calls to get this information, now you can make just 1.\nOnce you have implemented this endpoint, you can call it to get listing requirements before calling the Create Product API.\n\n",
+  "update_time": "1706844061",
+  "view_count": 0,
+  "prev_document_id": "65a052028350e302e20d21f1",
+  "prev_document_path": "draft-status-available-for-create-product-api",
+  "next_document_id": "65bdc016ae1e2602d9a30922",
+  "next_document_path": "new-webhook-product-update",
+  "is_api_doc": false,
+  "document_id": "65bc5cf0e1a05b02db89d1a1",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

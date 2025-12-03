@@ -1,0 +1,20 @@
+{
+  "title": "(18) Product category change",
+  "content": "# 1. Trigger scenario\nWhen the category of a product is changed, all apps authorized by the shop (using `shop_id`) receive this webhook. When you receive the webhook, you can get more detailed product information by using the [Get Product](get-product) API.\nThis webhook is triggered regardless of how a product category is changed. Categories can be changed by the seller, developer, or TikTok Shop.\n# 2. Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `18` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| shop_id | string | `\"7494049642642441621\"` | The ID of the shop. |\n| timestamp | int | `1644412885` | The time when this webhook was triggered, represented by Unix timestamp. |\n| data | object |  |  |\n| └product_id | string | `\"789078671231\"` | ID of the product promoted in the creator's video. |\n| └previous_category_id | string | `\"600001\"` | The category ID of the product before the category update. |\n| └current_category_id | string | `\"600002\"` | The category ID of the product after the category update. |\n| └update_time | int | `1644412845` | The time when this category update happens, represented by Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 18,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"789078671231\",\n    \"previous_category_id\": \"600001\",\n    \"current_category_id\": \"600002\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+  "update_time": "1751450119",
+  "view_count": 0,
+  "prev_document_id": "663c98b566828e02e4515580",
+  "prev_document_path": "16-product-creation",
+  "next_document_id": "66befac437ede902f8dd21d1",
+  "next_document_path": "19-size-chart-change",
+  "is_api_doc": false,
+  "document_id": "668764a371f16d02eef1f393",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

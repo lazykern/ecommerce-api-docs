@@ -1,0 +1,20 @@
+{
+  "title": "Draft status available for Create Product API",
+  "content": "# What is changing?\nDraft products are products listed in Seller Center that can not be seen by customers. For sellers who don't have required product information, such as size charts or certifications, developers can use this feature to help sellers upload products as drafts first. Once uploaded, sellers can add the required information directly into Seller Center when they have it.\nDevelopers on the legacy version (v202212) can use `Create Draft Product (V1)` API to upload products as draft.\nDevelopers on the new version (v202309) don't have access to the above API, but instead can use [Create Product API](https://partner.tiktokshop.com/docv2/page/create-product) and pass `AS_DRAFT` to `save_mode` parameter in the request body.\n# Which markets are affected?\nThis change is applicable to **all markets**.\n# Who is affected?\n**All sellers** can take advantage of this new feature.\n# Which version is applicable?\nThis change is applicable to **v202309**.\n# What action is required?\nWe recommend updating the logic when calling Create Product listing to allow creating a product as draft.\n## Parameters\nNew parameter `save_mode` is available for developers. It is used to specify the mode in which the product is saved, and supports the following values:\n\n* **AS_DRAFT**\n* **LISTING**\n\n**Note:**If you omit providing save_mode, the default value is \"LISTING\".\n## Responses\n\n* When `save_mode` is `LISTING`, the API will behave the same as before, listing the products.\n* When `save_mode` is empty, the default value is LISTING.\n* When `save_mode` is `AS_DRAFT`, the API will save the product information as draft in the Seller Center without listing.\n\n## Error codes and messages\nNo changes to error codes or error messages.\n\n",
+  "update_time": "1705008440",
+  "view_count": 0,
+  "prev_document_id": "65a0406cb8a10102da32c57d",
+  "prev_document_path": "changes-to-create-product-and-edit-product-apis",
+  "next_document_id": "65bc5cf0e1a05b02db89d1a1",
+  "next_document_path": "new-endpoint-listing-schema",
+  "is_api_doc": false,
+  "document_id": "65a052028350e302e20d21f1",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

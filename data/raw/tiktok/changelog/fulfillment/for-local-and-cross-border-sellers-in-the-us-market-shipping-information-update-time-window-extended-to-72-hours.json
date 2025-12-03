@@ -1,0 +1,20 @@
+{
+  "title": "For local and cross-border sellers in the US market: Shipping information update time window extended to 72 hours",
+  "content": "# What is changing?\nEffective today, we have extended the time limit for updating shipping information from 36 hours to 72 hours via the [Update Shipping Info](update-shipping-info) and [Update Package Shipping Info](update-package-shipping-info) APIs. This change provides sellers with more flexibility to accommodate scenarios that might require shipping information updates beyond 36 hours (such as making changes to the carrier or tracking number).\n\n\nIf you attempt to update the shipping information after 72 hours, the API returns the following error:\n\n* **Error code:** 21011049\n* **Error message:** Because of the platform rules limitations, updating the tracking number failed.\n\n# Which markets are affected?\nThis change applies to cross-border and local sellers in the US market.\n# Who is affected?\nThis change affects developers with applications that utilize the Update Shipping Info and Update Package Shipping APIs.\n# What action is required?\nYou should adjust your time limit to accommodate the new 72-hour window if your application currently restricts shipping information updates to under 72 hours. Additionally, please ensure you inform sellers that they can only update shipping information within 72 hours post-shipment.\n\n",
+  "update_time": "1699947067",
+  "view_count": 0,
+  "prev_document_id": "654dc3fca1dde702c05579f8",
+  "prev_document_path": "new-shipping-label-format-launched-in-id-my-and-vn-markets",
+  "next_document_id": "655c6230f4488c02df97fb13",
+  "next_document_path": "for-local-sellers-in-uk-market-introducing-item-level-order-split-shipping",
+  "is_api_doc": false,
+  "document_id": "65532219ff8ea502bd3df6a2",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

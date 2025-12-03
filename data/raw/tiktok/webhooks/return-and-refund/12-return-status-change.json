@@ -1,0 +1,20 @@
+{
+  "title": "(12) Return status change",
+  "content": "# 1. Trigger scenario\nThe **return status change** webhook is triggered when the `return_status` of an order changes:\n\n* The `BUYER` initiates a return or refund request and is pending `SELLER` review: `RETURN_OR_REFUND_REQUEST_PENDING`\n* The `SELLER` declines the `BUYER`'s return or refund request: `REFUND_OR_RETURN_REQUEST_REJECT`\n* The return request is approved and the `SELLER` is waiting for the `BUYER` to return the approved items: `AWAITING_BUYER_SHIP`. If the `BUYER` doesn't ship the items to the `SELLER` before the deadline, the request will be closed automatically.\n* To return the items to the `SELLER`, the `BUYER` drops off the package successfully or the `BUYER` ships the package and uploads the tracking number: `BUYER_SHIPPED_ITEM`\n* The `SELLER` declines the refund request for the return: `REJECT_RECEIVE_PACKAGE`\n* The `SELLER` accepts the refund request or issues a refund for the return: `RETURN_OR_REFUND_REQUEST_SUCCESS`\n* The `BUYER` or `SYSTEM` closes the return or refund request: `RETURN_OR_REFUND__REQUEST_CANCELLED`\n* The return or refund is successful: `RETURN_OR_REFUND_REQUEST_COMPLETE`\n\nAdditionally, a `BUYER` may request an identical replacement item instead of a refund:\n\n* The `BUYER` initiates a replacement request and is pending `SELLER` review: `REPLACEMENT_REQUEST_PENDING`\n* The `SELLER` declines the `BUYER`'s replacement request: `REPLACEMENT_REQUEST_REJECT`\n* The `SELLER` decides to issue a refund to the `BUYER` without replacement: `REPLACEMENT_REQUEST_REFUND_SUCCESS`\n* The `BUYER` cancels the replacement request: `REPLACEMENT_REQUEST_CANCEL`\n* The `SELLER` approves the replacement request: `REPLACEMENT_REQUEST_COMPLETE`\n\n# 2. Data business parameters\n| **Parameter** | **Description** | **Sample** |\n| --- | --- | --- |\n| order_id | The identification of a TikTok Shop order | 577087614418520388 |\n| return_role | Return or refund request user, with possible values: <br>  <br> * BUYER <br> * SELLER <br> * SYSTEM | BUYER |\n| return_type | The return or refund request type, with possible values: <br>  <br> * REFUND <br> * REPLACEMENT <br> * RETURN_AND_REFUND | REFUND |\n| return_status | The return status for a request, with possible values: <br>  <br> * AWAITING_BUYER_SHIP <br> * BUYER_SHIPPED_ITEM <br> * REFUND_OR_RETURN_REQUEST_REJECT <br> * REJECT_RECEIVE_PACKAGE <br> * REPLACEMENT_REQUEST_CANCEL <br> * REPLACEMENT_REQUEST_COMPLETE <br> * REPLACEMENT_REQUEST_PENDING <br> * REPLACEMENT_REQUEST_REFUND_SUCCESS <br> * REPLACEMENT_REQUEST_REJECT <br> * RETURN_OR_REFUND_REQUEST_CANCEL <br> * RETURN_OR_REFUND_REQUEST_COMPLETE <br> * RETURN_OR_REFUND_REQUEST_PENDING <br> * RETURN_OR_REFUND_REQUEST_SUCCESS | RETURN_OR_REFUND_REQUEST_PENDING |\n| return_id | The identifier of a specific return | 4035318504086604100 |\n| create_time | The time when the request was created. | 1627587600 |\n| update_time | The time when return order status update, represented as a Unix timestamp (seconds). | 1627587600 |\n## Event example\n```JSON\n{\n  \"type\": 12,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"order_id\": \"576486316948490001\",\n    \"return_role\": \"BUYER\",\n    \"return_type\": \"REFUND\",\n    \"return_status\": \"RETURN_OR_REFUND_REQUEST_PENDING\",\n    \"return_id\": \"576486316948490001\",\n    \"create_time\": 1627587600\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+  "update_time": "1751450160",
+  "view_count": 0,
+  "prev_document_id": "67ff82ce550a99048d938b2e",
+  "prev_document_path": "39-activity-status-change",
+  "next_document_id": "65095746defece02be4d749d",
+  "next_document_path": "6-seller-deauthorization",
+  "is_api_doc": false,
+  "document_id": "65030162bb2a4d028d50cc51",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

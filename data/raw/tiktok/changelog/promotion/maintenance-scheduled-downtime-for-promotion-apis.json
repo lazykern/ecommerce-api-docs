@@ -1,0 +1,20 @@
+{
+  "title": "(MAINTENANCE) Scheduled downtime for Promotion APIs",
+  "content": "To support the Black Friday campaign, the **Promotion APIs** will undergo maintenance and will be temporarily unavailable. Normal operations will resume after the maintenance is complete.\n\n<span style=\"background-color: rgb(255, 245, 235)\">📌 </span><span style=\"background-color: rgb(255, 245, 235)\"><strong>Maintenance schedule: 2024.11.22 06:00 AM - 2024.11.27 06:00 AM (PST)</strong></span>\n\n**Affected markets**: United States\n**Affected APIs during the maintenance period**:\n\n* Create Activity API\n* Update Activity API\n* Deactivate Activity API\n* Get Activity API\n* Search Activities API\n* Update Activity Product API\n* Remove Activity Product API\n* Get Coupon API\n* Search Coupons API\n\n\n",
+  "update_time": "1732273225",
+  "view_count": 0,
+  "prev_document_id": "690e4911c6ef97049d5beb1b",
+  "prev_document_path": "sj5neagj",
+  "next_document_id": "68591ecdbaf007048f512484",
+  "next_document_path": "supplementary-notice-on-api-deprecation-finance-apis",
+  "is_api_doc": false,
+  "document_id": "6740642f29926a030df796bd",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Notice",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "For US market: New property address_level field added to Orders API",
+  "content": "# What is changing?\nTikTok Shop addresses are organized at a hierarchical level starting from L0 to L3. For example,address level L3 is always a \"City\". The objects in the `district_info` list in the Orders API now include more information about this hierarchy by including a new `address_level` field which can be one of `[\"L0\", \"L1\", \"L2\", \"L3\"]`.\n# Which markets are affected?\nThis change is only for US markets.\n# Who is affected?\nOnly local sellers who build Connector apps, Multi-Channel Management apps and Direct Integration are affected.\n# Which version is applicable?\nThis change is for **v202309** only, and the legacy API will not be changed.\n# What action is required?\nWe recommend adopting your code to look for these levels as that will provide a more holistic overview of which field to parse. Integrate the \"address level\" (L0, L1, L2, L3) and regard it as from high level to low level. For example, L3 address level in the US is city, so use L3 address value to map the value to the \"city\" field in external system Shopify or WooCommerce.\n| Region | L0 | L1 | L2 | L3 |\n| --- | --- | --- | --- | --- |\n| US | US | State | County | City |\n| US | US | State | Borough | City |\n| US | US | State | Parish | City |\n| US | US | State | City | City |\n| US | US | Federal District | County | City |\n## Get Order List and Get Order Detail\n### Parameters\nNo change\n### Responses\nThe response now contains `district_info.address_level`, with enumerated values `[\"L0\", \"L1\", \"L2\", \"L3\"]`. For different markets ( related to country or region in the real world), same address level value represents different district levels. Please see the table above for the nuances in addresses for the US market.\n| Properties |  |  | Type | Sample | Properties description |\n| --- | --- | --- | --- | --- | --- |\n| code |  |  | int | 0 | Return code for the API call |\n| message |  |  | string | Success | Explanation of the return code for the API call. |\n| request_id |  |  | string | 202203070749000101890810281E8C70B7 | Request log |\n| data |  |  | object |  | Specific return information |\n| └ |  | order_id | string | 576461413038785752 | Tiktok shop order id |\n| └ |  | district_info |  |  |  |\n| └ | └ | address_level_name | string | Country | The name of administrative division that can be used by seller for ship. e.g. state/county/city/district/town etc. |\n| └ | └ | address_name | string | United Kingdom | Administrative area name. eg: London |\n| └ | └ | address_level | string | L0 | Administrative district level code. eg. US is L0 |\n### Error code/message\nNo change\n\n",
+  "update_time": "1712164837",
+  "view_count": 0,
+  "prev_document_id": "65e97f2d27659802db37f0cf",
+  "prev_document_path": "for-us-market-replacement-orders-now-available",
+  "next_document_id": "660d8ff9a2d6d902c70a043f",
+  "next_document_path": "for-uk-market-support-item-level-cancellation",
+  "is_api_doc": false,
+  "document_id": "660d8bab589cba02c0ee3c28",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

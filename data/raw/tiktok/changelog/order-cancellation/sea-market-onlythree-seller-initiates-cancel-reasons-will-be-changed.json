@@ -1,0 +1,25 @@
+{
+  "title": "SEA market only:Three Seller Initiates Cancel Reasons will be changed",
+  "content": "# What is changing?\nFrom August 31 2025, three seller initiates cancellation reasons will be changed.\n\n1. \"seller_cancel_paid_reason_address_not_deliver\" will be removed in Indonesia, Philippines, Vietnam, Malaysia and Thailand markets.\n2. \"seller_cancel_unable_to_deliver_to_buyer_address\" will be removed in Singapore market.\n3. \"seller_cancel_reason_out_of_stock\" will be adjusted from \"Buyer Fault\" to \"Seller Fault\" in Indonesia market.\n\n# Which markets are affected?\nThe updates of the requirements apply to the Local to Local sellers for Singapore, Philippines, Vietnam, Thailand, Malaysia and Indonesia markets.\n# Who is affected?\nDevelopers with applications that use Cancel Order.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nDevelopers need to check whether to use these APIs and handle the related error messages.\n\n",
+  "update_time": "1752560551",
+  "view_count": 0,
+  "prev_document_id": "65852b58bb426602df90ebba",
+  "prev_document_path": "removal-of-unable-to-deliver-to-buyer-address-as-cancellation-reason-in-id-vn-th-sg-ph-markets",
+  "next_document_id": "68c3c9a9b084cc049407fce8",
+  "next_document_path": "c44syeeb",
+  "is_api_doc": false,
+  "document_id": "6875f39c5c6c9604a9e53580",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

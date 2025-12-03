@@ -1,0 +1,20 @@
+{
+  "title": "For UK market: Support item level cancellation",
+  "content": "# What is changing?\nThe UK market now supports item level cancellations. Sellers are not forced to cancel the entire order when a single item cannot be fulfilled, they can now cancel the single item that is unable to be fulfilled.\nPlease note that item level cancellation is only available when an item is out of stock. Single item cancellations under other scenarios or for other reasons is not supported.\nAs of this change, item level cancellations (fka partial cancellations) are now supported in US and UK.\n# Which markets are affected?\nThis change extends support for partial cancellations to the UK market.\n# Who is affected?\nAny developer who handles shipping, fulfillment or returns and deals with cancellation requests can adopt these changes. It is applicable to both local and cross-border sellers.\n# Which version is applicable?\nThis change is only for **v202309**. Legacy APIs will not have support for item level cancellations.\n# What action is required?\nDevelopers need to update the business logic for handling cancellations when calling [Cancel Order API](cancel-order) such that they can now provide `order_line_item_ids` in the request body as part of the `skus` array.\nFailure to integrate partial cancellations would mean that sellers will be forced to cancel the entire order and lead to poor user experience for the seller and the buyer.\n\n",
+  "update_time": "1712167614",
+  "view_count": 0,
+  "prev_document_id": "660d8bab589cba02c0ee3c28",
+  "prev_document_path": "for-us-market-new-property-address-level-field-added-to-orders-api",
+  "next_document_id": "660e1827941bca02c0aaab6c",
+  "next_document_path": "virtual-bundles-are-now-available-in-order-details",
+  "is_api_doc": false,
+  "document_id": "660d8ff9a2d6d902c70a043f",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "(11) Cancellation status change",
+  "content": "# 1. Trigger scenario\nThe **cancellation status change** webhook is triggered when the `cancel_status` of an order changes:\n\n* An order cancellation is initiated: `CANCELLATION_REQUEST_PENDING`\n* An order cancellation is accepted by the `SELLER` or `SYSTEM`: `CANCELLATION_REQUEST_SUCCESS`\n* An order cancellation is closed by the `BUYER` or `SYSTEM`: `CANCELLATION_REQUEST_CANCELLED`\n* An order cancellation is successful and a refund is issued: `CANCELLATION_REQUEST_COMPLETE`\n\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| order_id | 577087614418520388 | The identification of a TikTok Shop order |\n| cancellations_role | BUYER | The user who initiated a cancellation, with possible values: <br>  <br> * BUYER <br> * SELLER <br> * SYSTEM |\n| cancel_status | CANCELLATION_REQUEST_PENDING | Order cancellation status, with possible values: <br>  <br> * CANCELLATION_REQUEST_PENDING <br> * CANCELLATION_REQUEST_SUCCESS <br> * CANCELLATION_REQUEST_CANCELLED <br> * CANCELLATION_REQUEST_COMPLETE |\n| cancel_id | 4035318504086604100 | The identifier of a specific order cancellation |\n| create_time | 1627587600 | The time when the buyer initiated the cancellation request, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 11,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"order_id\": \"576486316948490001\",\n    \"cancellations_role\": \"BUYER\",\n    \"cancel_status\": \"CANCELLATION_REQUEST_PENDING\",\n    \"cancel_id\": \"4035318504086604100\",\n    \"create_time\": 1627587600\n  }\n}\n```\n\n\n",
+  "update_time": "1751450095",
+  "view_count": 0,
+  "prev_document_id": "650300b8a57708028b430b4a",
+  "prev_document_path": "1-order-status-change",
+  "next_document_id": "650956aff1fd3102b90b6261",
+  "next_document_path": "5-product-status-change",
+  "is_api_doc": false,
+  "document_id": "65030150746462028285f657",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

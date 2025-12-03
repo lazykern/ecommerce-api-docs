@@ -1,0 +1,20 @@
+{
+  "title": "(52) Global listing method change",
+  "content": "# 1. Trigger scenario\nThis webhook is triggered when the global listing method for a shop changes.\n**Applicable only for global sellers.**\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](https://partner.tiktokshop.com/docv2/page/access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 52 | The ID of this webhook topic, which is 52. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| seller_open_id | string | \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\" | The open_id of the seller. For more information, refer to [Authorization overview](https://partner.tiktokshop.com/docv2/page/authorization-overview-202407). |\n| data | object |  |  |\n| └ global_product_id | string | \"1729715829872102020\" | The global product ID associated with the local product. |\n| └ local_product_id | []string | [\"1731711955927208538\"] | The local product ID. |\n| └ listing_method | string | \"GLOBAL_PUBLISHING\" | The listing method applicable to the local product. <br> Possible values: <br>  <br> * GLOBAL_PUBLISHING: Create a global product, then publish it to target local markets. <br> * LOCAL_REPLICATION: Create local product, then replicate it to other target local markets. |\n\n---\n\n\n## Event example\n```JSON\n{\n    \"type\": 52,\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"timestamp\": 1644412885,\n    \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"\n    \"data\": {\n        \"global_product_id\": \"1729715829872102020\",\n        \"local_product_id\": [\"1731711955927208538\"],\n        \"listing_method\": \"GLOBAL_PUBLISHING\"\n            }\n        }\n    }\n}\n```\n\n",
+  "update_time": "1756914700",
+  "view_count": 0,
+  "prev_document_id": "68b83e1629f2990489c3d277",
+  "prev_document_path": "7nzxgima",
+  "next_document_id": "67ff82ce550a99048d938b2e",
+  "next_document_path": "39-activity-status-change",
+  "is_api_doc": false,
+  "document_id": "68b84210d40cf204a17e4d27",
+  "doc_type": 2,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

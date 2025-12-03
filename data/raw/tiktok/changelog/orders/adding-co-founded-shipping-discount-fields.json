@@ -1,0 +1,20 @@
+{
+  "title": "Adding co-founded shipping discount fields",
+  "content": "## What is changing?\nYou can improve your order details page to better display Co-Funded Free Shipping (CFFS) in select US and UK markets. These updates will clarify how much sellers will be reimbursed when CFFS applies, enhancing their understanding of the program compared to previous Free Shipping initiatives. The changes are expected to improve the seller experience while reducing confusion and support inquiries.\n## Which markets and versions are affected?\nThis change applies to local sellers in the US and UK markets.\n## API Changes\nTHere are three different line items to represent discounts:\n\n* Shipping Fee Seller Discount\n* Shipping Fee Platform Discount\n* Seller Co-Funded Shipping Discount\n\nPlease refer to the [GET Order Details API](get-order-detail) for more information about this change.\n\n",
+  "update_time": "1741314961",
+  "view_count": 0,
+  "prev_document_id": "67c8ed2e2b63a404b7ad64ce",
+  "prev_document_path": "auto-combine-order-id-available-in-order-details-for-live-sessions",
+  "next_document_id": "680febada6eb9c049050ea37",
+  "next_document_path": "us-market-pre-order-made-to-order-back-order-functionality-delivery-sla",
+  "is_api_doc": false,
+  "document_id": "67ca5b63fc1c0704c4484a75",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

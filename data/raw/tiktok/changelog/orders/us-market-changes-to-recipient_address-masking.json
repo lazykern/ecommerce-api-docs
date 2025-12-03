@@ -1,0 +1,25 @@
+{
+  "title": "US market: Changes to recipient_address masking",
+  "content": "## Summary\nWe'll be making some upcoming customer data desensitization changes, specifically which `recipient_address`-related parameters are masked in the API response for our [Get Order List](get-order-list) and [Get Order Detail](get-order-detail) endpoints.\n\nFor some additional context, our current address masking protocol is as follows:\n\n* Seller Shipping (**3PL**, `shipping_type=SELLER`) orders return an unmasked `recipient_address`.\n* TikTok Shipping (**4PL**, `shipping_type=TIKTOK`) orders return a masked `recipient_address`.\n* Fulfilled-by-TikTok (**FBT**, `fulfillment_type=FULFILLMENT_BY_TIKTOK`) orders return a masked `recipient_address`.\n\n### Why is this a breaking change?\n\n* We're masking some previously unmasked fields, which may affect the expected information in the API response, and feature/app logic as a result.\n* Some sellers have built fulfillment processes based on the unmasking/availability of an address. In these cases, we want to emphasize that sellers should use `order_status` to determine if an order should be shipped.\n* Unmasking/masking changes should have no impact on a seller's current fulfillment process, specifically whether they use 3PL or 4PL to fulfill an order.\n\n## Impact\n|  |  |\n| --- | --- |\n| Impacted market(s) | * United States (US) - **Local** and **cross-border** |\n| Impacted version(s) | * 202309 (and later) |\n## Changes\n### Seller Shipping (3PL) and TikTok Shipping (4PL)\nAddress masking is dependent on `order_status`. For **3PL** and **4PL** orders, most address parameters will be **unmasked**. The key **masked** fields are as follows:\n| `order_status` | `recipient_address` |\n| --- | --- |\n| * `UNPAID` <br> * `ON_HOLD` <br> * `CANCELLED` <br> * **30 days after** `COMPLETED` | * `phone_number` <br> * `name` <br> * `address_detail` <br> * `address_line1` <br> * `address_line2` <br> * `delivery_preferences` <br> * `postal_code` <br> * `district_info.address_level` **if L3 or L4** |\n### Fulfilled-by-TikTok (FBT)\nFor **FBT** orders, most address parameters will be **masked**. The following `recipient_address` parameters for **all** `order_status` are will be **unmasked**:\n\n* `buyer_email`\n* `district_info.address_level` **if L0, L1, or L2**\n\nAdditionally, `district_info.address_level=L3` will be **unmasked** for the following `order_status`:\n\n* `AWAITING_SHIPMENT`\n* `AWAITING_COLLECTION`\n* `PARTIALLY_SHIPPING`\n* `IN_TRANSIT`\n* `DELIVERED`\n* `COMPLETED`\n\n## Next steps\nWe're planning to implement these changes by **July 21st, 2025**, so please make sure any necessary updates are made by then.\n\n",
+  "update_time": "1748465730",
+  "view_count": 0,
+  "prev_document_id": "681d1e91d2dec604acd934cc",
+  "prev_document_path": "us-market-fast-delivery-program",
+  "next_document_id": "6838d11c66af0d04a7c2a149",
+  "next_document_path": "br-and-mx-markets-changes-to-name-logic",
+  "is_api_doc": false,
+  "document_id": "682fda578992fb0499d40ed3",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Breaking Change",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

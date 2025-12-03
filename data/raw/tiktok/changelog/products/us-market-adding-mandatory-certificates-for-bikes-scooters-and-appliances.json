@@ -1,0 +1,20 @@
+{
+  "title": "US market: Adding mandatory certificates for Bikes, Scooters and Appliances",
+  "content": "## Summary\nStarting from **December 28, 2024**, all local sellers in the US market will need to ensure certificates are provided for Electric Bikes, Soda Makers and Hair Removal Devices.\n## API Changes\nThe relevant APIs for this change are *Create Product*, *Edit Product*, *Partial Edit Product*, and *Get Category Rule*.\nFor the US market, TikTok Shop is implementing new Mandatory Certifications for certain product categories. Starting from 2024-12-28, our products API will be updated to require the mandatory certifications.\nUse the Get Category Rule to check what product certifications are required and pass the product certification files via the Create Product, Edit Product, and Partial Edit Product to help sellers submit product certification. Without mandatory product certifications for products within the following categories, sellers will not be able to create and update products.\n### Category List\n\n* Sports & Outdoor > Leisure & Outdoor Recreation Equipment > Cycling > Bikes > Electric Bikes\n* Sports & Outdoor > Fitness Equipment > Scooters & Ride-ons > Self-Balancing Electric Scooters\n* Sports & Outdoor > Fitness Equipment > Scooters & Ride-ons > Scooters > Electric Scooters\n* Sports & Outdoor > Fitness Equipment > Scooters & Ride-ons > Self-Balancing Electric Unicycles\n* Sports & Outdoor > Leisure & Outdoor Recreation Equipment > Skateboarding > Electric Skateboards\n* Household Appliances > Kitchen Appliances > Soda Makers\n* Beauty & Personal Care > Personal Care Appliances > Hair Removal Device\n\n\n",
+  "update_time": "1730171460",
+  "view_count": 0,
+  "prev_document_id": "670e2527889b3d031da5d253",
+  "prev_document_path": "for-es-and-ie-market-updates-to-mandatory-certifications-for-certain-product-categories",
+  "next_document_id": "6736aff0ecc4ab030e0be6fc",
+  "next_document_path": "html-tags-are-supported-in-product-descriptions",
+  "is_api_doc": false,
+  "document_id": "67205233d99b7d02fd10cd24",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

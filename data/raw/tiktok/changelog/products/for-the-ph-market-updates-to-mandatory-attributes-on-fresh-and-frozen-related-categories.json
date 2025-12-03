@@ -1,0 +1,25 @@
+{
+  "title": "For the PH market: Updates to mandatory attributes on fresh and frozen related categories",
+  "content": "# What is changing?\nThe PH marketplace has introduced Mandatory Attributes on Fresh and Frozen related categories starting from **2024-10-9.**\nThe following L1 categories will require the Attribute **Shelf Life**\n| Meal Kits |\n| --- |\n| Seafood |\n| Frozen Food |\n| Mushroom |\n| Prepared Meals |\n| Cakes & Pies |\n| Tofu |\n| Sandwiches & Wraps |\n| Ice Cream |\n| Pizza & Focaccia |\n| Processed Meat & Seafood |\n| Soups & Stews |\n| Pastries |\n| Fruit |\n| Vegetarian Meat Alternatives |\n| Bread |\n| Vegetables |\n| Deli |\n| Eggs |\n| Pasta & Sauces |\n| Meat |\n# Which markets are affected?\nThe updates of the requirements apply to the local and cross-border sellers in the PH market\n# Who is affected?\nDevelopers with applications that use [Create Product](create-product), [Edit Product](edit-product), and [Partial Edit Product](partial-edit-product)\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nWithout this mandatory attribute sellers will not be able to create and update products.\nUse the Get Attributes to check what attributes are mandatory and pass attribute values via the Create Product, Edit Product, and Partial Edit Product to help sellers fill in the attribute values.\n\n",
+  "update_time": "1723174205",
+  "view_count": 0,
+  "prev_document_id": "66ad61aab3950e02ff3c345a",
+  "prev_document_path": "us-and-uk-markets-product-category-recommendation",
+  "next_document_id": "66b5c41e0d6ef902f1b49220",
+  "next_document_path": "for-sea-market-various-categories-will-require-mandatory-attribute-dangerous-goods",
+  "is_api_doc": false,
+  "document_id": "66b58ce40d6ef902f1b3bc27",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

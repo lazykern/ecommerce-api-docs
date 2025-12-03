@@ -1,0 +1,20 @@
+{
+  "title": "HTML Tags are supported in product descriptions",
+  "content": "## Summary\nTikTok Shop has enhanced product descriptions to support a wider range of HTML tags, allowing richer content to sync and render seamlessly from original product sources. For example, the `<table>` tag can be synced and rendered properly to TikTok Shop Product Detail Page. **All tags that conform with proper HTML syntax will be accepted by the API. You don't need filter out any HTML tags before sending them to TikTok Shop API.**\n## What is changing\nWhen using the above endpoints and passing HTML tags to the description parameter, a wider range of HTML tags will be rendered properly at the customer facing product detail page. Please note that though all HTML tags will be accepted by the API, TikTok Shop system will process each tag according to their best rendering effect on the native page of TikTok App.\nFor example, the `<table>` tag will be transferred to an image showing on the product detail page. When product description is edited in \"source of truth\", apps should retrieve the full HTML of edited product description, pass them all to TikTok Shop (via the description field of TTS API).\n## Endpoints that have been optimized\n\n1. Recommend Category\n2. Check Product Listing\n3. Recommend Global Categories\n4. Create Global Product\n5. Edit Global Product\n6. Create Product\n7. Partial Edit Product\n8. Edit Product\n\n## What action is required?\nWhen using Products API (the endpoints stated above) to manage products for sellers, don't implement the logic of filtering out specific tags, and pass all HTML tags to the description field of the endpoints.\nIf a seller has not made any edits to a product synced but HTML tags are missing from TikTok Shop, you need to update the product description by retrieving and copying the full HTML from the original product description. To do this, we suggest following seller workflow from your app:\n\n1. Fetch all HTML tags from the original product description\n2. Use the in-app UI prompt or other channels to ask for sellers confirmation on updating the product description\n3. Pass all the HTML tags to the description field using the Partial Edit Product endpoint.\n\n\n",
+  "update_time": "1731637260",
+  "view_count": 0,
+  "prev_document_id": "67205233d99b7d02fd10cd24",
+  "prev_document_path": "us-market-adding-mandatory-certificates-for-bikes-scooters-and-appliances",
+  "next_document_id": "673d539a58db2002f52a44a7",
+  "next_document_path": "external-product-attribution-for-reviews-and-ads",
+  "is_api_doc": false,
+  "document_id": "6736aff0ecc4ab030e0be6fc",
+  "doc_type": 3,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}
