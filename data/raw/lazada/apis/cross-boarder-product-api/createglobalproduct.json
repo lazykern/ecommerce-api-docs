@@ -1,0 +1,1159 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1289,
+    "lastModified": "2022-07-28 16:57:50",
+    "testToolLink": "null",
+    "viewCount": 9805,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 1289,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "\"E500: Create product failed\"",
+              "code": "\"500\"",
+              "data": [],
+              "solution": "The product was not created, please check the detailed error message.",
+              "id": 119
+            },
+            {
+              "codeDesc": "The request has failed due to service timeout",
+              "code": "ServiceTimeout",
+              "data": [],
+              "solution": "The request has failed due to service timeout",
+              "id": 119
+            },
+            {
+              "codeDesc": "\"E006: Unexpected internal error\"",
+              "code": "\"6\"",
+              "data": [],
+              "solution": "There is internal error, please contact our tech support team for assistance.",
+              "id": 119
+            },
+            {
+              "codeDesc": "\"E005: Invalid Request Format\"",
+              "code": "\"5\"",
+              "data": [],
+              "solution": "There is something wrong in the request format, please check the detailed error message",
+              "id": 119
+            },
+            {
+              "codeDesc": "The specified access token is invalid or expired",
+              "code": "IllegalAccessToken",
+              "data": [],
+              "solution": "Your access token is either expired or invalid. Pleaes refresh your access token and contact our tech support team to renew the token.",
+              "id": 119
+            },
+            {
+              "codeDesc": "SYSTEM_BUSY",
+              "code": "4136",
+              "data": [],
+              "solution": "System is busy,try later",
+              "id": 119
+            },
+            {
+              "codeDesc": "SYSTEM_TIMEOUT",
+              "code": "4137",
+              "data": [],
+              "solution": "System is timeout,try later",
+              "id": 119
+            },
+            {
+              "codeDesc": "SYSTEM_EXCEPTION",
+              "code": "4138",
+              "data": [],
+              "solution": "System is under maintenance",
+              "id": 119
+            },
+            {
+              "codeDesc": "UNKNOWN_ERROR",
+              "code": "4139",
+              "data": [],
+              "solution": "System is upgrading...",
+              "id": 119
+            },
+            {
+              "codeDesc": "CATEGORY_CANNOT_FIND",
+              "code": "4140",
+              "data": [],
+              "solution": "The specified category cannot be found",
+              "id": 119
+            },
+            {
+              "codeDesc": "CATEGORY_NOT_PERMITTED",
+              "code": "4141",
+              "data": [],
+              "solution": "The category is not permitted",
+              "id": 119
+            },
+            {
+              "codeDesc": "CATEGORY_IS_INACTIVE",
+              "code": "4142",
+              "data": [],
+              "solution": "The category is inactive",
+              "id": 119
+            },
+            {
+              "codeDesc": "NO_TARGET_USER_BIND",
+              "code": "4143",
+              "data": [],
+              "solution": "Do not have access to target market",
+              "id": 119
+            },
+            {
+              "codeDesc": "LOCAL_CATEGORY_CANNOT_FIND",
+              "code": "4144",
+              "data": [],
+              "solution": "The specified local category cannot be found",
+              "id": 119
+            },
+            {
+              "codeDesc": "GLOBAL_PRODUCT_CANNOT_FIND",
+              "code": "4145",
+              "data": [],
+              "solution": "The global product cannot be found",
+              "id": 119
+            },
+            {
+              "codeDesc": "LOCAL_PRODUCT_CANNOT_FIND",
+              "code": "4146",
+              "data": [],
+              "solution": "Cannot find product at local venture: %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "LOCAL_SKU_CANNOT_FIND",
+              "code": "4147",
+              "data": [],
+              "solution": "Cannot find any SKUs at local venture: %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "LOCAL_PRODUCT_HAS_NOT_BEEN_SYNCED",
+              "code": "4148",
+              "data": [],
+              "solution": "This product has not been published to venture: %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "LOCAL_SKU_HAS_NOT_BEEN_SYNCED",
+              "code": "4149",
+              "data": [],
+              "solution": "The SKUs is still synchronizing to venture: %s...",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRODUCT_DOES_NOT_BELONG_TO_USER",
+              "code": "4150",
+              "data": [],
+              "solution": "Target product does not belong to the user account",
+              "id": 119
+            },
+            {
+              "codeDesc": "DAO_NOT_SUPPORT_BIZ_TYPE",
+              "code": "4151",
+              "data": [],
+              "solution": "The biz type hasn't been supported",
+              "id": 119
+            },
+            {
+              "codeDesc": "DAO_GLOBAL_PDT_NOT_FOUND",
+              "code": "4152",
+              "data": [],
+              "solution": "Can not find the global product in the data base",
+              "id": 119
+            },
+            {
+              "codeDesc": "DAO_GLOBAL_SKU_NOT_FOUND",
+              "code": "4153",
+              "data": [],
+              "solution": "Can not find the global SKUs in the data base",
+              "id": 119
+            },
+            {
+              "codeDesc": "DAO_LOCAL_ITEM_RELATION_NOT_FOUND",
+              "code": "4154",
+              "data": [],
+              "solution": "Can not find the local items in the data base",
+              "id": 119
+            },
+            {
+              "codeDesc": "DAO_LOCAL_SKU_RELATION_NOT_FOUND",
+              "code": "4155",
+              "data": [],
+              "solution": "Can not find the local skus in the data base",
+              "id": 119
+            },
+            {
+              "codeDesc": "NO_CREATE_PRODUCT_PERMISSION",
+              "code": "4156",
+              "data": [],
+              "solution": "You do not have permission to create product",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRICE_GENERAL_TOO_LOW_ERROR",
+              "code": "4157",
+              "data": [],
+              "solution": "Retail price & Sale price at %s cannot be lower than %s %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRICE_GENERAL_TOO_HIGH_ERROR",
+              "code": "4158",
+              "data": [],
+              "solution": "Retail price & Sale price at %s cannot be higher than %s %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRICE_GENERAL_DISCOUNT_TOO_HIGH_ERROR",
+              "code": "4159",
+              "data": [],
+              "solution": "Sale price discount at %s should not be more than or equal to %s. Currently, price is %s %s, and sale price is %s %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRICE_GENERAL_DISCOUNT_TOO_LOW_ERROR",
+              "code": "4160",
+              "data": [],
+              "solution": "Sale price discount at %s should not be less than or equal to %s. Currently, price is %s %s, and sale price is %s %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SALE_PROP_RENDER_ILLEGAL_SALE_PROP",
+              "code": "4161",
+              "data": [],
+              "solution": "The product has illegal sale properties",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SKU_DESC_RENDER_ILLEGAL_SKU_DESC",
+              "code": "4162",
+              "data": [],
+              "solution": "The product has illegal sku description properties",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_VENTURE_NO_VENTURE_SELECT",
+              "code": "4163",
+              "data": [],
+              "solution": "No venture has been selected",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_VENTURE_MY_NOT_PUBLISHED",
+              "code": "4164",
+              "data": [],
+              "solution": "Malaysia venture is a must for Cross-Border publishing",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_NAME_NAME_CANNOT_BE_NULL",
+              "code": "4165",
+              "data": [],
+              "solution": "Title cannot be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_NAME_NAME_CANNOT_BE_TOO_LONG",
+              "code": "4166",
+              "data": [],
+              "solution": "Title cannot be longer than %d",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_NAME_NAME_TRAN_TOO_LONG",
+              "code": "4167",
+              "data": [],
+              "solution": "publish failed cause by title translation words overflow",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_BRAND_ILLEGAL",
+              "code": "4168",
+              "data": [],
+              "solution": "The brand is invalid",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_DETAIL_ATTRIBUTE_REQUIRED",
+              "code": "4169",
+              "data": [],
+              "solution": "This attribute cannot be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SHORTDESC_REQUIRED",
+              "code": "4170",
+              "data": [],
+              "solution": "Highlights cannot be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_DETAIL_LENGTH_ERROR",
+              "code": "4171",
+              "data": [],
+              "solution": "This attribute cannot be longer than 255 characters",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SKU_PROP_REQUIRED",
+              "code": "4172",
+              "data": [],
+              "solution": "This attribute cannot be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_NO_PROPER_SKU",
+              "code": "4173",
+              "data": [],
+              "solution": "No proper sku found",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_NO_PC_DECO",
+              "code": "4174",
+              "data": [],
+              "solution": "PC decoration cant be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_NO_WIRELESS_DECO",
+              "code": "4175",
+              "data": [],
+              "solution": "wireless decoration cant be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_IMG_CANNOT_BE_EMPTY",
+              "code": "4176",
+              "data": [],
+              "solution": "Please upload at least one image for every SKU",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_IMG_URL_INVALID",
+              "code": "4177",
+              "data": [],
+              "solution": "the img url is invalid",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_IMG_CANNOT_FETCH",
+              "code": "4178",
+              "data": [],
+              "solution": "the img could not be fetch caused by network reason or firewall,push the img to where we can access and download",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SALE_PROP_SUBMIT_SALE_PROP_CANNOT_BE_EMPTY",
+              "code": "4179",
+              "data": [],
+              "solution": "The sale property cannot be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SALE_PROP_SUBMIT_SALE_PROP_ILLEGAL_VAL",
+              "code": "4180",
+              "data": [],
+              "solution": "The sale property value is invalid",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SALE_PROP_SUBMIT_SALE_PROP_INVALID_INPUT_VAL",
+              "code": "4181",
+              "data": [],
+              "solution": "The sale property value cannot contain illegal character \\\"*^~<>/|\\",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SALE_PROP_SUBMIT_SALE_PROP_TOO_LONG_INPUT_VAL",
+              "code": "4182",
+              "data": [],
+              "solution": "The sale property value cannot be longer than 255 characters",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SALE_PROP_SUBMIT_TOO_MORE_SKU",
+              "code": "4183",
+              "data": [],
+              "solution": "The SKUs are too more for these sale properties",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_CURRENCY_CANNOT_BE_EMPTY",
+              "code": "4184",
+              "data": [],
+              "solution": "The SKU does not have legal currency",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_ORIGIN_PRICE_CANNOT_BE_EMPTY",
+              "code": "4185",
+              "data": [],
+              "solution": "The SKU's original price is empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_ORIGIN_SALE_PRICE_CANNOT_BE_EMPTY",
+              "code": "4186",
+              "data": [],
+              "solution": "The SKU's original sale price is empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_ORIGIN_SALE_PRICE_CANNOT_BE_HIGH",
+              "code": "4187",
+              "data": [],
+              "solution": "The SKU's sale price must be lower than original price",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_MARKET_PRICE_CANNOT_BE_EMPTY",
+              "code": "4188",
+              "data": [],
+              "solution": "The %s SKU's original price is empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_MARKET_SALE_PRICE_CANNOT_BE_EMPTY",
+              "code": "4189",
+              "data": [],
+              "solution": "The %s SKU's original sale price is empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_MARKET_SALE_PRICE_TOO_HIGH",
+              "code": "4190",
+              "data": [],
+              "solution": "The %s SKU's sale price must be lower than retail price",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_STOCK_CANNOT_BE_EMPTY",
+              "code": "4191",
+              "data": [],
+              "solution": "The %s SKU's stock cannot be empty",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_STOCK_INVALID",
+              "code": "4192",
+              "data": [],
+              "solution": "The %s SKU's stock is invalid",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_WARRANTY_INVALID",
+              "code": "4193",
+              "data": [],
+              "solution": "Warranty Period has not been selected while Warranty Type is not \\\"No warranty\\\"",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SELLER_SKU_EXIST",
+              "code": "4194",
+              "data": [],
+              "solution": "Seller SKU exists",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SELLER_SKU_LENGTH_ERROR",
+              "code": "4195",
+              "data": [],
+              "solution": "Seller SKU should be 1-50 characters",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SELLER_SKU_DUPLICATE",
+              "code": "4196",
+              "data": [],
+              "solution": "Seller SKU duplicates",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SELLER_SKU_INVALID",
+              "code": "4197",
+              "data": [],
+              "solution": "Seller SKU must consist of \\\"A-Z\\\", \\\"a-z\\\", \\\"0-9\\\", \\\"-\\\", \\\"_\\\"",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_SELLER_SKU_CANNOT_BE_REVISED",
+              "code": "4198",
+              "data": [],
+              "solution": "Seller SKU cannot be revised, it should be kept as: %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "PB_PACKAGE_UNMATCHED",
+              "code": "4199",
+              "data": [],
+              "solution": "Package parameters should be all the same for one product",
+              "id": 119
+            },
+            {
+              "codeDesc": "IMAP_BRAND_NOT_MATCHED",
+              "code": "4200",
+              "data": [],
+              "solution": "Brand doesn't match at local venture",
+              "id": 119
+            },
+            {
+              "codeDesc": "IMAP_SALE_PROP_UNMATCHED",
+              "code": "4201",
+              "data": [],
+              "solution": "Sale properties unmatched",
+              "id": 119
+            },
+            {
+              "codeDesc": "IMAP_SALE_PROP_ERR_MATCHED",
+              "code": "4202",
+              "data": [],
+              "solution": "Sale properties error matched",
+              "id": 119
+            },
+            {
+              "codeDesc": "IMAP_DEST_SALE_PROP_IS_SPU",
+              "code": "4203",
+              "data": [],
+              "solution": "Dest sale property is SPU property",
+              "id": 119
+            },
+            {
+              "codeDesc": "IMAP_SALE_PROP_VAL_ERR_MATCHED",
+              "code": "4204",
+              "data": [],
+              "solution": "Sale properties values error matched",
+              "id": 119
+            },
+            {
+              "codeDesc": "INVALID_IMAGE_FORMAT",
+              "code": "4205",
+              "data": [],
+              "solution": "Invalid image format",
+              "id": 119
+            },
+            {
+              "codeDesc": "INVALID_IMAGE_DIMENSION",
+              "code": "4206",
+              "data": [],
+              "solution": "Image resolution shoule be from 330 * 330 to 5000 * 5000",
+              "id": 119
+            },
+            {
+              "codeDesc": "IMPORT_SELLER_SKU_EMPTY",
+              "code": "4207",
+              "data": [],
+              "solution": "Import empty seller sku",
+              "id": 119
+            },
+            {
+              "codeDesc": "IMPORT_SELLER_SKU_INVALID",
+              "code": "4208",
+              "data": [],
+              "solution": "Import invalid seller sku",
+              "id": 119
+            },
+            {
+              "codeDesc": "INVALID_CATEGORY",
+              "code": "4209",
+              "data": [],
+              "solution": "Invalid category",
+              "id": 119
+            },
+            {
+              "codeDesc": "FAIL_TO_GET_CATEGORY_ID",
+              "code": "4210",
+              "data": [],
+              "solution": "Fail to get category id",
+              "id": 119
+            },
+            {
+              "codeDesc": "HAZMAT_WARN",
+              "code": "4211",
+              "data": [],
+              "solution": "HAZMAT_WARN",
+              "id": 119
+            },
+            {
+              "codeDesc": "PDT_LIMIT_REACH",
+              "code": "4212",
+              "data": [],
+              "solution": "Your product list has reached the limit at %s",
+              "id": 119
+            },
+            {
+              "codeDesc": "MIGRAGE_IMAGE_FAILED",
+              "code": "4213",
+              "data": [],
+              "solution": "Fail to migrate",
+              "id": 119
+            },
+            {
+              "codeDesc": "PG_NOT_PERMIT",
+              "code": "4214",
+              "data": [],
+              "solution": "QC rule checking failed",
+              "id": 119
+            },
+            {
+              "codeDesc": "DECO_CREATE_ERROR",
+              "code": "4215",
+              "data": [],
+              "solution": "Fail to create decoration",
+              "id": 119
+            },
+            {
+              "codeDesc": "DECO_NO_TARGET_USER_BIND",
+              "code": "4216",
+              "data": [],
+              "solution": "cant find target user",
+              "id": 119
+            },
+            {
+              "codeDesc": "DECO_SOURCE_QUERY_ERROR",
+              "code": "4217",
+              "data": [],
+              "solution": "Fail to query for source decoration",
+              "id": 119
+            },
+            {
+              "codeDesc": "DECO_TRANSLATE_ERROR",
+              "code": "4218",
+              "data": [],
+              "solution": "Decoration translation error",
+              "id": 119
+            },
+            {
+              "codeDesc": "DECO_SYNC_ERROR",
+              "code": "4219",
+              "data": [],
+              "solution": "Decoration sync error",
+              "id": 119
+            },
+            {
+              "codeDesc": "TRANSLATE_OVER_FLOW",
+              "code": "4220",
+              "data": [],
+              "solution": "Translate over flow,and will retry auto",
+              "id": 119
+            },
+            {
+              "codeDesc": "ITEM_NEVER_PUBLISH_SUCCESSED",
+              "code": "4221",
+              "data": [],
+              "solution": "item have not pulish success to market before",
+              "id": 119
+            },
+            {
+              "codeDesc": "NO_SKU_COULD_BE_UPDATE",
+              "code": "4222",
+              "data": [],
+              "solution": "no sku could be update",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRODUCT_NUM_REACH_LIMITATION",
+              "code": "4223",
+              "data": [],
+              "solution": "Seller's online product quantity has reach limit in all site",
+              "id": 119
+            },
+            {
+              "codeDesc": "SELLER_STATUS_INVALID",
+              "code": "4224",
+              "data": [],
+              "solution": "Seller's account are inactive or not verified in all publish venture.",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRICE_NOT_VALID",
+              "code": "4225",
+              "data": [],
+              "solution": "Please review product price to ensure accuracy.",
+              "id": 119
+            },
+            {
+              "codeDesc": "SELLER_PUNISHMENT_INVALID",
+              "code": "4226",
+              "data": [],
+              "solution": "Seller is under punishment of blocking edit venture.",
+              "id": 119
+            },
+            {
+              "codeDesc": "SKU_IMAGE_INVALID",
+              "code": "4227",
+              "data": [],
+              "solution": "If you upload a sku picture, then all sku must be uploaded.",
+              "id": 119
+            },
+            {
+              "codeDesc": "PRODUCT_IMAGE_INVALID",
+              "code": "4228",
+              "data": [],
+              "solution": "Product or sku Image is missing for live product",
+              "id": 119
+            },
+            {
+              "codeDesc": "PROHIBITED_BRAND",
+              "code": "4229",
+              "data": [],
+              "solution": "Product has problem with brand.",
+              "id": 119
+            },
+            {
+              "codeDesc": "PROHIBITED_KEYWORD",
+              "code": "4230",
+              "data": [],
+              "solution": "Product content exist keyword.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Seller's online product quantity has reach limit in all publish venture.",
+              "code": "4223",
+              "data": [],
+              "solution": "The number of products with active status in GPS has exceeded the limit. Please call updateProductStatus API to drop the product or call deleteMerchantProduct API to delete the product with active status and then call this API to publish a new product.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Create product failed",
+              "code": "500",
+              "data": [],
+              "solution": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Invalid Request Format",
+              "code": "5",
+              "data": [],
+              "solution": "Please refer to the “CreateGlobalProduct payload and parameter description” document to check if the payload in your request follows the requirements and format in the document.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Create product failed",
+              "code": "4214",
+              "data": [],
+              "solution": "This is a generalized error, this error indicates that there is a sales/logistics policy in your item that does not comply with the current country or region, please check thedetail field for details.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Seller SKU exists.",
+              "code": "4194",
+              "data": [],
+              "solution": "This seller sku already exists in the current store, please change to another seller sku to post the item.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Fail to migrate image",
+              "code": "4178",
+              "data": [],
+              "solution": "Please do not include external image links in the payload, use the MigrateImage API to migrate the images to Lazada image links first.",
+              "id": 119
+            },
+            {
+              "codeDesc": "This attribute cannot be empty.",
+              "code": "4169",
+              "data": [],
+              "solution": "Mandatory attributes are not used in the Payload, call the GetCategoryAttributes API to check if you missed any attributes with an is_mandatory field value of 1.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Create product failed",
+              "code": "4159",
+              "data": [],
+              "solution": "Local price limit. sale price and sepcial price can't be less than the specified percentage, please check the detail field for more information.",
+              "id": 119
+            },
+            {
+              "codeDesc": "Video id status is not audit success",
+              "code": "309",
+              "data": [],
+              "solution": "Only videos that are in the AUDIT SUCCESSS state can be used in payload.",
+              "id": 119
+            }
+          ],
+          "id": 119
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 118
+        },
+        "title": "CreateGlobalProduct",
+        "path": "/product/global/create",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": true,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "3",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "sku_list",
+                      "demo": "[]",
+                      "required": false,
+                      "paramType": "9",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "seller_sku",
+                          "demo": "api-create-test-111",
+                          "required": false,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 71000,
+                          "apiId": "2514",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "sellerSku",
+                          "parentId": 70999,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "The SellerSku that is defined,There are no two identical seller SKUs in the same store,"
+                        }
+                      ],
+                      "maxListSize": "",
+                      "id": 70999,
+                      "apiId": "2514",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "skuList",
+                      "parentId": 70998,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.util.List<com.taobao.sellglobal.service.api.response.SkuDetail>",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "SKU information"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 70998,
+                  "apiId": "2514",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 70997,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.taobao.sellglobal.service.api.response.CreationBody",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response body"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<Request>\n <Product>\n  <PrimaryCategory>11069</PrimaryCategory>\n  <SPUId/>\n  <AssociatedSku/>\n  <AutoAllocateStock>false</AutoAllocateStock>\n  <Ventures>\n   <Venture>MY</Venture>\n   <Venture>SG</Venture>\n   <Venture>TH</Venture>\n  </Ventures>\n  <Images>\n   <Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image>\n   <Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image>\n  </Images>\n  <Attributes>\n   <name>api create product test sample</name>\n   <video>video id</video>\n   <short_description>This is a nice product</short_description>\n   <description>This is a nice product description</description>\n   <brand>Remark</brand>\n   <model>asdf</model>\n   <kid_years>Kids (6-10yrs)</kid_years>\n   <package_length>11</package_length>\n   <package_height>22</package_height>\n   <package_weight>1</package_weight>\n   <package_width>44</package_width>\n   <package_content>this is what's in the box</package_content>\n  </Attributes>\n  <Skus>\n   <Sku>\n    <SellerSku>api-create-test1-14</SellerSku>\n    <color_family>Green</color_family>\n    <size>40</size>\n    <quantity>120</quantity>\n    <sg_retail_price>388.50</sg_retail_price>\n    <sg_sales_price>308.50</sg_sales_price>\n    <retail_price>388.50</retail_price>\n    <sales_price>308.50</sales_price>\n    <tax_class>default</tax_class>\n    <Images>\n     <Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image>\n     <Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image>\n    </Images>\n   </Sku>\n  </Skus>\n </Product>\n</Request>\n",
+                  "maxSize": "524288",
+                  "paramName": "payload",
+                  "demo": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Request><Product><PrimaryCategory>11069</PrimaryCategory><SPUId/><AssociatedSku/><AutoAllocateStock>false</AutoAllocateStock><Ventures><Venture>MY</Venture><Venture>SG</Venture><Venture>TH</Venture></Ventures><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images><Attributes><name>api create product test sample</name><video>video id</video><short_description>This is a nice product</short_description><description>This is a nice product description</description><brand>Remark</brand><model>asdf</model><kid_years>Kids (6-10yrs)</kid_years><package_length>11</package_length><package_height>22</package_height><package_weight>1</package_weight><package_width>44</package_width><package_content>this is what's in the box</package_content></Attributes><Skus><Sku><SellerSku>api-create-test1-14</SellerSku><color_family>Green</color_family><size>40</size><quantity>120</quantity><sg_retail_price>388.50</sg_retail_price><sg_sales_price>308.50</sg_sales_price><retail_price>388.50</retail_price><sales_price>308.50</sales_price><tax_class>default</tax_class><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images></Sku></Skus></Product></Request>",
+                  "required": true,
+                  "paramType": "Payload",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 70996,
+                  "apiId": "2514",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "Max Size:524288",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "<a href='https://open.lazada.com/apps/doc/doc?nodeId=30715&docId=121751' target='_brank'>Parameter description</a>"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/global/create\");\nrequest.addApiParameter(\"payload\", \"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><Request><Product><PrimaryCategory>11069</PrimaryCategory><SPUId/><AssociatedSku/><AutoAllocateStock>false</AutoAllocateStock><Ventures><Venture>MY</Venture><Venture>SG</Venture><Venture>TH</Venture></Ventures><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images><Attributes><name>api create product test sample</name><video>video id</video><short_description>This is a nice product</short_description><description>This is a nice product description</description><brand>Remark</brand><model>asdf</model><kid_years>Kids (6-10yrs)</kid_years><package_length>11</package_length><package_height>22</package_height><package_weight>1</package_weight><package_width>44</package_width><package_content>this is what's in the box</package_content></Attributes><Skus><Sku><SellerSku>api-create-test1-14</SellerSku><color_family>Green</color_family><size>40</size><quantity>120</quantity><sg_retail_price>388.50</sg_retail_price><sg_sales_price>308.50</sg_sales_price><retail_price>388.50</retail_price><sales_price>308.50</sales_price><tax_class>default</tax_class><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images></Sku></Skus></Product></Request>\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/global/create');\n$request->addApiParam('payload','<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><Request><Product><PrimaryCategory>11069</PrimaryCategory><SPUId/><AssociatedSku/><AutoAllocateStock>false</AutoAllocateStock><Ventures><Venture>MY</Venture><Venture>SG</Venture><Venture>TH</Venture></Ventures><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images><Attributes><name>api create product test sample</name><video>video id</video><short_description>This is a nice product</short_description><description>This is a nice product description</description><brand>Remark</brand><model>asdf</model><kid_years>Kids (6-10yrs)</kid_years><package_length>11</package_length><package_height>22</package_height><package_weight>1</package_weight><package_width>44</package_width><package_content>this is what's in the box</package_content></Attributes><Skus><Sku><SellerSku>api-create-test1-14</SellerSku><color_family>Green</color_family><size>40</size><quantity>120</quantity><sg_retail_price>388.50</sg_retail_price><sg_sales_price>308.50</sg_sales_price><retail_price>388.50</retail_price><sales_price>308.50</sales_price><tax_class>default</tax_class><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images></Sku></Skus></Product></Request>');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/global/create\");\nrequest.AddApiParameter(\"payload\", \"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><Request><Product><PrimaryCategory>11069</PrimaryCategory><SPUId/><AssociatedSku/><AutoAllocateStock>false</AutoAllocateStock><Ventures><Venture>MY</Venture><Venture>SG</Venture><Venture>TH</Venture></Ventures><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images><Attributes><name>api create product test sample</name><video>video id</video><short_description>This is a nice product</short_description><description>This is a nice product description</description><brand>Remark</brand><model>asdf</model><kid_years>Kids (6-10yrs)</kid_years><package_length>11</package_length><package_height>22</package_height><package_weight>1</package_weight><package_width>44</package_width><package_content>this is what's in the box</package_content></Attributes><Skus><Sku><SellerSku>api-create-test1-14</SellerSku><color_family>Green</color_family><size>40</size><quantity>120</quantity><sg_retail_price>388.50</sg_retail_price><sg_sales_price>308.50</sg_sales_price><retail_price>388.50</retail_price><sales_price>308.50</sales_price><tax_class>default</tax_class><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images></Sku></Skus></Product></Request>\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/global/create')\nrequest.add_api_parameter(\"payload\", \"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><Request><Product><PrimaryCategory>11069</PrimaryCategory><SPUId/><AssociatedSku/><AutoAllocateStock>false</AutoAllocateStock><Ventures><Venture>MY</Venture><Venture>SG</Venture><Venture>TH</Venture></Ventures><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images><Attributes><name>api create product test sample</name><video>video id</video><short_description>This is a nice product</short_description><description>This is a nice product description</description><brand>Remark</brand><model>asdf</model><kid_years>Kids (6-10yrs)</kid_years><package_length>11</package_length><package_height>22</package_height><package_weight>1</package_weight><package_width>44</package_width><package_content>this is what's in the box</package_content></Attributes><Skus><Sku><SellerSku>api-create-test1-14</SellerSku><color_family>Green</color_family><size>40</size><quantity>120</quantity><sg_retail_price>388.50</sg_retail_price><sg_sales_price>308.50</sg_sales_price><retail_price>388.50</retail_price><sales_price>308.50</sales_price><tax_class>default</tax_class><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images></Sku></Skus></Product></Request>\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/global/create')\nrequest.add_api_param('payload', '<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><Request><Product><PrimaryCategory>11069</PrimaryCategory><SPUId/><AssociatedSku/><AutoAllocateStock>false</AutoAllocateStock><Ventures><Venture>MY</Venture><Venture>SG</Venture><Venture>TH</Venture></Ventures><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images><Attributes><name>api create product test sample</name><video>video id</video><short_description>This is a nice product</short_description><description>This is a nice product description</description><brand>Remark</brand><model>asdf</model><kid_years>Kids (6-10yrs)</kid_years><package_length>11</package_length><package_height>22</package_height><package_weight>1</package_weight><package_width>44</package_width><package_content>this is what's in the box</package_content></Attributes><Skus><Sku><SellerSku>api-create-test1-14</SellerSku><color_family>Green</color_family><size>40</size><quantity>120</quantity><sg_retail_price>388.50</sg_retail_price><sg_sales_price>308.50</sg_sales_price><retail_price>388.50</retail_price><sales_price>308.50</sales_price><tax_class>default</tax_class><Images><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image><Image>http://imgsrc.baidu.com/imgad/pic/item/37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg</Image></Images></Sku></Skus></Product></Request>')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/product/global/create' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%3C%3Fxml+version%3D%221.0%22+encoding%3D%22utf-8%22%3F%3E%3CRequest%3E%3CProduct%3E%3CPrimaryCategory%3E11069%3C%2FPrimaryCategory%3E%3CSPUId%2F%3E%3CAssociatedSku%2F%3E%3CAutoAllocateStock%3Efalse%3C%2FAutoAllocateStock%3E%3CVentures%3E%3CVenture%3EMY%3C%2FVenture%3E%3CVenture%3ESG%3C%2FVenture%3E%3CVenture%3ETH%3C%2FVenture%3E%3C%2FVentures%3E%3CImages%3E%3CImage%3Ehttp%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg%3C%2FImage%3E%3CImage%3Ehttp%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg%3C%2FImage%3E%3C%2FImages%3E%3CAttributes%3E%3Cname%3Eapi+create+product+test+sample%3C%2Fname%3E%3Cvideo%3Evideo+id%3C%2Fvideo%3E%3Cshort_description%3EThis+is+a+nice+product%3C%2Fshort_description%3E%3Cdescription%3EThis+is+a+nice+product+description%3C%2Fdescription%3E%3Cbrand%3ERemark%3C%2Fbrand%3E%3Cmodel%3Easdf%3C%2Fmodel%3E%3Ckid_years%3EKids+%286-10yrs%29%3C%2Fkid_years%3E%3Cpackage_length%3E11%3C%2Fpackage_length%3E%3Cpackage_height%3E22%3C%2Fpackage_height%3E%3Cpackage_weight%3E1%3C%2Fpackage_weight%3E%3Cpackage_width%3E44%3C%2Fpackage_width%3E%3Cpackage_content%3Ethis+is+what%27s+in+the+box%3C%2Fpackage_content%3E%3C%2FAttributes%3E%3CSkus%3E%3CSku%3E%3CSellerSku%3Eapi-create-test1-14%3C%2FSellerSku%3E%3Ccolor_family%3EGreen%3C%2Fcolor_family%3E%3Csize%3E40%3C%2Fsize%3E%3Cquantity%3E120%3C%2Fquantity%3E%3Csg_retail_price%3E388.50%3C%2Fsg_retail_price%3E%3Csg_sales_price%3E308.50%3C%2Fsg_sales_price%3E%3Cretail_price%3E388.50%3C%2Fretail_price%3E%3Csales_price%3E308.50%3C%2Fsales_price%3E%3Ctax_class%3Edefault%3C%2Ftax_class%3E%3CImages%3E%3CImage%3Ehttp%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg%3C%2FImage%3E%3CImage%3Ehttp%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F37d12f2eb9389b508e646c9b8f35e5dde6116e64.jpg%3C%2FImage%3E%3C%2FImages%3E%3C%2FSku%3E%3C%2FSkus%3E%3C%2FProduct%3E%3C%2FRequest%3E\",\"timestamp\":\"1764727830087\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 117,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"sku_list\": [\n      {\n        \"seller_sku\": \"api-create-test-111\"\n      }\n    ]\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 117
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 118
+        },
+        "lastModified": "2022-07-28 16:57:50",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 70996,
+              "data": [],
+              "children": [],
+              "name": "payload",
+              "id": 118,
+              "type": "Payload",
+              "required": true,
+              "desc": "<a href='https://open.lazada.com/apps/doc/doc?nodeId=30715&docId=121751' target='_brank'>Parameter description</a>"
+            }
+          ],
+          "id": 118
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 9805,
+        "desc": "Use this API to create a single new global product to multiple Lazada sites. (For cross boarder sellers ONLY)",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 70998,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 70999,
+                  "data": [],
+                  "children": [
+                    {
+                      "treeId": 71000,
+                      "data": [],
+                      "children": [],
+                      "name": "seller_sku",
+                      "id": 120,
+                      "type": "String",
+                      "required": false,
+                      "desc": "The SellerSku that is defined,There are no two identical seller SKUs in the same store,"
+                    }
+                  ],
+                  "name": "sku_list",
+                  "id": 120,
+                  "type": "Object[]",
+                  "required": false,
+                  "desc": "SKU information"
+                }
+              ],
+              "name": "data",
+              "id": 120,
+              "type": "Object",
+              "required": true,
+              "desc": "Response body"
+            }
+          ],
+          "id": 120
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

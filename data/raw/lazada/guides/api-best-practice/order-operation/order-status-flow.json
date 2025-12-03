@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<h2><strong style=\"background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);\">Please find below the updated order status flow&nbsp;&nbsp;</strong></h2><p><strong style=\"font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(153, 51, 0);\">&nbsp;&nbsp;Note</strong><strong style=\"font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(61, 65, 69);\">: </strong><span style=\"font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(61, 65, 69);\">Please call API - </span><u style=\"font-size: 14px; background-color: initial; color: rgb(2, 70, 255);\"><a href=\"https://open.lazada.com/apps/doc/api?path=%2Forder%2Fitems%2Fget\" rel=\"noopener noreferrer\" target=\"_blank\">GetOrderItems</a></u><span style=\"font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(61, 65, 69);\"> before packing and ready_to_ship:</span></p><p><br></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(61, 65, 69);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only&nbsp;\"pending\" and \"repacked\"&nbsp;order item&nbsp;id can call API - </span><a href=\"https://open.lazada.com/apps/doc/api?path=%2Forder%2Ffulfill%2Fpack\" rel=\"noopener noreferrer\" target=\"_blank\">/order/fulfill/pack</a></p><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(61, 65, 69); font-size: 14px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only&nbsp;\"packed\" order item&nbsp;id can call API -&nbsp;</span><a href=\"https://open.lazada.com/apps/doc/api?path=%2Forder%2Fpackage%2Frts\" rel=\"noopener noreferrer\" target=\"_blank\">/order/package/rts</a><u style=\"background-color: initial; color: rgb(2, 70, 255); font-size: 14px;\"><a href=\"https://open.lazada.com/apps/doc/api?path=%2Forder%2Frts\" rel=\"noopener noreferrer\" target=\"_blank\"><img src=\"https://tida.alicdn.com/oss_1673492542466_null_WOkaxWKx.png\"></a></u></p><h2><strong style=\"background-color: rgb(255, 255, 255); font-size: 24px; color: rgb(51, 51, 51);\">Failed Delivered related Order Status Flow Chart<img src=\"https://img.alicdn.com/imgextra/i2/O1CN01zNARVG1knvgiCEWlT_!!6000000004729-2-tps-1326-876.png\" alt=\"配送失败状态流转图\" height=\"576\" width=\"871\"></strong></h2><h2><strong style=\"background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(38, 38, 38);\">&nbsp;</strong></h2><h2><strong style=\"background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(38, 38, 38);\">API call flow</strong></h2><p><span style=\"background-color: rgb(255, 255, 255); color: rgb(38, 38, 38); font-size: 14px;\">&nbsp;<img src=\"https://tida.alicdn.com/oss_1683276528975_null_uFmHVZOn\" height=\"789\" width=\"633\"></span></p><p><br></p>",
+    "cnTags": [],
+    "cnTitle": "Order Status Flow",
+    "gmtModified": 1763088185000,
+    "author": "WB965441",
+    "cnContent": "",
+    "gmtCreate": 1721368169000,
+    "enTags": [],
+    "parentId": 29616,
+    "enTitle": "Order Status Flow",
+    "id": 120167,
+    "lastModified": "2025-11-14 10:43:05",
+    "views": 9635
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

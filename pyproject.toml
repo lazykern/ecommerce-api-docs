@@ -1,0 +1,31 @@
+[project]
+name = "ecommerce-docs"
+version = "0.1.0"
+description = "Scrapers and generators for e-commerce developer docs."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.32",
+    "click>=8.1",
+    "html2text>=2024.2.26",
+]
+
+[project.scripts]
+ecomdocs = "ecommerce_docs.cli:app"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ecommerce_docs = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.6",
+    "mypy>=1.11",
+]

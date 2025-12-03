@@ -1,0 +1,639 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1426,
+    "lastModified": "2022-08-01 18:01:08",
+    "testToolLink": "null",
+    "viewCount": 11378,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "get",
+        "docId": 1426,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E0102: trade order line id is empty or invalid",
+              "code": "102",
+              "data": [],
+              "solution": "E0102: trade order line id is empty or invalid",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0106: ROC internal error",
+              "code": "106",
+              "data": [],
+              "solution": "E0106: ROC internal error",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0115: order id is null",
+              "code": "115",
+              "data": [],
+              "solution": "E0115: order id is null",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0116: no seller id",
+              "code": "116",
+              "data": [],
+              "solution": "E0116: no seller id",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0117: no user id",
+              "code": "117",
+              "data": [],
+              "solution": "E0117: no user id",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0118: no user email",
+              "code": "118",
+              "data": [],
+              "solution": "E0118: no user email",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0122: invalid trade order ",
+              "code": "122",
+              "data": [],
+              "solution": "E0122: invalid trade order ",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0123: invalid trade order lines %s",
+              "code": "123",
+              "data": [],
+              "solution": "E0123: invalid trade order lines %s",
+              "id": 691
+            },
+            {
+              "codeDesc": "E0124: invalid seller id for this order line %s",
+              "code": "124",
+              "data": [],
+              "solution": "E0124: invalid seller id for this order line %s",
+              "id": 691
+            }
+          ],
+          "id": 691
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 690
+        },
+        "title": "OrderCancelValidate",
+        "path": "/order/reverse/cancel/validate",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "tip_content",
+                      "demo": "stock will be set as 0",
+                      "required": false,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 110149,
+                      "apiId": "3886",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "tipContent",
+                      "parentId": 110148,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "tip content when cancel order"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "tip_type",
+                      "demo": "warn",
+                      "required": false,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 110150,
+                      "apiId": "3886",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "tipType",
+                      "parentId": 110148,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "warn or error"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "3",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "reason_options",
+                      "demo": "[]",
+                      "required": false,
+                      "paramType": "9",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "reason_name",
+                          "demo": "out of stock",
+                          "required": false,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 110152,
+                          "apiId": "3886",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "label",
+                          "parentId": 110151,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "reason name"
+                        },
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "reason_id",
+                          "demo": "1000017",
+                          "required": false,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 110153,
+                          "apiId": "3886",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "value",
+                          "parentId": 110151,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "Since the cancellation reasons supported by each order may be different, if you want reason_id, you need to call this interface to get"
+                        }
+                      ],
+                      "maxListSize": "",
+                      "id": 110151,
+                      "apiId": "3886",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "reasonOptions",
+                      "parentId": 110148,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "com.alibaba.lazada.tradeReverse.api.model.response.RenderCancelForSellerMtopResponse.ReasonOption",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "reason options"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 110148,
+                  "apiId": "3886",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 110144,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.alibaba.lazada.tradeReverse.api.model.response.RenderCancelForSellerMtopResponse.RenderCancelResult",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "data"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "order_id",
+                  "demo": "0",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 110139,
+                  "apiId": "3886",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "orderId",
+                  "parentId": 110138,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Long",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "order id"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "3",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "order_item_id_list",
+                  "demo": "[]",
+                  "required": true,
+                  "paramType": "String[]",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 110140,
+                  "apiId": "3886",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "orderItemIdList",
+                  "parentId": 110138,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.util.List<java.lang.String>",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "all order items need to be cancel"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/order/reverse/cancel/validate\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"order_id\", \"0\");\nrequest.addApiParameter(\"order_item_id_list\", \"[]\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/order/reverse/cancel/validate','GET');\n$request->addApiParam('order_id','0');\n$request->addApiParam('order_item_id_list','[]');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/order/reverse/cancel/validate\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"order_id\", \"0\");\nrequest.AddApiParameter(\"order_item_id_list\", \"[]\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/order/reverse/cancel/validate','GET')\nrequest.add_api_parameter(\"order_id\", \"0\")\nrequest.add_api_parameter(\"order_item_id_list\", \"[]\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/order/reverse/cancel/validate','GET')\nrequest.add_api_param('order_id', '0')\nrequest.add_api_param('order_item_id_list', '[]')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X GET url + '/order/reverse/cancel/validate?timestamp=1764727835699&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&order_id=0&order_item_id_list=%5B%5D'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 689,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"tip_content\": \"stock will be set as 0\",\n    \"reason_options\": [\n      {\n        \"reason_name\": \"out of stock\",\n        \"reason_id\": \"1000017\"\n      }\n    ],\n    \"tip_type\": \"warn\"\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 689
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 690
+        },
+        "lastModified": "2022-08-01 18:01:08",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 110139,
+              "data": [],
+              "children": [],
+              "name": "order_id",
+              "id": 690,
+              "type": "String",
+              "required": true,
+              "desc": "order id"
+            },
+            {
+              "treeId": 110140,
+              "data": [],
+              "children": [],
+              "name": "order_item_id_list",
+              "id": 690,
+              "type": "String[]",
+              "required": true,
+              "desc": "all order items need to be cancel"
+            }
+          ],
+          "id": 690
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 11378,
+        "desc": "Seller can check whether the order can be canceled through this API and get corresponding reasons if not.",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 110148,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 110149,
+                  "data": [],
+                  "children": [],
+                  "name": "tip_content",
+                  "id": 692,
+                  "type": "String",
+                  "required": false,
+                  "desc": "tip content when cancel order"
+                },
+                {
+                  "treeId": 110150,
+                  "data": [],
+                  "children": [],
+                  "name": "tip_type",
+                  "id": 692,
+                  "type": "String",
+                  "required": false,
+                  "desc": "warn or error"
+                },
+                {
+                  "treeId": 110151,
+                  "data": [],
+                  "children": [
+                    {
+                      "treeId": 110152,
+                      "data": [],
+                      "children": [],
+                      "name": "reason_name",
+                      "id": 692,
+                      "type": "String",
+                      "required": false,
+                      "desc": "reason name"
+                    },
+                    {
+                      "treeId": 110153,
+                      "data": [],
+                      "children": [],
+                      "name": "reason_id",
+                      "id": 692,
+                      "type": "String",
+                      "required": false,
+                      "desc": "Since the cancellation reasons supported by each order may be different, if you want reason_id, you need to call this interface to get"
+                    }
+                  ],
+                  "name": "reason_options",
+                  "id": 692,
+                  "type": "Object[]",
+                  "required": false,
+                  "desc": "reason options"
+                }
+              ],
+              "name": "data",
+              "id": 692,
+              "type": "Object",
+              "required": false,
+              "desc": "data"
+            }
+          ],
+          "id": 692
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

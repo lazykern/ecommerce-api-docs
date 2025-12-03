@@ -1,0 +1,483 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 2052,
+    "lastModified": "2024-03-15 11:00:48",
+    "testToolLink": "null",
+    "viewCount": 1045,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "GET/POST",
+        "docId": 2052,
+        "errorCodes": {
+          "data": [],
+          "id": null
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1650
+        },
+        "title": "RssGetOnePickupJob",
+        "path": "/rss/pickup-job/get",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "result",
+                  "demo": "{\"result\": {\"data\": {\"scheduledAt\":1684135189000,\"qtyFulfilledCount\":10,\"amendabilityCutOffDate\":1684135989000,\"preferredPickupTime\":\"13:00-17:00\",\"items\":[{\"name\":\"Salmon\",\"qtyFulfilled\":10,\"sku\":\"19739731408\",\"size\":\"2.5kg\",\"shipmentsInfo\":[{\"qty\":5,\"orderId\":\"49e74qjnkprp1to4\"},{\"qty\":6,\"orderId\":\"49e74qjn1prp1to4\"}],\"minimumExpiryDate\":1770357600000,\"qty\":11,\"vpc\":\"19739731408\",\"imageUrl\":\"http://media.redmart.com/newmedia/1600x/i/m/xxx.jpg\",\"rpc\":123456}],\"pickedAt\":1684136189000,\"id\":123,\"status\":\"pickedup\",\"category\":\"Dry\",\"qtyCount\":11}, \"errorMessage\": null, success: true}}",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "2",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "data",
+                      "demo": "{\"scheduledAt\":1684135189000,\"qtyFulfilledCount\":10,\"amendabilityCutOffDate\":1684135989000,\"preferredPickupTime\":\"13:00-17:00\",\"items\":[{\"name\":\"Salmon\",\"qtyFulfilled\":10,\"sku\":\"19739731408\",\"size\":\"2.5kg\",\"shipmentsInfo\":[{\"qty\":5,\"orderId\":\"49e74qjnkprp1to4\"},{\"qty\":6,\"orderId\":\"49e74qjn1prp1to4\"}],\"minimumExpiryDate\":1770357600000,\"qty\":11,\"vpc\":\"19739731408\",\"imageUrl\":\"http://media.redmart.com/newmedia/1600x/i/m/xxx.jpg\",\"rpc\":123456}],\"pickedAt\":1684136189000,\"id\":123,\"status\":\"pickedup\",\"category\":\"Dry\",\"qtyCount\":11}",
+                      "required": false,
+                      "paramType": "4",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 109320,
+                      "apiId": "3869",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "data",
+                      "parentId": 109319,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "com.alibaba.dchain.redmart.proxy.api.sellerOpenAPI.response.PickUpJobDTO",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "pickup job details"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "success",
+                      "demo": "true",
+                      "required": false,
+                      "paramType": "3",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 109321,
+                      "apiId": "3869",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "success",
+                      "parentId": 109319,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "success"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "errorMessage",
+                      "demo": "\"ERROR\"",
+                      "required": false,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 109322,
+                      "apiId": "3869",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "errorMessage",
+                      "parentId": 109319,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "error message"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 109319,
+                  "apiId": "3869",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.alibaba.dchain.redmart.proxy.api.common.BaseResponse",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "result"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "storeId",
+                  "demo": "414",
+                  "required": true,
+                  "paramType": "Number",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 109317,
+                  "apiId": "3869",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Long",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "store id"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "pickupJobId",
+                  "demo": "3588214",
+                  "required": true,
+                  "paramType": "Number",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 109318,
+                  "apiId": "3869",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Long",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "pickup job id"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/rss/pickup-job/get\");\nrequest.addApiParameter(\"storeId\", \"414\");\nrequest.addApiParameter(\"pickupJobId\", \"3588214\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/rss/pickup-job/get');\n$request->addApiParam('storeId','414');\n$request->addApiParam('pickupJobId','3588214');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/rss/pickup-job/get\");\nrequest.AddApiParameter(\"storeId\", \"414\");\nrequest.AddApiParameter(\"pickupJobId\", \"3588214\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/rss/pickup-job/get')\nrequest.add_api_parameter(\"storeId\", \"414\")\nrequest.add_api_parameter(\"pickupJobId\", \"3588214\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/rss/pickup-job/get')\nrequest.add_api_param('storeId', '414')\nrequest.add_api_param('pickupJobId', '3588214')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/rss/pickup-job/get' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"storeId\":\"414\",\"pickupJobId\":\"3588214\",\"timestamp\":\"1764727853086\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1649,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"result\": {\n    \"data\": {\n      \"preferredPickupTime\": \"13:00-17:00\",\n      \"amendabilityCutOffDate\": 1684135989000,\n      \"pickedAt\": 1684136189000,\n      \"qtyFulfilledCount\": 10,\n      \"id\": 123,\n      \"category\": \"Dry\",\n      \"items\": [\n        {\n          \"shipmentsInfo\": [\n            {\n              \"orderId\": \"49e74qjnkprp1to4\",\n              \"qty\": 5\n            },\n            {\n              \"orderId\": \"49e74qjn1prp1to4\",\n              \"qty\": 6\n            }\n          ],\n          \"qtyFulfilled\": 10,\n          \"size\": \"2.5kg\",\n          \"rpc\": 123456,\n          \"qty\": 11,\n          \"imageUrl\": \"http://media.redmart.com/newmedia/1600x/i/m/xxx.jpg\",\n          \"name\": \"Salmon\",\n          \"vpc\": \"19739731408\",\n          \"minimumExpiryDate\": 1770357600000,\n          \"sku\": \"19739731408\"\n        }\n      ],\n      \"scheduledAt\": 1684135189000,\n      \"status\": \"pickedup\",\n      \"qtyCount\": 11\n    },\n    \"success\": \"true\",\n    \"errorMessage\": \"\\\"ERROR\\\"\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 1649
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1650
+        },
+        "lastModified": "2024-03-15 11:00:48",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 109317,
+              "data": [],
+              "children": [],
+              "name": "storeId",
+              "id": 1650,
+              "type": "Number",
+              "required": true,
+              "desc": "store id"
+            },
+            {
+              "treeId": 109318,
+              "data": [],
+              "children": [],
+              "name": "pickupJobId",
+              "id": 1650,
+              "type": "Number",
+              "required": true,
+              "desc": "pickup job id"
+            }
+          ],
+          "id": 1650
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 1045,
+        "desc": "Get details of a pickup job",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 109319,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 109320,
+                  "data": [],
+                  "children": [],
+                  "name": "data",
+                  "id": 1652,
+                  "type": "Object",
+                  "required": false,
+                  "desc": "pickup job details"
+                },
+                {
+                  "treeId": 109321,
+                  "data": [],
+                  "children": [],
+                  "name": "success",
+                  "id": 1652,
+                  "type": "Boolean",
+                  "required": false,
+                  "desc": "success"
+                },
+                {
+                  "treeId": 109322,
+                  "data": [],
+                  "children": [],
+                  "name": "errorMessage",
+                  "id": 1652,
+                  "type": "String",
+                  "required": false,
+                  "desc": "error message"
+                }
+              ],
+              "name": "result",
+              "id": 1652,
+              "type": "Object",
+              "required": false,
+              "desc": "result"
+            }
+          ],
+          "id": 1652
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

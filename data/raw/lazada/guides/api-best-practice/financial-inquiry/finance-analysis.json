@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>Use the following finance APIs to view and analyze the finance statistics and transaction details of the store.</p>\n<ol>\n  <li>Use <strong>GetPayoutStatus</strong> to retrieve payout amount and status in a specified period. Returned payout information includes opening balance, item revenue, shipping fee, shipping fee credit, refunds, closing balance, and guarantee deposit. The payout status is 1 (paid) or 0 (not paid).</li>\n</ol>\n<br>\n<ol>\n  <li>Use <strong>queryTransactionDetails</strong> to retrieve transaction or fee details in a specified period. Transaction details include transaction date, type, number, amount, statement, payment status, order number, order item number, shipment type, shipment provider, and reference ID.</li>\n</ol>",
+    "cnTags": [],
+    "cnTitle": "Finance analysis",
+    "gmtModified": 1721368171000,
+    "author": "陈金言",
+    "cnContent": "<p>Use the following finance APIs to view and analyze the finance statistics and transaction details of the store.</p>\n<ol>\n  <li>Use <strong>GetPayoutStatus</strong> to retrieve payout amount and status in a specified period. Returned payout information includes opening balance, item revenue, shipping fee, shipping fee credit, refunds, closing balance, and guarantee deposit. The payout status is 1 (paid) or 0 (not paid).</li>\n</ol>\n<br>\n<ol>\n  <li>Use <strong>queryTransactionDetails</strong> to retrieve transaction or fee details in a specified period. Transaction details include transaction date, type, number, amount, statement, payment status, order number, order item number, shipment type, shipment provider, and reference ID.</li>\n</ol>",
+    "gmtCreate": 1721368171000,
+    "enTags": [],
+    "parentId": 29617,
+    "enTitle": "Finance analysis",
+    "id": 108144,
+    "lastModified": "2024-07-19 13:49:31",
+    "views": 1200
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

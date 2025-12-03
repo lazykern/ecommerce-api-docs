@@ -1,0 +1,465 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1341,
+    "lastModified": "2022-07-29 12:17:23",
+    "testToolLink": "null",
+    "viewCount": 4091,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "get",
+        "docId": 1341,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "\"E207: SKU not exist\"",
+              "code": "\"E0207\"",
+              "data": [],
+              "solution": "This SKU can not be found under your shop account.",
+              "id": 427
+            },
+            {
+              "codeDesc": "Product not exist",
+              "code": "E0208",
+              "data": [],
+              "solution": "The requested seller sku does not exist in the current store, please check the correctness of the seller sku.",
+              "id": 427
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "E1000",
+              "data": [],
+              "solution": "Endpoint exception, please use MY endpoint for GSP related requests.",
+              "id": 427
+            },
+            {
+              "codeDesc": "Product not exist",
+              "code": "E0208",
+              "data": [],
+              "solution": "The requested seller sku does not exist in the current store, please check the correctness of the seller sku.",
+              "id": 427
+            }
+          ],
+          "id": 427
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 426
+        },
+        "title": "GetGlobalProductStatus",
+        "path": "/product/global/status/get",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": true,
+                  "paramType": "1",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 37003,
+                  "apiId": "1208",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 37002,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Object",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "result json type string"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "success",
+                  "demo": "true",
+                  "required": true,
+                  "paramType": "3",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 37004,
+                  "apiId": "1208",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "success",
+                  "parentId": 37002,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "boolean",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "success flag"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "error_code",
+                  "demo": "E207",
+                  "required": true,
+                  "paramType": "1",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 37005,
+                  "apiId": "1208",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "errorCode",
+                  "parentId": 37002,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "error code"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "error_msg",
+                  "demo": "get SKU failed",
+                  "required": true,
+                  "paramType": "1",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 37006,
+                  "apiId": "1208",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "errorMsg",
+                  "parentId": 37002,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "error msg"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "params",
+                  "demo": "{\"sellerSku\" : \"123\"}",
+                  "required": true,
+                  "paramType": "Object",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 37000,
+                  "apiId": "1208",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "params",
+                  "parentId": 36997,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.util.Map<java.lang.String, java.lang.String>",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "put the \"sellerSku\" as the key"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/global/status/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"params\", \"{\\\"sellerSku\\\" : \\\"123\\\"}\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/global/status/get','GET');\n$request->addApiParam('params','{\\\"sellerSku\\\" : \\\"123\\\"}');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/global/status/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"params\", \"{\\\"sellerSku\\\" : \\\"123\\\"}\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/global/status/get','GET')\nrequest.add_api_parameter(\"params\", \"{\\\"sellerSku\\\" : \\\"123\\\"}\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/global/status/get','GET')\nrequest.add_api_param('params', '{\\\"sellerSku\\\" : \\\"123\\\"}')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X GET url + '/product/global/status/get?timestamp=1764727830183&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&params=%7B%22sellerSku%22+%3A+%22123%22%7D'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 425,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"error_msg\": \"get SKU failed\",\n  \"code\": \"0\",\n  \"data\": \"{}\",\n  \"success\": \"true\",\n  \"error_code\": \"E207\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 425
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 426
+        },
+        "lastModified": "2022-07-29 12:17:23",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 37000,
+              "data": [],
+              "children": [],
+              "name": "params",
+              "id": 426,
+              "type": "Object",
+              "required": true,
+              "desc": "put the \"sellerSku\" as the key"
+            }
+          ],
+          "id": 426
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 4091,
+        "desc": "Use this API to query the status of the specified global product. It takes several minutes for the global product to be created on each site. (CrossBoarderSellersOnly)",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 37003,
+              "data": [],
+              "children": [],
+              "name": "data",
+              "id": 428,
+              "type": "String",
+              "required": true,
+              "desc": "result json type string"
+            },
+            {
+              "treeId": 37004,
+              "data": [],
+              "children": [],
+              "name": "success",
+              "id": 428,
+              "type": "Boolean",
+              "required": true,
+              "desc": "success flag"
+            },
+            {
+              "treeId": 37005,
+              "data": [],
+              "children": [],
+              "name": "error_code",
+              "id": 428,
+              "type": "String",
+              "required": true,
+              "desc": "error code"
+            },
+            {
+              "treeId": 37006,
+              "data": [],
+              "children": [],
+              "name": "error_msg",
+              "id": 428,
+              "type": "String",
+              "required": true,
+              "desc": "error msg"
+            }
+          ],
+          "id": 428
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

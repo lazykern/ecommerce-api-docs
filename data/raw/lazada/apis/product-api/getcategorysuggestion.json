@@ -1,0 +1,521 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1292,
+    "lastModified": "2022-07-28 17:02:37",
+    "testToolLink": "null",
+    "viewCount": 11712,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "get",
+        "docId": 1292,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E701: Empty category suggestion.",
+              "code": "701",
+              "data": [],
+              "solution": "Empty category suggestion.",
+              "id": 431
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "1000",
+              "data": [],
+              "solution": "Internal Application Error.",
+              "id": 431
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 431
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 431
+            },
+            {
+              "codeDesc": "Empty category suggestion.",
+              "code": "701",
+              "data": [],
+              "solution": "The API is unable to provide suggestions, please change the product name and retry.",
+              "id": 431
+            }
+          ],
+          "id": 431
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 430
+        },
+        "title": "GetCategorySuggestion",
+        "path": "/product/category/suggestion/get",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": true,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "3",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "categorySuggestions",
+                      "demo": "[]",
+                      "required": false,
+                      "paramType": "9",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "categoryId",
+                          "demo": "2342",
+                          "required": false,
+                          "paramType": "2",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 84096,
+                          "apiId": "2957",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "categoryId",
+                          "parentId": 84095,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.Long",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "categoryId"
+                        },
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "categoryName",
+                          "demo": "T-Shirt",
+                          "required": false,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 84097,
+                          "apiId": "2957",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "categoryName",
+                          "parentId": 84095,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "categoryName"
+                        },
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "categoryPath",
+                          "demo": "categoryPath",
+                          "required": false,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 84098,
+                          "apiId": "2957",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "categoryPath",
+                          "parentId": 84095,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "categoryPath"
+                        }
+                      ],
+                      "maxListSize": "",
+                      "id": 84095,
+                      "apiId": "2957",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "categorySuggestions",
+                      "parentId": 84094,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.util.List<com.taobao.sellglobal.domain.api.CategorySuggestionResultBean>",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "Category Beans"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 84094,
+                  "apiId": "2957",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 84093,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.taobao.sellglobal.domain.api.CategorySuggestionResultDO",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "data"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "product_name",
+                  "demo": "Man T-Shirt Summer",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 84089,
+                  "apiId": "2957",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "productName",
+                  "parentId": 84088,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Product Name"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/category/suggestion/get\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"product_name\", \"Man T-Shirt Summer\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/category/suggestion/get','GET');\n$request->addApiParam('product_name','Man T-Shirt Summer');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/category/suggestion/get\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"product_name\", \"Man T-Shirt Summer\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/category/suggestion/get','GET')\nrequest.add_api_parameter(\"product_name\", \"Man T-Shirt Summer\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/category/suggestion/get','GET')\nrequest.add_api_param('product_name', 'Man T-Shirt Summer')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X GET url + '/product/category/suggestion/get?timestamp=1764727827780&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&product_name=Man+T-Shirt+Summer'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 429,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"categorySuggestions\": [\n      {\n        \"categoryPath\": \"categoryPath\",\n        \"categoryName\": \"T-Shirt\",\n        \"categoryId\": \"2342\"\n      }\n    ]\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 429
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 430
+        },
+        "lastModified": "2022-07-28 17:02:37",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 84089,
+              "data": [],
+              "children": [],
+              "name": "product_name",
+              "id": 430,
+              "type": "String",
+              "required": true,
+              "desc": "Product Name"
+            }
+          ],
+          "id": 430
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 11712,
+        "desc": "Get product's category suggestion by product title",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 84094,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 84095,
+                  "data": [],
+                  "children": [
+                    {
+                      "treeId": 84096,
+                      "data": [],
+                      "children": [],
+                      "name": "categoryId",
+                      "id": 432,
+                      "type": "Number",
+                      "required": false,
+                      "desc": "categoryId"
+                    },
+                    {
+                      "treeId": 84097,
+                      "data": [],
+                      "children": [],
+                      "name": "categoryName",
+                      "id": 432,
+                      "type": "String",
+                      "required": false,
+                      "desc": "categoryName"
+                    },
+                    {
+                      "treeId": 84098,
+                      "data": [],
+                      "children": [],
+                      "name": "categoryPath",
+                      "id": 432,
+                      "type": "String",
+                      "required": false,
+                      "desc": "categoryPath"
+                    }
+                  ],
+                  "name": "categorySuggestions",
+                  "id": 432,
+                  "type": "Object[]",
+                  "required": false,
+                  "desc": "Category Beans"
+                }
+              ],
+              "name": "data",
+              "id": 432,
+              "type": "Object",
+              "required": true,
+              "desc": "data"
+            }
+          ],
+          "id": 432
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

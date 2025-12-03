@@ -1,0 +1,534 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1327,
+    "lastModified": "2022-07-28 17:14:54",
+    "testToolLink": "null",
+    "viewCount": 7530,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "GET/POST",
+        "docId": 1327,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "The specified access token is invalid or expired",
+              "code": "IllegalAccessToken",
+              "data": [],
+              "solution": "access token is invalid or expired",
+              "id": 239
+            }
+          ],
+          "id": 239
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 238
+        },
+        "title": "GetWarehouseBySellerId",
+        "path": "/rc/warehouse/get",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "result",
+                  "demo": "xxxx",
+                  "required": true,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "not_success",
+                      "demo": "false",
+                      "required": true,
+                      "paramType": "3",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 58743,
+                      "apiId": "2085",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "notSuccess",
+                      "parentId": 58742,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "xxx"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "success",
+                      "demo": "true",
+                      "required": true,
+                      "paramType": "4",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 58744,
+                      "apiId": "2085",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "success",
+                      "parentId": 58742,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "xxx"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "2",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "module",
+                      "demo": "xxx",
+                      "required": true,
+                      "paramType": "4",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 58745,
+                      "apiId": "2085",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "module",
+                      "parentId": 58742,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "com.alibaba.global.supplychain.rc.api.dto.response.WarehouseInfoOpenApiDTO",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "result"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "error_code",
+                      "demo": "null",
+                      "required": true,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 58752,
+                      "apiId": "2085",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "errorCode",
+                      "parentId": 58742,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "error_code"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "repeated",
+                      "demo": "false",
+                      "required": true,
+                      "paramType": "3",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 58753,
+                      "apiId": "2085",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "repeated",
+                      "parentId": 58742,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "repeated"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "retry",
+                      "demo": "false",
+                      "required": true,
+                      "paramType": "3",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 58754,
+                      "apiId": "2085",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "retry",
+                      "parentId": 58742,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "retry"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 58742,
+                  "apiId": "2085",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.alibaba.ecommerce.module.Response",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "xxxx"
+                }
+              ],
+              "input": [],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/rc/warehouse/get\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/rc/warehouse/get');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/rc/warehouse/get\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/rc/warehouse/get')\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/rc/warehouse/get')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/rc/warehouse/get' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"timestamp\":\"1764727825700\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 237,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"result\": {\n    \"not_success\": \"false\",\n    \"success\": {},\n    \"module\": {},\n    \"error_code\": \"null\",\n    \"repeated\": \"false\",\n    \"retry\": \"false\"\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 237
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 238
+        },
+        "lastModified": "2022-07-28 17:14:54",
+        "parameters": {
+          "data": [],
+          "id": null
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 7530,
+        "desc": "get warehouse by seller id",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 58742,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 58743,
+                  "data": [],
+                  "children": [],
+                  "name": "not_success",
+                  "id": 240,
+                  "type": "Boolean",
+                  "required": true,
+                  "desc": "xxx"
+                },
+                {
+                  "treeId": 58744,
+                  "data": [],
+                  "children": [],
+                  "name": "success",
+                  "id": 240,
+                  "type": "Object",
+                  "required": true,
+                  "desc": "xxx"
+                },
+                {
+                  "treeId": 58745,
+                  "data": [],
+                  "children": [],
+                  "name": "module",
+                  "id": 240,
+                  "type": "Object",
+                  "required": true,
+                  "desc": "result"
+                },
+                {
+                  "treeId": 58752,
+                  "data": [],
+                  "children": [],
+                  "name": "error_code",
+                  "id": 240,
+                  "type": "String",
+                  "required": true,
+                  "desc": "error_code"
+                },
+                {
+                  "treeId": 58753,
+                  "data": [],
+                  "children": [],
+                  "name": "repeated",
+                  "id": 240,
+                  "type": "Boolean",
+                  "required": true,
+                  "desc": "repeated"
+                },
+                {
+                  "treeId": 58754,
+                  "data": [],
+                  "children": [],
+                  "name": "retry",
+                  "id": 240,
+                  "type": "Boolean",
+                  "required": true,
+                  "desc": "retry"
+                }
+              ],
+              "name": "result",
+              "id": 240,
+              "type": "Object",
+              "required": true,
+              "desc": "xxxx"
+            }
+          ],
+          "id": 240
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

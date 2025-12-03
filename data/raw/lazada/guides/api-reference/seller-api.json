@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>The table below lists APIs that can be used for seller information (email address) management.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fget' target='_brank'>GetSeller</a> </td>\n      <td align=\"left\">Get seller information by current seller ID. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fmetrics%2Fget' target='_brank'>GetSellerMetricsById</a> </td>\n      <td align=\"left\">Get seller metrics data of the specific seller, like positive seller rating, ship on time rate and etc. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fupdate' target='_brank'>SellerUpdate</a> </td>\n      <td align=\"left\">Update the email address of the seller who makes the call. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fuser%2Fupdate' target='_brank'>UserUpdate</a> </td>\n      <td align=\"left\">Update the email address of a user under the seller account. </td>\n    </tr>\n  </tbody>\n</table>",
+    "cnTags": [],
+    "cnTitle": "Seller API",
+    "gmtModified": 1721368190000,
+    "author": "Pan, Weizhong",
+    "cnContent": "<p>The table below lists APIs that can be used for seller information (email address) management.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fget' target='_brank'>GetSeller</a> </td>\n      <td align=\"left\">Get seller information by current seller ID. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fmetrics%2Fget' target='_brank'>GetSellerMetricsById</a> </td>\n      <td align=\"left\">Get seller metrics data of the specific seller, like positive seller rating, ship on time rate and etc. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fseller%2Fupdate' target='_brank'>SellerUpdate</a> </td>\n      <td align=\"left\">Update the email address of the seller who makes the call. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fuser%2Fupdate' target='_brank'>UserUpdate</a> </td>\n      <td align=\"left\">Update the email address of a user under the seller account. </td>\n    </tr>\n  </tbody>\n</table>",
+    "gmtCreate": 1721368190000,
+    "enTags": [],
+    "parentId": 10556,
+    "enTitle": "Seller API",
+    "id": 108148,
+    "lastModified": "2024-07-19 13:49:50",
+    "views": 3602
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

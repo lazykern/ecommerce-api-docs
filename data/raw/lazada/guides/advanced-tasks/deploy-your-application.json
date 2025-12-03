@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>When your application development and test is completed, you can deploy your application online to the hosting environment.</p>\n<p>Take the following steps to complete the deployment process:<br/>1. From the list of your applications, click <strong>Manage</strong> to open the overview page of your application.<br/>2. On the <strong>App Overview</strong> page, you can find the <strong>App Status</strong> field under the <strong>Basic Information</strong> section.<br/>3. Click <strong>Apply Online</strong>.<br/>4. Enter the description of your application for deploying it online in the <strong>Reason</strong> field of the <strong>Apply</strong> dialog.<br/>5. (Optional) Attach a document file for the request as needed. The document can be the test reports of your application.<br/>6. Click <strong>OK</strong>.</p>\n<p>Once the online deployment request is approved, the status of your application is changed to <strong>Online</strong>. You can then deploy your application to the requested or planned hosting environment.</p>",
+    "cnTags": [],
+    "cnTitle": "Deploy your application",
+    "gmtModified": 1721368192000,
+    "author": "陈金言",
+    "cnContent": "<p>When your application development and test is completed, you can deploy your application online to the hosting environment.</p>\n<p>Take the following steps to complete the deployment process:<br/>1. From the list of your applications, click <strong>Manage</strong> to open the overview page of your application.<br/>2. On the <strong>App Overview</strong> page, you can find the <strong>App Status</strong> field under the <strong>Basic Information</strong> section.<br/>3. Click <strong>Apply Online</strong>.<br/>4. Enter the description of your application for deploying it online in the <strong>Reason</strong> field of the <strong>Apply</strong> dialog.<br/>5. (Optional) Attach a document file for the request as needed. The document can be the test reports of your application.<br/>6. Click <strong>OK</strong>.</p>\n<p>Once the online deployment request is approved, the status of your application is changed to <strong>Online</strong>. You can then deploy your application to the requested or planned hosting environment.</p>",
+    "gmtCreate": 1721368192000,
+    "enTags": [],
+    "parentId": 10432,
+    "enTitle": "Deploy your application",
+    "id": 108135,
+    "lastModified": "2024-07-19 13:49:52",
+    "views": 979
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

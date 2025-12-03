@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>The table below lists APIs that can be used for viewing and analyzing seller finance data.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Fpayout%2Fstatus%2Fget' target='_brank'>GetPayoutStatus</a> </td>\n      <td align=\"left\">Get the payout status of the seller in a specified period. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Ftransaction%2Fdetails%2Fget' target='_brank'>queryTransactionDetails</a> </td>\n      <td align=\"left\">API to query seller transaction details within specific date range. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Ftransaction%2FaccountTransactions%2Fquery' target='_brank'>QueryAccountTransactions</a> </td>\n      <td align=\"left\">API to query account transactions. </td>\n    </tr>\n  </tbody>\n</table>",
+    "cnTags": [],
+    "cnTitle": "Finance API",
+    "gmtModified": 1721368189000,
+    "author": "陈金言",
+    "cnContent": "<p>The table below lists APIs that can be used for viewing and analyzing seller finance data.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Fpayout%2Fstatus%2Fget' target='_brank'>GetPayoutStatus</a> </td>\n      <td align=\"left\">Get the payout status of the seller in a specified period. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Ftransaction%2Fdetails%2Fget' target='_brank'>queryTransactionDetails</a> </td>\n      <td align=\"left\">API to query seller transaction details within specific date range. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Ffinance%2Ftransaction%2FaccountTransactions%2Fquery' target='_brank'>QueryAccountTransactions</a> </td>\n      <td align=\"left\">API to query account transactions. </td>\n    </tr>\n  </tbody>\n</table>",
+    "gmtCreate": 1721368189000,
+    "enTags": [],
+    "parentId": 10556,
+    "enTitle": "Finance API",
+    "id": 108249,
+    "lastModified": "2024-07-19 13:49:49",
+    "views": 2729
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>Taking the GetOrder (/order/get) API call as example, the steps of assembling the HTTP request is as follows:</p>\n<br>\n<p><strong>Step 1. Populate parameters and values</strong></p>\n<p>Common parameters:</p>\n<ul>\n  <li>app_key = &ldquo;123456&rdquo;</li>\n  <li>access_token = &ldquo;test&rdquo;</li>\n  <li>timestamp = &ldquo;1517820392000&rdquo;</li>\n  <li>sign_method = &ldquo;sha256&rdquo;</li>\n</ul>\n<p>Business parameters:</p>\n<ul>\n  <li>order_id = &ldquo;1234&rdquo;</li>\n</ul>\n<br>\n<p><strong>Step 2. Sort all parameters and values according to the parameter name in ASCII table</strong></p>\n<ul>\n  <li>access_token = &ldquo;test&rdquo;</li>\n  <li>app_key = &ldquo;123456&rdquo;</li>\n  <li>order_id = &ldquo;1234&rdquo;</li>\n  <li>sign_method = &ldquo;sha256&rdquo;</li>\n  <li>timestamp = &ldquo;1517820392000&rdquo;</li>\n</ul>\n<br>\n<p><strong>Step 3. Concatenate the sorted parameters and their values into a string</strong></p>\n<pre><code>access_tokentestapp_key123456order_id1234sign_methodsha256timestamp1517820392000\n</code></pre>\n<br>\n<p><strong>Step 4. Add the API name in front of the concatenated string</strong></p>\n<pre><code>/order/getaccess_tokentestapp_key123456order_id1234sign_methodsha256timestamp1517820392000\n</code></pre>\n<br>\n<p><strong>Step 5. Generate signature</strong><br/>Assuming that the App Secret is &ldquo;helloworld&rdquo;, the signature is:</p>\n<pre><code>hex(sha256(/order/getaccess_tokentestapp_key123456order_id1234sign_methodsha256timestamp1517820392000))=4190D32361CFB9581350222F345CB77F3B19F0E31D162316848A2C1FFD5FAB4A\n</code></pre>\n<br>\n<p><strong>Step 6. Assemble HTTP request</strong><br/>Encode all the parameters and values (with the &ldquo;sign&rdquo; parameter) using UTF-8 format (the order of parameters can be arbitrary).</p>\n<pre><code class=\"plain\">http://api.lazada.com/rest/order/get?app_key=123456&amp;access_token=test&amp;timestamp=1517820392000&amp;sign_method=sha256&amp;order_id=1234&amp;sign=4190D32361CFB9581350222F345CB77F3B19F0E31D162316848A2C1FFD5FAB4A\n</code></pre>",
+    "cnTags": [],
+    "cnTitle": "HTTP request sample",
+    "gmtModified": 1721368196000,
+    "author": "陈金言",
+    "cnContent": "<p>Taking the GetOrder (/order/get) API call as example, the steps of assembling the HTTP request is as follows:</p>\n<br>\n<p><strong>Step 1. Populate parameters and values</strong></p>\n<p>Common parameters:</p>\n<ul>\n  <li>app_key = &ldquo;123456&rdquo;</li>\n  <li>access_token = &ldquo;test&rdquo;</li>\n  <li>timestamp = &ldquo;1517820392000&rdquo;</li>\n  <li>sign_method = &ldquo;sha256&rdquo;</li>\n</ul>\n<p>Business parameters:</p>\n<ul>\n  <li>order_id = &ldquo;1234&rdquo;</li>\n</ul>\n<br>\n<p><strong>Step 2. Sort all parameters and values according to the parameter name in ASCII table</strong></p>\n<ul>\n  <li>access_token = &ldquo;test&rdquo;</li>\n  <li>app_key = &ldquo;123456&rdquo;</li>\n  <li>order_id = &ldquo;1234&rdquo;</li>\n  <li>sign_method = &ldquo;sha256&rdquo;</li>\n  <li>timestamp = &ldquo;1517820392000&rdquo;</li>\n</ul>\n<br>\n<p><strong>Step 3. Concatenate the sorted parameters and their values into a string</strong></p>\n<pre><code>access_tokentestapp_key123456order_id1234sign_methodsha256timestamp1517820392000\n</code></pre>\n<br>\n<p><strong>Step 4. Add the API name in front of the concatenated string</strong></p>\n<pre><code>/order/getaccess_tokentestapp_key123456order_id1234sign_methodsha256timestamp1517820392000\n</code></pre>\n<br>\n<p><strong>Step 5. Generate signature</strong><br/>Assuming that the App Secret is &ldquo;helloworld&rdquo;, the signature is:</p>\n<pre><code>hex(sha256(/order/getaccess_tokentestapp_key123456order_id1234sign_methodsha256timestamp1517820392000))=4190D32361CFB9581350222F345CB77F3B19F0E31D162316848A2C1FFD5FAB4A\n</code></pre>\n<br>\n<p><strong>Step 6. Assemble HTTP request</strong><br/>Encode all the parameters and values (with the &ldquo;sign&rdquo; parameter) using UTF-8 format (the order of parameters can be arbitrary).</p>\n<pre><code class=\"plain\">http://api.lazada.com/rest/order/get?app_key=123456&amp;access_token=test&amp;timestamp=1517820392000&amp;sign_method=sha256&amp;order_id=1234&amp;sign=4190D32361CFB9581350222F345CB77F3B19F0E31D162316848A2C1FFD5FAB4A\n</code></pre>",
+    "gmtCreate": 1721368196000,
+    "enTags": [],
+    "parentId": 10400,
+    "enTitle": "HTTP request sample",
+    "id": 108069,
+    "lastModified": "2024-07-19 13:49:56",
+    "views": 2336
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

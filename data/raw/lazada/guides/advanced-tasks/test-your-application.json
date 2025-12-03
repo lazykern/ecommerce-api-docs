@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<h1>Test your application</h1>\n<p>After completing the configuration of your application, you can start testing your application with a&nbsp;Lazada seller account. You need a seller account to complete the seller authorization process, create SKUs and orders for testing purpose.</p>\n<p>If you do not have test accounts, Lazada Open Platform provides some test accounts for you to test your application. Take the following steps to get a test account:</p>\n<p>1. Open the&nbsp;<strong>APP Console</strong>&nbsp;and click&nbsp;<strong>Test Tools</strong>&nbsp;-&gt;<strong>Test Account</strong>&nbsp;-&gt;<strong>Loan New Account</strong>.<br />2. On the<strong>&nbsp;Test Account Application</strong>&nbsp;page, select a country for the test account, enter your business requirements, and click Submit. A test account will be assigned.<br />3. Click the&nbsp;<strong>Sandbox Test</strong>-&gt;&nbsp;<strong>Test Case</strong>, create an test orders, you can click<strong>&nbsp;API Call</strong>&nbsp;and test API.</p>\n<p><strong>Important</strong>:<br />During API testing, in a sandbox environment,<br />You can click \"Get Token \" to generate access token directly.</p>\n<p>When you complete testing your application with the test account, you can release it on the Test Account -&gt;Release.</p>\n<p><strong>Note</strong>&nbsp;:<br />In order to successfully complete the testing of your application, you should make more than 1000 calls to Lazada platform daily with a success rate of at least 95%, for a period of two weeks. You will not be able to reply your application without sufficient test API call record.</p>",
+    "cnTags": [],
+    "cnTitle": "Test your application",
+    "gmtModified": 1721368192000,
+    "author": "Sourav, Suman",
+    "cnContent": "<h1>Test your application</h1>\n<p>After completing the configuration of your application, you can start testing your application with a&nbsp;Lazada seller account. You need a seller account to complete the seller authorization process, create SKUs and orders for testing purpose.</p>\n<p>If you do not have test accounts, Lazada Open Platform provides some test accounts for you to test your application. Take the following steps to get a test account:</p>\n<p>1. Open the&nbsp;<strong>APP Console</strong>&nbsp;and click&nbsp;<strong>Test Tools</strong>&nbsp;-&gt;<strong>Test Account</strong>&nbsp;-&gt;<strong>Loan New Account</strong>.<br />2. On the<strong>&nbsp;Test Account Application</strong>&nbsp;page, select a country for the test account, enter your business requirements, and click Submit. A test account will be assigned.<br />3. Click the&nbsp;<strong>Sandbox Test</strong>-&gt;&nbsp;<strong>Test Case</strong>, create an test orders, you can click<strong>&nbsp;API Call</strong>&nbsp;and test API.</p>\n<p><strong>Important</strong>:<br />During API testing, in a sandbox environment,<br />You can click \"Get Token \" to generate access token directly.</p>\n<p>When you complete testing your application with the test account, you can release it on the Test Account -&gt;Release.</p>\n<p><strong>Note</strong>&nbsp;:<br />In order to successfully complete the testing of your application, you should make more than 1000 calls to Lazada platform daily with a success rate of at least 95%, for a period of two weeks. You will not be able to reply your application without sufficient test API call record.</p>",
+    "gmtCreate": 1721368192000,
+    "enTags": [],
+    "parentId": 10432,
+    "enTitle": "Test your application",
+    "id": 108444,
+    "lastModified": "2024-07-19 13:49:52",
+    "views": 3383
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

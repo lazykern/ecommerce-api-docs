@@ -1,0 +1,528 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1650,
+    "lastModified": "2022-12-13 10:09:17",
+    "testToolLink": "null",
+    "viewCount": 3892,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "get",
+        "docId": 1650,
+        "errorCodes": {
+          "data": [],
+          "id": null
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1034
+        },
+        "title": "GetQCAlertProducts",
+        "path": "/product/qc/alert/list",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "3",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "[]",
+                  "required": false,
+                  "paramType": "9",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "productId",
+                      "demo": "0",
+                      "required": false,
+                      "paramType": "2",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 88372,
+                      "apiId": "3120",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "productId",
+                      "parentId": 88371,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Long",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "product Id"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "categoryId",
+                      "demo": "0",
+                      "required": false,
+                      "paramType": "2",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 88373,
+                      "apiId": "3120",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "categoryId",
+                      "parentId": 88371,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Long",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "product category id"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "deactivationTime",
+                      "demo": "0",
+                      "required": false,
+                      "paramType": "2",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 88374,
+                      "apiId": "3120",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "deactivationTime",
+                      "parentId": 88371,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Long",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "Date to execute deactivation"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "3",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "suggestionCategories",
+                      "demo": "[0,1]",
+                      "required": false,
+                      "paramType": "7",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 88375,
+                      "apiId": "3120",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "suggestionCategories",
+                      "parentId": 88371,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.util.List<java.lang.Long>",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "suggested categories"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 88371,
+                  "apiId": "3120",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 88370,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.util.List<com.lazada.item.admin.client.openapi.model.QcAlertProductResponseDTO>",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response data list"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "1",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "offset",
+                  "demo": "1",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 88367,
+                  "apiId": "3120",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "Default Value:1",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Integer",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Number of QC alert products to skip"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "10",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "limit",
+                  "demo": "10",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 88368,
+                  "apiId": "3120",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "Default Value:10",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Integer",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "The maximum number of QC alert products that can be returned. "
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/qc/alert/list\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"offset\", \"1\");\nrequest.addApiParameter(\"limit\", \"10\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/qc/alert/list','GET');\n$request->addApiParam('offset','1');\n$request->addApiParam('limit','10');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/qc/alert/list\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"offset\", \"1\");\nrequest.AddApiParameter(\"limit\", \"10\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/qc/alert/list','GET')\nrequest.add_api_parameter(\"offset\", \"1\")\nrequest.add_api_parameter(\"limit\", \"10\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/qc/alert/list','GET')\nrequest.add_api_param('offset', '1')\nrequest.add_api_param('limit', '10')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X GET url + '/product/qc/alert/list?timestamp=1764727828568&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&offset=1&limit=10'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1033,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": [\n    {\n      \"productId\": \"0\",\n      \"suggestionCategories\": [\n        0,\n        1\n      ],\n      \"categoryId\": \"0\",\n      \"deactivationTime\": \"0\"\n    }\n  ],\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 1033
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1034
+        },
+        "lastModified": "2022-12-13 10:09:17",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 88367,
+              "data": [],
+              "children": [],
+              "name": "offset",
+              "id": 1034,
+              "type": "String",
+              "required": true,
+              "desc": "Number of QC alert products to skip"
+            },
+            {
+              "treeId": 88368,
+              "data": [],
+              "children": [],
+              "name": "limit",
+              "id": 1034,
+              "type": "String",
+              "required": true,
+              "desc": "The maximum number of QC alert products that can be returned. "
+            }
+          ],
+          "id": 1034
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 3892,
+        "desc": "Getting seller's products that have been alerted by quality control.",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 88371,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 88372,
+                  "data": [],
+                  "children": [],
+                  "name": "productId",
+                  "id": 1036,
+                  "type": "Number",
+                  "required": false,
+                  "desc": "product Id"
+                },
+                {
+                  "treeId": 88373,
+                  "data": [],
+                  "children": [],
+                  "name": "categoryId",
+                  "id": 1036,
+                  "type": "Number",
+                  "required": false,
+                  "desc": "product category id"
+                },
+                {
+                  "treeId": 88374,
+                  "data": [],
+                  "children": [],
+                  "name": "deactivationTime",
+                  "id": 1036,
+                  "type": "Number",
+                  "required": false,
+                  "desc": "Date to execute deactivation"
+                },
+                {
+                  "treeId": 88375,
+                  "data": [],
+                  "children": [],
+                  "name": "suggestionCategories",
+                  "id": 1036,
+                  "type": "Number[]",
+                  "required": false,
+                  "desc": "suggested categories"
+                }
+              ],
+              "name": "data",
+              "id": 1036,
+              "type": "Object[]",
+              "required": false,
+              "desc": "Response data list"
+            }
+          ],
+          "id": 1036
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

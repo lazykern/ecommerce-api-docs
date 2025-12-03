@@ -1,0 +1,689 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1872,
+    "lastModified": "2023-06-12 16:48:25",
+    "testToolLink": "null",
+    "viewCount": 1107,
+    "authType": 0,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 1872,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "No parcel info for tracking number {trackingNumber}. Please scan again or manually input the tracking number.",
+              "code": "DOP_RESERVED_PARCEL_NOT_FOUND",
+              "data": [],
+              "solution": "Cannot find parcel info with provided tracking number",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Cage not found: {cageNumber}",
+              "code": "CAGE_NOT_FOUND",
+              "data": [],
+              "solution": "Cage not found",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Station [{stationCode}] is not active",
+              "code": "STATION_NOT_ACTIVE",
+              "data": [],
+              "solution": "Station is not active",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Parcel has already inbounded: {trackingNumber}",
+              "code": "PARCEL_ALREADY_INBOUND",
+              "data": [],
+              "solution": "Parcel has already inbounded",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Station {stationCode} is not a DOP. You can not drop-off here.",
+              "code": "STATION_IS_NOT_DOP",
+              "data": [],
+              "solution": "Station is not DOP type",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Parcel is not at correct status to dropoff, parcel {trackingNumber} is now {status}",
+              "code": "DOP_PARCEL_STATUS_NOT_WHITELIST",
+              "data": [],
+              "solution": "Invalid status to inbound",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Tracking number {trackingNumber} is cancelled. Please remove out of list",
+              "code": "CANNOT_INBOUND_CANCELLED_TASK",
+              "data": [],
+              "solution": "Parcel is cancelled",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Seller is a MDOP, your parcel cannot be dropped-off to any station. DOP Merchant={sellerName}, and TN={trackingNumber}",
+              "code": "DOP_MERCHANT_MDOP",
+              "data": [],
+              "solution": "The seller of the parcel is MDOP",
+              "id": 1339
+            },
+            {
+              "codeDesc": "Your request is processing",
+              "code": "DUPLICATE_REQUEST",
+              "data": [],
+              "solution": "Client submit duplicate request at the same time",
+              "id": 1339
+            },
+            {
+              "codeDesc": "NullpointerException",
+              "code": "UNEXPECTED_ERROR",
+              "data": [],
+              "solution": "Mostly the stacktrace of unexpected error",
+              "id": 1339
+            }
+          ],
+          "id": 1339
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": false,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1338
+        },
+        "title": "DopConfirmInbound",
+        "path": "/logistics/station/dop/confirm-inbound",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "success",
+                  "demo": "true",
+                  "required": false,
+                  "paramType": "3",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 93673,
+                  "apiId": "3314",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "success",
+                  "parentId": 93672,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Boolean",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Is success?"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "true",
+                  "required": false,
+                  "paramType": "1",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 93674,
+                  "apiId": "3314",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 93672,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Boolean",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Confirm inbound success or not?"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "errorCode",
+                  "demo": "CAGE_NOT_FOUND",
+                  "required": false,
+                  "paramType": "1",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 93682,
+                  "apiId": "3314",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "code",
+                  "parentId": 93681,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Error code"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "errorMsg",
+                  "demo": "Cage 123 is not found",
+                  "required": false,
+                  "paramType": "1",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 93683,
+                  "apiId": "3314",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "message",
+                  "parentId": 93681,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Error message"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "traceId",
+                  "demo": "d2d9043316862098123051035df9da",
+                  "required": false,
+                  "paramType": "1",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 93684,
+                  "apiId": "3314",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "traceId",
+                  "parentId": 93672,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Trace id for debugging"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "stationCode",
+                  "demo": "STATION_123456",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 93668,
+                  "apiId": "3314",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "stationCode",
+                  "parentId": 93667,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Station code/ID"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "3",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "scannedParcels",
+                  "demo": "List scanned parcels",
+                  "required": true,
+                  "paramType": "Object[]",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "cageNumber",
+                      "demo": "123",
+                      "required": true,
+                      "paramType": "String",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 93686,
+                      "apiId": "3314",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "1",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "cageNumber",
+                      "parentId": 93685,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "Cage number"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "trackingNumber",
+                      "demo": "TEST1231124VN",
+                      "required": true,
+                      "paramType": "String",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 93687,
+                      "apiId": "3314",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "1",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "trackingNumber",
+                      "parentId": 93685,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "Tracking number of parcel"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 93685,
+                  "apiId": "3314",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "scannedParcels",
+                  "parentId": 93666,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.alibaba.logistics.station.hsf.dto.dop.DopCreateScannedParcelRequest",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "List scanned parcels"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/logistics/station/dop/confirm-inbound\");\nrequest.addApiParameter(\"stationCode\", \"STATION_123456\");\nrequest.addApiParameter(\"scannedParcels\", \"[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/logistics/station/dop/confirm-inbound');\n$request->addApiParam('stationCode','STATION_123456');\n$request->addApiParam('scannedParcels','[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]');\nvar_dump($c->execute($request));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/logistics/station/dop/confirm-inbound\");\nrequest.AddApiParameter(\"stationCode\", \"STATION_123456\");\nrequest.AddApiParameter(\"scannedParcels\", \"[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/logistics/station/dop/confirm-inbound')\nrequest.add_api_parameter(\"stationCode\", \"STATION_123456\")\nrequest.add_api_parameter(\"scannedParcels\", \"[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/logistics/station/dop/confirm-inbound')\nrequest.add_api_param('stationCode', 'STATION_123456')\nrequest.add_api_param('scannedParcels', '[{\\\"cageNumber\\\":\\\"123\\\",\\\"trackingNumber\\\":\\\"TEST1231124VN\\\"}]')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/logistics/station/dop/confirm-inbound' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"stationCode\":\"STATION_123456\",\"app_key\":\"1234567\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"scannedParcels\":\"%5B%7B%22cageNumber%22%3A%22123%22%2C%22trackingNumber%22%3A%22TEST1231124VN%22%7D%5D\",\"timestamp\":\"1764727860894\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1337,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"traceId\": \"d2d9043316862098123051035df9da\",\n  \"code\": \"0\",\n  \"data\": \"true\",\n  \"success\": \"true\",\n  \"errorCode\": \"CAGE_NOT_FOUND\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"errorMsg\": \"Cage 123 is not found\"\n}"
+            }
+          ],
+          "id": 1337
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1338
+        },
+        "lastModified": "2023-06-12 16:48:25",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 93668,
+              "data": [],
+              "children": [],
+              "name": "stationCode",
+              "id": 1338,
+              "type": "String",
+              "required": true,
+              "desc": "Station code/ID"
+            },
+            {
+              "treeId": 93685,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 93686,
+                  "data": [],
+                  "children": [],
+                  "name": "cageNumber",
+                  "id": 1338,
+                  "type": "String",
+                  "required": true,
+                  "desc": "Cage number"
+                },
+                {
+                  "treeId": 93687,
+                  "data": [],
+                  "children": [],
+                  "name": "trackingNumber",
+                  "id": 1338,
+                  "type": "String",
+                  "required": true,
+                  "desc": "Tracking number of parcel"
+                }
+              ],
+              "name": "scannedParcels",
+              "id": 1338,
+              "type": "Object[]",
+              "required": true,
+              "desc": "List scanned parcels"
+            }
+          ],
+          "id": 1338
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 1107,
+        "desc": "DOP confirm inbound",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 93673,
+              "data": [],
+              "children": [],
+              "name": "success",
+              "id": 1340,
+              "type": "Boolean",
+              "required": false,
+              "desc": "Is success?"
+            },
+            {
+              "treeId": 93674,
+              "data": [],
+              "children": [],
+              "name": "data",
+              "id": 1340,
+              "type": "String",
+              "required": false,
+              "desc": "Confirm inbound success or not?"
+            },
+            {
+              "treeId": 93682,
+              "data": [],
+              "children": [],
+              "name": "errorCode",
+              "id": 1340,
+              "type": "String",
+              "required": false,
+              "desc": "Error code"
+            },
+            {
+              "treeId": 93683,
+              "data": [],
+              "children": [],
+              "name": "errorMsg",
+              "id": 1340,
+              "type": "String",
+              "required": false,
+              "desc": "Error message"
+            },
+            {
+              "treeId": 93684,
+              "data": [],
+              "children": [],
+              "name": "traceId",
+              "id": 1340,
+              "type": "String",
+              "required": false,
+              "desc": "Trace id for debugging"
+            }
+          ],
+          "id": 1340
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

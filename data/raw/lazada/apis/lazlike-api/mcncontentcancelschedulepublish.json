@@ -1,0 +1,483 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 2032,
+    "lastModified": "2024-02-22 17:02:23",
+    "testToolLink": "null",
+    "viewCount": 646,
+    "authType": 0,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 2032,
+        "errorCodes": {
+          "data": [],
+          "id": null
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": false,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1590
+        },
+        "title": "McnContentCancelSchedulePublish",
+        "path": "/content/mcn/content/cancelScheduled",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "api_result",
+                  "demo": "{   \"result\": true,   \"success\": true,   \"errorMessage\": null,   \"errorCode\": null,   \"class\": \"com.lazada.social.magpie.api.Result\" }",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "result",
+                      "demo": "true",
+                      "required": false,
+                      "paramType": "3",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 103647,
+                      "apiId": "3655",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "result",
+                      "parentId": 103646,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "api result"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "success",
+                      "demo": "true",
+                      "required": false,
+                      "paramType": "3",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 103648,
+                      "apiId": "3655",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "success",
+                      "parentId": 103646,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "whether the operation succeeds"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "errorMessage",
+                      "demo": "error",
+                      "required": false,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 103649,
+                      "apiId": "3655",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "errorMessage",
+                      "parentId": 103646,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "error code provided when the operation fails"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "errorCode",
+                      "demo": "10001",
+                      "required": false,
+                      "paramType": "2",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 103650,
+                      "apiId": "3655",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "errorCode",
+                      "parentId": 103646,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Integer",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "error message provided when the operation fails"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 103646,
+                  "apiId": "3655",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.lazada.social.magpie.api.Result",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "result of api"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "contentId",
+                  "demo": "123456",
+                  "required": true,
+                  "paramType": "Number",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 103645,
+                  "apiId": "3655",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "contentId",
+                  "parentId": 103644,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Long",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Content ID that needs to be canceled scheduled release"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/content/mcn/content/cancelScheduled\");\nrequest.addApiParameter(\"contentId\", \"123456\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/content/mcn/content/cancelScheduled');\n$request->addApiParam('contentId','123456');\nvar_dump($c->execute($request));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/content/mcn/content/cancelScheduled\");\nrequest.AddApiParameter(\"contentId\", \"123456\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/content/mcn/content/cancelScheduled')\nrequest.add_api_parameter(\"contentId\", \"123456\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/content/mcn/content/cancelScheduled')\nrequest.add_api_param('contentId', '123456')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/content/mcn/content/cancelScheduled' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"contentId\":\"123456\",\"app_key\":\"1234567\",\"timestamp\":\"1764727858992\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1589,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"api_result\": {\n    \"result\": \"true\",\n    \"success\": \"true\",\n    \"errorMessage\": \"error\",\n    \"errorCode\": \"10001\"\n  }\n}"
+            }
+          ],
+          "id": 1589
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1590
+        },
+        "lastModified": "2024-02-22 17:02:23",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 103645,
+              "data": [],
+              "children": [],
+              "name": "contentId",
+              "id": 1590,
+              "type": "Number",
+              "required": true,
+              "desc": "Content ID that needs to be canceled scheduled release"
+            }
+          ],
+          "id": 1590
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 646,
+        "desc": "McnContentCancelSchedulePublish",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 103646,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 103647,
+                  "data": [],
+                  "children": [],
+                  "name": "result",
+                  "id": 1592,
+                  "type": "Boolean",
+                  "required": false,
+                  "desc": "api result"
+                },
+                {
+                  "treeId": 103648,
+                  "data": [],
+                  "children": [],
+                  "name": "success",
+                  "id": 1592,
+                  "type": "Boolean",
+                  "required": false,
+                  "desc": "whether the operation succeeds"
+                },
+                {
+                  "treeId": 103649,
+                  "data": [],
+                  "children": [],
+                  "name": "errorMessage",
+                  "id": 1592,
+                  "type": "String",
+                  "required": false,
+                  "desc": "error code provided when the operation fails"
+                },
+                {
+                  "treeId": 103650,
+                  "data": [],
+                  "children": [],
+                  "name": "errorCode",
+                  "id": 1592,
+                  "type": "Number",
+                  "required": false,
+                  "desc": "error message provided when the operation fails"
+                }
+              ],
+              "name": "api_result",
+              "id": 1592,
+              "type": "Object",
+              "required": false,
+              "desc": "result of api"
+            }
+          ],
+          "id": 1592
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

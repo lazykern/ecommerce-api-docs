@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>Lazada Open Platform provides an online production environment for each Lazada venture. The data under the production environment are all true online data, providing limited times and authority of interface calling. The production environment shares data with the online system, and the true data of an online shop are directly influenced by the interface for writing class, so you must operate with caution.</p>\n<p>The following table lists the URL of the production environment for each venture.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>Venture</strong> </th>\n      <th align=\"left\"><strong>Server URL</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\">Singapore </td>\n      <td align=\"left\"><a href=\"https://api.lazada.sg/rest\">https://api.lazada.sg/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Thailand </td>\n      <td align=\"left\"><a href=\"https://api.lazada.co.th/rest\">https://api.lazada.co.th/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Malaysia </td>\n      <td align=\"left\"><a href=\"https://api.lazada.com.my/rest\">https://api.lazada.com.my/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Vietnam </td>\n      <td align=\"left\"><a href=\"https://api.lazada.vn/rest\">https://api.lazada.vn/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Philippines </td>\n      <td align=\"left\"><a href=\"https://api.lazada.com.ph/rest\">https://api.lazada.com.ph/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Indonesia </td>\n      <td align=\"left\"><a href=\"https://api.lazada.co.id/rest\">https://api.lazada.co.id/rest</a> </td>\n    </tr>\n  </tbody>\n</table>",
+    "cnTags": [],
+    "cnTitle": "API endpoint URLs",
+    "gmtModified": 1721368194000,
+    "author": "陈金言",
+    "cnContent": "<p>Lazada Open Platform provides an online production environment for each Lazada venture. The data under the production environment are all true online data, providing limited times and authority of interface calling. The production environment shares data with the online system, and the true data of an online shop are directly influenced by the interface for writing class, so you must operate with caution.</p>\n<p>The following table lists the URL of the production environment for each venture.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>Venture</strong> </th>\n      <th align=\"left\"><strong>Server URL</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\">Singapore </td>\n      <td align=\"left\"><a href=\"https://api.lazada.sg/rest\">https://api.lazada.sg/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Thailand </td>\n      <td align=\"left\"><a href=\"https://api.lazada.co.th/rest\">https://api.lazada.co.th/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Malaysia </td>\n      <td align=\"left\"><a href=\"https://api.lazada.com.my/rest\">https://api.lazada.com.my/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Vietnam </td>\n      <td align=\"left\"><a href=\"https://api.lazada.vn/rest\">https://api.lazada.vn/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Philippines </td>\n      <td align=\"left\"><a href=\"https://api.lazada.com.ph/rest\">https://api.lazada.com.ph/rest</a> </td>\n    </tr>\n    <tr>\n      <td align=\"left\">Indonesia </td>\n      <td align=\"left\"><a href=\"https://api.lazada.co.id/rest\">https://api.lazada.co.id/rest</a> </td>\n    </tr>\n  </tbody>\n</table>",
+    "gmtCreate": 1721368194000,
+    "enTags": [],
+    "parentId": 10400,
+    "enTitle": "API endpoint URLs",
+    "id": 108065,
+    "lastModified": "2024-07-19 13:49:54",
+    "views": 3383
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

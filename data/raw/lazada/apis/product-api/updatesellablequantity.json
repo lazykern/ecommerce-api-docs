@@ -1,0 +1,449 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1331,
+    "lastModified": "2022-07-28 17:14:55",
+    "testToolLink": "null",
+    "viewCount": 16063,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "GET/POST",
+        "docId": 1331,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E005: Invalid Request Format",
+              "code": "5",
+              "data": [],
+              "solution": "The request format is not valid.",
+              "id": 359
+            },
+            {
+              "codeDesc": "E006: Unexpected internal error",
+              "code": "6",
+              "data": [],
+              "solution": "Unexpected internal error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "E030: Empty Request",
+              "code": "30",
+              "data": [],
+              "solution": "The request URL is not complete.",
+              "id": 359
+            },
+            {
+              "codeDesc": "E204: Too many SKU in one request",
+              "code": "204",
+              "data": [],
+              "solution": "The number of SKUs exceeds the limit.",
+              "id": 359
+            },
+            {
+              "codeDesc": "E501: Update product failed",
+              "code": "501",
+              "data": [],
+              "solution": "Failed to update the product price or stock.",
+              "id": 359
+            },
+            {
+              "codeDesc": "E901: The request is too frequent, or the requested functionality is temporarily disabled.",
+              "code": "901",
+              "data": [],
+              "solution": "Failed to return the requested data due to high calling frequency or disabled functionality. Please try again later.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "1000",
+              "data": [],
+              "solution": " Internal system error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Update product failed",
+              "code": "501",
+              "data": [],
+              "solution": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Update product failed",
+              "code": "501",
+              "data": [],
+              "solution": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Update product failed",
+              "code": "501",
+              "data": [],
+              "solution": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Update product failed",
+              "code": "501",
+              "data": [],
+              "solution": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Update product failed",
+              "code": "501",
+              "data": [],
+              "solution": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Update product failed",
+              "code": "501",
+              "data": [],
+              "solution": "This error code is an overview error code and cannot be used to determine the detailed cause of the error, please check the detail field in the API response to understand the SKU where the error occurred and the cause of the error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "During the Bday Mega campaign, there are restrictions for stock adjustments in effect between YYYY-MM-DD HH:MM:SS - YYYY-MM-DD HH:MM:SS. Sellers can increase stocks, but may not decrease stocks.",
+              "code": "4170",
+              "data": [],
+              "solution": "This SKU is participating in a special Campaign, so this SKU can't be updated to set stock less than current stock.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Unexpected internal error",
+              "code": "6",
+              "data": [],
+              "solution": "System fluctuation please retry, if you encounter this error frequently, please create a ticket to consult.",
+              "id": 359
+            },
+            {
+              "codeDesc": "Internal call exception",
+              "code": "513",
+              "data": [],
+              "solution": "A small number of occurrences are normal, if you want to avoid this error as much as possible, reduce the number of SKUs in a single request to 20 or less.",
+              "id": 359
+            },
+            {
+              "codeDesc": "During the Bday Mega campaign, there are restrictions for stock adjustments in effect between YYYY-MM-DD HH:MM:SS - YYYY-MM-DD HH:MM:SS. Sellers can increase stocks, but may not decrease stocks.",
+              "code": "4170",
+              "data": [],
+              "solution": "This SKU is participating in a special Campaign, so this SKU can't be updated to set stock less than current stock.",
+              "id": 359
+            }
+          ],
+          "id": 359
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 358
+        },
+        "title": "UpdateSellableQuantity",
+        "path": "/product/stock/sellable/update",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 56122,
+                  "apiId": "1914",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 56119,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Object",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response body"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "payload",
+                  "demo": "<Request>   <Product>      <Skus>   <!--single warehouse demo-->  <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                                     <SellableQuantity>20</SellableQuantity>    </Sku>   <!--multi warehouse demo-->   <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                <MultiWarehouseInventories>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest1</WarehouseCode>             <SellableQuantity>20</SellableQuantity>           </MultiWarehouseInventory>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest2</WarehouseCode>             <SellableQuantity>30</SellableQuantity>           </MultiWarehouseInventory>          </MultiWarehouseInventories>        </Sku>   </Skus>   </Product> </Request>",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 56115,
+                  "apiId": "1914",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Please take demo as reference."
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/stock/sellable/update\");\nrequest.addApiParameter(\"payload\", \"<Request>   <Product>      <Skus>   <!--single warehouse demo-->  <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                                     <SellableQuantity>20</SellableQuantity>    </Sku>   <!--multi warehouse demo-->   <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                <MultiWarehouseInventories>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest1</WarehouseCode>             <SellableQuantity>20</SellableQuantity>           </MultiWarehouseInventory>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest2</WarehouseCode>             <SellableQuantity>30</SellableQuantity>           </MultiWarehouseInventory>          </MultiWarehouseInventories>        </Sku>   </Skus>   </Product> </Request>\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/stock/sellable/update');\n$request->addApiParam('payload','<Request>   <Product>      <Skus>   <!--single warehouse demo-->  <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                                     <SellableQuantity>20</SellableQuantity>    </Sku>   <!--multi warehouse demo-->   <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                <MultiWarehouseInventories>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest1</WarehouseCode>             <SellableQuantity>20</SellableQuantity>           </MultiWarehouseInventory>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest2</WarehouseCode>             <SellableQuantity>30</SellableQuantity>           </MultiWarehouseInventory>          </MultiWarehouseInventories>        </Sku>   </Skus>   </Product> </Request>');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/stock/sellable/update\");\nrequest.AddApiParameter(\"payload\", \"<Request>   <Product>      <Skus>   <!--single warehouse demo-->  <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                                     <SellableQuantity>20</SellableQuantity>    </Sku>   <!--multi warehouse demo-->   <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                <MultiWarehouseInventories>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest1</WarehouseCode>             <SellableQuantity>20</SellableQuantity>           </MultiWarehouseInventory>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest2</WarehouseCode>             <SellableQuantity>30</SellableQuantity>           </MultiWarehouseInventory>          </MultiWarehouseInventories>        </Sku>   </Skus>   </Product> </Request>\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/stock/sellable/update')\nrequest.add_api_parameter(\"payload\", \"<Request>   <Product>      <Skus>   <!--single warehouse demo-->  <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                                     <SellableQuantity>20</SellableQuantity>    </Sku>   <!--multi warehouse demo-->   <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                <MultiWarehouseInventories>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest1</WarehouseCode>             <SellableQuantity>20</SellableQuantity>           </MultiWarehouseInventory>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest2</WarehouseCode>             <SellableQuantity>30</SellableQuantity>           </MultiWarehouseInventory>          </MultiWarehouseInventories>        </Sku>   </Skus>   </Product> </Request>\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/stock/sellable/update')\nrequest.add_api_param('payload', '<Request>   <Product>      <Skus>   <!--single warehouse demo-->  <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                                     <SellableQuantity>20</SellableQuantity>    </Sku>   <!--multi warehouse demo-->   <Sku>         <ItemId>234234234</ItemId>         <SkuId>234</SkuId>         <SellerSku>Apple-SG-Glod-64G</SellerSku>                <MultiWarehouseInventories>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest1</WarehouseCode>             <SellableQuantity>20</SellableQuantity>           </MultiWarehouseInventory>           <MultiWarehouseInventory>             <WarehouseCode>warehouseTest2</WarehouseCode>             <SellableQuantity>30</SellableQuantity>           </MultiWarehouseInventory>          </MultiWarehouseInventories>        </Sku>   </Skus>   </Product> </Request>')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/product/stock/sellable/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%3CRequest%3E+++%3CProduct%3E++++++%3CSkus%3E+++%3C%21--single+warehouse+demo--%3E++%3CSku%3E+++++++++%3CItemId%3E234234234%3C%2FItemId%3E+++++++++%3CSkuId%3E234%3C%2FSkuId%3E+++++++++%3CSellerSku%3EApple-SG-Glod-64G%3C%2FSellerSku%3E+++++++++++++++++++++++++++++++++++++%3CSellableQuantity%3E20%3C%2FSellableQuantity%3E++++%3C%2FSku%3E+++%3C%21--multi+warehouse+demo--%3E+++%3CSku%3E+++++++++%3CItemId%3E234234234%3C%2FItemId%3E+++++++++%3CSkuId%3E234%3C%2FSkuId%3E+++++++++%3CSellerSku%3EApple-SG-Glod-64G%3C%2FSellerSku%3E++++++++++++++++%3CMultiWarehouseInventories%3E+++++++++++%3CMultiWarehouseInventory%3E+++++++++++++%3CWarehouseCode%3EwarehouseTest1%3C%2FWarehouseCode%3E+++++++++++++%3CSellableQuantity%3E20%3C%2FSellableQuantity%3E+++++++++++%3C%2FMultiWarehouseInventory%3E+++++++++++%3CMultiWarehouseInventory%3E+++++++++++++%3CWarehouseCode%3EwarehouseTest2%3C%2FWarehouseCode%3E+++++++++++++%3CSellableQuantity%3E30%3C%2FSellableQuantity%3E+++++++++++%3C%2FMultiWarehouseInventory%3E++++++++++%3C%2FMultiWarehouseInventories%3E++++++++%3C%2FSku%3E+++%3C%2FSkus%3E+++%3C%2FProduct%3E+%3C%2FRequest%3E\",\"timestamp\":\"1764727829880\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 357,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {},\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 357
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 358
+        },
+        "lastModified": "2022-07-28 17:14:55",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 56115,
+              "data": [],
+              "children": [],
+              "name": "payload",
+              "id": 358,
+              "type": "String",
+              "required": true,
+              "desc": "Please take demo as reference."
+            }
+          ],
+          "id": 358
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 16063,
+        "desc": "Use this API to update sellable quantity of one or more existing products. The maximum number of products that can be updated is 50, but 20 is recommended.",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 56122,
+              "data": [],
+              "children": [],
+              "name": "data",
+              "id": 360,
+              "type": "Object",
+              "required": false,
+              "desc": "Response body"
+            }
+          ],
+          "id": 360
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

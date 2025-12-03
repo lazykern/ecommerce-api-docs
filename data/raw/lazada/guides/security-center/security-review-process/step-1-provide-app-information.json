@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>Once you are in the&nbsp;<strong>DataMoat</strong>&nbsp;Console, please fill in and submit all the information about your application architecture.</p>\n<ul>\n<li>Please ensure your application is using https over public network for user access.</li>\n<li>Please ensure your application as independent app level user access control to ensure only authenticated and authorized user can access to the application function.&nbsp;&nbsp;</li>\n<li>Please refer to&nbsp;<a href=\"https://open.lazada.com/apps/doc/doc?nodeId=11232&amp;docId=108521\" target=\"_blank\" rel=\"noopener noreferrer\">Data Flow Diagram</a>&nbsp;document if you are not sure what to upload.</li>\n</ul>\n<ul>\n<ul>\n<li>Do not copy any data flow diagram online or from the documentation (you application will be rejected immediately).&nbsp;&nbsp;</li>\n<li>Ensure the&nbsp;Data flow diagram clearly shows how the sensitive data is handled in your environment when data is in transit, in use, and at rest.</li>\n</ul>\n</ul>\n<p>If you have any additional questions to clarify when you fill in the the step 1 form, please leave the question in the 1<sup>st</sup> textbox in the form and click \"submit\" button. We will provide feedback and review your answers once the step 1 form is submitted.&nbsp;</p>\n<p><img src=\"https://img.alicdn.com/top/i1/LB1qIKkJoY1gK0jSZFMXXaWcVXa\" alt=\"\" width=\"890\" height=\"600\" /></p>",
+    "cnTags": [],
+    "cnTitle": "Step 1 Provide App Information",
+    "gmtModified": 1721368199000,
+    "author": "夏洁",
+    "cnContent": "<p>Once you are in the&nbsp;<strong>DataMoat</strong>&nbsp;Console, please fill in and submit all the information about your application architecture.</p>\n<ul>\n<li>Please ensure your application is using https over public network for user access.</li>\n<li>Please ensure your application as independent app level user access control to ensure only authenticated and authorized user can access to the application function.&nbsp;&nbsp;</li>\n<li>Please refer to&nbsp;<a href=\"https://open.lazada.com/apps/doc/doc?nodeId=11232&amp;docId=108521\" target=\"_blank\" rel=\"noopener noreferrer\">Data Flow Diagram</a>&nbsp;document if you are not sure what to upload.</li>\n</ul>\n<ul>\n<ul>\n<li>Do not copy any data flow diagram online or from the documentation (you application will be rejected immediately).&nbsp;&nbsp;</li>\n<li>Ensure the&nbsp;Data flow diagram clearly shows how the sensitive data is handled in your environment when data is in transit, in use, and at rest.</li>\n</ul>\n</ul>\n<p>If you have any additional questions to clarify when you fill in the the step 1 form, please leave the question in the 1<sup>st</sup> textbox in the form and click \"submit\" button. We will provide feedback and review your answers once the step 1 form is submitted.&nbsp;</p>\n<p><img src=\"https://img.alicdn.com/top/i1/LB1qIKkJoY1gK0jSZFMXXaWcVXa\" alt=\"\" width=\"890\" height=\"600\" /></p>",
+    "gmtCreate": 1721368199000,
+    "enTags": [],
+    "parentId": 26149,
+    "enTitle": "Step 1 Provide App Information",
+    "id": 118065,
+    "lastModified": "2024-07-19 13:49:59",
+    "views": 873
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

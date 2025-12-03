@@ -1,0 +1,483 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 2109,
+    "lastModified": "2024-06-11 15:20:45",
+    "testToolLink": "null",
+    "viewCount": 725,
+    "authType": 0,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "GET/POST",
+        "docId": 2109,
+        "errorCodes": {
+          "data": [],
+          "id": null
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": false,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1706
+        },
+        "title": "MCNQueryTagInfoByName",
+        "path": "/content/mcn/content/queryTagInfosByName",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "api_result",
+                  "demo": "{   \"success\": false,   \"resultCode\": \"\",   \"tagDTOList\": [     {       \"owner\": \"lazada_content\",       \"gmtModified\": 1716518646000,       \"creator\": \"343236\",       \"tagCode\": \"Neo-Chinese_1716518645925\",       \"effectiveTime\": null,       \"entityAttr\": null,       \"modifier\": \"343236\",       \"description\": \"Neo-Chinese\",       \"gmtCreate\": 1716518646000,       \"tagName\": \"Neo-Chinese\",       \"effectiveEntityCount\": null,       \"expireTime\": null,       \"parentTagId\": 7697,       \"isDeleted\": \"0\",       \"tagPath\": \"7697-7703\",       \"propertyTagDTOList\": null,       \"id\": 7703,       \"isSetDeadline\": \"0\",       \"class\": \"com.lazada.tag.client.response.TagDTO\",       \"parentTagCode\": \"Fashion Style_1716518581934\",       \"tagCategoryCode\": \"content_property\",       \"entityAttrVersion\": \"1.0\",       \"status\": null     }   ],   \"resultMessage\": \"\",   \"class\": \"com.lazada.lazlike.openapi.response.McnTagInfosResult\" }",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "success",
+                      "demo": "true",
+                      "required": false,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 112169,
+                      "apiId": "3959",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "success",
+                      "parentId": 112168,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "whether the operation succeeds"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "resultCode",
+                      "demo": "error",
+                      "required": false,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 112170,
+                      "apiId": "3959",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "resultCode",
+                      "parentId": 112168,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "error code provided when the operation fails"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "resultMessage",
+                      "demo": "10001",
+                      "required": false,
+                      "paramType": "1",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 112171,
+                      "apiId": "3959",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "resultMessage",
+                      "parentId": 112168,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.String",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "error message provided when the operation fails"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "3",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "tagDTOList",
+                      "demo": "[     {       \"owner\": \"lazada_content\",       \"gmtModified\": 1716518646000,       \"creator\": \"343236\",       \"tagCode\": \"Neo-Chinese_1716518645925\",       \"effectiveTime\": null,       \"entityAttr\": null,       \"modifier\": \"343236\",       \"description\": \"Neo-Chinese\",       \"gmtCreate\": 1716518646000,       \"tagName\": \"Neo-Chinese\",       \"effectiveEntityCount\": null,       \"expireTime\": null,       \"parentTagId\": 7697,       \"isDeleted\": \"0\",       \"tagPath\": \"7697-7703\",       \"propertyTagDTOList\": null,       \"id\": 7703,       \"isSetDeadline\": \"0\",       \"class\": \"com.lazada.tag.client.response.TagDTO\",       \"parentTagCode\": \"Fashion Style_1716518581934\",       \"tagCategoryCode\": \"content_property\",       \"entityAttrVersion\": \"1.0\",       \"status\": null     },     {       \"owner\": \"lazada_content\",       \"gmtModified\": 1716885895000,       \"creator\": \"343236\",       \"tagCode\": \"Sexy Style_1716885895073\",       \"effectiveTime\": null,       \"entityAttr\": null,       \"modifier\": \"343236\",       \"description\": \"Sexy Style\",       \"gmtCreate\": 1716885895000,       \"tagName\": \"Sexy Style\",       \"effectiveEntityCount\": null,       \"expireTime\": null,       \"parentTagId\": 7697,       \"isDeleted\": \"0\",       \"tagPath\": \"7697-7709\",       \"propertyTagDTOList\": null,       \"id\": 7709,       \"isSetDeadline\": \"0\",       \"class\": \"com.lazada.tag.client.response.TagDTO\",       \"parentTagCode\": \"Fashion Style_1716518581934\",       \"tagCategoryCode\": \"content_property\",       \"entityAttrVersion\": \"1.0\",       \"status\": null     }   ]",
+                      "required": false,
+                      "paramType": "9",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 112172,
+                      "apiId": "3959",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "tagDTOList",
+                      "parentId": 112168,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.util.List",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "result"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 112168,
+                  "apiId": "3959",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.lazada.lazlike.openapi.response.McnTagInfosResult",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "result"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "tagNames",
+                  "demo": "Neo-Chinese,Sexy Style",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 112167,
+                  "apiId": "3959",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "tagNames",
+                  "parentId": 112166,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "The tag name you want to query, multiple tags are split according to,"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/content/mcn/content/queryTagInfosByName\");\nrequest.addApiParameter(\"tagNames\", \"Neo-Chinese,Sexy Style\");\nLazopResponse response = client.execute(request);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/content/mcn/content/queryTagInfosByName');\n$request->addApiParam('tagNames','Neo-Chinese,Sexy Style');\nvar_dump($c->execute($request));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/content/mcn/content/queryTagInfosByName\");\nrequest.AddApiParameter(\"tagNames\", \"Neo-Chinese,Sexy Style\");\nLazopResponse response = client.Execute(request);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/content/mcn/content/queryTagInfosByName')\nrequest.add_api_parameter(\"tagNames\", \"Neo-Chinese,Sexy Style\")\nresponse = client.execute(request)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/content/mcn/content/queryTagInfosByName')\nrequest.add_api_param('tagNames', 'Neo-Chinese,Sexy Style')\nresponse = client.execute(request)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/content/mcn/content/queryTagInfosByName' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"tagNames\":\"Neo-Chinese%2CSexy+Style\",\"timestamp\":\"1764727858982\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1705,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\",\n  \"api_result\": {\n    \"success\": \"true\",\n    \"resultCode\": \"error\",\n    \"tagDTOList\": [\n      {\n        \"owner\": \"lazada_content\",\n        \"gmtModified\": 1716518646000,\n        \"creator\": \"343236\",\n        \"tagCode\": \"Neo-Chinese_1716518645925\",\n        \"modifier\": \"343236\",\n        \"description\": \"Neo-Chinese\",\n        \"gmtCreate\": 1716518646000,\n        \"tagName\": \"Neo-Chinese\",\n        \"parentTagId\": 7697,\n        \"isDeleted\": \"0\",\n        \"tagPath\": \"7697-7703\",\n        \"id\": 7703,\n        \"isSetDeadline\": \"0\",\n        \"class\": \"com.lazada.tag.client.response.TagDTO\",\n        \"parentTagCode\": \"Fashion Style_1716518581934\",\n        \"tagCategoryCode\": \"content_property\",\n        \"entityAttrVersion\": \"1.0\"\n      },\n      {\n        \"owner\": \"lazada_content\",\n        \"gmtModified\": 1716885895000,\n        \"creator\": \"343236\",\n        \"tagCode\": \"Sexy Style_1716885895073\",\n        \"modifier\": \"343236\",\n        \"description\": \"Sexy Style\",\n        \"gmtCreate\": 1716885895000,\n        \"tagName\": \"Sexy Style\",\n        \"parentTagId\": 7697,\n        \"isDeleted\": \"0\",\n        \"tagPath\": \"7697-7709\",\n        \"id\": 7709,\n        \"isSetDeadline\": \"0\",\n        \"class\": \"com.lazada.tag.client.response.TagDTO\",\n        \"parentTagCode\": \"Fashion Style_1716518581934\",\n        \"tagCategoryCode\": \"content_property\",\n        \"entityAttrVersion\": \"1.0\"\n      }\n    ],\n    \"resultMessage\": \"10001\"\n  }\n}"
+            }
+          ],
+          "id": 1705
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1706
+        },
+        "lastModified": "2024-06-11 15:20:45",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 112167,
+              "data": [],
+              "children": [],
+              "name": "tagNames",
+              "id": 1706,
+              "type": "String",
+              "required": true,
+              "desc": "The tag name you want to query, multiple tags are split according to,"
+            }
+          ],
+          "id": 1706
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 725,
+        "desc": "MCNQueryTagInfoByName",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 112168,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 112169,
+                  "data": [],
+                  "children": [],
+                  "name": "success",
+                  "id": 1708,
+                  "type": "String",
+                  "required": false,
+                  "desc": "whether the operation succeeds"
+                },
+                {
+                  "treeId": 112170,
+                  "data": [],
+                  "children": [],
+                  "name": "resultCode",
+                  "id": 1708,
+                  "type": "String",
+                  "required": false,
+                  "desc": "error code provided when the operation fails"
+                },
+                {
+                  "treeId": 112171,
+                  "data": [],
+                  "children": [],
+                  "name": "resultMessage",
+                  "id": 1708,
+                  "type": "String",
+                  "required": false,
+                  "desc": "error message provided when the operation fails"
+                },
+                {
+                  "treeId": 112172,
+                  "data": [],
+                  "children": [],
+                  "name": "tagDTOList",
+                  "id": 1708,
+                  "type": "Object[]",
+                  "required": false,
+                  "desc": "result"
+                }
+              ],
+              "name": "api_result",
+              "id": 1708,
+              "type": "Object",
+              "required": false,
+              "desc": "result"
+            }
+          ],
+          "id": 1708
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

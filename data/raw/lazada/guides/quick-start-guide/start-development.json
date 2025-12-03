@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>After registering your application on Lazada Open Platform, you can start developing your application. </p>\n<p>It is recommended that you download the official SDK to facilitate your development. You may need the following information during the application development:</p>\n<ul>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10442&docId=108064\">Call API with official SDK</a> - Environment requirements for each SDK and how to download</p></li>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10540&docId=108136\">Call API with HTTP requests</a> - Instructions on assembling HTTP requests to call the API</p></li>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=30714&docId=120945\">Calling API tutorials</a> - How Lazada sellers call API to manage products, images, orders, and business data</p></li>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/api?path=%2Forder%2Fdocument%2Fawb%2Fhtml%2Fget\">API reference</a> - Complete reference documentation for each API</p></li>\n</ul>",
+    "cnTags": [],
+    "cnTitle": "Start development",
+    "gmtModified": 1721368158000,
+    "author": "陈金言",
+    "cnContent": "<p>After registering your application on Lazada Open Platform, you can start developing your application. </p>\n<p>It is recommended that you download the official SDK to facilitate your development. You may need the following information during the application development:</p>\n<ul>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10442&docId=108064\">Call API with official SDK</a> - Environment requirements for each SDK and how to download</p></li>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10540&docId=108136\">Call API with HTTP requests</a> - Instructions on assembling HTTP requests to call the API</p></li>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=30714&docId=120945\">Calling API tutorials</a> - How Lazada sellers call API to manage products, images, orders, and business data</p></li>\n  <li>\n  <p><a href=\"https://open.lazada.com/apps/doc/api?path=%2Forder%2Fdocument%2Fawb%2Fhtml%2Fget\">API reference</a> - Complete reference documentation for each API</p></li>\n</ul>",
+    "gmtCreate": 1721368158000,
+    "enTags": [],
+    "parentId": 10533,
+    "enTitle": "Start development",
+    "id": 108132,
+    "lastModified": "2024-07-19 13:49:18",
+    "views": 4843
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

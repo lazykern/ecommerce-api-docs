@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>Lazada Open Platform API supports both HTTP and HTTPS communication protocol. To ensure data security, it is recommended to make API requests using HTTPS protocol. </p>\n<p>While most APIs are called via GET, some calls that get additional request data are sent via POST. However, sometimes the data that need to be supplied are more than what can be transported in request parameters. In those cases, additional data is sent to the server using a POST request. The request body must be in XML format. All data (including parameter names and values) must be UTF8-encoded.</p>\n<p>Each HTTP request URL must include the path of an API. For example, the request for the &ldquo;/order/get&rdquo; API should be &quot;<a href=\"https://api.lazada.sg/rest/order/get\"\">https://api.lazada.sg/rest/order/get\"</a>. The common parameters and business parameters are included in the request or sent via post.</p>\n<p>All API calls return a response document, which indicates the status of the operation (either Success or Error) and optionally provides results and/or details related to the specified action. The response is in JSON format.</p>",
+    "cnTags": [],
+    "cnTitle": "Requests and responses",
+    "gmtModified": 1721368195000,
+    "author": "陈金言",
+    "cnContent": "<p>Lazada Open Platform API supports both HTTP and HTTPS communication protocol. To ensure data security, it is recommended to make API requests using HTTPS protocol. </p>\n<p>While most APIs are called via GET, some calls that get additional request data are sent via POST. However, sometimes the data that need to be supplied are more than what can be transported in request parameters. In those cases, additional data is sent to the server using a POST request. The request body must be in XML format. All data (including parameter names and values) must be UTF8-encoded.</p>\n<p>Each HTTP request URL must include the path of an API. For example, the request for the &ldquo;/order/get&rdquo; API should be &quot;<a href=\"https://api.lazada.sg/rest/order/get\"\">https://api.lazada.sg/rest/order/get\"</a>. The common parameters and business parameters are included in the request or sent via post.</p>\n<p>All API calls return a response document, which indicates the status of the operation (either Success or Error) and optionally provides results and/or details related to the specified action. The response is in JSON format.</p>",
+    "gmtCreate": 1721368195000,
+    "enTags": [],
+    "parentId": 10400,
+    "enTitle": "Requests and responses",
+    "id": 108066,
+    "lastModified": "2024-07-19 13:49:55",
+    "views": 2036
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

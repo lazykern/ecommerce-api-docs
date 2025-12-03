@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>The table below lists APIs that can be used for logistics management.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fshipment%2Fproviders%2Fget' target='_brank'>GetShipmentProviders</a> </td>\n      <td align=\"left\">Get the list of all active shipping providers, which is needed when working with the SetStatusToPackedByMarketplace call. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Flogistic%2Forder%2Ftrace' target='_brank'>GetOrderTrace</a> </td>\n      <td align=\"left\">Query logistic detail for seller erp with seller id, order id and locale info. This api is only available in the state after ready to ship. </td>\n    </tr>\n  </tbody>\n</table>",
+    "cnTags": [],
+    "cnTitle": "Logistics API",
+    "gmtModified": 1721368189000,
+    "author": "陈金言",
+    "cnContent": "<p>The table below lists APIs that can be used for logistics management.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fshipment%2Fproviders%2Fget' target='_brank'>GetShipmentProviders</a> </td>\n      <td align=\"left\">Get the list of all active shipping providers, which is needed when working with the SetStatusToPackedByMarketplace call. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Flogistic%2Forder%2Ftrace' target='_brank'>GetOrderTrace</a> </td>\n      <td align=\"left\">Query logistic detail for seller erp with seller id, order id and locale info. This api is only available in the state after ready to ship. </td>\n    </tr>\n  </tbody>\n</table>",
+    "gmtCreate": 1721368189000,
+    "enTags": [],
+    "parentId": 10556,
+    "enTitle": "Logistics API",
+    "id": 108250,
+    "lastModified": "2024-07-19 13:49:49",
+    "views": 3044
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

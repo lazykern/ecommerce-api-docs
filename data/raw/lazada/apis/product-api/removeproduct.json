@@ -1,0 +1,417 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1378,
+    "lastModified": "2022-07-29 14:54:03",
+    "testToolLink": "null",
+    "viewCount": 7547,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 1378,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E005: Invalid Request Format",
+              "code": "5",
+              "data": [],
+              "solution": " The request format is not valid.",
+              "id": 459
+            },
+            {
+              "codeDesc": "E006: Unexpected internal error",
+              "code": "6",
+              "data": [],
+              "solution": " Unexpected internal error.",
+              "id": 459
+            },
+            {
+              "codeDesc": "E030: Empty Request",
+              "code": "30",
+              "data": [],
+              "solution": " The request URL is not complete.",
+              "id": 459
+            },
+            {
+              "codeDesc": "E204: Too many SKU in one request",
+              "code": "204",
+              "data": [],
+              "solution": " The number of SKUs exceeds the limit.",
+              "id": 459
+            },
+            {
+              "codeDesc": "E503: Remove product failed",
+              "code": "503",
+              "data": [],
+              "solution": " Failed to remove the product.",
+              "id": 459
+            },
+            {
+              "codeDesc": "E512: BIZ_CHECK_MANGROVE_RULE_QC",
+              "code": "512",
+              "data": [],
+              "solution": "The request failed because the category was banned",
+              "id": 459
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "1000",
+              "data": [],
+              "solution": " Internal system error.",
+              "id": 459
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 459
+            },
+            {
+              "codeDesc": "Unexpected internal error",
+              "code": "6",
+              "data": [],
+              "solution": "The seller_sku_list field has been deprecated, please use the sku_id_list field, if you still encounter this issue frequently with the sku_id_list field, please create a ticket inquiry.",
+              "id": 459
+            },
+            {
+              "codeDesc": "Remove product failed",
+              "code": "503",
+              "data": [],
+              "solution": "This is a generalized error code, it is not possible to determine the specific problem based on this error code, please check the message information in the detail field to understand the details of the error, for example, the product cannot be found or the SKU has been deleted.",
+              "id": 459
+            }
+          ],
+          "id": 459
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 458
+        },
+        "title": "RemoveProduct",
+        "path": "/product/remove",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": true,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 118773,
+                  "apiId": "4182",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 118772,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Obeject",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response body"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "seller_sku_list",
+                  "demo": "[\"test00111\",\"test00222\",\"test00333\"]",
+                  "required": false,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 118770,
+                  "apiId": "4182",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "sellerSku in a json list to be removed. System supports a maximum number of 50 sellerSku in one request.;for example: itemid: 1269656765 sellerSku: test00111 、test00222、test00333, then Param should be: [\"test00111\",\"test00222\",\"test00333\"] "
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "sku_id_list",
+                  "demo": "[\"SkuId_1269656765_5230534246\",\"SkuId_1269656765_5230534246\",\"SkuId_1269656765_5230534246\"]",
+                  "required": false,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 118771,
+                  "apiId": "4182",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Highest priority,skuId in a json list to be removed. System supports a maximum number of 50 skuId in one request.; for example: itemid: 1269656765 skuid: 5230534246, then Param should be: [\"SkuId_1269656765_5230534246\"] "
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/remove\");\nrequest.addApiParameter(\"seller_sku_list\", \"[\\\"test00111\\\",\\\"test00222\\\",\\\"test00333\\\"]\");\nrequest.addApiParameter(\"sku_id_list\", \"[\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\"]\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/remove');\n$request->addApiParam('seller_sku_list','[\\\"test00111\\\",\\\"test00222\\\",\\\"test00333\\\"]');\n$request->addApiParam('sku_id_list','[\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\"]');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/remove\");\nrequest.AddApiParameter(\"seller_sku_list\", \"[\\\"test00111\\\",\\\"test00222\\\",\\\"test00333\\\"]\");\nrequest.AddApiParameter(\"sku_id_list\", \"[\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\"]\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/remove')\nrequest.add_api_parameter(\"seller_sku_list\", \"[\\\"test00111\\\",\\\"test00222\\\",\\\"test00333\\\"]\")\nrequest.add_api_parameter(\"sku_id_list\", \"[\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\"]\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/remove')\nrequest.add_api_param('seller_sku_list', '[\\\"test00111\\\",\\\"test00222\\\",\\\"test00333\\\"]')\nrequest.add_api_param('sku_id_list', '[\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\",\\\"SkuId_1269656765_5230534246\\\"]')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/product/remove' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"seller_sku_list\":\"%5B%22test00111%22%2C%22test00222%22%2C%22test00333%22%5D\",\"sku_id_list\":\"%5B%22SkuId_1269656765_5230534246%22%2C%22SkuId_1269656765_5230534246%22%2C%22SkuId_1269656765_5230534246%22%5D\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1764727829476\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 457,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {},\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 457
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 458
+        },
+        "lastModified": "2022-07-29 14:54:03",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 118770,
+              "data": [],
+              "children": [],
+              "name": "seller_sku_list",
+              "id": 458,
+              "type": "String",
+              "required": false,
+              "desc": "sellerSku in a json list to be removed. System supports a maximum number of 50 sellerSku in one request.;for example: itemid: 1269656765 sellerSku: test00111 、test00222、test00333, then Param should be: [\"test00111\",\"test00222\",\"test00333\"] "
+            },
+            {
+              "treeId": 118771,
+              "data": [],
+              "children": [],
+              "name": "sku_id_list",
+              "id": 458,
+              "type": "String",
+              "required": false,
+              "desc": "Highest priority,skuId in a json list to be removed. System supports a maximum number of 50 skuId in one request.; for example: itemid: 1269656765 skuid: 5230534246, then Param should be: [\"SkuId_1269656765_5230534246\"] "
+            }
+          ],
+          "id": 458
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 7547,
+        "desc": "Use this API to remove an existing product, some SKUs in one product, or all SKUs in one product. System supports a maximum number of 50 SellerSkus in one request.",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 118773,
+              "data": [],
+              "children": [],
+              "name": "data",
+              "id": 460,
+              "type": "Object",
+              "required": true,
+              "desc": "Response body"
+            }
+          ],
+          "id": 460
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

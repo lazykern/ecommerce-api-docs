@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>On Lazada Open Platform, an API permission group defines a collection of APIs that can be invoked by specific applications. Without API permission, the API calls initiated by the application will be denied by the gateway.</p>\n<p>An application category can contain multiple API permission groups. When an application is created, some API permission groups are granted immediately, but others need to be applied for separately. The status of the API permission groups is as follows:</p>\n<ul>\n  <li><strong>Active</strong> - The API permission group is available for the application by default or has been applied.</li>\n  <li><strong>Inactive</strong> - The API permission group needs to be applied for separately.</li>\n</ul>\n<br>\n<p>Take the following steps to request API permission for your application:<br/>1. Open the <strong>App Overview</strong> page and navigate to the <strong>API Permission Group</strong> section.<br/>2. View the description and status of API permission groups and decide which API permission groups to request for your application.<br/>3. Click the permission group name to view the APIs that belong to the group. You can also refer to the <a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fdocument%2Fawb%2Fhtml%2Fget'>API Reference</a> section for detailed introduction of the API groups.<br/>4. Click <strong>Apply</strong> to request the API permission group for your application.<br/>5. Enter your business scenario for requesting the API permission group in the <strong>Reason</strong> field of the <strong>Apply</strong> dialog.<br/>6. (Optional) Attach a document file for your request if needed.<br/>7. Click <strong>OK</strong> to submit the request.</p>",
+    "cnTags": [],
+    "cnTitle": "Request API permission",
+    "gmtModified": 1721368157000,
+    "author": "陈金言",
+    "cnContent": "<p>On Lazada Open Platform, an API permission group defines a collection of APIs that can be invoked by specific applications. Without API permission, the API calls initiated by the application will be denied by the gateway.</p>\n<p>An application category can contain multiple API permission groups. When an application is created, some API permission groups are granted immediately, but others need to be applied for separately. The status of the API permission groups is as follows:</p>\n<ul>\n  <li><strong>Active</strong> - The API permission group is available for the application by default or has been applied.</li>\n  <li><strong>Inactive</strong> - The API permission group needs to be applied for separately.</li>\n</ul>\n<br>\n<p>Take the following steps to request API permission for your application:<br/>1. Open the <strong>App Overview</strong> page and navigate to the <strong>API Permission Group</strong> section.<br/>2. View the description and status of API permission groups and decide which API permission groups to request for your application.<br/>3. Click the permission group name to view the APIs that belong to the group. You can also refer to the <a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fdocument%2Fawb%2Fhtml%2Fget'>API Reference</a> section for detailed introduction of the API groups.<br/>4. Click <strong>Apply</strong> to request the API permission group for your application.<br/>5. Enter your business scenario for requesting the API permission group in the <strong>Reason</strong> field of the <strong>Apply</strong> dialog.<br/>6. (Optional) Attach a document file for your request if needed.<br/>7. Click <strong>OK</strong> to submit the request.</p>",
+    "gmtCreate": 1721368157000,
+    "enTags": [],
+    "parentId": 10533,
+    "enTitle": "Request API permission",
+    "id": 108131,
+    "lastModified": "2024-07-19 13:49:17",
+    "views": 6669
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

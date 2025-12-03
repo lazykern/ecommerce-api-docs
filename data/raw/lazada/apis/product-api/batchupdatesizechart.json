@@ -1,0 +1,386 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1966,
+    "lastModified": "2023-11-15 14:05:34",
+    "testToolLink": "null",
+    "viewCount": 3228,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 1966,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E4174",
+              "code": "4174",
+              "data": [],
+              "solution": "The size template corresponding to this product does not exist",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4175",
+              "code": "4175",
+              "data": [],
+              "solution": "The size chart image url incorrect",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4177",
+              "code": "4177",
+              "data": [],
+              "solution": "Empty Product Id or Size Chart",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4178",
+              "code": "4178",
+              "data": [],
+              "solution": "Invalid size chart format, Size Chart format must image url or template id",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4179",
+              "code": "4179",
+              "data": [],
+              "solution": "Cannot exceed the maximum size chart，maximum is 50",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4180",
+              "code": "4180",
+              "data": [],
+              "solution": "The product category not support size chart",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4181",
+              "code": "4181",
+              "data": [],
+              "solution": "Update size chart all failed",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4182",
+              "code": "4182",
+              "data": [],
+              "solution": "only local seller and IntraAsean seller can set size chart",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4183",
+              "code": "4183",
+              "data": [],
+              "solution": "Update size chart part failed",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4185",
+              "code": "4185",
+              "data": [],
+              "solution": "The third-party ic service invocation is error",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4187",
+              "code": "4187",
+              "data": [],
+              "solution": "The size chart value is invalid,Please input correct template id or url",
+              "id": 1471
+            },
+            {
+              "codeDesc": "E4189",
+              "code": "4189",
+              "data": [],
+              "solution": "One product only can set one size chart",
+              "id": 1471
+            }
+          ],
+          "id": 1471
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1470
+        },
+        "title": "BatchUpdateSizeChart",
+        "path": "/size/chart/batch/update",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 99452,
+                  "apiId": "3548",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 99447,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Object",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response body"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "{\"Request\":{\"Product\":{\"SizeCharts\":{\"SizeChart\":[{\"product_id\":\"2871948231\",\"size_chart\":\"123\"},{\"product_id\":\"2894116588\",\"size_chart\":\"234\"}]}}}}",
+                  "maxSize": "",
+                  "paramName": "payload",
+                  "demo": "{\"Request\":{\"Product\":{\"SizeCharts\":{\"SizeChart\":[{\"product_id\":\"2871948231\",\"size_chart\":\"123\"},{\"product_id\":\"2894116588\",\"size_chart\":\"234\"}]}}}}",
+                  "required": true,
+                  "paramType": "Payload",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 99443,
+                  "apiId": "3548",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "product size chart "
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/size/chart/batch/update\");\nrequest.addApiParameter(\"payload\", \"{\\\"Request\\\":{\\\"Product\\\":{\\\"SizeCharts\\\":{\\\"SizeChart\\\":[{\\\"product_id\\\":\\\"2871948231\\\",\\\"size_chart\\\":\\\"123\\\"},{\\\"product_id\\\":\\\"2894116588\\\",\\\"size_chart\\\":\\\"234\\\"}]}}}}\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/size/chart/batch/update');\n$request->addApiParam('payload','{\\\"Request\\\":{\\\"Product\\\":{\\\"SizeCharts\\\":{\\\"SizeChart\\\":[{\\\"product_id\\\":\\\"2871948231\\\",\\\"size_chart\\\":\\\"123\\\"},{\\\"product_id\\\":\\\"2894116588\\\",\\\"size_chart\\\":\\\"234\\\"}]}}}}');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/size/chart/batch/update\");\nrequest.AddApiParameter(\"payload\", \"{\\\"Request\\\":{\\\"Product\\\":{\\\"SizeCharts\\\":{\\\"SizeChart\\\":[{\\\"product_id\\\":\\\"2871948231\\\",\\\"size_chart\\\":\\\"123\\\"},{\\\"product_id\\\":\\\"2894116588\\\",\\\"size_chart\\\":\\\"234\\\"}]}}}}\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/size/chart/batch/update')\nrequest.add_api_parameter(\"payload\", \"{\\\"Request\\\":{\\\"Product\\\":{\\\"SizeCharts\\\":{\\\"SizeChart\\\":[{\\\"product_id\\\":\\\"2871948231\\\",\\\"size_chart\\\":\\\"123\\\"},{\\\"product_id\\\":\\\"2894116588\\\",\\\"size_chart\\\":\\\"234\\\"}]}}}}\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/size/chart/batch/update')\nrequest.add_api_param('payload', '{\\\"Request\\\":{\\\"Product\\\":{\\\"SizeCharts\\\":{\\\"SizeChart\\\":[{\\\"product_id\\\":\\\"2871948231\\\",\\\"size_chart\\\":\\\"123\\\"},{\\\"product_id\\\":\\\"2894116588\\\",\\\"size_chart\\\":\\\"234\\\"}]}}}}')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/size/chart/batch/update' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%7B%22Request%22%3A%7B%22Product%22%3A%7B%22SizeCharts%22%3A%7B%22SizeChart%22%3A%5B%7B%22product_id%22%3A%222871948231%22%2C%22size_chart%22%3A%22123%22%7D%2C%7B%22product_id%22%3A%222894116588%22%2C%22size_chart%22%3A%22234%22%7D%5D%7D%7D%7D%7D\",\"timestamp\":\"1764727827192\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1469,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {},\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 1469
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1470
+        },
+        "lastModified": "2023-11-15 14:05:34",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 99443,
+              "data": [],
+              "children": [],
+              "name": "payload",
+              "id": 1470,
+              "type": "Payload",
+              "required": true,
+              "desc": "product size chart "
+            }
+          ],
+          "id": 1470
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 3228,
+        "desc": "批量更新尺码表",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 99452,
+              "data": [],
+              "children": [],
+              "name": "data",
+              "id": 1472,
+              "type": "Object",
+              "required": false,
+              "desc": "Response body"
+            }
+          ],
+          "id": 1472
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>The table below lists APIs are used to access <a target=\"_blank\" href=\"https://open.lazada.com/apps/doc/doc?nodeId=10722&amp;docId=108073\">DataMoat Account Risk Control Service. </a>.</p><p>\n</p><p>The DataMoat Account Risk Control Service are required in the process of <a target=\"_blank\" href=\"https://open.lazada.com/apps/doc/doc?nodeId=10719&amp;docId=108231\">Access to Sensitive Data</a>.</p><p>\n</p><p>Please refer to the <a target=\"_blank\" href=\"https://open.lazada.com/apps/doc/doc?nodeId=10722&amp;docId=108073#?nodeId=10442&amp;docId=108064\">Lazada Open Platform Developers’s Guide</a> for API calling.</p><p>\n</p><p>Please use the domain “auth.lazada.com” to invoke the APIs for all the regions</p><p>\n</p><div class=\"quill-better-table-wrapper\"><table class=\"quill-better-table\"><tbody><tr></tr><tr></tr></tbody></table></div>",
+    "cnTags": [],
+    "cnTitle": "API Reference",
+    "gmtModified": 1756865790000,
+    "author": "嘉影",
+    "cnContent": "<p>The table below lists APIs are used to access <a target=\"_blank\" href=\"https://open.lazada.com/apps/doc/doc?nodeId=10722&amp;docId=108073\">DataMoat Account Risk Control Service. </a>.</p><p>\n</p><p>The DataMoat Account Risk Control Service are required in the process of <a target=\"_blank\" href=\"https://open.lazada.com/apps/doc/doc?nodeId=10719&amp;docId=108231\">Access to Sensitive Data</a>.</p><p>\n</p><p>Please refer to the <a target=\"_blank\" href=\"https://open.lazada.com/apps/doc/doc?nodeId=10722&amp;docId=108073#?nodeId=10442&amp;docId=108064\">Lazada Open Platform Developers’s Guide</a> for API calling.</p><p>\n</p><p>Please use the domain “api.lazada.com” to invoke the APIs for all the regions</p><p>\n</p><div class=\"quill-better-table-wrapper\"><table class=\"quill-better-table\"><tbody><tr></tr><tr></tr></tbody></table></div>",
+    "gmtCreate": 1721368203000,
+    "enTags": [],
+    "parentId": 10720,
+    "enTitle": "API Reference",
+    "id": 108326,
+    "lastModified": "2025-09-03 10:16:30",
+    "views": 711
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

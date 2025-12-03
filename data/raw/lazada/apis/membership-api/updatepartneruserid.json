@@ -1,0 +1,575 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 121736,
+    "lastModified": "2024-07-22 11:26:18",
+    "testToolLink": "null",
+    "viewCount": 665,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "GET/POST",
+        "docId": 121736,
+        "errorCodes": {
+          "data": [],
+          "id": null
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1726
+        },
+        "title": "UpdatePartnerUserId",
+        "path": "/partner/updatePartnerUserId",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "result",
+                  "demo": "{\"module\":true,\"notSuccess\":false,\"success\":true}",
+                  "required": true,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "1",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "success",
+                      "demo": "true",
+                      "required": true,
+                      "paramType": "3",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 114927,
+                      "apiId": "4037",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "success",
+                      "parentId": 114926,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "boolean",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "whether the call succeed"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "2",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "module",
+                      "demo": "true",
+                      "required": true,
+                      "paramType": "4",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 114928,
+                      "apiId": "4037",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "module",
+                      "parentId": 114926,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Object",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "result data"
+                    },
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "2",
+                      "hitLog": null,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "errorCode",
+                      "demo": "{\"displayMessage\":\"LZD_MEMBER_USER_1011\",\"errorCodeParams\":[],\"key\":\"LZD_MEMBER_USER_1011\",\"logMessage\":\"LZD_MEMBER_USER_1011\"}",
+                      "required": true,
+                      "paramType": "4",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": null,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "displayMessage",
+                          "demo": "partnerUserId is invalid",
+                          "required": true,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 114930,
+                          "apiId": "4037",
+                          "docVisible": true,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "displayMessage",
+                          "parentId": 114929,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "result error detail"
+                        },
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": null,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "key",
+                          "demo": "LZD_MEMBER_USER_1001",
+                          "required": true,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 114931,
+                          "apiId": "4037",
+                          "docVisible": true,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "key",
+                          "parentId": 114929,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "result error key"
+                        }
+                      ],
+                      "maxListSize": "",
+                      "id": 114929,
+                      "apiId": "4037",
+                      "docVisible": true,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "errorCode",
+                      "parentId": 114926,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "com.alibaba.ecommerce.error.ErrorCode",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "result error"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 114926,
+                  "apiId": "4037",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.alibaba.ecommerce.module.Response",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "api result"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "old_p_uid",
+                  "demo": "abc-28754775-2938575-239374",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 114923,
+                  "apiId": "4037",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "partnerUserId",
+                  "parentId": 114922,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "the current partner user id to match up with a user"
+                },
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "new_p_uid",
+                  "demo": "abc-28754775-2938575-239374",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 114924,
+                  "apiId": "4037",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "newPartnerUserId",
+                  "parentId": 114922,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "the new partner user id to be placed"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/partner/updatePartnerUserId\");\nrequest.addApiParameter(\"old_p_uid\", \"abc-28754775-2938575-239374\");\nrequest.addApiParameter(\"new_p_uid\", \"abc-28754775-2938575-239374\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/partner/updatePartnerUserId');\n$request->addApiParam('old_p_uid','abc-28754775-2938575-239374');\n$request->addApiParam('new_p_uid','abc-28754775-2938575-239374');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/partner/updatePartnerUserId\");\nrequest.AddApiParameter(\"old_p_uid\", \"abc-28754775-2938575-239374\");\nrequest.AddApiParameter(\"new_p_uid\", \"abc-28754775-2938575-239374\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/partner/updatePartnerUserId')\nrequest.add_api_parameter(\"old_p_uid\", \"abc-28754775-2938575-239374\")\nrequest.add_api_parameter(\"new_p_uid\", \"abc-28754775-2938575-239374\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/partner/updatePartnerUserId')\nrequest.add_api_param('old_p_uid', 'abc-28754775-2938575-239374')\nrequest.add_api_param('new_p_uid', 'abc-28754775-2938575-239374')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/partner/updatePartnerUserId' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"app_key\":\"1234567\",\"old_p_uid\":\"abc-28754775-2938575-239374\",\"new_p_uid\":\"abc-28754775-2938575-239374\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"timestamp\":\"1764727840692\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1725,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"result\": {\n    \"success\": \"true\",\n    \"module\": {},\n    \"errorCode\": {\n      \"displayMessage\": \"partnerUserId is invalid\",\n      \"key\": \"LZD_MEMBER_USER_1001\"\n    }\n  },\n  \"code\": \"0\",\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 1725
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1726
+        },
+        "lastModified": "2024-07-22 11:26:18",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 114923,
+              "data": [],
+              "children": [],
+              "name": "old_p_uid",
+              "id": 1726,
+              "type": "String",
+              "required": true,
+              "desc": "the current partner user id to match up with a user"
+            },
+            {
+              "treeId": 114924,
+              "data": [],
+              "children": [],
+              "name": "new_p_uid",
+              "id": 1726,
+              "type": "String",
+              "required": true,
+              "desc": "the new partner user id to be placed"
+            }
+          ],
+          "id": 1726
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 665,
+        "desc": "Used to update the partner user id to new partner user id",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 114926,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 114927,
+                  "data": [],
+                  "children": [],
+                  "name": "success",
+                  "id": 1728,
+                  "type": "Boolean",
+                  "required": true,
+                  "desc": "whether the call succeed"
+                },
+                {
+                  "treeId": 114928,
+                  "data": [],
+                  "children": [],
+                  "name": "module",
+                  "id": 1728,
+                  "type": "Object",
+                  "required": true,
+                  "desc": "result data"
+                },
+                {
+                  "treeId": 114929,
+                  "data": [],
+                  "children": [
+                    {
+                      "treeId": 114930,
+                      "data": [],
+                      "children": [],
+                      "name": "displayMessage",
+                      "id": 1728,
+                      "type": "String",
+                      "required": true,
+                      "desc": "result error detail"
+                    },
+                    {
+                      "treeId": 114931,
+                      "data": [],
+                      "children": [],
+                      "name": "key",
+                      "id": 1728,
+                      "type": "String",
+                      "required": true,
+                      "desc": "result error key"
+                    }
+                  ],
+                  "name": "errorCode",
+                  "id": 1728,
+                  "type": "Object",
+                  "required": true,
+                  "desc": "result error"
+                }
+              ],
+              "name": "result",
+              "id": 1728,
+              "type": "Object",
+              "required": true,
+              "desc": "api result"
+            }
+          ],
+          "id": 1728
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

@@ -1,0 +1,393 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1296,
+    "lastModified": "2022-07-28 17:05:41",
+    "testToolLink": "null",
+    "viewCount": 9974,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 1296,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "Parameter ItemId is mandatory",
+              "code": "E0001",
+              "data": [],
+              "solution": "Parameter ItemId is mandatory",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product not exists",
+              "code": "E0002",
+              "data": [],
+              "solution": "Product not exists",
+              "id": 159
+            },
+            {
+              "codeDesc": "Seller Sku not exists",
+              "code": "E0003",
+              "data": [],
+              "solution": "Seller Sku not exists",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product Status not online",
+              "code": "E0004",
+              "data": [],
+              "solution": "Product Status not online",
+              "id": 159
+            },
+            {
+              "codeDesc": "Unexpected internal error",
+              "code": "E0006",
+              "data": [],
+              "solution": "Unexpected internal error",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product Status not online",
+              "code": "E0004",
+              "data": [],
+              "solution": "The current item is already in the Inactive state and does not need to call this API.",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product Status not online",
+              "code": "E0004",
+              "data": [],
+              "solution": "The current item is already in the Inactive state and does not need to call this API.",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product Status not online",
+              "code": "E0004",
+              "data": [],
+              "solution": "The current item is already in the Inactive state and does not need to call this API.",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product Status not online",
+              "code": "E0004",
+              "data": [],
+              "solution": "The current item is already in the Inactive state and does not need to call this API.",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product Status not online",
+              "code": "E0004",
+              "data": [],
+              "solution": "The current item is already in the Inactive state and does not need to call this API.",
+              "id": 159
+            },
+            {
+              "codeDesc": "Product:item id not exist",
+              "code": "E0002",
+              "data": [],
+              "solution": "The item id in your request does not exist with the current store, please call GetProducts/GetProductItem API to check.",
+              "id": 159
+            },
+            {
+              "codeDesc": "Limit service request speed in server side temporarily.",
+              "code": "901",
+              "data": [],
+              "solution": "API level QPS limiting flow, please retry in the next second when you encounter this error.",
+              "id": 159
+            },
+            {
+              "codeDesc": "The SellerSku parameter is no longer supported. Please update your parameter to use SkuId and try again",
+              "code": "4193",
+              "data": [],
+              "solution": "Seller sku field does not have uniqueness, so it cannot be used as a key field for editing products, please add SkuId field as product editing Key.",
+              "id": 159
+            }
+          ],
+          "id": 159
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 158
+        },
+        "title": "DeactivateProduct",
+        "path": "/product/deactivate",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 99151,
+                  "apiId": "3534",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Object",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response body"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "apiRequestBody",
+                  "demo": "<Request><Product><ItemId>234234234</ItemId><Skus><SkuId>20690462002</SkuId><SellerSku>5000</SellerSku></Skus></Product></Request>",
+                  "required": true,
+                  "paramType": "String",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 99149,
+                  "apiId": "3534",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "apiRequestBody",
+                  "parentId": 99144,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Parameter ItemId is mandatory, Skus is optional"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/deactivate\");\nrequest.addApiParameter(\"apiRequestBody\", \"<Request><Product><ItemId>234234234</ItemId><Skus><SkuId>20690462002</SkuId><SellerSku>5000</SellerSku></Skus></Product></Request>\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/deactivate');\n$request->addApiParam('apiRequestBody','<Request><Product><ItemId>234234234</ItemId><Skus><SkuId>20690462002</SkuId><SellerSku>5000</SellerSku></Skus></Product></Request>');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/deactivate\");\nrequest.AddApiParameter(\"apiRequestBody\", \"<Request><Product><ItemId>234234234</ItemId><Skus><SkuId>20690462002</SkuId><SellerSku>5000</SellerSku></Skus></Product></Request>\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/deactivate')\nrequest.add_api_parameter(\"apiRequestBody\", \"<Request><Product><ItemId>234234234</ItemId><Skus><SkuId>20690462002</SkuId><SellerSku>5000</SellerSku></Skus></Product></Request>\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/deactivate')\nrequest.add_api_param('apiRequestBody', '<Request><Product><ItemId>234234234</ItemId><Skus><SkuId>20690462002</SkuId><SellerSku>5000</SellerSku></Skus></Product></Request>')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/product/deactivate' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"apiRequestBody\":\"%3CRequest%3E%3CProduct%3E%3CItemId%3E234234234%3C%2FItemId%3E%3CSkus%3E%3CSkuId%3E20690462002%3C%2FSkuId%3E%3CSellerSku%3E5000%3C%2FSellerSku%3E%3C%2FSkus%3E%3C%2FProduct%3E%3C%2FRequest%3E\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"timestamp\":\"1764727827474\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 157,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {},\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 157
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 158
+        },
+        "lastModified": "2022-07-28 17:05:41",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 99149,
+              "data": [],
+              "children": [],
+              "name": "apiRequestBody",
+              "id": 158,
+              "type": "String",
+              "required": true,
+              "desc": "Parameter ItemId is mandatory, Skus is optional"
+            }
+          ],
+          "id": 158
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 9974,
+        "desc": "Use this API to deactivate Product or SKUs corresponding to the product",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 99151,
+              "data": [],
+              "children": [],
+              "name": "data",
+              "id": 160,
+              "type": "Object",
+              "required": false,
+              "desc": "Response body"
+            }
+          ],
+          "id": 160
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

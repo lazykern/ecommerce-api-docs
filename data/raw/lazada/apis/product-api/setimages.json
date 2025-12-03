@@ -1,0 +1,365 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1328,
+    "lastModified": "2022-07-28 17:14:55",
+    "testToolLink": "null",
+    "viewCount": 5681,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 1328,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E005: Invalid Request Format",
+              "code": "5",
+              "data": [],
+              "solution": " The request format is not valid.",
+              "id": 491
+            },
+            {
+              "codeDesc": "E006: Unexpected internal error",
+              "code": "6",
+              "data": [],
+              "solution": " Unexpected internal error.",
+              "id": 491
+            },
+            {
+              "codeDesc": "E030: Empty Request",
+              "code": "30",
+              "data": [],
+              "solution": " The request URL is not complete.",
+              "id": 491
+            },
+            {
+              "codeDesc": "E200: Empty SellerSku",
+              "code": "200",
+              "data": [],
+              "solution": " The Seller SKU is not specified.",
+              "id": 491
+            },
+            {
+              "codeDesc": "E203: Too many images in one SKU",
+              "code": "203",
+              "data": [],
+              "solution": " The number of images exceeds the limit (8 images).",
+              "id": 491
+            },
+            {
+              "codeDesc": "E204: Too many SKU in one request",
+              "code": "204",
+              "data": [],
+              "solution": " The number of SKUs exceeds the limit.",
+              "id": 491
+            },
+            {
+              "codeDesc": "E504: Set product Image failed",
+              "code": "504",
+              "data": [],
+              "solution": " Failed to set images for the product.",
+              "id": 491
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "1000",
+              "data": [],
+              "solution": " Internal system error.",
+              "id": 491
+            },
+            {
+              "codeDesc": "THD_IC_ERR_F_IC_ABILITY_PG_004:THD_IC_ERR_F_IC_ABILITY_PG_004",
+              "code": "504",
+              "data": [],
+              "solution": "The product is participating in a special Camapign that does not allow modification of images until the end of this Campaign.",
+              "id": 491
+            }
+          ],
+          "id": 491
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 490
+        },
+        "title": "SetImages",
+        "path": "/images/set",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 98872,
+                  "apiId": "3520",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 98871,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.taobao.sellglobal.service.api.response.WarnBody",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response body"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "1",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<Request>\n <Product>\n  <Skus>\n   <Sku>\n    <SkuId>20692116001</SkuId>\n    <Images>\n     <Image>https://sg-test-11.slatic.net/p/fc83aeae8cf46456468c175970edee75.png</Image>\n     <Image>https://th-live.slatic.net/p/6993be3715b37d5ccf0ed4ea5b50b58a.png</Image>\n     <Image>https://th-live.slatic.net/p/d619ac00b273e442c8f60035f5fb74d5.png</Image>\n     <Image>https://th-live.slatic.net/p/dc4ad00eb9f4da013707d855b7dbbbc6.png</Image>\n     <Image>https://th-live.slatic.net/p/4b47161058edfa6593c55e8e0c1e12a3.png</Image>\n     <Image>https://th-live.slatic.net/p/d95763400b94e65cc24b91e2fa70c514.png</Image>\n     <Image>https://th-live.slatic.net/p/cb10a4bc14c839bb808f83848d3a8222.png</Image>\n    </Images>\n   </Sku>\n  </Skus>\n </Product>\n</Request>\n",
+                  "maxSize": "",
+                  "paramName": "payload",
+                  "demo": "<Request><Product><Skus><Sku><SkuId>20692116001</SkuId><Images><Image>https://sg-test-11.slatic.net/p/fc83aeae8cf46456468c175970edee75.png</Image><Image>https://th-live.slatic.net/p/6993be3715b37d5ccf0ed4ea5b50b58a.png</Image><Image>https://th-live.slatic.net/p/d619ac00b273e442c8f60035f5fb74d5.png</Image><Image>https://th-live.slatic.net/p/dc4ad00eb9f4da013707d855b7dbbbc6.png</Image><Image>https://th-live.slatic.net/p/4b47161058edfa6593c55e8e0c1e12a3.png</Image><Image>https://th-live.slatic.net/p/d95763400b94e65cc24b91e2fa70c514.png</Image><Image>https://th-live.slatic.net/p/cb10a4bc14c839bb808f83848d3a8222.png</Image></Images></Sku></Skus></Product></Request>",
+                  "required": true,
+                  "paramType": "Payload",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 98867,
+                  "apiId": "3520",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.String",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "<a href='https://open.lazada.com/apps/doc/doc?nodeId=10557&docId=108254' target='_brank'>Parameter description</a>"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/images/set\");\nrequest.addApiParameter(\"payload\", \"<Request><Product><Skus><Sku><SkuId>20692116001</SkuId><Images><Image>https://sg-test-11.slatic.net/p/fc83aeae8cf46456468c175970edee75.png</Image><Image>https://th-live.slatic.net/p/6993be3715b37d5ccf0ed4ea5b50b58a.png</Image><Image>https://th-live.slatic.net/p/d619ac00b273e442c8f60035f5fb74d5.png</Image><Image>https://th-live.slatic.net/p/dc4ad00eb9f4da013707d855b7dbbbc6.png</Image><Image>https://th-live.slatic.net/p/4b47161058edfa6593c55e8e0c1e12a3.png</Image><Image>https://th-live.slatic.net/p/d95763400b94e65cc24b91e2fa70c514.png</Image><Image>https://th-live.slatic.net/p/cb10a4bc14c839bb808f83848d3a8222.png</Image></Images></Sku></Skus></Product></Request>\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/images/set');\n$request->addApiParam('payload','<Request><Product><Skus><Sku><SkuId>20692116001</SkuId><Images><Image>https://sg-test-11.slatic.net/p/fc83aeae8cf46456468c175970edee75.png</Image><Image>https://th-live.slatic.net/p/6993be3715b37d5ccf0ed4ea5b50b58a.png</Image><Image>https://th-live.slatic.net/p/d619ac00b273e442c8f60035f5fb74d5.png</Image><Image>https://th-live.slatic.net/p/dc4ad00eb9f4da013707d855b7dbbbc6.png</Image><Image>https://th-live.slatic.net/p/4b47161058edfa6593c55e8e0c1e12a3.png</Image><Image>https://th-live.slatic.net/p/d95763400b94e65cc24b91e2fa70c514.png</Image><Image>https://th-live.slatic.net/p/cb10a4bc14c839bb808f83848d3a8222.png</Image></Images></Sku></Skus></Product></Request>');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/images/set\");\nrequest.AddApiParameter(\"payload\", \"<Request><Product><Skus><Sku><SkuId>20692116001</SkuId><Images><Image>https://sg-test-11.slatic.net/p/fc83aeae8cf46456468c175970edee75.png</Image><Image>https://th-live.slatic.net/p/6993be3715b37d5ccf0ed4ea5b50b58a.png</Image><Image>https://th-live.slatic.net/p/d619ac00b273e442c8f60035f5fb74d5.png</Image><Image>https://th-live.slatic.net/p/dc4ad00eb9f4da013707d855b7dbbbc6.png</Image><Image>https://th-live.slatic.net/p/4b47161058edfa6593c55e8e0c1e12a3.png</Image><Image>https://th-live.slatic.net/p/d95763400b94e65cc24b91e2fa70c514.png</Image><Image>https://th-live.slatic.net/p/cb10a4bc14c839bb808f83848d3a8222.png</Image></Images></Sku></Skus></Product></Request>\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/images/set')\nrequest.add_api_parameter(\"payload\", \"<Request><Product><Skus><Sku><SkuId>20692116001</SkuId><Images><Image>https://sg-test-11.slatic.net/p/fc83aeae8cf46456468c175970edee75.png</Image><Image>https://th-live.slatic.net/p/6993be3715b37d5ccf0ed4ea5b50b58a.png</Image><Image>https://th-live.slatic.net/p/d619ac00b273e442c8f60035f5fb74d5.png</Image><Image>https://th-live.slatic.net/p/dc4ad00eb9f4da013707d855b7dbbbc6.png</Image><Image>https://th-live.slatic.net/p/4b47161058edfa6593c55e8e0c1e12a3.png</Image><Image>https://th-live.slatic.net/p/d95763400b94e65cc24b91e2fa70c514.png</Image><Image>https://th-live.slatic.net/p/cb10a4bc14c839bb808f83848d3a8222.png</Image></Images></Sku></Skus></Product></Request>\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/images/set')\nrequest.add_api_param('payload', '<Request><Product><Skus><Sku><SkuId>20692116001</SkuId><Images><Image>https://sg-test-11.slatic.net/p/fc83aeae8cf46456468c175970edee75.png</Image><Image>https://th-live.slatic.net/p/6993be3715b37d5ccf0ed4ea5b50b58a.png</Image><Image>https://th-live.slatic.net/p/d619ac00b273e442c8f60035f5fb74d5.png</Image><Image>https://th-live.slatic.net/p/dc4ad00eb9f4da013707d855b7dbbbc6.png</Image><Image>https://th-live.slatic.net/p/4b47161058edfa6593c55e8e0c1e12a3.png</Image><Image>https://th-live.slatic.net/p/d95763400b94e65cc24b91e2fa70c514.png</Image><Image>https://th-live.slatic.net/p/cb10a4bc14c839bb808f83848d3a8222.png</Image></Images></Sku></Skus></Product></Request>')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/images/set' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"payload\":\"%3CRequest%3E%3CProduct%3E%3CSkus%3E%3CSku%3E%3CSkuId%3E20692116001%3C%2FSkuId%3E%3CImages%3E%3CImage%3Ehttps%3A%2F%2Fsg-test-11.slatic.net%2Fp%2Ffc83aeae8cf46456468c175970edee75.png%3C%2FImage%3E%3CImage%3Ehttps%3A%2F%2Fth-live.slatic.net%2Fp%2F6993be3715b37d5ccf0ed4ea5b50b58a.png%3C%2FImage%3E%3CImage%3Ehttps%3A%2F%2Fth-live.slatic.net%2Fp%2Fd619ac00b273e442c8f60035f5fb74d5.png%3C%2FImage%3E%3CImage%3Ehttps%3A%2F%2Fth-live.slatic.net%2Fp%2Fdc4ad00eb9f4da013707d855b7dbbbc6.png%3C%2FImage%3E%3CImage%3Ehttps%3A%2F%2Fth-live.slatic.net%2Fp%2F4b47161058edfa6593c55e8e0c1e12a3.png%3C%2FImage%3E%3CImage%3Ehttps%3A%2F%2Fth-live.slatic.net%2Fp%2Fd95763400b94e65cc24b91e2fa70c514.png%3C%2FImage%3E%3CImage%3Ehttps%3A%2F%2Fth-live.slatic.net%2Fp%2Fcb10a4bc14c839bb808f83848d3a8222.png%3C%2FImage%3E%3C%2FImages%3E%3C%2FSku%3E%3C%2FSkus%3E%3C%2FProduct%3E%3C%2FRequest%3E\",\"timestamp\":\"1764727829682\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 489,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {},\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 489
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 490
+        },
+        "lastModified": "2022-07-28 17:14:55",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 98867,
+              "data": [],
+              "children": [],
+              "name": "payload",
+              "id": 490,
+              "type": "Payload",
+              "required": true,
+              "desc": "<a href='https://open.lazada.com/apps/doc/doc?nodeId=10557&docId=108254' target='_brank'>Parameter description</a>"
+            }
+          ],
+          "id": 490
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 5681,
+        "desc": "Use this API to set the images for an existing product by associating one or more image URLs with it.",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 98872,
+              "data": [],
+              "children": [],
+              "name": "data",
+              "id": 492,
+              "type": "Object",
+              "required": false,
+              "desc": "Response body"
+            }
+          ],
+          "id": 492
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>The table below lists APIs that are provided by the Open Platform.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fauth%2Ftoken%2Fcreate' target='_brank'>generate access_token</a> </td>\n      <td align=\"left\">Get access token with the authorization code that is received from the callback URL when sellers complete APP authorization. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fauth%2Ftoken%2Frefresh' target='_brank'>refresh access_token</a> </td>\n      <td align=\"left\">Refresh the access token before it expires. </td>\n    </tr>\n  </tbody>\n</table>",
+    "cnTags": [],
+    "cnTitle": "System API",
+    "gmtModified": 1721368190000,
+    "author": "陈金言",
+    "cnContent": "<p>The table below lists APIs that are provided by the Open Platform.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fauth%2Ftoken%2Fcreate' target='_brank'>generate access_token</a> </td>\n      <td align=\"left\">Get access token with the authorization code that is received from the callback URL when sellers complete APP authorization. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Fauth%2Ftoken%2Frefresh' target='_brank'>refresh access_token</a> </td>\n      <td align=\"left\">Refresh the access token before it expires. </td>\n    </tr>\n  </tbody>\n</table>",
+    "gmtCreate": 1721368190000,
+    "enTags": [],
+    "parentId": 10556,
+    "enTitle": "System API",
+    "id": 108520,
+    "lastModified": "2024-07-19 13:49:50",
+    "views": 3820
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

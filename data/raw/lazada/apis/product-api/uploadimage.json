@@ -1,0 +1,525 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1342,
+    "lastModified": "2022-07-29 12:35:51",
+    "testToolLink": "null",
+    "viewCount": 10157,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "post",
+        "docId": 1342,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E030: Empty Request",
+              "code": "30",
+              "data": [],
+              "solution": " The request is not complete.",
+              "id": 351
+            },
+            {
+              "codeDesc": "E300: Upload Image Failed",
+              "code": "300",
+              "data": [],
+              "solution": " Failed to upload the image.",
+              "id": 351
+            },
+            {
+              "codeDesc": "E303: The image is too large",
+              "code": "303",
+              "data": [],
+              "solution": " The size of the uploaded image exceeds the 1M limit.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "1000",
+              "data": [],
+              "solution": " Internal system error.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Not supported URL",
+              "code": "302",
+              "data": [],
+              "solution": "The image field should be passed in as a stream rather than a string, check that you are not passing in data that is not of a stream type，or if the image matches the requirements of this document.or if the image matches the requirements of this document.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Not supported URL",
+              "code": "302",
+              "data": [],
+              "solution": "The image field should be passed in as a stream rather than a string, check that you are not passing in data that is not of a stream type，or if the image matches the requirements of this document.or if the image matches the requirements of this document.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Not supported URL",
+              "code": "302",
+              "data": [],
+              "solution": "The image field should be passed in as a stream rather than a string, check that you are not passing in data that is not of a stream type，or if the image matches the requirements of this document.or if the image matches the requirements of this document.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Not supported URL",
+              "code": "302",
+              "data": [],
+              "solution": "The image field should be passed in as a stream rather than a string, check that you are not passing in data that is not of a stream type，or if the image matches the requirements of this document.or if the image matches the requirements of this document.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Not supported URL",
+              "code": "302",
+              "data": [],
+              "solution": "The image field should be passed in as a stream rather than a string, check that you are not passing in data that is not of a stream type，or if the image matches the requirements of this document.or if the image matches the requirements of this document.",
+              "id": 351
+            },
+            {
+              "codeDesc": "The image is too large",
+              "code": "303",
+              "data": [],
+              "solution": "Please make sure your image size is less than 5000*5000px and file size is less than 3145728B.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Not supported URL",
+              "code": "302",
+              "data": [],
+              "solution": "The image field should be passed in as a stream rather than a string, check that you are not passing in data that is not of a stream type，or if the image matches the requirements of this document.or if the image matches the requirements of this document.",
+              "id": 351
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "1000",
+              "data": [],
+              "solution": "Please check that you are uploading a JPG or PGN image that meets the requirements, and if you are sure that there is nothing wrong with the image but encounter this error frequently, please create a ticket to inquire about it.",
+              "id": 351
+            }
+          ],
+          "id": 351
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 350
+        },
+        "title": "UploadImage",
+        "path": "/image/upload",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": true,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "2",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "image",
+                      "demo": "{}",
+                      "required": false,
+                      "paramType": "4",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "url",
+                          "demo": "http://my-live-01.slatic.net/p/orange_yellow.jpg",
+                          "required": false,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 4562,
+                          "apiId": "175",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "url",
+                          "parentId": 4561,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "The URL address of the uploaded image."
+                        },
+                        {
+                          "serviceParamHttpType": "",
+                          "serviceParamType": "1",
+                          "hitLog": false,
+                          "defaultValue": "",
+                          "previewDemo": "",
+                          "maxSize": "",
+                          "paramName": "hash_code",
+                          "demo": "61bdf049525b7d4c2cf79257ec7c2c56",
+                          "required": false,
+                          "paramType": "1",
+                          "mappingValue": "",
+                          "minValue": null,
+                          "dataMaskUrl": "",
+                          "enumValue": "",
+                          "children": [],
+                          "maxListSize": "",
+                          "id": 4563,
+                          "apiId": "175",
+                          "docVisible": false,
+                          "paramOrder": "",
+                          "moreLimit": "",
+                          "maxValue": null,
+                          "paramFrom": "2",
+                          "sensitiveDataTag": "",
+                          "maskField": "",
+                          "serviceParamName": "code",
+                          "parentId": 4561,
+                          "dataSecurityLevel": "C2",
+                          "serviceParamPath": "java.lang.String",
+                          "mappingType": "1",
+                          "regexExpression": "",
+                          "constantValue": "",
+                          "desc": "The hash code of the image."
+                        }
+                      ],
+                      "maxListSize": "",
+                      "id": 4561,
+                      "apiId": "175",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "image",
+                      "parentId": 4560,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.lang.Object",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "image info"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 4560,
+                  "apiId": "175",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 4559,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.lang.Object",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Response body"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "6",
+                  "hitLog": null,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "image",
+                  "demo": "image",
+                  "required": true,
+                  "paramType": "byte[]",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 4558,
+                  "apiId": "175",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "",
+                  "parentId": 0,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "byte[]",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Upload an image file"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/image/upload\");\nrequest.addFileParameter(\"image\",new FileItem(\"/Users/D ocuments/book.jpg\"));\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/image/upload');\n$request->addFileParam('image',file_get_contents('./IopSdk.php'));\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/image/upload\");\nrequest.AddFileParameter(\"image\", new FileItem(\"./IopTest.exe\"));\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/image/upload')\nrequest.add_file_parameter(\"image\",\"./IopSdk.rb\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/image/upload')\nrequest.add_file_param('image',open('/Users/IopSdk.py').read())\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X POST url + '/image/upload' \\\n-H 'Content-Type:application/json;charset=utf-8' \\\n-F 'image=@IopSdk.img' \\\n-d '{\"access_token\":\"37c66819338b4562e17675b8c5c4dbd0\",\"sign_method\":\"sha256\",\"sign\":\"D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC\",\"app_key\":\"1234567\",\"timestamp\":\"1764727829877\"}'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 349,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"image\": {\n      \"hash_code\": \"61bdf049525b7d4c2cf79257ec7c2c56\",\n      \"url\": \"http://my-live-01.slatic.net/p/orange_yellow.jpg\"\n    }\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 349
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 350
+        },
+        "lastModified": "2022-07-29 12:35:51",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 4558,
+              "data": [],
+              "children": [],
+              "name": "image",
+              "id": 350,
+              "type": "byte[]",
+              "required": true,
+              "desc": "Upload an image file"
+            }
+          ],
+          "id": 350
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 10157,
+        "desc": "Use this API to upload a single image file to Lazada site. Allowed image formats are JPG and PNG. The maximum size of an image file is 1MB.",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 4560,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 4561,
+                  "data": [],
+                  "children": [
+                    {
+                      "treeId": 4562,
+                      "data": [],
+                      "children": [],
+                      "name": "url",
+                      "id": 352,
+                      "type": "String",
+                      "required": false,
+                      "desc": "The URL address of the uploaded image."
+                    },
+                    {
+                      "treeId": 4563,
+                      "data": [],
+                      "children": [],
+                      "name": "hash_code",
+                      "id": 352,
+                      "type": "String",
+                      "required": false,
+                      "desc": "The hash code of the image."
+                    }
+                  ],
+                  "name": "image",
+                  "id": 352,
+                  "type": "Object",
+                  "required": false,
+                  "desc": "image info"
+                }
+              ],
+              "name": "data",
+              "id": 352,
+              "type": "Object",
+              "required": true,
+              "desc": "Response body"
+            }
+          ],
+          "id": 352
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

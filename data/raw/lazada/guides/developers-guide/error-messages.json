@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>All API calls will return a response, which indicates the status of the operation (either Success or Error) and optionally provides results and/or details related to the specified action.</p>\n<p>When an API call fails, the system returns the request ID and error codes as well. There are 3 categories of common API call errors:</p>\n<ul>\n  <li>SYSTEM: API platform error</li>\n  <li>ISV: Business data error</li>\n  <li>ISP: Backend service error</li>\n</ul>\n<h2>API platform error (ISV errors)</h2>\n<p>The API platform errors usually occur because the request from a user does not fulfill the basic verification. When encountering such errors, check the authority, frequency and other conditions of the applications. Then, check the uploaded parameters for completeness and validity based on the API documentation.</p>\n<h2>Business data error (ISP errors)</h2>\n<p>These errors are the result of a business logic error, these errors are caused if you do not follow the certain business rules set out by the Lazada Platform (e.g. product creation rules, platform policy rules, etc).</p>\n<p>When encountering such errors, check whether the corresponding information is uploaded based on the error information. It is recommended to try again after correcting such errors. Should you still receive the error messages, please reach out to the Lazada Partner Seller Support to find out the business </p>\n<h2>Backend service error</h2>\n<p>The backend service errors are usually caused by the availability of API service. Please try again after some time, if the issue persists, please contact our technical support team.</p>",
+    "cnTags": [],
+    "cnTitle": "Error messages",
+    "gmtModified": 1721368197000,
+    "author": "Ong, Yi Ni",
+    "cnContent": "<p>All API calls will return a response, which indicates the status of the operation (either Success or Error) and optionally provides results and/or details related to the specified action.</p>\n<p>When an API call fails, the system returns the request ID and error codes as well. There are 3 categories of common API call errors:</p>\n<ul>\n  <li>SYSTEM: API platform error</li>\n  <li>ISV: Business data error</li>\n  <li>ISP: Backend service error</li>\n</ul>\n<h2>API platform error (ISV errors)</h2>\n<p>The API platform errors usually occur because the request from a user does not fulfill the basic verification. When encountering such errors, check the authority, frequency and other conditions of the applications. Then, check the uploaded parameters for completeness and validity based on the API documentation.</p>\n<h2>Business data error (ISP errors)</h2>\n<p>These errors are the result of a business logic error, these errors are caused if you do not follow the certain business rules set out by the Lazada Platform (e.g. product creation rules, platform policy rules, etc).</p>\n<p>When encountering such errors, check whether the corresponding information is uploaded based on the error information. It is recommended to try again after correcting such errors. Should you still receive the error messages, please reach out to the Lazada Partner Seller Support to find out the business </p>\n<h2>Backend service error</h2>\n<p>The backend service errors are usually caused by the availability of API service. Please try again after some time, if the issue persists, please contact our technical support team.</p>",
+    "gmtCreate": 1721368197000,
+    "enTags": [],
+    "parentId": 10397,
+    "enTitle": "Error messages",
+    "id": 108138,
+    "lastModified": "2024-07-19 13:49:57",
+    "views": 2377
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

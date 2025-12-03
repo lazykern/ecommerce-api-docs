@@ -1,0 +1,363 @@
+{
+  "metadata": {},
+  "data": {
+    "score": "",
+    "sdkDownloadsLink": "https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/sdk/lazop-sdk-java-20240813-1723533766816ev44.zip",
+    "suggestionList": [],
+    "id": 1719,
+    "lastModified": "2023-01-31 20:50:22",
+    "testToolLink": "null",
+    "viewCount": 4608,
+    "authType": 1,
+    "apiList": [
+      {
+        "chargeable": false,
+        "method": "get",
+        "docId": 1719,
+        "errorCodes": {
+          "data": [
+            {
+              "codeDesc": "E701: Empty category suggestion.",
+              "code": "701",
+              "data": [],
+              "solution": "Empty category suggestion.",
+              "id": 1083
+            },
+            {
+              "codeDesc": "Internal Application Error",
+              "code": "1000",
+              "data": [],
+              "solution": "Internal Application Error.",
+              "id": 1083
+            }
+          ],
+          "id": 1083
+        },
+        "commonParameters": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "app_key",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Unique app ID issued by LAZADA Open Platform console when you apply for an app category"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "timestamp",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The time stamp of the request e.g. 1517820392000 (which translates to 5 February 2018 08:46:32) with less than 7200s difference from UTC time"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "access_token",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "API interface call credentials"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign_method",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "The HMAC hash algorithm you are using to calculate your signature"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "sign",
+              "id": null,
+              "type": "String",
+              "required": true,
+              "desc": "Part of the authentication process that is used for identifying and verifying who is sending a request (click <a target='_blank' href='https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068'>here</a> for details)"
+            }
+          ],
+          "id": 1082
+        },
+        "title": "GetCategorySuggestionInBulk",
+        "path": "/product/category/suggestion/get/batch",
+        "examples": {
+          "data": [
+            {
+              "output": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "2",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "data",
+                  "demo": "{}",
+                  "required": false,
+                  "paramType": "4",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [
+                    {
+                      "serviceParamHttpType": "",
+                      "serviceParamType": "2",
+                      "hitLog": false,
+                      "defaultValue": "",
+                      "previewDemo": "",
+                      "maxSize": "",
+                      "paramName": "categorySuggestionMap",
+                      "demo": "{       \"Test Product9\": [         {           \"categoryPath\": \"xxxLR>Sets\",           \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",           \"categoryName\": \"Sets\",           \"categoryId\": 11111         },         {           \"categoryPath\": \"xxxLR>Sets\",           \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",           \"categoryName\": \"Sets\",           \"categoryId\": 11111         },         {           \"categoryPath\": \"xxxLR>Sets\",           \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",           \"categoryName\": \"Sets\",           \"categoryId\": 11111         },         {           \"categoryPath\": \"xxxLR>Sets\",           \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",           \"categoryName\": \"Sets\",           \"categoryId\": 11111         },         {           \"categoryPath\": \"xxxLR>Sets\",           \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",           \"categoryName\": \"Sets\",           \"categoryId\": 11111         }       ] }",
+                      "required": false,
+                      "paramType": "4",
+                      "mappingValue": "",
+                      "minValue": null,
+                      "dataMaskUrl": "",
+                      "enumValue": "",
+                      "children": [],
+                      "maxListSize": "",
+                      "id": 84083,
+                      "apiId": "2954",
+                      "docVisible": false,
+                      "paramOrder": "",
+                      "moreLimit": "",
+                      "maxValue": null,
+                      "paramFrom": "2",
+                      "sensitiveDataTag": "",
+                      "maskField": "",
+                      "serviceParamName": "categorySuggestionMap",
+                      "parentId": 84082,
+                      "dataSecurityLevel": "C2",
+                      "serviceParamPath": "java.util.HashMap<java.lang.String, java.util.List<com.taobao.sellglobal.domain.api.CategorySuggestionResultBean>>",
+                      "mappingType": "1",
+                      "regexExpression": "",
+                      "constantValue": "",
+                      "desc": "The Map of Category Suggestions"
+                    }
+                  ],
+                  "maxListSize": "",
+                  "id": 84082,
+                  "apiId": "2954",
+                  "docVisible": false,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "2",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "data",
+                  "parentId": 84081,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "com.taobao.sellglobal.domain.api.CategorySuggestionBatchResponse",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "data"
+                }
+              ],
+              "input": [
+                {
+                  "serviceParamHttpType": "",
+                  "serviceParamType": "3",
+                  "hitLog": false,
+                  "defaultValue": "",
+                  "previewDemo": "",
+                  "maxSize": "",
+                  "paramName": "product_name_list",
+                  "demo": "['Man T-Shirt Summer', 'Women Dress']",
+                  "required": true,
+                  "paramType": "String[]",
+                  "mappingValue": "",
+                  "minValue": null,
+                  "dataMaskUrl": "",
+                  "enumValue": "",
+                  "children": [],
+                  "maxListSize": "",
+                  "id": 84033,
+                  "apiId": "2954",
+                  "docVisible": true,
+                  "paramOrder": "",
+                  "moreLimit": "",
+                  "maxValue": null,
+                  "paramFrom": "1",
+                  "sensitiveDataTag": "",
+                  "maskField": "",
+                  "serviceParamName": "productNameList",
+                  "parentId": 84032,
+                  "dataSecurityLevel": "C2",
+                  "serviceParamPath": "java.util.List",
+                  "mappingType": "1",
+                  "regexExpression": "",
+                  "constantValue": "",
+                  "desc": "Product Name"
+                }
+              ],
+              "data": [],
+              "requestCodes": [
+                {
+                  "code": "LazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.setApiName(\"/product/category/suggestion/get/batch\");\nrequest.setHttpMethod(\"GET\");\nrequest.addApiParameter(\"product_name_list\", \"['Man T-Shirt Summer', 'Women Dress']\");\nLazopResponse response = client.execute(request, accessToken);\nSystem.out.println(response.getBody());\nThread.sleep(10);\n",
+                  "lang": "JAVA"
+                },
+                {
+                  "code": "$c = new LazopClient(url,appkey,appSecret);\n$request = new LazopRequest('/product/category/suggestion/get/batch','GET');\n$request->addApiParam('product_name_list','['Man T-Shirt Summer', 'Women Dress']');\nvar_dump($c->execute($request, $accessToken));\n",
+                  "lang": "PHP"
+                },
+                {
+                  "code": "ILazopClient client = new LazopClient(url, appkey, appSecret);\nLazopRequest request = new LazopRequest();\nrequest.SetApiName(\"/product/category/suggestion/get/batch\");\nrequest.SetHttpMethod(\"GET\");\nrequest.AddApiParameter(\"product_name_list\", \"['Man T-Shirt Summer', 'Women Dress']\");\nLazopResponse response = client.Execute(request, accessToken);\nConsole.WriteLine(response.IsError());\nConsole.WriteLine(response.Body);\n",
+                  "lang": ".NET"
+                },
+                {
+                  "code": "client = LazopApiClient::Client.new(url, appkey, appSecret)\nrequest = LazopApiClient::Request.new('/product/category/suggestion/get/batch','GET')\nrequest.add_api_parameter(\"product_name_list\", \"['Man T-Shirt Summer', 'Women Dress']\")\nresponse = client.execute(request, accessToken)\nputs response.success?\nputs response.body\n",
+                  "lang": "RUBY"
+                },
+                {
+                  "code": "client = lazop.LazopClient(url, appkey ,appSecret)\nrequest = lazop.LazopRequest('/product/category/suggestion/get/batch','GET')\nrequest.add_api_param('product_name_list', '['Man T-Shirt Summer', 'Women Dress']')\nresponse = client.execute(request, access_token)\nprint(response.type)\nprint(response.body)\n",
+                  "lang": "PYTHON"
+                },
+                {
+                  "code": "curl -X GET url + '/product/category/suggestion/get/batch?timestamp=1764727827794&app_key=12345678&sign_method=sha256&sign=D13F2A03BE94D9AAE9F933FFA7B13E0A5AD84A3DAEBC62A458A3C382EC2E91EC&access_token=37c66819338b4562e17675b8c5c4dbd0&product_name_list=%5B%27Man+T-Shirt+Summer%27%2C+%27Women+Dress%27%5D'",
+                  "lang": "CURL"
+                }
+              ],
+              "id": 1081,
+              "complexResponseCode": "",
+              "title": "default demo example",
+              "content": "",
+              "responseCode": "{\n  \"code\": \"0\",\n  \"data\": {\n    \"categorySuggestionMap\": {\n      \"Test Product9\": [\n        {\n          \"categoryPath\": \"xxxLR\\u003eSets\",\n          \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",\n          \"categoryName\": \"Sets\",\n          \"categoryId\": 11111\n        },\n        {\n          \"categoryPath\": \"xxxLR\\u003eSets\",\n          \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",\n          \"categoryName\": \"Sets\",\n          \"categoryId\": 11111\n        },\n        {\n          \"categoryPath\": \"xxxLR\\u003eSets\",\n          \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",\n          \"categoryName\": \"Sets\",\n          \"categoryId\": 11111\n        },\n        {\n          \"categoryPath\": \"xxxLR\\u003eSets\",\n          \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",\n          \"categoryName\": \"Sets\",\n          \"categoryId\": 11111\n        },\n        {\n          \"categoryPath\": \"xxxLR\\u003eSets\",\n          \"class\": \"com.taobao.sellglobal.domain.api.CategorySuggestionResultBean\",\n          \"categoryName\": \"Sets\",\n          \"categoryId\": 11111\n        }\n      ]\n    }\n  },\n  \"request_id\": \"0ba2887315178178017221014\"\n}"
+            }
+          ],
+          "id": 1081
+        },
+        "endpointParams": {
+          "data": [
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Vietnam",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.vn/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Singapore",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.sg/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Philippines",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.ph/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Malaysia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.com.my/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Thailand",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.th/rest"
+            },
+            {
+              "treeId": null,
+              "data": [],
+              "children": [],
+              "name": "Indonesia",
+              "id": null,
+              "type": "",
+              "required": null,
+              "desc": "https://api.lazada.co.id/rest"
+            }
+          ],
+          "id": 1082
+        },
+        "lastModified": "2023-01-31 20:50:22",
+        "parameters": {
+          "data": [
+            {
+              "treeId": 84033,
+              "data": [],
+              "children": [],
+              "name": "product_name_list",
+              "id": 1082,
+              "type": "String[]",
+              "required": true,
+              "desc": "Product Name"
+            }
+          ],
+          "id": 1082
+        },
+        "introduction": {
+          "data": [],
+          "id": null
+        },
+        "views": 4608,
+        "desc": "Get product's category suggestion by product title in bulk",
+        "outputParameters": {
+          "data": [
+            {
+              "treeId": 84082,
+              "data": [],
+              "children": [
+                {
+                  "treeId": 84083,
+                  "data": [],
+                  "children": [],
+                  "name": "categorySuggestionMap",
+                  "id": 1084,
+                  "type": "Object",
+                  "required": false,
+                  "desc": "The Map of Category Suggestions"
+                }
+              ],
+              "name": "data",
+              "id": 1084,
+              "type": "Object",
+              "required": false,
+              "desc": "data"
+            }
+          ],
+          "id": 1084
+        }
+      }
+    ]
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

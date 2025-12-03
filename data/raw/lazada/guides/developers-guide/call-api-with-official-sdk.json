@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>SDK is automatically generated for your application and includes functions like composing request, generating encryption, response interpretation, message monitoring, and other functions. Using SDK to invoke the APIs is simple and straightforward, and it is recommended to call API with official SDK.</p>\n<h2>Environment requirements</h2>\n<ul>\n  <li>JAVA SDK requires Java SE/EE 1.5 or newer version</li>\n  <li>.Net SDK requires .NET Framework 2.0 or newer version (Windows Phone platform not supported）</li>\n  <li>PHP SDK requires PHP 5 or newer version</li>\n  <li>Python requires Python 3.0 or newer version</li>\n  <li>For Ruby, you can install it directly <a href='http://www.rubydoc.info/gems/lazop_api_client/1.1.0' target='_brank'>here</a>.</li>\n</ul>\n<h2>Downloading SDK</h2>\n<p>Before you can download SDK, you need to have registered as a developer and able to login to Lazada Open Platform. </p>\n<p>Take the following steps to download SDK for your application:<br/>1. Login Lazada Open Platform and open the <strong>App Console</strong> page.<br/>2. In the <strong>Testing Tools</strong> navigation panel, click <strong>SDK Download</strong>.<br/>3. Click the <strong>Download</strong> button to download the SDK for the specific programming language.</p>\n<h3>Useful Reference</h3>\n<p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10541&docId=108137\">API sample codes</a></p>",
+    "cnTags": [],
+    "cnTitle": "Call API with official SDK",
+    "gmtModified": 1721368194000,
+    "author": "陈金言",
+    "cnContent": "<p>SDK is automatically generated for your application and includes functions like composing request, generating encryption, response interpretation, message monitoring, and other functions. Using SDK to invoke the APIs is simple and straightforward, and it is recommended to call API with official SDK.</p>\n<h2>Environment requirements</h2>\n<ul>\n  <li>JAVA SDK requires Java SE/EE 1.5 or newer version</li>\n  <li>.Net SDK requires .NET Framework 2.0 or newer version (Windows Phone platform not supported）</li>\n  <li>PHP SDK requires PHP 5 or newer version</li>\n  <li>Python requires Python 3.0 or newer version</li>\n  <li>For Ruby, you can install it directly <a href='http://www.rubydoc.info/gems/lazop_api_client/1.1.0' target='_brank'>here</a>.</li>\n</ul>\n<h2>Downloading SDK</h2>\n<p>Before you can download SDK, you need to have registered as a developer and able to login to Lazada Open Platform. </p>\n<p>Take the following steps to download SDK for your application:<br/>1. Login Lazada Open Platform and open the <strong>App Console</strong> page.<br/>2. In the <strong>Testing Tools</strong> navigation panel, click <strong>SDK Download</strong>.<br/>3. Click the <strong>Download</strong> button to download the SDK for the specific programming language.</p>\n<h3>Useful Reference</h3>\n<p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10541&docId=108137\">API sample codes</a></p>",
+    "gmtCreate": 1721368194000,
+    "enTags": [],
+    "parentId": 10397,
+    "enTitle": "Call API with official SDK",
+    "id": 108064,
+    "lastModified": "2024-07-19 13:49:54",
+    "views": 6907
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

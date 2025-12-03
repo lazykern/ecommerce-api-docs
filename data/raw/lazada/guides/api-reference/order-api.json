@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>The table below lists APIs that can be used for order management.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fget' target='_brank'>GetOrder</a> </td>\n      <td align=\"left\">Get the list of items for a single order. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forders%2Fget' target='_brank'>GetOrders</a> </td>\n      <td align=\"left\">Get the customer details for a range of orders. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fitems%2Fget' target='_brank'>GetOrderItems</a> </td>\n      <td align=\"left\">Get the item information of an order. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forders%2Fitems%2Fget' target='_brank'>GetMultipleOrderItems</a> </td>\n      <td align=\"left\">Get the item information of one or more orders. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fdocument%2Fget' target='_brank'>GetDocument</a> </td>\n      <td align=\"left\">Retrieve order-related documents, including invoices, shipping labels, and shipping parcels. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Finvoice_number%2Fset' target='_brank'>SetInvoiceNumber</a> </td>\n      <td align=\"left\">Set the invoice access key of an order. </td>\n    </tr>\n  </tbody>\n</table>",
+    "cnTags": [],
+    "cnTitle": "Order API",
+    "gmtModified": 1721368188000,
+    "author": "陈金言",
+    "cnContent": "<p>The table below lists APIs that can be used for order management.</p>\n<table>\n  <thead>\n    <tr>\n      <th align=\"left\"><strong>API name</strong> </th>\n      <th align=\"left\"><strong>Description</strong> </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fget' target='_brank'>GetOrder</a> </td>\n      <td align=\"left\">Get the list of items for a single order. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forders%2Fget' target='_brank'>GetOrders</a> </td>\n      <td align=\"left\">Get the customer details for a range of orders. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fitems%2Fget' target='_brank'>GetOrderItems</a> </td>\n      <td align=\"left\">Get the item information of an order. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forders%2Fitems%2Fget' target='_brank'>GetMultipleOrderItems</a> </td>\n      <td align=\"left\">Get the item information of one or more orders. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Fdocument%2Fget' target='_brank'>GetDocument</a> </td>\n      <td align=\"left\">Retrieve order-related documents, including invoices, shipping labels, and shipping parcels. </td>\n    </tr>\n    <tr>\n      <td align=\"left\"><a href='https://open.lazada.com/apps/doc/api?path=%2Forder%2Finvoice_number%2Fset' target='_brank'>SetInvoiceNumber</a> </td>\n      <td align=\"left\">Set the invoice access key of an order. </td>\n    </tr>\n  </tbody>\n</table>",
+    "gmtCreate": 1721368188000,
+    "enTags": [],
+    "parentId": 10556,
+    "enTitle": "Order API",
+    "id": 108147,
+    "lastModified": "2024-07-19 13:49:48",
+    "views": 9545
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

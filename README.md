@@ -8,25 +8,19 @@ The primary goal is to transform messy, inconsistent web documentation into a co
 
 ```
 .
-├── output/
-│   ├── scraped/
-│   │   ├── lazada.json
-│   │   ├── shopee.json
-│   │   └── tiktok_shop.json
-│   └── structured/
-│       ├── lazada/
-│       ├── shopee/
-│       └── tiktok/
-├── scrape_lazada.py
-├── scrape_shopee.py
-├── scrape_tiktok_shop.py
-└── build_structured_docs.py
+├── src/ecommerce_docs/           # package code (scrapers, builders, CLI)
+│   └── platforms/{shopee,lazada}/  # platform scrapers + generators
+├── data/
+│   ├── raw/shopee/               # scraped JSON (guides + apis)
+│   ├── processed/shopee/         # generated artifacts (e.g., openapi.json)
+│   └── legacy/                   # archived outputs/old trees
+└── scripts/                      # optional thin shims (future)
 ```
 
-- **`scrape_[platform].py`**: These scripts use Playwright to browse and scrape the raw API documentation from each platform's developer portal. They are configurable via the command line.
-- **`build_structured_docs.py`**: This script reads the raw JSON files from `output/scraped/`, cleans and standardizes the data, and organizes it into a clear, module-based structure in `output/structured/`. It is also configurable.
-- **`output/scraped/`**: Contains the raw, unprocessed JSON output directly from the scraper scripts.
-- **`output/structured/`**: Contains the final, clean, and structured API documentation. The data is organized by platform and module, making it easy to navigate and use.
+- **`src/ecommerce_docs/platforms/[platform]`**: Platform-specific scrapers and generators.
+- **`data/raw/`**: Raw, unprocessed JSON directly from scraper scripts.
+- **`data/processed/`**: Generated artifacts (OpenAPI specs, future dev guides).
+- **`shopee/*.py`**: Legacy entrypoints that forward to the package code; prefer the CLI.
 
 ## How to Use
 
@@ -36,7 +30,14 @@ You must have Python and Node.js installed. This project uses [Playwright](https
 
 ### 1. Install Dependencies
 
-First, install the necessary Python packages.
+With [`uv`](https://github.com/astral-sh/uv) (recommended):
+
+```bash
+uv sync
+python -m playwright install
+```
+
+Without `uv`:
 
 ```bash
 pip install playwright
@@ -45,7 +46,34 @@ python -m playwright install
 
 ### 2. Run the Scrapers
 
+You can use the CLI entrypoint (new) or the original scripts (existing).
+
+#### Using the CLI (uv)
+```bash
+uv run ecomdocs scrape shopee
+# add --workers N or --output-dir PATH if needed
+
+uv run ecomdocs scrape lazada
+# add --workers N or --output-dir PATH if needed
+
+uv run ecomdocs build shopee-openapi
+# add --apis-dir PATH or --output-file PATH to override
+
+uv run ecomdocs build lazada-openapi
+# add --apis-dir PATH or --output-file PATH to override
+
+uv run ecomdocs build lazada-guides
+# add --input-dir PATH or --output-dir PATH to override
+
+uv run ecomdocs build shopee-guides
+# add --input-dir PATH or --output-dir PATH to override
+```
+
+#### Using the original scripts
+
 Execute the scraper scripts to gather the raw documentation. You can run them without arguments to use the default settings, or you can customize the behavior.
+
+- Shopee legacy: `python shopee/scrape_shopee.py` (delegates to the new package code; prefer the CLI)
 
 #### Default Usage
 ```bash
@@ -58,7 +86,7 @@ python scrape_shopee.py
 # Scrape TikTok Shop documentation
 python scrape_tiktok_shop.py
 ```
-These commands will use the default settings: 8 workers and will save the output to `output/scraped/[platform].json`.
+These legacy scripts default to 8 workers and write to `output/scraped/[platform].json`; the `ecomdocs` CLI writes to `data/raw/<platform>/` unless you pass `--output-dir`.
 
 #### Custom Usage
 You can specify the number of workers and the output file path.
@@ -133,4 +161,9 @@ For platforms with prose documentation (like TikTok Shop), articles are also sav
     "original_url": "https://partner.tiktokshop.com/docv2/page/650a6e74b143de02c01b1793"
   }
 }
-``` 
+```
+
+## Legacy locations
+
+- `data/legacy/output/` and `data/legacy/output_old/`: archived outputs from the previous layout.
+- `data/legacy/shopee_old/`: historical Shopee scripts/assets kept for reference.

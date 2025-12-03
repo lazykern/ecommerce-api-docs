@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>Lazada Open Platform APIs are called through HTTP requests. You can call the API by using the platform provided SDK (recommended), or by assembling the request with a certain format according to the Lazada Open Platform protocols (only if no official SDK is provided for a programming language). This section introduces how to assemble HTTP requests to call the Lazada APIs.</p>\n<p>API calls require data for input and return output as the responses. The general steps for calling an API through generating HTTP requests are as follows:<br/>1. Populate parameters and values<br/>2. Generate signature<br/>3. Assemble HTTP requests<br/>4. Initiate HTTP requests<br/>5. Get HTTP responses<br/>6. Interpret JSON/XML responses</p>\n<p>Refer to the sections below for detailed information about the API calling process on Lazada Open Platform.</p>\n<ul>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10443&docId=108065\">API endpoints URLs</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10448&docId=108066\">Requests and responses</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10449&docId=108067\">Calling parameters</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068\">Signature algorithm</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10451&docId=108069\">HTTP request sample</a></li>\n</ul>",
+    "cnTags": [],
+    "cnTitle": "API calling process",
+    "gmtModified": 1721368194000,
+    "author": "陈金言",
+    "cnContent": "<p>Lazada Open Platform APIs are called through HTTP requests. You can call the API by using the platform provided SDK (recommended), or by assembling the request with a certain format according to the Lazada Open Platform protocols (only if no official SDK is provided for a programming language). This section introduces how to assemble HTTP requests to call the Lazada APIs.</p>\n<p>API calls require data for input and return output as the responses. The general steps for calling an API through generating HTTP requests are as follows:<br/>1. Populate parameters and values<br/>2. Generate signature<br/>3. Assemble HTTP requests<br/>4. Initiate HTTP requests<br/>5. Get HTTP responses<br/>6. Interpret JSON/XML responses</p>\n<p>Refer to the sections below for detailed information about the API calling process on Lazada Open Platform.</p>\n<ul>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10443&docId=108065\">API endpoints URLs</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10448&docId=108066\">Requests and responses</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10449&docId=108067\">Calling parameters</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10450&docId=108068\">Signature algorithm</a></li>\n  <li><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10451&docId=108069\">HTTP request sample</a></li>\n</ul>",
+    "gmtCreate": 1721368194000,
+    "enTags": [],
+    "parentId": 10400,
+    "enTitle": "API calling process",
+    "id": 108136,
+    "lastModified": "2024-07-19 13:49:54",
+    "views": 4262
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}

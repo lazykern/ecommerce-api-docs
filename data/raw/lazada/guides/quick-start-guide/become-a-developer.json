@@ -1,0 +1,23 @@
+{
+  "metadata": {},
+  "data": {
+    "enContent": "<p>If you are a third party developer or Lazada seller, and you want to develop applications that integrate with the Lazada systems via APIs, you can register as a developer on Lazada Open Platform. To get started, you need to register a developer account and sign up the developer agreement on the platform.</p>\n<h2>Register a developer account</h2>\n<p>Take the following steps to register a developer account on Lazada Open Platform:<br/>1. Open the Lazada Open Platform home page at <a href='https://open.lazada.com/' target='_brank'><a href=\"https://open.lazada.com/\">https://open.lazada.com/</a></a>, and click <strong>Create Account</strong>.<br/>2. On the page that is open, enter your email ID and the verification code, and then click the <strong>Send email</strong> button for verification.<br/>3. Open the verification email in your mailbox, click the verification link to open the account registration page. Note that the verification email might be in the junk mailbox.<br/>4. On the account registration page, enter your password, read the <a href='https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/agreements/LAZOP_developer_agreement.htm' target='_brank'>Lazada Open Platform Developer Agreement</a>, and accept it as appropriate.<br/>5. Click <strong>Complete</strong>.</p>\n<p>Your developer account is created successfully, and you can log in Lazada Open Platform to start your application development.</p>\n<p>After logging in Lazada Open Platform, complete your profile information and upload related documents in the <strong>User ID</strong> -&gt; <strong>Profile</strong> menu. Your profile information will be reviewed and approved by Lazada operations team. Approved profile information and documents are required for deploying your application online. </p>\n<h3>Next step:</h3>\n<p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10398&docId=108002\">Register an application</a></p>",
+    "cnTags": [],
+    "cnTitle": "Become a developer",
+    "gmtModified": 1721368156000,
+    "author": "陈金言",
+    "cnContent": "<p>If you are a third party developer or Lazada seller, and you want to develop applications that integrate with the Lazada systems via APIs, you can register as a developer on Lazada Open Platform. To get started, you need to register a developer account and sign up the developer agreement on the platform.</p>\n<h2>Register a developer account</h2>\n<p>Take the following steps to register a developer account on Lazada Open Platform:<br/>1. Open the Lazada Open Platform home page at <a href='https://open.lazada.com/' target='_brank'><a href=\"https://open.lazada.com/\">https://open.lazada.com/</a></a>, and click <strong>Create Account</strong>.<br/>2. On the page that is open, enter your email ID and the verification code, and then click the <strong>Send email</strong> button for verification.<br/>3. Open the verification email in your mailbox, click the verification link to open the account registration page. Note that the verification email might be in the junk mailbox.<br/>4. On the account registration page, enter your password, read the <a href='https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/agreements/LAZOP_developer_agreement.htm' target='_brank'>Lazada Open Platform Developer Agreement</a>, and accept it as appropriate.<br/>5. Click <strong>Complete</strong>.</p>\n<p>Your developer account is created successfully, and you can log in Lazada Open Platform to start your application development.</p>\n<p>After logging in Lazada Open Platform, complete your profile information and upload related documents in the <strong>User ID</strong> -&gt; <strong>Profile</strong> menu. Your profile information will be reviewed and approved by Lazada operations team. Approved profile information and documents are required for deploying your application online. </p>\n<h3>Next step:</h3>\n<p><a href=\"https://open.lazada.com/apps/doc/doc?nodeId=10398&docId=108002\">Register an application</a></p>",
+    "gmtCreate": 1721368156000,
+    "enTags": [],
+    "parentId": 10533,
+    "enTitle": "Become a developer",
+    "id": 108001,
+    "lastModified": "2024-07-19 13:49:16",
+    "views": 5753
+  },
+  "success": true,
+  "httpStatus": "200",
+  "errorMessage": "",
+  "errorCode": "",
+  "errorLevel": ""
+}
