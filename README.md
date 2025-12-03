@@ -50,29 +50,23 @@ You can use the CLI entrypoint (new) or the original scripts (existing).
 
 #### Using the CLI (uv)
 ```bash
-uv run ecomdocs scrape shopee
+uv run ecomdocs shopee scrape
 # add --workers N or --output-dir PATH if needed
 
-uv run ecomdocs scrape lazada
+uv run ecomdocs lazada scrape
 # add --workers N or --output-dir PATH if needed
 
-uv run ecomdocs scrape tiktok
+uv run ecomdocs tiktok scrape
 # add --workers N or --output-dir PATH if needed
 # writes doc + spec JSON into data/raw/tiktok/ by default
 
-uv run ecomdocs build shopee-openapi
-# add --apis-dir PATH or --output-file PATH to override
-
-uv run ecomdocs build lazada-openapi
-# add --apis-dir PATH or --output-file PATH to override
-
-uv run ecomdocs build lazada-guides
+uv run ecomdocs lazada build-guides
 # add --input-dir PATH or --output-dir PATH to override
 
-uv run ecomdocs build shopee-guides
+uv run ecomdocs shopee build-guides
 # add --input-dir PATH or --output-dir PATH to override
 
-uv run ecomdocs build tiktok-guides
+uv run ecomdocs tiktok build-guides
 # add --input-dir PATH or --output-dir PATH to override
 ```
 

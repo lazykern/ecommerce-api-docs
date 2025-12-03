@@ -1,0 +1,19 @@
+{
+  "title": "(25) Opportunity matching status change",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "6710c02ba88d1103248e82b2",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6710c02ba88d1103248e82b2",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/25-opportunity-matching-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/25-opportunity-matching-status-change.md",
+  "content_length": 2167,
+  "update_time": "1751450126",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

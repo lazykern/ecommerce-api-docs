@@ -1,0 +1,19 @@
+{
+  "title": "Fulfilled by TikTok",
+  "category": "webhooks/fulfilled-by-tiktok",
+  "doc_type": 2,
+  "document_id": "670cb979889b3d031da0235c",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/670cb979889b3d031da0235c",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/fulfilled-by-tiktok/overview.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/fulfilled-by-tiktok/fulfilled-by-tiktok.md",
+  "content_length": 0,
+  "update_time": "-62135596800000",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

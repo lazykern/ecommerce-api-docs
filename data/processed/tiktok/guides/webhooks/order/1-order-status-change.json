@@ -1,0 +1,19 @@
+{
+  "title": "(1) Order status change",
+  "category": "webhooks/order",
+  "doc_type": 2,
+  "document_id": "650300b8a57708028b430b4a",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/650300b8a57708028b430b4a",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/order/1-order-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/order/1-order-status-change.md",
+  "content_length": 1084,
+  "update_time": "1751450092",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Order Status Update",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

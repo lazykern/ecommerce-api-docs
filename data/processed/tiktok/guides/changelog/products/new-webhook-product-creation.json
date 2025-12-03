@@ -1,0 +1,19 @@
+{
+  "title": "New webhook: Product creation",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "66c5d9b4e863d902fac36b74",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/66c5d9b4e863d902fac36b74",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/new-webhook-product-creation.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/new-webhook-product-creation.md",
+  "content_length": 1070,
+  "update_time": "1724242698",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

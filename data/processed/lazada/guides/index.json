@@ -1,0 +1,1192 @@
+[
+  {
+    "slug": "api-explorer",
+    "title": "API Explorer",
+    "category": "advanced-tasks",
+    "language": "en",
+    "document_id": 108328,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108328&nodeId=10432",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/api-explorer.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/api-explorer.json"
+  },
+  {
+    "slug": "deploy-your-application",
+    "title": "Deploy your application",
+    "category": "advanced-tasks",
+    "language": "en",
+    "document_id": 108135,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108135&nodeId=10432",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/deploy-your-application.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/deploy-your-application.json"
+  },
+  {
+    "slug": "monitor-application-data",
+    "title": "Monitor application data",
+    "category": "advanced-tasks",
+    "language": "en",
+    "document_id": 108061,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108061&nodeId=10432",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/monitor-application-data.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/monitor-application-data.json"
+  },
+  {
+    "slug": "request-sensitive-data-access",
+    "title": "Request sensitive data access",
+    "category": "advanced-tasks",
+    "language": "en",
+    "document_id": 108297,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108297&nodeId=10432",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/request-sensitive-data-access.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/request-sensitive-data-access.json"
+  },
+  {
+    "slug": "set-ip-whitelist",
+    "title": "Set IP whitelist",
+    "category": "advanced-tasks",
+    "language": "en",
+    "document_id": 108134,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108134&nodeId=10432",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/set-ip-whitelist.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/set-ip-whitelist.json"
+  },
+  {
+    "slug": "test-your-application",
+    "title": "Test your application",
+    "category": "advanced-tasks",
+    "language": "en",
+    "document_id": 108444,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108444&nodeId=10432",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/test-your-application.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/advanced-tasks/test-your-application.json"
+  },
+  {
+    "slug": "finance-analysis",
+    "title": "Finance analysis",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 108144,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108144&nodeId=29617",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/financial-inquiry/finance-analysis.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/financial-inquiry/finance-analysis.json"
+  },
+  {
+    "slug": "getpayoutstatus-response-field-resolution",
+    "title": "GetPayoutStatus response field resolution",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120249,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120249&nodeId=29617",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/financial-inquiry/getpayoutstatus-response-field-resolution.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/financial-inquiry/getpayoutstatus-response-field-resolution.json"
+  },
+  {
+    "slug": "querytransactiondetails-fee-type-field-enum-list",
+    "title": "queryTransactionDetails \"fee_type\" field enum list",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120956,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120956&nodeId=29617",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/financial-inquiry/querytransactiondetails-fee-type-field-enum-list.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/financial-inquiry/querytransactiondetails-fee-type-field-enum-list.json"
+  },
+  {
+    "slug": "guide",
+    "title": "\u83b7\u53d6\u5546\u54c1\u534a\u6258\u7ba1\u5546\u54c1\u4fe1\u606f",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121588,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121588&nodeId=45692",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/global-plus-product-upgrade/guide.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/global-plus-product-upgrade/guide.json"
+  },
+  {
+    "slug": "global-plus",
+    "title": "\u66f4\u65b0 Global Plus \u5546\u54c1\u4ef7\u683c\u53ca\u7269\u6d41\u5c5e\u6027\u4fe1\u606f",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121587,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121587&nodeId=45692",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/global-plus-product-upgrade/global-plus.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/global-plus-product-upgrade/global-plus.json"
+  },
+  {
+    "slug": "choic-order-overview",
+    "title": "Choic Order Overview",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121784,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121784&nodeId=45697",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-order-management/choic-order-overview.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-order-management/choic-order-overview.json"
+  },
+  {
+    "slug": "jit-fulfillment-by-seller",
+    "title": "JIT Fulfillment by Seller",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121786,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121786&nodeId=45697",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-order-management/jit-fulfillment-by-seller.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-order-management/jit-fulfillment-by-seller.json"
+  },
+  {
+    "slug": "jit-po-management",
+    "title": "JIT PO management",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121785,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121785&nodeId=45697",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-order-management/jit-po-management.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-order-management/jit-po-management.json"
+  },
+  {
+    "slug": "choice-seller-authorization-process",
+    "title": "Choice Seller Authorization Process",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121782,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121782&nodeId=45695",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-seller-authorization-process.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/choice-seller-authorization-process.json"
+  },
+  {
+    "slug": "product-management",
+    "title": "Product Management",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121783,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121783&nodeId=45695",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/product-management.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-choice-api/product-management.json"
+  },
+  {
+    "slug": "lazada-im-open-api",
+    "title": "Lazada IM Open API",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120971,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120971&nodeId=10544",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-im-open-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-im-open-api.json"
+  },
+  {
+    "slug": "lazada-marketplace-ease-mode-api-reference",
+    "title": "Lazada Marketplace Ease Mode API Reference",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121541,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121541&nodeId=10544",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-marketplace-ease-mode-api-reference.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-marketplace-ease-mode-api-reference.json"
+  },
+  {
+    "slug": "lazada-marketplace-ease-mode-mp-api-reference",
+    "title": "Lazada Marketplace Ease Mode \uff08MP\u5546\u5bb6\u534a\u6258\u7ba1\uff09API Reference",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121534,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121534&nodeId=10544",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-marketplace-ease-mode-mp-api-reference.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-marketplace-ease-mode-mp-api-reference.json"
+  },
+  {
+    "slug": "lazada-isv-erp",
+    "title": "Lazada\u5927\u5305\u63fd\u6536ISV_ERP\u63a5\u53e3",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120191,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120191&nodeId=10544",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-isv-erp.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/lazada-isv-erp.json"
+  },
+  {
+    "slug": "oms-integrate-with-lazada",
+    "title": "OMS integrate with Lazada",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121126,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121126&nodeId=10544",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/oms-integrate-with-lazada.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/oms-integrate-with-lazada.json"
+  },
+  {
+    "slug": "fulfillment-orders",
+    "title": "Fulfillment orders",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121328,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121328&nodeId=29616",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/fulfillment-orders.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/fulfillment-orders.json"
+  },
+  {
+    "slug": "get-order",
+    "title": "Get Order",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121327,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121327&nodeId=29616",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/get-order.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/get-order.json"
+  },
+  {
+    "slug": "new-fulfillment-api-announcement",
+    "title": "New Fulfillment API Announcement",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120985,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120985&nodeId=30764",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/new-fulfillment-api-announcement/new-fulfillment-api-announcement.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/new-fulfillment-api-announcement/new-fulfillment-api-announcement.json"
+  },
+  {
+    "slug": "new-fulfillment-api-details",
+    "title": "New Fulfillment API  Details",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120984,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120984&nodeId=30764",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/new-fulfillment-api-announcement/new-fulfillment-api-details.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/new-fulfillment-api-announcement/new-fulfillment-api-details.json"
+  },
+  {
+    "slug": "order-cancellation",
+    "title": "Order Cancellation",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121329,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121329&nodeId=29616",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/order-cancellation.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/order-cancellation.json"
+  },
+  {
+    "slug": "order-status-flow",
+    "title": "Order Status Flow",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120167,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120167&nodeId=29616",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/order-status-flow.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/order-status-flow.json"
+  },
+  {
+    "slug": "payment-method-options",
+    "title": "Payment method options",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121753,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121753&nodeId=29616",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/payment-method-options.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/order-operation/payment-method-options.json"
+  },
+  {
+    "slug": "custom-sales-attributes",
+    "title": "Custom sales attributes",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120259,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120259&nodeId=29614",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/custom-sales-attributes.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/custom-sales-attributes.json"
+  },
+  {
+    "slug": "json-format-demo",
+    "title": "JSON format DEMO",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120759,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120759&nodeId=29614",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/json-format-demo.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/json-format-demo.json"
+  },
+  {
+    "slug": "product-api-overview",
+    "title": "Product API Overview",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120945,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120945&nodeId=29614",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-api-overview.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-api-overview.json"
+  },
+  {
+    "slug": "inventory-calculation-logic",
+    "title": "Inventory calculation logic",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121233,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121233&nodeId=42713",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-inventory-management/inventory-calculation-logic.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-inventory-management/inventory-calculation-logic.json"
+  },
+  {
+    "slug": "inventory-management-api",
+    "title": "Inventory Management API",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121234,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121234&nodeId=42713",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-inventory-management/inventory-management-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-inventory-management/inventory-management-api.json"
+  },
+  {
+    "slug": "create-a-product",
+    "title": "Create a product",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120949,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120949&nodeId=30715",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/create-a-product.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/create-a-product.json"
+  },
+  {
+    "slug": "createglobalproduct-payload-and-parameter-description",
+    "title": "CreateGlobalProduct payload and parameter description",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121751,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121751&nodeId=30715",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/createglobalproduct-payload-and-parameter-description.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/createglobalproduct-payload-and-parameter-description.json"
+  },
+  {
+    "slug": "create-update-product-q-a",
+    "title": "Create/Update Product Q&A",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121320,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121320&nodeId=30715",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/create-update-product-q-a.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/create-update-product-q-a.json"
+  },
+  {
+    "slug": "get-category-attributes",
+    "title": "Get category attributes",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120946,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120946&nodeId=30715",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/get-category-attributes.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/get-category-attributes.json"
+  },
+  {
+    "slug": "image-upload",
+    "title": "Image Upload",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120947,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120947&nodeId=30715",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/image-upload.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/image-upload.json"
+  },
+  {
+    "slug": "update-a-product",
+    "title": "Update a product",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121228,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121228&nodeId=30715",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/update-a-product.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/update-a-product.json"
+  },
+  {
+    "slug": "video-upload",
+    "title": "Video Upload",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 120948,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120948&nodeId=30715",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/video-upload.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/product-operation/product-management/video-upload.json"
+  },
+  {
+    "slug": "reverse-order-overview",
+    "title": "Reverse Order Overview",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121370,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121370&nodeId=45496",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/reverse-order/reverse-order-overview.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/reverse-order/reverse-order-overview.json"
+  },
+  {
+    "slug": "reverse-order-processing-process",
+    "title": "Reverse order processing process",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121372,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121372&nodeId=45496",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/reverse-order/reverse-order-processing-process.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/reverse-order/reverse-order-processing-process.json"
+  },
+  {
+    "slug": "reverse-order-status-flow-chart",
+    "title": "Reverse order status flow chart",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121371,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121371&nodeId=45496",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/reverse-order/reverse-order-status-flow-chart.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/reverse-order/reverse-order-status-flow-chart.json"
+  },
+  {
+    "slug": "seller-notification",
+    "title": "Seller Notification",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121735,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121735&nodeId=10544",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/seller-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/seller-notification.json"
+  },
+  {
+    "slug": "lazada-sponsored-solutions-lss-open-api-introduction",
+    "title": "Lazada Sponsored Solutions (LSS) Open API Introduction",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121250,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121250&nodeId=43225",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/sponsored-solutions/lazada-sponsored-solutions-lss-open-api-introduction.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/sponsored-solutions/lazada-sponsored-solutions-lss-open-api-introduction.json"
+  },
+  {
+    "slug": "sponsored-solutions-api-detail",
+    "title": "Sponsored Solutions API Detail",
+    "category": "api-best-practice",
+    "language": "en",
+    "document_id": 121355,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121355&nodeId=43225",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/sponsored-solutions/sponsored-solutions-api-detail.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-best-practice/sponsored-solutions/sponsored-solutions-api-detail.json"
+  },
+  {
+    "slug": "finance-api",
+    "title": "Finance API",
+    "category": "api-reference",
+    "language": "en",
+    "document_id": 108249,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108249&nodeId=10556",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/finance-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/finance-api.json"
+  },
+  {
+    "slug": "fulfillment-api",
+    "title": "Fulfillment API",
+    "category": "api-reference",
+    "language": "en",
+    "document_id": 121473,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121473&nodeId=10556",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/fulfillment-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/fulfillment-api.json"
+  },
+  {
+    "slug": "logistics-api",
+    "title": "Logistics API",
+    "category": "api-reference",
+    "language": "en",
+    "document_id": 108250,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108250&nodeId=10556",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/logistics-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/logistics-api.json"
+  },
+  {
+    "slug": "order-api",
+    "title": "Order API",
+    "category": "api-reference",
+    "language": "en",
+    "document_id": 108147,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108147&nodeId=10556",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/order-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/order-api.json"
+  },
+  {
+    "slug": "product-api",
+    "title": "Product API",
+    "category": "api-reference",
+    "language": "en",
+    "document_id": 108146,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108146&nodeId=10556",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/product-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/product-api.json"
+  },
+  {
+    "slug": "seller-api",
+    "title": "Seller API",
+    "category": "api-reference",
+    "language": "en",
+    "document_id": 108148,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108148&nodeId=10556",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/seller-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/seller-api.json"
+  },
+  {
+    "slug": "system-api",
+    "title": "System API",
+    "category": "api-reference",
+    "language": "en",
+    "document_id": 108520,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108520&nodeId=10556",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/system-api.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/api-reference/system-api.json"
+  },
+  {
+    "slug": "api-sample-codes",
+    "title": "API sample codes",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108137,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108137&nodeId=10397",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/api-sample-codes.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/api-sample-codes.json"
+  },
+  {
+    "slug": "api-calling-process",
+    "title": "API calling process",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108136,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108136&nodeId=10400",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/api-calling-process.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/api-calling-process.json"
+  },
+  {
+    "slug": "api-endpoint-urls",
+    "title": "API endpoint URLs",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108065,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108065&nodeId=10400",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/api-endpoint-urls.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/api-endpoint-urls.json"
+  },
+  {
+    "slug": "calling-parameters",
+    "title": "Calling parameters",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108067,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108067&nodeId=10400",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/calling-parameters.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/calling-parameters.json"
+  },
+  {
+    "slug": "http-request-sample",
+    "title": "HTTP request sample",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108069,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108069&nodeId=10400",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/http-request-sample.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/http-request-sample.json"
+  },
+  {
+    "slug": "requests-and-responses",
+    "title": "Requests and responses",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108066,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108066&nodeId=10400",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/requests-and-responses.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/requests-and-responses.json"
+  },
+  {
+    "slug": "signature-algorithm",
+    "title": "Signature algorithm",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108068,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108068&nodeId=10400",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/signature-algorithm.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-http-requests/signature-algorithm.json"
+  },
+  {
+    "slug": "call-api-with-official-sdk",
+    "title": "Call API with official SDK",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108064,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108064&nodeId=10397",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-official-sdk.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/call-api-with-official-sdk.json"
+  },
+  {
+    "slug": "error-messages",
+    "title": "Error messages",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108138,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108138&nodeId=10397",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/error-messages.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/error-messages.json"
+  },
+  {
+    "slug": "reconfigure-existing-app-to-lazada-open-platform",
+    "title": "Reconfigure Existing APP to Lazada Open Platform",
+    "category": "developers-guide",
+    "language": "en",
+    "document_id": 108139,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108139&nodeId=10397",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/reconfigure-existing-app-to-lazada-open-platform.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/developers-guide/reconfigure-existing-app-to-lazada-open-platform.json"
+  },
+  {
+    "slug": "api-related-questions",
+    "title": "API related questions",
+    "category": "faq",
+    "language": "en",
+    "document_id": 108150,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108150&nodeId=10551",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/api-related-questions.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/api-related-questions.json"
+  },
+  {
+    "slug": "general-questions",
+    "title": "General questions",
+    "category": "faq",
+    "language": "en",
+    "document_id": 108149,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108149&nodeId=10551",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/general-questions.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/general-questions.json"
+  },
+  {
+    "slug": "glossary",
+    "title": "Glossary",
+    "category": "faq",
+    "language": "en",
+    "document_id": 108151,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108151&nodeId=10551",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/glossary.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/glossary.json"
+  },
+  {
+    "slug": "training-materials",
+    "title": "Training materials",
+    "category": "faq",
+    "language": "en",
+    "document_id": 108367,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108367&nodeId=10551",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/training-materials.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/faq/training-materials.json"
+  },
+  {
+    "slug": "lazop-2-0-overview",
+    "title": "LazOP 2.0 Overview",
+    "category": "overview",
+    "language": "en",
+    "document_id": 120248,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120248&nodeId=10392",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/overview/lazop-2-0-overview.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/overview/lazop-2-0-overview.json"
+  },
+  {
+    "slug": "lazada-push-mechanism",
+    "title": "Lazada Push Mechanism",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120168,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120168&nodeId=29524",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/lazada-push-mechanism.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/lazada-push-mechanism.json"
+  },
+  {
+    "slug": "webhook-api-authorization-token-expiration-alert",
+    "title": "Webhook API Authorization Token Expiration Alert",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120208,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120208&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-authorization-token-expiration-alert.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-authorization-token-expiration-alert.json"
+  },
+  {
+    "slug": "webhook-api-fulfillment-order-update-notification",
+    "title": "Webhook API Fulfillment Order Update Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120211,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120211&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-fulfillment-order-update-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-fulfillment-order-update-notification.json"
+  },
+  {
+    "slug": "webhook-api-im-send-message-notifications",
+    "title": "Webhook API IM Send Message Notifications",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 121553,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121553&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-im-send-message-notifications.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-im-send-message-notifications.json"
+  },
+  {
+    "slug": "webhook-api-im-session-update-notifications",
+    "title": "Webhook API IM Session Update Notifications",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 121554,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121554&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-im-session-update-notifications.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-im-session-update-notifications.json"
+  },
+  {
+    "slug": "webhook-api-jit-pickup-order-notification",
+    "title": "Webhook API JIT Pickup Order Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 121816,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121816&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-jit-pickup-order-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-jit-pickup-order-notification.json"
+  },
+  {
+    "slug": "webhook-api-jit-po-status-update-notification",
+    "title": "Webhook API JIT PO Status Update Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 121531,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121531&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-jit-po-status-update-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-jit-po-status-update-notification.json"
+  },
+  {
+    "slug": "webhook-api-product-category-update-notification",
+    "title": "Webhook API Product Category Update Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120209,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120209&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-category-update-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-category-update-notification.json"
+  },
+  {
+    "slug": "webhook-api-product-quality-control-notification",
+    "title": "Webhook API Product Quality Control Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120205,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120205&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-quality-control-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-quality-control-notification.json"
+  },
+  {
+    "slug": "webhook-api-product-review-notification",
+    "title": "Webhook API Product Review Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120982,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120982&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-review-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-review-notification.json"
+  },
+  {
+    "slug": "webhook-api-product-update-notificaton",
+    "title": "Webhook API Product Update Notificaton",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120197,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120197&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-update-notificaton.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-product-update-notificaton.json"
+  },
+  {
+    "slug": "webhook-api-promotion",
+    "title": "Webhook API Promotion",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120255,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120255&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-promotion.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-promotion.json"
+  },
+  {
+    "slug": "webhook-api-reverse-order",
+    "title": "Webhook API Reverse Order",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120232,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120232&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-reverse-order.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-reverse-order.json"
+  },
+  {
+    "slug": "webhook-api-seller-status-update-notification",
+    "title": "Webhook API Seller Status Update Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120210,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120210&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-seller-status-update-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-seller-status-update-notification.json"
+  },
+  {
+    "slug": "webhook-api-shallow-stock-notification",
+    "title": "Webhook API Shallow Stock Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120206,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120206&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-shallow-stock-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-shallow-stock-notification.json"
+  },
+  {
+    "slug": "webhook-api-short-video-state-update-notification",
+    "title": "Webhook API Short Video State Update Notification",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120207,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120207&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-short-video-state-update-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-short-video-state-update-notification.json"
+  },
+  {
+    "slug": "webhook-api-trade-order-notifications",
+    "title": "Webhook API Trade Order Notifications",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120196,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120196&nodeId=29537",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-trade-order-notifications.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook-apis/webhook-api-trade-order-notifications.json"
+  },
+  {
+    "slug": "webhook",
+    "title": "\u6d88\u606f\u63a8\u9001\uff08Webhook\uff09",
+    "category": "push-mechanismwebhook-application",
+    "language": "en",
+    "document_id": 120164,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120164&nodeId=29524",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/push-mechanismwebhook-application/webhook.json"
+  },
+  {
+    "slug": "become-a-developer",
+    "title": "Become a developer",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108001,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108001&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/become-a-developer.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/become-a-developer.json"
+  },
+  {
+    "slug": "configure-seller-authorization",
+    "title": "Configure seller authorization",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108056,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108056&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/configure-seller-authorization.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/configure-seller-authorization.json"
+  },
+  {
+    "slug": "getting-started",
+    "title": "Getting started",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108130,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108130&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/getting-started.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/getting-started.json"
+  },
+  {
+    "slug": "lazada",
+    "title": "Lazada\u670d\u52a1\u5e02\u573a\u5165\u9a7b\u64cd\u4f5c\u6307\u5f15",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 121773,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121773&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/lazada.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/lazada.json"
+  },
+  {
+    "slug": "redmart-api-interface-guide",
+    "title": "Redmart api interface guide",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 121567,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121567&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/redmart-api-interface-guide.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/redmart-api-interface-guide.json"
+  },
+  {
+    "slug": "register-an-application",
+    "title": "Register an application",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108002,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108002&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/register-an-application.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/register-an-application.json"
+  },
+  {
+    "slug": "registration-and-authorization-process-for-newly-registered-isvs",
+    "title": "Registration and Authorization process for newly registered ISVs",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 121098,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121098&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/registration-and-authorization-process-for-newly-registered-isvs.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/registration-and-authorization-process-for-newly-registered-isvs.json"
+  },
+  {
+    "slug": "request-api-permission",
+    "title": "Request API permission",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108131,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108131&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/request-api-permission.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/request-api-permission.json"
+  },
+  {
+    "slug": "retrieve-app-key-and-app-secret",
+    "title": "Retrieve App Key and App Secret",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108055,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108055&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/retrieve-app-key-and-app-secret.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/retrieve-app-key-and-app-secret.json"
+  },
+  {
+    "slug": "seller-authorization-introduction",
+    "title": "Seller authorization introduction",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108260,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108260&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/seller-authorization-introduction.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/seller-authorization-introduction.json"
+  },
+  {
+    "slug": "service-market-entry-operation-guidelines",
+    "title": "Service market entry operation guidelines",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 121772,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121772&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/service-market-entry-operation-guidelines.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/service-market-entry-operation-guidelines.json"
+  },
+  {
+    "slug": "start-development",
+    "title": "Start development",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 108132,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108132&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/start-development.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/start-development.json"
+  },
+  {
+    "slug": "the-process-of-creating-test-order",
+    "title": "The Process of Creating Test Order",
+    "category": "quick-start-guide",
+    "language": "en",
+    "document_id": 121061,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121061&nodeId=10533",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/the-process-of-creating-test-order.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/quick-start-guide/the-process-of-creating-test-order.json"
+  },
+  {
+    "slug": "lazada-partner-application-security-guidelines",
+    "title": "Lazada Partner Application Security Guidelines",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 118115,
+    "original_url": "https://open.lazada.com/doc/doc?docId=118115&nodeId=26148",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/lazada-partner-application-security-guidelines.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/lazada-partner-application-security-guidelines.json"
+  },
+  {
+    "slug": "reverse-api-system-signature",
+    "title": "Reverse API System Signature",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 121791,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121791&nodeId=26148",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/reverse-api-system-signature.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/reverse-api-system-signature.json"
+  },
+  {
+    "slug": "security-measures",
+    "title": "Security Measures",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 120738,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120738&nodeId=26148",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-measures.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-measures.json"
+  },
+  {
+    "slug": "order",
+    "title": "order",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 108077,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108077&nodeId=10728",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/abnormal-behavior-detection/api-reference/order.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/abnormal-behavior-detection/api-reference/order.json"
+  },
+  {
+    "slug": "access-to-sensitive-data",
+    "title": "Access to Sensitive Data",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 108231,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108231&nodeId=10717",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/access-to-sensitive-data.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/access-to-sensitive-data.json"
+  },
+  {
+    "slug": "api-reference",
+    "title": "API Reference",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 108326,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108326&nodeId=10720",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/account-security-service/api-reference.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/account-security-service/api-reference.json"
+  },
+  {
+    "slug": "guide",
+    "title": "\u6570\u636e\u6d41\u56fe",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 109295,
+    "original_url": "https://open.lazada.com/doc/doc?docId=109295&nodeId=12292",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/chinese-documentation/guide.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/chinese-documentation/guide.json"
+  },
+  {
+    "slug": "data-flow-diagram",
+    "title": "Data Flow Diagram",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 108521,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108521&nodeId=10717",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/data-flow-diagram.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/data-flow-diagram.json"
+  },
+  {
+    "slug": "introduction-to-datamoat",
+    "title": "Introduction to DataMoat",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 108070,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108070&nodeId=10717",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/introduction-to-datamoat.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/introduction-to-datamoat.json"
+  },
+  {
+    "slug": "security-testing-standard",
+    "title": "Security Testing Standard",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 108573,
+    "original_url": "https://open.lazada.com/doc/doc?docId=108573&nodeId=10717",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/security-testing-standard.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/lazada-datamoat-documentation/security-testing-standard.json"
+  },
+  {
+    "slug": "security-review-process-overview",
+    "title": "Security Review Process Overview",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 118077,
+    "original_url": "https://open.lazada.com/doc/doc?docId=118077&nodeId=26149",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/security-review-process-overview.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/security-review-process-overview.json"
+  },
+  {
+    "slug": "step-1-provide-app-information",
+    "title": "Step 1 Provide App Information",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 118065,
+    "original_url": "https://open.lazada.com/doc/doc?docId=118065&nodeId=26149",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-1-provide-app-information.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-1-provide-app-information.json"
+  },
+  {
+    "slug": "step-2-lazop-review-application-information",
+    "title": "Step 2 LazOP Review Application Information",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 118071,
+    "original_url": "https://open.lazada.com/doc/doc?docId=118071&nodeId=26149",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-2-lazop-review-application-information.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-2-lazop-review-application-information.json"
+  },
+  {
+    "slug": "step-3-1-security-requirements",
+    "title": "Step 3.1 Security Requirements",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 118074,
+    "original_url": "https://open.lazada.com/doc/doc?docId=118074&nodeId=26149",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-3-1-security-requirements.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-3-1-security-requirements.json"
+  },
+  {
+    "slug": "step-3-2-penetration-test",
+    "title": "Step 3.2 Penetration Test",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 118075,
+    "original_url": "https://open.lazada.com/doc/doc?docId=118075&nodeId=26149",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-3-2-penetration-test.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-3-2-penetration-test.json"
+  },
+  {
+    "slug": "step-4-under-verification",
+    "title": "Step 4 Under Verification",
+    "category": "security-center",
+    "language": "en",
+    "document_id": 118076,
+    "original_url": "https://open.lazada.com/doc/doc?docId=118076&nodeId=26149",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-4-under-verification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/security-center/security-review-process/step-4-under-verification.json"
+  },
+  {
+    "slug": "authorization-notification",
+    "title": "Authorization Notification",
+    "category": "terms-and-agreement",
+    "language": "en",
+    "document_id": 109088,
+    "original_url": "https://open.lazada.com/doc/doc?docId=109088&nodeId=10709",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/authorization-notification.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/authorization-notification.json"
+  },
+  {
+    "slug": "lazada-open-platform-developer-agreement",
+    "title": "LAZADA OPEN PLATFORM DEVELOPER AGREEMENT",
+    "category": "terms-and-agreement",
+    "language": "en",
+    "document_id": 120731,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120731&nodeId=10709",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/lazada-open-platform-developer-agreement.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/lazada-open-platform-developer-agreement.json"
+  },
+  {
+    "slug": "platform-rules-and-penalty-measures",
+    "title": "Platform Rules and Penalty Measures",
+    "category": "terms-and-agreement",
+    "language": "en",
+    "document_id": 120730,
+    "original_url": "https://open.lazada.com/doc/doc?docId=120730&nodeId=10709",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/platform-rules-and-penalty-measures.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/platform-rules-and-penalty-measures.json"
+  },
+  {
+    "slug": "singapore-seller-api-connection-eligibility",
+    "title": "Singapore Seller API Connection Eligibility",
+    "category": "terms-and-agreement",
+    "language": "en",
+    "document_id": 121104,
+    "original_url": "https://open.lazada.com/doc/doc?docId=121104&nodeId=10709",
+    "markdown_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/singapore-seller-api-connection-eligibility.md",
+    "json_path": "/home/lazykern/lab/ecommerce-api-docs/data/processed/lazada/guides/terms-and-agreement/singapore-seller-api-connection-eligibility.json"
+  }
+]

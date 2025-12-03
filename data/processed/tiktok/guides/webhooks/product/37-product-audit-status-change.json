@@ -1,0 +1,19 @@
+{
+  "title": "(37) Product audit status change",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "67b5c6cba42623049abe5062",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/67b5c6cba42623049abe5062",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/37-product-audit-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/37-product-audit-status-change.md",
+  "content_length": 3395,
+  "update_time": "1751450137",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

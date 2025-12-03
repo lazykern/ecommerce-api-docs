@@ -1,0 +1,19 @@
+{
+  "title": "(21) Inbound FBT order status change",
+  "category": "webhooks/fulfilled-by-tiktok",
+  "doc_type": 2,
+  "document_id": "6708f866a88d1103246fed6a",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6708f866a88d1103246fed6a",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/fulfilled-by-tiktok/21-inbound-fbt-order-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/fulfilled-by-tiktok/21-inbound-fbt-order-status-change.md",
+  "content_length": 1594,
+  "update_time": "1751450066",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

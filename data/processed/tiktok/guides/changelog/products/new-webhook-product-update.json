@@ -1,0 +1,19 @@
+{
+  "title": "New webhook: Product update",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "65bdc016ae1e2602d9a30922",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65bdc016ae1e2602d9a30922",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/new-webhook-product-update.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/new-webhook-product-update.md",
+  "content_length": 1266,
+  "update_time": "1709236096",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

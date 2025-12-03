@@ -1,0 +1,24 @@
+# Relevant APIs
+
+* If you want to get order level settlement transactions
+   * Get daily basis statement information from [Get Statements](get-statements), including statement ID
+   * Get order level settlement detail information from [Get Statement Transactions](get-transactions-by-statement) using statement ID get from [Get Statements](get-statements)
+* If you want to get SKU level settlement transactions
+   * Get daily basis statement information from [Get Statements](get-statements), including statement ID
+   * Get order level settlement detail information from [Get Statement Transactions](get-transactions-by-statement) using statement ID get from [Get Statements](get-statements), including order ID
+   * Get SKU level settlement detail information from [Get Order Statement Transactions](get-transactions-by-order) using order ID get from [Get Statement Transactions](get-transactions-by-statement)
+
+# App Features
+| **Use Case ID** <!-- width:100px --> | **Use Case Summary** <!-- width:350px --> | **Required** <!-- width:75px --> | **Tags** <!-- width:150px --> | **Scopes** |
+| --- | --- | --- | --- | --- |
+| [SHOP-CONN-SINGLE](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7256668359047202561) | The application **must** be able to connect one store from the platform to one shop in TikTok Shop. | Yes | * Shop Connections | * Shop Authorized Information(431812) <br> * Global Shop Information(431300) |
+| [SHOP-CONN-MULTI](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7256668359047202561) | The application may be able to connect one store from the platform to multiple shops in TikTok Shop. | No | * Shop Connections | * Shop Authorized Information(431812) <br> * Global Shop Information(431300) |
+| [SHOP-DISCON-SINGLE](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7418535282326341377) | The application **must** be able to disconnect one store from the platform to one shop in TikTok Shop. | Yes | * Shop Connections | * Shop Authorized Information(431812) <br> * Global Shop Information(431300) |
+| [SHOP-MAN-MULTI](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7256668359047251713) | The application **must** be able to manage shop connections by adding new ones or removing existing ones. | Yes | * Shop Connections | * Shop Authorized Information(431812) <br> * Global Shop Information(431300) |
+| [SHOP-MAN-WHOOK](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7256668359047251713) | The application **must** be able to use the Upcoming Authorization Expiration webhook to notify sellers to re-authorize their shop connection. | Yes | * Shop Connections | * Shop Authorized Information(431812) <br> * Global Shop Information(431300) |
+| [SHOP-MAN-CARRIER](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7256668359047251713) | The application **must** be able to map shipping carriers on the platform to the corresponding ones on TikTok Shop. | Yes | * Shop Connections | * Shop Authorized Information(431812) <br> * Global Shop Information(431300) |
+| [FIN-GET-PAYMENT](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7447787518869374721) | The accounting & finance application **must** be able to retrieve seller payment data on TikTok Shop to reconcile payments with the seller's bank account. | Yes | * Finance | * Finance Information(430596) |
+| [FIN-GET-STATEMENT](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7447787518869374721) | The accounting & finance application **must** be able to retrieve a list of statement records of a specified date range, which is settled on a daily basis. | Yes | * Finance | * Finance Information(430596) |
+| [FIN-GET-WITHDRAWALS](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7447787518869374721) | The accounting & finance application may be able to retrieve the seller's withdrawal record to make sure it's aligned with the payment record. | No | * Finance | * Finance Information(430596) |
+| [FIN-TXGET-STATEMENT](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7452278253659948817) | The accounting & finance application **must** be able to retrieve a transaction list based on statement_id to get all the orders involved in the statement. | Yes | * Finance | * Finance Information(430596) |
+| [FIN-TXGET-ORDER](https://partner.tiktokshop.com/openlearn/guide/usecase?parent_id=7452278253659948817) | The accounting & finance application **must** be able to retrieve a list of transactions associated with an order specified by the order ID, including SKU level transaction details. | Yes | * Finance | * Finance Information(430596) |

@@ -1,0 +1,27 @@
+# Summary
+TikTok Shop is rolling out new APIs to improve product information quality. Please incorporate these changes if you can to help your customers gain more traction on TikTok Shop.
+# List of APIs
+
+* A new SEO Recommendation API can be used to optimize search within the TikTok application and will improve visibility for products.
+* A new Product Listing Recommendation API enables sellers to leverage AI-generated titles and descriptions to improve richness and readability. Titles with more than 40 characters are more likely to be prioritized by the algorithm.
+* A new Image Optimization API can be used to convert the main product image to have a white background. When the product has a white background, the Click-Through Rate (CTR) increases, which contributes to better product performance.
+
+## SEO Recommendation API
+Product titles can now be optimized via API by adding the keyword suggestions returned to the product title. This will improve visibility of products in search results. Give this API your `product_id` (up to 20 at a time) and the response will include keywords that can be displayed in your application's UI, and allowing the sellers to pick and update their product titles. Once the seller has taken these steps, you can call the Partial Edit Product API to update the product titles on TTS.
+| <span style="background-color: rgb(242, 243, 245)">API/Webhook name</span> | <span style="background-color: rgb(242, 243, 245)">Type</span> | <span style="background-color: rgb(242, 243, 245)">Description</span> |
+| --- | --- | --- |
+| [Get Products SEO Words](get-products-seo-words) | RESTful API | Use this API to get product search engine optimization (SEO) suggestions, specifically for a product title. This will help improve product exposure and gross merchandise volume (GMV). |
+| [Partial Edit Product](edit-product) | RESTful API | This interface can be used to partially modify product information. This interface allow Local to Local sellers to edit some part of fields of product information. First level field not filled in means to not edit. If first level fields are not empty, subfields will be overridden. Field filled in means to update by content filled in. |
+## Product Listing Recommendation API
+Similar to the SEO Recommendation API above, you can call the Product Listing Recommendation API and give up to 20 `product_id` to get AI generated content for title and description which can be displayed to the seller. The seller should be able to include this content into their product information if they would like to. Once finalized, you may call the Partial Edit Product API to update the product with the selected changes.
+| <span style="background-color: rgb(242, 243, 245)">API/Webhook name</span> | <span style="background-color: rgb(242, 243, 245)">Type</span> | <span style="background-color: rgb(242, 243, 245)">Description</span> |
+| --- | --- | --- |
+| [Get Recommended Product Titles and Description](get-recommended-product-title-and-description) | RESTful API | Use this API to optimize product information by leveraging AI-generated content (AIGC). This API will provide recommended product titles and descriptions based on product ID. |
+| [Partial Edit Product](edit-product) | RESTful API | This interface can be used to partially modify product information. This interface allow Local to Local sellers to edit some part of fields of product information. First level field not filled in means to not edit. If first level fields are not empty, subfields will be overridden. Field filled in means to update by content filled in. |
+## Optimize Image API
+You can provide up to 200 image URLs to this API and it will convert them all to have a white background. It processes tasks asynchronously using algorithms to convert images to a white background and will return results for each task. All images are processed simultaneously. The first call to this API will add the conversion job to the asynchronous queue, and subsequent calls with the same parameters will return the status of the job.
+If the status is "PROCESSING", that means it has been added to the queue and will be converted. If the status is "SUCCESS", then the task is completed successfully and if it says "IGNORE", then we deem that the given image has a white background.
+| <span style="background-color: rgb(242, 243, 245)">API/Webhook name</span> | <span style="background-color: rgb(242, 243, 245)">Type</span> | <span style="background-color: rgb(242, 243, 245)">Description</span> |
+| --- | --- | --- |
+| [Upload Product Image](upload-product-image) | RESTful API | Upload Image API interface is used to upload local images to the Tiktok Shop. The uploaded images will be used for creating product main images, SKU images, size charts, qualification images, etc. Usage requirements - The image format must be JPEG, PNG, or JPG. - The image size cannot exceed 5MB. |
+| [Create Product](create-product) | RESTful API | Create Product API is used to list products for local shops. If you need to manage product listings for cross-border shops, use **Create Global Product** API. The process of creating a product is as follows, and you can refer to the guide document for more detailed instructions. |

@@ -1,0 +1,19 @@
+{
+  "title": "(27) Inventory status change",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "672995e79ba2a002fe5dc92e",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/672995e79ba2a002fe5dc92e",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/27-inventory-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/27-inventory-status-change.md",
+  "content_length": 3250,
+  "update_time": "1751450133",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

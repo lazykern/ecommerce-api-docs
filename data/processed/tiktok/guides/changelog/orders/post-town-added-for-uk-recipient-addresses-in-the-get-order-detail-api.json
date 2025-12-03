@@ -1,0 +1,19 @@
+{
+  "title": "Post town added for UK recipient addresses in the Get Order Detail API",
+  "category": "changelog/orders",
+  "doc_type": 3,
+  "document_id": "68704c5d6e6e7404973b5cea",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/68704c5d6e6e7404973b5cea",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/orders/post-town-added-for-uk-recipient-addresses-in-the-get-order-detail-api.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/orders/post-town-added-for-uk-recipient-addresses-in-the-get-order-detail-api.md",
+  "content_length": 764,
+  "update_time": "1752190095",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

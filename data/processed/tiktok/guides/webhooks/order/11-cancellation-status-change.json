@@ -1,0 +1,19 @@
+{
+  "title": "(11) Cancellation status change",
+  "category": "webhooks/order",
+  "doc_type": 2,
+  "document_id": "65030150746462028285f657",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65030150746462028285f657",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/order/11-cancellation-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/order/11-cancellation-status-change.md",
+  "content_length": 1645,
+  "update_time": "1751450095",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

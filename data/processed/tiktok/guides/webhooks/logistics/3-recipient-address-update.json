@@ -1,0 +1,19 @@
+{
+  "title": "(3) Recipient address update",
+  "category": "webhooks/logistics",
+  "doc_type": 2,
+  "document_id": "650301af5a12ff0294ea3bf9",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/650301af5a12ff0294ea3bf9",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/logistics/3-recipient-address-update.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/logistics/3-recipient-address-update.md",
+  "content_length": 613,
+  "update_time": "1751450083",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Recipient Address Update",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

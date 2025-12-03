@@ -1,0 +1,24 @@
+{
+  "title": "SEA market: Product category expansion",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "68a63092c4b96f0496bade48",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/68a63092c4b96f0496bade48",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/sea-market-product-category-expansion.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/sea-market-product-category-expansion.md",
+  "content_length": 3796,
+  "update_time": "1755723528",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

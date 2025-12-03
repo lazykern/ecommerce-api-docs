@@ -1,0 +1,19 @@
+{
+  "title": "(39) Activity status change",
+  "category": "webhooks/promotion",
+  "doc_type": 2,
+  "document_id": "67ff82ce550a99048d938b2e",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/67ff82ce550a99048d938b2e",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/promotion/39-activity-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/promotion/39-activity-status-change.md",
+  "content_length": 2365,
+  "update_time": "1761251926",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

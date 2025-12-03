@@ -1,0 +1,19 @@
+{
+  "title": "New property added to Recommend Category API to indicate whether sellers can use the recommended category",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "654b225e080aee02c31ac1f8",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/654b225e080aee02c31ac1f8",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/new-property-added-to-recommend-category-api-to-indicate-whether-sellers-can-use-the-recommended-category.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/new-property-added-to-recommend-category-api-to-indicate-whether-sellers-can-use-the-recommended-category.md",
+  "content_length": 1213,
+  "update_time": "1699422953",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

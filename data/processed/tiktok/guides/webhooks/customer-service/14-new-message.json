@@ -1,0 +1,19 @@
+{
+  "title": "(14) New message",
+  "category": "webhooks/customer-service",
+  "doc_type": 2,
+  "document_id": "66143486ef8a1202dc323258",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/66143486ef8a1202dc323258",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/customer-service/14-new-message.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/customer-service/14-new-message.md",
+  "content_length": 3502,
+  "update_time": "1751450048",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

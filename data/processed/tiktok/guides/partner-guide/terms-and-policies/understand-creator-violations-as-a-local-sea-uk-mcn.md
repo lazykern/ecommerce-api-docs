@@ -1,0 +1,12 @@
+# Understand Creator Violations as a Local SEA/UK MCN
+At TikTok Shop, we value safety, diversity, inclusiveness, and authenticity. Our platform policies and guidelines work to ensure customer safety and a shopping experience that all users can have confidence in.
+As an MCN who manages TikTok Shop creators, you are a valuable partner in ensuring customers have a positive and trustworthy shopping experience. Creators under your management should comply with our TikTok Shop Content Guidelines and Creator Performance Evaluation Guidelines. Under our Creator Milestone Enforcement System, their account health is monitored through the issuance of violation points based on the severity and impact of the violation. Enforcement actions are taken against the creator account when the creator reaches certain violation point milestones. You can refer to the Creator Account Standing and Promotion Quality Points pages within creator's accounts to view their performance.
+MCNs with more than 10 creators with severe* content violations in a 90 day period may be subject to further review under section 10.5 of the Violation Management Regulations for TikTok Shop Partners. The outcome of the review may lead to corrective actions against the MCN including warnings, limiting available services, deducting any commissions and fees derived from violations, or partner termination. TikTok Shop also reserves the right to enforce penalties at any point due to errant behavior.
+**Including reproduced content, underage promotional content, promoting prohibited products.*
+If you believe that an enforcement action was taken against one of your creators in error, please assist or instruct your creator to file an appeal via the appeal option located within the issued violation ticket in the creator's account.
+For more information on creator violations, please refer to the links below:
+
+* [TikTok Shop Content Guidelines](https://seller-sg.tiktok.com/university/essay?knowledge_id=7651420422014721)
+* [TikTok Shop Creator Performance Evaluation Guidelines](https://seller-sg.tiktok.com/university/essay?knowledge_id=7654182014748418)
+* [Appeal Guidelines for Creators](https://seller-sg.tiktok.com/university/essay?knowledge_id=5870231491282689)
+* [FAQ: What is Reproduced Content?](https://seller-sg.tiktok.com/university/essay?knowledge_id=7651420422211329)

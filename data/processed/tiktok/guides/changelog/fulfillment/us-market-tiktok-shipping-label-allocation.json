@@ -1,0 +1,24 @@
+{
+  "title": "US market: TikTok Shipping label allocation",
+  "category": "changelog/fulfillment",
+  "doc_type": 3,
+  "document_id": "682e40f58d17bd04a10a1d96",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/682e40f58d17bd04a10a1d96",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/fulfillment/us-market-tiktok-shipping-label-allocation.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/fulfillment/us-market-tiktok-shipping-label-allocation.md",
+  "content_length": 1182,
+  "update_time": "1748465728",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "New endpoint: Listing schema",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "65bc5cf0e1a05b02db89d1a1",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65bc5cf0e1a05b02db89d1a1",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/new-endpoint-listing-schema.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/new-endpoint-listing-schema.md",
+  "content_length": 1103,
+  "update_time": "1706844061",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

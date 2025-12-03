@@ -1,0 +1,19 @@
+{
+  "title": "(23) Goods match",
+  "category": "webhooks/fulfilled-by-tiktok",
+  "doc_type": 2,
+  "document_id": "6708f86aed6fab0308fa780e",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6708f86aed6fab0308fa780e",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/fulfilled-by-tiktok/23-goods-match.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/fulfilled-by-tiktok/23-goods-match.md",
+  "content_length": 1849,
+  "update_time": "1751450073",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

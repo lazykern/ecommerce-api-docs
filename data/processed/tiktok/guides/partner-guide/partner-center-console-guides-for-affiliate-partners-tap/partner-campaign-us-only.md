@@ -1,0 +1,190 @@
+# Overview
+This guide covers how agencies can use Partner Campaigns to create campaigns between Sellers and Creators. With this tool, Sellers can register and submit products to an agency's campaign, and determine the commission they would like to offer to the agency. Then the agency chooses the commission they would like to set for the managed or unmanaged Creators they've selected for the campaign. Agencies share product links with the Creators so they can add the products to their showcases and promote them. The commission splitting is then completed online via the tool.
+Partner Campaigns offers several benefits:
+
+* For Agencies: A new revenue stream that allows agencies to collect commission from Sellers by setting up affiliate campaigns on their behalf.
+* For Sellers: A way to outsource the creation of campaigns and selection of Creators to agencies. Sellers can apply to campaigns in the Partner Campaigns tab, described in more detail in the Seller experience section of this article.
+* For Creators: More opportunities to earn affiliate commissions from product lists curated by the agencies. Participating Creators do not have to be managed by the agency.
+
+**Recent Updates as of February 2024:**
+
+* Ability to edit Partner Campaign details
+* Easier ways to create Product Lists and set up commission rates with creators
+* Ability to add more products to an existing Product List
+* Ability to duplicate Product Lists
+* Ability to delete Product Lists
+* Ability to search for specific Product Lists
+* Ability to bookmark products and filter for bookmarked products
+* More performance data, including sample shipping status and viewing content made with samples
+
+# Onboarding Requirements
+Step 1: If you already have a TikTok Shop Partner Center account, skip to step 2. If this is your first time signing up for TikTok Shop Partner Center, press **Skip** in the Business Guide Page. Then, select **Content Management** as your Business category.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/f0e3b39a742e4b23b8a35a8343491acc~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/bf358c36da2e4c1e8ea8f2ee02a37a01~tplv-10qhjjqwgv-image.image)
+Step 2: If you already have a TikTok Shop Partner Center account, then navigate to **My account** and press **+ Category & market**.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/4d2cb3532b68451895bd7d7f029b5c95~tplv-10qhjjqwgv-image.image)
+Step 3: Select **Business category** and then select **Affiliate partner --> Seller and Scalable Creator Match-Up**.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/d59a09683e994929b870978d2c309b01~tplv-10qhjjqwgv-image.image)
+Step 4: In TTSPC, navigate to the **Finance** section, and then to **Payment accounts**, where you will be prompted to submit your US W-9 tax information. This can also be accessed via the **Tax information** tab.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/8f5bfaceab134f348c9e249a6e503bdd~tplv-10qhjjqwgv-image.image)
+Step 5: Complete the W-9 information, providing all the necessary information, such as name, contact information, EIN, and supporting documentation. At the bottom of the page, you can preview the completed W-9.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/dd91e2670510453ca5fcfbef34c95656~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/2bf80e5108064a7591b5be6023125ef7~tplv-10qhjjqwgv-image.image)
+Step 6: Once your Tax information is completed, return to the **Payment accounts** page and click on **Link bank account**. If you are unable to link your account at this time and the account status is listed as "under review," please try again in 24 hours.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/530a06ddb24a47e4a1cb1eb3c1d85dfb~tplv-10qhjjqwgv-image.image)
+# Signing up for Seller Initiated Partner Campaigns
+**Step 1**: Enter the **Partner Campaigns** page in TikTok Shop Partner Center.
+**Step 2**: Select "**Campaign marketplace**" to view "**Open**" and "**Invite only**" campaigns. Under the action column, you can review the campaign details to determine if you want to sign up.
+**Open** - Campaigns that sellers have created that any agency can review and join.
+**Invite only** - Campaigns that sellers created that your agency has specifically been invited to join.
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/1eee9ce5c83a439791f71c0922974fe3~tplv-10qhjjqwgv-image.image" width="2880px" /></div>
+
+**Step 3**: Review the **Campaign info**, **Products, Creator preferences** and select **Join** if you would like to participate in the Partner Campaign.
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/104ac8c8b36f487fa81b6f236a7aa325~tplv-10qhjjqwgv-image.image" width="2876px" /></div>
+
+**Step 4**: Share your contact information with the seller to be able to coordinate on the Partner Campaign through your preferred communication method. Only **Email** is required, **WhatsApp** and **** **Phone number **are optional. After you hit **Join,** you will see a welcome message and can view campaign details.
+| Share your contact info to join. | Welcome message |
+| --- | --- |
+| ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/d0c4f209de48465e8f80875647351015~tplv-10qhjjqwgv-image.image) | ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/132921173c1e474c8d53fdb1444e9ab6~tplv-10qhjjqwgv-image.image) |
+# Setting up Agency Initiated Campaigns
+Step 1: Enter the **Partner Campaigns** page in TTSPC. If you are unable to click on **Create Campaign**, return to the top of this document and ensure that you have completed the steps in the Onboarding Requirements section. Otherwise, click Create Campaign to get started.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/7bce95a9926c4719bee74941463f71b3~tplv-10qhjjqwgv-image.image)
+Step 2: Enter the relevant campaign information, such as the **Target market, Basic information, Seller information**, the **Commission rate requirement**, and your **Contact information**. In the Basic information section, describe in detail what this campaign is about and make it compelling for Sellers to want to participate. Then, set the registration period, which is the dates during which sellers can register products to the campaign, followed by the campaign period, which is teh dates during which creators can promote the products. The start date for the registration period and the campaign period must always be the same. Note that under the Seller information section, you can choose to make the campaign open to all Sellers or only select Sellers by inputting their Shop Codes (you can add up to 100 Shop Codes). Sellers can find Shop Codes in the Seller Center by going to My Account-> Seller Profile-> Seller Information. After you have filled in all the relevant details, click **Submit**.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/465e6038ae7947d5ae6f4202a035ca62~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/c99ab26a5f07464ea60a40ed35b927cb~tplv-10qhjjqwgv-image.image)
+Step 3: After clicking **Submit**, you will be taken to the main **Campaigns** page. All of your created campaigns will be listed here. To publish the campaign to Sellers, you ++must++ turn on the **Publish Toggle**. On this page, you can also create more campaigns by clicking **Create Campaign**.
+**Note:** If you are trying to work with "Local" or "All" sellers, please make sure to write your campaign details in English.
+# Approving/Rejecting Seller Products
+Step 1: After Sellers have registered products for your campaign, you can click into the **Campaign details** page to see all the registered products, the Shop information, the price of the product, the number of items sold, and the commission rates that Sellers are offering for this campaign. Note that this is the total commission rate that will be paid to you and the Creators in the campaign. Below that, you can also see how this commission rate compares to the commission rate the seller is offering for this product via a collaboration.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/86da21f478a94b18830a742d82026a49~tplv-10qhjjqwgv-image.image)
+Step 2: On the **Pending** tab, you must choose to **Approve** or **Reject** a Seller's product registration. Note that after you approve the registration, you will not be able to modify the commission rates set by the Seller. If you reject the registration, you will be asked if you would like to allow the Seller to re-register, and you will be able to give the Seller a reason for the initial rejection.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/205adef132ce4ce39daf03aff705330d~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/81363fe04fdc4281a605ed93289ae067~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/eac96cfebdb94015aedcebca5b191ace~tplv-10qhjjqwgv-image.image)
+Step 3: You can navigate to the **Approved** tab to see a list of approved products. Here, select products individually or in bulk, and then click on **Export links** to generate links to share with the Creators, which will allow them to view the products in the campaign and add them to their showcase. In order to export the links, you must first set a **commission rate** that you want to offer the Creators. It must be less than or equal to the campaign's total commission rate. For example, if the Seller is offering a campaign total commission rate of 30%, then the commission rate you offer to the participating Creators must be less than or equal to 30%. If you set the commission rate here as 15%, then that means Creators will receive 15% and you will receive the other 15% of the commission. On this page, you can also mark products using the **Bookmark button**, and then you can filter for **Marked products, **as well as filter by product name and category.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/a4a25e9217ca4d8fab23521e9c5ebdc4~tplv-10qhjjqwgv-image.image)
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/49a26b643d9545bdb24a1125b9a11ece~tplv-10qhjjqwgv-image.image" width="488px" /></div>
+
+Step 4: Rather than sending individual product links, you can also create a list of products to send to Creators by clicking on **Product lists** and then pressing **Create a product list**. Note that if you already have several product lists, you can search by product name and ID to find specific lists with those products.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/48a672d82be440f3923fcd18bd3e6e89~tplv-10qhjjqwgv-image.image)
+Step 5: First, give your product list a name, then press **Add products**. Next, select the products you want to include in the list (up to 100). Here, you can search for products by name and category, as well as by marked products that you have bookmarked. Once ready, press **Add**. Then, set the commission for each product separately, or in bulk by selecting multiple products and then clicking **Setup commission in bulk**. Remember that you have to set the commission that the creator should receive, as well as the commission that you as the agency would like to receive. For example, if the total commission rate is 10%, then the Creator commission rate and the Affiliate partner commission rate must add up to 10%. Once you are finished setting the commission rates, press **Review list.**
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/f6c196d2869a497ca26456bbf15b1d00~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/cada6f276417436e9509d1cc25f1dbcf~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/7682cdf1fa7944eaa81a72a1987b8f24~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/bbd9f3e9e8984df8a3bc75f442a3bbe4~tplv-10qhjjqwgv-image.image)
+Step 6: After reviewing your list, press **Create**. Now, you will be able to copy the list **link** that you can share with creators you want to participate in the collaboration. Creators who receive this link will be able to add all of the products in the list to their Showcase.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/9bd1592548954b6bae8a6382588dd618~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/48a747ea5b624cf0b6975004135ba908~tplv-10qhjjqwgv-image.image)
+Step 7: After you've created a product list, you can view all the product lists in the **Campaign details** page. Here you can **Copy** the link, **View** the list details, **Add** products to the list, **Duplicate** the list, and **Delete** the list. If you click on View list details, you will also be able to **Duplicate** the list and **Add more products** to the list from here. Note that you can only have up to 1000 lists, and each list can contain up to 100 products. If you reach the list limit, you must delete an existing list to add another one.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/bddd7ea5ed4a42678b06fd681baef8e5~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/5d6c1805b0d048ca8a1f7285063b1704~tplv-10qhjjqwgv-image.image)
+Step 8: Any Seller registrations you have rejected will appear in the **Rejected** tab. Here you can see whether or not you allowed the Seller to re-register the product.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/e93e4b6c526441b59b6840dc2cd4e9ea~tplv-10qhjjqwgv-image.image)
+Step 9: In the **Pending closed** tab you can see the Seller registrations that are about to close. Here you can **Approve** or **Reject** these registrations, as well as view the data and Creators for this registration. In the **Closed** tab, you can see the product registrations and the associated data for the ones that have already closed.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/685dcdb7f6e44cefa4b874c89667e908~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/eb3a74c9b7df4b4eb7751222d202484e~tplv-10qhjjqwgv-image.image)
+# Tracking Campaign Performance
+Step 1: In the **Campaign details** page, press the **Performance** tab to see details of the campaign performance. Here, you can see overall metrics, such as Collaboration and Paid metrics. You can also view product-specific metrics, including the price, commission rate, number of collaborated creators, creators who have posted content with the product, creators who have driven sales of the product, the number of paid orders, the number of settled orders, and the estimated commissions. Press the **Filter button** in the Pending content column heading to filter products based on whether or not they have content posted. Press **Customize metrics** to choose which metrics you want to see. **Press View** progress to see more specific details about the collaboration.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/8f9079cbfc6c4ea381858f169b30d71f~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/d98d6648449a43cba52a61085e182f4f~tplv-10qhjjqwgv-image.image)
+Step 2: In the **Collaboration progress details** page, you can view the creators who are part of this collaboration and details of each collaboration. Press **view logistics** to see tracking details of the Creator's sample request. Press **View content** to see the Video and LIVE content created with this product.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/9573ae7cfff94c69b8711d8d54b1c325~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/a80d52288505424680351df5ed68f5d6~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/8d60ea717a034280964bbf0c9a8fd51d~tplv-10qhjjqwgv-image.image)
+# Creator & Seller Experience
+## Seller Experience
+Step 1: Sellers can access agency campaigns by clicking on the **Partner Campaign** tab. From here, they can see all of the campaigns that are published in the **Campaign marketplace**. Sellers can (1) filter these campaigns by **All campaigns** or **Target campaigns** (i.e. campaigns that they were specifically invited to), (2) **Search** for specific campaigns or partners, (3) **Register** for a campaign, and (4) view their existing **My campaigns.**
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/5e445525e5f0455c9b70a6ef8cbf58c3~tplv-10qhjjqwgv-image.image)
+Step 2: In the **My campaigns** tab, Sellers can click into a campaign to view more details, data, and re-register to a campaign.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/e61f40ca368d43bfa1d33d3b5ed337c6~tplv-10qhjjqwgv-image.image)
+Step 3: After clicking into a specific campaign, a Seller can view more details about the campaign and the agency organizing it. Here, the Seller can also register their products by clicking **Register products** and then adding them.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/eb1912cf43474ff98d1b73c675296f27~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/64d3b939127c44d29aa107f4f59ff7a7~tplv-10qhjjqwgv-image.image)
+Step 4: Once a Seller has registered a product, it will be listed as pending on the campaign until the agency has approved it.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/b1722abdcc824c43a8b5232cdf0e1d0e~tplv-10qhjjqwgv-image.image)
+Step 5: After a product has been approved by the agency, it will appear in the Ongoing tab. Here, the Seller can choose to cancel a specific product collaboration by clicking **Close**. The agency must then approve the cancellation request before it takes effect.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/7eb00524110f47d49c8deba2052b47d8~tplv-10qhjjqwgv-image.image)
+Step 6: In the **Rejected** tab, a Seller can view all the collaborations that have not been approved by the agency. There are two possible scenarios here. In the first scenario (1), the agency has rejected the registration, but has provided a reason why and has given the Seller the opportunity to **Re-register**. In the second scenario (2), the agency has rejected the Seller's product registration and blocked the Seller from registering the product again.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/58b87096c11c4020b8abeddf8c39e3d6~tplv-10qhjjqwgv-image.image)
+Step 7: In the **Closed** tab, Sellers can **View Data** for product campaigns that have already closed.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/7a8c797d88684eb98272519b0a36d3f7~tplv-10qhjjqwgv-image.image)
+Step 8: In the **Performance** tab, Sellers can view the data for this specific campaign, including the registered products, the number of orders, and the commission totals. From here, Sellers can also **Export** the existing orders.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/d02a6f9ba515448fa2b4da97865024fe~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/bb719f6033914e50a796b82ac421917c~tplv-10qhjjqwgv-image.image)
+## Creator Experience
+Step 1: Once the agency provides a link to the Creator, the Creator can paste that link by going to TikTok Shop, and clicking on **Add product**, then the **link icon** on the top right of the page, and pasting the link into **Product URL**.
+| TikTok Shop | Add product | Input product URL |
+| --- | --- | --- |
+| ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/55e29a82860949cb8b7abfbbb1e8669a~tplv-10qhjjqwgv-image.image) | ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/b54c67d351c346af879b556bb9cc6d83~tplv-10qhjjqwgv-image.image) | ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/bf41dff70834489abd2d14efe4a64814~tplv-10qhjjqwgv-image.image) |
+Step 2: Once the Creator has entered the product link, the Creator will be prompted to **Add to showcase** and **Agree to the terms** and conditions of participating in the affiliate campaign.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/9caae867ffd848e78f7c973332048c5f~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/15c0525325d94391b20a523ba1e9bb1f~tplv-10qhjjqwgv-image.image)
+Step 3: If the Creator receives a list link, then they will be shown a list of products in the campaign after accepting the terms and conditions. The Creator can **Add all to showcase** or add them individually. When a Creator clicks into a product details page, they can see the commission rate and **Add to showcase**. The commission rate that is shown to the Creator is the commission rate they are paid by the agency, not the Seller.
+| The list of products in the campaign | Commission rate | Add to showcase | Added to showcase |
+| --- | --- | --- | --- |
+| ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/88beaf730d294ff78162f84449a61746~tplv-10qhjjqwgv-image.image) | ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/ad4de8a801714933a44d6162f72c333a~tplv-10qhjjqwgv-image.image) | ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/44c56593014a40f59864e3287255054f~tplv-10qhjjqwgv-image.image) | ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/ef4f0c6ff87241e08cba2ee47cca1a1b~tplv-10qhjjqwgv-image.image) |
+Step 4: In cases when the commission rate in this campaign is lower than the commission rate the Creator is already receiving for a product or list, the Creator will receive alerts that their commission will decrease if they add the products from this campaign.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/aa12b2bfde5f4b4a8460d1c4a108981d~tplv-10qhjjqwgv-image.image)
+Step 5: If after entering a link, a Creator receives a **No available products yet **or **The product list wasn't found** message, it means that the campaign does not have any products in it yet or that the agency has deleted the product or list.
+| No available products yet | The product list wasn't found |
+| --- | --- |
+| ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/df0cc468430b4e5ea0ae6fb3bd1592e4~tplv-10qhjjqwgv-image.image) | ![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/39a48f757a73498589374b53515be811~tplv-10qhjjqwgv-image.image) |
+Step 6: In the **Affiliate orders** page, Creators will be shown when a sale and commission is from an agency-led campaign.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/ded6dd29fbe1499aa1fd2ec055af386a~tplv-10qhjjqwgv-image.image)
+# FAQ
+
+1. **What happens if the agency that created the Partner Campaign is also linked to one of the Creators participating in the campaign?**
+
+The agency can only collect commission from the Seller. The agency cannot collect commission from the Creator, as this would be considered "double dipping."
+
+2. **What happens if the agency that created the Partner Campaign invites a Creator to the campaign who is managed by another agency?**
+
+The agency that created the campaign will still receive a commission from the Seller and can decide how much of that commission to give to the Creator. The remaining commission that goes to the Creator is then split between the Creator and the agency that manages the Creator, based on the existing agreement between both parties.
+
+3. **Can sellers see creator-specific performance data?**
+
+No, sellers cannot see creator-specific performance data. Sellers are only able to view product-specific performance data. Partner Campaigns are therefore recommended for sellers who are eager to outsource their work to agencies, but do not require detailed insights into creator-specific sales performance.
+
+4. **How can I edit existing Partner Campaigns?**
+
+In the Campaign details page, press the **Edit** button. Here, you can edit key details of the campaign, you can add more shop codes, and you can view the uploaded shop codes. Press **Update** once you are done making changes. Once updated, your changes will take effect within 30 minutes and you cannot make edits during this period. Once it takes effect, you can continue to edit until the end of the campaign period.
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/a9abcde8ab66458a8e070b8b054ef6ac~tplv-10qhjjqwgv-image.image)
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/11c655bafe1f49108322651115d9ac16~tplv-10qhjjqwgv-image.image)
+# Partner Campaign - Exclusive TikTok Shop
+Exclusive TikTok Shop is a campaign type within Partner Campaign in Affiliate Center which features products handpicked by TikTok for their outstanding performance. Joining the invitation-only TikTok Shop exclusive campaign gives agencies a unique opportunity to boost their sales with top-performing products selected by TikTok for their exceptional performance.
+# How it works
+## Step 1: If you already have a TikTok Shop Partner Center account, navigate to Partner Campaigns -> Exclusive TikTok Shop, where you will find a list of TikTok campaigns.
+
+* **Seller Involved** : Number of sellers have already approved the products
+* **Creators Involved**: Number of creators involved in this campaign
+* **Products** : Number of products Sellers have approved
+* **Remaining Sample Budget** : The remaining sample budget for this campaign
+
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/1280X1280.PNG)
+## Step 2: After clicking "Join," you will find all the campaign details, including comprehensive information about this campaign.
+
+* Product
+* Date Registered
+* Total Commission Rate
+* Sale Price
+* Stock
+* Items sold
+* Product Rating
+* Shop info
+* Product Status
+* Mark - Use this feature if you want to mark this product to send to your creators
+
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/step1.png)
+Customize your view by selecting the metrics you wish to display and filter the product level according to your preferences.
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/step22.png)
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/step23.png)
+## Step 3: Navigate to the Product List to begin creating your product list. Use the "Save Products" feature to quickly create a product list from products you have previously marked using the "Mark" feature
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/step31.png)
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/step32.png)
+## Step 4: Set the creator commission rate. You can also set up the commission rate in bulk in creator level or partner level
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/step41.png)
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/step42.png)
+## Step 5: Once your product list has been created, you can send it to your creators
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/641bdb5e-d6d8-47d8-ae66-b17f7a714fba.png)
+When the creator clicks on the link, it will take them directly to the TikTok Shop exclusive campaign page.
+![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Partner_Guide/8380bf25-67c0-4429-80b8-d70f36e2f013.png)

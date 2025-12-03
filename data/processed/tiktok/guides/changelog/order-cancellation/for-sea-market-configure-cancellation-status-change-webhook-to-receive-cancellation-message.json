@@ -1,0 +1,24 @@
+{
+  "title": "For SEA market: Configure \"Cancellation status change\" webhook to receive cancellation message",
+  "category": "changelog/order-cancellation",
+  "doc_type": 3,
+  "document_id": "68edc38c6f0c12048cfdafb1",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/68edc38c6f0c12048cfdafb1",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/order-cancellation/for-sea-market-configure-cancellation-status-change-webhook-to-receive-cancellation-message.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/order-cancellation/for-sea-market-configure-cancellation-status-change-webhook-to-receive-cancellation-message.md",
+  "content_length": 1474,
+  "update_time": "1760412719",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

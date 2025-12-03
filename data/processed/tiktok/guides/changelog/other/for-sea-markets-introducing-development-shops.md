@@ -1,0 +1,12 @@
+As of today, the Development Shops tool, formerly known as Sandbox Shops, is now available in the SEA market.
+**Available markets and seller types**
+This update specifically benefits developers with apps targeting local sellers in the ID, VN, SG, PH, MY, and TH markets, providing a dedicated tool for testing with local shops.
+**Key benefits for the update**
+The introduction of Development Shops offers advantages for developers focusing on SEA local sellers. Key features include:
+
+1. The ability to test version 202309 and all subsequent versions of the APIs.
+2. The creation of test accounts that mirror production Seller Center Accounts, granting access to all production features and functionalities.
+
+**How to start**
+Development Shops in the SEA market offers Full Function Account. Full function accounts require Business and KYC information to be used for development and testing. Full function accounts support testing through the Core Account features and through linked Buyer Test TikTok accounts. Setup must be fully completed before orders can be placed with credit cards. Full function accounts can access the Seller Center and all related features through the link provided in the Partner Center. Full Accounts can be used for development for all TikTok Shop feature and APIs such as customer service, settlements etc.
+Learn more about how to start testing with the Development Shops from [Seller Center Development Shops](seller-center-development-shops).

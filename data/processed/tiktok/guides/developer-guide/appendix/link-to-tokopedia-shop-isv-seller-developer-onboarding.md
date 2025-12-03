@@ -1,0 +1,1 @@
+Please refer to [Tokopedia & Shop - ISV & Seller developer onboarding](tokopedia-shop-isv-seller-developer-onboarding).

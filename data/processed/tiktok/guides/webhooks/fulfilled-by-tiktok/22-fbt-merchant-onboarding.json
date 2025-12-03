@@ -1,0 +1,19 @@
+{
+  "title": "(22) FBT merchant onboarding",
+  "category": "webhooks/fulfilled-by-tiktok",
+  "doc_type": 2,
+  "document_id": "6708f86842f5af03316bccff",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6708f86842f5af03316bccff",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/fulfilled-by-tiktok/22-fbt-merchant-onboarding.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/fulfilled-by-tiktok/22-fbt-merchant-onboarding.md",
+  "content_length": 1452,
+  "update_time": "1751450069",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

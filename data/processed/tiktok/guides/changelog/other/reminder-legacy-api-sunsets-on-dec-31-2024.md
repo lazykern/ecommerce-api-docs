@@ -1,0 +1,2 @@
+## Reminder
+This is a gentle reminder that the TikTok Shop Legacy API has been in maintenance mode for almost 90 days. **This API will be sunset by the end of the year (December 31, 2024)** so it is recommended that partners migrate as soon as possible. Please refer to the [migration guide](upgrading-to-api-version-202309) on more information about the changes.

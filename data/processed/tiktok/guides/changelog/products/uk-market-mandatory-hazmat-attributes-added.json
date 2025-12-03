@@ -1,0 +1,24 @@
+{
+  "title": "UK market: Mandatory hazmat attributes added",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "66df5a6a6ad64c02fa1a9550",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/66df5a6a6ad64c02fa1a9550",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/uk-market-mandatory-hazmat-attributes-added.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/uk-market-mandatory-hazmat-attributes-added.md",
+  "content_length": 5421,
+  "update_time": "1725913718",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "(12) Return status change",
+  "category": "webhooks/return-and-refund",
+  "doc_type": 2,
+  "document_id": "65030162bb2a4d028d50cc51",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65030162bb2a4d028d50cc51",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/return-and-refund/12-return-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/return-and-refund/12-return-status-change.md",
+  "content_length": 3396,
+  "update_time": "1751450160",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

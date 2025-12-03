@@ -1,0 +1,19 @@
+{
+  "title": "(6) Seller deauthorization",
+  "category": "webhooks/seller",
+  "doc_type": 2,
+  "document_id": "65095746defece02be4d749d",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65095746defece02be4d749d",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/seller/6-seller-deauthorization.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/seller/6-seller-deauthorization.md",
+  "content_length": 976,
+  "update_time": "1751450168",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

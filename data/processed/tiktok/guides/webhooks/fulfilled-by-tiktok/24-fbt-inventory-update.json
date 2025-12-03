@@ -1,0 +1,19 @@
+{
+  "title": "(24) FBT inventory update",
+  "category": "webhooks/fulfilled-by-tiktok",
+  "doc_type": 2,
+  "document_id": "6708f86d24e99e035deee8b9",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6708f86d24e99e035deee8b9",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/fulfilled-by-tiktok/24-fbt-inventory-update.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/fulfilled-by-tiktok/24-fbt-inventory-update.md",
+  "content_length": 2258,
+  "update_time": "1751450076",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

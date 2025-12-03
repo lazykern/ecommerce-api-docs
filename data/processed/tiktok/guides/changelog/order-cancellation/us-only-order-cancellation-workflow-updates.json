@@ -1,0 +1,24 @@
+{
+  "title": "US only: Order cancellation workflow updates",
+  "category": "changelog/order-cancellation",
+  "doc_type": 3,
+  "document_id": "65a848f4ea874002e1f672d1",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65a848f4ea874002e1f672d1",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/order-cancellation/us-only-order-cancellation-workflow-updates.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/order-cancellation/us-only-order-cancellation-workflow-updates.md",
+  "content_length": 2496,
+  "update_time": "1705528841",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

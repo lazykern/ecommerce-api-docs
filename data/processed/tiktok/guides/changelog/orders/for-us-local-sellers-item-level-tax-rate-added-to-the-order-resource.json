@@ -1,0 +1,24 @@
+{
+  "title": "For US local sellers: Item level tax rate added to the Order resource",
+  "category": "changelog/orders",
+  "doc_type": 3,
+  "document_id": "65a848b169663802db44999c",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65a848b169663802db44999c",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/orders/for-us-local-sellers-item-level-tax-rate-added-to-the-order-resource.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/orders/for-us-local-sellers-item-level-tax-rate-added-to-the-order-resource.md",
+  "content_length": 2025,
+  "update_time": "1705527498",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "For US and UK markets: Introducing \"On Hold\" order status",
+  "category": "changelog/orders",
+  "doc_type": 3,
+  "document_id": "656d9d5fe87cdf02c1625d01",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/656d9d5fe87cdf02c1625d01",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/orders/for-us-and-uk-markets-introducing-on-hold-order-status.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/orders/for-us-and-uk-markets-introducing-on-hold-order-status.md",
+  "content_length": 11816,
+  "update_time": "1701976100",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

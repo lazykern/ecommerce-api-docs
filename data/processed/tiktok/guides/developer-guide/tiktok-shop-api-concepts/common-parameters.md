@@ -1,0 +1,6 @@
+When calling any TikTok Shop API, these are the **required** common parameters:
+| **Parameter** | **Location** | **Type** | **Description** | **Sample** |
+| --- | --- | --- | --- | --- |
+| `app_key` | Query | string | The unique key assigned to your app. Refer to [Create your app](create-your-app) to find out where to get your **`app_key`**. | 29a39d |
+| `sign` | Query | string | A HMAC-SHA256 hash based on the parameter values, used by the service to verify the sender of the request in addition to the bearer/authorization token. <br> Refer to [Sign your API request](sign-your-api-request) to learn how to generate this signature. | bc721f0e0182914e3487b81df204de37a352fc3aa96947efda6dc1e5dd0d5290 |
+| `timestamp` | Query | Unix timestamp | A timestamp in Unix epoch format to ensure timeliness of the request and to prevent replay attack. This is also used to generate the digital signature for the **`sign`** parameter. <br> Valid range: [Current time – 5 mins, current time + 30 secs] | 1623812664 |

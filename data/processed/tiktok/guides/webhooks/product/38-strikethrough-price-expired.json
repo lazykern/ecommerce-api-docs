@@ -1,0 +1,19 @@
+{
+  "title": "(38) Strikethrough price expired",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "67c6f62e6704d704a6e5deed",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/67c6f62e6704d704a6e5deed",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/38-strikethrough-price-expired.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/38-strikethrough-price-expired.md",
+  "content_length": 1156,
+  "update_time": "1751450141",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

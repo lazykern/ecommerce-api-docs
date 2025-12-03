@@ -1,0 +1,24 @@
+{
+  "title": "US market: Product category expansion",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "6658fcae39313f02dd4e1b47",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6658fcae39313f02dd4e1b47",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/us-market-product-category-expansion.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/us-market-product-category-expansion.md",
+  "content_length": 5381,
+  "update_time": "1717192947",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

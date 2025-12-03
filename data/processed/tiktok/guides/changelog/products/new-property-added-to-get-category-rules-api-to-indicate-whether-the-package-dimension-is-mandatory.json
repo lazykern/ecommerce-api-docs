@@ -1,0 +1,19 @@
+{
+  "title": "New property added to Get Category Rules API to indicate whether the package dimension is mandatory",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "656d70d9cca08202dbc037f8",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/656d70d9cca08202dbc037f8",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/new-property-added-to-get-category-rules-api-to-indicate-whether-the-package-dimension-is-mandatory.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/new-property-added-to-get-category-rules-api-to-indicate-whether-the-package-dimension-is-mandatory.md",
+  "content_length": 2858,
+  "update_time": "1701671237",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

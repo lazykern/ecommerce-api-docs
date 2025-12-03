@@ -1,0 +1,19 @@
+{
+  "title": "(18) Product category change",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "668764a371f16d02eef1f393",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/668764a371f16d02eef1f393",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/18-product-category-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/18-product-category-change.md",
+  "content_length": 1612,
+  "update_time": "1751450119",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "(51) Global replication status change",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "68b83e1629f2990489c3d277",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/68b83e1629f2990489c3d277",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/51-global-replication-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/51-global-replication-status-change.md",
+  "content_length": 3007,
+  "update_time": "1756914652",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

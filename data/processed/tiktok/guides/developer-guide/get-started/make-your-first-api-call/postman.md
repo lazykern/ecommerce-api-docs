@@ -1,0 +1,125 @@
+[Postman](https://www.postman.com/) is a popular online and free API platform for building and using APIs. Postman can be used to accelerate API testing and integration for TikTok Shop APIs.
+For your first API request, we strongly recommend calling [Get Authorized Shops](get-authorized-shops). The following step-by-step guide assumes you are trying to call [Get Authorized Shops](get-authorized-shops).
+<span style="background-color: rgb(255, 245, 235)">📌 </span><span style="background-color: rgb(255, 245, 235)"><strong>Note</strong></span><span style="background-color: rgb(255, 245, 235)">: We also provide a ZIP file that contains both a Postman collection and a set of environment variables if you would like to get up and running as quickly as possible. Fill out the environment variables (app key, app secret, auth token) and call GET Access Token to get your API access token. The post-request script should save this to your variables so you can call subsequent APIs. </span>[Click here to download.](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ[[/ljhwZthlaukjlkulzlp/Developer_Guide/TikTokShopPostmanCollection.zip)
+# Step 1: Obtain an access token
+This authorization section will walk you through obtaining an `access_token` using Postman. For more information on access tokens and required parameters, refer to our [authorization guide](authorization-guide-202309).
+
+1. Open a new workbench tab and set the request method to **GET**. The request URL is:
+
+```plaintext
+https://auth.tiktok-shops.com/api/v2/token/get
+```
+
+![Image](https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/97332283614b44dc8adb5b7be86cb30f~tplv-10qhjjqwgv-image.image)
+
+2. Set the following parameters:
+
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/8518b4b212b8436786f4d1fc224821ee~tplv-10qhjjqwgv-image.image" width="2282px" /></div>
+
+
+3. Press **Send** next to the request URL. If successful, the response should resemble the following:
+
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/3d332b22a28e47fbbc47a546750eb90b~tplv-10qhjjqwgv-image.image" width="2296px" /></div>
+
+# Step 2: Set common parameters
+This section will walk you through setting up [common parameters](common-parameters) to call [Get Authorized Shops](get-authorized-shops).
+
+1. Open a new workbench tab and set the request method to **GET**. The request URL is:
+
+```plaintext
+https://open-api.tiktokglobalshop.com/authorization/202309/shops
+```
+
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/698cef792fed42ad9491bbfb202ffac8~tplv-10qhjjqwgv-image.image" width="2302px" /></div>
+
+
+2. Set the following parameters:
+
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/138360233e144ef2b6249caf6655e638~tplv-10qhjjqwgv-image.image" width="2296px" /></div>
+
+<span style="background-color: rgb(255, 235, 235)">❗ </span><span style="background-color: rgb(255, 235, 235)"><strong>Important</strong></span><span style="background-color: rgb(255, 235, 235)">: Ensure </span><span style="background-color: rgb(255, 235, 235)"><strong>sign</strong></span><span style="background-color: rgb(255, 235, 235)"> and </span><span style="background-color: rgb(255, 235, 235)"><strong>timestamp</strong></span><span style="background-color: rgb(255, 235, 235)"> values are correctly set to </span><span style="background-color: rgb(255, 235, 235)"><strong>{{sign}}</strong></span><span style="background-color: rgb(255, 235, 235)"> and </span><span style="background-color: rgb(255, 235, 235)"><strong>{{timestamp}}</strong></span><span style="background-color: rgb(255, 235, 235)"> respectively.</span>
+
+
+3. Navigate to the **Headers** section and add the following header:
+
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/9d99777fb10b43cb80b8fab75ed87b2c~tplv-10qhjjqwgv-image.image" width="2280px" /></div>
+
+<span style="background-color: rgb(255, 245, 235)">📌 </span><span style="background-color: rgb(255, 245, 235)"><strong>Note</strong></span><span style="background-color: rgb(255, 245, 235)">: If you press </span><span style="background-color: rgb(255, 245, 235)"><strong>Send</strong></span><span style="background-color: rgb(255, 245, 235)"> now, you will encounter a "signature is invalid" error message. To address this, you must generate a request signature. Please proceed to </span><span style="background-color: rgb(255, 245, 235)"><strong>Step 3: Request signature section</strong></span><span style="background-color: rgb(255, 245, 235)"> of this guide to learn how to automate this process in Postman.</span>
+# Step 3: Request signature
+Calling a TikTok Shop API requires you to sign your request, and Postman allows us to automate this process. For more information on API request signatures, refer to [Sign your API request](sign-your-api-request).
+Open a new workbench tab and navigate to the **Pre-request Script** section, copy and paste the following Go script:
+<span style="background-color: rgb(255, 235, 235)">❗ </span><span style="background-color: rgb(255, 235, 235)"><strong>Important</strong></span><span style="background-color: rgb(255, 235, 235)">: Ensure you replace the secret with your specific app secret.</span>
+
+```Go
+// Replace with your app secret
+var secret = "7bf9fa93cd06a160c03f5789be285ac36df8701f"  
+  
+function objKeySort(obj) {  
+    var newKey = Object.keys(obj).sort()  
+    var newObj = {}  
+    for (var i = 0; i < newKey.length; i++) {  
+        newObj[newKey[i]] = obj[newKey[i]]  
+    }  
+    return newObj  
+}  
+  
+function getEnvVar(k) {  
+    var v = pm.variables.get(k)  
+    if (v != null) {  
+        return v  
+    }  
+    v = pm.environment.get(k)  
+    if (v != null) {  
+        return v  
+    }  
+    v = pm.globals.get(k)  
+    if (v != null) {  
+        return v  
+    }  
+    return null  
+}  
+  
+var ts = Date.parse(new Date()) / 1000  
+pm.variables.set("timestamp", ts)  
+  
+calSign = function(secret) {  
+    var ts = getEnvVar("timestamp")  
+    var queryParam = pm.request.url.query.members  
+    var param = {}  
+    for (var item in queryParam) {  
+        if (queryParam[item].key == "timestamp") {  
+            v = ts  
+        } else {  
+            var v = queryParam[item].value  
+            if (v == null || v == "{{" + queryParam[item].key + "}}") {  
+                v = getEnvVar(queryParam[item].key)  
+            }  
+        }  
+        param[queryParam[item].key] = interpolateVar(v)  
+    }  
+  
+    delete param["sign"]  
+    delete param["access_token"]  
+    var sortedObj = objKeySort(param)  
+    var signstring = secret + pm.request.url.getPath()  
+    for (var key in sortedObj) {  
+        signstring = signstring + key + sortedObj[key]  
+    }  
+    signstring = signstring + interpolateVar(pm.request.body.toString()) +  secret  
+    console.log(signstring)  
+    sign = CryptoJS.HmacSHA256(signstring, secret).toString()  
+    return sign  
+}  
+  
+function interpolateVar (value) {  
+    const {Property} = require('postman-collection')  
+    return Property.replaceSubstitutions(value, pm.variables.toObject())  
+}  
+  
+var sign = calSign(secret)  
+pm.variables.set("sign", sign)
+```
+
+# Step 4: Call Get Authorized Shops
+If you've correctly followed all previous steps, you're ready to press **Send** and call [Get Authorized Shops](get-authorized-shops). If successful, the response should resemble the following:
+<div style="text-align: center"><img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/d206a7ffb2824c41a207bf54eb162394~tplv-10qhjjqwgv-image.image" width="2300px" /></div>

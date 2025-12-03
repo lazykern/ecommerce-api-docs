@@ -1,0 +1,19 @@
+{
+  "title": "Seller",
+  "category": "webhooks/seller",
+  "doc_type": 2,
+  "document_id": "670cb9871c9fc90307d9cf5d",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/670cb9871c9fc90307d9cf5d",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/seller/overview.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/seller/seller.md",
+  "content_length": 0,
+  "update_time": "-62135596800000",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

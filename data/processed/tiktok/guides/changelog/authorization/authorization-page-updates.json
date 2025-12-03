@@ -1,0 +1,29 @@
+{
+  "title": "Authorization page updates",
+  "category": "changelog/authorization",
+  "doc_type": 3,
+  "document_id": "661f02b62e1a5d02e267d159",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/661f02b62e1a5d02e267d159",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/authorization/authorization-page-updates.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/authorization/authorization-page-updates.md",
+  "content_length": 3808,
+  "update_time": "1715273404",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

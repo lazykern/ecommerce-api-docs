@@ -1,0 +1,24 @@
+{
+  "title": "Sunsetting listing schemas endpoint",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "66cbf1e7597571030d9e5fdb",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/66cbf1e7597571030d9e5fdb",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/sunsetting-listing-schemas-endpoint.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/sunsetting-listing-schemas-endpoint.md",
+  "content_length": 506,
+  "update_time": "1724641778",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

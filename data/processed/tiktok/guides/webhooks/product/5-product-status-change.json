@@ -1,0 +1,19 @@
+{
+  "title": "(5) Product status change",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "650956aff1fd3102b90b6261",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/650956aff1fd3102b90b6261",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/5-product-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/5-product-status-change.md",
+  "content_length": 1147,
+  "update_time": "1751450101",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

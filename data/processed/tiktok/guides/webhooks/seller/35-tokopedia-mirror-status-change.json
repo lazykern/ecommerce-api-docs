@@ -1,0 +1,19 @@
+{
+  "title": "(35) Tokopedia mirror status change",
+  "category": "webhooks/seller",
+  "doc_type": 2,
+  "document_id": "678f43b378f4c20311becd07",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/678f43b378f4c20311becd07",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/seller/35-tokopedia-mirror-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/seller/35-tokopedia-mirror-status-change.md",
+  "content_length": 1599,
+  "update_time": "1751450178",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

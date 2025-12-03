@@ -1,0 +1,24 @@
+{
+  "title": "US market: Removing some reject reasons for returns",
+  "category": "changelog/other",
+  "doc_type": 3,
+  "document_id": "66f3810b177a6a033b363a84",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/66f3810b177a6a033b363a84",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/other/us-market-removing-some-reject-reasons-for-returns.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/other/us-market-removing-some-reject-reasons-for-returns.md",
+  "content_length": 483,
+  "update_time": "1727234357",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "Coming Soon",
+      "font_color": "#3B87F6",
+      "background_color": "#EBF3FE"
+    }
+  ]
+}

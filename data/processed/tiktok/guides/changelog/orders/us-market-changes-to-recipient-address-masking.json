@@ -1,0 +1,24 @@
+{
+  "title": "US market: Changes to recipient_address masking",
+  "category": "changelog/orders",
+  "doc_type": 3,
+  "document_id": "682fda578992fb0499d40ed3",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/682fda578992fb0499d40ed3",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/orders/us-market-changes-to-recipient_address-masking.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/orders/us-market-changes-to-recipient-address-masking.md",
+  "content_length": 2574,
+  "update_time": "1748465730",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Breaking Change",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "US and UK markets: Product category recommendation",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "66ad61aab3950e02ff3c345a",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/66ad61aab3950e02ff3c345a",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/us-and-uk-markets-product-category-recommendation.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/us-and-uk-markets-product-category-recommendation.md",
+  "content_length": 1662,
+  "update_time": "1722640364",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    },
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    }
+  ]
+}

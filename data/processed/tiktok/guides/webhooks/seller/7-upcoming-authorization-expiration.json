@@ -1,0 +1,19 @@
+{
+  "title": "(7) Upcoming authorization expiration",
+  "category": "webhooks/seller",
+  "doc_type": 2,
+  "document_id": "6509579c0fcef602bf11312c",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6509579c0fcef602bf11312c",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/seller/7-upcoming-authorization-expiration.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/seller/7-upcoming-authorization-expiration.md",
+  "content_length": 1149,
+  "update_time": "1751450172",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

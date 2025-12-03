@@ -1,0 +1,304 @@
+Lazada服务市场
+
+是由Lazada官方推出的线上交易平台，服务商需要将开放平台应用（非自研类）和服务发布至服务市场，获取Lazada超百万级的商家流量和需求，提供给商家进行订购和授权，商家享受服务商的应用和各类服务。
+
+lazada服务市场按国家分为5个国家站点：
+
+[马来西亚服务市场](<https://marketplace.lazada.com.my/web/home.html>)、[印度尼西亚服务市场](<https://marketplace.lazada.co.id/web/home.html>)、[泰国服务市场](<https://marketplace.lazada.co.th/web/home.html>)、[菲律宾服务市场](<https://marketplace.lazada.com.ph/web/home.html>)、[新加坡服务市场](<https://marketplace.lazada.sg/web/home.html>)（点击对应国家可查看服务市场详情），（越南上线中）
+
+  
+
+
+  
+
+
+**中文版操作指引**
+
+所有申请信息均需使用英文填写（如使用中文，申请可能会被拒绝）
+
+需以企业身份入驻，需将开发的应用发布到lazada服务市场，或将代运营等服务发布到服务市场供卖家订购，钉钉查看其他开发者类型入驻步骤：[https://aliyuque.antfin.com/gy328525/sppxsq/zgfvw7zk0fc1l3yy?singleDoc#](<https://aliyuque.antfin.com/gy328525/sppxsq/zgfvw7zk0fc1l3yy?singleDoc>)
+
+  
+
+
+**概述：**
+
+**总体入驻步骤：**
+
+1、注册/登录
+
+2、填写基本信息
+
+3、选择服务商身份
+
+4、申请服务市场资质
+
+5、绑定银行账户
+
+6、申请APPKEY并进行应用开发（仅适用于软件开发者）
+
+7、在服务市场发布服务
+
+注意：所有申请信息均需使用英文填写（如使用中文，申请可能会被拒绝）
+
+**联系我们：**
+
+如果在Lazada服务市场上线有任何问题，请随时联系我们：
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误1_1727167621432__g1OT.jpg)
+
+ _服务商可以通过服务商后台主页右侧的“入驻引导”快速完成入驻。_
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误2_1727167629667__TTB4.jpg)
+
+#  第 1 步 ：注册/登录
+
+#### 1）进入注册页面
+
+服务商工作台地址: <https://isvconsole.lazada.com/>
+
+#### 2）创建账户（若已创建，请跳过此部分）
+
+  1. 点击注册创建账户
+  2. 填写邮箱地址、公司名称、设置密码，并查看条款协议
+  3. 填写邮箱验证码
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误30_1727167717419__Q7ed.png)
+
+#### 3）登录账户，进入服务商后台
+
+# 第 2 步 ：填写基本信息
+
+完成注册/登录后，您将进入基本信息填写页面
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误3_1727167727620__VUea.jpg)
+
+#### 1）选择国家
+
+  1. 只有ID🇮🇩;MY🇲🇾;PH🇵🇭;TH🇹🇭 ;SG🇸🇬之一的营业执照可以在服务市场发布有价格服务，其他国家仅能发布免费版服务，[查看详情](<https://www.yuque.com/lazadasellerservicemarket/hoafmn/bufz158kqrdr8khh?singleDoc# 《免费版和付费版说明》>)
+  2. 后面填写的信息（如手机号、营业执照、银行账户等）都必须符合您选择的国家
+
+
+
+#### 2）合作伙伴类型（请选择一种合作伙伴类型）
+
+  1. 企业商用：需将开发的应用发布到lazada服务市场，或将代运营等服务发布到服务市场供卖家订购。
+  2. 企业自研/个人自研：自研开发者入驻流程请[点这里](<https://aliyuque.antfin.com/gy328525/sppxsq/dimgax6aq285trgg?singleDoc# 《企业-自研/个人-自研入驻步骤》>)，此文档为企业商用开发者入驻流程。
+
+
+
+#### 3）是否为卖家
+
+  1. 根据实际情况选择，如果您为卖家，请选择是，并填写卖家信息
+
+
+
+#### 4）企业名称
+
+  1. 填写企业名称，企业名称需与营业执照上名称保持一致
+
+
+
+#### 5）营业执照编号、法人信息
+
+  1. 填写营业执照上编号和法人/负责人信息
+
+
+
+#### 6）营业执照照片
+
+  1. 上传营业执照照片，营业执照上企业信息需与上方填写的企业名称保持一致
+
+
+
+#### 7）手机号和邮箱验证
+
+  1. 这里的手机号码和电子邮箱必须是**未在Lazada全平台注册过** 的。（如出现“操作失败：电话或邮箱被卖家占用”，则说明该手机号或者邮箱曾注册过lazada账户，请使用其他手机号或者邮箱。
+  2. 手机号的区号需要和营业执照所在国家区号保持一致。
+
+
+
+  
+
+
+#### 审核中
+
+  1. 填写所有信息后，点击提交，审核预计在1-3个工作日完成，请耐心等待，您可以在首页查看审核状态。
+
+
+
+# 第 3 步 ：选择服务商身份
+
+当第2步审核通过后，您将进入此页面，然后您需要选择服务商身份：
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误4_1727167739820__OfY5.jpg)
+
+  1. 如果您是ERP、IM等软件开发者，并将软件售卖到服务市场，请先申请“[软件开发者身份](<https://isvconsole.lazada.com/web/isv/basic-info-isv.html>)”，然后再申请“[服务提供者身份](<https://isvconsole.lazada.com/web/isv/basic-info-operator.html>)”
+  2. 如果您是代运营、内容制作等服务提供商，请直接申请“[服务提供者身份](<https://isvconsole.lazada.com/web/isv/basic-info-operator.html>)”
+
+
+
+# 第 4 步 ：申请服务市场资质
+
+#### 1）服务市场资质申请
+
+  1. 根据发布的服务类目，前往[资质申请页面](<https://isvconsole.lazada.com/web/isv/qualification-apply.html>)申请对应的资质（[查看appkey类目与服务市场类目映射关系](<https://www.yuque.com/lazadasellerservicemarket/hoafmn/xwtumktc43grm79t?singleDoc>)）
+  2. 资质提交后，预计1-3个工作日完成审核
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误5_1727167772898__PhEg.png)
+
+#### 2）查看已申请资质
+
+  1. 在[我的资质](<https://isvconsole.lazada.com/web/isv/qualification-list.html>)页面，查看已申请资质及审批状态
+  2. 可取消申请货修改资质申请内容
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误31_1727167841056__3x4R.png)
+
+  
+
+
+# 第 5 步 ：绑定银行账户
+
+在服务市场发布付费服务需要绑定银行账户进行收款，仅印尼、泰国、马来、菲律宾、新加坡可在服务市场发布付费服务，营业执照为其他国家或个人开发者仅能在服务市场发布免费SKU服务，[付费与免费服务说明](<https://www.yuque.com/lazadasellerservicemarket/hoafmn/xezwqo2atq424tvc?singleDoc# 《Service Version Description-Free&Paid》>)
+
+#### 1）绑定营业执照所在国家银行账户
+
+  1. 通过工作台首页进入绑定银行账户页面
+  2. 绑定银行账户主体需要与营业执照主体一致，且需和营业执照所在国家一致
+  3. 请正确填写，该账户为收款账户
+  4. 银行信息提交后，将在1个工作日内完成审核
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误6_1727167880391__w8Nt.png)
+
+#### 2）绑定跨境收款账户
+
+lazada服务市场分为5个国家站点：[马来西亚服务市场](<https://marketplace.lazada.com.my/web/home.html>)、[印度尼西亚服务市场](<https://marketplace.lazada.co.id/web/home.html>)、[泰国服务市场](<https://marketplace.lazada.co.th/web/home.html>)、[菲律宾服务市场](<https://marketplace.lazada.com.ph/web/home.html>)、[新加坡服务市场](<https://marketplace.lazada.sg/web/home.html>)，基于各国政府合规的要求，服务商在服务市场发布有价格SKU需要有该国家的营业执照。但考虑到执照申请问题，经沟通，lazada在合规的前提下支持了服务商跨境发布服务的能力，具体[点此可看公告](<https://open.lazada.com/apps/announcement/detail?spm=a1zq7z.27201205.0.0.2f5a7c73rOI6Yh&docId=1988>)。
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误33_1727168074657__FeRV.png)
+
+  1. 通过工作台首页进入绑定PSP账户页面（派安盈，lazada跨境收款合作服务商，无需申请各国银行账户即可实现通过派安盈收款）
+  2. 跳转到派安盈页面以企业信息注册，注册完成后将自动绑定lazada跨境账户，派安盈预计3-7个工作日内完成审核
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误34_1727168240443__369m.png)
+
+  
+
+
+# 第 6 步 ：申请APPKEY并进行应用开发（仅适用于软件开发者）
+
+如果您要发布软件服务（如ERP等），那么您需要完成此步骤同时确保您已经申请了软件开发者身份——请参考步骤3
+
+#### 1）申请APPKEY创建权限
+
+  1. 在服务商工作台-[应用管理](<https://isvconsole.lazada.com/apps/console/apps>)页面，申请创建APP，需要提交相应资料进行申请，预计1个工作日完成审核。（[查看appkey可发布到服务市场哪个类目中](<https://www.yuque.com/lazadasellerservicemarket/hoafmn/lu8ek0wwskf81ck3?singleDoc# 《Mapping relationship between open platforms and Service MarketPlace categories》>)）
+  2. 查看列表中状态，如果审核通过，状态将从'Pending' 变成 'Active'
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误9_1727168252514__8J1p.jpg)
+
+#### 2）创建APPKEY
+
+  1. 当类目状态为“Active”时，可在此类目下创建APPKEY
+  2. 创建APPKEY，并填写应用回调地址（卖家在服务市场订购您的服务并点击使用会跳到该页面）、logo等信息
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误10_1727168263669__ySA8.jpg)
+
+#### 2）应用开发及上线
+
+  1. 在应用管理页面查看应用可调用API权限并进行开发
+  2. 开发完毕后点击应用上线申请，预计1个工作日完成审核
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误11_1727168272404__YfD7.jpg)
+
+# 第 7 步 ：在服务市场发布服务
+
+注意：请确保服务详情至少有英文版本，否则审核将被拒绝。
+
+#### 1）选择发布软件服务或非软件服务
+
+  1. 软件类服务发布：在[服务发布](<https://isvconsole.lazada.com/web/service/publish.html>)页面选择“发布软件类服务”，将上线的appkey在服务市场发布为服务。appkey可发布到服务市场的类目请[点此查看](<https://www.yuque.com/lazadasellerservicemarket/hoafmn/lu8ek0wwskf81ck3?singleDoc# 《Mapping relationship between open platforms and Service MarketPlace categories》>)。
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误12_1727168281925__7Dud.jpg)
+
+  1. 非软件类服务：在[服务发布](<https://isvconsole.lazada.com/web/service/publish.html>)页面选择“发布非软件类服务”，发布代运营、设计等服务。
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误13_1727168293320__eAoE.jpg)
+
+#### 2）编辑服务详情
+
+基于各国政府合规方面的要求，在Lazada服务市场的某个国家站点发布有价格的服务需要该国家的营业执照或该国家支持其他国家跨境发布服务，平台考虑到部分服务商无法获得服务市场所在国家的营业执照，故开放了可发布0元SKU的产品能力（仅针对软件类服务生效，非软件类服务仅能发布付费版且需要服务商拥有该国家营业执照或该国家支持跨境发布服务），保障三方应用可继续给商家进行使用。
+
+查看付费版服务和免费服务发布规则（[查看免费版与付费版说明](<https://www.yuque.com/lazadasellerservicemarket/hoafmn/bufz158kqrdr8khh?singleDoc# 《免费版和付费版说明》>)）
+
+**2.1）软件类服务可勾选“可发布付费版至”和“仅可发布免费版至”**
+
+  1. 可发布付费版至：说明您拥有该国家营业执照或该国家支持跨境发布，在该国家服务市场可发布有价格和0元SKU服务
+  2. 仅可发布免费版至：说明您不符合在该国家发布有价格SKU服务，只能发布0元SKU服务
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误14_1727168304906__5MYR.jpg)
+
+以上可勾选国家包含：马来、印尼、泰国、菲律宾、新加坡、越南6国，若国家少于6国，可能的原因有：
+
+  1. 在[服务提供者信息](<https://isvconsole.lazada.com/web/isv/basic-info-operator.html>)中是否只勾选了部分国家。
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误15_1727168313903__LEJF.jpg)
+
+  1. 您的账号在该国家可发布付费SKU，需完成该国家[资质申请](<https://isvconsole.lazada.com/web/isv/qualification-apply.html>)和[收款账号](<https://isvconsole.lazada.com/web/isv/basic-info-operator.html>)绑定
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误16_1727168321736__tmtz.jpg)
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误17_1727168331879__B0PT.jpg)
+
+**2.2）软件类服务编辑收费项目**
+
+  1. 发布有价格SKU：可根据国家设置不同币种价格
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误18_1727168340051__DMT7.jpg)
+
+  1. 发布0元SKU：选择“添加免费版本”来添加0元SKU，注意：0元SKU不会在服务市场上展示（正常搜索、导购展示，仅能通过服务商单独分发特定链接给卖家才会展示，[查看详细说明](<https://www.yuque.com/lazadasellerservicemarket/hoafmn/bufz158kqrdr8khh>)）
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误19_1727168353203__Jv7v.jpg)
+
+**2.3）非软件类服务编辑详情页**
+
+非软件类服务不支持发布0元SKU，故需要遵循拥有该国家营业执照或该国家支持跨境发布的原则。
+
+#### 3）查看服务详情
+
+服务通过审核后，将在服务市场展示，可通过在服务市场搜索或在[服务列表](<https://isvconsole.lazada.com/web/service/list.html>)-点击各个国家查看您的服务
+
+  1. 选择国家-服务预览链接：正常在服务市场展示的链接，不含0元SKU，卖家可在服务市场正常看到
+  2. 选择国家-免费SKU链接：包含0元SKU和付费SKU的链接，卖家无法在服务市场正常看到，需要服务商自行分发
+
+
+
+![](https://lazada-open-platform-public.oss-ap-southeast-1.aliyuncs.com/online/oss_错误20_1727168366748__KHms.jpg)

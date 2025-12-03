@@ -1,0 +1,1 @@
+<div style="text-align: center">See: <a href="https://seller-es.tiktok.com/university/essay?knowledge_id=4313387137058592&article_type=agreement&identity=1">here</a>.</div>

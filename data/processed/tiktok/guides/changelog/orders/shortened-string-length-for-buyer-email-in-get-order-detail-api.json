@@ -1,0 +1,19 @@
+{
+  "title": "Shortened string length for buyer_email in Get Order Detail API",
+  "category": "changelog/orders",
+  "doc_type": 3,
+  "document_id": "653779d99971b602ba81187d",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/653779d99971b602ba81187d",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/orders/shortened-string-length-for-buyer_email-in-get-order-detail-api.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/orders/shortened-string-length-for-buyer-email-in-get-order-detail-api.md",
+  "content_length": 1032,
+  "update_time": "1698136678",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    }
+  ]
+}

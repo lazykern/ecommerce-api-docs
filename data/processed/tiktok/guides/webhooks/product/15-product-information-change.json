@@ -1,0 +1,19 @@
+{
+  "title": "(15) Product information change",
+  "category": "webhooks/product",
+  "doc_type": 2,
+  "document_id": "65d6f41411a60f02dc1cf8bf",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/65d6f41411a60f02dc1cf8bf",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/product/15-product-information-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/product/15-product-information-change.md",
+  "content_length": 2381,
+  "update_time": "1751450106",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

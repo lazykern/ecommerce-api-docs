@@ -1,0 +1,1 @@
+<div style="text-align: center">See <a href="https://www.tiktok.com/legal/partner-privacy-policy">here</a>.</div>

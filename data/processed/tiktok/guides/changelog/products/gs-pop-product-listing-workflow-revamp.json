@@ -1,0 +1,24 @@
+{
+  "title": "GS POP product listing workflow revamp",
+  "category": "changelog/products",
+  "doc_type": 3,
+  "document_id": "689ba401dc20310498f3140d",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/689ba401dc20310498f3140d",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/products/gs-pop-product-listing-workflow-revamp.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/products/gs-pop-product-listing-workflow-revamp.md",
+  "content_length": 4610,
+  "update_time": "1755032482",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Breaking Change",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

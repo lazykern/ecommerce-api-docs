@@ -1,0 +1,19 @@
+{
+  "title": "(36) Invoice status change",
+  "category": "webhooks/fulfillment",
+  "doc_type": 2,
+  "document_id": "67b68ca185619104a6772e5d",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/67b68ca185619104a6772e5d",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/fulfillment/36-invoice-status-change.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/fulfillment/36-invoice-status-change.md",
+  "content_length": 2011,
+  "update_time": "1751450059",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

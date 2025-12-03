@@ -1,0 +1,24 @@
+{
+  "title": "US market: POP USPS label restriction",
+  "category": "changelog/fulfillment",
+  "doc_type": 3,
+  "document_id": "69015eaf5b602804822560ba",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/69015eaf5b602804822560ba",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/fulfillment/us-market-pop-usps-label-restriction.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/fulfillment/us-market-pop-usps-label-restriction.md",
+  "content_length": 1207,
+  "update_time": "1761698256",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "Breaking Change",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

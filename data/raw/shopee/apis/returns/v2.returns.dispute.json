@@ -214,6 +214,10 @@
       "description": "Return status does not allow initiating a dispute case（From dispute side）"
     },
     {
+      "name": "returns.dispute_is_dry_run",
+      "description": "Dispute validation passed, but will not submit as this is a dry run"
+    },
+    {
       "name": "dispute.request.param.error",
       "description": "can't raise dispute because mandatory evidence is missing"
     },

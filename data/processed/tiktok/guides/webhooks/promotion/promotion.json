@@ -1,0 +1,19 @@
+{
+  "title": "Promotion",
+  "category": "webhooks/promotion",
+  "doc_type": 2,
+  "document_id": "67ff82cca15973047eddcb5b",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/67ff82cca15973047eddcb5b",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/webhooks/promotion/overview.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/webhooks/promotion/promotion.md",
+  "content_length": 0,
+  "update_time": "-62135596800000",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Introducing API version 202309",
+  "category": "changelog/other",
+  "doc_type": 3,
+  "document_id": "6509b2aec16ffe02b8d7623c",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/6509b2aec16ffe02b8d7623c",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/other/introducing-api-version-202309.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/other/introducing-api-version-202309.md",
+  "content_length": 14343,
+  "update_time": "1695134497",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "New",
+      "font_color": "#7EB712",
+      "background_color": "#EDF8BB"
+    },
+    {
+      "keyword": "Updated",
+      "font_color": "#FF7D00",
+      "background_color": "#FFF7E8"
+    },
+    {
+      "keyword": "Action Required",
+      "font_color": "#F754A8",
+      "background_color": "#FFE8F1"
+    }
+  ]
+}

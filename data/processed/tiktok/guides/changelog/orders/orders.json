@@ -1,0 +1,19 @@
+{
+  "title": "Orders",
+  "category": "changelog/orders",
+  "doc_type": 3,
+  "document_id": "653779d3932caf02c122361c",
+  "original_url": "https://partner.tiktokshop.com/docv2/page/653779d3932caf02c122361c",
+  "raw_file": "/home/lazykern/lab/ecommerce-api-docs/data/raw/tiktok/changelog/orders/overview.json",
+  "markdown_file": "/home/lazykern/lab/ecommerce-api-docs/data/processed/tiktok/guides/changelog/orders/orders.md",
+  "content_length": 0,
+  "update_time": "-62135596800000",
+  "view_count": 0,
+  "keywords": [
+    {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+    }
+  ]
+}
